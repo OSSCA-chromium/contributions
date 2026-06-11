@@ -36,7 +36,7 @@ export default function RootLayout({
                   Contributions
                 </Link>
                 <a 
-                  href="https://github.com/OSSCA-chromium/hands-on-2025"
+                  href="https://github.com/OSSCA-chromium/contributions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:opacity-80 transition-opacity"
@@ -66,7 +66,7 @@ export default function RootLayout({
             <div className="flex items-center justify-center gap-2">
               <p>© {new Date().getFullYear()} OSSCA Chromium. All rights reserved.</p>
               <a 
-                href="https://github.com/OSSCA-chromium/hands-on-2025"
+                href="https://github.com/OSSCA-chromium/contributions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:opacity-80 transition-opacity"

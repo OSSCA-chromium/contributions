@@ -1,11 +1,11 @@
 ---
 name: GitHub Pages 수정 또는 제안
-about: https://ossca-chromium.github.io/hands-on-2025/
-title: ''
+about: https://ossca-chromium.github.io/contributions/
+title: ""
 labels: gh-pages
-assignees: ''
-
+assignees: ""
 ---
 
 ### 내용
+
 - .

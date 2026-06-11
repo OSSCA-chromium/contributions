@@ -1,6 +1,6 @@
 # Chromium 빌드 재시도 스크립트
 
-![에러메세지](https://github.com/OSSCA-chromium/hands-on-2025/blob/main/tools/script_for_chromium_build_error/build_error.jpg)
+![에러메세지](https://github.com/OSSCA-chromium/contributions/blob/main/tools/script_for_chromium_build_error/build_error.jpg)
 
 Chromium을 빌드하는데 자꾸 FAILED가 나는 분들을 위한 스크립트입니다.
 

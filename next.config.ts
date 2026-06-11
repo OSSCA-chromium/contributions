@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'out',
   trailingSlash: true,
-  basePath: '/hands-on-2025',
+  basePath: '/contributions',
   images: {
     remotePatterns: [
       {
