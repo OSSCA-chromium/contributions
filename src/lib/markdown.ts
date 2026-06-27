@@ -27,27 +27,40 @@ function escapeHtml(text: string): string {
     .replace(/'/g, '&#039;');
 }
 
-// marked 설정
-const renderer = new marked.Renderer();
+// 헤딩 텍스트로부터 slug id 생성
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w가-힣\s-]/g, '')
+    .replace(/\s+/g, '-');
+}
+
+// marked 설정 (단일 파이프라인). 코드 하이라이팅 + 헤딩 slug id.
 marked.use({
-  renderer,
   gfm: true,
   breaks: true,
-  async: false
+  async: false,
+  renderer: {
+    code({ text, lang }) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          const highlighted = hljs.highlight(text, { language: lang }).value;
+          return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
+        } catch (err) {
+          console.error('코드 하이라이팅 오류:', err);
+        }
+      }
+      return `<pre><code class="hljs language-plaintext">${escapeHtml(text)}</code></pre>`;
+    },
+    heading({ tokens, depth }) {
+      const text = this.parser.parseInline(tokens);
+      const raw = tokens.map((t) => ('text' in t ? t.text : '')).join('');
+      const id = slugify(raw);
+      return `<h${depth} id="${id}">${text}</h${depth}>`;
+    },
+  },
 });
-
-// 코드 하이라이팅 설정
-renderer.code = ({ text, lang }) => {
-  if (lang && hljs.getLanguage(lang)) {
-    try {
-      const highlighted = hljs.highlight(text, { language: lang }).value;
-      return `<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs language-${lang} p-4 block text-sm font-mono">${highlighted}</code></pre>`;
-    } catch (err) {
-      console.error('코드 하이라이팅 오류:', err);
-    }
-  }
-  return `<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs language-plaintext p-4 block text-sm font-mono">${escapeHtml(text)}</code></pre>`;
-};
 
 // 마크다운을 HTML로 변환
 function markdownToHtml(markdown: string): string {
@@ -56,27 +69,32 @@ function markdownToHtml(markdown: string): string {
   }
 
   try {
-    const html = marked.parse(markdown) as string;
-    
-    // 추가 스타일링 적용
-    return html
-      .replace(/<code>/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">')
-      .replace(/<a href=/g, '<a class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer" href=')
-      .replace(/<blockquote>/g, '<blockquote class="pl-4 border-l-4 border-gray-300 text-gray-700 italic my-4">')
-      .replace(/<h1>/g, '<h1 class="text-3xl font-bold mt-6 mb-4">')
-      .replace(/<h2>/g, '<h2 class="text-2xl font-semibold mt-6 mb-3">')
-      .replace(/<h3>/g, '<h3 class="text-xl font-semibold mt-5 mb-2">')
-      .replace(/<h4>/g, '<h4 class="text-lg font-semibold mt-4 mb-2">')
-      .replace(/<h5>/g, '<h5 class="text-base font-semibold mt-3 mb-1">')
-      .replace(/<h6>/g, '<h6 class="text-base font-semibold mt-3 mb-1">')
-      .replace(/<p>/g, '<p class="my-4">')
-      .replace(/<ul>/g, '<ul class="list-disc pl-8 my-4">')
-      .replace(/<ol>/g, '<ol class="list-decimal pl-8 my-4">');
-
+    return marked.parse(markdown) as string;
   } catch (error) {
     console.error('마크다운 변환 중 오류:', error);
     return `<p>${escapeHtml(markdown)}</p>`;
   }
+}
+
+// 마크다운에서 헤딩 목록(목차)을 추출
+function extractHeadings(
+  markdown: string
+): { id: string; text: string; level: number }[] {
+  const lines = markdown.split('\n');
+  const headings: { id: string; text: string; level: number }[] = [];
+  let inCode = false;
+  for (const line of lines) {
+    if (line.trim().startsWith('```')) {
+      inCode = !inCode;
+      continue;
+    }
+    if (inCode) continue;
+    const m = /^(#{1,6})\s+(.+)$/.exec(line);
+    if (m) {
+      headings.push({ id: slugify(m[2]), text: m[2].trim(), level: m[1].length });
+    }
+  }
+  return headings;
 }
 
 // 마크다운 파일 읽기
@@ -89,15 +107,16 @@ async function getMarkdownContent(filePath: string): Promise<MarkdownContent | n
 
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const matterResult = matter(fileContents);
-    
+
     const contentHtml = markdownToHtml(matterResult.content);
-    const excerpt = matterResult.content
-      .split('\n\n')
-      .slice(0, 2)
-      .join('\n\n')
-      .replace(/^#+\s+.+$/gm, '')
-      .substring(0, 160)
-      .trim() + '...';
+    const excerpt =
+      matterResult.content
+        .split('\n\n')
+        .slice(0, 2)
+        .join('\n\n')
+        .replace(/^#+\s+.+$/gm, '')
+        .substring(0, 160)
+        .trim() + '...';
 
     return {
       title: matterResult.data.title || '제목 없음',
@@ -116,4 +135,4 @@ async function getMarkdownContent(filePath: string): Promise<MarkdownContent | n
   }
 }
 
-export { markdownToHtml, getMarkdownContent, type MarkdownContent }; 
+export { markdownToHtml, getMarkdownContent, extractHeadings, type MarkdownContent };

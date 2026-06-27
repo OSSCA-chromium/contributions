@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import LogoImage from "../../public/logo.png";
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,9 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="bg-gray-100">
-      <body className={`${inter.className} bg-gray-100 text-black min-h-screen flex flex-col`}>
-        <header className="bg-[#4285F4] text-white py-4 shadow-md sticky top-0 z-10">
+    <html lang="ko">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-background text-on-surface min-h-screen flex flex-col`}>
+        <header className="bg-primary text-on-primary py-4 shadow-md sticky top-0 z-10">
           <div className="container mx-auto px-4 lg:px-6">
             <nav className="flex flex-col sm:flex-row justify-between items-center">
               <Link href="/" className="text-2xl font-bold mb-3 sm:mb-0 flex items-center">
@@ -29,17 +37,21 @@ export default function RootLayout({
                 OSSCA Chromium
               </Link>
               <div className="flex gap-6 items-center">
-                <Link href="/guide" className="hover:text-gray-200 font-medium">
+                <Link href="/docs" className="hover:opacity-80 font-medium">
                   Guide
                 </Link>
-                <Link href="/contributions" className="hover:text-gray-200 font-medium">
+                <Link href="/patches" className="hover:opacity-80 font-medium">
                   Contributions
                 </Link>
-                <a 
+                <Link href="/stats" className="hover:opacity-80 font-medium">
+                  Stats
+                </Link>
+                <ThemeToggle />
+                <a
                   href="https://github.com/OSSCA-chromium/contributions"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:opacity-80 transition-opacity"
+                  className="text-on-primary hover:opacity-80 transition-opacity"
                   aria-label="GitHub 저장소"
                 >
                   <svg 
@@ -57,19 +69,19 @@ export default function RootLayout({
           </div>
         </header>
         <main className="container mx-auto px-4 py-6 flex-grow">
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm overflow-hidden">
+          <div className="bg-surface text-on-surface rounded-lg p-4 sm:p-6 shadow-sm overflow-hidden">
             {children}
           </div>
         </main>
-        <footer className="bg-gray-100 text-gray-600 py-4 mt-6">
+        <footer className="bg-background text-on-surface-variant py-4 mt-6">
           <div className="container mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-2">
               <p>© {new Date().getFullYear()} OSSCA Chromium. All rights reserved.</p>
-              <a 
+              <a
                 href="https://github.com/OSSCA-chromium/contributions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:opacity-80 transition-opacity"
+                className="text-on-surface-variant hover:opacity-80 transition-opacity"
                 aria-label="GitHub 저장소"
               >
                 <svg 

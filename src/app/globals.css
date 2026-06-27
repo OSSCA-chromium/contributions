@@ -1,27 +1,56 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f3f4f6;
-  --foreground: #171717;
+  --color-primary: #1a73e8;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d3e3fd;
+  --color-background: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-surface-variant: #f1f3f4;
+  --color-on-surface: #1f1f1f;
+  --color-on-surface-variant: #5f6368;
+  --color-outline: #dadce0;
+  --color-success: #16a34a;
+  --color-info: #2563eb;
+  --color-warning: #b8860b;
+}
+
+.dark {
+  --color-primary: #8ab4f8;
+  --color-on-primary: #062e6f;
+  --color-primary-container: #0842a0;
+  --color-background: #131314;
+  --color-surface: #1e1f20;
+  --color-surface-variant: #2d2e30;
+  --color-on-surface: #e3e3e3;
+  --color-on-surface-variant: #9aa0a6;
+  --color-outline: #444746;
+  --color-success: #4ade80;
+  --color-info: #8ab4f8;
+  --color-warning: #fbbf24;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f3f4f6;
-    --foreground: #171717;
-  }
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-outline: var(--color-outline);
+  --color-success: var(--color-success);
+  --color-info: var(--color-info);
+  --color-warning: var(--color-warning);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-on-surface);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
@@ -38,12 +67,13 @@ h6 {
 
 a {
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* typography 플러그인이 인라인 코드에 붙이는 백틱(`) 제거 */
+.prose :where(code):not(:where([class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: none;
+}
 
 /* 콘텐츠 넘침 방지를 위한 스타일 */
 img,
@@ -174,7 +204,7 @@ pre + div {
 
 /* 인라인 코드 스타일링 */
 :not(pre) > code {
-  @apply bg-gray-100 text-blue-700 px-1.5 py-0.5 rounded text-sm;
+  @apply bg-surface-variant text-primary px-1.5 py-0.5 rounded text-sm;
   font-family: "Menlo", "Monaco", "Courier New", monospace;
 }
 
