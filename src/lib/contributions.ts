@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { markdownToHtml } from '@/lib/markdown';
+import { isValidGithubUsername } from '@/lib/github';
 import type { Contribution, ContributionStatus } from '@/lib/types';
 
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
@@ -23,6 +24,9 @@ function normalizeLabels(value: unknown): string[] {
 }
 
 export type { Contribution };
+
+// 하위 호환을 위해 @/lib/contributions 에서도 계속 export
+export { isValidGithubUsername };
 
 // 컨트리뷰션 폴더가 없으면 생성
 try {
@@ -147,11 +151,6 @@ export function getAllContributionSlugs(): { slug: string }[] {
     console.error('Error getting contribution slugs:', error);
     return [];
   }
-}
-
-// 유효한 GitHub 사용자 이름인지 확인하는 함수
-export function isValidGithubUsername(username: string): boolean {
-  return Boolean(username && !/\s/.test(username) && /^[a-zA-Z0-9-]+$/.test(username));
 }
 
 // 고유한 컨트리뷰터 목록 가져오기

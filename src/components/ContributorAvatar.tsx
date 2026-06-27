@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { isValidGithubUsername } from '@/lib/contributions';
+import { isValidGithubUsername } from '@/lib/github';
 
 export default function ContributorAvatar({
   username,
