@@ -197,7 +197,7 @@ pre + div {
 
 /* 인라인 코드 스타일링 */
 :not(pre) > code {
-  @apply bg-gray-100 text-blue-700 px-1.5 py-0.5 rounded text-sm;
+  @apply bg-surface-variant text-primary px-1.5 py-0.5 rounded text-sm;
   font-family: "Menlo", "Monaco", "Courier New", monospace;
 }
 
