@@ -1,22 +1,28 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { markdownToHtml } from '@/lib/markdown';
+import type { Contribution, ContributionStatus } from '@/lib/types';
 
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
 
-// 컨트리뷰션 타입 정의
-export interface Contribution {
-  slug: string;
-  title: string;
-  date: string;
-  author: string;
-  contributionUrl?: string;
-  labels?: string[];
-  status?: 'in review' | 'merged' | 'draft';
-  excerpt: string;
-  content?: string;
-  contentHtml?: string;
+const VALID_STATUSES: ContributionStatus[] = ['in review', 'merged', 'draft'];
+
+// frontmatter status를 유니언 타입으로 정규화 (유효하지 않으면 undefined)
+function normalizeStatus(value: unknown): ContributionStatus | undefined {
+  return VALID_STATUSES.includes(value as ContributionStatus)
+    ? (value as ContributionStatus)
+    : undefined;
 }
+
+// frontmatter labels를 string[]으로 정규화
+function normalizeLabels(value: unknown): string[] {
+  if (Array.isArray(value)) return value;
+  if (value) return [value as string];
+  return [];
+}
+
+export type { Contribution };
 
 // 컨트리뷰션 폴더가 없으면 생성
 try {
@@ -60,9 +66,8 @@ export function getAllContributions(): Contribution[] {
           date: matterResult.data.date || new Date().toISOString(),
           author: matterResult.data.author || '익명',
           contributionUrl: matterResult.data.contribution_url || '',
-          labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
-                 (matterResult.data.labels ? [matterResult.data.labels] : []),
-          status: matterResult.data.status || '',
+          labels: normalizeLabels(matterResult.data.labels),
+          status: normalizeStatus(matterResult.data.status),
           excerpt: excerpt,
           content: matterResult.content,
         };
@@ -73,94 +78,6 @@ export function getAllContributions(): Contribution[] {
   } catch (error) {
     console.error('Error getting contributions:', error);
     return [];
-  }
-}
-
-// 마크다운을 HTML로 변환
-async function markdownToHtml(markdown: string) {
-  try {
-    // 사용자 정의 마크다운 변환
-    // 1. 헤더 변환 (#, ##, ###, ####, #####, ######)
-    let html = markdown
-      .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-      .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-      .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-      .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
-      .replace(/^##### (.+)$/gm, '<h5>$1</h5>')
-      .replace(/^###### (.+)$/gm, '<h6>$1</h6>');
-
-    // 2. 코드 블록 처리 (```...```)
-    html = html.replace(/```([\s\S]+?)```/g, '<pre><code>$1</code></pre>');
-    
-    // 3. 인라인 코드 처리 (`...`)
-    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-    
-    // 4. 순서 없는 목록 처리
-    const lines = html.split('\n');
-    let processedLines: string[] = [];
-    let inList = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const trimmedLine = line.trim();
-      
-      // 목록 항목 (-, *, +로 시작하는 라인)
-      if (/^[-*+]\s+(.+)$/.test(trimmedLine)) {
-        const content = trimmedLine.replace(/^[-*+]\s+(.+)$/, '$1');
-        
-        if (!inList) {
-          processedLines.push('<ul>');
-          inList = true;
-        }
-        
-        processedLines.push(`<li>${content}</li>`);
-      } 
-      // 목록이 아닌 경우 목록 종료
-      else if (inList && trimmedLine !== '') {
-        processedLines.push('</ul>');
-        inList = false;
-        processedLines.push(line);
-      }
-      // 일반 텍스트
-      else {
-        processedLines.push(line);
-      }
-    }
-    
-    // 열린 목록 태그가 있다면 닫기
-    if (inList) {
-      processedLines.push('</ul>');
-    }
-    
-    html = processedLines.join('\n');
-    
-    // 5. 단락 처리 (빈 줄로 구분된 텍스트 블록)
-    const paragraphs = html.split(/\n\s*\n/);
-    html = paragraphs.map(p => {
-      p = p.trim();
-      if (p === '') return '';
-      
-      // 이미 HTML 태그로 시작하면 그대로 반환
-      if (p.startsWith('<') && !p.startsWith('<code>')) {
-        return p;
-      }
-      
-      // 나머지는 <p> 태그로 감싸기
-      return `<p>${p}</p>`;
-    }).join('\n\n');
-    
-    // 6. 강조 (볼드, 이탤릭) 및 링크 처리
-    html = html
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-      .replace(/\n/g, ''); // 줄바꿈 제거
-    
-    console.log('변환 결과:', html);
-    return html;
-  } catch (error) {
-    console.error('마크다운 변환 중 오류:', error);
-    return `<p>${markdown}</p>`;
   }
 }
 
@@ -180,8 +97,8 @@ export async function getContributionBySlug(slug: string): Promise<Contribution 
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
-    // 마크다운을 HTML로 변환
-    const contentHtml = await markdownToHtml(matterResult.content);
+    // 마크다운을 HTML로 변환 (단일 파이프라인)
+    const contentHtml = markdownToHtml(matterResult.content);
 
     // 첫 두 문단 정도를 발췌문으로 사용
     const excerpt = matterResult.content
@@ -198,9 +115,8 @@ export async function getContributionBySlug(slug: string): Promise<Contribution 
       date: matterResult.data.date || new Date().toISOString(),
       author: matterResult.data.author || '익명',
       contributionUrl: matterResult.data.contribution_url || '',
-      labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
-             (matterResult.data.labels ? [matterResult.data.labels] : []),
-      status: matterResult.data.status || '',
+      labels: normalizeLabels(matterResult.data.labels),
+      status: normalizeStatus(matterResult.data.status),
       excerpt: excerpt,
       content: matterResult.content,
       contentHtml,
