@@ -4,33 +4,45 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #1a73e8;
+  --color-primary: #1c6dd0;
   --color-on-primary: #ffffff;
-  --color-primary-container: #d3e3fd;
-  --color-background: #f3f4f6;
+  --color-primary-container: #d6e6fa;
+  --color-background: #f4f7fb;
   --color-surface: #ffffff;
-  --color-surface-variant: #f1f3f4;
-  --color-on-surface: #1f1f1f;
-  --color-on-surface-variant: #5f6368;
-  --color-outline: #dadce0;
-  --color-success: #16a34a;
-  --color-info: #2563eb;
-  --color-warning: #b8860b;
+  --color-surface-variant: #edf2f8;
+  --color-on-surface: #1a1c1e;
+  --color-on-surface-variant: #5a6470;
+  --color-outline: #cdd6e0;
+  --color-success: #1a8a4d;
+  --color-info: #1c6dd0;
+  --color-warning: #b26b00;
+  --color-link: #1c6dd0;
+  --chart-merged: #1a8a4d;
+  --chart-in-review: #1c6dd0;
+  --chart-draft: #8a93a3;
+  --chart-unknown: #b26b00;
+  --chart-bar: #1c6dd0;
 }
 
 .dark {
-  --color-primary: #8ab4f8;
-  --color-on-primary: #062e6f;
-  --color-primary-container: #0842a0;
-  --color-background: #131314;
-  --color-surface: #1e1f20;
-  --color-surface-variant: #2d2e30;
-  --color-on-surface: #e3e3e3;
-  --color-on-surface-variant: #9aa0a6;
-  --color-outline: #444746;
+  --color-primary: #5fa8f5;
+  --color-on-primary: #06294d;
+  --color-primary-container: #0b3a6b;
+  --color-background: #0f1620;
+  --color-surface: #18212e;
+  --color-surface-variant: #232e3d;
+  --color-on-surface: #e3e8ef;
+  --color-on-surface-variant: #9aa6b5;
+  --color-outline: #34404f;
   --color-success: #4ade80;
-  --color-info: #8ab4f8;
+  --color-info: #5fa8f5;
   --color-warning: #fbbf24;
+  --color-link: #7bbaf7;
+  --chart-merged: #4ade80;
+  --chart-in-review: #5fa8f5;
+  --chart-draft: #9aa6b5;
+  --chart-unknown: #fbbf24;
+  --chart-bar: #5fa8f5;
 }
 
 @theme inline {
@@ -46,6 +58,12 @@
   --color-success: var(--color-success);
   --color-info: var(--color-info);
   --color-warning: var(--color-warning);
+  --color-link: var(--color-link);
+  --color-chart-merged: var(--chart-merged);
+  --color-chart-in-review: var(--chart-in-review);
+  --color-chart-draft: var(--chart-draft);
+  --color-chart-unknown: var(--chart-unknown);
+  --color-chart-bar: var(--chart-bar);
 }
 
 body {
@@ -73,6 +91,15 @@ a {
 .prose :where(code):not(:where([class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"] *))::after {
   content: none;
+}
+
+/* docs/본문 링크 색 (라이트/다크 토큰) */
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  color: var(--color-link);
+  text-decoration: none;
+}
+.prose :where(a):not(:where([class~="not-prose"] *)):hover {
+  text-decoration: underline;
 }
 
 /* 콘텐츠 넘침 방지를 위한 스타일 */
