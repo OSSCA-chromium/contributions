@@ -35,7 +35,7 @@ export default function ContributionCard({
         <ContributorAvatar username={author} size={18} />
         <span>{author}</span>
         <span aria-hidden="true">·</span>
-        <span>{date}</span>
+        <span>{new Date(date).toLocaleDateString('ko-KR')}</span>
       </div>
 
       {!compact && (
