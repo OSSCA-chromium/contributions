@@ -25,24 +25,24 @@
 }
 
 .dark {
-  --color-primary: #5fa8f5;
-  --color-on-primary: #06294d;
-  --color-primary-container: #0b3a6b;
-  --color-background: #0f1620;
-  --color-surface: #18212e;
-  --color-surface-variant: #232e3d;
-  --color-on-surface: #e3e8ef;
-  --color-on-surface-variant: #9aa6b5;
-  --color-outline: #34404f;
-  --color-success: #4ade80;
-  --color-info: #5fa8f5;
-  --color-warning: #fbbf24;
-  --color-link: #7bbaf7;
-  --chart-merged: #4ade80;
-  --chart-in-review: #5fa8f5;
-  --chart-draft: #9aa6b5;
-  --chart-unknown: #fbbf24;
-  --chart-bar: #5fa8f5;
+  --color-primary: #4f8ae0;
+  --color-on-primary: #03101f;
+  --color-primary-container: #0a2c54;
+  --color-background: #0a1020;
+  --color-surface: #0f1a2e;
+  --color-surface-variant: #18253c;
+  --color-on-surface: #dde4ee;
+  --color-on-surface-variant: #93a1b5;
+  --color-outline: #2a3851;
+  --color-success: #2f9e5b;
+  --color-info: #4f8ae0;
+  --color-warning: #d99a2b;
+  --color-link: #6fa6ee;
+  --chart-merged: #2f9e5b;
+  --chart-in-review: #3f78c8;
+  --chart-draft: #6b7686;
+  --chart-unknown: #b8862e;
+  --chart-bar: #3f78c8;
 }
 
 @theme inline {
