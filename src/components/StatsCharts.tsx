@@ -15,10 +15,10 @@ import {
 import type { Stats } from '@/lib/types';
 
 const STATUS_COLORS: Record<string, string> = {
-  merged: '#16a34a',
-  'in review': '#2563eb',
-  draft: '#9aa0a6',
-  unknown: '#b8860b',
+  merged: 'var(--chart-merged)',
+  'in review': 'var(--chart-in-review)',
+  draft: 'var(--chart-draft)',
+  unknown: 'var(--chart-unknown)',
 };
 
 const STATUS_LABELS: Record<string, string> = {
@@ -28,7 +28,7 @@ const STATUS_LABELS: Record<string, string> = {
   unknown: '기타',
 };
 
-const BAR_COLOR = '#1a73e8';
+const BAR_COLOR = 'var(--chart-bar)';
 
 export default function StatsCharts({ stats }: { stats: Stats }) {
   const statusData = stats.byStatus.map((s) => ({
