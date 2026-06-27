@@ -3,6 +3,7 @@ import type { Contribution } from '@/lib/types';
 import StatusBadge from '@/components/StatusBadge';
 import LabelChip from '@/components/LabelChip';
 import ContributorAvatar from '@/components/ContributorAvatar';
+import YearBadge from '@/components/YearBadge';
 
 export default function ContributionCard({
   contribution,
@@ -36,6 +37,7 @@ export default function ContributionCard({
         <span>{author}</span>
         <span aria-hidden="true">·</span>
         <span>{new Date(date).toLocaleDateString('ko-KR')}</span>
+        <YearBadge date={date} />
       </div>
 
       {!compact && (
