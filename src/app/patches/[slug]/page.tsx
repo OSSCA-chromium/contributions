@@ -64,15 +64,13 @@ export default async function PatchPage({ params }: ParamsProps) {
           </span>
           <span className="flex items-center">
             {isValidGithubUsername(contribution.author) ? (
-              <a
-                href={`https://github.com/${contribution.author}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/contributors/${contribution.author}`}
                 className="flex items-center hover:text-primary"
               >
                 <ContributorAvatar username={contribution.author} size={24} />
                 <span className="ml-2">{contribution.author}</span>
-              </a>
+              </Link>
             ) : (
               <span>{contribution.author}</span>
             )}
