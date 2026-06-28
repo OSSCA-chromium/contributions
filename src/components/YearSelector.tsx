@@ -1,25 +1,31 @@
 'use client';
 
-import { useYear } from '@/components/YearProvider';
-
-export default function YearSelector({ years }: { years: string[] }) {
-  const { year, setYear } = useYear();
+export default function YearSelector({
+  years,
+  value,
+  onChange,
+}: {
+  years: string[];
+  value: string;
+  // eslint-disable-next-line no-unused-vars
+  onChange: (year: string) => void;
+}) {
   const options = ['all', ...years];
 
   return (
-    <div className="flex flex-wrap gap-1" role="group" aria-label="연도 선택">
+    <div className="flex flex-wrap gap-2" role="group" aria-label="연도 선택">
       {options.map((opt) => {
-        const active = year === opt;
+        const active = value === opt;
         return (
           <button
             key={opt}
             type="button"
-            onClick={() => setYear(opt)}
+            onClick={() => onChange(opt)}
             aria-pressed={active}
-            className={`rounded-full px-2 py-0.5 text-sm transition-colors ${
+            className={`rounded-full px-3 py-1 text-sm transition-colors ${
               active
-                ? 'bg-on-primary text-primary'
-                : 'text-on-primary hover:bg-white/10'
+                ? 'bg-primary text-on-primary'
+                : 'bg-surface-variant text-on-surface-variant hover:bg-primary-container'
             }`}
           >
             {opt === 'all' ? '전체' : opt}

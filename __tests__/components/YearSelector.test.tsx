@@ -1,18 +1,21 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { YearProvider } from '@/components/YearProvider';
+import { useState } from 'react';
 import YearSelector from '@/components/YearSelector';
 
-beforeEach(() => localStorage.clear());
+function Harness() {
+  const [year, setYear] = useState('2026');
+  return <YearSelector years={['2026', '2025']} value={year} onChange={setYear} />;
+}
 
 test('전체 + 연도 옵션을 렌더하고 클릭 시 활성화된다', () => {
-  render(
-    <YearProvider>
-      <YearSelector years={['2026', '2025']} />
-    </YearProvider>
-  );
+  render(<Harness />);
   expect(screen.getByRole('button', { name: '전체' })).toBeInTheDocument();
+
+  const y2026 = screen.getByRole('button', { name: '2026' });
+  expect(y2026).toHaveAttribute('aria-pressed', 'true');
+
   const y2025 = screen.getByRole('button', { name: '2025' });
   fireEvent.click(y2025);
   expect(y2025).toHaveAttribute('aria-pressed', 'true');
-  expect(localStorage.getItem('year')).toBe('2025');
+  expect(y2026).toHaveAttribute('aria-pressed', 'false');
 });

@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
-import { YearProvider } from '@/components/YearProvider';
 import * as contributionsModule from '@/lib/contributions';
 
 // contributions 모듈 모킹
@@ -22,9 +21,7 @@ describe('홈페이지', () => {
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(
-      <YearProvider>
-        <HomePage />
-      </YearProvider>
+      <HomePage />
     );
 
     // 히어로 타이틀과 빈 상태 안내 체크
@@ -48,9 +45,7 @@ describe('홈페이지', () => {
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(
-      <YearProvider>
-        <HomePage />
-      </YearProvider>
+      <HomePage />
     );
 
     expect(screen.getByText('Recent contributions')).toBeInTheDocument();
@@ -81,9 +76,7 @@ describe('홈페이지', () => {
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(
-      <YearProvider>
-        <HomePage />
-      </YearProvider>
+      <HomePage />
     );
 
     expect(screen.getByText('테스트 컨트리뷰션 1')).toBeInTheDocument();
@@ -106,9 +99,7 @@ describe('홈페이지', () => {
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(
-      <YearProvider>
-        <HomePage />
-      </YearProvider>
+      <HomePage />
     );
 
     expect(screen.getByText('Contributors')).toBeInTheDocument();

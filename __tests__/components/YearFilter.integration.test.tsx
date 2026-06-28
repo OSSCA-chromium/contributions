@@ -1,6 +1,4 @@
 import { render, screen, fireEvent, within } from '@testing-library/react';
-import { YearProvider } from '@/components/YearProvider';
-import YearSelector from '@/components/YearSelector';
 import ContributionSearch from '@/components/ContributionSearch';
 import type { SearchIndexItem } from '@/lib/types';
 
@@ -25,26 +23,13 @@ const items: SearchIndexItem[] = [
   },
 ];
 
-const years = ['2026', '2025'];
-
-function renderWithYear(initialYear: string) {
-  return render(
-    <YearProvider initialYear={initialYear} years={years}>
-      <YearSelector years={years} />
-      <ContributionSearch items={items} />
-    </YearProvider>
-  );
-}
-
-beforeEach(() => localStorage.clear());
-
 test('연도 선택을 바꾸면 목록 결과가 그에 맞게 바뀐다', () => {
-  renderWithYear('2026');
+  render(<ContributionSearch items={items} />);
 
   // 연도 선택기 그룹으로 한정(상태 필터에도 '전체' 버튼이 있어 충돌 방지)
   const yearGroup = screen.getByRole('group', { name: '연도 선택' });
 
-  // 초기 2026: 2026 항목만
+  // 초기 2026(데이터에 있어 기본값): 2026 항목만
   expect(screen.getByText('2026 patch')).toBeInTheDocument();
   expect(screen.queryByText('2025 patch')).not.toBeInTheDocument();
 

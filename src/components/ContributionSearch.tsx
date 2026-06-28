@@ -3,8 +3,13 @@
 import { useMemo, useState } from 'react';
 import type { ContributionStatus, SearchIndexItem } from '@/lib/types';
 import ContributionCard from '@/components/ContributionCard';
-import { useYear } from '@/components/YearProvider';
-import { filterByYear } from '@/lib/years';
+import YearSelector from '@/components/YearSelector';
+import {
+  filterByYear,
+  getAvailableYears,
+  getDataYears,
+  resolveInitialYear,
+} from '@/lib/years';
 
 type StatusFilter = 'all' | ContributionStatus;
 
@@ -19,7 +24,8 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
   const [query, setQuery] = useState('');
   const [status, setStatus] = useState<StatusFilter>('all');
   const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
-  const { year } = useYear();
+  const years = useMemo(() => getAvailableYears(items), [items]);
+  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
 
   const allLabels = useMemo(() => {
     const set = new Set<string>();
@@ -55,6 +61,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
   return (
     <div>
       <div className="mb-4 flex flex-col gap-3">
+        <YearSelector years={years} value={year} onChange={setYear} />
         <input
           type="search"
           value={query}

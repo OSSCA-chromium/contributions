@@ -1,16 +1,22 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
-import { useYear } from '@/components/YearProvider';
-import { filterByYear } from '@/lib/years';
+import {
+  filterByYear,
+  getAvailableYears,
+  getDataYears,
+  resolveInitialYear,
+} from '@/lib/years';
 import ContributionCard from '@/components/ContributionCard';
 import ContributorAvatar from '@/components/ContributorAvatar';
+import YearSelector from '@/components/YearSelector';
 
 export default function HomeView({ items }: { items: SearchIndexItem[] }) {
-  const { year } = useYear();
+  const years = useMemo(() => getAvailableYears(items), [items]);
+  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
   const filtered = useMemo(() => filterByYear(items, year), [items, year]);
   const stats = useMemo(() => computeStats(filtered), [filtered]);
   const recent = filtered.slice(0, 3);
@@ -34,9 +40,10 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         <h1 className="text-3xl md:text-4xl font-bold text-on-surface mb-3">
           OSSCA Chromium Contributions
         </h1>
-        <p className="text-on-surface-variant max-w-2xl">
+        <p className="text-on-surface-variant max-w-2xl mb-4">
           오픈소스 컨트리뷰션 아카데미 참가자들이 Chromium 프로젝트에 기여한 컨트리뷰션 기록입니다.
         </p>
+        <YearSelector years={years} value={year} onChange={setYear} />
       </section>
 
       {filtered.length === 0 ? (

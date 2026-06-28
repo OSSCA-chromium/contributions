@@ -1,17 +1,25 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import type { Contribution } from '@/lib/types';
-import { useYear } from '@/components/YearProvider';
-import { filterByYear } from '@/lib/years';
+import {
+  filterByYear,
+  getAvailableYears,
+  getDataYears,
+  resolveInitialYear,
+} from '@/lib/years';
 import ContributionCard from '@/components/ContributionCard';
+import YearSelector from '@/components/YearSelector';
 
 export default function ContributorView({
   contributions,
 }: {
   contributions: Contribution[];
 }) {
-  const { year } = useYear();
+  const years = useMemo(() => getAvailableYears(contributions), [contributions]);
+  const [year, setYear] = useState(() =>
+    resolveInitialYear(getDataYears(contributions))
+  );
   const filtered = useMemo(
     () => filterByYear(contributions, year),
     [contributions, year]
@@ -24,6 +32,10 @@ export default function ContributorView({
 
   return (
     <>
+      <div className="mb-6">
+        <YearSelector years={years} value={year} onChange={setYear} />
+      </div>
+
       <div className="grid grid-cols-3 gap-4 mb-8">
         <div className="bg-surface border border-outline rounded-lg p-4 text-center">
           <div className="text-2xl font-bold text-on-surface">{total}</div>
