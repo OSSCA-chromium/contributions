@@ -12,6 +12,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "validate:data": "node scripts/validate-contributions.js",
+    "lint:md": "markdownlint-cli2",
     "export": "next build && next export",
     "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
@@ -41,6 +42,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.5.1",
+    "markdownlint-cli2": "^0.22.1",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
