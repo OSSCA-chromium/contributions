@@ -37,3 +37,17 @@ test('labels가 배열이 아니면 잡는다', () => {
   const errs = validateFrontmatter({ ...valid, labels: 'docs' });
   expect(errs.some((e) => e.includes('labels'))).toBe(true);
 });
+
+test('labels에 빈 문자열 원소가 있으면 잡는다', () => {
+  const errs = validateFrontmatter({ ...valid, labels: ['docs', ''] });
+  expect(errs.some((e) => e.includes('labels'))).toBe(true);
+});
+
+test('존재하지 않는 날짜(형식만 맞음)를 잡는다', () => {
+  expect(
+    validateFrontmatter({ ...valid, date: '2025-02-30' }).some((e) => e.includes('date'))
+  ).toBe(true);
+  expect(
+    validateFrontmatter({ ...valid, date: '2025-13-01' }).some((e) => e.includes('date'))
+  ).toBe(true);
+});

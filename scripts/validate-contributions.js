@@ -5,6 +5,19 @@ const matter = require('gray-matter');
 const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'labels', 'status'];
 const STATUSES = ['in review', 'merged', 'draft'];
 
+// YYYY-MM-DD 문자열이 실제로 존재하는 날짜인지 확인(2025-13-40, 2025-02-30 등 배제)
+function isRealDate(str) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(str);
+  if (!m) return false;
+  const [y, mo, d] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  const dt = new Date(Date.UTC(y, mo - 1, d));
+  return (
+    dt.getUTCFullYear() === y &&
+    dt.getUTCMonth() === mo - 1 &&
+    dt.getUTCDate() === d
+  );
+}
+
 // frontmatter 객체를 검증해 위반 사유 문자열 배열을 반환(빈 배열이면 통과)
 function validateFrontmatter(data) {
   const errors = [];
@@ -28,14 +41,18 @@ function validateFrontmatter(data) {
   if (data.date !== undefined && data.date !== '') {
     const d = data.date;
     const ok =
-      (typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d)) ||
+      (typeof d === 'string' && isRealDate(d)) ||
       (d instanceof Date && !Number.isNaN(d.getTime()));
-    if (!ok) errors.push('date must be YYYY-MM-DD');
+    if (!ok) errors.push('date must be a valid YYYY-MM-DD');
   }
 
   if (data.labels !== undefined) {
     if (!Array.isArray(data.labels) || data.labels.length === 0) {
       errors.push('labels must be a non-empty array');
+    } else if (
+      !data.labels.every((l) => typeof l === 'string' && l.trim() !== '')
+    ) {
+      errors.push('labels must contain only non-empty strings');
     }
   }
 
@@ -56,7 +73,15 @@ function validateAll(dir) {
     const full = path.join(dir, file);
     let errors = [];
     try {
-      const { data } = matter(fs.readFileSync(full, 'utf8'));
+      const parsed = matter(fs.readFileSync(full, 'utf8'));
+      const data = { ...parsed.data };
+      // gray-matter는 따옴표 없는 date를 Date 객체로 파싱하면서 2025-02-30 같은
+      // 잘못된 날짜를 롤오버해 버린다. raw frontmatter에서 원본 문자열을 그대로
+      // 뽑아 검증해야 형식·실존 여부를 정확히 잡는다.
+      const m = /^date:\s*(.+)$/m.exec(parsed.matter || '');
+      if (m) {
+        data.date = m[1].trim().replace(/\s*#.*$/, '').replace(/^['"]|['"]$/g, '');
+      }
       errors = validateFrontmatter(data);
     } catch (e) {
       errors = [`YAML parse error: ${e.message}`];
