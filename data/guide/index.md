@@ -34,12 +34,12 @@ author: OSSCA Chromium
   - [Linux](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
   - [Mac](https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md)
 - Contribution Guide
-  - <https://chromium.googlesource.com/chromium/src/+/main/CODE_OF_CONDUCT.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/gerrit_guide.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/commit_checklist.md>
+  - https://chromium.googlesource.com/chromium/src/+/main/CODE_OF_CONDUCT.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/gerrit_guide.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/commit_checklist.md
 - Code Review
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/code_reviews.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/cl_respect.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/cr_respect.md>
-  - <https://chromium.googlesource.com/chromium/src/+/main/docs/cl_tips.md>
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/code_reviews.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cl_respect.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cr_respect.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cl_tips.md
