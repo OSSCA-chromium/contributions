@@ -11,6 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "validate:data": "node scripts/validate-contributions.js",
     "export": "next build && next export",
     "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
