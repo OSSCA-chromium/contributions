@@ -3,6 +3,13 @@
 import { useMemo, useState } from 'react';
 import type { ContributionStatus, SearchIndexItem } from '@/lib/types';
 import ContributionCard from '@/components/ContributionCard';
+import YearSelector from '@/components/YearSelector';
+import {
+  filterByYear,
+  getAvailableYears,
+  getDataYears,
+  resolveInitialYear,
+} from '@/lib/years';
 
 type StatusFilter = 'all' | ContributionStatus;
 
@@ -17,6 +24,8 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
   const [query, setQuery] = useState('');
   const [status, setStatus] = useState<StatusFilter>('all');
   const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
+  const years = useMemo(() => getAvailableYears(items), [items]);
+  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
 
   const allLabels = useMemo(() => {
     const set = new Set<string>();
@@ -34,7 +43,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return items.filter((item) => {
+    return filterByYear(items, year).filter((item) => {
       if (status !== 'all' && item.status !== status) return false;
       if (selectedLabels.length > 0 && !selectedLabels.every((l) => item.labels.includes(l))) {
         return false;
@@ -47,11 +56,12 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
       }
       return true;
     });
-  }, [items, query, status, selectedLabels]);
+  }, [items, query, status, selectedLabels, year]);
 
   return (
     <div>
       <div className="mb-4 flex flex-col gap-3">
+        <YearSelector years={years} value={year} onChange={setYear} />
         <input
           type="search"
           value={query}

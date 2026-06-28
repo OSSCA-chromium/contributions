@@ -5,7 +5,7 @@ import {
   getContributorSlugs,
 } from '@/lib/contributors';
 import ContributorAvatar from '@/components/ContributorAvatar';
-import ContributionCard from '@/components/ContributionCard';
+import ContributorView from '@/components/ContributorView';
 
 interface ParamsProps {
   params: Promise<{ username: string }>;
@@ -41,7 +41,7 @@ export default async function ContributorPage({ params }: ParamsProps) {
     notFound();
   }
 
-  const { summary, contributions } = data;
+  const { contributions } = data;
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -67,38 +67,7 @@ export default async function ContributorPage({ params }: ParamsProps) {
         </div>
       </header>
 
-      {/* 요약 통계 */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-on-surface">
-            {summary.total}
-          </div>
-          <div className="text-sm text-on-surface-variant">총 기여</div>
-        </div>
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-success">
-            {summary.merged}
-          </div>
-          <div className="text-sm text-on-surface-variant">Merged</div>
-        </div>
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-info">
-            {summary.inReview}
-          </div>
-          <div className="text-sm text-on-surface-variant">In Review</div>
-        </div>
-      </div>
-
-      {/* 컨트리뷰션 목록 */}
-      <h2 className="text-xl font-semibold text-on-surface mb-4">컨트리뷰션</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {contributions.map((contribution) => (
-          <ContributionCard
-            key={contribution.slug}
-            contribution={contribution}
-          />
-        ))}
-      </div>
+      <ContributorView contributions={contributions} />
     </div>
   );
 }

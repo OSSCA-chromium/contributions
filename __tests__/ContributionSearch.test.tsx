@@ -5,7 +5,7 @@ const items = [
   {
     slug: '1',
     title: 'Fix docs',
-    date: '2025-05-08',
+    date: '2026-05-08',
     author: 'octocat',
     labels: ['docs'],
     status: 'merged' as const,
@@ -14,7 +14,7 @@ const items = [
   {
     slug: '2',
     title: 'Add test',
-    date: '2025-05-09',
+    date: '2026-05-09',
     author: 'hubot',
     labels: ['test'],
     status: 'in review' as const,

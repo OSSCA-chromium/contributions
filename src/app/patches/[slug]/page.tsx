@@ -8,6 +8,7 @@ import Link from 'next/link';
 import StatusBadge from '@/components/StatusBadge';
 import LabelChip from '@/components/LabelChip';
 import ContributorAvatar from '@/components/ContributorAvatar';
+import YearBadge from '@/components/YearBadge';
 import { isValidGithubUsername } from '@/lib/contributions';
 
 interface ParamsProps {
@@ -53,6 +54,7 @@ export default async function PatchPage({ params }: ParamsProps) {
         {/* Status 배지를 먼저 표시하고 labels를 보여주기 */}
         <div className="flex flex-wrap gap-2 mb-2">
           <StatusBadge status={contribution.status} />
+          <YearBadge date={contribution.date} />
           {contribution.labels.map((label) => (
             <LabelChip key={label} label={label} />
           ))}
