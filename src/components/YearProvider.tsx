@@ -15,13 +15,30 @@ const YearContext = createContext<YearContextValue>({
   setYear: () => {},
 });
 
-export function YearProvider({ children }: { children: ReactNode }) {
-  const [year, setYearState] = useState<string>(DEFAULT_YEAR);
+export function YearProvider({
+  children,
+  initialYear = DEFAULT_YEAR,
+  years = [],
+}: {
+  children: ReactNode;
+  initialYear?: string;
+  years?: string[];
+}) {
+  const [year, setYearState] = useState<string>(initialYear);
 
   useEffect(() => {
-    const saved = localStorage.getItem('year');
-    if (saved) setYearState(saved);
-  }, []);
+    let saved: string | null = null;
+    try {
+      saved = localStorage.getItem('year');
+    } catch {
+      // storage may be blocked (SecurityError); keep the default year
+      return;
+    }
+    // only restore values we can actually render: 'all' or a known year
+    if (saved && (saved === 'all' || years.includes(saved))) {
+      setYearState(saved);
+    }
+  }, [years]);
 
   const setYear = (y: string) => {
     setYearState(y);

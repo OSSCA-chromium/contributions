@@ -41,7 +41,9 @@ export default function ContributorView({
 
       <h2 className="text-xl font-semibold text-on-surface mb-4">컨트리뷰션</h2>
       {total === 0 ? (
-        <p className="text-on-surface-variant">{yearLabel}년 활동이 없습니다.</p>
+        <p className="text-on-surface-variant">
+          {year === 'all' ? '등록된 활동이 없습니다.' : `${yearLabel}년 활동이 없습니다.`}
+        </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {filtered.map((contribution) => (

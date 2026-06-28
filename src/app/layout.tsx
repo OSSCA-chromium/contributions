@@ -8,7 +8,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { YearProvider } from "@/components/YearProvider";
 import YearSelector from "@/components/YearSelector";
 import { getAllContributions } from "@/lib/contributions";
-import { getAvailableYears } from "@/lib/years";
+import { getAvailableYears, getDataYears, resolveInitialYear } from "@/lib/years";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,7 +23,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const years = getAvailableYears(getAllContributions());
+  const contributions = getAllContributions();
+  const years = getAvailableYears(contributions);
+  const initialYear = resolveInitialYear(getDataYears(contributions));
 
   return (
     <html lang="ko">
@@ -35,7 +37,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-background text-on-surface min-h-screen flex flex-col`}>
-        <YearProvider>
+        <YearProvider initialYear={initialYear} years={years}>
         <header className="bg-primary text-on-primary py-4 shadow-md sticky top-0 z-10">
           <div className="container mx-auto px-4 lg:px-6">
             <nav className="flex flex-col sm:flex-row justify-between items-center">

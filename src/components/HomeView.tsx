@@ -41,7 +41,9 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
 
       {filtered.length === 0 ? (
         <p className="text-on-surface">
-          {yearLabel}년 컨트리뷰션이 아직 없습니다.
+          {year === 'all'
+            ? '아직 등록된 컨트리뷰션이 없습니다.'
+            : `${yearLabel}년 컨트리뷰션이 아직 없습니다.`}
         </p>
       ) : (
         <>
