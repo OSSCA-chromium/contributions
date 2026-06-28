@@ -1,9 +1,9 @@
 export const DEFAULT_YEAR = '2026';
 
 // KST (UTC+9) offset in milliseconds. Frontmatter date-only values are parsed
-// as UTC midnight by gray-matter; we classify the year in Seoul time so that
+// as UTC midnight by gray-matter; we classify dates in Seoul time so that
 // e.g. 2026-01-01 stays in 2026 regardless of the runtime timezone.
-const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
+export const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
 
 // Derive YYYY from a date value (string or Date). Returns 'unknown' when not parseable.
 export function getYear(date: unknown): string {

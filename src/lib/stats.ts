@@ -1,12 +1,14 @@
 import type { Contribution, Stats } from '@/lib/types';
+import { KST_OFFSET_MS } from '@/lib/years';
 
-// 날짜 값(문자열 또는 Date 객체)을 YYYY-MM 형태로 변환
+// 날짜 값(문자열 또는 Date 객체)을 YYYY-MM 형태로 변환 (Date는 KST 기준)
 function toMonth(date: unknown): string {
   if (typeof date === 'string') return date.slice(0, 7);
   const d = new Date(date as string | number | Date);
   if (Number.isNaN(d.getTime())) return 'unknown';
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  return `${d.getFullYear()}-${month}`;
+  const kst = new Date(d.getTime() + KST_OFFSET_MS);
+  const month = String(kst.getUTCMonth() + 1).padStart(2, '0');
+  return `${kst.getUTCFullYear()}-${month}`;
 }
 
 // 컨트리뷰션 목록으로부터 통계(총계/상태/월별/기여자/머지비율)를 집계
