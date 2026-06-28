@@ -34,8 +34,22 @@ function validateFrontmatter(data) {
   if (data.author !== undefined && typeof data.author !== 'string') {
     errors.push('author must be a string');
   }
-  if (data.contribution_url !== undefined && typeof data.contribution_url !== 'string') {
-    errors.push('contribution_url must be a string');
+  if (data.contribution_url !== undefined) {
+    if (typeof data.contribution_url !== 'string') {
+      errors.push('contribution_url must be a string');
+    } else {
+      let url;
+      try {
+        url = new URL(data.contribution_url);
+      } catch {
+        url = null;
+      }
+      if (!url) {
+        errors.push('contribution_url must be a valid URL');
+      } else if (url.protocol !== 'https:') {
+        errors.push('contribution_url must use https');
+      }
+    }
   }
 
   if (data.date !== undefined && data.date !== '') {
@@ -63,6 +77,19 @@ function validateFrontmatter(data) {
   return errors;
 }
 
+// raw frontmatter 텍스트에서 date 스칼라를 원본 그대로 추출한다.
+// - 따옴표로 감싼 값: 따옴표 안 내용을 그대로 반환(내부 #를 주석으로 보지 않음)
+// - 따옴표 없는 값: 인라인 YAML 주석(# ...)만 제거
+// date 줄이 없으면 undefined.
+function extractRawDate(matterText) {
+  const m = /^date:\s*(.+?)\s*$/m.exec(matterText || '');
+  if (!m) return undefined;
+  const raw = m[1].trim();
+  const quoted = /^(['"])([\s\S]*?)\1/.exec(raw);
+  if (quoted) return quoted[2];
+  return raw.replace(/\s*#.*$/, '');
+}
+
 // 디렉터리의 컨트리뷰션 .md(template.md 제외)를 모두 검사
 function validateAll(dir) {
   const results = [];
@@ -78,10 +105,8 @@ function validateAll(dir) {
       // gray-matter는 따옴표 없는 date를 Date 객체로 파싱하면서 2025-02-30 같은
       // 잘못된 날짜를 롤오버해 버린다. raw frontmatter에서 원본 문자열을 그대로
       // 뽑아 검증해야 형식·실존 여부를 정확히 잡는다.
-      const m = /^date:\s*(.+)$/m.exec(parsed.matter || '');
-      if (m) {
-        data.date = m[1].trim().replace(/\s*#.*$/, '').replace(/^['"]|['"]$/g, '');
-      }
+      const rawDate = extractRawDate(parsed.matter);
+      if (rawDate !== undefined) data.date = rawDate;
       errors = validateFrontmatter(data);
     } catch (e) {
       errors = [`YAML parse error: ${e.message}`];
@@ -91,7 +116,7 @@ function validateAll(dir) {
   return results;
 }
 
-module.exports = { validateFrontmatter, validateAll };
+module.exports = { validateFrontmatter, validateAll, extractRawDate };
 
 // 직접 실행 시 검사 + 결과 출력 + exit
 if (require.main === module) {

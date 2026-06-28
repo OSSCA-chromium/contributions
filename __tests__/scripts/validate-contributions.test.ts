@@ -1,4 +1,7 @@
-import { validateFrontmatter } from '../../scripts/validate-contributions';
+import {
+  validateFrontmatter,
+  extractRawDate,
+} from '../../scripts/validate-contributions';
 
 const valid = {
   title: 'Fix docs link',
@@ -50,4 +53,33 @@ test('존재하지 않는 날짜(형식만 맞음)를 잡는다', () => {
   expect(
     validateFrontmatter({ ...valid, date: '2025-13-01' }).some((e) => e.includes('date'))
   ).toBe(true);
+});
+
+test('contribution_url이 유효한 URL/https가 아니면 잡는다', () => {
+  expect(
+    validateFrontmatter({ ...valid, contribution_url: 'not-a-url' }).some((e) =>
+      e.includes('contribution_url')
+    )
+  ).toBe(true);
+  expect(
+    validateFrontmatter({ ...valid, contribution_url: 'http://crrev.com/c/1' }).some((e) =>
+      e.includes('contribution_url')
+    )
+  ).toBe(true);
+});
+
+test('extractRawDate는 따옴표 안의 #를 주석으로 보지 않는다', () => {
+  // 따옴표 스칼라: 내부 # 보존(주석 아님) → 이후 date 검증에서 무효로 잡힘
+  expect(extractRawDate('date: "2025-05-08 # x"')).toBe('2025-05-08 # x');
+  // 따옴표 없는 값: 인라인 YAML 주석만 제거
+  expect(extractRawDate('date: 2025-05-08 # 실제 주석')).toBe('2025-05-08');
+  expect(extractRawDate('title: t')).toBeUndefined();
+});
+
+test('따옴표+가짜주석 date는 validateFrontmatter에서 무효 처리된다', () => {
+  // extractRawDate가 추출한 원본 문자열로 검증하면 형식 위반으로 잡혀야 한다
+  const raw = extractRawDate('date: "2025-05-08 # x"');
+  expect(validateFrontmatter({ ...valid, date: raw }).some((e) => e.includes('date'))).toBe(
+    true
+  );
 });
