@@ -96,8 +96,13 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
             <h2 className="text-2xl font-bold mb-5 text-on-surface">Contributors</h2>
             <div className="flex flex-wrap gap-[18px]">
               {contributors.map((username) => (
-                <ContributorAvatar key={username} username={username} size={64} linkToProfile />
+                <ContributorAvatar key={username} username={username} size={48} linkToProfile />
               ))}
+            </div>
+            <div className="mt-6">
+              <Link href="/contributors" className="text-primary hover:underline font-medium inline-flex items-center">
+                전체 보기 →
+              </Link>
             </div>
           </section>
         </>
