@@ -79,4 +79,27 @@ describe('getAllMeetings', () => {
     (fs.existsSync as jest.Mock).mockReturnValue(false);
     expect(getAllMeetings()).toEqual([]);
   });
+
+  it('한 파일의 YAML이 깨져도 유효한 미팅은 유지한다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'broken.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('a.md')) return FILE_A;
+      // Unterminated flow sequence → js-yaml throws inside gray-matter.
+      return '---\nlabels: [unclosed\ndate: 2025-05-10\n---\nbody\n';
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.map((m) => m.slug)).toEqual(['a']);
+  });
+
+  it('달력상 존재하지 않는 날짜 문자열("2025-13-01")은 건너뛴다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'baddate.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('a.md')) return FILE_A;
+      // Quoted so YAML keeps it a string (unquoted would roll over to a real
+      // Date); the string path must reject the impossible calendar date.
+      return '---\ntitle: 잘못된 날짜\ndate: "2025-13-01"\n---\n본문\n';
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.map((m) => m.slug)).toEqual(['a']);
+  });
 });
