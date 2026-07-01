@@ -46,3 +46,30 @@ export interface DocMeta {
   order: number;
   group?: string;
 }
+
+export type MeetingType = 'meeting' | 'milestone';
+
+export interface Meeting {
+  slug: string;
+  title: string;
+  date: string; // YYYY-MM-DD (KST 정규화)
+  type: MeetingType;
+  attendees: string[];
+  location?: string;
+  content?: string;
+  contentHtml?: string;
+}
+
+export interface AttendanceRecord {
+  username: string;
+  attended: number;
+  totalMeetings: number;
+  rate: number; // 0..1
+}
+
+export interface AttendanceStats {
+  meetingCount: number;
+  milestoneCount: number;
+  rosterSize: number;
+  records: AttendanceRecord[]; // rate desc, then username asc
+}

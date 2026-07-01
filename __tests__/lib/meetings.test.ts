@@ -1,0 +1,82 @@
+import fs from 'fs';
+import { getAllMeetings } from '@/lib/meetings';
+
+// fs만 모킹하고 gray-matter는 실제 파서를 사용(배열/Date 파싱 검증)
+jest.mock('fs');
+
+const FILE_A = `---
+title: 3주차 정기 미팅
+date: 2025-05-15
+type: meeting
+attendees: [alice, bob, carol]
+location: 온라인
+---
+## 계획
+- 코드리뷰 실습
+`;
+
+const FILE_B = `---
+title: 발대식
+date: 2025-05-01
+type: milestone
+---
+## 안내
+발대식 안내
+`;
+
+const NO_TYPE = `---
+title: 타입 없는 미팅
+date: 2025-05-20
+attendees: alice
+---
+본문
+`;
+
+describe('getAllMeetings', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readdirSync as jest.Mock).mockReturnValue([
+      'a.md',
+      'b.md',
+      'c.md',
+      'template.md',
+      'notes.txt',
+    ]);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('a.md')) return FILE_A;
+      if (p.includes('b.md')) return FILE_B;
+      if (p.includes('c.md')) return NO_TYPE;
+      if (p.includes('template.md')) return '---\ntitle: t\ndate: 2025-01-01\n---\n';
+      return '';
+    });
+  });
+
+  it('template.md와 비-markdown을 제외하고 날짜 오름차순으로 반환한다', () => {
+    const meetings = getAllMeetings();
+    expect(meetings.map((m) => m.slug)).toEqual(['b', 'a', 'c']);
+  });
+
+  it('frontmatter를 정규화한다(date=YYYY-MM-DD, attendees 배열, type 기본 meeting)', () => {
+    const meetings = getAllMeetings();
+    const a = meetings.find((m) => m.slug === 'a')!;
+    expect(a.date).toBe('2025-05-15');
+    expect(a.type).toBe('meeting');
+    expect(a.attendees).toEqual(['alice', 'bob', 'carol']);
+    expect(a.location).toBe('온라인');
+    expect(a.contentHtml).toContain('코드리뷰 실습');
+
+    const b = meetings.find((m) => m.slug === 'b')!;
+    expect(b.type).toBe('milestone');
+    expect(b.attendees).toEqual([]);
+
+    const c = meetings.find((m) => m.slug === 'c')!;
+    expect(c.type).toBe('meeting'); // 기본값
+    expect(c.attendees).toEqual(['alice']); // 스칼라 → 배열
+  });
+
+  it('디렉터리가 없으면 빈 배열', () => {
+    (fs.existsSync as jest.Mock).mockReturnValue(false);
+    expect(getAllMeetings()).toEqual([]);
+  });
+});
