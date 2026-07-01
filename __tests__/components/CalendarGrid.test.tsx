@@ -1,45 +1,34 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import CalendarGrid from '@/components/CalendarGrid';
 
-function setup(overrides = {}) {
-  const onSelect = jest.fn();
-  render(
+function renderGrid(overrides = {}) {
+  return render(
     <CalendarGrid
-      year={2025}
-      month={5}
-      meetingDates={new Set(['2025-05-15'])}
-      selectedDate={'2025-05-15'}
-      onSelect={onSelect}
+      year={2026}
+      month={7}
+      eventDates={new Set(['2026-07-11'])}
+      today={'2026-07-02'}
       {...overrides}
     />
   );
-  return { onSelect };
 }
 
-test('요일 헤더와 해당 월 날짜를 렌더한다', () => {
-  setup();
+test('월 제목과 요일 헤더를 렌더한다', () => {
+  renderGrid();
+  expect(screen.getByText('2026년 7월')).toBeInTheDocument();
   expect(screen.getByText('일')).toBeInTheDocument();
   expect(screen.getByText('토')).toBeInTheDocument();
-  // Day buttons expose the full date as their accessible name (unique per cell).
-  expect(screen.getByRole('button', { name: /2025-05-15/ })).toBeInTheDocument();
 });
 
-test('미팅 있는 날은 data-has-meeting, 선택된 날은 data-selected', () => {
-  setup();
-  const day15 = screen.getByRole('button', { name: /2025-05-15/ });
-  expect(day15).toHaveAttribute('data-has-meeting', 'true');
-  expect(day15).toHaveAttribute('data-selected', 'true');
-  const day16 = screen.getByRole('button', { name: /2025-05-16/ });
-  expect(day16).not.toHaveAttribute('data-has-meeting', 'true');
-  // Selected day keeps the contrast color from the circle; no in-month color
-  // class overrides it.
-  const selectedSpan = day15.querySelector('span')!;
-  expect(selectedSpan.className).toContain('text-on-primary');
-  expect(selectedSpan.className).not.toContain('text-on-surface');
+test('이벤트 있는 날은 data-event, 오늘은 data-today로 표시한다', () => {
+  const { container } = renderGrid();
+  const eventCell = container.querySelector('[data-event="true"]');
+  expect(eventCell?.textContent).toContain('11');
+  const todayCell = container.querySelector('[data-today="true"]');
+  expect(todayCell?.textContent).toContain('2');
 });
 
-test('날짜 클릭 시 onSelect(date) 호출', () => {
-  const { onSelect } = setup();
-  fireEvent.click(screen.getByRole('button', { name: /2025-05-16/ }));
-  expect(onSelect).toHaveBeenCalledWith('2025-05-16');
+test('today가 null이면 오늘 마커가 없다', () => {
+  const { container } = renderGrid({ today: null });
+  expect(container.querySelector('[data-today="true"]')).toBeNull();
 });

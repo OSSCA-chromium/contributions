@@ -5,29 +5,23 @@ const TYPE_LABEL: Record<Meeting['type'], string> = {
   milestone: '주요 일정',
 };
 
-export default function MeetingDetail({
-  meetings,
-  date,
-}: {
-  meetings: Meeting[];
-  date: string | null;
-}) {
-  if (!date) {
-    return <p className="text-on-surface-variant">날짜를 선택하세요.</p>;
-  }
+// Render the full list of events (chronological), each with its date and full
+// content shown inline — no click-to-reveal.
+export default function MeetingDetail({ meetings }: { meetings: Meeting[] }) {
   if (meetings.length === 0) {
-    return <p className="text-on-surface-variant">선택한 날짜에 일정이 없습니다.</p>;
+    return <p className="text-on-surface-variant">표시할 일정이 없습니다.</p>;
   }
 
   return (
     <div className="space-y-6">
       {meetings.map((m) => (
-        <article key={m.slug}>
-          <div className="flex items-center gap-2 mb-1">
+        <article key={m.slug} className="border-b border-outline pb-4 last:border-b-0">
+          <div className="flex items-center gap-2 mb-1 flex-wrap">
             <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary">
               {TYPE_LABEL[m.type]}
             </span>
-            <h3 className="text-xl font-bold text-on-surface">{m.title}</h3>
+            <span className="text-sm text-on-surface-variant">{m.date}</span>
+            <h3 className="text-lg font-bold text-on-surface">{m.title}</h3>
           </div>
           {m.location && (
             <p className="text-sm text-on-surface-variant mb-2">📍 {m.location}</p>

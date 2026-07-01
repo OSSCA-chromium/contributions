@@ -2,29 +2,35 @@ import { render, screen } from '@testing-library/react';
 import MeetingDetail from '@/components/MeetingDetail';
 import type { Meeting } from '@/lib/types';
 
-const meeting: Meeting = {
-  slug: '2025-05-15',
-  title: '3주차 정기 미팅',
-  date: '2025-05-15',
-  type: 'meeting',
-  attendees: ['alice', 'bob'],
-  location: '온라인',
-  contentHtml: '<h2>계획</h2><p>코드리뷰 실습</p>',
-};
+const meetings: Meeting[] = [
+  {
+    slug: '2026-07-11-opening',
+    title: '발대식',
+    date: '2026-07-11',
+    type: 'milestone',
+    attendees: [],
+    contentHtml: '<p>필수 참석</p>',
+  },
+  {
+    slug: '2026-07-18-meeting',
+    title: '정기 미팅',
+    date: '2026-07-18',
+    type: 'meeting',
+    attendees: ['alice'],
+    contentHtml: '<p>코드리뷰</p>',
+  },
+];
 
-test('선택된 날짜의 미팅 제목/참석자/노트를 렌더한다', () => {
-  render(<MeetingDetail meetings={[meeting]} date="2025-05-15" />);
-  expect(screen.getByText('3주차 정기 미팅')).toBeInTheDocument();
+test('모든 일정을 날짜·내용과 함께 렌더한다', () => {
+  render(<MeetingDetail meetings={meetings} />);
+  expect(screen.getByText('발대식')).toBeInTheDocument();
+  expect(screen.getByText('2026-07-11')).toBeInTheDocument();
+  expect(screen.getByText('필수 참석')).toBeInTheDocument();
+  expect(screen.getByText('정기 미팅')).toBeInTheDocument();
   expect(screen.getByText('alice')).toBeInTheDocument();
-  expect(screen.getByText('코드리뷰 실습')).toBeInTheDocument();
 });
 
-test('해당 날짜에 미팅이 없으면 안내 문구', () => {
-  render(<MeetingDetail meetings={[]} date="2025-05-16" />);
-  expect(screen.getByText('선택한 날짜에 일정이 없습니다.')).toBeInTheDocument();
-});
-
-test('date가 null이면 안내 문구', () => {
-  render(<MeetingDetail meetings={[]} date={null} />);
-  expect(screen.getByText('날짜를 선택하세요.')).toBeInTheDocument();
+test('일정이 없으면 빈 상태 문구', () => {
+  render(<MeetingDetail meetings={[]} />);
+  expect(screen.getByText('표시할 일정이 없습니다.')).toBeInTheDocument();
 });
