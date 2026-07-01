@@ -86,7 +86,12 @@ export function getAllMeetings(): Meeting[] {
       }
     }
 
-    return meetings.sort((a, b) => a.date.localeCompare(b.date));
+    // Date ascending; on the same date, single-day events come before period
+    // events (so e.g. the 발대식 shows before the Challenges range banner).
+    return meetings.sort(
+      (a, b) =>
+        a.date.localeCompare(b.date) || (a.endDate ? 1 : 0) - (b.endDate ? 1 : 0)
+    );
   } catch (error) {
     console.error('Error getting meetings:', error);
     return [];

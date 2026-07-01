@@ -30,11 +30,11 @@ function groupByMonth(meetings: Meeting[]): MonthGroup[] {
 export default function ScheduleList({
   meetings,
   showMonthHeaders = true,
-  periodColors = new Map<string, PeriodColor>(),
+  badgeColors = new Map<string, PeriodColor>(),
 }: {
   meetings: Meeting[];
   showMonthHeaders?: boolean;
-  periodColors?: Map<string, PeriodColor>;
+  badgeColors?: Map<string, PeriodColor>;
 }) {
   if (meetings.length === 0) {
     return <p className="text-on-surface-variant">표시할 일정이 없습니다.</p>;
@@ -52,10 +52,10 @@ export default function ScheduleList({
               const chip =
                 m.type === 'deadline'
                   ? { label: '마감', cls: DEADLINE_BADGE }
-                  : m.endDate
+                  : m.badge
                     ? {
-                        label: m.badge ?? '기간',
-                        cls: periodColors.get(m.slug)?.badge ?? 'bg-primary/20 text-primary',
+                        label: m.badge,
+                        cls: badgeColors.get(m.badge)?.badge ?? 'bg-primary/20 text-primary',
                       }
                     : null;
               return (

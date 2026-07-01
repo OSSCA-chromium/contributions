@@ -1,6 +1,7 @@
 ---
-title: Masters 참가 멘티 발표
+title: 참가 멘티 발표
 date: 2026-08-14
+badge: Masters
 type: milestone
 ---
 

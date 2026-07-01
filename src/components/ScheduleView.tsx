@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import type { Meeting } from '@/lib/types';
-import { periodColorMap } from '@/lib/periodColors';
+import { badgeColorByLabel } from '@/lib/periodColors';
 import CalendarGrid from '@/components/CalendarGrid';
 import ScheduleList from '@/components/ScheduleList';
 
@@ -50,7 +50,7 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
     () => (meetings.length ? monthList(meetings[0].date, meetings[meetings.length - 1].date) : []),
     [meetings]
   );
-  const periodColors = useMemo(() => periodColorMap(meetings), [meetings]);
+  const badgeColors = useMemo(() => badgeColorByLabel(meetings), [meetings]);
 
   if (meetings.length === 0) {
     return <p className="text-on-surface">등록된 일정이 없습니다.</p>;
@@ -71,7 +71,7 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
                 <ScheduleList
                   meetings={monthMeetings}
                   showMonthHeaders={false}
-                  periodColors={periodColors}
+                  badgeColors={badgeColors}
                 />
               )}
             </div>

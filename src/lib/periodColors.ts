@@ -21,3 +21,17 @@ export function periodColorMap(meetings: Meeting[]): Map<string, PeriodColor> {
     .forEach((p, i) => map.set(p.slug, PALETTE[i % PALETTE.length]));
   return map;
 }
+
+// Map a badge label (e.g. "Challenges", "Masters") to the color of the period
+// that owns it, so point events sharing a badge match the period's color.
+export function badgeColorByLabel(meetings: Meeting[]): Map<string, PeriodColor> {
+  const bySlug = periodColorMap(meetings);
+  const map = new Map<string, PeriodColor>();
+  for (const m of meetings) {
+    if (m.endDate && m.badge) {
+      const color = bySlug.get(m.slug);
+      if (color) map.set(m.badge, color);
+    }
+  }
+  return map;
+}
