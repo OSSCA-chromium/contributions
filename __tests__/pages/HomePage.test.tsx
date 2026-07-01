@@ -104,4 +104,26 @@ describe('홈페이지', () => {
 
     expect(screen.getByText('Contributors')).toBeInTheDocument();
   });
+
+  it('Contributors 섹션에 전체 보기 링크가 있습니다', () => {
+    const mockContributions = [
+      {
+        slug: 'test-contribution-1',
+        title: '테스트 컨트리뷰션 1',
+        date: '2026-01-01',
+        author: 'octocat',
+        labels: [],
+        excerpt: '테스트 컨트리뷰션 1 내용',
+      },
+    ];
+
+    (contributionsModule.getAllContributions as jest.Mock).mockReturnValue(mockContributions);
+    (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
+
+    render(<HomePage />);
+
+    expect(
+      screen.getByRole('link', { name: /전체 보기/ })
+    ).toHaveAttribute('href', '/contributors');
+  });
 });

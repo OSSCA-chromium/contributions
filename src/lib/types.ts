@@ -29,6 +29,8 @@ export interface ContributorSummary {
   total: number;
   merged: number;
   inReview: number;
+  // ISO date of the contributor's most recent contribution (max date).
+  lastActive: string;
 }
 
 export interface Stats {
