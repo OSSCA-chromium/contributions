@@ -31,6 +31,11 @@ test('미팅 있는 날은 data-has-meeting, 선택된 날은 data-selected', ()
   expect(day15).toHaveAttribute('data-selected', 'true');
   const day16 = screen.getByRole('button', { name: /2025-05-16/ });
   expect(day16).not.toHaveAttribute('data-has-meeting', 'true');
+  // Selected day keeps the contrast color from the circle; no in-month color
+  // class overrides it.
+  const selectedSpan = day15.querySelector('span')!;
+  expect(selectedSpan.className).toContain('text-on-primary');
+  expect(selectedSpan.className).not.toContain('text-on-surface');
 });
 
 test('날짜 클릭 시 onSelect(date) 호출', () => {

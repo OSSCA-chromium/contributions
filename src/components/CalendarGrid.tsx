@@ -41,6 +41,13 @@ export default function CalendarGrid({
             : hasMeeting
               ? 'bg-primary/20'
               : '';
+          // Selected day gets its text color from `circle` (text-on-primary);
+          // don't add an in-month color that would override the contrast color.
+          const textColor = selected
+            ? ''
+            : d.inMonth
+              ? 'text-on-surface'
+              : 'text-on-surface-variant opacity-40';
           return (
             <button
               key={d.date}
@@ -52,9 +59,7 @@ export default function CalendarGrid({
               className="flex items-center justify-center py-1"
             >
               <span
-                className={`flex items-center justify-center w-9 h-9 rounded-full text-sm ${circle} ${
-                  d.inMonth ? 'text-on-surface' : 'text-on-surface-variant opacity-40'
-                }`}
+                className={`flex items-center justify-center w-9 h-9 rounded-full text-sm ${circle} ${textColor}`}
               >
                 {d.day}
               </span>

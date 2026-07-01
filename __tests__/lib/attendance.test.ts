@@ -29,3 +29,14 @@ test('meeting이 0건이면 rate 0, 빈 records', () => {
   expect(s.records).toEqual([]);
   expect(s.rosterSize).toBe(0);
 });
+
+test('한 미팅 내 중복 참석자는 한 번만 카운트해 rate가 100%를 넘지 않는다', () => {
+  const s = computeAttendance([
+    { type: 'meeting', attendees: ['alice', 'alice'] },
+    { type: 'meeting', attendees: ['alice'] },
+  ]);
+  const alice = s.records.find((r) => r.username === 'alice')!;
+  expect(alice.attended).toBe(2);
+  expect(alice.totalMeetings).toBe(2);
+  expect(alice.rate).toBe(1);
+});

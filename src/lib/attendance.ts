@@ -11,7 +11,9 @@ export function computeAttendance(
 
   const counts = new Map<string, number>();
   for (const m of meetingEntries) {
-    for (const username of m.attendees) {
+    // Dedupe within a meeting so a duplicated username can't push a person's
+    // attended count above the meeting total (rate > 100%).
+    for (const username of new Set(m.attendees)) {
       counts.set(username, (counts.get(username) ?? 0) + 1);
     }
   }
