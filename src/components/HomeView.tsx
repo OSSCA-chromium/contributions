@@ -21,15 +21,17 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   const stats = useMemo(() => computeStats(filtered), [filtered]);
   const recent = filtered.slice(0, 3);
   const contributors = useMemo(() => {
-    const seen = new Set<string>();
-    const list: string[] = [];
+    // Most-recently-active first: each author's max contribution date, desc.
+    const lastActive = new Map<string, number>();
     for (const item of filtered) {
-      if (item.author && !seen.has(item.author)) {
-        seen.add(item.author);
-        list.push(item.author);
-      }
+      if (!item.author) continue;
+      const ms = new Date(item.date).getTime();
+      const prev = lastActive.get(item.author) ?? -Infinity;
+      if (!Number.isNaN(ms) && ms > prev) lastActive.set(item.author, ms);
     }
-    return list;
+    return Array.from(lastActive.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([username]) => username);
   }, [filtered]);
 
   const yearLabel = year === 'all' ? '전체' : year;

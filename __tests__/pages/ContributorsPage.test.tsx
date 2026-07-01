@@ -13,8 +13,8 @@ describe('기여자 목록 페이지', () => {
 
   it('기여자 카드들이 렌더링되고 개별 프로필로 링크된다', () => {
     (contributorsModule.getContributorSummaries as jest.Mock).mockReturnValue([
-      { username: 'octocat', isValidGithubUser: true, total: 5, merged: 4, inReview: 1 },
-      { username: 'hubot', isValidGithubUser: true, total: 3, merged: 2, inReview: 1 },
+      { username: 'octocat', isValidGithubUser: true, total: 5, merged: 4, inReview: 1, lastActive: '2025-06-01T00:00:00.000Z' },
+      { username: 'hubot', isValidGithubUser: true, total: 3, merged: 2, inReview: 1, lastActive: '2025-05-01T00:00:00.000Z' },
     ]);
 
     render(<ContributorsPage />);
