@@ -49,6 +49,9 @@ export default function RootLayout({
                 <Link href="/stats" className="hover:opacity-80 font-medium">
                   Stats
                 </Link>
+                <Link href="/schedule" className="hover:opacity-80 font-medium">
+                  Schedule
+                </Link>
                 <ThemeToggle />
                 <a
                   href="https://github.com/OSSCA-chromium/contributions"

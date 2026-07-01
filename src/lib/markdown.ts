@@ -2,7 +2,32 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import hljs from 'highlight.js';
 import { marked } from 'marked';
+import sanitizeHtml from 'sanitize-html';
 import 'highlight.js/styles/atom-one-dark.css';
+
+// Allowlist covering everything the marked + highlight.js pipeline emits
+// (heading slug ids, code/pre/span classes, links, tables, task-list inputs).
+// Anything else — scripts, event handlers, unknown tags — is stripped.
+const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
+  allowedTags: [
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    'p', 'a', 'ul', 'ol', 'li', 'blockquote',
+    'code', 'pre', 'span', 'strong', 'em', 'b', 'i', 'del', 's', 'hr', 'br',
+    'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'input',
+  ],
+  allowedAttributes: {
+    a: ['href', 'title', 'target', 'rel'],
+    code: ['class'],
+    pre: ['class'],
+    span: ['class'],
+    img: ['src', 'alt', 'title'],
+    input: ['type', 'checked', 'disabled'],
+    th: ['colspan', 'rowspan', 'align'],
+    td: ['colspan', 'rowspan', 'align'],
+    '*': ['id'],
+  },
+  allowedSchemes: ['http', 'https', 'mailto'],
+};
 
 // 마크다운 컨텐츠 타입
 interface MarkdownContent {
@@ -62,18 +87,20 @@ marked.use({
   },
 });
 
-// 마크다운을 HTML로 변환
+// 마크다운을 HTML로 변환 (마지막에 항상 sanitize)
 function markdownToHtml(markdown: string): string {
+  let html: string;
   if (markdown.startsWith('<') && markdown.includes('</')) {
-    return markdown;
+    html = markdown;
+  } else {
+    try {
+      html = marked.parse(markdown) as string;
+    } catch (error) {
+      console.error('마크다운 변환 중 오류:', error);
+      html = `<p>${escapeHtml(markdown)}</p>`;
+    }
   }
-
-  try {
-    return marked.parse(markdown) as string;
-  } catch (error) {
-    console.error('마크다운 변환 중 오류:', error);
-    return `<p>${escapeHtml(markdown)}</p>`;
-  }
+  return sanitizeHtml(html, SANITIZE_OPTIONS);
 }
 
 // 마크다운에서 헤딩 목록(목차)을 추출
