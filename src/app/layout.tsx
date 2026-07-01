@@ -43,6 +43,9 @@ export default function RootLayout({
                 <Link href="/patches" className="hover:opacity-80 font-medium">
                   Contributions
                 </Link>
+                <Link href="/contributors" className="hover:opacity-80 font-medium">
+                  Contributors
+                </Link>
                 <Link href="/stats" className="hover:opacity-80 font-medium">
                   Stats
                 </Link>
