@@ -84,4 +84,4 @@ npm run lint    # next lint
 | -------------------------------------- | ---------------------------------------------------------------- |
 | `/` returns 404, `/foo` returns 308    | basePath dropped — use `http://localhost:PORT/contributions/...` |
 | curl hits the wrong app / `EADDRINUSE` | Port 3000 in use. Run with `PORT=3100 ...`                       |
-| Smoke prints "SERVER DID NOT START"    | Check `/tmp/run-contributions-dev.log` — usually a compile error |
+| Smoke prints "SERVER DID NOT START"    | The script tails the dev log for you — usually a compile error   |

@@ -10,16 +10,18 @@ set -uo pipefail
 
 PORT="${PORT:-3000}"
 BASE="http://localhost:${PORT}/contributions"
-LOG="/tmp/run-contributions-dev.log"
+# Private temp file (mktemp avoids the fixed-path symlink/race attack a
+# predictable /tmp name would allow). Removed on exit.
+LOG="$(mktemp -t run-contributions-dev.XXXXXX)"
 
 echo "Starting dev server (npm run dev) on :${PORT} ..."
 npm run dev -- -p "$PORT" > "$LOG" 2>&1 &
 DEV_PID=$!
-trap 'kill "$DEV_PID" 2>/dev/null' EXIT
+trap 'kill "$DEV_PID" 2>/dev/null; rm -f "$LOG"' EXIT
 
 echo "Waiting for server (first compile can take a few seconds) ..."
 if ! curl -s -o /dev/null --retry 60 --retry-connrefused --retry-delay 1 --retry-max-time 90 "${BASE}/"; then
-  echo "SERVER DID NOT START — tail of ${LOG}:"
+  echo "SERVER DID NOT START — tail of dev log:"
   tail -20 "$LOG"
   exit 1
 fi
