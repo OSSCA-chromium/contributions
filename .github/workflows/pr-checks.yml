@@ -28,5 +28,11 @@ jobs:
       - name: Run linting
         run: npm run lint
 
+      - name: Validate contribution frontmatter
+        run: npm run validate:data
+
+      - name: Lint markdown
+        run: npm run lint:md
+
       - name: Build project
         run: npm run build
