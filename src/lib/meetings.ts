@@ -75,6 +75,7 @@ export function getAllMeetings(): Meeting[] {
           title: parsed.data.title || '제목 없음',
           date,
           endDate,
+          badge: parsed.data.badge ? String(parsed.data.badge) : undefined,
           type: normalizeType(parsed.data.type),
           attendees: normalizeAttendees(parsed.data.attendees),
           location: parsed.data.location || undefined,

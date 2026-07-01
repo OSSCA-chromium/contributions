@@ -49,22 +49,27 @@ export default function ScheduleList({
           )}
           <ul className="list-disc space-y-1.5 pl-5 marker:text-on-surface-variant">
             {group.items.map((m) => {
-              const badge = m.endDate
-                ? (periodColors.get(m.slug)?.badge ?? 'bg-primary/20 text-primary')
-                : m.type === 'deadline'
-                  ? DEADLINE_BADGE
-                  : null;
+              const chip =
+                m.type === 'deadline'
+                  ? { label: '마감', cls: DEADLINE_BADGE }
+                  : m.endDate
+                    ? {
+                        label: m.badge ?? '기간',
+                        cls: periodColors.get(m.slug)?.badge ?? 'bg-primary/20 text-primary',
+                      }
+                    : null;
               return (
                 <li key={m.slug} className="group relative">
                   <span tabIndex={0} className="inline-flex cursor-default items-baseline gap-2">
                     <span className="text-sm tabular-nums text-on-surface-variant">
                       {m.date.slice(5).replace('-', '/')}
                     </span>
-                    {badge ? (
-                      <span className={`rounded px-1.5 py-0.5 text-xs ${badge}`}>{m.title}</span>
-                    ) : (
-                      <span className="text-on-surface">{m.title}</span>
+                    {chip && (
+                      <span className={`rounded px-1.5 py-0.5 text-xs ${chip.cls}`}>
+                        {chip.label}
+                      </span>
                     )}
+                    <span className="text-on-surface">{m.title}</span>
                   </span>
                   <EventPopover meetings={[m]} showTitle={false} className="left-0 top-full mt-1" />
                 </li>

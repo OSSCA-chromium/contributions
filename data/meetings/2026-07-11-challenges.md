@@ -1,7 +1,8 @@
 ---
-title: "[Challenges] 기간 (7/11~8/14)"
+title: 기간 (7/11~8/14)
 date: 2026-07-11
 end: 2026-08-14
+badge: Challenges
 type: milestone
 ---
 
