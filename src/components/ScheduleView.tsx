@@ -1,14 +1,12 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import type { Meeting, AttendanceStats } from '@/lib/types';
+import type { Meeting } from '@/lib/types';
 import CalendarGrid from '@/components/CalendarGrid';
-import MeetingDetail from '@/components/MeetingDetail';
-import AttendanceTable from '@/components/AttendanceTable';
+import ScheduleList from '@/components/ScheduleList';
 
 interface ScheduleViewProps {
   meetings: Meeting[]; // sorted ascending by date
-  attendance: AttendanceStats;
   today?: string; // injectable for tests; otherwise computed on the client
 }
 
@@ -39,7 +37,7 @@ function monthList(minDate: string, maxDate: string): { year: number; month: num
   return out;
 }
 
-export default function ScheduleView({ meetings, attendance, today: todayProp }: ScheduleViewProps) {
+export default function ScheduleView({ meetings, today: todayProp }: ScheduleViewProps) {
   // Resolve "today" on the client after mount (null on the server → no marker,
   // so no hydration mismatch). Tests pass `todayProp` for determinism.
   const [today, setToday] = useState<string | null>(todayProp ?? null);
@@ -58,8 +56,9 @@ export default function ScheduleView({ meetings, attendance, today: todayProp }:
   }
 
   return (
-    <div className="space-y-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Left: month calendars stacked in order */}
+      <div className="space-y-6">
         {months.map(({ year, month }) => (
           <CalendarGrid
             key={`${year}-${month}`}
@@ -70,14 +69,10 @@ export default function ScheduleView({ meetings, attendance, today: todayProp }:
           />
         ))}
       </div>
-      <section>
-        <h2 className="text-lg font-bold text-on-surface mb-4">전체 일정</h2>
-        <MeetingDetail meetings={meetings} />
-      </section>
-      <section>
-        <h2 className="text-lg font-bold text-on-surface mb-3">참석 인원별 출석률</h2>
-        <AttendanceTable stats={attendance} />
-      </section>
+      {/* Right: month-grouped event titles with hover detail overlay */}
+      <div>
+        <ScheduleList meetings={meetings} />
+      </div>
     </div>
   );
 }
