@@ -52,7 +52,8 @@ export type MeetingType = 'meeting' | 'milestone';
 export interface Meeting {
   slug: string;
   title: string;
-  date: string; // YYYY-MM-DD (KST 정규화)
+  date: string; // YYYY-MM-DD (KST 정규화) — 시작일
+  endDate?: string; // YYYY-MM-DD — 기간 일정의 종료일 (있으면 date~endDate 범위)
   type: MeetingType;
   attendees: string[];
   location?: string;

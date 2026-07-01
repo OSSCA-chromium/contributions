@@ -65,10 +65,16 @@ export function getAllMeetings(): Meeting[] {
           continue;
         }
 
+        // Optional end date for period events; kept only when it's a real date
+        // on/after the start.
+        const end = parsed.data.end ? toDateString(parsed.data.end) : '';
+        const endDate = end && end >= date ? end : undefined;
+
         meetings.push({
           slug,
           title: parsed.data.title || '제목 없음',
           date,
+          endDate,
           type: normalizeType(parsed.data.type),
           attendees: normalizeAttendees(parsed.data.attendees),
           location: parsed.data.location || undefined,

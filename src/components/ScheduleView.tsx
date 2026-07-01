@@ -45,7 +45,6 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
     if (!todayProp) setToday(localTodayISO());
   }, [todayProp]);
 
-  const eventDates = useMemo(() => new Set(meetings.map((m) => m.date)), [meetings]);
   const months = useMemo(
     () => (meetings.length ? monthList(meetings[0].date, meetings[meetings.length - 1].date) : []),
     [meetings]
@@ -64,7 +63,7 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
             key={`${year}-${month}`}
             year={year}
             month={month}
-            eventDates={eventDates}
+            meetings={meetings}
             today={today}
           />
         ))}

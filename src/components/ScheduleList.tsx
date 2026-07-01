@@ -1,9 +1,5 @@
 import type { Meeting } from '@/lib/types';
-
-const TYPE_LABEL: Record<Meeting['type'], string> = {
-  meeting: '미팅',
-  milestone: '주요 일정',
-};
+import EventPopover from '@/components/EventPopover';
 
 interface MonthGroup {
   key: string; // YYYY-MM
@@ -50,23 +46,7 @@ export default function ScheduleList({ meetings }: { meetings: Meeting[] }) {
                   </span>
                   <span>{m.title}</span>
                 </button>
-                <div className="pointer-events-none absolute left-0 top-full z-20 mt-1 hidden w-80 max-w-[90vw] rounded-lg border border-outline bg-surface p-3 text-sm shadow-lg group-hover:block group-focus-within:block">
-                  <div className="mb-1 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
-                      {TYPE_LABEL[m.type]}
-                    </span>
-                    <span className="text-on-surface-variant">{m.date}</span>
-                  </div>
-                  {m.location && (
-                    <p className="mb-1 text-on-surface-variant">📍 {m.location}</p>
-                  )}
-                  {m.contentHtml && (
-                    <div
-                      className="prose prose-sm max-w-none dark:prose-invert"
-                      dangerouslySetInnerHTML={{ __html: m.contentHtml }}
-                    />
-                  )}
-                </div>
+                <EventPopover meetings={[m]} showTitle={false} className="left-0 top-full mt-1" />
               </li>
             ))}
           </ul>

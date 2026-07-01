@@ -80,6 +80,18 @@ describe('getAllMeetings', () => {
     expect(getAllMeetings()).toEqual([]);
   });
 
+  it('end가 있으면 endDate로 파싱하고, 시작보다 이르면 무시한다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['period.md', 'badend.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('period.md'))
+        return '---\ntitle: 기간\ndate: 2026-07-11\nend: 2026-08-14\ntype: milestone\n---\n본문\n';
+      return '---\ntitle: 역전\ndate: 2026-07-11\nend: 2026-07-01\ntype: milestone\n---\n본문\n';
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.find((m) => m.slug === 'period')!.endDate).toBe('2026-08-14');
+    expect(meetings.find((m) => m.slug === 'badend')!.endDate).toBeUndefined();
+  });
+
   it('한 파일의 YAML이 깨져도 유효한 미팅은 유지한다', () => {
     (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'broken.md']);
     (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
