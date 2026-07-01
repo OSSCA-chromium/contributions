@@ -19,9 +19,13 @@ function groupByAuthor(): Map<string, Contribution[]> {
 function summarize(username: string, contributions: Contribution[]): ContributorSummary {
   let merged = 0;
   let inReview = 0;
+  let lastActiveMs = 0;
   for (const c of contributions) {
     if (c.status === 'merged') merged++;
     else if (c.status === 'in review') inReview++;
+    // date may be a string or a gray-matter Date; new Date() handles both.
+    const ms = new Date(c.date).getTime();
+    if (!Number.isNaN(ms) && ms > lastActiveMs) lastActiveMs = ms;
   }
   return {
     username,
@@ -29,6 +33,7 @@ function summarize(username: string, contributions: Contribution[]): Contributor
     total: contributions.length,
     merged,
     inReview,
+    lastActive: lastActiveMs ? new Date(lastActiveMs).toISOString() : '',
   };
 }
 
