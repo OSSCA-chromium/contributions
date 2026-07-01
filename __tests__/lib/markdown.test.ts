@@ -134,6 +134,16 @@ describe('markdown 유틸리티', () => {
       expect(html).toContain('<strong>굵은 텍스트</strong>');
       expect(html).toContain('<em>이탤릭 텍스트</em>');
     });
+
+    it('스크립트와 이벤트 핸들러 등 위험한 마크업을 제거합니다', () => {
+      const html = markdownToHtml(
+        '정상 텍스트 <script>alert(1)</script>\n\n<img src="x" onerror="alert(1)">'
+      );
+
+      expect(html).toContain('정상 텍스트');
+      expect(html).not.toContain('<script');
+      expect(html).not.toContain('onerror');
+    });
   });
 
   describe('extractHeadings', () => {
