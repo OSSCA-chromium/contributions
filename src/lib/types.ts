@@ -47,7 +47,7 @@ export interface DocMeta {
   group?: string;
 }
 
-export type MeetingType = 'meeting' | 'milestone';
+export type MeetingType = 'meeting' | 'milestone' | 'deadline';
 
 export interface Meeting {
   slug: string;

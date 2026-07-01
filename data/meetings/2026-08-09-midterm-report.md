@@ -1,7 +1,7 @@
 ---
 title: 멘티 중간보고서 작성 마감
 date: 2026-08-09
-type: milestone
+type: deadline
 ---
 
 ## 안내

@@ -31,7 +31,7 @@ function toDateString(value: unknown): string {
 }
 
 function normalizeType(value: unknown): MeetingType {
-  return value === 'milestone' ? 'milestone' : 'meeting';
+  return value === 'milestone' || value === 'deadline' ? value : 'meeting';
 }
 
 function normalizeAttendees(value: unknown): string[] {

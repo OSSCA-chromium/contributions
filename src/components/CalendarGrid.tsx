@@ -1,11 +1,9 @@
 import type { Meeting } from '@/lib/types';
 import { buildMonthGrid } from '@/lib/calendar';
+import { periodColorMap } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
 
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
-
-// Distinct tints for period bars, assigned per period in date order.
-const PERIOD_TINTS = ['bg-info/25', 'bg-success/25', 'bg-warning/25', 'bg-primary/25'];
 
 interface CalendarGridProps {
   year: number;
@@ -22,9 +20,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
   const weeks = buildMonthGrid(year, month).filter((week) => week.some((d) => d.inMonth));
   const points = meetings.filter((m) => !m.endDate);
   const periods = meetings.filter((m) => m.endDate);
-
-  const periodColor = new Map<string, string>();
-  periods.forEach((p, i) => periodColor.set(p.slug, PERIOD_TINTS[i % PERIOD_TINTS.length]));
+  const periodColor = periodColorMap(meetings);
 
   return (
     <div>
@@ -54,7 +50,13 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
               const isToday = today === d.date;
 
               const band = covering[0];
-              const bandColor = band ? periodColor.get(band.slug) : '';
+              const bandColor = band ? (periodColor.get(band.slug)?.bar ?? '') : '';
+              const isDeadline = dayPoints.some((p) => p.type === 'deadline');
+              const pointCircle = dayPoints.length
+                ? isDeadline
+                  ? 'bg-red-400/30'
+                  : 'bg-primary/30'
+                : '';
               const roundL = ci === 0 || covering.some((p) => p.date === d.date);
               const roundR = ci === 6 || covering.some((p) => p.endDate === d.date);
 
@@ -73,9 +75,9 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                     />
                   )}
                   <span
-                    className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${
-                      dayPoints.length ? 'bg-primary/30' : ''
-                    } ${isToday ? 'font-bold ring-2 ring-primary' : ''}`}
+                    className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
+                      isToday ? 'font-bold ring-2 ring-primary' : ''
+                    }`}
                   >
                     {d.day}
                   </span>

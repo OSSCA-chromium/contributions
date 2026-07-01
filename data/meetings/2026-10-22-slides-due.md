@@ -1,7 +1,7 @@
 ---
 title: 발표자료 최종 제출일 (14:00)
 date: 2026-10-22
-type: milestone
+type: deadline
 ---
 
 ## 안내

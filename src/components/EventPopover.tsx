@@ -3,6 +3,7 @@ import type { Meeting } from '@/lib/types';
 const TYPE_LABEL: Record<Meeting['type'], string> = {
   meeting: '미팅',
   milestone: '주요 일정',
+  deadline: '마감',
 };
 
 function dateLabel(m: Meeting): string {

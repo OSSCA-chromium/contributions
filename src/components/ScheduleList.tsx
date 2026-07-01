@@ -1,5 +1,8 @@
 import type { Meeting } from '@/lib/types';
+import type { PeriodColor } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
+
+const DEADLINE_BADGE = 'bg-red-500/15 text-red-600 dark:text-red-400';
 
 interface MonthGroup {
   key: string; // YYYY-MM
@@ -21,15 +24,17 @@ function groupByMonth(meetings: Meeting[]): MonthGroup[] {
   return groups;
 }
 
-// Month-grouped list of event titles. Full details appear as a hover/focus
-// overlay so the list stays scannable. (Overlay markup is always in the DOM,
-// only visually toggled via CSS.)
+// Bullet list of event titles grouped by month. Period events (Challenges,
+// Masters) render as a badge in the same color as their calendar bar; deadlines
+// render as a light-red badge. Full detail appears on hover/focus.
 export default function ScheduleList({
   meetings,
   showMonthHeaders = true,
+  periodColors = new Map<string, PeriodColor>(),
 }: {
   meetings: Meeting[];
   showMonthHeaders?: boolean;
+  periodColors?: Map<string, PeriodColor>;
 }) {
   if (meetings.length === 0) {
     return <p className="text-on-surface-variant">표시할 일정이 없습니다.</p>;
@@ -40,23 +45,31 @@ export default function ScheduleList({
       {groupByMonth(meetings).map((group) => (
         <div key={group.key}>
           {showMonthHeaders && (
-            <h3 className="font-semibold text-on-surface mb-2">{group.label}</h3>
+            <h3 className="mb-2 font-semibold text-on-surface">{group.label}</h3>
           )}
-          <ul className="space-y-1">
-            {group.items.map((m) => (
-              <li key={m.slug} className="group relative">
-                <button
-                  type="button"
-                  className="flex w-full items-baseline gap-2 text-left text-on-surface hover:text-primary focus:text-primary"
-                >
-                  <span className="text-sm tabular-nums text-on-surface-variant">
-                    {m.date.slice(5).replace('-', '/')}
+          <ul className="list-disc space-y-1.5 pl-5 marker:text-on-surface-variant">
+            {group.items.map((m) => {
+              const badge = m.endDate
+                ? (periodColors.get(m.slug)?.badge ?? 'bg-primary/20 text-primary')
+                : m.type === 'deadline'
+                  ? DEADLINE_BADGE
+                  : null;
+              return (
+                <li key={m.slug} className="group relative">
+                  <span tabIndex={0} className="inline-flex cursor-default items-baseline gap-2">
+                    <span className="text-sm tabular-nums text-on-surface-variant">
+                      {m.date.slice(5).replace('-', '/')}
+                    </span>
+                    {badge ? (
+                      <span className={`rounded px-1.5 py-0.5 text-xs ${badge}`}>{m.title}</span>
+                    ) : (
+                      <span className="text-on-surface">{m.title}</span>
+                    )}
                   </span>
-                  <span>{m.title}</span>
-                </button>
-                <EventPopover meetings={[m]} showTitle={false} className="left-0 top-full mt-1" />
-              </li>
-            ))}
+                  <EventPopover meetings={[m]} showTitle={false} className="left-0 top-full mt-1" />
+                </li>
+              );
+            })}
           </ul>
         </div>
       ))}

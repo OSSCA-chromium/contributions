@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import type { Meeting } from '@/lib/types';
+import { periodColorMap } from '@/lib/periodColors';
 import CalendarGrid from '@/components/CalendarGrid';
 import ScheduleList from '@/components/ScheduleList';
 
@@ -49,6 +50,7 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
     () => (meetings.length ? monthList(meetings[0].date, meetings[meetings.length - 1].date) : []),
     [meetings]
   );
+  const periodColors = useMemo(() => periodColorMap(meetings), [meetings]);
 
   if (meetings.length === 0) {
     return <p className="text-on-surface">등록된 일정이 없습니다.</p>;
@@ -60,13 +62,17 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
         const key = `${year}-${String(month).padStart(2, '0')}`;
         const monthMeetings = meetings.filter((m) => m.date.slice(0, 7) === key);
         return (
-          <div key={key} className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
+          <div key={key} className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
             {/* Left: this month's calendar */}
             <CalendarGrid year={year} month={month} meetings={meetings} today={today} />
-            {/* Right: this month's events, aligned to the bottom of the calendar */}
-            <div className="flex flex-col justify-end">
+            {/* Right: this month's events, vertically centered next to the calendar */}
+            <div className="flex flex-col justify-center">
               {monthMeetings.length > 0 && (
-                <ScheduleList meetings={monthMeetings} showMonthHeaders={false} />
+                <ScheduleList
+                  meetings={monthMeetings}
+                  showMonthHeaders={false}
+                  periodColors={periodColors}
+                />
               )}
             </div>
           </div>
