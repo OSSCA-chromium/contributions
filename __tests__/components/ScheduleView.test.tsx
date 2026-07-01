@@ -40,6 +40,6 @@ test('최신 미팅 월을 초기 표시하고 출석 표를 렌더한다', () =
 
 test('미팅 날짜 클릭 시 상세가 표시된다', () => {
   render(<ScheduleView meetings={meetings} attendance={attendance} />);
-  fireEvent.click(screen.getByRole('button', { name: /^15$/ }));
+  fireEvent.click(screen.getByRole('button', { name: /2025-05-15/ }));
   expect(screen.getByText('3주차 정기 미팅')).toBeInTheDocument();
 });

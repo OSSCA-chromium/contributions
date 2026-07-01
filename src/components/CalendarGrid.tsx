@@ -46,6 +46,7 @@ export default function CalendarGrid({
               key={d.date}
               type="button"
               onClick={() => onSelect(d.date)}
+              aria-label={hasMeeting ? `${d.date} 일정 있음` : d.date}
               data-has-meeting={hasMeeting ? 'true' : undefined}
               data-selected={selected ? 'true' : undefined}
               className="flex items-center justify-center py-1"
