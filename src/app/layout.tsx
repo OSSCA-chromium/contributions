@@ -36,7 +36,7 @@ export default function RootLayout({
                 <Image src={LogoImage} alt="OSSCA Chromium 로고" width={32} height={32} className="mr-2" />
                 OSSCA Chromium
               </Link>
-              <div className="flex gap-6 items-center">
+              <div className="flex flex-wrap items-center justify-center gap-6">
                 <Link href="/docs" className="hover:opacity-80 font-medium">
                   Guide
                 </Link>
