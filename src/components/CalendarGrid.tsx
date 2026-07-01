@@ -4,6 +4,9 @@ import EventPopover from '@/components/EventPopover';
 
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
 
+// Distinct tints for period bars, assigned per period in date order.
+const PERIOD_TINTS = ['bg-info/25', 'bg-success/25', 'bg-warning/25', 'bg-primary/25'];
+
 interface CalendarGridProps {
   year: number;
   month: number; // 1-12
@@ -12,12 +15,16 @@ interface CalendarGridProps {
 }
 
 // Read-only month grid. Point events show a filled circle, period events
-// (date~endDate) show a horizontal bar spanning the covered days, today gets a
-// ring, and hovering any event day reveals its detail overlay. No outer box.
+// (date~endDate) show a colored bar spanning the covered days, today gets a
+// ring, and hovering any event day reveals its detail overlay. Weeks with no
+// day in this month are dropped and other-month days render blank.
 export default function CalendarGrid({ year, month, meetings, today }: CalendarGridProps) {
-  const weeks = buildMonthGrid(year, month);
+  const weeks = buildMonthGrid(year, month).filter((week) => week.some((d) => d.inMonth));
   const points = meetings.filter((m) => !m.endDate);
   const periods = meetings.filter((m) => m.endDate);
+
+  const periodColor = new Map<string, string>();
+  periods.forEach((p, i) => periodColor.set(p.slug, PERIOD_TINTS[i % PERIOD_TINTS.length]));
 
   return (
     <div>
@@ -35,18 +42,21 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
         {weeks.map((week, wi) => (
           <div key={wi} className="grid grid-cols-7">
             {week.map((d, ci) => {
-              const covering = d.inMonth
-                ? periods.filter((p) => p.date <= d.date && d.date <= (p.endDate as string))
-                : [];
-              const dayPoints = d.inMonth ? points.filter((p) => p.date === d.date) : [];
-              const events = [...covering, ...dayPoints];
-              const isToday = d.inMonth && today === d.date;
+              if (!d.inMonth) {
+                return <div key={d.date} className="h-9" />;
+              }
 
-              const inPeriod = covering.length > 0;
-              const startsHere = covering.some((p) => p.date === d.date);
-              const endsHere = covering.some((p) => p.endDate === d.date);
-              const roundL = ci === 0 || startsHere;
-              const roundR = ci === 6 || endsHere;
+              const covering = periods.filter(
+                (p) => p.date <= d.date && d.date <= (p.endDate as string)
+              );
+              const dayPoints = points.filter((p) => p.date === d.date);
+              const events = [...covering, ...dayPoints];
+              const isToday = today === d.date;
+
+              const band = covering[0];
+              const bandColor = band ? periodColor.get(band.slug) : '';
+              const roundL = ci === 0 || covering.some((p) => p.date === d.date);
+              const roundR = ci === 6 || covering.some((p) => p.endDate === d.date);
 
               return (
                 <div
@@ -55,19 +65,17 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                   data-today={isToday ? 'true' : undefined}
                   className="group relative flex h-9 items-center justify-center"
                 >
-                  {inPeriod && (
+                  {band && (
                     <span
-                      className={`absolute inset-x-0 inset-y-1.5 bg-primary/15 ${
+                      className={`absolute inset-x-0 inset-y-1.5 ${bandColor} ${
                         roundL ? 'rounded-l-md' : ''
                       } ${roundR ? 'rounded-r-md' : ''}`}
                     />
                   )}
                   <span
-                    className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm ${
+                    className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${
                       dayPoints.length ? 'bg-primary/30' : ''
-                    } ${isToday ? 'font-bold ring-2 ring-primary' : ''} ${
-                      d.inMonth ? 'text-on-surface' : 'text-on-surface-variant opacity-40'
-                    }`}
+                    } ${isToday ? 'font-bold ring-2 ring-primary' : ''}`}
                   >
                     {d.day}
                   </span>

@@ -24,7 +24,13 @@ function groupByMonth(meetings: Meeting[]): MonthGroup[] {
 // Month-grouped list of event titles. Full details appear as a hover/focus
 // overlay so the list stays scannable. (Overlay markup is always in the DOM,
 // only visually toggled via CSS.)
-export default function ScheduleList({ meetings }: { meetings: Meeting[] }) {
+export default function ScheduleList({
+  meetings,
+  showMonthHeaders = true,
+}: {
+  meetings: Meeting[];
+  showMonthHeaders?: boolean;
+}) {
   if (meetings.length === 0) {
     return <p className="text-on-surface-variant">표시할 일정이 없습니다.</p>;
   }
@@ -33,7 +39,9 @@ export default function ScheduleList({ meetings }: { meetings: Meeting[] }) {
     <div className="space-y-6">
       {groupByMonth(meetings).map((group) => (
         <div key={group.key}>
-          <h3 className="font-semibold text-on-surface mb-2">{group.label}</h3>
+          {showMonthHeaders && (
+            <h3 className="font-semibold text-on-surface mb-2">{group.label}</h3>
+          )}
           <ul className="space-y-1">
             {group.items.map((m) => (
               <li key={m.slug} className="group relative">
