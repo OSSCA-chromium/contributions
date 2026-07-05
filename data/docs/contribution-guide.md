@@ -4,8 +4,6 @@ order: 4
 group: 가이드
 ---
 
-## 컨트리뷰션 가이드
-
 Chromium에 기여하기 전에 행동 강령과 기여 절차, 코드 리뷰 가이드를 숙지하세요.
 단계별 실습은 [시작하기](/contributions/docs/getting-started/) →
 [첫 CL 올리기](/contributions/docs/first-cl/) →

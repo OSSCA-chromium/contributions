@@ -4,8 +4,6 @@ order: 2
 group: 가이드
 ---
 
-## 첫 CL 올리기
-
 Chromium은 GitHub PR이 아니라 **Gerrit**의 CL(Change List)로 코드를 리뷰합니다.
 처음 CL을 올리기 전에 계정과 서명을 한 번만 설정하면 됩니다.
 

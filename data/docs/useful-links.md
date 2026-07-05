@@ -4,8 +4,6 @@ order: 10
 group: 참고 자료
 ---
 
-## 유용한 링크
-
 ### 프로젝트·공식 문서
 
 - [Chromium Projects](https://www.chromium.org/chromium-projects/) — Chromium 프로젝트 공식 홈.
