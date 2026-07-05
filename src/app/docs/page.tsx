@@ -11,22 +11,45 @@ export const metadata: Metadata = {
 export default function DocsIndexPage() {
   const docs = getDocNav();
 
+  // 사이드바와 같은 기준으로 그룹핑 (group 없으면 '문서')
+  const groups = new Map<string, typeof docs>();
+  for (const doc of docs) {
+    const key = doc.group ?? '문서';
+    const list = groups.get(key) ?? [];
+    list.push(doc);
+    groups.set(key, list);
+  }
+
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-8 p-4 lg:flex-row">
+    <div className="mx-auto flex max-w-7xl flex-col gap-8 p-4 lg:flex-row">
       <aside className="lg:w-56 lg:flex-shrink-0">
         <DocsSidebar items={docs} />
       </aside>
 
       <main className="min-w-0 flex-1">
-        <h1 className="font-display mb-4 text-3xl font-semibold tracking-tight text-on-surface">문서</h1>
+        <h1 className="font-display mb-6 text-4xl font-semibold tracking-tight text-on-surface">문서</h1>
         {docs.length > 0 ? (
-          <p className="text-on-surface-variant">
-            왼쪽 목록에서 문서를 선택하거나{' '}
-            <Link href={`/docs/${docs[0].slug}`} className="text-primary hover:underline">
-              {docs[0].title}
-            </Link>
-            부터 시작하세요.
-          </p>
+          <div className="space-y-8">
+            {[...groups.entries()].map(([group, items]) => (
+              <section key={group}>
+                <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-on-surface-variant">
+                  {group}
+                </h2>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {items.map((doc) => (
+                    <li key={doc.slug}>
+                      <Link
+                        href={`/docs/${doc.slug}`}
+                        className="block rounded-2xl border border-outline p-4 transition-colors hover:bg-surface-variant"
+                      >
+                        <span className="font-medium text-on-surface">{doc.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
         ) : (
           <p className="text-on-surface-variant">등록된 문서가 없습니다.</p>
         )}
