@@ -2,6 +2,7 @@
 title: 시작하기
 order: 1
 group: 가이드
+description: 빌드부터 머지까지 컨트리뷰션 전체 흐름
 ---
 
 Chromium 컨트리뷰션은 크게 다섯 단계로 진행됩니다. 이 문서는 전체 흐름을 잡고,

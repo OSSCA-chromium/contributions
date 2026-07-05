@@ -35,14 +35,19 @@ export default function DocsIndexPage() {
                 <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-on-surface-variant">
                   {group}
                 </h2>
-                <ul className="grid gap-3 sm:grid-cols-2">
+                <ul className="space-y-1">
                   {items.map((doc) => (
                     <li key={doc.slug}>
                       <Link
                         href={`/docs/${doc.slug}`}
-                        className="block rounded-2xl border border-outline p-4 transition-colors hover:bg-surface-variant"
+                        className="flex flex-wrap items-baseline gap-x-2 rounded-xl px-3 py-2 transition-colors hover:bg-surface-variant"
                       >
-                        <span className="font-medium text-on-surface">{doc.title}</span>
+                        <span className="font-medium text-primary">{doc.title}</span>
+                        {doc.description && (
+                          <span className="text-sm text-on-surface-variant">
+                            — {doc.description}
+                          </span>
+                        )}
                       </Link>
                     </li>
                   ))}

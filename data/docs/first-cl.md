@@ -2,6 +2,7 @@
 title: 첫 CL 올리기
 order: 2
 group: 가이드
+description: Gerrit 계정 설정부터 CL 업로드까지 단계별 안내
 ---
 
 Chromium은 GitHub PR이 아니라 **Gerrit**의 CL(Change List)로 코드를 리뷰합니다.

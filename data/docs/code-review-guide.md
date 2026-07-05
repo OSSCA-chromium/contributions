@@ -2,6 +2,7 @@
 title: 코드 리뷰 가이드
 order: 3
 group: 가이드
+description: 리뷰어 지정, 코멘트 대응, CQ 사용법
 ---
 
 CL을 올렸다면 리뷰어의 승인(LGTM)을 받고 CQ를 통과해야 머지됩니다.
