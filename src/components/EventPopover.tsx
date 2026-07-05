@@ -24,7 +24,7 @@ export default function EventPopover({
 }) {
   return (
     <div
-      className={`pointer-events-none absolute z-30 hidden w-64 max-w-[80vw] space-y-3 rounded-lg border border-outline bg-surface p-3 text-left text-sm shadow-lg group-hover:block group-focus-within:block ${className}`}
+      className={`pointer-events-none absolute z-30 hidden w-64 max-w-[80vw] space-y-3 rounded-2xl border border-outline bg-surface p-4 text-left text-sm shadow-lg group-hover:block group-focus-within:block ${className}`}
     >
       {meetings.map((m) => (
         <div key={m.slug}>

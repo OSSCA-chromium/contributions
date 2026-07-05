@@ -38,7 +38,7 @@ export default function ContributorRow({
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex items-center gap-2 bg-surface border border-outline rounded-lg px-3 py-2 shadow-sm transition-shadow hover:shadow-md text-on-surface">
+    <div className="flex items-center gap-2 bg-surface border border-outline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
       <ContributorAvatar username={username} size={32} />
       <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
 
@@ -50,12 +50,12 @@ export default function ContributorRow({
       <StatBadge
         label="MERGED"
         count={merged}
-        className="bg-success text-white"
+        className="bg-success text-white dark:text-black"
       />
       <StatBadge
         label="IN REVIEW"
         count={inReview}
-        className="bg-info text-white"
+        className="bg-primary text-on-primary"
       />
 
       {updated && (

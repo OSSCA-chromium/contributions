@@ -68,7 +68,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
           onChange={(e) => setQuery(e.target.value)}
           placeholder="검색..."
           aria-label="컨트리뷰션 검색"
-          className="w-full rounded-lg border border-outline bg-surface px-4 py-2 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
+          className="w-full rounded-xl border border-outline bg-surface px-4 py-2.5 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
         />
 
         <div className="flex flex-wrap gap-2">

@@ -49,7 +49,7 @@ export default async function PatchPage({ params }: ParamsProps) {
     <article className="max-w-4xl mx-auto p-4">
       {/* 헤더 정보 */}
       <header className="mb-4">
-        <h1 className="text-4xl font-bold mb-2 text-on-surface">{contribution.title}</h1>
+        <h1 className="font-display text-4xl font-semibold tracking-tight mb-2 text-on-surface">{contribution.title}</h1>
 
         {/* Status 배지를 먼저 표시하고 labels를 보여주기 */}
         <div className="flex flex-wrap gap-2 mb-2">
@@ -87,7 +87,7 @@ export default async function PatchPage({ params }: ParamsProps) {
             href={contribution.contributionUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-primary hover:underline"
+            className="inline-flex items-center text-link hover:underline"
           >
             {contribution.contributionUrl}
             <svg
@@ -118,7 +118,7 @@ export default async function PatchPage({ params }: ParamsProps) {
       <div className="border-t border-outline pt-6 mt-8">
         <Link
           href="/patches"
-          className="inline-flex items-center text-primary hover:underline"
+          className="inline-flex items-center text-link hover:underline"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

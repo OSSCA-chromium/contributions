@@ -18,7 +18,7 @@ export default function DocsIndexPage() {
       </aside>
 
       <main className="min-w-0 flex-1">
-        <h1 className="mb-4 text-3xl font-bold text-on-surface">문서</h1>
+        <h1 className="font-display mb-4 text-3xl font-semibold tracking-tight text-on-surface">문서</h1>
         {docs.length > 0 ? (
           <p className="text-on-surface-variant">
             왼쪽 목록에서 문서를 선택하거나{' '}

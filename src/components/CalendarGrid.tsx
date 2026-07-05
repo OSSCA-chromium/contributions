@@ -54,7 +54,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
               const isDeadline = dayPoints.some((p) => p.type === 'deadline');
               const pointCircle = dayPoints.length
                 ? isDeadline
-                  ? 'bg-red-400/30'
+                  ? 'bg-error/30'
                   : 'bg-primary/30'
                 : '';
               const roundL = ci === 0 || covering.some((p) => p.date === d.date);

@@ -30,6 +30,15 @@ const STATUS_LABELS: Record<string, string> = {
 
 const BAR_COLOR = 'var(--chart-bar)';
 
+// Tooltip chrome that follows the light/dark surface tokens instead of the
+// recharts default white box.
+const TOOLTIP_STYLE = {
+  backgroundColor: 'var(--color-surface)',
+  border: '1px solid var(--color-outline)',
+  borderRadius: 12,
+  color: 'var(--color-on-surface)',
+};
+
 export default function StatsCharts({ stats }: { stats: Stats }) {
   const statusData = stats.byStatus.map((s) => ({
     name: STATUS_LABELS[s.status] ?? s.status,
@@ -42,7 +51,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* 상태 분포 */}
-      <div className="bg-surface border border-outline rounded-lg p-4">
+      <div className="bg-surface border border-outline rounded-[28px] p-6">
         <h3 className="text-lg font-semibold text-on-surface mb-4">상태 분포</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
@@ -63,7 +72,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
                   />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip contentStyle={TOOLTIP_STYLE} />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
@@ -71,22 +80,22 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
       </div>
 
       {/* 월별 추이 */}
-      <div className="bg-surface border border-outline rounded-lg p-4">
+      <div className="bg-surface border border-outline rounded-[28px] p-6">
         <h3 className="text-lg font-semibold text-on-surface mb-4">월별 추이</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={stats.byMonth}>
               <XAxis dataKey="month" tick={{ fontSize: 12 }} />
               <YAxis allowDecimals={false} tick={{ fontSize: 12 }} />
-              <Tooltip />
-              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'var(--color-surface-variant)' }} />
+              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
       {/* 기여자 랭킹 (Top 10) */}
-      <div className="bg-surface border border-outline rounded-lg p-4 lg:col-span-2">
+      <div className="bg-surface border border-outline rounded-[28px] p-6 lg:col-span-2">
         <h3 className="text-lg font-semibold text-on-surface mb-4">
           기여자 랭킹 (Top 10)
         </h3>
@@ -104,8 +113,8 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
                 width={120}
                 tick={{ fontSize: 12 }}
               />
-              <Tooltip />
-              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'var(--color-surface-variant)' }} />
+              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} radius={[0, 6, 6, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

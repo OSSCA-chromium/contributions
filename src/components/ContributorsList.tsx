@@ -51,7 +51,7 @@ export default function ContributorsList({
             aria-label="정렬 기준"
             value={sortKey}
             onChange={(e) => setSortKey(e.target.value as SortKey)}
-            className="bg-surface border border-outline rounded-md px-2 py-1 text-on-surface"
+            className="bg-surface border border-outline rounded-xl px-2 py-1 text-on-surface"
           >
             {SORT_OPTIONS.map((o) => (
               <option key={o.key} value={o.key}>
