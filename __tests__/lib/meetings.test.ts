@@ -107,6 +107,17 @@ describe('getAllMeetings', () => {
     expect(meetings.find((m) => m.slug === 'blank')!.slides).toBeUndefined();
   });
 
+  it('draft: true인 파일은 목록에서 제외한다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'draft.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('draft.md'))
+        return '---\ntitle: 준비 중\ndate: 2026-07-18\ntype: meeting\ndraft: true\n---\n본문\n';
+      return FILE_A;
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.map((m) => m.slug)).toEqual(['a']);
+  });
+
   it('한 파일의 YAML이 깨져도 유효한 미팅은 유지한다', () => {
     (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'broken.md']);
     (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {

@@ -2,6 +2,7 @@
 title: N주차 모임
 date: 2025-01-01
 type: meeting # meeting | milestone
+# draft: true # 공개 전까지 사이트에서 숨김
 attendees: [username1, username2]
 location: 온라인
 # 발표 자료(HTML 슬라이드 덱). public/slides/{slug}/index.html로 두고 아래처럼

@@ -59,6 +59,9 @@ export function getAllMeetings(): Meeting[] {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const parsed = matter(fileContents);
 
+        // draft: true는 아직 공개하지 않을 일정 — 목록/상세/달력 모두 제외.
+        if (parsed.data.draft === true) continue;
+
         const date = toDateString(parsed.data.date);
         if (!date) {
           console.error('Skipping meeting with invalid date:', fileName);
