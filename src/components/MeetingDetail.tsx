@@ -6,7 +6,11 @@ import type { Meeting, MeetingType } from '@/lib/types';
 const BASE_PATH = '/contributions';
 
 export function resolveSlidesUrl(slides: string): string {
-  return /^https?:\/\//.test(slides) ? slides : `${BASE_PATH}${slides}`;
+  if (/^https?:\/\//.test(slides)) return slides;
+  // next dev는 public/ 파일을 정확한 경로로만 서빙한다(디렉터리 index 없음).
+  // 정적 export와 dev 양쪽에서 동작하도록 index.html을 명시한다.
+  const path = slides.endsWith('/') ? `${slides}index.html` : slides;
+  return `${BASE_PATH}${path}`;
 }
 
 const TYPE_LABELS: Record<MeetingType, string> = {
