@@ -92,6 +92,21 @@ describe('getAllMeetings', () => {
     expect(meetings.find((m) => m.slug === 'badend')!.endDate).toBeUndefined();
   });
 
+  it('slides 필드를 문자열로 파싱하고, 빈 값은 undefined로 둔다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['deck.md', 'nodeck.md', 'blank.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('nodeck.md'))
+        return '---\ntitle: 노슬라이드\ndate: 2026-07-19\ntype: meeting\n---\n본문\n';
+      if (p.includes('deck.md'))
+        return '---\ntitle: 1주차\ndate: 2026-07-18\ntype: meeting\nslides: /slides/2026-07-18-week1/\n---\n본문\n';
+      return '---\ntitle: 빈값\ndate: 2026-07-20\ntype: meeting\nslides: "  "\n---\n본문\n';
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.find((m) => m.slug === 'deck')!.slides).toBe('/slides/2026-07-18-week1/');
+    expect(meetings.find((m) => m.slug === 'nodeck')!.slides).toBeUndefined();
+    expect(meetings.find((m) => m.slug === 'blank')!.slides).toBeUndefined();
+  });
+
   it('한 파일의 YAML이 깨져도 유효한 미팅은 유지한다', () => {
     (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'broken.md']);
     (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {

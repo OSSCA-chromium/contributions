@@ -60,6 +60,7 @@ export interface Meeting {
   type: MeetingType;
   attendees: string[];
   location?: string;
+  slides?: string; // 사이트 내 HTML 덱 경로(/slides/...) 또는 외부 URL
   content?: string;
   contentHtml?: string;
 }

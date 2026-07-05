@@ -79,6 +79,10 @@ export function getAllMeetings(): Meeting[] {
           type: normalizeType(parsed.data.type),
           attendees: normalizeAttendees(parsed.data.attendees),
           location: parsed.data.location || undefined,
+          slides:
+            typeof parsed.data.slides === 'string' && parsed.data.slides.trim()
+              ? parsed.data.slides.trim()
+              : undefined,
           contentHtml: markdownToHtml(parsed.content),
         });
       } catch (fileError) {
