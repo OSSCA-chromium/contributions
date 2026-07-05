@@ -1,10 +1,5 @@
 import type { Meeting } from '@/lib/types';
-
-const TYPE_LABEL: Record<Meeting['type'], string> = {
-  meeting: '미팅',
-  milestone: '주요 일정',
-  deadline: '마감',
-};
+import { TYPE_BADGE, TYPE_LABELS } from '@/lib/periodColors';
 
 function dateLabel(m: Meeting): string {
   return m.endDate ? `${m.date} ~ ${m.endDate}` : m.date;
@@ -29,8 +24,8 @@ export default function EventPopover({
       {meetings.map((m) => (
         <div key={m.slug}>
           <div className="mb-1 flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
-              {TYPE_LABEL[m.type]}
+            <span className={`rounded-full px-2 py-0.5 text-xs ${TYPE_BADGE[m.type]}`}>
+              {TYPE_LABELS[m.type]}
             </span>
             <span className="text-on-surface-variant">{dateLabel(m)}</span>
           </div>

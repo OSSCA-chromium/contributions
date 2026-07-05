@@ -1,6 +1,6 @@
 import type { Meeting } from '@/lib/types';
 import { buildMonthGrid } from '@/lib/calendar';
-import { periodColorMap } from '@/lib/periodColors';
+import { periodColorMap, TYPE_CIRCLE } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
 
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
@@ -51,12 +51,13 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
 
               const band = covering[0];
               const bandColor = band ? (periodColor.get(band.slug)?.bar ?? '') : '';
-              const isDeadline = dayPoints.some((p) => p.type === 'deadline');
-              const pointCircle = dayPoints.length
-                ? isDeadline
-                  ? 'bg-error/30'
-                  : 'bg-primary/30'
-                : '';
+              // 같은 날에 여러 점 이벤트가 겹치면 마감 > 모임 > 주요 일정 순.
+              const circleType = dayPoints.some((p) => p.type === 'deadline')
+                ? 'deadline'
+                : dayPoints.some((p) => p.type === 'meeting')
+                  ? 'meeting'
+                  : 'milestone';
+              const pointCircle = dayPoints.length ? TYPE_CIRCLE[circleType] : '';
               const roundL = ci === 0 || covering.some((p) => p.date === d.date);
               const roundR = ci === 6 || covering.some((p) => p.endDate === d.date);
 

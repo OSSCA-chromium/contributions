@@ -1,5 +1,5 @@
 ---
-title: N주차 정기 미팅
+title: N주차 모임
 date: 2025-01-01
 type: meeting # meeting | milestone
 attendees: [username1, username2]

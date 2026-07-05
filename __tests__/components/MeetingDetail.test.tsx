@@ -15,6 +15,7 @@ const base: Meeting = {
 test('제목·날짜·장소·참석자·본문을 렌더한다', () => {
   render(<MeetingDetail meeting={base} />);
   expect(screen.getByRole('heading', { name: '1주차 정기 미팅' })).toBeInTheDocument();
+  expect(screen.getByText('모임')).toHaveClass('text-warning');
   expect(screen.getByText('2026-07-18')).toBeInTheDocument();
   expect(screen.getByText('온라인')).toBeInTheDocument();
   expect(screen.getByText(/alice, bob/)).toBeInTheDocument();

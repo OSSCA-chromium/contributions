@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import type { Meeting } from '@/lib/types';
 import type { PeriodColor } from '@/lib/periodColors';
+import { TYPE_BADGE, TYPE_LABELS } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
-
-const DEADLINE_BADGE = 'bg-error/15 text-error';
 
 interface MonthGroup {
   key: string; // YYYY-MM
@@ -51,8 +50,8 @@ export default function ScheduleList({
           <ul className="list-disc space-y-1.5 pl-5 marker:text-on-surface-variant">
             {group.items.map((m) => {
               const chip =
-                m.type === 'deadline'
-                  ? { label: '마감', cls: DEADLINE_BADGE }
+                m.type === 'deadline' || m.type === 'meeting'
+                  ? { label: TYPE_LABELS[m.type], cls: TYPE_BADGE[m.type] }
                   : m.badge
                     ? {
                         label: m.badge,

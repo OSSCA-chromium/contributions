@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import type { Meeting, MeetingType } from '@/lib/types';
+import type { Meeting } from '@/lib/types';
+import { TYPE_BADGE, TYPE_LABELS } from '@/lib/periodColors';
 
 // public/ 아래 정적 자산은 배포 시 basePath 밑에서 서빙되지만, <Link>와 달리
 // iframe/<a>의 원시 URL에는 basePath가 자동으로 붙지 않는다.
@@ -13,13 +14,7 @@ export function resolveSlidesUrl(slides: string): string {
   return `${BASE_PATH}${path}`;
 }
 
-const TYPE_LABELS: Record<MeetingType, string> = {
-  meeting: '정기 미팅',
-  milestone: '마일스톤',
-  deadline: '마감',
-};
-
-// 미팅 상세: 헤더(메타) + 본문(아젠다/미팅 노트) + 발표 자료(HTML 덱 임베드).
+// 모임 상세: 헤더(메타) + 본문(아젠다/노트) + 발표 자료(HTML 덱 임베드).
 export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
   const slidesUrl = meeting.slides ? resolveSlidesUrl(meeting.slides) : null;
 
@@ -29,7 +24,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
         ← 일정으로 돌아가기
       </Link>
 
-      <h1 className="font-display mb-3 mt-4 text-3xl font-semibold tracking-tight text-on-surface">
+      <h1 className="font-display mb-3 mt-4 text-4xl font-semibold tracking-tight text-on-surface">
         {meeting.title}
       </h1>
 
@@ -37,7 +32,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
         <span className="tabular-nums">
           {meeting.endDate ? `${meeting.date} ~ ${meeting.endDate}` : meeting.date}
         </span>
-        <span className="rounded bg-primary/15 px-1.5 py-0.5 text-xs text-primary">
+        <span className={`rounded px-1.5 py-0.5 text-xs ${TYPE_BADGE[meeting.type]}`}>
           {TYPE_LABELS[meeting.type]}
         </span>
         {meeting.badge && (
