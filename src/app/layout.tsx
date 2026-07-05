@@ -14,6 +14,12 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
+// 시작 연도(2025)부터 빌드 시점 연도까지. 정적 export라 빌드 때 고정된다.
+function copyrightYears(): string {
+  const year = new Date().getFullYear();
+  return year > 2025 ? `2025-${year}` : '2025';
+}
+
 export const metadata: Metadata = {
   title: "OSSCA Chromium",
   description: "2025 OSSCA 참여형 Chromium 프로젝트",
@@ -104,7 +110,7 @@ export default function RootLayout({
                 ))}
               </div>
               <div className="flex items-center gap-2">
-                <p>© {new Date().getFullYear()} OSSCA Chromium. All rights reserved.</p>
+                <p>© {copyrightYears()} OSSCA Chromium. All rights reserved.</p>
                 <a
                   href="https://github.com/OSSCA-chromium/contributions"
                   target="_blank"
