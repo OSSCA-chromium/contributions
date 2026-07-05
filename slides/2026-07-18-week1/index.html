@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1주차 모임 — OSSCA Chromium</title>
+    <style>
+      :root {
+        --bg: #131314;
+        --surface: #1e1f20;
+        --on-surface: #e3e3e3;
+        --muted: #9aa0a6;
+        --primary: #8ab4f8;
+        --accent: #fdd663;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+      body {
+        background: var(--bg);
+        color: var(--on-surface);
+        font-family: 'Google Sans', 'Noto Sans KR', system-ui, sans-serif;
+        overflow: hidden;
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 8vh 10vw;
+      }
+      .slide.active { display: flex; }
+      .kicker {
+        color: var(--accent);
+        font-size: clamp(0.8rem, 1.8vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      h1 { font-size: clamp(1.8rem, 5vw, 3.2rem); line-height: 1.2; }
+      h2 { font-size: clamp(1.4rem, 3.6vw, 2.2rem); color: var(--primary); }
+      p, li { font-size: clamp(1rem, 2.2vw, 1.35rem); line-height: 1.65; color: var(--on-surface); }
+      .muted { color: var(--muted); }
+      ul { padding-left: 1.4em; display: grid; gap: 0.5em; }
+      code {
+        background: var(--surface);
+        border-radius: 6px;
+        padding: 0.15em 0.45em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+        font-size: 0.92em;
+        color: var(--accent);
+      }
+      .hud {
+        position: fixed;
+        right: 1rem;
+        bottom: 0.85rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+        user-select: none;
+      }
+      .progress {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        background: var(--primary);
+        transition: width 0.25s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide active">
+      <p class="kicker">OSSCA Chromium · 2026-07-18</p>
+      <h1>1주차 모임</h1>
+      <p class="muted">Challenges 온보딩 — 환경 세팅부터 첫 이슈 선정까지</p>
+      <p class="muted">← / → 또는 클릭으로 넘겨 보세요</p>
+    </section>
+
+    <section class="slide">
+      <h2>오늘의 아젠다</h2>
+      <ul>
+        <li>팀 소개 및 아이스브레이킹</li>
+        <li>Challenges 기간(7/11 ~ 8/14) 목표</li>
+        <li>Chromium 체크아웃·빌드 환경 점검</li>
+        <li>주간 모임 운영 방식</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Challenges 기간 목표</h2>
+      <ul>
+        <li>
+          로컬 빌드 성공 — <code>fetch chromium</code> →
+          <code>gclient sync</code> → <code>autoninja</code>
+        </li>
+        <li>
+          코드베이스 탐색 — <code>source.chromium.org</code>로 관심 모듈 읽기
+        </li>
+        <li>
+          첫 이슈 선정 — Issue Tracker에서
+          <code>Hotlist-GoodFirstBug</code> 탐색
+        </li>
+        <li>Gerrit 계정 준비 및 CLA 서명</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>다음 주까지 할 일</h2>
+      <ul>
+        <li>각자 로컬 빌드 완료 (플랫폼·소요 시간 공유)</li>
+        <li>관심 있는 컴포넌트 1개 정해 오기</li>
+        <li>막히는 부분은 팀 채널에 바로 질문</li>
+      </ul>
+      <p class="muted">다음 모임: 2026-07-25 (토) 온라인</p>
+    </section>
+
+    <div class="progress" id="progress"></div>
+    <div class="hud" id="hud"></div>
+
+    <script>
+      const slides = [...document.querySelectorAll('.slide')];
+      const hud = document.getElementById('hud');
+      const progress = document.getElementById('progress');
+      let index = 0;
+
+      function show(i) {
+        index = Math.max(0, Math.min(slides.length - 1, i));
+        slides.forEach((s, n) => s.classList.toggle('active', n === index));
+        hud.textContent = (index + 1) + ' / ' + slides.length;
+        progress.style.width = ((index + 1) / slides.length * 100) + '%';
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') show(index + 1);
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') show(index - 1);
+        if (e.key === 'Home') show(0);
+        if (e.key === 'End') show(slides.length - 1);
+      });
+      // Click right half → next, left half → previous.
+      document.addEventListener('click', (e) => {
+        show(e.clientX > window.innerWidth / 2 ? index + 1 : index - 1);
+      });
+
+      show(0);
+    </script>
+  </body>
+</html>
