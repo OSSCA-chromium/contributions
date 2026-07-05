@@ -55,12 +55,12 @@ export default async function ContributorPage({ params }: ParamsProps) {
           <ContributorAvatar username={username} size={96} />
         </a>
         <div className="text-center sm:text-left">
-          <h1 className="text-3xl font-bold text-on-surface">{username}</h1>
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface">{username}</h1>
           <a
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-link hover:underline"
           >
             github.com/{username}
           </a>

@@ -21,7 +21,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="테마 전환"
-      className="p-2 rounded-full hover:bg-white/10 transition-colors"
+      className="p-2 rounded-full hover:bg-surface-variant transition-colors"
     >
       {isDark ? '🌙' : '☀️'}
     </button>

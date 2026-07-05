@@ -39,12 +39,25 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   return (
     <>
       <section className="mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-on-surface mb-3">
-          OSSCA Chromium Contributions
-        </h1>
-        <p className="text-on-surface-variant max-w-2xl mb-4">
-          오픈소스 컨트리뷰션 아카데미 참가자들이 Chromium 프로젝트에 기여한 컨트리뷰션 기록입니다.
-        </p>
+        <div className="brand-mesh rounded-[32px] px-6 py-8 sm:px-10 sm:py-10 mb-6">
+          <h1 className="font-display brand-gradient-text max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            OSSCA Chromium Contributions
+          </h1>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/docs"
+              className="rounded-full bg-primary px-5 py-2.5 font-medium text-on-primary transition-opacity hover:opacity-90"
+            >
+              가이드 시작하기
+            </Link>
+            <Link
+              href="/patches"
+              className="rounded-full border border-outline px-5 py-2.5 font-medium text-on-surface transition-colors hover:bg-surface-variant"
+            >
+              컨트리뷰션 보기
+            </Link>
+          </div>
+        </div>
         <YearSelector years={years} value={year} onChange={setYear} />
       </section>
 
@@ -58,51 +71,55 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         <>
           <section className="mb-10">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-on-surface">{stats.total}</div>
+              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
+                <div className="font-display text-4xl font-semibold text-primary">{stats.total}</div>
                 <div className="text-sm text-on-surface-variant">총 컨트리뷰션</div>
               </div>
-              <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-success">
+              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
+                <div className="font-display text-4xl font-semibold text-success">
                   {Math.round(stats.mergedRatio * 100)}%
                 </div>
                 <div className="text-sm text-on-surface-variant">Merged 비율</div>
               </div>
-              <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-info">{stats.contributorCount}</div>
+              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
+                <div className="font-display text-4xl font-semibold text-info">{stats.contributorCount}</div>
                 <div className="text-sm text-on-surface-variant">기여자 수</div>
               </div>
             </div>
             <div className="mt-4">
-              <Link href="/stats" className="text-primary hover:underline font-medium inline-flex items-center">
+              <Link href="/stats" className="text-link hover:underline font-medium inline-flex items-center">
                 통계 자세히 보기 →
               </Link>
             </div>
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold mb-5 text-on-surface">Recent contributions</h2>
+            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
+              Recent contributions
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {recent.map((item) => (
                 <ContributionCard key={item.slug} contribution={item} />
               ))}
             </div>
             <div className="mt-6">
-              <Link href="/patches" className="text-primary hover:underline font-medium inline-flex items-center">
+              <Link href="/patches" className="text-link hover:underline font-medium inline-flex items-center">
                 모든 컨트리뷰션 보기 →
               </Link>
             </div>
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold mb-5 text-on-surface">Contributors</h2>
+            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
+              Contributors
+            </h2>
             <div className="flex flex-wrap gap-[18px]">
               {contributors.map((username) => (
                 <ContributorAvatar key={username} username={username} size={48} linkToProfile />
               ))}
             </div>
             <div className="mt-6">
-              <Link href="/contributors" className="text-primary hover:underline font-medium inline-flex items-center">
+              <Link href="/contributors" className="text-link hover:underline font-medium inline-flex items-center">
                 전체 보기 →
               </Link>
             </div>

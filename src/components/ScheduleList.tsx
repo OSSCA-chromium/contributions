@@ -2,7 +2,7 @@ import type { Meeting } from '@/lib/types';
 import type { PeriodColor } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
 
-const DEADLINE_BADGE = 'bg-red-500/15 text-red-600 dark:text-red-400';
+const DEADLINE_BADGE = 'bg-error/15 text-error';
 
 interface MonthGroup {
   key: string; // YYYY-MM

@@ -32,7 +32,7 @@ export default function DocsSidebar({
                   <Link
                     href={`/docs/${doc.slug}`}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`block rounded-md px-3 py-2 transition-colors ${
+                    className={`block rounded-xl px-3 py-2 transition-colors ${
                       isActive
                         ? 'bg-primary-container text-primary font-medium'
                         : 'text-on-surface hover:bg-surface-variant'

@@ -13,7 +13,7 @@ export default function StatsPage() {
 
   return (
     <div className="max-w-5xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-on-surface mb-6">통계</h1>
+      <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface mb-6">통계</h1>
       <StatsView items={items} />
     </div>
   );

@@ -4,45 +4,61 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #1c6dd0;
+  --color-primary: #1a73e8;
   --color-on-primary: #ffffff;
-  --color-primary-container: #d6e6fa;
-  --color-background: #f4f7fb;
-  --color-surface: #ffffff;
-  --color-surface-variant: #edf2f8;
-  --color-on-surface: #1a1c1e;
-  --color-on-surface-variant: #5a6470;
-  --color-outline: #cdd6e0;
-  --color-success: #1a8a4d;
-  --color-info: #1c6dd0;
-  --color-warning: #b26b00;
-  --color-link: #1c6dd0;
-  --chart-merged: #1a8a4d;
-  --chart-in-review: #1c6dd0;
-  --chart-draft: #8a93a3;
-  --chart-unknown: #b26b00;
-  --chart-bar: #1c6dd0;
+  --color-primary-container: #e8f0fe;
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-surface-variant: #f1f3f4;
+  --color-on-surface: #202124;
+  --color-on-surface-variant: #5f6368;
+  --color-outline: #dadce0;
+  --color-success: #188038;
+  --color-info: #4285f4;
+  --color-warning: #f9ab00;
+  --color-error: #d93025;
+  --color-link: #1a73e8;
+  --chart-merged: #34a853;
+  --chart-in-review: #4285f4;
+  --chart-draft: #fbbc04;
+  --chart-unknown: #9aa0a6;
+  --chart-bar: #4285f4;
+  --mesh-base: #f8f9fa;
+  --mesh-blue: rgba(66, 133, 244, 0.16);
+  --mesh-green: rgba(52, 168, 83, 0.14);
+  --mesh-yellow: rgba(251, 188, 4, 0.14);
+  --mesh-red: rgba(234, 67, 53, 0.1);
+  --gradient-from: #1767d1;
+  --gradient-to: #679ef5;
 }
 
 .dark {
-  --color-primary: #4f8ae0;
-  --color-on-primary: #03101f;
-  --color-primary-container: #0a2c54;
-  --color-background: #0a1020;
-  --color-surface: #0f1a2e;
-  --color-surface-variant: #18253c;
-  --color-on-surface: #dde4ee;
-  --color-on-surface-variant: #93a1b5;
-  --color-outline: #2a3851;
-  --color-success: #2f9e5b;
-  --color-info: #4f8ae0;
-  --color-warning: #d99a2b;
-  --color-link: #6fa6ee;
-  --chart-merged: #2f9e5b;
-  --chart-in-review: #3f78c8;
-  --chart-draft: #6b7686;
-  --chart-unknown: #b8862e;
-  --chart-bar: #3f78c8;
+  --color-primary: #8ab4f8;
+  --color-on-primary: #202124;
+  --color-primary-container: #28374e;
+  --color-background: #202124;
+  --color-surface: #292a2d;
+  --color-surface-variant: #3c4043;
+  --color-on-surface: #e8eaed;
+  --color-on-surface-variant: #9aa0a6;
+  --color-outline: #5f6368;
+  --color-success: #81c995;
+  --color-info: #8ab4f8;
+  --color-warning: #fdd663;
+  --color-error: #f28b82;
+  --color-link: #8ab4f8;
+  --chart-merged: #81c995;
+  --chart-in-review: #8ab4f8;
+  --chart-draft: #fdd663;
+  --chart-unknown: #9aa0a6;
+  --chart-bar: #8ab4f8;
+  --mesh-base: #292a2d;
+  --mesh-blue: rgba(138, 180, 248, 0.14);
+  --mesh-green: rgba(129, 201, 149, 0.12);
+  --mesh-yellow: rgba(253, 214, 99, 0.1);
+  --mesh-red: rgba(242, 139, 130, 0.08);
+  --gradient-from: #8ab4f8;
+  --gradient-to: #c6dafc;
 }
 
 @theme inline {
@@ -58,12 +74,14 @@
   --color-success: var(--color-success);
   --color-info: var(--color-info);
   --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
   --color-link: var(--color-link);
   --color-chart-merged: var(--chart-merged);
   --color-chart-in-review: var(--chart-in-review);
   --color-chart-draft: var(--chart-draft);
   --color-chart-unknown: var(--chart-unknown);
   --color-chart-bar: var(--chart-bar);
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
@@ -85,6 +103,56 @@ h6 {
 
 a {
   text-decoration: none;
+}
+
+/* Four-colour pastel mesh (hero panel) */
+.brand-mesh {
+  background-color: var(--mesh-base);
+  background-image:
+    radial-gradient(55% 85% at 10% 0%, var(--mesh-blue), transparent 62%),
+    radial-gradient(50% 75% at 90% 8%, var(--mesh-green), transparent 60%),
+    radial-gradient(45% 70% at 78% 95%, var(--mesh-yellow), transparent 62%),
+    radial-gradient(40% 65% at 15% 100%, var(--mesh-red), transparent 65%);
+  background-size: 150% 150%;
+  animation: brand-mesh-drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes brand-mesh-drift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mesh {
+    animation: none;
+  }
+}
+
+/* Green-to-blue gradient display text (hero headline) */
+.brand-gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    var(--gradient-from),
+    var(--gradient-to)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Chromium-logo three-blue strip (footer signature) */
+.chromium-strip {
+  height: 4px;
+  background-image: linear-gradient(
+    90deg,
+    #1a74e7 0 33.4%,
+    #679ef5 33.4% 66.7%,
+    #afccf9 66.7% 100%
+  );
 }
 
 /* typography 플러그인이 인라인 코드에 붙이는 백틱(`) 제거 */
@@ -139,7 +207,7 @@ object {
 
 /* 마크다운 코드 블럭 스타일링 */
 pre {
-  @apply bg-gray-800 text-gray-100 rounded-md overflow-x-auto my-4;
+  @apply bg-gray-800 text-gray-100 rounded-xl overflow-x-auto my-4;
   padding: 1rem;
   position: relative;
 }

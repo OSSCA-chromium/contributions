@@ -17,7 +17,7 @@ export default function ContributionCard({
   return (
     <Link
       href={`/patches/${slug}`}
-      className="block bg-surface border border-outline rounded-lg p-4 shadow-sm transition-shadow hover:shadow-md text-on-surface"
+      className="block bg-surface border border-outline rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-primary text-on-surface"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
         <h3 className="font-semibold text-on-surface line-clamp-2">{title}</h3>
@@ -44,7 +44,7 @@ export default function ContributionCard({
         <p className="text-sm text-on-surface-variant line-clamp-3 mb-2">{excerpt}</p>
       )}
 
-      <span className="text-sm text-primary font-medium">더 읽기 →</span>
+      <span className="text-sm text-link font-medium">더 읽기 →</span>
     </Link>
   );
 }

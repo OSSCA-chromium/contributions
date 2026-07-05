@@ -37,21 +37,23 @@ export default function ContributorView({
       </div>
 
       <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-on-surface">{total}</div>
+        <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
+          <div className="font-display text-3xl font-semibold text-primary">{total}</div>
           <div className="text-sm text-on-surface-variant">총 기여</div>
         </div>
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-success">{merged}</div>
+        <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
+          <div className="font-display text-3xl font-semibold text-success">{merged}</div>
           <div className="text-sm text-on-surface-variant">Merged</div>
         </div>
-        <div className="bg-surface border border-outline rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-info">{inReview}</div>
+        <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
+          <div className="font-display text-3xl font-semibold text-info">{inReview}</div>
           <div className="text-sm text-on-surface-variant">In Review</div>
         </div>
       </div>
 
-      <h2 className="text-xl font-semibold text-on-surface mb-4">컨트리뷰션</h2>
+      <h2 className="font-display text-xl font-semibold tracking-tight text-on-surface mb-4">
+        컨트리뷰션
+      </h2>
       {total === 0 ? (
         <p className="text-on-surface-variant">
           {year === 'all' ? '등록된 활동이 없습니다.' : `${yearLabel}년 활동이 없습니다.`}

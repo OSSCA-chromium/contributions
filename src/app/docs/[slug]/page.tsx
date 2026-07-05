@@ -49,7 +49,7 @@ export default async function DocPage({ params }: ParamsProps) {
 
       {/* 본문 */}
       <main className="min-w-0 flex-1">
-        <h1 className="mb-6 text-3xl font-bold text-on-surface">{doc.meta.title}</h1>
+        <h1 className="font-display mb-6 text-3xl font-semibold tracking-tight text-on-surface">{doc.meta.title}</h1>
 
         <article
           className="prose dark:prose-invert max-w-none"
