@@ -19,7 +19,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
   const slidesUrl = meeting.slides ? resolveSlidesUrl(meeting.slides) : null;
 
   return (
-    <div className="mx-auto max-w-4xl p-4">
+    <div className="mx-auto max-w-7xl p-4">
       <Link href="/schedule" className="text-sm text-primary hover:underline">
         ← 일정으로 돌아가기
       </Link>

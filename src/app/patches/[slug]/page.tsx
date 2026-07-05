@@ -46,7 +46,7 @@ export default async function PatchPage({ params }: ParamsProps) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto p-4">
+    <article className="mx-auto max-w-7xl p-4">
       {/* 헤더 정보 */}
       <header className="mb-4">
         <h1 className="font-display text-4xl font-semibold tracking-tight mb-2 text-on-surface">{contribution.title}</h1>

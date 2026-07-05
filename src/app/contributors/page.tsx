@@ -13,7 +13,7 @@ export default function ContributorsPage() {
   const summaries = getContributorSummaries();
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="mx-auto max-w-7xl p-4">
       <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface mb-6">Contributors</h1>
       {summaries.length === 0 ? (
         <p className="text-on-surface-variant">아직 기여자가 없습니다.</p>
