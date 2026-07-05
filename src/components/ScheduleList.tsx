@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Meeting } from '@/lib/types';
 import type { PeriodColor } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
@@ -69,7 +70,12 @@ export default function ScheduleList({
                         {chip.label}
                       </span>
                     )}
-                    <span className="text-on-surface">{m.title}</span>
+                    <Link
+                      href={`/schedule/${m.slug}`}
+                      className="text-on-surface hover:text-primary hover:underline"
+                    >
+                      {m.title}
+                    </Link>
                   </span>
                   <EventPopover meetings={[m]} showTitle={false} className="left-0 top-full mt-1" />
                 </li>
