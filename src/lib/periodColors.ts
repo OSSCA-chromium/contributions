@@ -1,4 +1,24 @@
-import type { Meeting } from '@/lib/types';
+import type { Meeting, MeetingType } from '@/lib/types';
+
+// Point-event(type) 공통 표기: 목록/상세 뱃지, 달력 원, 표시 라벨이
+// 컴포넌트마다 어긋나지 않도록 여기서 한 번만 정의한다.
+export const TYPE_LABELS: Record<MeetingType, string> = {
+  meeting: '모임',
+  milestone: '주요 일정',
+  deadline: '마감',
+};
+
+export const TYPE_BADGE: Record<MeetingType, string> = {
+  meeting: 'bg-warning/15 text-warning',
+  milestone: 'bg-primary/15 text-primary',
+  deadline: 'bg-error/15 text-error',
+};
+
+export const TYPE_CIRCLE: Record<MeetingType, string> = {
+  meeting: 'bg-warning/30',
+  milestone: 'bg-primary/30',
+  deadline: 'bg-error/30',
+};
 
 export interface PeriodColor {
   bar: string; // calendar bar background

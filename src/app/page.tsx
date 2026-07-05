@@ -4,5 +4,9 @@ import HomeView from '@/components/HomeView';
 
 export default function Home() {
   const items = buildSearchIndex(getAllContributions());
-  return <HomeView items={items} />;
+  return (
+    <div className="mx-auto max-w-7xl p-4">
+      <HomeView items={items} />
+    </div>
+  );
 }

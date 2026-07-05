@@ -47,6 +47,7 @@ export interface DocMeta {
   title: string;
   order: number;
   group?: string;
+  description?: string; // 인덱스 목록에 보여줄 한 줄 소개
 }
 
 export type MeetingType = 'meeting' | 'milestone' | 'deadline';
@@ -60,6 +61,7 @@ export interface Meeting {
   type: MeetingType;
   attendees: string[];
   location?: string;
+  slides?: string; // 사이트 내 HTML 덱 경로(/slides/...) 또는 외부 URL
   content?: string;
   contentHtml?: string;
 }

@@ -21,6 +21,7 @@ function readDocMeta(fileName: string): DocMeta {
         ? matterResult.data.order
         : Number.MAX_SAFE_INTEGER,
     group: matterResult.data.group,
+    description: matterResult.data.description || undefined,
   };
 }
 
@@ -81,6 +82,7 @@ export async function getDocBySlug(slug: string): Promise<{
             ? matterResult.data.order
             : Number.MAX_SAFE_INTEGER,
         group: matterResult.data.group,
+        description: matterResult.data.description || undefined,
       },
       contentHtml,
       headings,

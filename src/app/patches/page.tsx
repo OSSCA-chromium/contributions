@@ -13,7 +13,7 @@ export default function PatchesPage() {
   const items = buildSearchIndex(contributions);
 
   return (
-    <div>
+    <div className="mx-auto max-w-7xl p-4">
       {items.length > 0 ? (
         <ContributionSearch items={items} />
       ) : (
