@@ -20,8 +20,8 @@ CL을 올렸다면 리뷰어의 승인(LGTM)을 받고 CQ를 통과해야 머지
 - 모든 코멘트에 답을 남기고 **Done** 또는 답변을 단 뒤, 수정 커밋을
   `git cl upload`로 새 패치셋으로 올립니다.
 - 리뷰어와 의견이 다르면 근거를 들어 정중히 토론하세요. 리뷰 문화에 대한
-  기대치는 [CL author's guide](https://chromium.googlesource.com/chromium/src/+/main/docs/cl_respect.md)와
-  [Reviewer's guide](https://chromium.googlesource.com/chromium/src/+/main/docs/cr_respect.md)에
+  기대치는 [CL author's guide](/contributions/docs/cl-respect/)와
+  [Reviewer's guide](/contributions/docs/cr-respect/)에
   정리돼 있습니다.
 - 시차 때문에 왕복이 하루씩 걸릴 수 있으니, 한 번의 답장에 가능한 한 많은
   코멘트를 묶어 처리하는 편이 효율적입니다.
@@ -45,5 +45,5 @@ CL을 올렸다면 리뷰어의 승인(LGTM)을 받고 CQ를 통과해야 머지
 
 ### 참고 문서
 
-- [Code Reviews](https://chromium.googlesource.com/chromium/src/+/main/docs/code_reviews.md) — 리뷰 정책 전반
-- [CL Tips](https://chromium.googlesource.com/chromium/src/+/main/docs/cl_tips.md) — CL을 잘 쪼개고 설명하는 요령
+- [Code Reviews](/contributions/docs/code-reviews/) — 리뷰 정책 전반
+- [CL Tips](/contributions/docs/cl-tips/) — CL을 잘 쪼개고 설명하는 요령
