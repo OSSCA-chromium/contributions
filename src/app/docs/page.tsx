@@ -29,18 +29,18 @@ export default function DocsIndexPage() {
       <main className="min-w-0 flex-1">
         <h1 className="font-display mb-6 text-4xl font-semibold tracking-tight text-on-surface">문서</h1>
         {docs.length > 0 ? (
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[...groups.entries()].map(([group, items]) => (
               <section key={group}>
-                <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-on-surface-variant">
+                <h2 className="mb-2 border-b border-outline pb-1.5 text-sm font-bold uppercase tracking-wider text-primary">
                   {group}
                 </h2>
-                <ul className="space-y-1">
+                <ul className="space-y-0.5">
                   {items.map((doc) => (
                     <li key={doc.slug}>
                       <Link
                         href={`/docs/${doc.slug}`}
-                        className="flex flex-wrap items-baseline gap-x-2 rounded-xl px-3 py-2 transition-colors hover:bg-surface-variant"
+                        className="flex flex-wrap items-baseline gap-x-2 rounded-xl px-3 py-1.5 transition-colors hover:bg-surface-variant"
                       >
                         <span className="font-medium text-primary">{doc.title}</span>
                         {doc.description && (

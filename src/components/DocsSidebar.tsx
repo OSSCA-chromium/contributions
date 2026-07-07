@@ -20,11 +20,11 @@ export default function DocsSidebar({
   return (
     <nav aria-label="문서 목록" className="text-sm">
       {[...groups.entries()].map(([group, docs]) => (
-        <div key={group} className="mb-6">
-          <h2 className="mb-2 px-3 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+        <div key={group} className="mb-4">
+          <h2 className="mb-1.5 border-b border-outline px-3 pb-1.5 text-[11px] font-bold uppercase tracking-wider text-primary">
             {group}
           </h2>
-          <ul className="space-y-1">
+          <ul className="space-y-0.5">
             {docs.map((doc) => {
               const isActive = doc.slug === activeSlug;
               return (
@@ -32,7 +32,7 @@ export default function DocsSidebar({
                   <Link
                     href={`/docs/${doc.slug}`}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`block rounded-xl px-3 py-2 transition-colors ${
+                    className={`block rounded-xl px-3 py-1.5 transition-colors ${
                       isActive
                         ? 'bg-primary-container text-primary font-medium'
                         : 'text-on-surface hover:bg-surface-variant'

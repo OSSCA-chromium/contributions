@@ -41,9 +41,9 @@ export default async function DocPage({ params }: ParamsProps) {
     currentIndex >= 0 && currentIndex < nav.length - 1 ? nav[currentIndex + 1] : null;
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 p-4 lg:flex-row">
+    <div className="mx-auto flex max-w-7xl flex-col gap-6 p-4 lg:flex-row">
       {/* 좌측 사이드바 */}
-      <aside className="lg:w-56 lg:flex-shrink-0">
+      <aside className="lg:w-48 lg:flex-shrink-0">
         <DocsSidebar items={nav} activeSlug={slug} />
       </aside>
 
@@ -84,7 +84,7 @@ export default async function DocPage({ params }: ParamsProps) {
       </main>
 
       {/* 우측 목차 */}
-      <aside className="order-first lg:order-last lg:w-48 lg:flex-shrink-0">
+      <aside className="order-first lg:order-last lg:w-40 lg:flex-shrink-0">
         <div className="lg:sticky lg:top-4">
           <TableOfContents headings={doc.headings} />
         </div>
