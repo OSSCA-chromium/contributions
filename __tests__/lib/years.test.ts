@@ -2,7 +2,6 @@ import {
   getYear,
   getAvailableYears,
   getDataYears,
-  resolveInitialYear,
   filterByYear,
   DEFAULT_YEAR,
 } from '@/lib/years';
@@ -25,12 +24,6 @@ test('getDataYears는 데이터에 실제 존재하는 연도만 내림차순으
   expect(getDataYears([{ date: '2025-05-08' }, { date: '2025-06-01' }])).toEqual(['2025']);
   expect(getDataYears([{ date: '2026-02-01' }, { date: '2025-06-01' }])).toEqual(['2026', '2025']);
   expect(getDataYears([{ date: 'nope' }])).toEqual([]);
-});
-
-test('resolveInitialYear는 DEFAULT 연도 데이터가 없으면 최신 데이터 연도로 폴백한다', () => {
-  expect(resolveInitialYear(['2025'])).toBe('2025'); // 2026 데이터 없음 → 최신(2025)
-  expect(resolveInitialYear(['2026', '2025'])).toBe('2026'); // 2026 있음 → 2026
-  expect(resolveInitialYear([])).toBe(DEFAULT_YEAR); // 데이터 없음 → 기본
 });
 
 test('getAvailableYears는 DEFAULT_YEAR를 항상 포함하고 내림차순 정렬한다', () => {

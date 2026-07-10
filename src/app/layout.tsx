@@ -22,7 +22,7 @@ function copyrightYears(): string {
 
 export const metadata: Metadata = {
   title: "OSSCA Chromium",
-  description: "2025 OSSCA 참여형 Chromium 프로젝트",
+  description: "2026 OSSCA 참여형 Chromium 프로젝트",
 };
 
 const NAV_LINKS = [

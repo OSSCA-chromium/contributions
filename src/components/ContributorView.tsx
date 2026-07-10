@@ -2,12 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { Contribution } from '@/lib/types';
-import {
-  filterByYear,
-  getAvailableYears,
-  getDataYears,
-  resolveInitialYear,
-} from '@/lib/years';
+import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import ContributionCard from '@/components/ContributionCard';
 import YearSelector from '@/components/YearSelector';
 
@@ -17,9 +12,7 @@ export default function ContributorView({
   contributions: Contribution[];
 }) {
   const years = useMemo(() => getAvailableYears(contributions), [contributions]);
-  const [year, setYear] = useState(() =>
-    resolveInitialYear(getDataYears(contributions))
-  );
+  const [year, setYear] = useState(DEFAULT_YEAR);
   const filtered = useMemo(
     () => filterByYear(contributions, year),
     [contributions, year]

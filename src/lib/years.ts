@@ -34,13 +34,6 @@ export function getAvailableYears(items: { date: unknown }[]): string[] {
   return [...set].sort((a, b) => b.localeCompare(a));
 }
 
-// Initial selected year: prefer DEFAULT_YEAR when it has data, otherwise the
-// newest year that actually has data, falling back to DEFAULT_YEAR when empty.
-export function resolveInitialYear(dataYears: string[]): string {
-  if (dataYears.includes(DEFAULT_YEAR)) return DEFAULT_YEAR;
-  return dataYears[0] ?? DEFAULT_YEAR;
-}
-
 // When year === 'all' return everything, otherwise only the matching year.
 export function filterByYear<T extends { date: unknown }>(items: T[], year: string): T[] {
   if (year === 'all') return items;
