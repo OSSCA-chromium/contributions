@@ -3,18 +3,13 @@
 import { useMemo, useState } from 'react';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
-import {
-  filterByYear,
-  getAvailableYears,
-  getDataYears,
-  resolveInitialYear,
-} from '@/lib/years';
+import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import StatsCharts from '@/components/StatsCharts';
 import YearSelector from '@/components/YearSelector';
 
 export default function StatsView({ items }: { items: SearchIndexItem[] }) {
   const years = useMemo(() => getAvailableYears(items), [items]);
-  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
+  const [year, setYear] = useState(DEFAULT_YEAR);
   const stats = useMemo(() => computeStats(filterByYear(items, year)), [items, year]);
 
   return (

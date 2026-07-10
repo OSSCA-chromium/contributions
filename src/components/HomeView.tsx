@@ -4,19 +4,14 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
-import {
-  filterByYear,
-  getAvailableYears,
-  getDataYears,
-  resolveInitialYear,
-} from '@/lib/years';
+import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import ContributionCard from '@/components/ContributionCard';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import YearSelector from '@/components/YearSelector';
 
 export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   const years = useMemo(() => getAvailableYears(items), [items]);
-  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
+  const [year, setYear] = useState(DEFAULT_YEAR);
   const filtered = useMemo(() => filterByYear(items, year), [items, year]);
   const stats = useMemo(() => computeStats(filtered), [filtered]);
   const recent = filtered.slice(0, 3);

@@ -4,12 +4,7 @@ import { useMemo, useState } from 'react';
 import type { ContributionStatus, SearchIndexItem } from '@/lib/types';
 import ContributionCard from '@/components/ContributionCard';
 import YearSelector from '@/components/YearSelector';
-import {
-  filterByYear,
-  getAvailableYears,
-  getDataYears,
-  resolveInitialYear,
-} from '@/lib/years';
+import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 
 type StatusFilter = 'all' | ContributionStatus;
 
@@ -25,7 +20,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
   const [status, setStatus] = useState<StatusFilter>('all');
   const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
   const years = useMemo(() => getAvailableYears(items), [items]);
-  const [year, setYear] = useState(() => resolveInitialYear(getDataYears(items)));
+  const [year, setYear] = useState(DEFAULT_YEAR);
 
   const allLabels = useMemo(() => {
     const set = new Set<string>();
