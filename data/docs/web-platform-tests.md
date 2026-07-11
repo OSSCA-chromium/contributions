@@ -1,6 +1,6 @@
 ---
 title: Web Platform Tests
-order: 35
+order: 36
 group: 번역 · docs/testing
 description: WPT 개요와 Chromium에서의 사용
 source_path: docs/testing/web_platform_tests.md

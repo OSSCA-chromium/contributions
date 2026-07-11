@@ -45,22 +45,23 @@ const MANIFEST = [
   { file: 'Chromium - Intro to Mojo and Services.md', slug: 'mojo-and-services', order: 30, description: 'Mojo IPC와 서비스 아키텍처 입문' },
   { file: 'Chromium - Configuration - Prefs, Settings, Features, Switches & Flags.md', slug: 'configuration', order: 31, originalTitle: 'Configuration: Prefs, Settings, Features, Switches & Flags', description: 'Prefs·Settings·Features·Switches·Flags 구분' },
   { file: 'Chromium - Integrating a feature with the Origin Trials framework.md', slug: 'origin-trials-integration', order: 32, title: 'Origin Trials 통합', description: '기능을 Origin Trials와 통합하는 방법' },
+  { file: 'Chromium - Visual Studio Code.md', slug: 'vscode', order: 33, originalTitle: 'Visual Studio Code Dev', description: 'VS Code로 Chromium 개발하기' },
   // docs/linux/
-  { file: 'Chromium - Linux Build Instructions.md', slug: 'linux-build-instructions', order: 33, title: 'Linux 빌드 안내', description: 'Linux에서 체크아웃·빌드하기' },
+  { file: 'Chromium - Linux Build Instructions.md', slug: 'linux-build-instructions', order: 34, title: 'Linux 빌드 안내', description: 'Linux에서 체크아웃·빌드하기' },
   // docs/process/
-  { file: 'Chromium - Chromium Release Cycle.md', slug: 'release-cycle', order: 34, description: 'Chrome 4주 릴리스 주기' },
+  { file: 'Chromium - Chromium Release Cycle.md', slug: 'release-cycle', order: 35, description: 'Chrome 4주 릴리스 주기' },
   // docs/testing/
-  { file: 'Chromium - Web Platform Tests.md', slug: 'web-platform-tests', order: 35, title: 'Web Platform Tests', description: 'WPT 개요와 Chromium에서의 사용' },
-  { file: 'Chromium - Writing Web Tests.md', slug: 'writing-web-tests', order: 36, description: '웹 테스트 작성 방법' },
-  { file: 'Chromium - Running and Debugging Web Tests.md', slug: 'running-web-tests', order: 37, title: '웹 테스트 실행과 디버깅', description: '웹 테스트 실행과 디버깅 방법' },
+  { file: 'Chromium - Web Platform Tests.md', slug: 'web-platform-tests', order: 36, title: 'Web Platform Tests', description: 'WPT 개요와 Chromium에서의 사용' },
+  { file: 'Chromium - Writing Web Tests.md', slug: 'writing-web-tests', order: 37, description: '웹 테스트 작성 방법' },
+  { file: 'Chromium - Running and Debugging Web Tests.md', slug: 'running-web-tests', order: 38, title: '웹 테스트 실행과 디버깅', description: '웹 테스트 실행과 디버깅 방법' },
   // agents/
-  { file: 'Chromium - Chromium Coding Agents.md', slug: 'coding-agents', order: 38, description: 'Chromium 코딩 에이전트 개요' },
-  { file: 'Chromium - Chromium AI Coding Policy.md', slug: 'ai-coding-policy', order: 39, description: 'Chromium의 AI 도구 사용 정책' },
-  { file: 'Chromium - Blink Spec MCP Server.md', slug: 'blink-spec-mcp', order: 40, description: 'Blink 스펙 MCP 서버 사용법' },
+  { file: 'Chromium - Chromium Coding Agents.md', slug: 'coding-agents', order: 39, description: 'Chromium 코딩 에이전트 개요' },
+  { file: 'Chromium - Chromium AI Coding Policy.md', slug: 'ai-coding-policy', order: 40, description: 'Chromium의 AI 도구 사용 정책' },
+  { file: 'Chromium - Blink Spec MCP Server.md', slug: 'blink-spec-mcp', order: 41, description: 'Blink 스펙 MCP 서버 사용법' },
   // third_party/blink/
-  { file: 'Chromium - Runtime Enabled Features.md', slug: 'runtime-enabled-features', order: 41, description: 'Blink 런타임 기능 플래그 시스템' },
+  { file: 'Chromium - Runtime Enabled Features.md', slug: 'runtime-enabled-features', order: 42, description: 'Blink 런타임 기능 플래그 시스템' },
   // 저장소 루트
-  { file: 'Chromium - Chromium Code of Conduct.md', slug: 'code-of-conduct', order: 42, description: 'Chromium 커뮤니티 행동 강령' },
+  { file: 'Chromium - Chromium Code of Conduct.md', slug: 'code-of-conduct', order: 43, description: 'Chromium 커뮤니티 행동 강령' },
 ];
 
 // 저장소 내부 링크 대상을 chromium/src 루트 기준 경로로 정규화한다.

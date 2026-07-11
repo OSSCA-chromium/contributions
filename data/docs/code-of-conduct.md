@@ -1,6 +1,6 @@
 ---
 title: Chromium 행동 강령
-order: 42
+order: 43
 group: 번역 · /
 description: Chromium 커뮤니티 행동 강령
 source_path: CODE_OF_CONDUCT.md
