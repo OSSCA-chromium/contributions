@@ -1,6 +1,6 @@
 ---
 title: Chromium AI 코딩 정책
-order: 39
+order: 40
 group: 번역 · agents
 description: Chromium의 AI 도구 사용 정책
 source_path: agents/ai_policy.md

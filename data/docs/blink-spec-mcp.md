@@ -1,6 +1,6 @@
 ---
 title: Blink Spec MCP 서버
-order: 40
+order: 41
 group: 번역 · agents
 description: Blink 스펙 MCP 서버 사용법
 source_path: agents/extensions/blink-spec/README.md

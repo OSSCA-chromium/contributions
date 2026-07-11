@@ -1,6 +1,6 @@
 ---
 title: Linux 빌드 안내
-order: 33
+order: 34
 group: 번역 · docs/linux
 description: Linux에서 체크아웃·빌드하기
 source_path: docs/linux/build_instructions.md

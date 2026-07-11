@@ -1,6 +1,6 @@
 ---
 title: 웹 테스트 작성하기
-order: 36
+order: 37
 group: 번역 · docs/testing
 description: 웹 테스트 작성 방법
 source_path: docs/testing/writing_web_tests.md

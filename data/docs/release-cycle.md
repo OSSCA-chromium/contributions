@@ -1,6 +1,6 @@
 ---
 title: Chrome 릴리스 주기
-order: 34
+order: 35
 group: 번역 · docs/process
 description: Chrome 4주 릴리스 주기
 source_path: docs/process/release_cycle.md

@@ -1,6 +1,6 @@
 ---
 title: Chromium 코딩 에이전트
-order: 38
+order: 39
 group: 번역 · agents
 description: Chromium 코딩 에이전트 개요
 source_path: agents/README.md

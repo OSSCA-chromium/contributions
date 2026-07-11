@@ -1,6 +1,6 @@
 ---
 title: 런타임 활성화 기능
-order: 41
+order: 42
 group: 번역 · third_party/blink
 description: Blink 런타임 기능 플래그 시스템
 source_path: third_party/blink/renderer/platform/RuntimeEnabledFeatures.md

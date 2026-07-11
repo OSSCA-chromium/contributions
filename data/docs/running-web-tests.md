@@ -1,6 +1,6 @@
 ---
 title: 웹 테스트 실행과 디버깅
-order: 37
+order: 38
 group: 번역 · docs/testing
 description: 웹 테스트 실행과 디버깅 방법
 source_path: docs/testing/web_tests.md
