@@ -50,12 +50,3 @@ $ source ~/.bashrc
 ```text
 > summarize css spec issue 12336
 ```
-
-## 원문
-
-- [raw](https://raw.githubusercontent.com/chromium/chromium/main/agents/extensions/blink-spec/README.md)
-- [GitHub](https://github.com/chromium/chromium/blob/main/agents/extensions/blink-spec/README.md)
-
----
-## History
-- 2026-07-05 21:55 최초 생성 (chromium-docs-pkm, 전체 번역)

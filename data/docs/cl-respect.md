@@ -117,9 +117,3 @@ CL을 제출하지 말라. CL을 긴급히 랜딩해야 하는데 리뷰어 중 
 완료되면 "Thank you"라고 말하는 것을 주저하지 말라. 또한 코드 리뷰가
 처음이라면, 무엇이 잘되었고 무엇이 잘되지 않았는지 되돌아보는 데 잠시
 시간을 가져라.
-
-원문 링크: https://raw.githubusercontent.com/chromium/chromium/main/docs/cl_respect.md
-
-## History
-
-- 2026-07-07: Chromium `docs/cl_respect.md` 원문 전체를 한국어로 번역해 노트로 저장.

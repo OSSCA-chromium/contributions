@@ -21,7 +21,7 @@ Chromium이 동시성을 다루는 방식, 특히 시퀀스(Sequences)에 대한
 
 ### 빠른 시작 가이드
 
- * 메인 스레드, 즉 브라우저 프로세스의 “UI” 스레드나 IO 스레드, 즉 IPC 수신을 위한 각 프로세스의 스레드에서 비용이 큰 계산이나 블로킹 IO를 수행하지 말라. 바쁜 UI / IO 스레드는 사용자에게 보이는 지연 시간을 유발할 수 있으므로, 그런 작업은 [스레드 풀](#direct-posting-to-the-thread-pool)에서 실행하는 것을 선호하라.
+ * 메인 스레드, 즉 브라우저 프로세스의 “UI” 스레드나 IO 스레드, 즉 IPC 수신을 위한 각 프로세스의 스레드에서 비용이 큰 계산이나 블로킹 IO를 수행하지 말라. 바쁜 UI / IO 스레드는 사용자에게 보이는 지연 시간을 유발할 수 있으므로, 그런 작업은 [스레드 풀](#스레드-풀에-직접-게시)에서 실행하는 것을 선호하라.
  * 별도 스레드나 시퀀스에서 메모리의 같은 위치를 읽고/쓰는 일은 항상 피하라. 이는 [데이터 레이스](https://en.wikipedia.org/wiki/Race_condition#Data_race)로 이어진다! 대신 시퀀스 사이에서 메시지를 전달하는 것을 선호하라. 락 사용 같은 메시지 전달의 대안은 권장되지 않는다.
  * 서로 다른 시퀀스에 존재하는 여러 객체를 조율해야 한다면, 객체 수명에 주의하라.
     * 우발적인 데이터 레이스를 막기 위해 대부분의 클래스는 단일 시퀀스에서만 독점적으로 사용되도록 하는 것을 선호하라. 이 제약을 강제하는 데 도움이 되도록 [SEQUENCE_CHECKER][4]나 [base::SequenceBound][5] 같은 유틸리티를 사용해야 한다.
@@ -44,17 +44,17 @@ Chromium이 동시성을 다루는 방식, 특히 시퀀스(Sequences)에 대한
  * **시퀀스(Sequence)** 또는 **가상 스레드(Virtual thread)**: Chrome이 관리하는 실행 스레드. 물리 스레드처럼 주어진 시퀀스 / 가상 스레드에서는 어느 순간에도 하나의 태스크만 실행될 수 있으며, 각 태스크는 앞선 태스크들의 부수 효과를 본다. 태스크들은 순차적으로 실행되지만 각 태스크 사이에서 물리 스레드를 옮겨 다닐 수 있다.
  * **태스크 러너(Task runner)**: 태스크를 게시할 수 있는 인터페이스. Chrome에서는 `base::TaskRunner`다.
  * **시퀀스 태스크 러너(Sequenced task runner)**: 게시된 태스크가 게시 순서대로 순차 실행됨을 보장하는 태스크 러너. 각 태스크는 자기 앞 태스크의 부수 효과를 보도록 보장된다. 시퀀스 태스크 러너에 게시된 태스크는 보통 단일 스레드, 즉 가상 또는 물리 스레드에서 처리된다. Chrome에서는 `base::TaskRunner`의 일종인 `base::SequencedTaskRunner`다.
- * **단일 스레드 태스크 러너(Single-thread task runner)**: 모든 태스크가 같은 물리 스레드에서 처리됨을 보장하는 시퀀스 태스크 러너. Chrome에서는 `base::SequencedTaskRunner`의 일종인 `base::SingleThreadTaskRunner`다. 가능할 때마다 우리는 [스레드보다 시퀀스를 선호](#prefer-sequences-to-physical-threads)한다.
+ * **단일 스레드 태스크 러너(Single-thread task runner)**: 모든 태스크가 같은 물리 스레드에서 처리됨을 보장하는 시퀀스 태스크 러너. Chrome에서는 `base::SequencedTaskRunner`의 일종인 `base::SingleThreadTaskRunner`다. 가능할 때마다 우리는 [스레드보다 시퀀스를 선호](#물리-스레드보다-시퀀스를-선호하라)한다.
 
 ## 스레딩 어휘
 독자 참고: 다음 용어들은 일반적인 스레딩 명명법과 Chrome에서 사용하는 방식을 이어 주려는 시도다. 막 시작했다면 다소 무거울 수 있다. 이해하기 어렵다면 아래의 더 상세한 섹션으로 건너뛰고 필요할 때 다시 참조하는 것을 고려하라.
 
- * **스레드-불안전(Thread-unsafe)**: Chrome의 압도적 다수 타입은 의도적으로 스레드-불안전하다. 이런 타입/메서드에 대한 접근은 외부에서 동기화되어야 한다. 보통 스레드-불안전 타입은 그 상태에 접근하는 모든 태스크가 같은 `base::SequencedTaskRunner`에 게시되어야 하며, 디버그 빌드에서는 `SEQUENCE_CHECKER` 멤버로 이를 검증한다. 접근 동기화를 위해 락도 선택지일 수 있지만 Chrome에서는 [락보다 시퀀스를 선호](#Using-Sequences-Instead-of-Locks)한다.
+ * **스레드-불안전(Thread-unsafe)**: Chrome의 압도적 다수 타입은 의도적으로 스레드-불안전하다. 이런 타입/메서드에 대한 접근은 외부에서 동기화되어야 한다. 보통 스레드-불안전 타입은 그 상태에 접근하는 모든 태스크가 같은 `base::SequencedTaskRunner`에 게시되어야 하며, 디버그 빌드에서는 `SEQUENCE_CHECKER` 멤버로 이를 검증한다. 접근 동기화를 위해 락도 선택지일 수 있지만 Chrome에서는 [락보다 시퀀스를 선호](#락-대신-시퀀스-사용)한다.
  * **스레드-친화(Thread-affine)**: 이런 타입/메서드는 항상 같은 물리 스레드, 즉 같은 `base::SingleThreadTaskRunner`에서 접근되어야 하며, 보통 이를 검증하기 위한 `THREAD_CHECKER` 멤버를 가진다. 서드파티 API를 사용하거나 스레드-친화적인 리프 의존성이 있는 경우가 아니라면, Chrome에서 타입이 스레드-친화적이어야 할 이유는 거의 없다. `base::SingleThreadTaskRunner`는 `base::SequencedTaskRunner`의 일종이므로 스레드-친화는 스레드-불안전의 부분집합이다. 스레드-친화는 때때로 **thread-hostile**이라고도 불린다.
  * **스레드-안전(Thread-safe)**: 이런 타입/메서드는 병렬로 안전하게 접근할 수 있다.
  * **스레드-호환(Thread-compatible)**: 이런 타입은 const 메서드에 대한 안전한 병렬 접근을 제공하지만 non-const 접근 또는 const/non-const 혼합 접근에는 동기화가 필요하다. Chrome은 reader-writer 락을 노출하지 않는다. 따라서 이 용도는 스레드-안전한 방식으로 한 번 초기화되고, 그 이후 영원히 불변인 객체, 보통 전역 객체뿐이다. 초기화는 시작 단계의 단일 스레드 구간에서 하거나 `base::NoDestructor` 같은 스레드-안전 static-local-initialization 패러다임을 통해 지연 수행될 수 있다.
  * **불변(Immutable)**: 생성 이후 수정될 수 없는 스레드-호환 타입의 부분집합.
- * **시퀀스-친화(Sequence-friendly)**: 이런 타입/메서드는 `base::SequencedTaskRunner`에서 호출되는 것을 지원하는 스레드-불안전 타입이다. 이상적으로는 모든 스레드-불안전 타입이 그래야 하지만, 레거시 코드에는 단순한 스레드-불안전 시나리오에서도 스레드-친화성을 강제하는 과도한 체크가 때때로 있다. 자세한 내용은 아래 [물리 스레드보다 시퀀스를 선호](#prefer-sequences-to-physical-threads)를 보라.
+ * **시퀀스-친화(Sequence-friendly)**: 이런 타입/메서드는 `base::SequencedTaskRunner`에서 호출되는 것을 지원하는 스레드-불안전 타입이다. 이상적으로는 모든 스레드-불안전 타입이 그래야 하지만, 레거시 코드에는 단순한 스레드-불안전 시나리오에서도 스레드-친화성을 강제하는 과도한 체크가 때때로 있다. 자세한 내용은 아래 [물리 스레드보다 시퀀스를 선호](#물리-스레드보다-시퀀스를-선호하라)를 보라.
 
 ### 스레드
 
@@ -88,14 +88,14 @@ auto task_b = base::BindOnce(&TaskB, 42);
 
 태스크 그룹은 다음 방식 중 하나로 실행될 수 있다.
 
-* [병렬](#Posting-a-Parallel-Task): 태스크 실행 순서가 없으며, 어떤 스레드에서든 모두 동시에 실행될 수 있음
-* [시퀀스](#Posting-a-Sequenced-Task): 태스크가 게시 순서대로, 한 번에 하나씩, 어떤 스레드에서든 실행됨.
-* [단일 스레드](#Posting-Multiple-Tasks-to-the-Same-Thread): 태스크가 게시 순서대로, 한 번에 하나씩, 단일 스레드에서 실행됨.
-   * [COM 단일 스레드](#Posting-Tasks-to-a-COM-Single_Thread-Apartment-STA_Thread-Windows): COM이 초기화된 단일 스레드 방식의 변형.
+* [병렬](#병렬-태스크-게시): 태스크 실행 순서가 없으며, 어떤 스레드에서든 모두 동시에 실행될 수 있음
+* [시퀀스](#시퀀스-태스크-게시): 태스크가 게시 순서대로, 한 번에 하나씩, 어떤 스레드에서든 실행됨.
+* [단일 스레드](#같은-스레드에-여러-태스크-게시): 태스크가 게시 순서대로, 한 번에 하나씩, 단일 스레드에서 실행됨.
+   * [COM 단일 스레드](#com-single-thread-apartmentsta-스레드에-태스크-게시windows): COM이 초기화된 단일 스레드 방식의 변형.
 
 ### 물리 스레드보다 시퀀스를 선호하라
 
-시퀀스 실행, 즉 가상 스레드 위 실행은 단일 스레드 실행, 즉 물리 스레드 위 실행보다 강하게 선호된다. 메인 스레드(UI)나 IO 스레드에 묶인 타입/메서드를 제외하면, 스레드 안전성은 직접 물리 스레드를 관리하는 것보다 `base::SequencedTaskRunner`를 통해 더 잘 달성된다. 아래 [시퀀스 태스크 게시](#posting-a-sequenced-task)를 참고하라.
+시퀀스 실행, 즉 가상 스레드 위 실행은 단일 스레드 실행, 즉 물리 스레드 위 실행보다 강하게 선호된다. 메인 스레드(UI)나 IO 스레드에 묶인 타입/메서드를 제외하면, 스레드 안전성은 직접 물리 스레드를 관리하는 것보다 `base::SequencedTaskRunner`를 통해 더 잘 달성된다. 아래 [시퀀스 태스크 게시](#시퀀스-태스크-게시)를 참고하라.
 
 "현재 물리 스레드"용으로 노출된 모든 API에는 "현재 시퀀스"용 동등 API가 있다([매핑](https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks_faq.md#How-to-migrate-from-SingleThreadTaskRunner-to-SequencedTaskRunner)).
 
@@ -113,7 +113,7 @@ base::ThreadPool::PostTask(FROM_HERE, base::BindOnce(&Task));
 
 이는 기본 traits로 태스크를 게시한다.
 
-`base::ThreadPool::PostTask*()` 함수는 호출자가 TaskTraits를 통해 태스크에 대한 추가 세부 정보를 제공할 수 있게 한다([TaskTraits로 태스크 주석 달기](#Annotating-Tasks-with-TaskTraits) 참고).
+`base::ThreadPool::PostTask*()` 함수는 호출자가 TaskTraits를 통해 태스크에 대한 추가 세부 정보를 제공할 수 있게 한다([TaskTraits로 태스크 주석 달기](#tasktraits로-태스크-주석-달기) 참고).
 
 ```cpp
 base::ThreadPool::PostTask(
@@ -123,7 +123,7 @@ base::ThreadPool::PostTask(
 
 ### TaskRunner를 통한 게시
 
-병렬 [`base::TaskRunner`](https://cs.chromium.org/chromium/src/base/task/task_runner.h)는 `base::ThreadPool::PostTask*()`를 직접 호출하는 것의 대안이다. 이는 주로 태스크가 병렬로, 시퀀스로, 또는 단일 스레드로 게시될지 미리 알 수 없을 때 유용하다([시퀀스 태스크 게시](#Posting-a-Sequenced-Task), [같은 스레드에 여러 태스크 게시](#Posting-Multiple-Tasks-to-the-Same-Thread) 참고). `base::TaskRunner`는 `base::SequencedTaskRunner`와 `base::SingleThreadTaskRunner`의 기반 클래스이므로, `scoped_refptr<TaskRunner>` 멤버는 `base::TaskRunner`, `base::SequencedTaskRunner`, 또는 `base::SingleThreadTaskRunner`를 담을 수 있다.
+병렬 [`base::TaskRunner`](https://cs.chromium.org/chromium/src/base/task/task_runner.h)는 `base::ThreadPool::PostTask*()`를 직접 호출하는 것의 대안이다. 이는 주로 태스크가 병렬로, 시퀀스로, 또는 단일 스레드로 게시될지 미리 알 수 없을 때 유용하다([시퀀스 태스크 게시](#시퀀스-태스크-게시), [같은 스레드에 여러 태스크 게시](#같은-스레드에-여러-태스크-게시) 참고). `base::TaskRunner`는 `base::SequencedTaskRunner`와 `base::SingleThreadTaskRunner`의 기반 클래스이므로, `scoped_refptr<TaskRunner>` 멤버는 `base::TaskRunner`, `base::SequencedTaskRunner`, 또는 `base::SingleThreadTaskRunner`를 담을 수 있다.
 
 ```cpp
 class A {
@@ -143,7 +143,7 @@ class A {
 };
 ```
 
-테스트가 태스크 실행 방식을 정확히 제어해야 하는 경우가 아니라면, `base::ThreadPool::PostTask*()`를 직접 호출하는 것을 선호한다. 테스트에서 태스크를 덜 침습적으로 제어하는 방법은 [테스트](#Testing)를 참고하라.
+테스트가 태스크 실행 방식을 정확히 제어해야 하는 경우가 아니라면, `base::ThreadPool::PostTask*()`를 직접 호출하는 것을 선호한다. 테스트에서 태스크를 덜 침습적으로 제어하는 방법은 [테스트](#테스트)를 참고하라.
 
 ## 시퀀스 태스크 게시
 
@@ -239,7 +239,7 @@ base::CreateSingleThreadTaskRunner({content::BrowserThread::IO})
 
 참고: 마이그레이션 기간 동안 browser_thread.h API를 사용하려면 안타깝게도 계속해서 [`content/public/browser/browser_task_traits.h`](https://cs.chromium.org/chromium/src/content/public/browser/browser_task_traits.h)를 수동으로 include해야 한다.
 
-메인 스레드와 IO 스레드는 이미 매우 바쁘다. 따라서 가능할 때는 범용 스레드에 게시하는 것을 선호하라([병렬 태스크 게시](#Posting-a-Parallel-Task), [시퀀스 태스크 게시](#Posting-a-Sequenced-Task) 참고). 메인 스레드에 게시할 좋은 이유는 UI를 업데이트하거나 그것에 묶인 객체, 예를 들어 `Profile`에 접근하는 것이다. IO 스레드에 게시할 좋은 이유는 그것에 묶인 컴포넌트 내부, 예를 들어 IPC나 네트워크에 접근하는 것이다. 참고: IPC를 송수신하거나 네트워크에서 데이터를 송수신하기 위해 IO 스레드로 명시적인 post task를 할 필요는 없다.
+메인 스레드와 IO 스레드는 이미 매우 바쁘다. 따라서 가능할 때는 범용 스레드에 게시하는 것을 선호하라([병렬 태스크 게시](#병렬-태스크-게시), [시퀀스 태스크 게시](#시퀀스-태스크-게시) 참고). 메인 스레드에 게시할 좋은 이유는 UI를 업데이트하거나 그것에 묶인 객체, 예를 들어 `Profile`에 접근하는 것이다. IO 스레드에 게시할 좋은 이유는 그것에 묶인 컴포넌트 내부, 예를 들어 IPC나 네트워크에 접근하는 것이다. 참고: IPC를 송수신하거나 네트워크에서 데이터를 송수신하기 위해 IO 스레드로 명시적인 post task를 할 필요는 없다.
 
 ### 렌더러 프로세스의 메인 스레드에 게시
 TODO(blink-dev)
@@ -257,12 +257,12 @@ single_thread_task_runner->PostTask(FROM_HERE, base::BindOnce(&TaskA));
 single_thread_task_runner->PostTask(FROM_HERE, base::BindOnce(&TaskB));
 ```
 
-우리는 [물리 스레드보다 시퀀스를 선호](#prefer-sequences-to-physical-threads)하며, 따라서 이것이 필요한 경우는 드물어야 함을 기억하라.
+우리는 [물리 스레드보다 시퀀스를 선호](#물리-스레드보다-시퀀스를-선호하라)하며, 따라서 이것이 필요한 경우는 드물어야 함을 기억하라.
 
 ### 현재 스레드에 게시
 
 *** note
-**중요:** 현재 태스크 시퀀스와 상호 배제가 필요하지만 반드시 현재 물리 스레드에서 실행될 필요는 없는 태스크를 게시하려면 `base::SingleThreadTaskRunner::GetCurrentDefault()` 대신 `base::SequencedTaskRunner::GetCurrentDefault()`를 사용하라([현재 시퀀스에 게시](#Posting-to-the-Current-Virtual_Thread) 참고). 그러면 게시된 태스크의 요구사항을 더 잘 문서화하고, API를 불필요하게 물리 스레드-친화적으로 만드는 일을 피할 수 있다. 단일 스레드 태스크에서 `base::SequencedTaskRunner::GetCurrentDefault()`는 `base::SingleThreadTaskRunner::GetCurrentDefault()`와 동등하다.
+**중요:** 현재 태스크 시퀀스와 상호 배제가 필요하지만 반드시 현재 물리 스레드에서 실행될 필요는 없는 태스크를 게시하려면 `base::SingleThreadTaskRunner::GetCurrentDefault()` 대신 `base::SequencedTaskRunner::GetCurrentDefault()`를 사용하라([현재 시퀀스에 게시](#현재-가상-스레드에-게시) 참고). 그러면 게시된 태스크의 요구사항을 더 잘 문서화하고, API를 불필요하게 물리 스레드-친화적으로 만드는 일을 피할 수 있다. 단일 스레드 태스크에서 `base::SequencedTaskRunner::GetCurrentDefault()`는 `base::SingleThreadTaskRunner::GetCurrentDefault()`와 동등하다.
 ***
 
 그럼에도 현재 물리 스레드에 태스크를 게시해야 한다면 [`base::SingleThreadTaskRunner::CurrentDefaultHandle`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/single_thread_task_runner.h)을 사용하라.
@@ -275,7 +275,7 @@ base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
 
 ## COM Single-Thread Apartment(STA) 스레드에 태스크 게시(Windows)
 
-COM Single-Thread Apartment(STA) 스레드에서 실행되어야 하는 태스크는 `base::ThreadPool::CreateCOMSTATaskRunner()`가 반환하는 `base::SingleThreadTaskRunner`에 게시해야 한다. [같은 스레드에 여러 태스크 게시](#Posting-Multiple-Tasks-to-the-Same-Thread)에서 언급했듯, 같은 `base::SingleThreadTaskRunner`에 게시된 모든 태스크는 같은 스레드에서 게시 순서대로 실행된다.
+COM Single-Thread Apartment(STA) 스레드에서 실행되어야 하는 태스크는 `base::ThreadPool::CreateCOMSTATaskRunner()`가 반환하는 `base::SingleThreadTaskRunner`에 게시해야 한다. [같은 스레드에 여러 태스크 게시](#같은-스레드에-여러-태스크-게시)에서 언급했듯, 같은 `base::SingleThreadTaskRunner`에 게시된 모든 태스크는 같은 스레드에서 게시 순서대로 실행된다.
 
 ```cpp
 // Task(A|B|C)UsingCOMSTA는 같은 COM STA 스레드에서 실행된다.
@@ -684,9 +684,3 @@ SequenceManager와 TaskQueue를 직접 다루는 대신, 단순한 태스크 게
 ## MessageLoop와 MessageLoopCurrent
 
 코드나 문서에서 MessageLoop 또는 MessageLoopCurrent에 대한 참조를 마주칠 수 있다. 이 클래스들은 더 이상 존재하지 않으며, 우리는 이에 대한 모든 참조를 제거하는 과정에 있다. `base::MessageLoopCurrent`는 `base::CurrentThread`로 대체되었고, `base::MessageLoop`의 drop-in 대체물은 `base::SingleThreadTaskExecutor`와 `base::Test::TaskEnvironment`다.
-
-원문: https://raw.githubusercontent.com/chromium/chromium/main/docs/threading_and_tasks.md
-
-## History
-
-- 2026-07-06: Chromium `docs/threading_and_tasks.md` 원문 전체를 한국어로 번역해 저장.

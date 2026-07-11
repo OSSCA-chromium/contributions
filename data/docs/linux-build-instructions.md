@@ -92,7 +92,7 @@ $ cd src
 $ ./build/install-build-deps.sh
 ```
 
-다른 배포판에서는 빌드 의존성을 조정해야 할 수도 있습니다. 이 문서 끝에 몇 가지 [참고 사항](#notes-for-other-distros)이 있지만, 그 정확성은 보장하지 않습니다.
+다른 배포판에서는 빌드 의존성을 조정해야 할 수도 있습니다. 이 문서 끝에 몇 가지 [참고 사항](#다른-배포판에-대한-참고-사항)이 있지만, 그 정확성은 보장하지 않습니다.
 
 ### 훅 실행
 
@@ -661,7 +661,7 @@ sudo find /usr/lib*/jvm/java-1.6.*-sun-*/jre/lib -iname '*.ttf' -print \
 
 컴파일 중 Docker 관련 추가 문제가 있을 수 있습니다. 이에 대한 자세한 내용은 [이 버그](https://crbug.com/1377520)를 보세요.
 
-참고: 먼저 [depot_tools 클론](#install-depot_tools)을 하세요.
+참고: 먼저 [depot_tools 클론](#depot_tools-설치)을 하세요.
 
 #### 빌드 단계
 
@@ -736,7 +736,7 @@ $ docker run
 ./build/install-build-deps.sh
 ```
 
-5. [훅 실행](#run-the-hooks)(Docker 안에서 또는 머신에 depot_tools를 설치했다면 머신에서)
+5. [훅 실행](#훅-실행)(Docker 안에서 또는 머신에 depot_tools를 설치했다면 머신에서)
 
 *** note
 **훅을 실행하기 전:** `third_party` 안의 모든 디렉터리가 Git의 safe directory로 추가되어 있는지 확인하세요. 컨테이너에서 실행할 때 `src/` 디렉터리의 소유자(예: `chrom-b`)가 현재 사용자(예: `root`)와 다르기 때문에 필요합니다. "dubious ownership"에 대한 Git **경고**를 방지하려면 의존성을 설치한 뒤 다음 명령을 실행하세요.
@@ -784,9 +784,3 @@ $ docker run --rm \ # close instance upon exit
 *** note
 **참고:** bash에서 명령을 한 줄로 실행할 때는 명령이 깨지지 않도록 주석(`#` 뒤)을 제거하세요.
 ***
-
-원문: https://raw.githubusercontent.com/chromium/chromium/main/docs/linux/build_instructions.md
-
-## History
-
-- 2026-07-07: Chromium Linux Build Instructions 원문 전체 한국어 번역 노트 생성.

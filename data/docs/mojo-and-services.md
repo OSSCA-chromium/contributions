@@ -332,7 +332,7 @@ math_service->Divide(
     42, 6, base::BindOnce([](int32_t quotient) { LOG(INFO) << quotient; }));
 ```
 *** aside
-참고: 응답 콜백 실행을 보장하려면 `mojo::Remote<math::mojom::MathService>` 객체를 살아 있게 유지해야 한다. ([이 절](https://chromium.googlesource.com/chromium/src/+/main/mojo/public/cpp/bindings/README.md#A-Note-About-Endpoint-Lifetime-and-Callbacks)과 [앞 절의 이 참고](#sending-a-message)를 보라.)
+참고: 응답 콜백 실행을 보장하려면 `mojo::Remote<math::mojom::MathService>` 객체를 살아 있게 유지해야 한다. ([이 절](https://chromium.googlesource.com/chromium/src/+/main/mojo/public/cpp/bindings/README.md#A-Note-About-Endpoint-Lifetime-and-Callbacks)과 [앞 절의 이 참고](#메시지-보내기)를 보라.)
 ***
 
 ### 샌드박스 지정하기
@@ -413,11 +413,3 @@ embedder 전용 document-scoped 인터페이스를 바인드하려면, [`Content
 ## 추가 지원
 
 이 문서가 어떤 식으로든 도움이 되지 않았다면, 친절한 [chromium-mojo@chromium.org](https://groups.google.com/a/chromium.org/forum/#!forum/chromium-mojo) 또는 [services-dev@chromium.org](https://groups.google.com/a/chromium.org/forum/#!forum/services-dev) 메일링 리스트에 메시지를 게시하라.
-
----
-
-원문 링크: https://raw.githubusercontent.com/chromium/chromium/main/docs/mojo_and_services.md
-
-## History
-
-- 2026-07-06: Chromium `docs/mojo_and_services.md` 원문 전체 한국어 번역 노트 작성.

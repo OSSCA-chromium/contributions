@@ -78,6 +78,14 @@ describe('markdown 유틸리티', () => {
       expect(html).toContain('id="제목입니다"');
     });
 
+    it('헤딩의 명시적 앵커({#id})를 id로 쓰고 표시 텍스트에서 제거합니다', () => {
+      const html = markdownToHtml('## 부록: CL 푸터 참조 {#cl-footer-reference}');
+
+      expect(html).toContain('id="cl-footer-reference"');
+      expect(html).toContain('부록: CL 푸터 참조');
+      expect(html).not.toContain('{#cl-footer-reference}');
+    });
+
     it('코드 블록을 변환합니다', () => {
       const markdown = '```javascript\nconst x = 1;\n```';
       const html = markdownToHtml(markdown);
@@ -160,6 +168,14 @@ describe('markdown 유틸리티', () => {
       const headings = extractHeadings('# 제목\n\n```\n# 코드 안 헤딩\n```\n');
 
       expect(headings).toEqual([{ id: '제목', text: '제목', level: 1 }]);
+    });
+
+    it('명시적 앵커({#id})가 있는 헤딩은 그 id를 사용합니다', () => {
+      const headings = extractHeadings('## 코드 리뷰 {#code-review}');
+
+      expect(headings).toEqual([
+        { id: 'code-review', text: '코드 리뷰', level: 2 },
+      ]);
     });
   });
   

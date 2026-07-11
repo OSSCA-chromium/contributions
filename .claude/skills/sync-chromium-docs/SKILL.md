@@ -13,7 +13,8 @@ The translations folder (CLI argument or `CHROMIUM_DOCS_DIR` env var) holds one 
 
 - Filename: `Chromium - <original title>.md` — the filename minus the prefix is shown as the original title next to the Korean one
 - Frontmatter MUST have `source_path` (repo-root path inside chromium/src); `source_sha256` / `translation_status` are carried through
-- Body: full translation. The first `# H1` becomes the page title, `[TOC]` lines are dropped, and repo-internal links are rewritten to googlesource / raw.githubusercontent URLs
+- Body: full translation. The first `# H1` becomes the page title, `[TOC]` lines are dropped, repo-internal links — inline `[x](path)` AND reference definitions `[label]: path` — are rewritten to googlesource / raw.githubusercontent URLs, and the vault footer (`원문:`/`원문 링크:`/`## 원문` block + `## History`) is stripped
+- In-document anchors (`[x](#...)`) MUST target the **translated** heading slugs: heading ids come from the Korean text (`## 설정` → `#설정`), so original-doc anchors like `#setup` point nowhere. Exception: a heading carrying an explicit gitiles anchor (`## 제목 {#custom-id}`) keeps that id — leave anchors to it unchanged
 
 ## Adding a new doc
 
@@ -35,6 +36,8 @@ node scripts/sync-chromium-docs.js <translations-dir>
 
 Every MANIFEST entry is rewritten on each run — when renumbering, expect order-only diffs across all synced files.
 
+The script prints `⚠ <slug>: 깨진 문서 내 앵커 #...` for any in-document anchor that matches no heading id. A clean run has zero warnings; fix reported anchors in the translation source note (never in `data/docs/`) and re-run.
+
 ## Verify
 
 ```bash
@@ -43,14 +46,16 @@ npm run lint:md   # markdownlint over data/**
 npm test
 ```
 
-Spot-check the new `data/docs/<slug>.md`: frontmatter (title / order / group / description / source_path), the source-link blockquote at the top, and that relative links became absolute googlesource URLs. To see it rendered, use the run-contributions skill and open `/contributions/docs/<slug>/`.
+Spot-check the new `data/docs/<slug>.md`: frontmatter (title / order / group / description / source_path), the source-link blockquote at the top, that relative links became absolute googlesource URLs, no vault footer (`원문`/`## History`) at the bottom, and the sync run printed no `⚠` anchor warnings. To see it rendered, use the run-contributions skill and open `/contributions/docs/<slug>/`.
 
 ## Gotchas
 
-| Trap                                                     | Reality                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Editing a translated `data/docs/*.md` by hand            | The next sync silently overwrites it — fix the translation source or the script instead        |
-| Translation exists but never appears on the site         | It is not in MANIFEST; the script only syncs listed entries                                    |
-| Group shows up in the wrong sidebar spot                 | Group position = first appearance in the order-sorted list; keep same-folder orders contiguous |
-| `source_path 없음` error                                 | The source note lacks `source_path` frontmatter                                                |
-| Non-translated guides (order ≤ 19, e.g. getting-started) | Never touched by the script — hand-maintained                                                  |
+| Trap                                                     | Reality                                                                                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Editing a translated `data/docs/*.md` by hand            | The next sync silently overwrites it — fix the translation source or the script instead                                          |
+| Translation exists but never appears on the site         | It is not in MANIFEST; the script only syncs listed entries                                                                      |
+| Group shows up in the wrong sidebar spot                 | Group position = first appearance in the order-sorted list; keep same-folder orders contiguous                                   |
+| `source_path 없음` error                                 | The source note lacks `source_path` frontmatter                                                                                  |
+| Non-translated guides (order ≤ 19, e.g. getting-started) | Never touched by the script — hand-maintained                                                                                    |
+| Anchor works on gitiles but not on the site              | Original English anchor survived translation — rewrite it to the translated heading slug in the source note (`#setup` → `#설정`) |
+| Sync prints `⚠ 깨진 문서 내 앵커`                       | An anchor matches no heading id — fix the translation source note and re-run; a clean sync has zero warnings                     |

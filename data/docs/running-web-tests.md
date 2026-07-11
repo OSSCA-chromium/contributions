@@ -250,7 +250,7 @@ third_party/blink/tools/run_web_tests.py virtual/blocking_repaint/compositing \
 
 가상 테스트 스위트와 플래그별 스위트 중 선택할 때 다음을 고려하라.
 
-* [waterfall builders](https://dev.chromium.org/developers/testing/chromium-build-infrastructure/tour-of-the-chromium-buildbot)와 [try bots](https://dev.chromium.org/developers/testing/try-server-usage)는 비가상 테스트에 더해 모든 가상 테스트 스위트를 실행한다. 반대로 플래그별 설정은 봇이 자동으로 해당 플래그를 테스트하게 만들지 않는다. 가상 테스트 스위트 없이 봇 커버리지를 원한다면 [이 지침](#running-a-new-flag_specific-suite-in-cq_ci)을 따라야 한다.
+* [waterfall builders](https://dev.chromium.org/developers/testing/chromium-build-infrastructure/tour-of-the-chromium-buildbot)와 [try bots](https://dev.chromium.org/developers/testing/try-server-usage)는 비가상 테스트에 더해 모든 가상 테스트 스위트를 실행한다. 반대로 플래그별 설정은 봇이 자동으로 해당 플래그를 테스트하게 만들지 않는다. 가상 테스트 스위트 없이 봇 커버리지를 원한다면 [이 지침](#cqci에서-새-flag-specific-스위트-실행하기)을 따라야 한다.
 
 * 위의 이유로, 가상 테스트 스위트는 커밋 큐와 지속적 빌드 인프라에 성능 비용을 발생시킨다. 플래그가 변경될 때마다 `content_shell`을 재시작해야 하므로 병렬성이 제한되어 이 비용은 더 커진다. 따라서 많은 수의 가상 테스트 스위트를 추가하는 것은 피해야 한다. 가상 테스트 스위트는 기능과 직접 관련된 테스트 하위 집합을 실행하는 데 적합하지만, 모든 테스트에 잠재적으로 영향을 주는 깊은 아키텍처 변경을 만드는 플래그에는 확장성이 없다.
 
@@ -418,9 +418,3 @@ git bisect reset  # bisect 세션을 종료한다
 
 * QuickTime이 설치되어 있지 않으면 플러그인 테스트 `fast/dom/object-embed-plugin-scripting.html` 및 `plugins/embed-attributes-setting.html`는 실패할 것으로 예상된다.
 * Fluent scrollbar 렌더링에는 웹 테스트만을 위한 지오메트리와 동작 조정이 일부 있다. 이는 [Fluent Scrollbars Visual Spec](https://bit.ly/fluent-scrollbars-visual-spec)의 "Special rendering - Web tests" 아래에 설명되어 있다. 결국에는 이를 제거하고 싶다([crbug.com/382298324](https://crbug.com/382298324)).
-
-원문: https://raw.githubusercontent.com/chromium/chromium/main/docs/testing/web_tests.md
-
-## History
-
-- 2026-07-06: Chromium `docs/testing/web_tests.md` 원문 전체를 한국어로 번역해 저장.

@@ -63,11 +63,3 @@ __[존중하는 변경](https://chromium.googlesource.com/chromium/src/+/main/do
 #### bikeshed하지 말라
 
 이 결정이 장기적으로 정말로 중요한지, 아니면 여러분이 주관적인 선호를 강제하고 있는 것인지 항상 스스로에게 물어보세요. 옳다는 느낌은 좋지만, 그 게임에서는 두 참가자 중 한 명만 이길 수 있습니다. 중요하지 않다면, 서로 의견이 다르다는 데 동의하고 넘어가세요.
-
----
-
-원문: https://raw.githubusercontent.com/chromium/chromium/main/docs/cr_respect.md
-
-## History
-
-- 2026-07-07: Chromium `docs/cr_respect.md` 원문 전체를 한국어로 번역해 노트로 저장.

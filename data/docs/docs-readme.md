@@ -369,9 +369,3 @@ translation_status: full
 *   [Linux PID Namespace Support](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/pid_namespace_support.md)
 *   [Vanilla msysgit workflow](https://chromium.googlesource.com/chromium/src/+/main/docs/vanilla_msysgit_workflow.md) - Windows에서 대부분 vanilla git을 사용하는 워크플로.
 *   [Old Options](https://chromium.googlesource.com/chromium/src/+/main/docs/chrome_settings.md) - Material Design 이전 chrome://settings 노트.
-
-원문 링크: https://raw.githubusercontent.com/chromium/chromium/main/docs/README.md
-
-## History
-
-*   2026-07-07: Chromium Docs README 원문 전체를 한국어로 번역해 저장.

@@ -140,9 +140,3 @@ git cl issue 123456
 
 git cl upload
 ```
-
-원문 링크: https://raw.githubusercontent.com/chromium/chromium/main/docs/gerrit_guide.md
-
-## History
-
-- 2026-07-06: Chromium `docs/gerrit_guide.md` 원문 전체를 한국어로 번역하여 노트로 저장함.
