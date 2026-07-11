@@ -13,10 +13,6 @@ assignees: ''
 
 - https://crbug.com/
 
-**CL**
-
-- .
-
 **Documents**
 
 - .
