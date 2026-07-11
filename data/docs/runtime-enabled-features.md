@@ -307,10 +307,3 @@ content_shell이 웹 테스트용으로 `--stable-release-mode` 플래그와 함
 * [content/child/runtime_features.cc](https://source.chromium.org/chromium/chromium/src/+/main:content/child/runtime_features.cc)
 * [initialize blink features](https://chromium.googlesource.com/chromium/src/+/main/docs/initialize_blink_features.md)
 * [controlled by chromium feature](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/platform/runtime_enabled_features.json5;drc=70bddadf50a14254072cf7ca0bcf83e4331a7d4f;l=833)
-
----
-
-원문: https://raw.githubusercontent.com/chromium/chromium/main/third_party/blink/renderer/platform/RuntimeEnabledFeatures.md
-
-## History
-- 2026-07-06 12:11 Chromium Runtime Enabled Features 문서 한국어 전체 번역 노트 최초 생성

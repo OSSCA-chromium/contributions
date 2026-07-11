@@ -80,8 +80,9 @@ function repoRootPath(target, sourcePath) {
 }
 
 // 마크다운 링크/이미지의 저장소 내부 경로를 절대 URL로 재작성한다.
+// inline(`[텍스트](경로)`)과 reference 정의(`[라벨]: 경로`) 모두 처리한다.
 function rewriteRepoLinks(body, sourcePath) {
-  return body.replace(
+  const rewritten = body.replace(
     /(!?)\[([^\]]*)\]\(([^)\s]+)\)/g,
     (whole, bang, text, target) => {
       const rooted = repoRootPath(target, sourcePath);
@@ -90,6 +91,67 @@ function rewriteRepoLinks(body, sourcePath) {
       return `${bang}[${text}](${base}${rooted})`;
     }
   );
+  return rewritten.replace(
+    /^(\s{0,3}\[(?!\^)[^\]\n]+\]:[ \t]*)(\S+)(.*)$/gm,
+    (whole, prefix, target, rest) => {
+      const rooted = repoRootPath(target, sourcePath);
+      if (!rooted) return whole;
+      const base = /\.(png|jpe?g|gif|svg|webp)(#|$)/i.test(rooted)
+        ? RAW_BASE
+        : GS_BASE;
+      return `${prefix}${base}${rooted}${rest}`;
+    }
+  );
+}
+
+// 노트 하단의 vault 관리용 footer를 제거한다 — 사이트 페이지는 본문 맨 위
+// 원문 인용구로 대신한다. footer는 원문 링크 블록(`## 원문` 헤딩 또는
+// `원문:`/`원문 링크:` 줄)으로 시작해 `## History` 블록으로 끝난다.
+// 본문 중간 오탐을 막기 위해 마커 이후에 `## History`가 실제로 있을 때만
+// 자르고, 마지막 매치를 사용한다.
+function stripVaultFooter(body) {
+  let footerIdx = -1;
+  for (const m of body.matchAll(/^(##\s*원문\s*|원문( 링크)?:\s*\S.*)$/gm)) {
+    if (body.slice(m.index).includes('## History')) footerIdx = m.index;
+  }
+  if (footerIdx === -1) return body;
+  return body.slice(0, footerIdx).replace(/\n[ \t]*-{3,}[ \t]*\n*$/, '\n').trimEnd();
+}
+
+// src/lib/markdown.ts의 slugify와 동일해야 한다 (사이트 헤딩 id 규칙).
+function siteSlug(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w가-힣\s-]/g, '')
+    .replace(/\s+/g, '-');
+}
+
+// 문서 내부 앵커(`[텍스트](#앵커)`)가 실제 헤딩 id와 일치하는지 검증한다.
+// 번역 시 헤딩은 한국어로 바뀌므로 앵커도 함께 갱신돼야 한다 — 원문 앵커가
+// 남아 있으면 사이트에서 조용히 깨지므로 여기서 경고한다.
+function warnBrokenAnchors(slug, body) {
+  const ids = new Set();
+  let inCode = false;
+  const lines = [];
+  for (const line of body.split('\n')) {
+    if (line.trim().startsWith('```')) {
+      inCode = !inCode;
+      continue;
+    }
+    if (inCode) continue;
+    lines.push(line);
+    const m = /^#{1,6}\s+(.+)$/.exec(line);
+    if (!m) continue;
+    const explicit = /\{#([^}]+)\}\s*$/.exec(m[1]);
+    ids.add(explicit ? explicit[1].trim() : siteSlug(m[1]));
+  }
+  for (const m of lines.join('\n').matchAll(/\[[^\]]*\]\(#([^)]+)\)/g)) {
+    const anchor = decodeURIComponent(m[1]);
+    if (!ids.has(anchor) && !ids.has(siteSlug(anchor))) {
+      console.warn(`  ⚠ ${slug}: 깨진 문서 내 앵커 #${m[1]}`);
+    }
+  }
 }
 
 function convert(sourceDir, entry) {
@@ -111,7 +173,9 @@ function convert(sourceDir, entry) {
     .join('\n')
     .trim();
 
+  body = stripVaultFooter(body);
   body = rewriteRepoLinks(body, sourcePath);
+  warnBrokenAnchors(entry.slug, body);
 
   // 원문 제목은 원본 파일명("Chromium - <원제>.md")에서 얻는다 — 번역
   // 제목과 나란히 보여 어떤 문서의 번역인지 비교할 수 있게 한다. 파일명에

@@ -61,6 +61,18 @@ function slugify(text: string): string {
     .replace(/\s+/g, '-');
 }
 
+// 헤딩 끝의 명시적 앵커(`## 제목 {#custom-id}`, gitiles 문법)를 해석한다.
+// 반환: { id, text } — 명시 앵커가 있으면 그 id를 쓰고 표시 텍스트에서 제거.
+function resolveHeading(raw: string): { id: string; text: string } {
+  const explicit = /\{#([^}]+)\}\s*$/.exec(raw);
+  if (explicit) {
+    const text = raw.replace(/\s*\{#[^}]+\}\s*$/, '').trim();
+    const id = explicit[1].trim().replace(/[^\w가-힣-]/g, '');
+    return { id, text };
+  }
+  return { id: slugify(raw), text: raw.trim() };
+}
+
 // marked 설정 (단일 파이프라인). 코드 하이라이팅 + 헤딩 slug id.
 marked.use({
   gfm: true,
@@ -79,9 +91,11 @@ marked.use({
       return `<pre><code class="hljs language-plaintext">${escapeHtml(text)}</code></pre>`;
     },
     heading({ tokens, depth }) {
-      const text = this.parser.parseInline(tokens);
+      let text = this.parser.parseInline(tokens);
       const raw = tokens.map((t) => ('text' in t ? t.text : '')).join('');
-      const id = slugify(raw);
+      const { id } = resolveHeading(raw);
+      // Strip the explicit-anchor marker from the rendered text as well.
+      text = text.replace(/\s*\{#[^}]+\}\s*$/, '');
       return `<h${depth} id="${id}">${text}</h${depth}>`;
     },
   },
@@ -118,7 +132,8 @@ function extractHeadings(
     if (inCode) continue;
     const m = /^(#{1,6})\s+(.+)$/.exec(line);
     if (m) {
-      headings.push({ id: slugify(m[2]), text: m[2].trim(), level: m[1].length });
+      const { id, text } = resolveHeading(m[2]);
+      headings.push({ id, text, level: m[1].length });
     }
   }
   return headings;

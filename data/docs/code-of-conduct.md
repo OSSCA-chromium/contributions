@@ -65,9 +65,3 @@ Google과 Chromium 팀은 다양하고 환영받는 커뮤니티를 보존하고
 ## 라이선스
 
 이 행동 강령은 Creative Commons Zero(CC0) 라이선스에 따라 재사용할 수 있습니다.
-
-원문: [Chromium Code of Conduct](https://raw.githubusercontent.com/chromium/chromium/main/CODE_OF_CONDUCT.md)
-
-## History
-
-- 2026-07-07: raw_url 원문 전체를 한국어로 번역해 노트로 저장함.

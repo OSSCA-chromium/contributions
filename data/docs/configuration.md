@@ -126,12 +126,3 @@ Settings:
 [flag-metadata]: https://cs.chromium.org/chromium/src/chrome/browser/flag-metadata.json
 [prefs]: https://www.chromium.org/developers/design-documents/preferences
 [profile-register]: https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/profiles/profile.h;l=189;drc=b0378e4b67a5dbdb15acf0341ccd51acda81c8e0
-
-## 원문
-
-- [raw](https://raw.githubusercontent.com/chromium/chromium/main/docs/configuration.md)
-- [GitHub](https://github.com/chromium/chromium/blob/main/docs/configuration.md)
-
----
-## History
-- 2026-07-06 09:01 최초 생성 (chromium-docs-pkm, 전체 번역)

@@ -374,7 +374,7 @@ TODO: 웹 테스트 실행에 사용할 수 있는 위치가 되면 [wptserve](h
 ## 픽셀 테스트
 
 어떤 `testRunner` API가 호출되어 이미지 결과를 억제하지 않는 한(예: `testRunner.dumpAsText()`, `testRunner.dumpAsLayout()`,
-[텍스트 테스트](#text-tests) 참조), 테스트는 기본적으로 이미지 결과를 만든다. 테스트가 이미지 결과를 만들지만 참조 테스트가
+[텍스트 테스트](#텍스트-테스트) 참조), 테스트는 기본적으로 이미지 결과를 만든다. 테스트가 이미지 결과를 만들지만 참조 테스트가
 아니라면 그 테스트는 **픽셀 테스트**이다. 이미지 결과는 테스트와 연결된 `-expected.png` 파일인 이미지 기준선과 비교되며,
 픽셀 단위 비교에 따라 이미지 결과가 기준선과 동일하면 테스트가 통과한다.
 
@@ -512,7 +512,7 @@ WebKit의 레이아웃 트리는 WebKit 블로그의
 포함된다. 실제로 JavaScript 테스트는 특수한 종류의 텍스트 덤프 테스트이며, 텍스트 기준선을 종종 생략할 수 있다.
 
 테스트는 `testRunner.setCustomTextOutput(string)`을 호출해 기본 텍스트 덤프를 재정의할 수 있다. 문자열 매개변수는 테스트가
-출력하고자 하는 임의의 텍스트일 수 있다. [`internals` API](../../third_party/blink/renderer/core/testing/internals.idl]는
+출력하고자 하는 임의의 텍스트일 수 있다. [`internals` API](https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/testing/internals.idl)는
 `testRunner.setCustomTextOutput()`의 매개변수로 사용할 수 있는 내부 데이터 구조의 텍스트 표현을 얻는 메서드를 제공한다.
 
 ### 마크업 덤프 테스트
@@ -555,9 +555,3 @@ WebKit의 레이아웃 트리는 WebKit 블로그의
 사용하지 말아 달라. 이는 최소성 원칙에 어긋나기 때문이다. JavaScript 및 CSS 파일은 최소 두 개 이상의 테스트 파일에서
 공유되는 경우에만 `resources/`에 있어야 한다.
 ***
-
-원문 링크: https://raw.githubusercontent.com/chromium/chromium/main/docs/testing/writing_web_tests.md
-
-## History
-
-- 2026-07-06: Chromium 문서 `Writing Web Tests` 원문 전체를 한국어로 번역해 노트로 저장.
