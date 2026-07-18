@@ -60,6 +60,10 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
               const pointCircle = dayPoints.length ? TYPE_CIRCLE[circleType] : '';
               const roundL = ci === 0 || covering.some((p) => p.date === d.date);
               const roundR = ci === 6 || covering.some((p) => p.endDate === d.date);
+              // Align the popover toward the calendar so edge columns (Sun/Mon,
+              // Fri/Sat) don't push it past the viewport.
+              const popoverAlign =
+                ci <= 1 ? 'left-0' : ci >= 5 ? 'right-0' : 'left-1/2 -translate-x-1/2';
 
               return (
                 <div
@@ -83,10 +87,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                     {d.day}
                   </span>
                   {events.length > 0 && (
-                    <EventPopover
-                      meetings={events}
-                      className="left-1/2 top-full mt-1 -translate-x-1/2"
-                    />
+                    <EventPopover meetings={events} className={`top-full mt-1 ${popoverAlign}`} />
                   )}
                 </div>
               );
