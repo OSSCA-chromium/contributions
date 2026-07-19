@@ -32,6 +32,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
         <span className="tabular-nums">
           {meeting.endDate ? `${meeting.date} ~ ${meeting.endDate}` : meeting.date}
         </span>
+        {meeting.time && <span className="tabular-nums">{meeting.time}</span>}
         <span className={`rounded px-1.5 py-0.5 text-xs ${TYPE_BADGE[meeting.type]}`}>
           {TYPE_LABELS[meeting.type]}
         </span>

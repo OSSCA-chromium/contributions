@@ -107,6 +107,21 @@ describe('getAllMeetings', () => {
     expect(meetings.find((m) => m.slug === 'blank')!.slides).toBeUndefined();
   });
 
+  it('time 필드를 문자열로 파싱하고, 빈 값은 undefined로 둔다', () => {
+    (fs.readdirSync as jest.Mock).mockReturnValue(['timed.md', 'notime.md', 'blanktime.md']);
+    (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {
+      if (p.includes('timed.md'))
+        return '---\ntitle: 1주차\ndate: 2026-07-18\ntype: meeting\ntime: "13:00 ~ 18:00"\n---\n본문\n';
+      if (p.includes('notime.md'))
+        return '---\ntitle: 무시간\ndate: 2026-07-19\ntype: meeting\n---\n본문\n';
+      return '---\ntitle: 빈값\ndate: 2026-07-20\ntype: meeting\ntime: "  "\n---\n본문\n';
+    });
+    const meetings = getAllMeetings();
+    expect(meetings.find((m) => m.slug === 'timed')!.time).toBe('13:00 ~ 18:00');
+    expect(meetings.find((m) => m.slug === 'notime')!.time).toBeUndefined();
+    expect(meetings.find((m) => m.slug === 'blanktime')!.time).toBeUndefined();
+  });
+
   it('draft: true인 파일은 목록에서 제외한다', () => {
     (fs.readdirSync as jest.Mock).mockReturnValue(['a.md', 'draft.md']);
     (fs.readFileSync as jest.Mock).mockImplementation((p: string) => {

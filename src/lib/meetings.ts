@@ -82,6 +82,10 @@ export function getAllMeetings(): Meeting[] {
           type: normalizeType(parsed.data.type),
           attendees: normalizeAttendees(parsed.data.attendees),
           location: parsed.data.location || undefined,
+          time:
+            typeof parsed.data.time === 'string' && parsed.data.time.trim()
+              ? parsed.data.time.trim()
+              : undefined,
           slides:
             typeof parsed.data.slides === 'string' && parsed.data.slides.trim()
               ? parsed.data.slides.trim()
