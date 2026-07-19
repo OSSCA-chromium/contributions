@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import LogoImage from "../../public/logo.png";
 import ThemeToggle from "@/components/ThemeToggle";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -132,6 +133,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );

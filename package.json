@@ -19,6 +19,7 @@
     "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.1",
     "@tailwindcss/typography": "^0.5.16",
     "@types/sanitize-html": "^2.16.1",
     "gh-pages": "^6.1.1",
