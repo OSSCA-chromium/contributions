@@ -28,6 +28,7 @@ export default function EventPopover({
               {TYPE_LABELS[m.type]}
             </span>
             <span className="text-on-surface-variant">{dateLabel(m)}</span>
+            {m.time && <span className="text-on-surface-variant">{m.time}</span>}
           </div>
           {showTitle && <div className="font-semibold text-on-surface">{m.title}</div>}
           {m.location && <p className="text-on-surface-variant">📍 {m.location}</p>}

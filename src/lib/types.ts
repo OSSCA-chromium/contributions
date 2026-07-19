@@ -61,6 +61,7 @@ export interface Meeting {
   type: MeetingType;
   attendees: string[];
   location?: string;
+  time?: string; // 표시용 시간 문자열 (예: "13:00 ~ 18:00")
   slides?: string; // 사이트 내 HTML 덱 경로(/slides/...) 또는 외부 URL
   content?: string;
   contentHtml?: string;
