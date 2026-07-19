@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Meeting } from '@/lib/types';
 import { buildMonthGrid } from '@/lib/calendar';
 import { periodColorMap, TYPE_CIRCLE } from '@/lib/periodColors';
@@ -47,6 +48,9 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
               );
               const dayPoints = points.filter((p) => p.date === d.date);
               const events = [...covering, ...dayPoints];
+              // Point events take priority in the hover overlay; covering
+              // periods (Challenges/Masters) only show on days without one.
+              const popoverEvents = dayPoints.length ? dayPoints : covering;
               const isToday = today === d.date;
 
               const band = covering[0];
@@ -79,15 +83,31 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                       } ${roundR ? 'rounded-r-md' : ''}`}
                     />
                   )}
-                  <span
-                    className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
-                      isToday ? 'font-bold ring-2 ring-primary' : ''
-                    }`}
-                  >
-                    {d.day}
-                  </span>
-                  {events.length > 0 && (
-                    <EventPopover meetings={events} className={`top-full mt-1 ${popoverAlign}`} />
+                  {popoverEvents.length > 0 ? (
+                    // Days with an event link to their first event's detail
+                    // page (point events win over covering periods).
+                    <Link
+                      href={`/schedule/${popoverEvents[0].slug}`}
+                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
+                        isToday ? 'font-bold ring-2 ring-primary' : ''
+                      }`}
+                    >
+                      {d.day}
+                    </Link>
+                  ) : (
+                    <span
+                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
+                        isToday ? 'font-bold ring-2 ring-primary' : ''
+                      }`}
+                    >
+                      {d.day}
+                    </span>
+                  )}
+                  {popoverEvents.length > 0 && (
+                    <EventPopover
+                      meetings={popoverEvents}
+                      className={`top-full mt-1 ${popoverAlign}`}
+                    />
                   )}
                 </div>
               );
