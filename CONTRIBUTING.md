@@ -32,6 +32,22 @@ $ git push origin 250420-test
 
 5. Pull Request 생성
 
+### 이 저장소의 commit message rule
+
+이 저장소(contributions)에 커밋할 때는 변경 대상에 따라 semantic prefix를 붙입니다.
+
+| 변경 대상                                                     | prefix                                      |
+| ------------------------------------------------------------- | ------------------------------------------- |
+| 사이트 코드 (`src/`, `scripts/`, 설정, 테스트)                | `feat:` `fix:` `refactor:` `chore:` `test:` |
+| 프로그램 데이터 (`data/**` — contribution, 회의록, 문서 번역) | `data:`                                     |
+| 저장소 문서 (README, CONTRIBUTING 등)                         | `docs:`                                     |
+
+- prefix 뒤 제목은 현재형 동사(Add, Fix, Implement 등)로 시작, 첫 글자는 대문자, 마침표 없이
+- 제목 다음에 빈 줄 하나, 본문은 72자에서 줄바꿈
+- 예시: `feat: Add Google Analytics for production host`, `data: Add contribution 6721390`
+
+Chromium Gerrit에 업로드하는 패치는 이 규칙이 아니라 아래 [commit message rule](#commit-message-rule)을 따릅니다.
+
 ## Chromium Issue 진행
 
 ### 이슈 생성 또는 기존 이슈 선택하기
@@ -66,6 +82,8 @@ $ git push origin 250420-test
 - [ ] 멘토 이메일 주소: eui-sang.lim@samsung.com
 
 ### commit message rule
+
+이 규칙은 **Chromium Gerrit에 업로드하는 패치**에 적용됩니다. 이 저장소 커밋에는 [이 저장소의 commit message rule](#이-저장소의-commit-message-rule)을 따릅니다.
 
 ```
 Summary of change (one line)
