@@ -17,3 +17,7 @@ _어디서 어떻게 발견한 이슈인지 함께 적어주세요._
 **References**
 
 - .
+
+---
+
+패치를 Gerrit에 올린 뒤에는 [기여 기록하기 가이드](https://ossca-chromium.github.io/contributions/docs/contribution-record/)에 따라 기여 내역을 사이트에 반영해 주세요.
