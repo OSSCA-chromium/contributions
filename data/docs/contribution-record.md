@@ -114,10 +114,14 @@ git push origin 250801-merged-6520751
 
 ## 5. GitHub 이슈·프로젝트 보드
 
+- 실습 이슈는 오른쪽 **Assignees**에 본인을 직접 지정(self-assign)해
+  시작합니다 (이슈당 1인, 선착순).
 - 담당한 GitHub 이슈에 **Gerrit CL 링크**와 **기여 기록 PR 링크**를 코멘트로
   남기세요.
-- 프로젝트 보드(2026 Chromium Issues)의 Status 이동과 이슈 close는 멘토가
-  처리합니다. 직접 옮기지 않아도 됩니다.
+- 진행 상태에 따라 프로젝트 보드(2026 Chromium Issues)의 **Status**를 직접
+  변경하세요: `멘티 작업 진행 중` → `멘토 리뷰 중` → `gerrit 리뷰 중` →
+  `반영 완료`.
+- 이슈 close는 멘토가 처리합니다.
 
 ## 자주 하는 실수
 
