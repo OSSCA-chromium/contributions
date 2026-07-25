@@ -55,8 +55,9 @@ Contribution frontmatter (see `data/contributions/template.md`): `title`, `date`
 
 - **Use semantic-commit prefixes**, chosen by what changed:
   - Site code (`src/`, `scripts/`, config, tests — the GitHub Pages app): `feat:` / `fix:` / `refactor:` / `chore:` / `test:`
-  - Program data (`data/**` — contributions, meeting notes, docs translations): `data:`
+  - Contribution records (`data/contributions/**`): `contributions:`
+  - Program data (other `data/**` — meeting notes, docs translations): `data:`
   - Repo docs (`README.md`, `CONTRIBUTING.md`, `CLAUDE.md`): `docs:`
-  - After the prefix, keep the existing subject style: present-tense verb, capitalized, no trailing period, 72-column wrap, blank line after the subject. Examples: `feat: Add Google Analytics for production host`, `data: Add contribution 6721390`.
+  - After the prefix, keep the existing subject style: present-tense verb, capitalized, no trailing period, 72-column wrap, blank line after the subject. Examples: `feat: Add Google Analytics for production host`, `contributions: Add 6520751`, `data: Add meeting note 2026-07-25`.
 - The "commit message rule" section in `CONTRIBUTING.md` (no semantic prefixes, Chromium style) applies to **Chromium Gerrit patches** (`git cl upload`), not to commits in this repo — do not apply it here.
 - Fork-based flow: `upstream` = `OSSCA-chromium/contributions`; local `main` tracks `upstream/main`. Branch names use `YYMMDD-topic`. Push to `origin` (your fork) and open a PR against upstream `main`.

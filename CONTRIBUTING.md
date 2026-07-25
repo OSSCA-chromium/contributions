@@ -36,15 +36,16 @@ $ git push origin 250420-test
 
 이 저장소(contributions)에 커밋할 때는 변경 대상에 따라 semantic prefix를 붙입니다.
 
-| 변경 대상                                                     | prefix                                      |
-| ------------------------------------------------------------- | ------------------------------------------- |
-| 사이트 코드 (`src/`, `scripts/`, 설정, 테스트)                | `feat:` `fix:` `refactor:` `chore:` `test:` |
-| 프로그램 데이터 (`data/**` — contribution, 회의록, 문서 번역) | `data:`                                     |
-| 저장소 문서 (README, CONTRIBUTING 등)                         | `docs:`                                     |
+| 변경 대상                                             | prefix                                      |
+| ----------------------------------------------------- | ------------------------------------------- |
+| 사이트 코드 (`src/`, `scripts/`, 설정, 테스트)        | `feat:` `fix:` `refactor:` `chore:` `test:` |
+| 기여 기록 (`data/contributions/**`)                   | `contributions:`                            |
+| 프로그램 데이터 (그 외 `data/**` — 회의록, 문서 번역) | `data:`                                     |
+| 저장소 문서 (README, CONTRIBUTING 등)                 | `docs:`                                     |
 
 - prefix 뒤 제목은 현재형 동사(Add, Fix, Implement 등)로 시작, 첫 글자는 대문자, 마침표 없이
 - 제목 다음에 빈 줄 하나, 본문은 72자에서 줄바꿈
-- 예시: `feat: Add Google Analytics for production host`, `data: Add contribution 6721390`
+- 예시: `feat: Add Google Analytics for production host`, `contributions: Add 6520751`, `data: Add meeting note 2026-07-25`
 
 Chromium Gerrit에 업로드하는 패치는 이 규칙이 아니라 아래 [commit message rule](#commit-message-rule)을 따릅니다.
 
@@ -109,8 +110,12 @@ Bug: 123456
 
 ### 패치 Gerrit 업로드 후 진행
 
-1. `data/contributions/template.md` 파일을 `data/contribtutions/{ChromiumReviewId}.md` 파일로 복사합니다.
-2. 내용을 채우고 GitHub Pull Request 로 올려주세요.
+기여 내역을 사이트에 반영하는 전체 절차는 [기여 기록하기 가이드](https://ossca-chromium.github.io/contributions/docs/contribution-record/)를 따르세요. 요약:
+
+1. `data/contributions/template.md` 파일을 `data/contributions/{ChromiumReviewId}.md` 파일로 복사하고 내용을 채웁니다 (템플릿 안내 주석은 모두 제거).
+2. `npm run validate:data`와 `npm run lint:md`로 로컬 검증합니다.
+3. `contributions:` prefix 커밋으로 Pull Request를 올립니다 (예: `contributions: Add 6520751`).
+4. Gerrit에서 CL이 merge되면 후속 PR로 `status: merged`로 갱신합니다.
 
 ## 웹사이트 실행 및 확인
 
