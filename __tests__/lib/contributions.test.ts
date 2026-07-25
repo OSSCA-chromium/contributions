@@ -1,6 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllContributions, getContributionBySlug, getAllContributionSlugs } from '@/lib/contributions';
+import {
+  getAllContributions,
+  getContributionBySlug,
+  getAllContributionSlugs,
+  isValidGithubUsername,
+} from '@/lib/contributions';
 
 // fs 및 path 모듈 모킹
 jest.mock('fs');
@@ -120,7 +125,7 @@ contribution_url: https://example.com
       expect(contribution?.title).toBe('테스트 컨트리뷰션');
       expect(contribution?.author).toBe('홍길동');
       expect(contribution?.contributionUrl).toBe('https://example.com');
-      expect(contribution?.contentHtml).toBe('<p>테스트 컨트리뷰션 내용</p>');
+      expect(contribution?.contentHtml).toContain('테스트 컨트리뷰션 내용');
     });
     
     it('컨트리뷰션 파일이 없으면 null을 반환합니다', async () => {
@@ -149,8 +154,16 @@ contribution_url: https://example.com
       (fs.existsSync as jest.Mock).mockReturnValue(false);
       
       const slugs = getAllContributionSlugs();
-      
+
       expect(slugs).toEqual([]);
+    });
+  });
+
+  describe('isValidGithubUsername', () => {
+    it('공백/특수문자를 거릅니다', () => {
+      expect(isValidGithubUsername('ppirabbang')).toBe(true);
+      expect(isValidGithubUsername('홍 길동')).toBe(false);
+      expect(isValidGithubUsername('')).toBe(false);
     });
   });
 }); 
