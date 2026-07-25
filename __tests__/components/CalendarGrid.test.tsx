@@ -91,3 +91,19 @@ test('today가 null이면 오늘 마커가 없다', () => {
   const { container } = renderGrid({ today: null });
   expect(container.querySelector('[data-today="true"]')).toBeNull();
 });
+
+test('요일 헤더는 일요일만 붉게 표시한다', () => {
+  renderGrid();
+  expect(screen.getByText('일')).toHaveClass('text-error');
+  expect(screen.getByText('월')).not.toHaveClass('text-error');
+});
+
+test('일요일과 공휴일 날짜 숫자는 붉게, 평일은 기본색으로 표시한다', () => {
+  const { container } = renderGrid();
+  const redDays = Array.from(
+    container.querySelectorAll('a.text-error, span.text-error')
+  ).map((el) => el.textContent);
+  expect(redDays).toContain('5'); // 2026-07-05 (일)
+  expect(redDays).toContain('17'); // 2026-07-17 제헌절
+  expect(redDays).not.toContain('1'); // 2026-07-01 (수) — 일반 평일
+});

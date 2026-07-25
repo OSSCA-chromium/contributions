@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Meeting } from '@/lib/types';
 import { buildMonthGrid } from '@/lib/calendar';
+import { isHoliday } from '@/lib/holidays';
 import { periodColorMap, TYPE_CIRCLE } from '@/lib/periodColors';
 import EventPopover from '@/components/EventPopover';
 
@@ -29,8 +30,13 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
         {year}년 {month}월
       </div>
       <div className="grid grid-cols-7">
-        {WEEKDAYS.map((w) => (
-          <div key={w} className="py-1 text-center text-xs text-on-surface-variant">
+        {WEEKDAYS.map((w, i) => (
+          <div
+            key={w}
+            className={`py-1 text-center text-xs ${
+              i === 0 ? 'text-error' : 'text-on-surface-variant'
+            }`}
+          >
             {w}
           </div>
         ))}
@@ -52,6 +58,10 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
               // periods (Challenges/Masters) only show on days without one.
               const popoverEvents = dayPoints.length ? dayPoints : covering;
               const isToday = today === d.date;
+              // Sundays and Korean public holidays render in the muted
+              // red `error` token; everything else keeps `on-surface`.
+              const dayColor =
+                ci === 0 || isHoliday(d.date) ? 'text-error' : 'text-on-surface';
 
               const band = covering[0];
               const bandColor = band ? (periodColor.get(band.slug)?.bar ?? '') : '';
@@ -88,7 +98,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                     // page (point events win over covering periods).
                     <Link
                       href={`/schedule/${popoverEvents[0].slug}`}
-                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
+                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm ${dayColor} ${pointCircle} ${
                         isToday ? 'font-bold ring-2 ring-primary' : ''
                       }`}
                     >
@@ -96,7 +106,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
                     </Link>
                   ) : (
                     <span
-                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm text-on-surface ${pointCircle} ${
+                      className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm ${dayColor} ${pointCircle} ${
                         isToday ? 'font-bold ring-2 ring-primary' : ''
                       }`}
                     >
