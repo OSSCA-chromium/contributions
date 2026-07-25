@@ -71,6 +71,7 @@ Chromium Gerrit에 업로드하는 패치는 이 규칙이 아니라 아래 [com
 
 #### Checklist
 
+- [ ] 작업 브랜치 생성 `git checkout -b <브랜치명> origin/main` (main 브랜치에서 직접 커밋 금지, 브랜치 하나가 CL 하나에 대응)
 - [ ] src/AUTHORS 파일에 이름, 이메일 추가 (알파벳 순, gerrit, git 이메일과 동일)
 - [ ] 마크다운 문서 로컬에서 확인해보기 `./tools/md_browser/md_browser.py` 실행 -> http://localhost:8080 에서 확인
 - [ ] 이슈에 써 있는 부분 외에 추가로 깨진 부분 있는지 확인해보기 (다른 링크도 눌러보기)
