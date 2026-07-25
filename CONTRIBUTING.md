@@ -57,15 +57,15 @@ Chromium Gerrit에 업로드하는 패치는 이 규칙이 아니라 아래 [com
 - 새로운 기능이나 버그 수정을 제안하고 싶다면 새 이슈를 생성해 주세요. 적절한 이슈 템플릿을 골라 작성하세요.
 - 기존 이슈 중 작업하고 싶은 것이 있다면 댓글을 남겨 작업 의사를 밝혀주세요.
 
-### 3주차 진행 전 할 것
+### Contribution 진행 전 할 것
 
 1. CLA 동의하기 https://cla.developers.google.com/about/google-individual
 2. 모든 건 실명으로 (영어이름 성)
 3. https://chromium-review.googlesource.com 가입하기
 4. git config user.name "실명 영어로"
 5. git config.user.email "email 주소" (gerrit 가입 이메일과 동일해야 함)
-6. 하고 싶은 이슈에 댓글 달기
-7. 멘토가 이슈를 assign 하면 작업 진행
+6. 하고 싶은 이슈의 Assignees 에 본인을 직접 지정 (self-assign, 이슈당 1인 선착순)
+7. 이슈 assign 후 작업 진행
 8. Checklist 내용을 진행하면서 작업한 내용을 댓글로 달기
 9. 진행 상태에 따라 이슈의 Status 를 `멘티 작업 진행 중` -> `멘토 리뷰 중` -> `gerrit 리뷰 중` -> `반영 완료` 로 변경
 
