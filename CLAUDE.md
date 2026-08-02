@@ -11,8 +11,7 @@ npm test -- <pattern>  # single file/pattern, e.g. npm test -- ContributorRow.te
 npm run lint           # next lint (ESLint)
 npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
-npm run build          # static export to out/
-npm run deploy         # build + publish out/ to gh-pages
+npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
 CI (`.github/workflows/pr-checks.yml`, runs on PRs) executes, in order: `npm ci → test → lint → validate:data → lint:md → build`. Run the same locally before pushing.
