@@ -2,7 +2,7 @@
 name: crbug 에서 찾은 이슈 등록
 about: Chromium Issue Tracker 에서 찾은 이슈 등록
 title: "[crbug 번호] 이슈 제목"
-labels: 2026, chromium-issues, exercise
+labels: 2026, chromium-issues
 assignees: ''
 
 ---
