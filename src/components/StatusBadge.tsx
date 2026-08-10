@@ -10,7 +10,9 @@ export default function StatusBadge({ status }: { status?: ContributionStatus })
   if (!status || !MAP[status]) return null;
   const { label, cls } = MAP[status];
   return (
-    <span className={`px-2 py-1 text-xs rounded-full font-medium ${cls}`}>
+    <span
+      className={`px-2 py-1 text-xs rounded-full font-medium whitespace-nowrap shrink-0 ${cls}`}
+    >
       {label}
     </span>
   );
