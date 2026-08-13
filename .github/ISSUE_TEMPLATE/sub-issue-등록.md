@@ -2,7 +2,7 @@
 name: Sub-Issue 등록
 about: '특정 이슈에 대한 sub-issue 를 등록할 때 사용합니다. '
 title: "[주제] 폴더명"
-labels: chromium-issues
+labels: 2026, chromium-issues
 assignees: ''
 
 ---
