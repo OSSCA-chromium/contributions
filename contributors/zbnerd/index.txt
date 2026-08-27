@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/e2ed2a0eee8fd56b.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"AMEM5EvrcAYXKVWspNw2K","p":"/contributions","c":["","contributors","zbnerd",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","zbnerd","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/e2ed2a0eee8fd56b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","zbnerd","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"sw8emNdQCkWZY-EpRGjA5","p":"/contributions","c":["","contributors","zbnerd",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","zbnerd","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/e2ed2a0eee8fd56b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","zbnerd","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,190 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-d2f3bb1f9e90a5de.js"],"default"]
-1b:T14cf,
+1b:T2fdf,
+Linux의 POSIX/C locale에서 OPFS의 비 ASCII 디렉터리 이름이 손실되어 자식 핸들이 부모 디렉터리를 가리키거나, 디렉터리 열거 결과의 이름이 비어 버리던 문제를 수정했습니다. 자식 URL 생성부터 디렉터리 열거까지 OPFS 이름이 보존되도록 개선했습니다.
+
+## 문제 설명
+
+비개발자 관점에서는 웹 애플리케이션이 `"テスト用の本"` 같은 이름으로 폴더를 만들었을 때, 성공한 것처럼 보이지만 실제로는 부모 폴더를 돌려줄 수 있는 문제였습니다. 이 상태에서 파일을 쓰면 예상한 하위 폴더가 아니라 부모 폴더에 저장될 수 있었습니다.
+
+기술적으로는 `content/browser/file_system_access`의 OPFS 경로 처리 문제였습니다. OPFS의 가상 경로 component가 process locale에 의존하는 네이티브 경로 변환을 거치면서 손실됐습니다. 최종 변경에서는 OPFS 자식 URL과 열거 결과의 이름 모두 storage path representation을 보존하도록 했습니다.
+
+Origin은 웹 페이지를 구분하는 보안·스토리지 경계이며, OPFS(Origin Private File System)는 각 origin에 제공되는 브라우저 내부 전용 파일시스템입니다. 사용자의 로컬 파일시스템과 달리 OPFS 경로는 sandboxed virtual filesystem의 논리적 component입니다.
+
+이 File System Access 경로에서 OPFS URL은 `storage::kFileSystemTypeTemporary`로 표현됩니다. 기존 `GetChildURL()`은 OPFS를 포함한 non-Android filesystem 이름을 다음과 같이 처리했습니다.
+
+```cpp
+parent.virtual_path().Append(
+    base::FilePath::FromUTF8Unsafe(basename));
+```
+
+`FromUTF8Unsafe()`는 `SYSTEM_NATIVE_UTF8`이 아닌 POSIX 환경에서 UTF-8 문자열을 현재 locale의 native multibyte encoding으로 변환합니다. C locale은 일본어 같은 문자를 표현하지 못하므로 변환 결과에서 이름이 손실될 수 있었습니다.
+
+```text
+OPFS child name
+→ locale-dependent native conversion
+→ C locale에서 non-ASCII 이름 손실
+→ parent.virtual_path().Append("")
+→ child path == parent path
+→ child URL이 parent URL과 alias
+```
+
+이름의 안전성 검사는 변환 전에 통과하므로 API 호출은 오류 없이 성공할 수 있습니다. 이슈의 재현 결과에서는 반환된 핸들의 이름은 요청값처럼 보였지만 `isSameEntry(parent)`가 `true`였고, 하위 디렉터리에 쓰려던 파일이 부모 디렉터리에 생성됐습니다. UTF-8 locale과 ASCII 이름에서는 정상적으로 동작했습니다.
+
+### Root Cause
+
+문제는 서로 다른 경로 의미론을 동일한 변환으로 처리한 데 있었습니다.
+
+- OPFS는 sandboxed virtual path component의 storage representation을 사용합니다.
+- local/external 등 다른 filesystem type은 기존 native path 변환 동작을 유지해야 합니다.
+- Android는 content URI를 포함한 별도의 path-construction 분기를 사용하므로 이번 변경 대상이 아닙니다.
+
+따라서 모든 filesystem 이름을 일괄적으로 바꾸지 않고, OPFS에 해당하는 temporary filesystem 분기만 storage 변환 helper를 사용하도록 범위를 제한했습니다.
+
+## 해결 내용
+
+### 자식 URL의 경로 보존
+
+`GetChildURL()`에서 OPFS 이름은 `storage::StringToFilePath()`로 변환해 가상 경로에 추가하도록 변경했습니다.
+
+```cpp
+base::FilePath child_path =
+    parent.type() == storage::kFileSystemTypeTemporary
+        ? parent.virtual_path().Append(
+              storage::StringToFilePath(basename))
+        : parent.virtual_path().Append(
+              base::FilePath::FromUTF8Unsafe(basename));
+```
+
+`StringToFilePath()`는 POSIX에서 문자열 바이트를 그대로 `FilePath`에 보존하므로 locale-dependent conversion을 거치지 않습니다. 다른 filesystem type의 기존 변환과 Android의 별도 분기는 유지했습니다.
+
+초기 패치에서는 `AppendUTF8()`을 사용했지만, 리뷰에서 모든 `GetChildURL()` call site가 해당 함수의 UTF-8 precondition을 보장하는지 질문이 제기됐습니다. 디렉터리 열거 경로의 basename은 `FilePathToString()`에서 유래하므로, storage 경로의 왕복 표현을 위한 `StringToFilePath()`가 더 적절하다고 판단했습니다.
+
+### 디렉터리 열거 이름 보존
+
+리뷰어가 요청한 열거 테스트를 작성하면서 두 번째 locale-dependent conversion 지점도 발견했습니다. OPFS 열거 경로에서는 별도의 `display_name`이 제공되지 않아 `CreateEntry()`가 `basename.AsUTF8Unsafe()`로 fallback했고, C locale에서는 반환되는 `entry->name`이 빈 문자열이 될 수 있었습니다.
+
+OPFS에 한해 반대 방향의 storage helper를 사용하도록 수정했습니다.
+
+```cpp
+std::string name = display_name;
+if (name.empty()) {
+  name = url.type() == storage::kFileSystemTypeTemporary
+             ? storage::FilePathToString(basename.path())
+             : basename.AsUTF8Unsafe();
+}
+```
+
+최종 변경은 기존 implementation과 unittest 두 파일에만 한정했습니다. Mojo validation, `base::FilePath`, storage subsystem, Android 및 다른 filesystem type의 동작은 변경하지 않았습니다.
+
+## 테스트 방법
+
+두 Linux 회귀 테스트는 다음 조건을 결합해 locale-dependent failure를 재현합니다.
+
+```text
+C locale + non-ASCII OPFS child
+→ 기존 native conversion: FAIL
+→ storage path representation 보존: PASS
+```
+
+### GetChildURL_NonAsciiNameInCLocale
+
+`base::ScopedLocale("C")`에서 `"テスト用の本"`의 child URL을 직접 생성합니다. 기존 구현에서는 child path가 `"probe"`로 남아 parent와 같아졌지만, 수정 후에는 `"probe/テスト用の本"`이 보존됩니다.
+
+### GetEntries_PreservesNonAsciiOPFSName
+
+C++ `content_unittests`에서 실제 temporary filesystem root를 구성하고 다음 흐름을 실행합니다.
+
+```text
+GetDirectory(create=true)
+→ GetEntries()
+→ 반환된 entry의 type과 name 확인
+```
+
+이는 renderer까지 포함하는 browser E2E 테스트는 아니지만, content와 storage 경로를 연결해 사용자에게 반환되는 결과까지 확인하는 통합형 회귀 단위 테스트입니다. 테스트 작성 과정에서 PS5 구현은 entry를 정상적으로 찾으면서도 이름을 `""`으로 반환한다는 사실을 확인했고, PS6의 `CreateEntry()` 수정으로 해결했습니다.
+
+PS6 구현 검증 당시 다음 항목을 확인했습니다.
+
+- 추가한 회귀 테스트: 2/2 PASS
+- 관련 `FileSystemAccessDirectoryHandleImpl` 테스트: 47/47 PASS
+- `content_unittests` 빌드 성공
+- `git diff --check`
+- `git cl format --dry-run --diff`
+- `git cl presubmit`
+
+최종적으로 Chromium LUCI CQ의 full run이 성공하여 변경이 main에 제출됐습니다.
+
+## 리뷰 및 Patch Set 변화
+
+| Patch Set | 주요 변화 | 판단 근거 |
+| --- | --- | --- |
+| PS1–2 | OPFS 자식 URL 수정과 직접 회귀 테스트 추가, locale scope 축소 | Linux/C-locale alias failure를 최소 단위로 재현 |
+| PS3–4 | OPFS에 특별 처리가 필요한 이유를 인접 주석으로 설명 | Mingyu Lei의 리뷰 요청 반영 |
+| PS5 | `AppendUTF8()`을 `StringToFilePath()`로 교체 | Ming-Ying Chung이 제기한 UTF-8 precondition 보장 문제 대응 |
+| PS6 | `GetEntries()` 회귀 테스트와 `CreateEntry()` 보완 | 열거 결과에서도 원래 이름을 보존하라는 리뷰 요청 반영 |
+| PS7–8 | 최종 구현을 반영하도록 CL description 수정 | `CreateEntry()` 변경이 기존 설명에서 누락됐다는 피드백 대응 |
+| PS9 | CQ가 최신 main 위로 rebase 후 제출 | 최종 upstream commit 생성 |
+
+PS2의 CQ Dry Run은 성공했지만 이후 코드가 변경되면서 당시 vote는 outdated 처리됐습니다. 최종 코드가 완성된 PS6에는 Ming-Ying Chung과 Arthur Sonzogni가 각각 Code-Review +1을 부여했습니다.
+
+이후 Ming-Ying Chung이 `CreateEntry()`와 열거 동작을 포함하도록 CL description 갱신을 요청했습니다. PS8에서 commit message를 수정했으며 소스 파일에는 변화가 없었습니다. Ming-Ying Chung이 PS8에 Commit-Queue +2를 부여했고, Chromium LUCI CQ가 full run을 완료한 뒤 PS9로 rebase하여 제출했습니다. 최종 unresolved reviewer comment는 0개입니다.
+
+## AI 활용
+
+AI는 다음 작업에서 코드베이스 탐색 및 검증 도구로 활용했습니다.
+
+- `GetChildURL()`의 call site와 입력 경로 조사
+- `FromUTF8Unsafe()`, `AppendUTF8()`, storage path helper의 contract 비교
+- directory enumeration과 `CreateEntry()` fallback 추적
+- 기존 test fixture를 활용한 재현 방법 탐색
+- reviewer feedback의 기술적 의도 분석
+- 최종 diff의 플랫폼·보안·scope regression 검토
+
+AI가 후보와 구현안을 제안할 수 있지만, 변경 범위와 설계 선택, 테스트의 적절성, 실제 diff의 수용 여부는 contributor가 코드와 실행 결과를 확인한 뒤 결정했습니다.
+
+## 배운 점
+
+- 같은 문자열이라도 filesystem abstraction에 따라 virtual component와 native path라는 서로 다른 의미를 가질 수 있습니다.
+- locale-dependent 문제는 `ScopedLocale("C")`처럼 재현 조건을 테스트 안에 고정해야 결정적으로 검증할 수 있습니다.
+- 직접 함수 테스트가 통과하더라도 사용자에게 반환되는 열거 결과까지 정상이라는 보장은 없으므로 인접 흐름을 함께 확인해야 합니다.
+- 리뷰 질문은 문구 수정에 그치지 않고 숨은 API precondition과 미검증 경로를 발견하는 계기가 될 수 있습니다.
+- 동일 원인의 문제는 보완하되 Mojo나 Unicode validation 정책까지 변경하지 않도록 CL 범위를 통제해야 합니다.
+
+## 최종 결과
+
+CL 8262447은 2026-08-26 Chromium main에 병합됐습니다.
+
+- 최종 Patch Set: PS9
+- 최종 commit: `ca80cf53038f6e8d3141257071d478b2d5ffca34`
+- Cr-Commit-Position: `refs/heads/main@{#1686165}`
+- Submitter: Chromium LUCI CQ
+- Issue 545336271 상태: Fixed
+- 최종 변경량: 2 files changed, 90 insertions, 3 deletions
+- PS6 이후 최종 제출까지 소스 파일 변경 없음
+
+이슈는 현재 Fixed이며 아직 Fixed (Verified) 상태는 아닙니다.
+
+## 핵심 요약
+
+- Linux C locale에서 OPFS 비 ASCII 자식 이름이 손실되던 문제를 수정했습니다.
+- 자식 URL과 디렉터리 열거 결과 모두 storage path representation을 보존합니다.
+- 직접 회귀 테스트와 `GetDirectory()` → `GetEntries()` 통합형 테스트를 추가했습니다.
+- 리뷰 과정에서 UTF-8 precondition과 `CreateEntry()` fallback 문제를 추가로 확인했습니다.
+- CL은 PS9, `main@{#1686165}`로 Chromium main에 병합됐습니다.
+
+## 참고 자료
+
+- [Chromium Issue 545336271](https://issues.chromium.org/issues/545336271)
+- [Gerrit CL 8262447](https://crrev.com/c/8262447)
+- [최종 Chromium commit](https://chromiumdash.appspot.com/commit/ca80cf53038f6e8d3141257071d478b2d5ffca34)
+- [GetChildURL() OPFS 처리](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/file_system_access/file_system_access_directory_handle_impl.cc;l=965-972;drc=ca80cf53038f6e8d3141257071d478b2d5ffca34)
+- [CreateEntry() 이름 보존](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/file_system_access/file_system_access_directory_handle_impl.cc;l=998-1005;drc=ca80cf53038f6e8d3141257071d478b2d5ffca34)
+- [GetChildURL() 회귀 테스트](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/file_system_access/file_system_access_directory_handle_impl_unittest.cc;l=973-996;drc=ca80cf53038f6e8d3141257071d478b2d5ffca34)
+- [GetEntries() 통합형 회귀 테스트](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/file_system_access/file_system_access_directory_handle_impl_unittest.cc;l=998-1045;drc=ca80cf53038f6e8d3141257071d478b2d5ffca34)
+- [Chromium LUCI CQ full run](https://luci-change-verifier.appspot.com/ui/run/chromium/8835249972854-1-53218a8342b325c9)
+- [MDN: Origin private file system](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system)
+1c:T14cf,
 Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.
 
 ## 문제 설명
@@ -135,7 +318,7 @@ CrComponentsHistoryClustersTest.UrlVisit: 1/1 PASS
 - [Chromium Issue 433924477](https://issues.chromium.org/issues/433924477)
 - [Gerrit CL 8257111](https://crrev.com/c/8257111)
 - [History Date view의 native title binding](https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/resources/history/history_item.html.ts;l=45-60;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
-1c:T1793,
+1d:T1793,
 Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.
 
 ## 문제 설명
@@ -278,7 +461,7 @@ git diff --check
 - [crypto/hash.h](https://source.chromium.org/chromium/chromium/src/+/main:crypto/hash.h)
 - [server_certificate_database.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/server_certificate_database/server_certificate_database.cc)
 - [server_certificate_database_nss_migrator.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/server_certificate_database/server_certificate_database_nss_migrator.cc)
-1d:T1c31,
+1e:T1c31,
 특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.
 
 ## 문제 설명
@@ -421,7 +604,7 @@ git cl presubmit
 - [StorageKey matcher 생성 로직](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/storage_partition_impl.cc;l=744-817;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
 - [StorageKey 동등성 비교](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/storage_key/storage_key.h;l=308-312;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
 - [SessionStorageControl 인터페이스](https://source.chromium.org/chromium/chromium/src/+/main:components/services/storage/public/mojom/session_storage_control.mojom;l=57-62;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
-1e:T1562,
+1f:T1562,
 실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를
 Chromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.
 
@@ -536,7 +719,7 @@ export하여 문제를 해결했습니다.
 - [FileSystemAccessRegularFileDelegate 구현](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/file_system_access/file_system_access_regular_file_delegate.cc)
 - [FileSystemSyncAccessHandle 구현](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.cc)
 - [File System Standard: FileSystemSyncAccessHandle](https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle)
-1f:Tee5,
+20:Tee5,
 Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.
 
 ## 문제 설명
@@ -650,9 +833,9 @@ python3 tools/checkperms/checkperms.py
 * [Bug link](https://crbug.com/538651940)
 
 * [CL link](https://crrev.com/c/8146339)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/zbnerd.png?size=192","alt":"zbnerd 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"zbnerd"}],["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","zbnerd"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8257111","title":"[History] Show URL tooltips in side panel","date":"$D2026-08-21T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8257111","labels":["history-clusters","webui"],"status":"merged","excerpt":"Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.","content":"$1b"},{"slug":"8243548","title":"server_certificate_database: migrate to crypto/hash APIs","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8243548","labels":["server_certificate_database","crypto"],"status":"merged","excerpt":"Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.","content":"$1c"},{"slug":"8264749","title":"[Storage] Clear session storage by StorageKey","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8264749","labels":["content","dom-storage"],"status":"merged","excerpt":"특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.","content":"$1d"},{"slug":"8221052","title":"File System Access: Propagate regular file write errors","date":"$D2026-08-14T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8221052","labels":["file-system-access","opfs"],"status":"merged","excerpt":"실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를\nChromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.","content":"$1e"},{"slug":"8146339","title":"Fix BigBuffer link in Mojo style guide","date":"$D2026-07-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8146339","labels":["docs","mojo"],"status":"merged","excerpt":"Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.","content":"$1f"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/zbnerd.png?size=192","alt":"zbnerd 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"zbnerd"}],["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","zbnerd"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8262447","title":"[Storage] Preserve OPFS UTF-8 child names","date":"$D2026-08-26T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8262447","labels":["file-system-access","opfs"],"status":"merged","excerpt":"Linux의 POSIX/C locale에서 OPFS의 비 ASCII 디렉터리 이름이 손실되어 자식 핸들이 부모 디렉터리를 가리키거나, 디렉터리 열거 결과의 이름이 비어 버리던 문제를 수정했습니다. 자식 URL 생성부터 디렉터리 열거까지 OPFS 이름이 보존되도록 개선했습니다.","content":"$1b"},{"slug":"8257111","title":"[History] Show URL tooltips in side panel","date":"$D2026-08-21T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8257111","labels":["history-clusters","webui"],"status":"merged","excerpt":"Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.","content":"$1c"},{"slug":"8243548","title":"server_certificate_database: migrate to crypto/hash APIs","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8243548","labels":["server_certificate_database","crypto"],"status":"merged","excerpt":"Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.","content":"$1d"},{"slug":"8264749","title":"[Storage] Clear session storage by StorageKey","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8264749","labels":["content","dom-storage"],"status":"merged","excerpt":"특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.","content":"$1e"},{"slug":"8221052","title":"File System Access: Propagate regular file write errors","date":"$D2026-08-14T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8221052","labels":["file-system-access","opfs"],"status":"merged","excerpt":"실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를\nChromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.","content":"$1f"},{"slug":"8146339","title":"Fix BigBuffer link in Mojo style guide","date":"$D2026-07-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8146339","labels":["docs","mojo"],"status":"merged","excerpt":"Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.","content":"$20"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-20:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"zbnerd | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"zbnerd님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L20","4",{}]],"error":null,"digest":"$undefined"}
+21:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"zbnerd | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"zbnerd님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L21","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
