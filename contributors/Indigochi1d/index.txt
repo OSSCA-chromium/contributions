@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/e2ed2a0eee8fd56b.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"m_WMiAL16D_jY1YqIT4T-","p":"/contributions","c":["","contributors","Indigochi1d",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Indigochi1d","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/e2ed2a0eee8fd56b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Indigochi1d","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"2oa6NU05hyqkQiO9M-2Gs","p":"/contributions","c":["","contributors","Indigochi1d",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Indigochi1d","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/e2ed2a0eee8fd56b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Indigochi1d","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,101 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-d2f3bb1f9e90a5de.js"],"default"]
-1b:T80c,
+1b:T159c,
+base::SequenceBound의 AsyncCall() 빌더 체인이 강제하는 호출 순서 계약을 검증하는 nocompile 테스트를 추가하고, 
+그 자리를 차지하고 있던 빈 껍데기 테스트를 제거했습니다. 2020년부터 6년간 방치된 TODO를 구현한 작업입니다.
+
+## 문제 설명
+SequenceBound<T>의 메서드 호출은 AsyncCall → WithArgs → Then 순서를 지켜야 한다. AsyncCallBuilderImpl의 부분 특수화 3종이 각 단계에서 유효한 메서드만 노출해서 이를 강제한다.
+
+- `sequence_bound_unittest.cc`의 `TYPED_TEST(SequenceBoundTest, NoCompileTests)`는 본문 33줄이 전부 주석이었다. 검증하는 게 없었다.
+- TYPED_TEST라 두 변형으로 등록되어 항상 통과했다. 테스트 목록에는 검증이 있는 것처럼 보였다.
+- 검증 대상이 "컴파일되면 안 된다"인데 gtest로는 표현할 수 없다. `// TODO(crbug.com/40245687): Maybe use the nocompile harness here instead of being "clever"...` 라고 적어둔 문제를 해결한 경우이다.
+
+## 해결 내용
+
+어떻게 문제를 해결했는지 설명하세요.
+
+1. `.nc` 파일로 이전. clang -verify가 expected-error 주석과 실제 진단을 대조한다. 기대한 에러가 안 나도, 예상 못 한 에러가 나도 실패한다.
+2. `base/threading/sequence_bound_nocompile.nc` 신규 (43줄), `base/BUILD.gn`에 등록, `sequence_bound_unittest.cc` 1083~1116행 삭제.
+3. `sequence_bound.h`는 수정하지 않았다. Sequence를 강제하는 장치는 이미 정상 동작한다.
+
+
+##### 삭제한 것
+```cpp
+TYPED_TEST(SequenceBoundTest, NoCompileTests) {
+  // TODO: Test calling WithArgs() on a method that takes no arguments.
+  // ... 주석 33줄, 코드 0줄
+}
+#undef SequenceBound   // 이 줄은 유지. 지우면 아래 death test가 깨진다.
+```
+##### 추가한 것
+base/threading/sequence_bound_nocompile.nc 를 신규로 생성하여 chromium의 nocomplie 규칙에 따라 파일을 만들었다.
+아래의 코드는 주요내용만 표시하였고 주석이나 파일 컨벤션 내용은 제외하였다.
+```cpp
+// `WithArgs()` may only be used with methods that accept arguments.
+class NoArgs {
+ public:
+  void Method();
+};
+
+void CallWithArgsOnMethodTakingNoArgs() {
+  SequenceBound<NoArgs> sq(SequencedTaskRunner::GetCurrentDefault());
+  sq.AsyncCall(&NoArgs::Method).WithArgs(1);  // expected-error@*:* {{no member named 'WithArgs' in}}
+}
+
+// `Then()` may only be used after `WithArgs()`.
+class HasArgs {
+ public:
+  void Method(int);
+};
+
+void CallThenBeforeWithArgs() {
+  SequenceBound<HasArgs> sq(SequencedTaskRunner::GetCurrentDefault());
+  sq.AsyncCall(&HasArgs::Method)
+      .Then(DoNothing())  // expected-error@*:* {{no member named 'Then' in}}
+      .WithArgs(1);
+}
+```
+
+## 테스트 방법
+
+.nc 파일은 바이너리에 링크되지 않는다. wrapper.py가 clang++ -fsyntax-only -Xclang -verify를 돌리고 빈 .o를 만들어 source_set처럼 위장한다. 빌드가 곧 테스트다.
+
+```bash
+autoninja -C out/Default base_nocompile_tests
+```
+
+## 배운 점
+
+기술
+
+- 디스크 쓰기 같은 느린 작업을 UI 스레드에서 하면 브라우저 화면이 멈춘다. 백그라운드로 보내야 하는데 이 작업을 담당하는 객체를 두 스레드가 동시에 만지면 내부 상태가 깨진다.
+Chromium은 이걸 락이 아니라 **시퀀스**로 푼다. 시퀀스는 작업이 순서대로 실행되는 논리적 흐름이다. 시퀀스 하나에만 갇힌 객체는 락 없이 안전하다. 그 작업순서 실행보장을 `AsyncCall(필수) → WithArgs(인자있을때 필요) → Then(선택)` 로 하고 있다.
+- `.Then(...).WithArgs(...)`는 두 군데가 잘못돼 보이지만 에러는 1개다. `.Then()`에서 표현식이 error type이 되면 뒤는 진단을 내지 않는다. expected-error를 2개 쓰면 테스트가 실패한다.
+- 에러 메시지는 추측하지 않는다. expected-error 없이 먼저 빌드하면 clang이 실제 메시지를 출력한다.
+
+프로세스
+
+- git blame으로 CL을 찾아 리뷰 코멘트를 읽은 게 도움이 됐다. [CL:4004169](https://crrev.com/c/4004169) 에서 dcheng의 description과 patchset을 보고 이 작업의 맥락을 파악하며 나의 작업범위가 무엇인지 알 수 있었다.
+- 처음엔 타입 안정성 문제로 봤는데, 직접 컴파일해보니 BindOnce의 arity 검사가 조용히 통과하는 경우는 없었다. 실제 가치는 진단 품질이고 원저자도 리뷰에서 "Better error messages" 라고 해서 작업범위를 결정할 수 있었다.
+- 처음엔 `SequenceBound<std::unique_ptr<T>>` 형태까지 4케이스로 썼다. 근거는 "기존 TYPED_TEST가 두 형태를 커버했다"였는데 틀렸었다. 삭제한 테스트는 비어 있어서 어느 형태도 커버하지 않았고, AsyncCall이 빌더를 고를 때 쓰는 템플릿 인자는 전부 메서드 시그니처에서 나온다(sequence_bound.h:227). 두 형태의 UnwrappedT도 같다. 중복이라 패치셋 2에서 제거했다.
+
+향후
+
+- sequence_bound.h:635의 변환 제약을 구현하면 이번에 이관한 TODO를 따라 나머지 테스트를 채울 수 있다.
+
+## 참고 자료
+
+##### 참고 문서
+
+- [Chromium nocompile test docs](https://www.chromium.org/developers/testing/no-compile-tests/)
+
+##### 참고 CL 및 코드
+
+- [CL:400416:이전 작업 맥락](https://crrev.com/c/4004169)
+- [nocompile 코드 형식 참고](https://source.chromium.org/chromium/chromium/src/+/main:base/containers/heap_array_nocompile.nc)
+1c:T80c,
 docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.
 
 ## 문제 설명
@@ -52,9 +146,9 @@ docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링�
 ## 참고 자료
 - [원본 삭제 CL: Remove outdated perf regression gardening docs](https://crrev.com/c/5783169)
 - [Chromium Issue 538651940](https://crbug.com/538651940)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Indigochi1d.png?size=192","alt":"Indigochi1d 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Indigochi1d"}],["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Indigochi1d"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8146559","title":"Fix broken perf_regression_sheriffing.md link in perf waterfall doc","date":"$D2026-07-25T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8146559","labels":["docs","fix"],"status":"merged","excerpt":"docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.\n\n\n- `perf_re","content":"$1b"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Indigochi1d.png?size=192","alt":"Indigochi1d 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Indigochi1d"}],["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Indigochi1d"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8284898","title":"[base] Add nocompile tests for SequenceBound","date":"$D2026-08-24T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8284898","labels":["base"],"status":"merged","excerpt":"base::SequenceBound의 AsyncCall() 빌더 체인이 강제하는 호출 순서 계약을 검증하는 nocompile 테스트를 추가하고, \n그 자리를 차지하고 있던 빈 껍데기 테스트를 제거했습니다. 2020년부터 6년간 방치된 TODO를 구현한 작업입니다.\n\n\nSequenceB","content":"$1b"},{"slug":"8146559","title":"Fix broken perf_regression_sheriffing.md link in perf waterfall doc","date":"$D2026-07-25T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8146559","labels":["docs","fix"],"status":"merged","excerpt":"docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.\n\n\n- `perf_re","content":"$1c"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-1c:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"Indigochi1d | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Indigochi1d님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1c","4",{}]],"error":null,"digest":"$undefined"}
+1d:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"Indigochi1d | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Indigochi1d님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1d","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
