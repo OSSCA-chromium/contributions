@@ -1,8 +1,8 @@
 ---
-name: Chromium Contribution NOT from Issue Tracker
-about: 직접 찾은 이슈 수정
-title: "[모듈명] 이슈 제목"
-labels: self-issues, 2026
+name: Sub-Issue 등록
+about: '특정 이슈에 대한 sub-issue 를 등록할 때 사용합니다. '
+title: "[주제] 폴더명"
+labels: 2026, chromium-issues
 assignees: ''
 
 ---
@@ -10,8 +10,9 @@ assignees: ''
 ## Issue
 
 **Description**
-_어디서 어떻게 발견한 이슈인지 함께 적어주세요._
+_sub-issue에 대한 설명을 남겨주세요._
 
+** 수정할 폴더**
 - .
 
 **References**

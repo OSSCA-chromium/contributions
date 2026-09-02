@@ -1,0 +1,26 @@
+name: Auto-assign issue author
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign-author:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'chromium-issues') ||
+      contains(github.event.issue.labels.*.name, 'self-issues') ||
+      contains(github.event.issue.labels.*.name, 'exercise')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              assignees: [context.payload.issue.user.login],
+            });

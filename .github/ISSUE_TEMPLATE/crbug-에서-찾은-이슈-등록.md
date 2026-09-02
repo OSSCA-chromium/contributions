@@ -1,8 +1,8 @@
 ---
-name: Chromium Contribution from Issue Tracker
+name: crbug 에서 찾은 이슈 등록
 about: Chromium Issue Tracker 에서 찾은 이슈 등록
 title: "[crbug 번호] 이슈 제목"
-labels: chromium-issues, 2026
+labels: 2026, chromium-issues
 assignees: ''
 
 ---
