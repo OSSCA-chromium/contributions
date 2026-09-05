@@ -28,7 +28,7 @@ const STATUS_LABELS: Record<string, string> = {
   unknown: '기타',
 };
 
-const BAR_COLOR = 'var(--chart-bar)';
+const BAR_COLOR = 'var(--c2)';
 
 // Tooltip chrome that follows the light/dark surface tokens instead of the
 // recharts default white box.
@@ -47,13 +47,14 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
   }));
 
   const topContributors = stats.topContributors.slice(0, 10);
+  const topModules = stats.byModule.slice(0, 10);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-2">
       {/* 상태 분포 */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6">
+      <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6">
         <h3 className="text-lg font-semibold text-on-surface mb-4">상태 분포</h3>
-        <div className="h-72">
+        <div className="h-72 min-w-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
@@ -62,7 +63,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
                 nameKey="name"
                 cx="50%"
                 cy="50%"
-                outerRadius={90}
+                outerRadius="70%"
                 label
               >
                 {statusData.map((entry) => (
@@ -80,9 +81,9 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
       </div>
 
       {/* 월별 추이 */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6">
+      <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6">
         <h3 className="text-lg font-semibold text-on-surface mb-4">월별 추이</h3>
-        <div className="h-72">
+        <div className="h-72 min-w-0">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={stats.byMonth}>
               <XAxis dataKey="month" tick={{ fontSize: 12 }} />
@@ -95,7 +96,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
       </div>
 
       {/* 기여자 랭킹 (Top 10) */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6 lg:col-span-2">
+      <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6 lg:col-span-2">
         <h3 className="text-lg font-semibold text-on-surface mb-4">
           기여자 랭킹 (Top 10)
         </h3>
@@ -104,13 +105,39 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
             <BarChart
               data={topContributors}
               layout="vertical"
-              margin={{ left: 24 }}
+              margin={{ left: 0 }}
             >
               <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
               <YAxis
                 type="category"
                 dataKey="username"
                 width={120}
+                tick={{ fontSize: 12 }}
+              />
+              <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'var(--color-surface-variant)' }} />
+              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} radius={[0, 6, 6, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      {/* 모듈 분포 (Top 10) */}
+      <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6 lg:col-span-2">
+        <h3 className="text-lg font-semibold text-on-surface mb-4">
+          모듈 분포 (Top 10)
+        </h3>
+        <div style={{ height: Math.max(topModules.length * 36, 120) }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={topModules}
+              layout="vertical"
+              margin={{ left: 0 }}
+            >
+              <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
+              <YAxis
+                type="category"
+                dataKey="module"
+                width={160}
                 tick={{ fontSize: 12 }}
               />
               <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'var(--color-surface-variant)' }} />

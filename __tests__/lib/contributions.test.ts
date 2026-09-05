@@ -5,6 +5,7 @@ import {
   getContributionBySlug,
   getAllContributionSlugs,
   isValidGithubUsername,
+  computeRelated,
 } from '@/lib/contributions';
 
 // fs 및 path 모듈 모킹
@@ -70,7 +71,8 @@ title: Fix docs
 date: 2026-09-05
 author: octocat
 contribution_url: https://crrev.com/c/123
-labels: [docs]
+module: docs
+kind: fix
 status: ${status}
 ---
 Contribution content`);
@@ -125,6 +127,87 @@ author: 김철수
       const contributions = getAllContributions();
       
       expect(contributions).toEqual([]);
+    });
+
+    it('module/kind/repo/참조 필드를 파싱합니다', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['8146040.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---
+title: Fix docs
+date: 2026-07-27
+author: Yelihi
+contribution_url: https://crrev.com/c/8146040
+status: merged
+module: docs
+kind: fix
+issue: 42
+crbug: 538651940
+---
+본문`);
+
+      const [c] = getAllContributions();
+
+      expect(c.module).toBe('docs');
+      expect(c.kind).toBe('fix');
+      expect(c.repo).toBe('chromium/src'); // crrev URL + repo 필드 없음 → 기본값
+      expect(c.issue).toBe(42);
+      expect(c.crbug).toBe(538651940);
+      expect(c.related).toEqual([]);
+      expect(c.status).toBe('merged');
+    });
+
+    it('full URL에서 repo를 파싱하며 repo 필드보다 우선합니다', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['1000.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---
+title: t
+date: 2026-01-01
+author: a
+contribution_url: https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/1000
+status: abandoned
+module: devtools
+kind: fix
+repo: wrong/value
+---
+b`);
+
+      const [c] = getAllContributions();
+
+      expect(c.repo).toBe('devtools/devtools-frontend');
+      expect(c.status).toBe('abandoned');
+    });
+
+    it('module/kind가 없으면 빈 문자열로 둡니다', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['999.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---
+title: legacy
+date: 2025-01-01
+author: a
+---
+b`);
+
+      const [c] = getAllContributions();
+
+      expect(c.module).toBe('');
+      expect(c.kind).toBe('');
+      expect(c.repo).toBe('chromium/src');
+    });
+
+    it('crrev URL에서는 repo 필드를 사용합니다', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['8264335.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---
+title: t
+date: 2026-08-20
+author: a
+contribution_url: https://crrev.com/c/8264335
+status: merged
+module: devtools
+kind: refactor
+repo: devtools/devtools-frontend
+---
+b`);
+
+      const [c] = getAllContributions();
+
+      expect(c.repo).toBe('devtools/devtools-frontend');
     });
   });
   
@@ -184,5 +267,49 @@ contribution_url: https://example.com
       expect(isValidGithubUsername('홍 길동')).toBe(false);
       expect(isValidGithubUsername('')).toBe(false);
     });
+  });
+});
+
+// Pure function — no fs/gray-matter mocking needed, so this lives outside
+// the 'contributions 유틸리티' describe block above.
+describe('computeRelated', () => {
+  const item = (slug: string, extra: Partial<{ issue: number; crbug: number; related: number[] }> = {}) => ({
+    slug,
+    related: [],
+    ...extra,
+  });
+
+  it('명시적 related를 양방향으로 연결합니다', () => {
+    const map = computeRelated([item('100', { related: [200] }), item('200')]);
+    expect(map.get('100')).toEqual(['200']);
+    expect(map.get('200')).toEqual(['100']);
+  });
+
+  it('같은 issue/crbug를 공유하면 연결합니다', () => {
+    const map = computeRelated([
+      item('1', { issue: 7 }),
+      item('2', { issue: 7 }),
+      item('3', { crbug: 99 }),
+      item('4', { crbug: 99 }),
+      item('5'),
+    ]);
+    expect(map.get('1')).toEqual(['2']);
+    expect(map.get('3')).toEqual(['4']);
+    expect(map.get('5')).toEqual([]);
+  });
+
+  it('존재하지 않는 related 대상은 생략하고 자기 자신은 제외합니다', () => {
+    const map = computeRelated([item('100', { related: [100, 999] })]);
+    expect(map.get('100')).toEqual([]);
+  });
+
+  it('결과는 입력 순서를 유지하고 중복을 제거합니다', () => {
+    const map = computeRelated([
+      item('300', { issue: 1 }),
+      item('200', { issue: 1, related: [100] }),
+      item('100', { issue: 1 }),
+    ]);
+    // 200: issue 공유(300, 100) + 명시 related(100) → 중복 없이 입력 순서대로
+    expect(map.get('200')).toEqual(['300', '100']);
   });
 });

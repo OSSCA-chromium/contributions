@@ -1,122 +1,151 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { ContributionStatus, SearchIndexItem } from '@/lib/types';
-import ContributionCard from '@/components/ContributionCard';
-import YearSelector from '@/components/YearSelector';
+import type { SearchIndexItem } from '@/lib/types';
+import PatchTable from '@/components/PatchTable';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 
-type StatusFilter = 'all' | ContributionStatus;
+// Reset sentinel shared by every axis. `contributions.ts` trims the axes and
+// `axisOptions` drops empties, so '' can never collide with a real value.
+const ALL = '';
 
-const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
-  { value: 'all', label: '전체' },
-  { value: 'in review', label: 'In Review' },
-  { value: 'merged', label: 'Merged' },
-  { value: 'abandoned', label: 'Abandoned' },
-];
+const LABEL_CLASS =
+  'w-[52px] flex-none text-[11.5px] font-semibold uppercase tracking-[0.05em] text-on-surface-variant max-[620px]:w-full';
+
+// Pills run most-used first (ties by name) — the order the mockup shows for
+// this data (docs, base, … / fix, refactor, …) and the one that keeps the long
+// module row useful once it wraps.
+function axisOptions(
+  items: SearchIndexItem[],
+  key: 'module' | 'kind' | 'status'
+): string[] {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    const value = item[key];
+    if (value) counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+  return [...counts]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([value]) => value);
+}
+
+function FilterRow({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: string[];
+  value: string;
+  // eslint-disable-next-line no-unused-vars
+  onChange: (value: string) => void;
+}) {
+  return (
+    <div
+      className="flex flex-wrap items-center gap-2"
+      role="group"
+      aria-label={`${label} 선택`}
+    >
+      <span className={LABEL_CLASS}>{label}</span>
+      {[ALL, ...options].map((option) => {
+        const active = value === option;
+        return (
+          <button
+            key={option}
+            type="button"
+            onClick={() => onChange(option)}
+            aria-pressed={active}
+            className={`rounded-full border px-3.5 py-1.5 text-[13px] transition-colors ${
+              active
+                ? 'border-transparent bg-primary-weak font-semibold text-primary'
+                : 'border-mline bg-background text-on-surface-variant hover:bg-m2'
+            }`}
+          >
+            {/* Decorative — aria-pressed already carries the state, so the
+                accessible name stays the bare value. */}
+            {active && <span aria-hidden="true">{'✓ '}</span>}
+            {option === ALL ? '전체' : option}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function ContributionSearch({ items }: { items: SearchIndexItem[] }) {
   const [query, setQuery] = useState('');
-  const [status, setStatus] = useState<StatusFilter>('all');
-  const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
-  const years = useMemo(() => getAvailableYears(items), [items]);
   const [year, setYear] = useState(DEFAULT_YEAR);
+  // `module` would shadow the CJS module-scope identifier once transpiled.
+  const [moduleAxis, setModuleAxis] = useState(ALL);
+  const [kind, setKind] = useState(ALL);
+  const [status, setStatus] = useState(ALL);
 
-  const allLabels = useMemo(() => {
-    const set = new Set<string>();
-    for (const item of items) {
-      for (const label of item.labels) set.add(label);
-    }
-    return [...set].sort((a, b) => a.localeCompare(b));
-  }, [items]);
-
-  const toggleLabel = (label: string) => {
-    setSelectedLabels((prev) =>
-      prev.includes(label) ? prev.filter((l) => l !== label) : [...prev, label]
-    );
-  };
+  const years = useMemo(() => getAvailableYears(items), [items]);
+  // Options come from the whole index, not the current result set, so the pill
+  // rows stay put instead of reshuffling under the pointer on every click.
+  const modules = useMemo(() => axisOptions(items, 'module'), [items]);
+  const kinds = useMemo(() => axisOptions(items, 'kind'), [items]);
+  const statuses = useMemo(() => axisOptions(items, 'status'), [items]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return filterByYear(items, year).filter((item) => {
-      if (status !== 'all' && item.status !== status) return false;
-      if (selectedLabels.length > 0 && !selectedLabels.every((l) => item.labels.includes(l))) {
-        return false;
-      }
+    return filterByYear(items, year || 'all').filter((item) => {
+      if (moduleAxis && item.module !== moduleAxis) return false;
+      if (kind && item.kind !== kind) return false;
+      if (status && item.status !== status) return false;
       if (q) {
-        const haystack = [item.title, item.author, item.excerpt, ...item.labels]
+        const haystack = [
+          item.title,
+          item.author,
+          item.slug,
+          item.excerpt,
+          item.module,
+          item.kind,
+        ]
           .join(' ')
           .toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       return true;
     });
-  }, [items, query, status, selectedLabels, year]);
+  }, [items, query, year, moduleAxis, kind, status]);
 
   return (
     <div>
-      <div className="mb-4 flex flex-col gap-3">
-        <YearSelector years={years} value={year} onChange={setYear} />
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="검색..."
-          aria-label="컨트리뷰션 검색"
-          className="w-full rounded-xl border border-outline bg-surface px-4 py-2.5 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
+      <p
+        role="status"
+        className="mb-3.5 text-[13px] tabular-nums text-on-surface-variant"
+      >
+        전체 {items.length}건 중 <b>{filtered.length}건</b> 표시
+      </p>
+
+      <div className="mb-3.5 grid gap-2.5 rounded-[20px] bg-m1 px-[18px] py-4">
+        <FilterRow label="연도" options={years} value={year} onChange={setYear} />
+        <FilterRow
+          label="모듈"
+          options={modules}
+          value={moduleAxis}
+          onChange={setModuleAxis}
         />
+        <FilterRow label="종류" options={kinds} value={kind} onChange={setKind} />
+        <FilterRow label="상태" options={statuses} value={status} onChange={setStatus} />
 
-        <div className="flex flex-wrap gap-2">
-          {STATUS_FILTERS.map((filter) => {
-            const active = status === filter.value;
-            return (
-              <button
-                key={filter.value}
-                type="button"
-                onClick={() => setStatus(filter.value)}
-                aria-pressed={active}
-                className={`rounded-full px-3 py-1 text-sm transition-colors ${
-                  active
-                    ? 'bg-primary text-on-primary'
-                    : 'bg-surface-variant text-on-surface-variant hover:bg-primary-container'
-                }`}
-              >
-                {filter.label}
-              </button>
-            );
-          })}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className={LABEL_CLASS}>검색</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="제목·작성자·리뷰 ID"
+            aria-label="검색"
+            className="min-w-[180px] flex-1 rounded-full border border-mline bg-background px-4 py-2 text-[13.5px] text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none max-[620px]:w-full max-[620px]:flex-auto"
+          />
         </div>
-
-        {allLabels.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {allLabels.map((label) => {
-              const active = selectedLabels.includes(label);
-              return (
-                <button
-                  key={label}
-                  type="button"
-                  onClick={() => toggleLabel(label)}
-                  aria-pressed={active}
-                  className={`rounded-full px-2 py-1 text-xs transition-colors ${
-                    active
-                      ? 'bg-primary text-on-primary'
-                      : 'bg-primary-container text-primary hover:opacity-80'
-                  }`}
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </div>
-        )}
       </div>
 
       {filtered.length > 0 ? (
-        <div className="grid gap-4">
-          {filtered.map((item) => (
-            <ContributionCard key={item.slug} contribution={item} />
-          ))}
-        </div>
+        <PatchTable items={filtered} />
       ) : (
         <p className="py-12 text-center text-on-surface-variant">검색 결과가 없습니다.</p>
       )}

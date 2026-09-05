@@ -44,7 +44,7 @@ export default async function ContributorPage({ params }: ParamsProps) {
   const { contributions } = data;
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
+    <div>
       {/* 프로필 헤더 */}
       <header className="flex flex-col sm:flex-row items-center gap-4 mb-8">
         <a
@@ -55,7 +55,9 @@ export default async function ContributorPage({ params }: ParamsProps) {
           <ContributorAvatar username={username} size={96} />
         </a>
         <div className="text-center sm:text-left">
-          <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface">{username}</h1>
+          <h1 className="text-[27px] font-bold leading-[1.3] tracking-[-0.025em] text-on-surface">
+            {username}
+          </h1>
           <a
             href={`https://github.com/${username}`}
             target="_blank"

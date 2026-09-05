@@ -8,6 +8,7 @@ const summaries = [
     total: 1,
     merged: 1,
     inReview: 0,
+    abandoned: 0,
     lastActive: '2025-06-01T00:00:00.000Z',
   },
   {
@@ -16,6 +17,7 @@ const summaries = [
     total: 5,
     merged: 0,
     inReview: 5,
+    abandoned: 0,
     lastActive: '2025-01-01T00:00:00.000Z',
   },
 ];

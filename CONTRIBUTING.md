@@ -109,14 +109,26 @@ Bug: 123456
 - Add, Fix, Implement 등등으로 시작
 - 72 문자 후 줄바꿈
 
-### 패치 Gerrit 업로드 후 진행
+### CL 확정 후 기여 기록하기
 
-기여 내역을 사이트에 반영하는 전체 절차는 [기여 기록하기 가이드](https://ossca-chromium.github.io/contributions/docs/contribution-record/)를 따르세요. 요약:
+이 저장소의 기여 기록은 **CL이 `merged` 또는 `abandoned`로 확정된 뒤** 결과를 남기는 아카이브입니다. Gerrit 업로드 직후가 아니라 리뷰가 끝나고 결과가 정해진 뒤, 한 번의 PR로 기록합니다. (업로드 후 리뷰 진행 상황은 계속 위 이슈의 Status로 추적하세요.)
 
-1. `data/contributions/template.md` 파일을 `data/contributions/{ChromiumReviewId}.md` 파일로 복사하고 내용을 채웁니다 (템플릿 안내 주석은 모두 제거).
-2. `npm run validate:data`와 `npm run lint:md`로 로컬 검증합니다.
-3. `contributions:` prefix 커밋으로 Pull Request를 올립니다 (예: `contributions: Add 6520751`).
-4. Gerrit에서 CL이 merge되면 후속 PR로 `status: merged`로 갱신합니다.
+전체 절차는 [기여 기록하기 가이드](https://ossca-chromium.github.io/contributions/docs/contribution-record/)를 따르세요. 요약:
+
+1. `data/contributions/template.md` 파일을 `data/contributions/{ChromiumReviewId}.md` 파일로 복사하고 내용을 채웁니다 (템플릿 안내 주석은 모두 제거). `contribution_url`은 crrev.com 단축 URL을 권장하며, 파일명은 그 안의 리뷰 ID와 정확히 같아야 합니다.
+2. Frontmatter를 채웁니다.
+   - `module`: 패치가 속한 Chromium 모듈/디렉토리 1개 (예: `base`)
+   - `kind`: 변경 종류 1개 (예: `fix`, `feature`, `refactor`, `test`, `docs`, `cleanup`)
+   - `status`: 확정된 결과 — `merged` 또는 `abandoned`
+   - 해당할 때만 선택 필드를 추가합니다.
+     - `repo`: 저장소가 `chromium/src`가 아닐 때만 (예: `devtools/devtools-frontend`)
+     - `issue`: 이 저장소에서 이 작업을 진행한 GitHub 이슈 번호
+     - `crbug`: commit message의 `Bug:` 푸터에 적힌 crbug ID
+     - `related`: 함께 묶어 보여줄 관련 패치들의 리뷰 ID 목록
+3. `npm run validate:data`와 `npm run lint:md`로 로컬 검증합니다.
+4. `contributions:` prefix 커밋으로 Pull Request를 올립니다 (예: `contributions: Add 6520751`).
+
+같은 `issue` 또는 `crbug` 값을 가진 패치끼리는 사이트에서 자동으로 서로 연결되어 보입니다. issue/crbug를 공유하지 않는 관련 패치를 묶고 싶다면(예: 하나의 작업이 chromium/src와 devtools/devtools-frontend에 나뉘어 패치된 경우) `related`에 상대 패치의 리뷰 ID를 적으세요. 예를 들어 리뷰 ID `8146041`인 패치와 묶으려면 `related: [8146041]`처럼 적으면 되고, 한쪽 파일에만 적어도 사이트에서 양쪽이 서로 연결되어 보입니다.
 
 ## 웹사이트 실행 및 확인
 

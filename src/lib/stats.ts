@@ -11,14 +11,17 @@ function toMonth(date: unknown): string {
   return `${kst.getUTCFullYear()}-${month}`;
 }
 
-// 컨트리뷰션 목록으로부터 통계(총계/상태/월별/기여자/머지비율)를 집계
+// 컨트리뷰션 목록으로부터 통계(총계/상태/월별/기여자/머지비율/모듈수)를 집계
 export function computeStats(
-  contributions: Pick<Contribution, 'status' | 'date' | 'author'>[]
+  contributions: (Pick<Contribution, 'status' | 'author' | 'module'> & {
+    date: string | Date;
+  })[]
 ): Stats {
   const total = contributions.length;
   const statusMap = new Map<string, number>();
   const monthMap = new Map<string, number>();
   const contribMap = new Map<string, number>();
+  const moduleMap = new Map<string, number>();
   let merged = 0;
 
   for (const c of contributions) {
@@ -29,6 +32,8 @@ export function computeStats(
     const month = toMonth(c.date);
     monthMap.set(month, (monthMap.get(month) ?? 0) + 1);
     contribMap.set(c.author, (contribMap.get(c.author) ?? 0) + 1);
+    // Falsy also excludes '' — a contribution with no module tag shouldn't count as one.
+    if (c.module) moduleMap.set(c.module, (moduleMap.get(c.module) ?? 0) + 1);
   }
 
   return {
@@ -42,5 +47,9 @@ export function computeStats(
       .sort((a, b) => b.count - a.count),
     contributorCount: contribMap.size,
     mergedRatio: total ? merged / total : 0,
+    moduleCount: moduleMap.size,
+    byModule: [...moduleMap]
+      .map(([module, count]) => ({ module, count }))
+      .sort((a, b) => b.count - a.count),
   };
 }
