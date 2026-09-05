@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'labels', 'status'];
-const STATUSES = ['in review', 'merged', 'draft'];
+const STATUSES = ['in review', 'merged', 'abandoned'];
 
 // YYYY-MM-DD 문자열이 실제로 존재하는 날짜인지 확인(2025-13-40, 2025-02-30 등 배제)
 function isRealDate(str) {
