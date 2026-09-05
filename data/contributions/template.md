@@ -27,6 +27,8 @@ kind: fix # 변경 종류 1개 (예: fix, feature, refactor, test, docs, cleanup
 
 어떻게 문제를 해결했는지 설명하세요.
 
+abandoned 상태라면 시도한 접근 방법과 변경을 중단한 이유를 작성하세요.
+
 1. 첫 번째 접근 방법
 2. 구현 세부 사항
 3. 주요 코드 변경 내용

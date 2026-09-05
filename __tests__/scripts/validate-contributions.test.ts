@@ -27,6 +27,15 @@ test('잘못된 status를 잡는다', () => {
   expect(errs.some((e) => e.includes('status'))).toBe(true);
 });
 
+test.each(['in review', 'merged', 'abandoned'])('%s 상태를 허용한다', (status) => {
+  expect(validateFrontmatter({ ...valid, status })).toEqual([]);
+});
+
+test('draft 상태를 거부한다', () => {
+  const errs = validateFrontmatter({ ...valid, status: 'draft' });
+  expect(errs.some((e) => e.includes('status'))).toBe(true);
+});
+
 test('잘못된 date 형식을 잡는다', () => {
   const errs = validateFrontmatter({ ...valid, date: '2025/05/08' });
   expect(errs.some((e) => e.includes('date'))).toBe(true);

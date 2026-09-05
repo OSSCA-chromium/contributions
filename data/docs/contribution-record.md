@@ -63,6 +63,7 @@ cp data/contributions/template.md data/contributions/6520751.md
 `related`에 상대 패치의 리뷰 ID를 적으세요 — 한쪽 파일에만 적어도 사이트에서
 양쪽이 서로 연결되어 보여집니다.
 
+- CL을 중단했다면 `status: abandoned`로 기록하고 본문에 시도한 접근과 중단 이유를 적으세요.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub

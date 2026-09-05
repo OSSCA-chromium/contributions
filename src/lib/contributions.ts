@@ -256,4 +256,4 @@ export function getUniqueContributors(): { username: string; isValidGithubUser: 
     username,
     isValidGithubUser
   }));
-} 
+}
