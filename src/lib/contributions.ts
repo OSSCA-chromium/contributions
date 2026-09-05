@@ -7,7 +7,12 @@ import type { Contribution, ContributionStatus } from '@/lib/types';
 
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
 
-const VALID_STATUSES: ContributionStatus[] = ['in review', 'merged', 'draft'];
+const VALID_STATUSES: ContributionStatus[] = [
+  'in review',
+  'merged',
+  'draft',
+  'abandoned',
+];
 
 // frontmatter status를 유니언 타입으로 정규화 (유효하지 않으면 undefined)
 function normalizeStatus(value: unknown): ContributionStatus | undefined {

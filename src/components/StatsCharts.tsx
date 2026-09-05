@@ -18,6 +18,7 @@ const STATUS_COLORS: Record<string, string> = {
   merged: 'var(--chart-merged)',
   'in review': 'var(--chart-in-review)',
   draft: 'var(--chart-draft)',
+  abandoned: 'var(--chart-unknown)',
   unknown: 'var(--chart-unknown)',
 };
 
@@ -25,6 +26,7 @@ const STATUS_LABELS: Record<string, string> = {
   merged: 'Merged',
   'in review': 'In Review',
   draft: 'Draft',
+  abandoned: 'Abandoned',
   unknown: '기타',
 };
 
