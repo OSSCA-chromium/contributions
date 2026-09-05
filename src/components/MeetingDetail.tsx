@@ -19,7 +19,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
   const slidesUrl = meeting.slides ? resolveSlidesUrl(meeting.slides) : null;
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
+    <div className="w-full">
       <Link href="/schedule" className="text-sm text-primary hover:underline">
         ← 일정으로 돌아가기
       </Link>
@@ -47,7 +47,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
 
       {meeting.contentHtml && (
         <article
-          className="prose dark:prose-invert max-w-none"
+          className="prose dark:prose-invert max-w-none [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: meeting.contentHtml }}
         />
       )}

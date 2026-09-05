@@ -12,8 +12,10 @@ export default function StatsPage() {
   const items = buildSearchIndex(getAllContributions());
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
-      <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface mb-6">통계</h1>
+    <div>
+      <h1 className="mb-2.5 text-[27px] font-bold leading-[1.3] tracking-[-0.025em] text-on-surface">
+        통계
+      </h1>
       <StatsView items={items} />
     </div>
   );

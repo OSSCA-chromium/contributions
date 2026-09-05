@@ -2,12 +2,14 @@
 title: 기여 기록하기
 order: 5
 group: 가이드
-description: Gerrit CL 업로드 후 기여 내역을 이 사이트에 반영하는 절차
+description: CL이 merged 또는 abandoned로 확정된 뒤 기여 내역을 이 사이트에 기록하는 절차
 ---
 
-Gerrit에 CL을 올렸다면 기여 내역을 `data/contributions/`에 기록해 이 사이트에
-반영합니다. 기록된 내역은 [기여 목록](/contributions/patches/)과
-[통계](/contributions/stats/), 기여자 페이지에 자동으로 집계됩니다.
+Gerrit CL이 `merged` 또는 `abandoned`로 확정되면 기여 내역을
+`data/contributions/`에 기록해 이 사이트에 반영합니다. Gerrit 업로드 직후가
+아니라 리뷰가 끝나고 결과가 정해진 뒤, 한 번의 PR로 기록합니다. 기록된 내역은
+[기여 목록](/contributions/patches/)과 [통계](/contributions/stats/), 기여자
+페이지에 자동으로 집계됩니다.
 
 > 저장소 fork·clone·upstream 설정이 아직이라면
 > [CONTRIBUTING.md](https://github.com/OSSCA-chromium/contributions/blob/main/CONTRIBUTING.md)의
@@ -39,18 +41,34 @@ cp data/contributions/template.md data/contributions/6520751.md
 | 필드               | 값                                     | 예                          |
 | ------------------ | -------------------------------------- | --------------------------- |
 | `title`            | Gerrit에 올린 commit 제목 그대로       | `"Fix siso_tips.md link"`   |
-| `date`             | CL 업로드 날짜, `YYYY-MM-DD`           | `2026-07-25`                |
+| `date`             | CL이 `merged`/`abandoned`로 확정된 날짜, `YYYY-MM-DD` | `2026-07-25`  |
 | `author`           | 본인 GitHub ID                         | `amoseui`                   |
-| `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
-| `labels`           | 수정한 디렉터리 + 작업 성격            | `["docs", "fix"]`           |
-| `status`           | `in review` 또는 `merged`              | `in review`                 |
+| `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` (crrev.com 단축 URL 권장) | `https://crrev.com/c/6520751` |
+| `module`           | 패치가 속한 Chromium 모듈/디렉토리 1개 | `base`                       |
+| `kind`             | 변경 종류 1개 (예: `fix`, `feature`, `refactor`, `test`, `docs`, `cleanup`) | `fix` |
+| `status`           | 확정된 결과 — `merged` 또는 `abandoned` | `merged`                    |
+
+선택 필드는 해당할 때만 추가합니다.
+
+| 필드      | 값                                            | 예                            |
+| --------- | ----------------------------------------------- | ------------------------------- |
+| `repo`    | 저장소가 `chromium/src`가 아닐 때만            | `devtools/devtools-frontend`   |
+| `issue`   | 이 저장소에서 이 작업을 진행한 GitHub 이슈 번호 | `42`                           |
+| `crbug`   | commit message의 `Bug:` 푸터에 적힌 crbug ID   | `538651940`                    |
+| `related` | 함께 묶어 보여줄 관련 패치들의 리뷰 ID 목록    | `[8146041]`                    |
+
+같은 `issue` 또는 `crbug` 값을 가진 패치끼리는 사이트에서 자동으로 서로
+연결되어 보입니다. issue/crbug를 공유하지 않는 관련 패치를 묶고 싶다면(예:
+하나의 작업이 chromium/src와 devtools/devtools-frontend에 나뉘어 패치된 경우)
+`related`에 상대 패치의 리뷰 ID를 적으세요 — 한쪽 파일에만 적어도 사이트에서
+양쪽이 서로 연결되어 보여집니다.
 
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub
   ID를 적으세요.
-- **템플릿의 안내 주석(`# github.com/GitHubId`, `# Add XXXXX from ...` 등)은
-  모두 지우세요.**
+- **템플릿의 안내 주석(`# github.com/GitHubId`, `# merged, abandoned 중 하나
+  선택` 등)은 모두 지우세요.**
 
 ### 본문 작성
 
@@ -95,24 +113,7 @@ git push origin 250725-contribution-6520751
   수정 커밋을 추가합니다.
 - PR이 merge되면 사이트에 자동 배포됩니다(수 분 소요).
 
-## 4. CL이 merge되면 — status 갱신
-
-Gerrit에서 CL이 최종 merge되면, 후속 PR로 `status`만 갱신합니다.
-
-```bash
-git checkout main && git pull
-git checkout -b 250801-merged-6520751
-```
-
-`data/contributions/6520751.md`의 frontmatter에서 `status: in review`를
-`status: merged`로 수정한 뒤, 같은 방식으로 커밋·push·PR을 올립니다.
-
-```bash
-git commit -am "contributions: Mark 6520751 as merged"
-git push origin 250801-merged-6520751
-```
-
-## 5. GitHub 이슈·프로젝트 보드
+## 4. GitHub 이슈·프로젝트 보드
 
 - 실습 이슈는 오른쪽 **Assignees**에 본인을 직접 지정(self-assign)해
   시작합니다 (이슈당 1인, 선착순).
@@ -133,7 +134,5 @@ git push origin 250801-merged-6520751
    `[관련 문서 링크](https://example.com)`가 그대로 남음.
 3. **섹션 내용 뒤바뀜** — "테스트 방법" 섹션에 배운 점을 작성하는 등 안내
    문구와 내용이 어긋남.
-4. **status 미갱신** — CL은 merge됐는데 기록은 계속 `in review`로 남아 통계가
-   틀어짐.
-5. **커밋 메시지 형식** — `Create 6619930.md`, `Update 6508290.md` 같은 기본
+4. **커밋 메시지 형식** — `Create 6619930.md`, `Update 6508290.md` 같은 기본
    메시지 사용. `contributions: Add 6619930` 형식을 지켜주세요.
