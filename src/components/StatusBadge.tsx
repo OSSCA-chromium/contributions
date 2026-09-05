@@ -4,6 +4,10 @@ const MAP: Record<ContributionStatus, { label: string; cls: string }> = {
   'in review': { label: 'IN REVIEW', cls: 'bg-primary text-on-primary' },
   merged: { label: 'MERGED', cls: 'bg-success text-white dark:text-black' },
   draft: { label: 'DRAFT', cls: 'bg-warning text-black' },
+  abandoned: {
+    label: 'ABANDONED',
+    cls: 'bg-surface-variant text-on-surface-variant',
+  },
 };
 
 export default function StatusBadge({ status }: { status?: ContributionStatus }) {
