@@ -4,7 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #1a73e8;
+  --color-primary: #0b57d0;
   --color-on-primary: #ffffff;
   --color-primary-container: #e8f0fe;
   --color-background: #ffffff;
@@ -17,10 +17,10 @@
   --color-info: #4285f4;
   --color-warning: #f9ab00;
   --color-error: #d93025;
-  --color-link: #1a73e8;
+  --color-link: #0b57d0;
   --chart-merged: #34a853;
   --chart-in-review: #4285f4;
-  --chart-abandoned: #fbbc04;
+  --chart-abandoned: #80868b;
   --chart-unknown: #9aa0a6;
   --chart-bar: #4285f4;
   --mesh-base: #f8f9fa;
@@ -30,6 +30,24 @@
   --mesh-red: rgba(234, 67, 53, 0.1);
   --gradient-from: #1767d1;
   --gradient-to: #679ef5;
+  /* Design C — Chromium logo blues (decorative only; never used as text color). */
+  --c1: #1967d2;
+  --c2: #1a73e8;
+  --c3: #669df6;
+  --c4: #aecbfa;
+  /* Design C — Material tonal surfaces. */
+  --m1: #f7f9fc;
+  --m2: #eef2fa;
+  --m3: #e3eaf8;
+  --mline: #dde3ec;
+  /* Design C — chip and badge pairs (all >= 4.5:1 on their own background). */
+  --color-kind: #8430ce;
+  --color-kind-weak: #f3e8fd;
+  --color-badge-ok: #137333;
+  --color-success-weak: #e6f4ea;
+  --color-badge-off: #5f6368;
+  --color-gray-weak: #f1f3f4;
+  --color-primary-weak: #d3e3fd;
 }
 
 .dark {
@@ -49,7 +67,7 @@
   --color-link: #8ab4f8;
   --chart-merged: #81c995;
   --chart-in-review: #8ab4f8;
-  --chart-abandoned: #fdd663;
+  --chart-abandoned: #bdc1c6;
   --chart-unknown: #9aa0a6;
   --chart-bar: #8ab4f8;
   --mesh-base: #292a2d;
@@ -59,6 +77,22 @@
   --mesh-red: rgba(242, 139, 130, 0.08);
   --gradient-from: #8ab4f8;
   --gradient-to: #c6dafc;
+  /* Design C — dark-mode counterparts (blue scale reversed: c1<->c4, c2<->c3). */
+  --c1: #aecbfa;
+  --c2: #669df6;
+  --c3: #1a73e8;
+  --c4: #1967d2;
+  --m1: #282a2d;
+  --m2: #303134;
+  --m3: #3c4043;
+  --mline: #3c4043;
+  --color-kind: #d7aefb;
+  --color-kind-weak: #3a2d4d;
+  --color-badge-ok: #81c995;
+  --color-success-weak: #1f3529;
+  --color-badge-off: #bdc1c6;
+  --color-gray-weak: #3c4043;
+  --color-primary-weak: #28374e;
 }
 
 @theme inline {
@@ -81,6 +115,21 @@
   --color-chart-abandoned: var(--chart-abandoned);
   --color-chart-unknown: var(--chart-unknown);
   --color-chart-bar: var(--chart-bar);
+  --color-c1: var(--c1);
+  --color-c2: var(--c2);
+  --color-c3: var(--c3);
+  --color-c4: var(--c4);
+  --color-m1: var(--m1);
+  --color-m2: var(--m2);
+  --color-m3: var(--m3);
+  --color-mline: var(--mline);
+  --color-kind: var(--color-kind);
+  --color-kind-weak: var(--color-kind-weak);
+  --color-badge-ok: var(--color-badge-ok);
+  --color-success-weak: var(--color-success-weak);
+  --color-badge-off: var(--color-badge-off);
+  --color-gray-weak: var(--color-gray-weak);
+  --color-primary-weak: var(--color-primary-weak);
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -155,6 +204,37 @@ a {
   );
 }
 
+/* Design C patch table — the five-column ledger grid, shared by the header row
+   and every data row. `grid-template-areas` is what lets the desktop layout and
+   the folded mobile stack reuse one set of cells, and it is unwieldy as a
+   Tailwind arbitrary value, so the grid lives here and the components only
+   attach class names. Declared in the `components` layer so Tailwind utilities
+   (e.g. the header's `max-[780px]:hidden`) still win over it. */
+@layer components {
+  .patch-grid {
+    display: grid;
+    align-items: baseline;
+    gap: 4px 14px;
+    grid-template-columns: 88px 78px minmax(0, 1fr) 116px 104px;
+    grid-template-areas: "date id title author status";
+  }
+
+  /* Below 780px the header row is hidden and each row folds into three lines:
+     title, then date/status, then review id/author. The bound is exclusive to
+     match Tailwind's `max-[780px]:` variant, which the components use for the
+     rest of the fold — an inclusive bound here would fold the rows one pixel
+     before the header disappeared. */
+  @media (width < 780px) {
+    .patch-grid-fold {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "title title"
+        "date status"
+        "id author";
+    }
+  }
+}
+
 /* typography 플러그인이 인라인 코드에 붙이는 백틱(`) 제거 */
 .prose :where(code):not(:where([class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"] *))::after {
@@ -168,6 +248,18 @@ a {
 }
 .prose :where(a):not(:where([class~="not-prose"] *)):hover {
   text-decoration: underline;
+}
+
+/* Prose inline code and h2 divider — Design C tonal surfaces. Code BLOCKS
+   (`pre`) are deliberately left to the global `pre` rule below: they stay
+   dark in both themes because that's what the highlight.js atom-one-dark
+   token palette is designed for — do not "restore" a --m2 background here. */
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  background: var(--m3);
+  border-radius: 6px;
+}
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  border-bottom: 1px solid var(--mline);
 }
 
 /* 콘텐츠 넘침 방지를 위한 스타일 */

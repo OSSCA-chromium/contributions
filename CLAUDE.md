@@ -44,7 +44,7 @@ Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists
 
 ## Data conventions
 
-Contribution frontmatter (see `data/contributions/template.md`): `title`, `date` (YYYY-MM-DD), `author` (GitHub username), `contribution_url`, `labels` (array), `status` (`in review` | `merged` | `abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`.
+Contribution frontmatter (see `data/contributions/template.md`): `title`, `date` (YYYY-MM-DD), `author` (GitHub username), `contribution_url`, `module` (single string — Chromium module/directory), `kind` (single string — change type, e.g. fix/feature/refactor/test/docs/cleanup; `module`/`kind` replace the old `labels` array), `status` (`merged` | `abandoned`; legacy files `6520751.md` and `8348446.md` still use `in review`). Optional fields: `repo` (only when not `chromium/src`, e.g. `devtools/devtools-frontend`), `issue` (this repo's assignment issue number), `crbug` (crbug ID from the commit message's `Bug:` footer), `related` (review ids of sibling patches). Copy `template.md` to `{ChromiumReviewId}.md` — the filename must equal the review id in `contribution_url`.
 
 - `npm run validate:data` gates frontmatter in CI. A malformed `date` (e.g. a typo like `2025-05-D8`) parses to `NaN` and silently breaks date sorting — keep dates valid `YYYY-MM-DD`.
 - `gray-matter` may hand back `date` as a `Date` object, so normalize with `new Date(c.date)` before comparing.

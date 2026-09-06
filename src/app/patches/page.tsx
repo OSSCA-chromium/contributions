@@ -12,16 +12,14 @@ export default function PatchesPage() {
   const contributions = getAllContributions();
   const items = buildSearchIndex(contributions);
 
-  return (
-    <div className="mx-auto max-w-7xl p-4">
-      {items.length > 0 ? (
-        <ContributionSearch items={items} />
-      ) : (
-        <div className="text-center py-12 text-on-surface">
-          <p className="mb-4">아직 등록된 컨트리뷰션이 없습니다.</p>
-          <p>학생들의 컨트리뷰션이 이곳에 등록될 예정입니다.</p>
-        </div>
-      )}
-    </div>
-  );
+  if (items.length === 0) {
+    return (
+      <div className="text-center py-12 text-on-surface">
+        <p className="mb-4">아직 등록된 컨트리뷰션이 없습니다.</p>
+        <p>학생들의 컨트리뷰션이 이곳에 등록될 예정입니다.</p>
+      </div>
+    );
+  }
+
+  return <ContributionSearch items={items} />;
 }

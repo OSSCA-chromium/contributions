@@ -5,16 +5,53 @@ import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
-import ContributionCard from '@/components/ContributionCard';
 import ContributorAvatar from '@/components/ContributorAvatar';
+import PatchTable from '@/components/PatchTable';
 import YearSelector from '@/components/YearSelector';
+
+// Accent dot color per strip cell, left to right — mirrors the mockup's
+// nth-child(1..4) --acc assignment (c1 = strongest blue, c4 = palest).
+const STRIP_ACCENTS = ['bg-c1', 'bg-c2', 'bg-c3', 'bg-c4'];
+
+// Divider per cell: a plain 4-col row only needs a left border on cells
+// 2-4. The mockup folds the grid to 2 cols at <=620px (cell 3 moves to
+// its own row) and to 1 col at <=380px (every cell but the first is on
+// its own row), swapping the left border for a top border at each fold.
+const STRIP_BORDERS = [
+  '',
+  'border-l border-mline max-[380px]:border-l-0 max-[380px]:border-t',
+  'border-l border-mline max-[620px]:border-l-0 max-[620px]:border-t',
+  'border-l border-mline max-[380px]:border-l-0 max-[620px]:border-t',
+];
+
+// Shared "SEC-H" header: small-caps section title + a right-aligned link.
+function SectionHeader({
+  title,
+  href,
+  linkLabel,
+}: {
+  title: string;
+  href: string;
+  linkLabel: string;
+}) {
+  return (
+    <div className="mb-3.5 flex items-baseline justify-between gap-3">
+      <h2 className="text-[12px] font-semibold uppercase tracking-[0.09em] text-on-surface-variant">
+        {title}
+      </h2>
+      <Link href={href} className="text-[13.5px] font-medium text-link hover:underline">
+        {linkLabel}
+      </Link>
+    </div>
+  );
+}
 
 export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   const years = useMemo(() => getAvailableYears(items), [items]);
   const [year, setYear] = useState(DEFAULT_YEAR);
   const filtered = useMemo(() => filterByYear(items, year), [items, year]);
   const stats = useMemo(() => computeStats(filtered), [filtered]);
-  const recent = filtered.slice(0, 3);
+  const recent = filtered.slice(0, 5);
   const contributors = useMemo(() => {
     // Most-recently-active first: each author's max contribution date, desc.
     const lastActive = new Map<string, number>();
@@ -30,93 +67,64 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   }, [filtered]);
 
   const yearLabel = year === 'all' ? '전체' : year;
+  const merged = stats.byStatus.find((s) => s.status === 'merged')?.count ?? 0;
+  const strip = [
+    { value: stats.total, label: '누적 기여' },
+    { value: merged, label: '머지 완료' },
+    { value: stats.moduleCount, label: '모듈' },
+    { value: stats.contributorCount, label: '참여 멘티' },
+  ];
 
   return (
     <>
-      <section className="mb-10">
-        <div className="brand-mesh rounded-[32px] px-6 py-8 sm:px-10 sm:py-10 mb-6">
-          <h1 className="font-display brand-gradient-text max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            OSSCA Chromium Contributions
-          </h1>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/docs"
-              className="rounded-full bg-primary px-5 py-2.5 font-medium text-on-primary transition-opacity hover:opacity-90"
-            >
-              가이드 시작하기
-            </Link>
-            <Link
-              href="/patches"
-              className="rounded-full border border-outline px-5 py-2.5 font-medium text-on-surface transition-colors hover:bg-surface-variant"
-            >
-              컨트리뷰션 보기
-            </Link>
-          </div>
+      <section>
+        <h1 className="mb-2.5 text-[27px] font-bold leading-[1.3] tracking-[-0.025em]">
+          Chromium 기여 아카이브
+        </h1>
+        <p className="max-w-[66ch] text-[14.5px] text-on-surface-variant">
+          오픈소스 컨트리뷰션 아카데미 Chromium 팀이 실제로 Chromium 코드베이스에 올린 패치를
+          기록하는 아카이브입니다. 각 기여는 과제 이슈에서 출발해 crbug, Gerrit 리뷰를 거쳐
+          머지되기까지의 과정과, 멘티가 직접 쓴 회고를 함께 담고 있습니다.
+        </p>
+        <div className="mt-4">
+          <YearSelector years={years} value={year} onChange={setYear} />
         </div>
-        <YearSelector years={years} value={year} onChange={setYear} />
       </section>
 
       {filtered.length === 0 ? (
-        <p className="text-on-surface">
+        <p className="mt-[22px] text-on-surface">
           {year === 'all'
             ? '아직 등록된 컨트리뷰션이 없습니다.'
             : `${yearLabel}년 컨트리뷰션이 아직 없습니다.`}
         </p>
       ) : (
         <>
-          <section className="mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-primary">{stats.total}</div>
-                <div className="text-sm text-on-surface-variant">총 컨트리뷰션</div>
+          <div className="mt-[22px] grid grid-cols-4 overflow-hidden rounded-2xl bg-m1 max-[620px]:grid-cols-2 max-[380px]:grid-cols-1">
+            {strip.map((cell, i) => (
+              <div key={cell.label} className={`px-[18px] py-4 ${STRIP_BORDERS[i]}`}>
+                <span
+                  aria-hidden="true"
+                  className={`mt-[1.5px] mb-[11px] ml-[1.5px] block h-[9px] w-[9px] rounded-full ring-[1.5px] ring-c1 ${STRIP_ACCENTS[i]}`}
+                />
+                <b className="block text-[27px] font-bold leading-[1.15] tracking-[-0.03em] tabular-nums">
+                  {cell.value}
+                </b>
+                <span className="text-[12.5px] text-on-surface-variant">{cell.label}</span>
               </div>
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-success">
-                  {Math.round(stats.mergedRatio * 100)}%
-                </div>
-                <div className="text-sm text-on-surface-variant">Merged 비율</div>
-              </div>
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-info">{stats.contributorCount}</div>
-                <div className="text-sm text-on-surface-variant">기여자 수</div>
-              </div>
-            </div>
-            <div className="mt-4">
-              <Link href="/stats" className="text-link hover:underline font-medium inline-flex items-center">
-                통계 자세히 보기 →
-              </Link>
-            </div>
+            ))}
+          </div>
+
+          <section className="mt-[34px]">
+            <SectionHeader title="최근 기여" href="/patches" linkLabel="전체 목록 →" />
+            <PatchTable items={recent} />
           </section>
 
-          <section className="mb-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
-              Recent contributions
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recent.map((item) => (
-                <ContributionCard key={item.slug} contribution={item} />
-              ))}
-            </div>
-            <div className="mt-6">
-              <Link href="/patches" className="text-link hover:underline font-medium inline-flex items-center">
-                모든 컨트리뷰션 보기 →
-              </Link>
-            </div>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
-              Contributors
-            </h2>
+          <section className="mt-[34px]">
+            <SectionHeader title="Contributors" href="/contributors" linkLabel="전체 보기 →" />
             <div className="flex flex-wrap gap-[18px]">
               {contributors.map((username) => (
                 <ContributorAvatar key={username} username={username} size={48} linkToProfile />
               ))}
-            </div>
-            <div className="mt-6">
-              <Link href="/contributors" className="text-link hover:underline font-medium inline-flex items-center">
-                전체 보기 →
-              </Link>
             </div>
           </section>
         </>

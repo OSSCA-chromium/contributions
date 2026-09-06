@@ -38,7 +38,6 @@ interface MarkdownContent {
   contentHtml: string;
   excerpt: string;
   contribution_url?: string;
-  labels?: string[];
   status?: string;
 }
 
@@ -168,7 +167,6 @@ async function getMarkdownContent(filePath: string): Promise<MarkdownContent | n
       contentHtml,
       excerpt,
       contribution_url: matterResult.data.contribution_url,
-      labels: matterResult.data.labels,
       status: matterResult.data.status,
     };
   } catch (error) {

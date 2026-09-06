@@ -17,6 +17,14 @@ export function getYear(date: unknown): string {
   return String(kst.getUTCFullYear());
 }
 
+// gray-matter turns an unquoted YAML `date:` into a Date, which React refuses
+// to render, so display code normalizes to the plain YYYY-MM-DD of the design.
+// A malformed date must not throw here — validate:data is what reports those.
+export function isoDay(date: string): string {
+  const time = new Date(date).getTime();
+  return Number.isNaN(time) ? String(date) : new Date(time).toISOString().slice(0, 10);
+}
+
 // Years actually present in the data, in descending order (DEFAULT_YEAR not forced).
 export function getDataYears(items: { date: unknown }[]): string[] {
   const set = new Set<string>();

@@ -16,3 +16,13 @@ test('in review 배지는 줄바꿈되지 않는다', () => {
   render(<StatusBadge status="in review" />);
   expect(screen.getByText('IN REVIEW')).toHaveClass('whitespace-nowrap');
 });
+
+test('abandoned 상태를 렌더한다', () => {
+  render(<StatusBadge status="abandoned" />);
+  expect(screen.getByText('ABANDONED')).toBeInTheDocument();
+});
+
+test('in review 상태를 렌더한다', () => {
+  render(<StatusBadge status="in review" />);
+  expect(screen.getByText('IN REVIEW')).toBeInTheDocument();
+});

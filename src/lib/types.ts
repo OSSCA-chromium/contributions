@@ -1,4 +1,4 @@
-export type ContributionStatus = 'in review' | 'merged' | 'abandoned';
+export type ContributionStatus = 'merged' | 'abandoned' | 'in review';
 
 export interface Contribution {
   slug: string;
@@ -6,18 +6,36 @@ export interface Contribution {
   date: string;
   author: string;
   contributionUrl?: string;
-  labels: string[];
+  // Two-axis classification: Chromium module/directory + change kind.
+  module: string;
+  kind: string;
+  // Gerrit project, e.g. "chromium/src" or "devtools/devtools-frontend".
+  repo: string;
+  issue?: number;
+  crbug?: number;
+  related: number[];
+  // Slugs of related contributions (explicit `related` + shared issue/crbug).
+  relatedSlugs: string[];
   status?: ContributionStatus;
   excerpt: string;
   content?: string;
   contentHtml?: string;
 }
 
+// Everything the list page needs client-side: the two filter axes, the fields
+// PatchRow renders, and the related/issue/crbug keys PatchTable groups on —
+// but never the markdown body.
 export interface SearchIndexItem {
   slug: string;
   title: string;
   author: string;
-  labels: string[];
+  contributionUrl?: string;
+  module: string;
+  kind: string;
+  repo: string;
+  issue?: number;
+  crbug?: number;
+  relatedSlugs: string[];
   status?: ContributionStatus;
   date: string;
   excerpt: string;
@@ -29,6 +47,7 @@ export interface ContributorSummary {
   total: number;
   merged: number;
   inReview: number;
+  abandoned: number;
   // ISO date of the contributor's most recent contribution (max date).
   lastActive: string;
 }
@@ -40,6 +59,8 @@ export interface Stats {
   topContributors: { username: string; count: number }[];
   contributorCount: number;
   mergedRatio: number;
+  moduleCount: number;
+  byModule: { module: string; count: number }[];
 }
 
 export interface DocMeta {

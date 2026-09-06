@@ -15,7 +15,7 @@ function StatBadge({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full font-medium whitespace-nowrap ${className}`}
+      className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.05em] rounded-full whitespace-nowrap ${className}`}
     >
       <span>{label}</span>
       <span className="tabular-nums text-center inline-block min-w-[2ch]">
@@ -25,38 +25,46 @@ function StatBadge({
   );
 }
 
-// Directory list row for a single contributor. TOTAL/MERGED/IN REVIEW are pill
-// badges with inline counts (same status colors as StatusBadge). When the
-// username is a valid GitHub handle the whole row links to the profile page.
+// Directory list row for a single contributor. TOTAL/MERGED are always shown;
+// IN REVIEW/ABANDONED only appear when non-zero, so a contributor with no
+// in-review or abandoned work doesn't carry two all-zero badges. Colors reuse
+// StatusBadge's design C pairs (merged/in review/abandoned) so the same status
+// reads the same way everywhere. When the username is a valid GitHub handle
+// the whole row links to the profile page.
 export default function ContributorRow({
   summary,
 }: {
   summary: ContributorSummary;
 }) {
-  const { username, isValidGithubUser, total, merged, inReview, lastActive } =
+  const { username, isValidGithubUser, total, merged, inReview, abandoned, lastActive } =
     summary;
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex items-center gap-2 bg-surface border border-outline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
+    <div className="flex items-center gap-2 bg-m1 border border-mline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
       <ContributorAvatar username={username} size={32} />
       <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
 
-      <StatBadge
-        label="TOTAL"
-        count={total}
-        className="bg-on-surface text-surface"
-      />
+      <StatBadge label="TOTAL" count={total} className="bg-m3 text-badge-off" />
       <StatBadge
         label="MERGED"
         count={merged}
-        className="bg-success text-white dark:text-black"
+        className="bg-success-weak text-badge-ok"
       />
-      <StatBadge
-        label="IN REVIEW"
-        count={inReview}
-        className="bg-primary text-on-primary"
-      />
+      {inReview > 0 && (
+        <StatBadge
+          label="IN REVIEW"
+          count={inReview}
+          className="bg-primary-weak text-primary"
+        />
+      )}
+      {abandoned > 0 && (
+        <StatBadge
+          label="ABANDONED"
+          count={abandoned}
+          className="bg-gray-weak text-badge-off"
+        />
+      )}
 
       {updated && (
         <span className="hidden sm:inline text-xs text-on-surface-variant whitespace-nowrap">

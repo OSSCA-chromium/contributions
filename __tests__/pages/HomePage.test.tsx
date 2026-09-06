@@ -25,18 +25,18 @@ describe('홈페이지', () => {
     );
 
     // 히어로 타이틀과 빈 상태 안내 체크
-    expect(screen.getByText('OSSCA Chromium Contributions')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'Chromium 기여 아카이브' })).toBeInTheDocument();
     expect(screen.getByText('2026년 컨트리뷰션이 아직 없습니다.')).toBeInTheDocument();
   });
 
-  it('데이터가 있으면 최근 컨트리뷰션 섹션이 있습니다', () => {
+  it('데이터가 있으면 최근 기여 섹션이 있습니다', () => {
     const mockContributions = [
       {
         slug: 'test-contribution-1',
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
-        labels: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -48,7 +48,7 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Recent contributions')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: '최근 기여' })).toBeInTheDocument();
   });
 
   it('컨트리뷰션이 있을 경우 목록이 표시됩니다', () => {
@@ -59,7 +59,7 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
-        labels: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
       {
@@ -67,7 +67,7 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 2',
         date: '2026-01-02',
         author: '김철수',
-        labels: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 2 내용',
       },
     ];
@@ -90,7 +90,7 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
-        labels: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -102,7 +102,7 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Contributors')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'Contributors' })).toBeInTheDocument();
   });
 
   it('Contributors 섹션에 전체 보기 링크가 있습니다', () => {
@@ -112,7 +112,7 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: 'octocat',
-        labels: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];

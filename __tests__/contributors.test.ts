@@ -15,3 +15,11 @@ test('getContributorSummaries는 각 기여자에 lastActive(ISO date)를 포함
     expect(s.lastActive).toMatch(/^\d{4}-\d{2}-\d{2}/);
   }
 });
+
+test('getContributorSummaries는 abandoned 카운트를 포함하고 merged+inReview+abandoned가 total을 넘지 않는다', () => {
+  const summaries = getContributorSummaries();
+  for (const s of summaries) {
+    expect(typeof s.abandoned).toBe('number');
+    expect(s.merged + s.inReview + s.abandoned).toBeLessThanOrEqual(s.total);
+  }
+});

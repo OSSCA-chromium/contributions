@@ -1,6 +1,7 @@
 import {
   validateFrontmatter,
   extractRawDate,
+  extractReviewId,
 } from '../../scripts/validate-contributions';
 
 const valid = {
@@ -8,8 +9,9 @@ const valid = {
   date: '2025-05-08',
   author: 'octocat',
   contribution_url: 'https://crrev.com/c/123',
-  labels: ['docs'],
-  status: 'in review',
+  module: 'docs',
+  kind: 'fix',
+  status: 'merged',
 };
 
 test('유효한 frontmatter는 위반이 없다', () => {
@@ -45,14 +47,54 @@ test('필수 필드 누락을 잡는다', () => {
   expect(errs.some((e) => e.includes('title'))).toBe(true);
 });
 
-test('labels가 배열이 아니면 잡는다', () => {
-  const errs = validateFrontmatter({ ...valid, labels: 'docs' });
+test('폐기된 labels 필드를 거부한다', () => {
+  const errs = validateFrontmatter({ ...valid, labels: ['docs'] });
   expect(errs.some((e) => e.includes('labels'))).toBe(true);
 });
 
-test('labels에 빈 문자열 원소가 있으면 잡는다', () => {
-  const errs = validateFrontmatter({ ...valid, labels: ['docs', ''] });
-  expect(errs.some((e) => e.includes('labels'))).toBe(true);
+test('module/kind 누락·빈 값·배열을 잡는다', () => {
+  const { module, ...noModule } = valid; // same unused-rest pattern as the noTitle test above
+  expect(validateFrontmatter(noModule).some((e) => e.includes('module'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, kind: '' }).some((e) => e.includes('kind'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, module: ['docs'] }).some((e) => e.includes('module'))).toBe(true);
+});
+
+test('status는 merged/abandoned/in review만 허용한다', () => {
+  expect(validateFrontmatter({ ...valid, status: 'abandoned' })).toEqual([]);
+  expect(validateFrontmatter({ ...valid, status: 'in review' })).toEqual([]);
+  expect(validateFrontmatter({ ...valid, status: 'draft' }).some((e) => e.includes('status'))).toBe(true);
+});
+
+test('허용되지 않은 호스트·review id 없는 URL을 잡는다', () => {
+  expect(
+    validateFrontmatter({ ...valid, contribution_url: 'https://example.com/c/123' }).some((e) =>
+      e.includes('contribution_url')
+    )
+  ).toBe(true);
+  expect(
+    validateFrontmatter({ ...valid, contribution_url: 'https://crrev.com/about' }).some((e) =>
+      e.includes('contribution_url')
+    )
+  ).toBe(true);
+});
+
+test('issue/crbug/related/repo 형식을 검증한다', () => {
+  expect(validateFrontmatter({ ...valid, issue: 42, crbug: 5386, related: [100, 200], repo: 'chromium/src' })).toEqual([]);
+  expect(validateFrontmatter({ ...valid, issue: 0 }).some((e) => e.includes('issue'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, crbug: 'x' }).some((e) => e.includes('crbug'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, related: [1.5] }).some((e) => e.includes('related'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, repo: 7 }).some((e) => e.includes('repo'))).toBe(true);
+});
+
+test('extractReviewId는 crrev와 full URL 모두에서 id를 뽑는다', () => {
+  expect(extractReviewId('https://crrev.com/c/8146040')).toBe('8146040');
+  expect(
+    extractReviewId('https://chromium-review.googlesource.com/c/chromium/src/+/8146040')
+  ).toBe('8146040');
+  expect(
+    extractReviewId('https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/1000')
+  ).toBe('1000');
+  expect(extractReviewId('https://crrev.com/about')).toBeUndefined();
 });
 
 test('존재하지 않는 날짜(형식만 맞음)를 잡는다', () => {

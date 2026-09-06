@@ -11,8 +11,8 @@ export default function SchedulePage() {
   const meetings = getAllMeetings();
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
-      <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface mb-6">일정</h1>
+    <div>
+      <h1 className="font-display mb-6 text-3xl font-semibold tracking-tight text-on-surface">일정</h1>
       <ScheduleView meetings={meetings} />
     </div>
   );

@@ -1,10 +1,16 @@
 ---
 title: "Gerrit 에 올린 commit 제목을 입력하세요"
-date: YYYY-MM-DD
+date: YYYY-MM-DD # merged/abandoned로 확정된 날짜
 author: GitHubId # github.com/GitHubId
-contribution_url: https://crrev.com/c/XXXXX # Add XXXXX from https://chromium-review.googlesource.com/c/chromium/src/+/XXXXX
-labels: ["label1", "label2"] # directory name and detail
-status: in review # in review, merged, abandoned 중 하나 선택
+contribution_url: https://crrev.com/c/XXXXX # crrev 단축 URL 권장
+status: merged # merged, abandoned 중 하나 선택
+module: base # 패치가 속한 Chromium 모듈/디렉토리 1개
+kind: fix # 변경 종류 1개 (예: fix, feature, refactor, test, docs, cleanup)
+# --- 아래는 선택 항목: 해당할 때만 남기고 아니면 줄을 지우세요 ---
+# repo: devtools/devtools-frontend # chromium/src가 아닐 때만
+# issue: 42 # 이 저장소의 과제 이슈 번호
+# crbug: 538651940 # 관련 crbug ID (commit message의 Bug: 푸터)
+# related: [8146041] # 관련 패치의 리뷰 ID 목록
 ---
 
 간략한 소개 문장을 작성하세요. 이 컨트리뷰션이 무엇에 관한 것인지 설명합니다.

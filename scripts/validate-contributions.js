@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'labels', 'status'];
-const STATUSES = ['in review', 'merged', 'abandoned'];
+const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'module', 'kind', 'status'];
+const STATUSES = ['merged', 'abandoned', 'in review'];
+const ALLOWED_HOSTS = ['crrev.com', 'chromium-review.googlesource.com'];
 
 // YYYY-MM-DD 문자열이 실제로 존재하는 날짜인지 확인(2025-13-40, 2025-02-30 등 배제)
 function isRealDate(str) {
@@ -16,6 +17,19 @@ function isRealDate(str) {
     dt.getUTCMonth() === mo - 1 &&
     dt.getUTCDate() === d
   );
+}
+
+// Review id from either URL form: crrev.com/c/<id> or
+// chromium-review.googlesource.com/c/<project>/+/<id>.
+function extractReviewId(url) {
+  const m =
+    /^https:\/\/crrev\.com\/c\/(\d+)/.exec(url) ||
+    /^https:\/\/chromium-review\.googlesource\.com\/c\/.+?\/\+\/(\d+)/.exec(url);
+  return m ? m[1] : undefined;
+}
+
+function isPositiveInt(v) {
+  return Number.isInteger(v) && v > 0;
 }
 
 // frontmatter 객체를 검증해 위반 사유 문자열 배열을 반환(빈 배열이면 통과)
@@ -48,6 +62,10 @@ function validateFrontmatter(data) {
         errors.push('contribution_url must be a valid URL');
       } else if (url.protocol !== 'https:') {
         errors.push('contribution_url must use https');
+      } else if (!ALLOWED_HOSTS.includes(url.hostname)) {
+        errors.push(`contribution_url host must be one of: ${ALLOWED_HOSTS.join(', ')}`);
+      } else if (extractReviewId(data.contribution_url) === undefined) {
+        errors.push('contribution_url must contain a review id');
       }
     }
   }
@@ -61,13 +79,29 @@ function validateFrontmatter(data) {
   }
 
   if (data.labels !== undefined) {
-    if (!Array.isArray(data.labels) || data.labels.length === 0) {
-      errors.push('labels must be a non-empty array');
-    } else if (
-      !data.labels.every((l) => typeof l === 'string' && l.trim() !== '')
+    errors.push('labels is replaced by module/kind — remove it');
+  }
+  for (const key of ['module', 'kind']) {
+    if (
+      data[key] !== undefined &&
+      (typeof data[key] !== 'string' || data[key].trim() === '')
     ) {
-      errors.push('labels must contain only non-empty strings');
+      errors.push(`${key} must be a single non-empty string`);
     }
+  }
+  if (data.repo !== undefined && typeof data.repo !== 'string') {
+    errors.push('repo must be a string');
+  }
+  for (const key of ['issue', 'crbug']) {
+    if (data[key] !== undefined && !isPositiveInt(data[key])) {
+      errors.push(`${key} must be a positive integer`);
+    }
+  }
+  if (
+    data.related !== undefined &&
+    (!Array.isArray(data.related) || !data.related.every(isPositiveInt))
+  ) {
+    errors.push('related must be an array of positive integers');
   }
 
   if (data.status !== undefined && !STATUSES.includes(data.status)) {
@@ -108,6 +142,15 @@ function validateAll(dir) {
       const rawDate = extractRawDate(parsed.matter);
       if (rawDate !== undefined) data.date = rawDate;
       errors = validateFrontmatter(data);
+      const expectedId = file.replace(/\.md$/, '');
+      if (typeof parsed.data.contribution_url === 'string') {
+        const gotId = extractReviewId(parsed.data.contribution_url);
+        if (gotId !== undefined && gotId !== expectedId) {
+          errors.push(
+            `filename must match contribution_url review id (${gotId})`
+          );
+        }
+      }
     } catch (e) {
       errors = [`YAML parse error: ${e.message}`];
     }
@@ -116,7 +159,7 @@ function validateAll(dir) {
   return results;
 }
 
-module.exports = { validateFrontmatter, validateAll, extractRawDate };
+module.exports = { validateFrontmatter, validateAll, extractRawDate, extractReviewId };
 
 // 직접 실행 시 검사 + 결과 출력 + exit
 if (require.main === module) {
