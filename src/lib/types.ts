@@ -1,4 +1,4 @@
-export type ContributionStatus = 'in review' | 'merged' | 'draft' | 'abandoned';
+export type ContributionStatus = 'in review' | 'merged' | 'draft';
 
 export interface Contribution {
   slug: string;
