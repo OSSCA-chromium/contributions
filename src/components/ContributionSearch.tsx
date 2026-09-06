@@ -12,7 +12,7 @@ const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
   { value: 'all', label: '전체' },
   { value: 'in review', label: 'In Review' },
   { value: 'merged', label: 'Merged' },
-  { value: 'draft', label: 'Draft' },
+  { value: 'abandoned', label: 'Abandoned' },
 ];
 
 export default function ContributionSearch({ items }: { items: SearchIndexItem[] }) {

@@ -20,7 +20,7 @@
   --color-link: #1a73e8;
   --chart-merged: #34a853;
   --chart-in-review: #4285f4;
-  --chart-draft: #fbbc04;
+  --chart-abandoned: #fbbc04;
   --chart-unknown: #9aa0a6;
   --chart-bar: #4285f4;
   --mesh-base: #f8f9fa;
@@ -49,7 +49,7 @@
   --color-link: #8ab4f8;
   --chart-merged: #81c995;
   --chart-in-review: #8ab4f8;
-  --chart-draft: #fdd663;
+  --chart-abandoned: #fdd663;
   --chart-unknown: #9aa0a6;
   --chart-bar: #8ab4f8;
   --mesh-base: #292a2d;
@@ -78,7 +78,7 @@
   --color-link: var(--color-link);
   --color-chart-merged: var(--chart-merged);
   --color-chart-in-review: var(--chart-in-review);
-  --color-chart-draft: var(--chart-draft);
+  --color-chart-abandoned: var(--chart-abandoned);
   --color-chart-unknown: var(--chart-unknown);
   --color-chart-bar: var(--chart-bar);
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
