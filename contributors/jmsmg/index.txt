@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/371cbb432349cb0d.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"HjdYMBgZhm-bovUyvY4ps","p":"/contributions","c":["","contributors","jmsmg",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","jmsmg","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","jmsmg","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"_LI012dDIQQ6P_OMp-QRo","p":"/contributions","c":["","contributors","jmsmg",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","jmsmg","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","jmsmg","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,78 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-c3c422177f6bf124.js"],"default"]
-1b:T15fb,
+1b:T18be,
+결제 방식 식별자(PMI) 응답에 `rel="payment-method-manifest"` Link 헤더가 둘 이상 오면 매니페스트 다운로드를 실패시키도록 고쳤습니다(crbug.com/545843242). 직전 기여인 [8336867](https://crrev.com/c/8336867)의 쌍둥이 이슈로, 같은 함수를 다루면서 그때 배운 WPT baseline 처리를 처음부터 CL에 포함한 것이 이번의 차이입니다.
+
+## 문제 설명
+
+- issue url: https://crbug.com/545843242
+- [Payment Method Manifest 스펙](https://w3c.github.io/payment-method-manifest/#fetch-pmm)의 "fetch payment method manifest" 알고리즘은 응답에서 `rel="payment-method-manifest"`인 link 헤더를 **모두 추출한 뒤 그 개수가 1이 아니면 실패**하도록 규정합니다.
+- 그러나 `PaymentManifestDownloader::OnURLLoaderCompleteInternal()`은 `SplitLinkHeader()` 루프 안에서 **첫 매칭을 찾자마자** URL 검증과 다운로드를 시작하고 `return` 했습니다. 뒤에 매니페스트 링크가 더 있어도 세지 않으므로, 서버가 서로 다른 매니페스트를 가리키는 링크를 여러 개 보내도 브라우저가 임의로 첫 번째를 따라갔습니다.
+- 이 동작은 이미 WPT에 기록되어 있었습니다. `external/wpt/payment-method-manifest/link-header-selection.https.window.js`의 서브테스트 5개 중 "Multiple rel=payment-method-manifest link headers cause fetch to abort" 하나만 실패하고 있었고, 그 실패가 `-expected.txt` baseline에 "알려진 실패"로 체크인되어 있었습니다.
+
+## 해결 내용
+
+루프의 책임을 "수집"으로 좁히고, 개수 판정을 루프 밖으로 꺼냈습니다.
+
+```diff
++  std::vector<GURL> manifest_urls;
+   for (const auto& value : link_header_util::SplitLinkHeader(link_header)) {
+     ...
+     if (std::ranges::contains(rel_parts, "payment-method-manifest")) {
+-      GURL payment_method_manifest_url = final_url.Resolve(*link_url);
+-      // ... 검증 후 InitiateDownload(...); return;
++      manifest_urls.push_back(final_url.Resolve(*link_url));
+     }
+   }
++
++  if (manifest_urls.empty()) { /* 기존 kNoLinkHeader 에러 */ }
++
++  if (manifest_urls.size() > 1) {
++    // "If manifest_links's size is not 1, then return failure."
++    // https://w3c.github.io/payment-method-manifest/#fetch-pmm
++    RespondWithError(errors::kMultipleLinkHeaders, final_url, *log_,
++                     std::move(download->callback));
++    return;
++  }
+```
+
+1. 개수는 **rel 기준으로** 셉니다. URL 유효성 검사(HTTPS 여부, same-origin)는 스펙 순서대로 링크가 하나로 확정된 뒤에만 수행하므로, 유효하지 않은 URL이 섞여 있어도 "여러 개"라는 사실이 먼저 보고됩니다.
+2. 새 에러 문자열 `errors::kMultipleLinkHeaders`를 `native_error_strings`에 기존 `kNoLinkHeader` 옆에 추가했습니다. 두 에러 모두 `RespondWithError()`가 `$1`을 URL로 치환하는 같은 경로를 씁니다.
+3. 링크가 정확히 하나일 때의 동작(URL 검증 → same-origin 검사 → `InitiateDownload`)은 들여쓰기만 바뀌고 그대로입니다.
+4. 낡은 WPT baseline을 삭제했습니다. 유일한 `[FAIL]` 항목이 바로 이 버그였으므로, 수정 후에는 테스트 전체가 통과해 baseline이 오히려 불일치를 만듭니다.
+
+## 테스트 방법
+
+TDD로 진행했고, 이번에는 "빨강"을 로그로 명확히 남겼습니다.
+
+1. 회귀 테스트 3개를 먼저 작성했습니다.
+   - `MultipleManifestLinksAreFailure`: 매니페스트 링크 2개 → 새 에러 메시지 기대
+   - `MultipleManifestLinksWithDifferentCaseAreFailure`: `rel=Payment-Method-Manifest` + `rel=payment-method-manifest` → 대소문자만 다른 중복도 2개로 셈 (직전 CL 8336867과 연결되는 케이스)
+   - `ManifestLinkAmongOtherLinks`: `stylesheet`, `next` 사이에 매니페스트 링크 1개 → 정상 진행
+2. 수정 전 실행: 앞의 두 개가 **FAILED**(첫 링크로 다운로드가 시작되어 에러 콜백이 오지 않음), 세 번째는 통과. 버그 재현과 회귀 방지 테스트가 각각 제 역할을 한다는 것을 확인했습니다.
+3. 수정 후: 새 테스트 3개 통과, `*ManifestDownloader*:*PaymentManifestParser*` 필터 **140/140 통과**.
+
+## 빌드 전략 메모
+
+직전 CL이 16시간 풀빌드를 유발한 경험(브랜치 base가 다르면 mtime이 바뀌어 5만 스텝 재빌드)이 있어, 이번에는 브랜치를 **빌드 트리와 같은 옛 base**에서 따고 직전에 머지된 8336867의 파일 두 개만 `git checkout <sha> -- <files>`로 가져와 TEMP 커밋으로 얹었습니다. 업로드 직전 `git rebase origin/main`을 하자 그 TEMP 커밋은 `patch contents already upstream`으로 자동 drop되어 단일 커밋만 남았습니다. 덕분에 증분 빌드 1분으로 검증을 마쳤습니다.
+
+또 하나, 테스트 바이너리를 에이전트 셸에서 직접 실행하면 `Check failed: !IsProcessBackgrounded()`로 전부 크래시합니다. tmux 세션에서 실행해야 정상 동작합니다.
+
+## 배운 점
+
+- **스펙의 알고리즘 순서가 곧 코드 구조입니다.** "모두 추출 → 개수 검사 → 하나를 따라감"이라는 문장을 그대로 옮기니 조기 `return`이 사라지고 함수가 오히려 읽기 쉬워졌습니다.
+- **WPT baseline은 미해결 버그 목록이기도 합니다.** `-expected.txt`에 남은 `[FAIL]` 항목은 "아직 안 고친 것"의 기록이므로, 다음 이슈를 찾는 단서로도 쓸 수 있습니다. 이번 CL의 근거 자체가 그 baseline이었습니다.
+- **인접 이슈는 별도 CL로 쪼개되 순서를 지키면 이득입니다.** 8336867에서 같은 함수를 이미 다뤄봤기 때문에 코드·테스트 픽스처·리뷰 관례를 그대로 재사용할 수 있었고, 먼저 머지된 덕분에 충돌도 없었습니다.
+
+## 참고 자료
+
+- issue url: https://crbug.com/545843242
+- gerrit url: https://crrev.com/c/8349386
+- [Payment Method Manifest — fetch payment method manifest](https://w3c.github.io/payment-method-manifest/#fetch-pmm)
+- 쌍둥이 이슈 CL: https://crrev.com/c/8336867
+- [components/payments/content/payment_manifest_downloader.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/payments/content/payment_manifest_downloader.cc)
+1c:T15fb,
 `PaymentManifestDownloader`가 HTTP `Link` 헤더에서 payment method manifest 관계를 찾을 때 rel 값을 대소문자 구분 없이 비교하도록 고쳤습니다(crbug.com/545645933). RFC 8288 위반을 스펙 대조로 직접 발굴한 버그이며, 리뷰 과정에서 WPT(Web Platform Tests)가 이 버그를 실제로 잡아내는지 리뷰어가 CQ로 검증하는 흥미로운 과정이 있었습니다.
 
 ## 문제 설명
@@ -81,7 +152,7 @@ Chromium은 통과하지 못하는 WPT의 실패 출력을 `-expected.txt` basel
 - [RFC 8288 section 2.1](https://www.rfc-editor.org/rfc/rfc8288#section-2.1)
 - [components/link_header_util/link_header_util.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/link_header_util/link_header_util.cc)
 - [Text Test Baselines 문서](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/testing/writing_web_tests.md#Text-Test-Baselines)
-1c:T1a54,
+1d:T1a54,
 Secure Payment Confirmation(SPC) 결제 앱 팩토리의 delegate 검사를 `DCHECK`에서 `CHECK`로 승격했습니다(crbug.com/443042812). 처음에는 "delegate가 파괴될 수 있으니 가드를 넣자"는 접근으로 CL을 올렸으나, 리뷰에서 그 전제 자체가 틀렸다는 것이 밝혀져 방향을 바꾼 기여입니다.
 
 ## 문제 설명
@@ -146,7 +217,7 @@ Secure Payment Confirmation(SPC) 결제 앱 팩토리의 delegate 검사를 `DCH
 - [styleguide/c++/checks.md](https://chromium.googlesource.com/chromium/src/+/main/styleguide/c++/checks.md)
 - [base/memory/weak_ptr.h](https://source.chromium.org/chromium/chromium/src/+/main:base/memory/weak_ptr.h)
 - [build/config/dcheck_always_on.gni](https://source.chromium.org/chromium/chromium/src/+/main:build/config/dcheck_always_on.gni)
-1d:T18c8,
+1e:T18c8,
 `QuotaDatabase`의 장수(long-running) 트랜잭션을 deprecated 수동 API(`BeginTransactionDeprecated()` 등)에서 RAII `sql::Transaction` 객체로 이행했습니다(crbug.com/40831207). 리뷰 3라운드에 걸쳐 에러 처리 방침이 다듬어졌고, 그 과정에서 업스트림 CL과 같은 줄을 놓고 충돌해 ToT 리베이스로 이어받은 기여입니다.
 
 ## 문제 설명
@@ -212,7 +283,7 @@ void QuotaDatabase::Commit() {
 - 블로킹 대상: https://crbug.com/40830473
 - [sql/transaction.h](https://source.chromium.org/chromium/chromium/src/+/main:sql/transaction.h)
 - 선행 업스트림 CL: https://crrev.com/c/8281077
-1e:Tee3,
+1f:Tee3,
 crypto/hash 마이그레이션 이슈(crbug.com/372283556)의 일환으로, services/network 디렉토리에 남아 있던 구 해시 API(`crypto/sha2.h`, `crypto/secure_hash.h`)의 불필요한 include를 제거하였습니다.
 
 ## 문제 설명
@@ -269,9 +340,9 @@ crypto/hash 마이그레이션 이슈(crbug.com/372283556)의 일환으로, serv
 - gerrit url: https://crrev.com/c/8264232
 - new API: [crypto/hash.h](https://source.chromium.org/chromium/chromium/src/+/main:crypto/hash.h)
 - old API: [crypto/sha2.h](https://source.chromium.org/chromium/chromium/src/+/main:crypto/sha2.h), [crypto/secure_hash.h](https://source.chromium.org/chromium/chromium/src/+/main:crypto/secure_hash.h)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/jmsmg","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/jmsmg.png?size=192","alt":"jmsmg 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"jmsmg"}],["$","a",null,{"href":"https://github.com/jmsmg","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","jmsmg"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8336867","title":"[payments] Match Link rel types case-insensitively in manifest download","date":"$D2026-09-01T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8336867","labels":["components/payments","payment-method-manifest"],"status":"merged","excerpt":"`PaymentManifestDownloader`가 HTTP `Link` 헤더에서 payment method manifest 관계를 찾을 때 rel 값을 대소문자 구분 없이 비교하도록 고쳤습니다(crbug.com/545645933). RFC 8288 위반을 스펙 대조로 직접 발굴한 버","content":"$1b"},{"slug":"8278112","title":"[payments] Upgrade delegate DCHECK to CHECK in SPC app factory","date":"$D2026-08-24T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8278112","labels":["components/payments","secure-payment-confirmation"],"status":"merged","excerpt":"Secure Payment Confirmation(SPC) 결제 앱 팩토리의 delegate 검사를 `DCHECK`에서 `CHECK`로 승격했습니다(crbug.com/443042812). 처음에는 \"delegate가 파괴될 수 있으니 가드를 넣자\"는 접근으로 CL을 올렸으나, 리뷰에서","content":"$1c"},{"slug":"8282239","title":"[storage] Migrate QuotaDatabase to scoped sql::Transaction","date":"$D2026-08-24T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8282239","labels":["storage/browser/quota","sql"],"status":"merged","excerpt":"`QuotaDatabase`의 장수(long-running) 트랜잭션을 deprecated 수동 API(`BeginTransactionDeprecated()` 등)에서 RAII `sql::Transaction` 객체로 이행했습니다(crbug.com/40831207). 리뷰 3라운드에","content":"$1d"},{"slug":"8264232","title":"services/network: remove stale crypto/sha2 and secure_hash includes","date":"$D2026-08-20T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8264232","labels":["services/network","crypto"],"status":"merged","excerpt":"crypto/hash 마이그레이션 이슈(crbug.com/372283556)의 일환으로, services/network 디렉토리에 남아 있던 구 해시 API(`crypto/sha2.h`, `crypto/secure_hash.h`)의 불필요한 include를 제거하였습니다.","content":"$1e"},{"slug":"8146619","title":"Gerrit 에 올린 commit 제목을 입력하세요","date":"$D2026-07-25T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8146619","labels":["docs"],"status":"merged","excerpt":"docs상에서 깨진 링크 수정","content":"\ndocs상에서 깨진 링크 수정\n\n## 문제 설명\n\nSUID 샌드박스에 대한 내용이 변경되며, 문서가 통합되었으나, 그 통합된 문서를 따르지않고 이전 문서를 따르고 있었습니다.\n\n- 링크가 깨져서 제대로 들어가지지않음\n- 리눅스 커널이 변경되어 참조 문서도 변경됨\n\n## 해결 내용\n\nREADME.md을 가르키도록 수정\n\n## 테스트 방법\n\nhttps://chromium.googlesource.com/chromium/src/+/refs/changes/19/8146619/1/docs/linux/pid_namespace_support.md에서 문서 확인\n\n## 배운 점\n\n크로미움 전체 반영까지의  프로세스에 대한 이해\n\n## 참고 자료\n\n"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/jmsmg","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/jmsmg.png?size=192","alt":"jmsmg 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"jmsmg"}],["$","a",null,{"href":"https://github.com/jmsmg","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","jmsmg"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8349386","title":"[payments] Fail manifest download on multiple manifest Link headers","date":"$D2026-09-04T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8349386","labels":["components/payments","payment-method-manifest","wpt"],"status":"in review","excerpt":"결제 방식 식별자(PMI) 응답에 `rel=\"payment-method-manifest\"` Link 헤더가 둘 이상 오면 매니페스트 다운로드를 실패시키도록 고쳤습니다(crbug.com/545843242). 직전 기여인 [8336867](https://crrev.com/c/8336867","content":"$1b"},{"slug":"8336867","title":"[payments] Match Link rel types case-insensitively in manifest download","date":"$D2026-09-01T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8336867","labels":["components/payments","payment-method-manifest"],"status":"merged","excerpt":"`PaymentManifestDownloader`가 HTTP `Link` 헤더에서 payment method manifest 관계를 찾을 때 rel 값을 대소문자 구분 없이 비교하도록 고쳤습니다(crbug.com/545645933). RFC 8288 위반을 스펙 대조로 직접 발굴한 버","content":"$1c"},{"slug":"8278112","title":"[payments] Upgrade delegate DCHECK to CHECK in SPC app factory","date":"$D2026-08-24T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8278112","labels":["components/payments","secure-payment-confirmation"],"status":"merged","excerpt":"Secure Payment Confirmation(SPC) 결제 앱 팩토리의 delegate 검사를 `DCHECK`에서 `CHECK`로 승격했습니다(crbug.com/443042812). 처음에는 \"delegate가 파괴될 수 있으니 가드를 넣자\"는 접근으로 CL을 올렸으나, 리뷰에서","content":"$1d"},{"slug":"8282239","title":"[storage] Migrate QuotaDatabase to scoped sql::Transaction","date":"$D2026-08-24T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8282239","labels":["storage/browser/quota","sql"],"status":"merged","excerpt":"`QuotaDatabase`의 장수(long-running) 트랜잭션을 deprecated 수동 API(`BeginTransactionDeprecated()` 등)에서 RAII `sql::Transaction` 객체로 이행했습니다(crbug.com/40831207). 리뷰 3라운드에","content":"$1e"},{"slug":"8264232","title":"services/network: remove stale crypto/sha2 and secure_hash includes","date":"$D2026-08-20T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8264232","labels":["services/network","crypto"],"status":"merged","excerpt":"crypto/hash 마이그레이션 이슈(crbug.com/372283556)의 일환으로, services/network 디렉토리에 남아 있던 구 해시 API(`crypto/sha2.h`, `crypto/secure_hash.h`)의 불필요한 include를 제거하였습니다.","content":"$1f"},{"slug":"8146619","title":"Gerrit 에 올린 commit 제목을 입력하세요","date":"$D2026-07-25T00:00:00.000Z","author":"jmsmg","contributionUrl":"https://crrev.com/c/8146619","labels":["docs"],"status":"merged","excerpt":"docs상에서 깨진 링크 수정","content":"\ndocs상에서 깨진 링크 수정\n\n## 문제 설명\n\nSUID 샌드박스에 대한 내용이 변경되며, 문서가 통합되었으나, 그 통합된 문서를 따르지않고 이전 문서를 따르고 있었습니다.\n\n- 링크가 깨져서 제대로 들어가지지않음\n- 리눅스 커널이 변경되어 참조 문서도 변경됨\n\n## 해결 내용\n\nREADME.md을 가르키도록 수정\n\n## 테스트 방법\n\nhttps://chromium.googlesource.com/chromium/src/+/refs/changes/19/8146619/1/docs/linux/pid_namespace_support.md에서 문서 확인\n\n## 배운 점\n\n크로미움 전체 반영까지의  프로세스에 대한 이해\n\n## 참고 자료\n\n"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-1f:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"jmsmg | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"jmsmg님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1f","4",{}]],"error":null,"digest":"$undefined"}
+20:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"jmsmg | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"jmsmg님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L20","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
