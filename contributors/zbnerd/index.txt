@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/371cbb432349cb0d.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"L72UDDW_WLzd5R2iusUEJ","p":"/contributions","c":["","contributors","zbnerd",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","zbnerd","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","zbnerd","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"pnNvjLksrkxhpEZI3tCJ0","p":"/contributions","c":["","contributors","zbnerd",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","zbnerd","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","zbnerd","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -80,7 +80,60 @@ CL의 커밋 메시지와 Gerrit 실행 기록에 남은 검증은 다음과 같
 - [최종 Patch Set 4](https://chromium-review.googlesource.com/c/chromium/src/+/8362029/4)
 - [Chromium Issue 372283556](https://issues.chromium.org/issues/372283556)
 - [Chromium main에 반영된 커밋](https://chromium.googlesource.com/chromium/src/+/99fcf5924f9963fa285fba294a0354eaf9d43390)
-1c:T2e7b,
+1c:T1311,
+`showSaveFilePicker()`에서 파일 생성이나 truncate가 실패했을 때 원래 파일 시스템 오류를 보존하도록 수정했습니다. 웹사이트가 쓰기 권한 부족이나 부모 디렉터리 부재를 사용자 취소와 구분할 수 있도록 개선했습니다.
+
+## 문제 설명
+
+저장 파일 선택기는 파일 핸들을 반환하기 전에 선택한 파일을 생성하거나 기존 파일의 길이를 0으로 줄입니다. 기존 구현은 이 작업의 결과를 `bool`로 전달해 실패 원인을 잃어버렸습니다.
+
+- 쓰기 권한 부족이나 부모 디렉터리 부재도 일반적인 `AbortError`로 전달됐습니다.
+- 사용자가 대화상자를 취소한 경우에도 `AbortError`가 발생하므로, 웹사이트가 취소와 파일 시스템 실패를 구분하기 어려웠습니다.
+- POSIX 로컬 파일 처리 경로와 storage backend 경로 모두에서 오류 정보를 유지해야 했습니다.
+
+## 해결 내용
+
+1. POSIX 로컬 파일 헬퍼 `CreateAndTruncateLocalFile()`의 반환형을 `bool`에서 `base::File::Error`로 변경했습니다. `open()`, `fstat()`, `SetLength()` 실패 시 오류를 반환하고, 일반 파일이 아닌 경우에는 `FILE_ERROR_NOT_A_FILE`을 반환하도록 했습니다.
+2. `CreateAndTruncateFile()`과 `DidCreateFileToTruncate()`의 비동기 콜백도 `base::File::Error`를 전달하도록 변경해 backend가 반환한 오류를 보존했습니다.
+3. `DidCreateAndTruncateSaveFile()`에서 일반적인 실패 상태 대신 기존 `file_system_access_error::FromFileError()` 매핑을 사용하도록 수정했습니다.
+
+```cpp
+if (result != base::File::FILE_OK) {
+  std::move(callback).Run(file_system_access_error::FromFileError(result),
+                          std::move(result_entries));
+  return;
+}
+```
+
+쓰기 접근이 거부되면 `NoModificationAllowedError`, 부모 디렉터리가 없으면 `NotFoundError`를 전달합니다. 사용자가 선택을 취소하면 기존처럼 `AbortError`를 전달합니다.
+
+외부 경로의 `NativeFileUtil`은 `SetLength()` 실패를 여전히 `FILE_ERROR_FAILED`로 반환합니다. 이번 변경은 backend가 제공하는 오류를 보존하며, 해당 backend 내부의 오류 세분화까지 변경하지는 않았습니다.
+
+## 테스트 방법
+
+다음 회귀 테스트를 추가했습니다.
+
+- `FileSystemAccessManagerImplSaveFileTest`를 로컬·외부 경로로 매개변수화해 `ReadOnlyFile`, `MissingParentDirectory`, `TruncateFailure`를 검증합니다. 실패 시 오류 코드와 빈 결과 목록을 확인하고, 기존 파일의 내용이 보존되는지도 확인합니다.
+- Linux·ChromeOS의 `TruncateFailure`는 Landlock으로 truncate만 제한합니다. 파일 열기와 `fstat()`이 성공하는지 먼저 확인해 `SetLength()` 실패 경로를 실제로 거치도록 구성했습니다. 제한을 해제할 수 없는 Landlock의 특성을 고려해 전용 파일 스레드에만 적용하며, 필요한 기능을 지원하지 않는 환경에서는 건너뜁니다.
+- `FileSystemChooserBrowserTest`에 `SaveFile_CancelDialog`, `SaveFile_ReadOnlyFile`, `SaveFile_MissingParentDirectory`를 추가해 JavaScript에서 관찰하는 예외 이름을 검증합니다.
+- 읽기 전용 파일 테스트는 실제 쓰기 접근이 차단되는지 먼저 확인합니다. Windows에서는 권한을 복원한 뒤 기존 파일의 내용을 확인하도록 했습니다.
+
+Gerrit에서 Alex Moshchuk과 Rakina Zata Amni의 리뷰를 받았고, Amos Lim의 Commit Queue 제출 후 2026-09-11에 Chromium main에 병합됐습니다. 최종 커밋 위치는 `refs/heads/main@{#1696213}`입니다.
+
+## 배운 점
+
+- 하위 계층의 오류를 `bool`로 축약하면 상위 API에서 필요한 실패 원인을 복원할 수 없습니다. 비동기 콜백을 포함한 전체 전달 경로에서 오류 타입을 유지해야 합니다.
+- 내부 오류 코드 확인과 JavaScript에서 관찰하는 예외 확인을 함께 구성하면, 구현 계층과 사용자에게 보이는 API 동작을 연결해 검증할 수 있습니다.
+- truncate 실패를 테스트하려면 앞선 파일 열기 단계에서 실패하지 않는 조건을 만들어야 합니다. Landlock으로 특정 연산만 제한하면 목표한 실패 경로를 검증할 수 있습니다.
+- 파일 권한과 backend의 오류 표현은 플랫폼마다 다르므로, 테스트의 전제 조건과 지원 범위를 명시하고 기존 데이터 보존까지 확인해야 합니다.
+
+## 참고 자료
+
+- [Chromium CL 8362049](https://crrev.com/c/8362049)
+- [Chromium Issue 40717501](https://crbug.com/40717501)
+- [OSSCA 관련 이슈 #393](https://github.com/OSSCA-chromium/contributions/issues/393)
+- [최종 머지 코드와 회귀 테스트](https://chromium.googlesource.com/chromium/src/+/81f37f998a79eddb8ef7243169b2f547e48baa7f)
+1d:T2e7b,
 Blink의 `FileReader`가 `abort`, `load`, `error` 이벤트 핸들러에서 같은
 객체로 새 읽기를 시작했을 때 이전 읽기의 `loadend`를 잘못 발생시키던 문제를
 수정했습니다. terminal event를 dispatch한 뒤 `FileReader`가 다시
@@ -331,7 +384,7 @@ label이 제거되어 upstream 반영 절차로 이어졌습니다.
 - [File API — FileReader read operation과 abort](https://w3c.github.io/FileAPI/#APIASynch)
 - [WPT export PR #62349](https://github.com/web-platform-tests/wpt/pull/62349)
 - [기존 Chromium Issue 1204139](https://issues.chromium.org/issues/1204139)
-1d:T248a,
+1e:T248a,
 IndexedDB의 LevelDB 백엔드에서 레코드 버전을 트랜잭션별로 캐시해,
 연속 쓰기 중 메타데이터 조회가 유발하는 flush를 줄이는 변경을 제안했습니다.
 리뷰에서 해당 백엔드가 deprecated 상태여서 비핵심 개선을 받지 않는다는
@@ -476,7 +529,7 @@ improvements**입니다. 긴급한 수정까지 모두 거절한다는 뜻으로
 - [CL 중단 후 작성자의 답변](https://chromium-review.googlesource.com/c/chromium/src/+/8338807/comments/e2f7af70_5c82f409)
 - [커밋 메시지에 연결된 Chromium Issue 41460075](https://issues.chromium.org/issues/41460075)
 - [변경 전 트랜잭션의 Get() 구현](https://chromium.googlesource.com/chromium/src/+/f3601a9e090fb4f78823e87afe02f626cfa7f9a8/components/services/storage/indexed_db/transactional_leveldb/transactional_leveldb_transaction.cc#67)
-1e:T2f8e,
+1f:T2f8e,
 IndexedDB 트랜잭션의 커밋 요청 이후 들어오는 IPC를 거부하고, 브라우저가
 트랜잭션을 중단한 경우와 구분하는 변경을 제안했습니다. CQ dry run은
 통과했지만, 입증된 효과에 비해 복잡성과 유지보수 비용이 크다는 리뷰를
@@ -663,7 +716,7 @@ bad message 보고 여부를 확인했습니다. 인덱스 생성 테스트는 t
 - [변경 전 브라우저 측 Transaction::Commit()](https://chromium.googlesource.com/chromium/src/+/4d6312b398a5ca37522f6b34bfb084c695f59934/content/browser/indexed_db/instance/transaction.cc#741)
 - [변경 전 Blink 측 IDBTransaction::commit()](https://chromium.googlesource.com/chromium/src/+/4d6312b398a5ca37522f6b34bfb084c695f59934/third_party/blink/renderer/modules/indexeddb/idb_transaction.cc#359)
 - [기존 explicit commit WPT](https://chromium.googlesource.com/chromium/src/+/4d6312b398a5ca37522f6b34bfb084c695f59934/third_party/blink/web_tests/external/wpt/IndexedDB/idb-explicit-commit.any.js)
-1f:T32b2,
+20:T32b2,
 POSIX 환경의 Chromium에서 File System Access API의
 `showSaveFilePicker()`로 새 로컬 파일을 만들 때 고정된 `0600` 권한 대신
 프로세스의 umask를 반영하도록 개선했습니다. 기존 파일의 권한은 그대로
@@ -937,7 +990,7 @@ sequenced file task runner에서 처리됩니다. 다만 저장 지연에 대한
 - [Chromium에 병합된 최종 커밋](https://chromium.googlesource.com/chromium/src/+/82ae2deac4cfe69f70538c876eddc62711ca01a3)
 - [Chromium Issue 527515380](https://issues.chromium.org/issues/527515380)
 - [File System Access API — showSaveFilePicker()](https://wicg.github.io/file-system-access/#api-showsavefilepicker)
-20:T3d2a,
+21:T3d2a,
 Chromium Blink의 `FormData`가 `Blob`과 이름이 변경된 `File`을 조회할 때마다
 새로운 `File` 객체를 만들던 동작을 수정했습니다. 값을 entry에 추가하는
 시점에 한 번만 `File`로 정규화하여 `get()`, `getAll()`, iterator가 동일한
@@ -1292,7 +1345,7 @@ full CQ가 Patch Set 4를 검증한 뒤 최종 제출 과정에서 Patch Set 5�
 - [HTML Standard — create an entry](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#create-an-entry)
 - [XMLHttpRequest Standard — FormData](https://xhr.spec.whatwg.org/#interface-formdata)
 - [WPT export PR #62284](https://github.com/web-platform-tests/wpt/pull/62284)
-21:T2fdf,
+22:T2fdf,
 Linux의 POSIX/C locale에서 OPFS의 비 ASCII 디렉터리 이름이 손실되어 자식 핸들이 부모 디렉터리를 가리키거나, 디렉터리 열거 결과의 이름이 비어 버리던 문제를 수정했습니다. 자식 URL 생성부터 디렉터리 열거까지 OPFS 이름이 보존되도록 개선했습니다.
 
 ## 문제 설명
@@ -1475,7 +1528,7 @@ CL 8262447은 2026-08-26 Chromium main에 병합됐습니다.
 - [GetEntries() 통합형 회귀 테스트](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/file_system_access/file_system_access_directory_handle_impl_unittest.cc;l=998-1045;drc=ca80cf53038f6e8d3141257071d478b2d5ffca34)
 - [Chromium LUCI CQ full run](https://luci-change-verifier.appspot.com/ui/run/chromium/8835249972854-1-53218a8342b325c9)
 - [MDN: Origin private file system](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system)
-22:T14cf,
+23:T14cf,
 Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.
 
 ## 문제 설명
@@ -1586,7 +1639,7 @@ CrComponentsHistoryClustersTest.UrlVisit: 1/1 PASS
 - [Chromium Issue 433924477](https://issues.chromium.org/issues/433924477)
 - [Gerrit CL 8257111](https://crrev.com/c/8257111)
 - [History Date view의 native title binding](https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/resources/history/history_item.html.ts;l=45-60;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
-23:T1793,
+24:T1793,
 Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.
 
 ## 문제 설명
@@ -1729,7 +1782,7 @@ git diff --check
 - [crypto/hash.h](https://source.chromium.org/chromium/chromium/src/+/main:crypto/hash.h)
 - [server_certificate_database.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/server_certificate_database/server_certificate_database.cc)
 - [server_certificate_database_nss_migrator.cc](https://source.chromium.org/chromium/chromium/src/+/main:components/server_certificate_database/server_certificate_database_nss_migrator.cc)
-24:T1c31,
+25:T1c31,
 특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.
 
 ## 문제 설명
@@ -1872,7 +1925,7 @@ git cl presubmit
 - [StorageKey matcher 생성 로직](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/storage_partition_impl.cc;l=744-817;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
 - [StorageKey 동등성 비교](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/storage_key/storage_key.h;l=308-312;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
 - [SessionStorageControl 인터페이스](https://source.chromium.org/chromium/chromium/src/+/main:components/services/storage/public/mojom/session_storage_control.mojom;l=57-62;drc=7be74ed6b0c5efb51147c5a6525b3ce80283e78f)
-25:T1562,
+26:T1562,
 실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를
 Chromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.
 
@@ -1987,7 +2040,7 @@ export하여 문제를 해결했습니다.
 - [FileSystemAccessRegularFileDelegate 구현](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/file_system_access/file_system_access_regular_file_delegate.cc)
 - [FileSystemSyncAccessHandle 구현](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.cc)
 - [File System Standard: FileSystemSyncAccessHandle](https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle)
-26:Tee5,
+27:Tee5,
 Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.
 
 ## 문제 설명
@@ -2101,9 +2154,9 @@ python3 tools/checkperms/checkperms.py
 * [Bug link](https://crbug.com/538651940)
 
 * [CL link](https://crrev.com/c/8146339)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/zbnerd.png?size=192","alt":"zbnerd 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"zbnerd"}],["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","zbnerd"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8362029","title":"Remove unused SecureHash include from FileSystemAccessManagerImpl","date":"$D2026-09-05T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8362029","labels":["content","file_system_access","cleanup"],"status":"merged","excerpt":"Chromium의 File System Access 구현에서 사용하지 않는\n`crypto/secure_hash.h` include를 제거했습니다. 이 변경은 2026년 9월 9일\nChromium main에 병합되었습니다.","content":"$1b"},{"slug":"8300812","title":"FileReader: Suppress stale loadend after reentrant read","date":"$D2026-09-02T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8300812","labels":["blink","file_reader","wpt"],"status":"merged","excerpt":"Blink의 `FileReader`가 `abort`, `load`, `error` 이벤트 핸들러에서 같은\n객체로 새 읽기를 시작했을 때 이전 읽기의 `loadend`를 잘못 발생시키던 문제를\n수정했습니다. terminal event를 dispatch한 뒤 `FileReader`가 다시","content":"$1c"},{"slug":"8338807","title":"IndexedDB: Cache record versions per transaction","date":"$D2026-09-02T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8338807","labels":["content","indexeddb","leveldb","performance"],"status":"abandoned","excerpt":"IndexedDB의 LevelDB 백엔드에서 레코드 버전을 트랜잭션별로 캐시해,\n연속 쓰기 중 메타데이터 조회가 유발하는 flush를 줄이는 변경을 제안했습니다.\n리뷰에서 해당 백엔드가 deprecated 상태여서 비핵심 개선을 받지 않는다는\n방침을 확인했고, 이를 수용해 2026년","content":"$1d"},{"slug":"8319589","title":"IndexedDB: Reject requests after transaction commit","date":"$D2026-08-31T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8319589","labels":["content","indexeddb","mojo"],"status":"abandoned","excerpt":"IndexedDB 트랜잭션의 커밋 요청 이후 들어오는 IPC를 거부하고, 브라우저가\n트랜잭션을 중단한 경우와 구분하는 변경을 제안했습니다. CQ dry run은\n통과했지만, 입증된 효과에 비해 복잡성과 유지보수 비용이 크다는 리뷰를\n수용해 2026년 9월 2일 CL을 중단(`aband","content":"$1e"},{"slug":"8261422","title":"FSA: Honor umask for saved files","date":"$D2026-08-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8261422","labels":["content","file_system_access"],"status":"merged","excerpt":"POSIX 환경의 Chromium에서 File System Access API의\n`showSaveFilePicker()`로 새 로컬 파일을 만들 때 고정된 `0600` 권한 대신\n프로세스의 umask를 반영하도록 개선했습니다. 기존 파일의 권한은 그대로\n유지하고, 심볼릭 링크나 FIF","content":"$1f"},{"slug":"8276954","title":"[Blink] Preserve FormData File identity","date":"$D2026-08-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8276954","labels":["blink","form_data","wpt"],"status":"merged","excerpt":"Chromium Blink의 `FormData`가 `Blob`과 이름이 변경된 `File`을 조회할 때마다\n새로운 `File` 객체를 만들던 동작을 수정했습니다. 값을 entry에 추가하는\n시점에 한 번만 `File`로 정규화하여 `get()`, `getAll()`, iterator가","content":"$20"},{"slug":"8262447","title":"[Storage] Preserve OPFS UTF-8 child names","date":"$D2026-08-26T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8262447","labels":["file-system-access","opfs"],"status":"merged","excerpt":"Linux의 POSIX/C locale에서 OPFS의 비 ASCII 디렉터리 이름이 손실되어 자식 핸들이 부모 디렉터리를 가리키거나, 디렉터리 열거 결과의 이름이 비어 버리던 문제를 수정했습니다. 자식 URL 생성부터 디렉터리 열거까지 OPFS 이름이 보존되도록 개선했습니다.","content":"$21"},{"slug":"8257111","title":"[History] Show URL tooltips in side panel","date":"$D2026-08-21T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8257111","labels":["history-clusters","webui"],"status":"merged","excerpt":"Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.","content":"$22"},{"slug":"8243548","title":"server_certificate_database: migrate to crypto/hash APIs","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8243548","labels":["server_certificate_database","crypto"],"status":"merged","excerpt":"Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.","content":"$23"},{"slug":"8264749","title":"[Storage] Clear session storage by StorageKey","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8264749","labels":["content","dom-storage"],"status":"merged","excerpt":"특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.","content":"$24"},{"slug":"8221052","title":"File System Access: Propagate regular file write errors","date":"$D2026-08-14T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8221052","labels":["file-system-access","opfs"],"status":"merged","excerpt":"실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를\nChromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.","content":"$25"},{"slug":"8146339","title":"Fix BigBuffer link in Mojo style guide","date":"$D2026-07-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8146339","labels":["docs","mojo"],"status":"merged","excerpt":"Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.","content":"$26"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/zbnerd.png?size=192","alt":"zbnerd 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"zbnerd"}],["$","a",null,{"href":"https://github.com/zbnerd","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","zbnerd"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8362029","title":"Remove unused SecureHash include from FileSystemAccessManagerImpl","date":"$D2026-09-05T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8362029","labels":["content","file_system_access","cleanup"],"status":"merged","excerpt":"Chromium의 File System Access 구현에서 사용하지 않는\n`crypto/secure_hash.h` include를 제거했습니다. 이 변경은 2026년 9월 9일\nChromium main에 병합되었습니다.","content":"$1b"},{"slug":"8362049","title":"FSA: Preserve save picker filesystem errors","date":"$D2026-09-05T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8362049","labels":["content","file_system_access","fix"],"status":"merged","excerpt":"`showSaveFilePicker()`에서 파일 생성이나 truncate가 실패했을 때 원래 파일 시스템 오류를 보존하도록 수정했습니다. 웹사이트가 쓰기 권한 부족이나 부모 디렉터리 부재를 사용자 취소와 구분할 수 있도록 개선했습니다.","content":"$1c"},{"slug":"8300812","title":"FileReader: Suppress stale loadend after reentrant read","date":"$D2026-09-02T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8300812","labels":["blink","file_reader","wpt"],"status":"merged","excerpt":"Blink의 `FileReader`가 `abort`, `load`, `error` 이벤트 핸들러에서 같은\n객체로 새 읽기를 시작했을 때 이전 읽기의 `loadend`를 잘못 발생시키던 문제를\n수정했습니다. terminal event를 dispatch한 뒤 `FileReader`가 다시","content":"$1d"},{"slug":"8338807","title":"IndexedDB: Cache record versions per transaction","date":"$D2026-09-02T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8338807","labels":["content","indexeddb","leveldb","performance"],"status":"abandoned","excerpt":"IndexedDB의 LevelDB 백엔드에서 레코드 버전을 트랜잭션별로 캐시해,\n연속 쓰기 중 메타데이터 조회가 유발하는 flush를 줄이는 변경을 제안했습니다.\n리뷰에서 해당 백엔드가 deprecated 상태여서 비핵심 개선을 받지 않는다는\n방침을 확인했고, 이를 수용해 2026년","content":"$1e"},{"slug":"8319589","title":"IndexedDB: Reject requests after transaction commit","date":"$D2026-08-31T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8319589","labels":["content","indexeddb","mojo"],"status":"abandoned","excerpt":"IndexedDB 트랜잭션의 커밋 요청 이후 들어오는 IPC를 거부하고, 브라우저가\n트랜잭션을 중단한 경우와 구분하는 변경을 제안했습니다. CQ dry run은\n통과했지만, 입증된 효과에 비해 복잡성과 유지보수 비용이 크다는 리뷰를\n수용해 2026년 9월 2일 CL을 중단(`aband","content":"$1f"},{"slug":"8261422","title":"FSA: Honor umask for saved files","date":"$D2026-08-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8261422","labels":["content","file_system_access"],"status":"merged","excerpt":"POSIX 환경의 Chromium에서 File System Access API의\n`showSaveFilePicker()`로 새 로컬 파일을 만들 때 고정된 `0600` 권한 대신\n프로세스의 umask를 반영하도록 개선했습니다. 기존 파일의 권한은 그대로\n유지하고, 심볼릭 링크나 FIF","content":"$20"},{"slug":"8276954","title":"[Blink] Preserve FormData File identity","date":"$D2026-08-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8276954","labels":["blink","form_data","wpt"],"status":"merged","excerpt":"Chromium Blink의 `FormData`가 `Blob`과 이름이 변경된 `File`을 조회할 때마다\n새로운 `File` 객체를 만들던 동작을 수정했습니다. 값을 entry에 추가하는\n시점에 한 번만 `File`로 정규화하여 `get()`, `getAll()`, iterator가","content":"$21"},{"slug":"8262447","title":"[Storage] Preserve OPFS UTF-8 child names","date":"$D2026-08-26T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8262447","labels":["file-system-access","opfs"],"status":"merged","excerpt":"Linux의 POSIX/C locale에서 OPFS의 비 ASCII 디렉터리 이름이 손실되어 자식 핸들이 부모 디렉터리를 가리키거나, 디렉터리 열거 결과의 이름이 비어 버리던 문제를 수정했습니다. 자식 URL 생성부터 디렉터리 열거까지 OPFS 이름이 보존되도록 개선했습니다.","content":"$22"},{"slug":"8257111","title":"[History] Show URL tooltips in side panel","date":"$D2026-08-21T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8257111","labels":["history-clusters","webui"],"status":"merged","excerpt":"Grouped History side panel에서 URL 길이와 관계없이 전체 주소를 확인할 수 있도록 native tooltip 동작을 개선했습니다.","content":"$23"},{"slug":"8243548","title":"server_certificate_database: migrate to crypto/hash APIs","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8243548","labels":["server_certificate_database","crypto"],"status":"merged","excerpt":"Chromium의 `components/server_certificate_database`에서 deprecated된 `crypto/sha2.h` 의존성을 제거하고 새로운 `crypto/hash.h` API로 마이그레이션한 작업입니다.","content":"$24"},{"slug":"8264749","title":"[Storage] Clear session storage by StorageKey","date":"$D2026-08-18T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8264749","labels":["content","dom-storage"],"status":"merged","excerpt":"특정 `StorageKey`의 사이트 데이터를 삭제할 때 남아 있던 Session Storage를 선택적으로 삭제하도록 Chromium의 DOM Storage 정리 로직을 수정했습니다.","content":"$25"},{"slug":"8221052","title":"File System Access: Propagate regular file write errors","date":"$D2026-08-14T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8221052","labels":["file-system-access","opfs"],"status":"merged","excerpt":"실제 I/O 실패를 성공으로 오인해 웹 애플리케이션이 데이터가 저장됐다고 잘못 판단할 수 있었던 오류 전파 버그를\nChromium/Blink upstream에서 수정하고, 실제 운영체제 오류를 재현하는 Blink 회귀 테스트를 추가했습니다.","content":"$26"},{"slug":"8146339","title":"Fix BigBuffer link in Mojo style guide","date":"$D2026-07-28T00:00:00.000Z","author":"zbnerd","contributionUrl":"https://crrev.com/c/8146339","labels":["docs","mojo"],"status":"merged","excerpt":"Chromium의 Mojo 스타일 가이드에서 잘못 연결되던 `BigBuffer` 문서 링크를 저장소 루트 기준의 경로로 수정했습니다.","content":"$27"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-27:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"zbnerd | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"zbnerd님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L27","4",{}]],"error":null,"digest":"$undefined"}
+28:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"zbnerd | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"zbnerd님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L28","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
