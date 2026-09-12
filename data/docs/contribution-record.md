@@ -43,8 +43,9 @@ cp data/contributions/template.md data/contributions/6520751.md
 | `author`           | 본인 GitHub ID                         | `amoseui`                   |
 | `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
 | `labels`           | 수정한 디렉터리 + 작업 성격            | `["docs", "fix"]`           |
-| `status`           | `in review` 또는 `merged`              | `in review`                 |
+| `status`           | `in review`, `merged`, `abandoned`              | `in review`                 |
 
+- CL을 중단했다면 `status: abandoned`로 기록하고 본문에 시도한 접근과 중단 이유를 적으세요.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub
