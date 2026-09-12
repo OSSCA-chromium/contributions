@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/371cbb432349cb0d.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"HIOyoYnnONazDsHFaIH9y","p":"/contributions","c":["","contributors","injunchoi98",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","injunchoi98","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","injunchoi98","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"SExCxlRB6wAZWs5Lh4Z1V","p":"/contributions","c":["","contributors","injunchoi98",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","injunchoi98","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","injunchoi98","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,203 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-c3c422177f6bf124.js"],"default"]
-1b:T897,
+1b:T884,
+모든 top-layer 요소의 `::backdrop`에 CSS Positioned Layout이 정의한 기본 위치
+스타일을 적용하도록 Blink의 공통 UA 스타일 경로를 추가했습니다.
+
+## 문제 설명
+
+CSS Positioned Layout은 `::backdrop`의 UA 기본값으로 `position: fixed`와
+`inset: 0`을 정의합니다. Blink에서는 dialog, popover, fullscreen이 각각 일부
+스타일을 제공했지만 모든 top-layer 요소에 적용되는 공통 규칙이 없었습니다.
+
+이 때문에 일반 top-layer 요소의 backdrop은 `position: absolute`로 계산됐고
+관련 WPT가 실패했습니다.
+
+## 해결 내용
+
+공통 `backdrop.css`에 다음 UA 규칙을 추가했습니다.
+
+```css
+::backdrop {
+  position: fixed;
+  inset: 0;
+}
+```
+
+이 스타일시트를 Blink 리소스로 등록하고 `kPseudoIdBackdrop`의 스타일을 해석할
+때 지연 로드하도록 연결했습니다. 기존 dialog, popover, fullscreen의 배경색과
+pointer 동작은 유지하며 작성자 스타일이 UA 기본값을 덮어쓸 수 있습니다.
+
+## 테스트 방법
+
+WPT에서 HTML, SVG, MathML top-layer 요소의 `::backdrop`이 `position: fixed`와
+0px inset을 갖는지 확인하고, 작성자 스타일의 `position: absolute`와 10px inset이
+우선하는지도 검사했습니다.
+
+관련 단위 테스트 138개와 선택한 웹 테스트 67개를 실행해 회귀가 없음을
+확인했습니다. 이 결과는 해당 범위의 검증이며 전체 Chromium 테스트 결과는
+아닙니다. CL은 현재 리뷰 중입니다.
+
+## 배운 점
+
+- 공통 pseudo-element 기본값은 HTML 기본 스타일 전체에 넣기보다 해당 pseudo의
+  UA 스타일 경로에서 로드해야 적용 범위와 비용을 제어할 수 있습니다.
+- computed style 확인만으로 실제 backdrop 생성과 수명 주기를 모두 검증할 수
+  없습니다. top-layer 상태, 작성자 재정의, 제거 과정도 함께 확인해야 합니다.
+
+## 참고 자료
+
+- [Chromium CL 8381398](https://crrev.com/c/8381398)
+- [Chromium Issue 523965369](https://issues.chromium.org/issues/523965369)
+- [CSS Positioned Layout Module Level 4](https://drafts.csswg.org/css-position-4/#backdrop)
+1c:T71d,
+CSS Typed OM의 `CSSPerspective.toMatrix()`가 1px보다 작은 perspective 깊이를
+1px로 제한하도록 수정했습니다.
+
+## 문제 설명
+
+CSS Transforms는 perspective 깊이가 1px보다 작을 때 렌더링과 행렬 변환에서
+1px로 처리하도록 규정합니다. Blink의 렌더링 경로는 이 제한을 적용했지만
+`CSSPerspective::toMatrix()`는 변환된 길이를 그대로 행렬에 전달했습니다.
+
+그 결과 `CSS.px(0.5)`와 같은 값의 Typed OM 행렬이 렌더링 동작 및 WPT 기대값과
+달랐습니다.
+
+## 해결 내용
+
+길이를 CSS px로 변환한 뒤 `std::max(1.0, length->value())`를 적용해 perspective
+행렬에 전달했습니다.
+
+```cpp
+matrix->perspectiveSelf(std::max(1.0, length->value()));
+```
+
+원래 단위의 값이 아니라 px 변환 후 제한하므로 `0.5in`처럼 1px보다 큰 절대
+길이가 잘못 축소되지 않습니다. 수정 후 통과하는 WPT 실패 기대 파일도
+삭제했습니다.
+
+## 테스트 방법
+
+CSS Typed OM의 행렬 변환, 상대 단위 오류, 생성, 직렬화에 관한 WPT 4개를
+실행했습니다. 4개 모두 예상대로 통과했고 회귀나 예상 밖 결과는 없었습니다.
+`content_shell` 빌드와 diff 검사도 통과했으며, 이후 Commit Queue 검증을 거쳐
+Chromium main에 병합됐습니다.
+
+## 배운 점
+
+- CSS 길이의 최솟값이나 최댓값은 단위 변환이 끝난 canonical 값에 적용해야
+  합니다.
+- 렌더링 경로와 Typed OM의 직접 행렬 변환 경로가 같은 명세 규칙을 공유하는지
+  함께 확인해야 합니다.
+
+## 참고 자료
+
+- [Chromium CL 8365465](https://crrev.com/c/8365465)
+- [Chromium Issue 537998835](https://issues.chromium.org/issues/537998835)
+- [CSS Transforms Module Level 2](https://drafts.csswg.org/css-transforms-2/)
+1d:T80d,
+IntersectionObserver의 `rootMargin`과 `scrollMargin`에서 CSS 절대 길이 단위를
+지원하도록 수정했습니다.
+
+## 문제 설명
+
+Intersection Observer 표준은 margin 구성 요소에 절대 길이와 백분율을
+허용합니다. Blink는 길이 단위 중 `px`만 받아들여 `cm`, `mm`, `q`, `in`, `pt`,
+`pc`를 사용하면 생성 시 오류가 발생했습니다.
+
+이 때문에 절대 길이 단위를 검사하는 WPT가 Chromium에서 실패 기대값으로
+관리되고 있었습니다.
+
+## 해결 내용
+
+`CSSPrimitiveValue::IsAbsoluteLengthUnit()`을 추가해 CSS 절대 길이 단위를
+명시적으로 판별하도록 했습니다. IntersectionObserver의 margin 파서는 허용된
+단위를 canonical CSS px로 변환한 다음 기존 정수 변환을 적용합니다.
+
+각도를 포함한 다른 상대 단위가 잘못 허용되지 않도록 절대 길이 단위 목록을
+직접 검사했습니다. 수정 후 통과하는 WPT의 실패 기대 파일도 삭제했습니다.
+
+## 테스트 방법
+
+`IntersectionObserverTest.AbsoluteLengthMargins` 단위 테스트를 추가해 `px`,
+`cm`, `mm`, `q`, `in`, `pt`, `pc`가 예상한 px 값으로 변환되는지 확인했습니다.
+관련 IntersectionObserver WPT와 로컬 presubmit, diff 검사를 통과했고 Chromium
+Commit Queue를 거쳐 병합됐습니다.
+
+## 배운 점
+
+- CSS 단위 분류는 상대 단위의 반대값으로 계산하면 안 됩니다. 각도와 시간처럼
+  길이가 아닌 단위도 있기 때문에 허용할 절대 길이를 직접 판별해야 합니다.
+- 단위 변환은 기존 정수 변환보다 먼저 적용해야 `0.5in` 같은 값을 올바르게
+  CSS px로 처리할 수 있습니다.
+- WPT 수정은 실패 기대 파일을 제거한 상태에서 실제 테스트 통과를 확인해야 합니다.
+
+## 참고 자료
+
+- [Chromium CL 8351864](https://crrev.com/c/8351864)
+- [Chromium Issue 546308439](https://issues.chromium.org/issues/546308439)
+- [Intersection Observer specification](https://w3c.github.io/IntersectionObserver/)
+1e:Tbca,
+스크롤 checkerboarding 판정에서 조상 clip을 반영하는 방법을 구현하고
+검토했습니다. property tree의 소유권과 지연 생성 경로를 안전하게 연결하기
+어렵다는 리뷰 결과에 따라 CL을 중단했습니다.
+
+## 문제 설명
+
+기존 checkerboarding 검사는 스크롤 영역의 가시 범위를 root render surface로만
+제한했습니다. 조상 요소의 overflow clip에 가려진 콘텐츠도 보이는 영역으로
+판정할 수 있어 새 콘텐츠의 우선순위를 불필요하게 높일 가능성이 있었습니다.
+
+## 시도한 해결 내용
+
+스크롤 노드에 overflow clip의 ElementId를 저장하고 checkerboarding 판정 시 해당
+clip의 화면 좌표 사각형과 가시 영역의 교집합을 사용하도록 구현했습니다.
+
+Blink가 만든 property tree와 `cc::Layer`에서 직접 만든 property tree 양쪽에서
+매핑되도록 다음 경로를 수정했습니다.
+
+- Blink scroll node의 `OverflowClipNode()`를 compositor clip node에 연결
+- `cc::Layer` 경로에서 scroll parent의 clip node를 scroll node에 기록
+- checkerboarding 판정 전에 해당 clip의 누적 화면 사각형을 적용
+
+## 테스트 방법
+
+다음 회귀 테스트를 추가해 구현 방향을 확인했습니다.
+
+- 조상 clip 내부와 외부의 checkerboarding 우선순위 판정
+- `cc::Layer`에서 만든 scroll node와 clip node의 연결
+- Blink property tree에서 overflow clip이 compositor node로 매핑되는지 확인
+
+`content_shell` 빌드는 통과했습니다. 실제 스크롤 페이지를 이용한 추적에서는
+특정 업데이트에서 내부 우선순위 차이가 관찰됐지만, 한 가지 환경의 결과라 일반적인
+사용자 개선으로 판단하지 않았습니다.
+
+## 중단 이유
+
+리뷰에서 scroll node와 clip node의 소유 관계가 항상 안전하다고 보장할 수 없다는
+문제가 확인됐습니다. 상속된 `clip_tree_parent`는 현재 레이어가 소유한 노드가 아닐
+수 있고, `EnsureCompositorClipNode()`는 단순 조회가 아니라 새 노드를 만들 수도
+있습니다.
+
+따라서 ElementId를 저장하는 접근이 모든 property tree 구성 순서에서 유효하다고
+입증되지 않았습니다. 사용자에게 보이는 checkerboarding 개선 효과도 충분히
+재현하지 못해, 불확실한 구조 변경을 유지하지 않고 CL을 abandoned 처리했습니다.
+
+## 배운 점
+
+- property tree의 node ID를 계층 간에 전달하기 전에 노드의 소유자와 생성 시점을
+  먼저 확인해야 합니다.
+- `Ensure*` 함수는 읽기 전용 조회가 아닐 수 있으므로 호출 시점에 트리를 변경하는지
+  살펴봐야 합니다.
+- 성능 최적화는 코드상 가능성만으로 정당화하기 어렵고 실제 사용자 영향과 안정적인
+  재현이 필요합니다.
+
+## 참고 자료
+
+- [Chromium CL 8254401](https://crrev.com/c/8254401)
+- [Chromium Issue 433899668](https://issues.chromium.org/issues/433899668)
+1f:T897,
 CSS 토크나이저가 식별자를 미리 확인하는 과정에서도 NUL 문자(U+0000)를 대체 문자(U+FFFD)로 처리하도록 수정했습니다.
 
 ## 문제 설명
@@ -73,9 +269,55 @@ UChar next_char = input_.NextInputChar();
 - [Chromium CL 8186435](https://crrev.com/c/8186435)
 - [Chromium Issue 40683559](https://issues.chromium.org/issues/40683559)
 - [CSS Syntax Module — Input preprocessing](https://drafts.csswg.org/css-syntax-3/#input-preprocessing)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/injunchoi98","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/injunchoi98.png?size=192","alt":"injunchoi98 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"injunchoi98"}],["$","a",null,{"href":"https://github.com/injunchoi98","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","injunchoi98"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8186435","title":"[CSS] Apply NUL replacement during identifier lookahead","date":"$D2026-08-06T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8186435","labels":["css","tokenizer"],"status":"merged","excerpt":"CSS 토크나이저가 식별자를 미리 확인하는 과정에서도 NUL 문자(U+0000)를 대체 문자(U+FFFD)로 처리하도록 수정했습니다.","content":"$1b"},{"slug":"8147341","title":"Fix broken scroll jank image link","date":"$D2026-07-26T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8147341","labels":["docs","fix"],"status":"merged","excerpt":"`docs/graphics/scrolling/scroll_jank_metric.md`에 잘못된 이미지 링크가 있어 이미지가 정상적으로 표시되지 않았습니다.","content":"\n## 문제 설명\n\n`docs/graphics/scrolling/scroll_jank_metric.md`에 잘못된 이미지 링크가 있어 이미지가 정상적으로 표시되지 않았습니다.\n\n## 해결 내용\n\n잘못된 이미지 링크를 올바른 경로로 수정했습니다.\n\n## 테스트 방법\n\n수정한 링크가 실제 이미지 파일을 올바르게 가리키는지 확인했습니다.\n\n## 참고 자료\n\n- [Chromium CL 8147341](https://crrev.com/c/8147341)\n- [GitHub Issue #214](https://github.com/OSSCA-chromium/contributions/issues/214)\n"}]}]]}]
+20:T793,
+Canvas 2D의 `willReadFrequently` 옵션을 HTML 표준의 boolean 정의와 맞추고,
+옵션 생략과 명시적인 `false`를 구분하도록 수정했습니다.
+
+## 문제 설명
+
+HTML 표준은 `willReadFrequently`를 boolean으로 정의하지만 Blink는 자체 enum을
+사용하고 있었습니다. 이 차이로 Web IDL의 boolean 변환 규칙과 Blink 내부 표현이
+일치하지 않았습니다.
+
+또한 옵션을 생략한 경우와 `false`를 명시한 경우가 같은 값으로 전달되면, 구현이
+호출자의 의도를 구분할 수 없습니다.
+
+## 해결 내용
+
+`CanvasContextCreationAttributesModule`의 `willReadFrequently`를 boolean으로
+변경했습니다. 변환 코드에서는 `hasWillReadFrequently()`로 멤버가 실제로
+전달됐는지 확인한 뒤 다음 세 상태를 유지합니다.
+
+- 옵션 생략: 선호 없음
+- `false`: 빈번한 읽기를 선호하지 않음
+- `true`: 빈번한 읽기를 선호함
+
+기존 C++ 테스트도 새 IDL 표현에 맞게 수정했습니다.
+
+## 테스트 방법
+
+HTMLCanvasElement와 OffscreenCanvas 양쪽에 WPT를 추가했습니다. `undefined`,
+`false`, `0`, 빈 문자열, `null`, `true`, 문자열과 객체 입력을 사용해 Web IDL의
+boolean 변환 결과와 `getContextAttributes().willReadFrequently` 반환값을
+확인합니다.
+
+이 CL은 현재 리뷰 중입니다.
+
+## 배운 점
+
+- Web IDL 타입은 JavaScript 입력 변환 방식까지 결정하므로 내부 타입과 별개로
+  표준 정의를 정확히 따라야 합니다.
+- boolean 값만 확인하면 옵션 생략과 명시적인 `false`를 구분할 수 없습니다.
+  optional dictionary member는 `has*()` 검사까지 함께 사용해야 합니다.
+
+## 참고 자료
+
+- [Chromium CL 8173003](https://crrev.com/c/8173003)
+- [Chromium Issue 444826115](https://issues.chromium.org/issues/444826115)
+- [WHATWG HTML Issue 12907](https://github.com/whatwg/html/issues/12907)
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/injunchoi98","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/injunchoi98.png?size=192","alt":"injunchoi98 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"injunchoi98"}],["$","a",null,{"href":"https://github.com/injunchoi98","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","injunchoi98"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8381398","title":"Add default UA positioning for ::backdrop","date":"$D2026-09-10T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8381398","labels":["blink","css","backdrop"],"status":"in review","excerpt":"모든 top-layer 요소의 `::backdrop`에 CSS Positioned Layout이 정의한 기본 위치\n스타일을 적용하도록 Blink의 공통 UA 스타일 경로를 추가했습니다.","content":"$1b"},{"slug":"8365465","title":"Clamp depths below 1px in CSSPerspective::toMatrix()","date":"$D2026-09-07T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8365465","labels":["blink","css-typed-om","css-transforms"],"status":"merged","excerpt":"CSS Typed OM의 `CSSPerspective.toMatrix()`가 1px보다 작은 perspective 깊이를\n1px로 제한하도록 수정했습니다.","content":"$1c"},{"slug":"8351864","title":"Support absolute length units in IntersectionObserver margins","date":"$D2026-09-04T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8351864","labels":["blink","intersection-observer","web-platform-tests"],"status":"merged","excerpt":"IntersectionObserver의 `rootMargin`과 `scrollMargin`에서 CSS 절대 길이 단위를\n지원하도록 수정했습니다.","content":"$1d"},{"slug":"8254401","title":"Use ancestor clips when checking for scroll checkerboarding","date":"$D2026-08-15T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8254401","labels":["cc","compositor","checkerboarding"],"status":"abandoned","excerpt":"스크롤 checkerboarding 판정에서 조상 clip을 반영하는 방법을 구현하고\n검토했습니다. property tree의 소유권과 지연 생성 경로를 안전하게 연결하기\n어렵다는 리뷰 결과에 따라 CL을 중단했습니다.","content":"$1e"},{"slug":"8186435","title":"[CSS] Apply NUL replacement during identifier lookahead","date":"$D2026-08-06T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8186435","labels":["css","tokenizer"],"status":"merged","excerpt":"CSS 토크나이저가 식별자를 미리 확인하는 과정에서도 NUL 문자(U+0000)를 대체 문자(U+FFFD)로 처리하도록 수정했습니다.","content":"$1f"},{"slug":"8173003","title":"Match willReadFrequently IDL to the HTML Standard","date":"$D2026-07-30T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8173003","labels":["blink","canvas","web-standards"],"status":"in review","excerpt":"Canvas 2D의 `willReadFrequently` 옵션을 HTML 표준의 boolean 정의와 맞추고,\n옵션 생략과 명시적인 `false`를 구분하도록 수정했습니다.","content":"$20"},{"slug":"8147341","title":"Fix broken scroll jank image link","date":"$D2026-07-26T00:00:00.000Z","author":"injunchoi98","contributionUrl":"https://crrev.com/c/8147341","labels":["docs","fix"],"status":"merged","excerpt":"`docs/graphics/scrolling/scroll_jank_metric.md`에 잘못된 이미지 링크가 있어 이미지가 정상적으로 표시되지 않았습니다.","content":"\n## 문제 설명\n\n`docs/graphics/scrolling/scroll_jank_metric.md`에 잘못된 이미지 링크가 있어 이미지가 정상적으로 표시되지 않았습니다.\n\n## 해결 내용\n\n잘못된 이미지 링크를 올바른 경로로 수정했습니다.\n\n## 테스트 방법\n\n수정한 링크가 실제 이미지 파일을 올바르게 가리키는지 확인했습니다.\n\n## 참고 자료\n\n- [Chromium CL 8147341](https://crrev.com/c/8147341)\n- [GitHub Issue #214](https://github.com/OSSCA-chromium/contributions/issues/214)\n"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-1c:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"injunchoi98 | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"injunchoi98님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1c","4",{}]],"error":null,"digest":"$undefined"}
+21:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"injunchoi98 | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"injunchoi98님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L21","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
