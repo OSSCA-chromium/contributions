@@ -7,7 +7,7 @@ c:I[7150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/371cbb432349cb0d.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"LkGSVDEkMZp1hBMbSzxs_","p":"/contributions","c":["","contributors","Yelihi",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Yelihi","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Yelihi","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"WpZqiCI4GZZKn-TucSUTL","p":"/contributions","c":["","contributors","Yelihi",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Yelihi","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/371cbb432349cb0d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Yelihi","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,111 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-c3c422177f6bf124.js"],"default"]
-1b:T1b5a,
+1b:T13fa,
+Chromium의 WebGL 2 API인 getUniformIndices()가 오류 상황에서 잘못된 반환값을 전달하는 문제를 수정하고, Khronos WebGL 테스트에 회귀 테스트를 추가했습니다.
+
+## 문제 설명
+
+getUniformIndices()는 정상 호출에서는 인덱스 배열을 반환하고, GL 오류가 발생하면 null을 반환해야 합니다. 하지만 기존 Chromium 구현은 program 검증에 실패했을 때 빈 배열을 반환했습니다.
+
+- 다른 context의 program이나 삭제된 program을 전달하면 오류 코드는 맞지만 반환값이 잘못됐습니다.
+- context가 손실된 경우에도 null 반환을 보장하지 못했습니다.
+- 정상적인 빈 입력의 결과인 []와 오류 결과인 null을 구분하는 테스트가 필요했습니다.
+
+## 해결 내용
+
+### Chromium 반환값 수정
+
+program 검증 실패 시 빈 결과 벡터 대신 std::nullopt를 반환하도록 변경했습니다.
+
+함수의 반환 타입은 std::optional<Vector<GLuint>> 입니다. 따라서 빈 벡터를 반환하면 값이 존재하는 optional 이 되어 Javascript 에는 [] 로 전달됩니다. 명세가 요구하는 null을 반환하려면 값이 없는 optional인 std::nullopt를 반환해야 합니다.
+
+```cpp
+std::optional<Vector<GLuint>> WebGL2RenderingContextBase::getUniformIndices(
+    WebGLProgram* program,
+    const Vector<String>& uniform_names) {
+-  // TODO(https://crbug.com/1465002): This should return std::nullopt
+-  // if there is an error.
+-  Vector<GLuint> result;
+   if (!ValidateWebGLProgramOrShader("getUniformIndices", program))
+-    return result;
++    return std::nullopt;
+
+  PointableStringArray uniform_strings(uniform_names);
+
++  Vector<GLuint> result;
+   result.resize(uniform_names.size());
+   ContextGL()->GetUniformIndices(ObjectOrZero(program), uniform_strings.size(),
+                                    uniform_strings.data(), result.data());
+   return result;
+}
+```
+
+- program 검증 실패 시 std::nullopt를 반환합니다.
+- 결과 벡터는 검증을 통과한 이후에 생성합니다.
+- 이번 변경으로 해결한 오류 반환 관련 TODO를 제거합니다.
+
+이렇게 하면 다른 context의 program, 삭제된 program, 손실된 context에 대한 검증 실패는 null로 전달됩니다. 정상 program에 빈 이름 목록을 전달했을 때는 기존처럼 []를 반환합니다.
+
+### 첫 WPT 테스트 작성
+
+third_party/blink/web_tests/external/wpt/webgl/getUniformIndices.html 위치에 
+정상 호출과 오류 호출을 구분하기 위해 다섯 가지 시나리오를 작성했습니다.
+
+1. 정상 program에 빈 이름 목록 전달
+2. 정상 program에 존재하지 않는 uniform 이름 전달
+3. 다른 context에서 생성한 program 전달
+4. 삭제된 program 전달
+5. context 손실 후 호출
+
+반환값뿐 아니라 다른 context의 program에서는 INVALID_OPERATION, 삭제된 program에서는 INVALID_VALUE가 발생하는지도 확인했습니다.
+
+### 리뷰 후 Khronos WebGL 저장소로 이동
+
+WebGL 의 경우 WPT 에 테스트를 작성하는것이 아니라, KhronosGroup/WebGL 저장소의 기존 테스트에 추가해야한다고 합니다.
+
+실제로 이번 동작을 검사할 파일도 이미 존재하고 있었습니다.
+sdk/tests/conformance2/programs/get-uniform-indices.html
+
+이에 따라 Chromium CL에서 새 WPT 파일을 제거하고, WebGL 저장소에 별도 브랜치를 만들어 기존 테스트를 확장했습니다. 기존 셰이더와 WebGLTestUtils 헬퍼를
+재사용하고, 앞서 작성한 다섯 가지 시나리오를 해당 테스트 하네스에 맞게 옮겼습니다. (https://github.com/KhronosGroup/WebGL/pull/3794)
+
+### 테스트 진행
+
+WPT 테스트 진행과 WebGL 내 기존 존재 html 실행의 테스트 방식에는 차이가 있습니다.
+
+1. 기존 WPT 테스트를 진행
+
+```bash
+# 테스트 실행에 필요한 바이너리 빌드
+autoninja -C out/Default blink_tests
+
+# 추가한 WPT 테스트 실행
+third_party/blink/tools/run_web_tests.py \
+  -t Default \
+  external/wpt/webgl/getUniformIndices.html
+```
+
+- 테스트는 모두 통과
+
+2. WebGL 내 html 실행 테스트
+
+테스트를 진행할 때, 현재 chrome 과 수정이 적용된 빌드된 chrome 2군데에서 각각 실행 검증이 필요했습니다.
+
+- 현재 chrome : 4개의 추가된 테스트 실패
+- 빌드된 chrome : 모두 패스
+
+> 빌드 chrome 테스트는 원격으로 진행하였기에, 8000 포트를 허용한 뒤, 직접 get-uniform-indices.html 을 실행한 뒤, 결과를 확인했습니다.
+
+## 배운 점
+
+chrome 에는 여전히 제가 모르는 다양한 테스트 방식이 존재하고, 그렇기에 작은 코드를 수정하더라도 연관되었다 판단되는 테스트들을 놓치지 않고 검증해서 문제가 없음을 증명해야 겠다 생각하였습니다. 또한 webGL 의 경우 웹 표준을 다루고 있었음에도 WPT 로 관리되지 않았다는 점이 신기했습니다.
+
+## 참고 자료
+
+- [리뷰 링크](https://crrev.com/c/8424960)
+- [WebGL 테스트 코드 PR](https://github.com/KhronosGroup/WebGL/pull/3794)
+1c:T1b5a,
 Blink에서 DOM 노드 ID를 타입 안전한 DOMNodeIdType으로 점진적으로 전환하기 위해 WTF HashMap과 HashSet에서 사용할 해시 특성을 추가했습니다. 기
 존 정수 키의 유효 범위와 GC 정책을 유지하는 데 초점을 맞춘 첫 번째 CL이며, 리뷰와 CQ 검증을 거쳐 병합되었습니다.
 
@@ -147,7 +251,7 @@ Blink에서 DOM 노드 ID를 타입 안전한 DOMNodeIdType으로 점진적으�
  다음 단계는 작은 Blink 영역부터 DOMNodeIdType으로 전환하는 것입니다. 기존 정수 API와 만나는 지점에서는 명시적 변환을 사용하고, 공통 API가 전
  환되면 임시 변환을 제거할 계획입니다.
 
-1c:T2af0,
+1d:T2af0,
 macOS의 WebUI 옴니박스 팝업에서 한글 조합 중 첫 번째 `Cmd+T`가 무시되는 문제를 수정했습니다. 자식 창에서 빠져 있던 단축키 선처리를 부모 브라우저 창으로 연결하는 작업입니다. 처음에는 `CommandDispatcher` 내부를 수정했고, 최종적으로는 **부모에게 선처리를 전달하는 기본 delegate**를 새로 만들었습니다.
 
 ## 문제 발견 경로
@@ -272,7 +376,7 @@ flowchart TD
 - [CommandDispatcher 계약과 프로토콜](https://chromium.googlesource.com/chromium/src/+/b43f1a7f4665e08050ba4e3c695cce734656defc/ui/base/cocoa/command_dispatcher.h)
 - [NativeWidgetMacNSWindow의 delegate 설치](https://chromium.googlesource.com/chromium/src/+/b43f1a7f4665e08050ba4e3c695cce734656defc/components/remote_cocoa/app_shim/native_widget_mac_nswindow.mm)
 - [관련 FullPopup 단축키 이슈: crbug.com/450817273](https://crbug.com/450817273)
-1d:T297a,
+1e:T297a,
 Chromium Background Download Service에서 다운로드 완료와 취소 사이에 발생하는 late callback 문제를 분석하고 개선을 시도한 기여
 
 ## 문제 설명
@@ -523,7 +627,7 @@ Service
 - [Chromium Background Fetch Source](https://source.chromium.org/chromium/chromium/src/+/main:components/background_fetch/)
 
 
-1e:Te0b,
+1f:Te0b,
 Chromium의 XML MIME Type 판별 로직을 MIME Sniffing 표준에 맞게 개선한 기여
 
 ## 문제 설명
@@ -578,7 +682,7 @@ Feature Flag가 활성화된 상태에서는 테스트가 통과했고, 비활�
 - https://mimesniff.spec.whatwg.org/#xml-mime-type
 - https://chromium-review.googlesource.com/c/chromium/src/+/6525687
 - https://chromium-review.googlesource.com/c/chromium/src/+/362282752
-1f:Ta62,
+20:Ta62,
 Chromium Background Fetch에 남아 있던 불필요한 TODO를 제거한 기여
 
 ## 문제 설명
@@ -618,7 +722,7 @@ Background Fetch에는 다운로드 취소 이후 이미 예약된 callback이 �
 - [Chromium Gerrit CL #8316987](https://chromium-review.googlesource.com/c/chromium/src/+/8316987)
 - [이전 Abandoned CL #8277215](https://chromium-review.googlesource.com/c/chromium/src/+/8277215)
 - [Chromium Issue #40546930](https://issues.chromium.org/issues/40546930)
-20:Tbb3,
+21:Tbb3,
 Blink의 `RTCConfiguration.iceTransports` 비표준 alias를 기본 동작에서 제거하고, Interop 2026 WPT가 기대하는 표준 동작에 맞춘 변경입니다.
 
 ## 문제 설명
@@ -668,7 +772,7 @@ Gerrit의 CQ를 통해 변경이 검증된 뒤 머지되었습니다.
 - [Gerrit CL 8260551](https://chromium-review.googlesource.com/c/chromium/src/+/8260551)
 - [관련 버그 488071544](https://issues.chromium.org/issues/488071544)
 - [Chromestatus usage metric 1664](https://chromestatus.com/metrics/feature/timeline/popularity/1664)
-21:Tb03,
+22:Tb03,
 Element 가 focus 변경 시점에 활성화된 iframe 으로 요소가 이동하게 되는 케이스에 대한 Crash Test 추가(WPT)
 
 ## 문제 설명
@@ -727,7 +831,7 @@ content-shell, image-diff 빌드 이후, run_web_tests.py 실행 결과 no crash
 - [Focus](https://developer.mozilla.org/ko/docs/Web/API/FocusEvent)
 - [AdoptNode](https://developer.mozilla.org/ko/docs/Web/API/Document/adoptNode)
 - [focus 방어 로직](https://chromium-review.googlesource.com/c/chromium/src/+/2873191/4/third_party/blink/renderer/core/dom/document.cc)
-22:Tbb8,
+23:Tbb8,
 Blink web test 문서의 rebaseline 설명이 현재 코드 구조와 맞지 않는 점이 발견되어, 문서를 수정하였습니다.
 
 ## 문제 설명
@@ -779,9 +883,9 @@ This is handled internally by blink_tool.py rebaseline{,-cl}.
 - [copy_existing_baselines.py](https://source.chromium.org/chromium/chromium/src/+/b53757e2304cc4b48a0d6e26ef9b0585fbc5382a:third_party/blink/tools/blinkpy/tool/commands/copy_existing_baselines.py;dlc=f468cd062d5e0a170ee9d6cfc0c346fdd993b104)
 - [Webkit -> blink 변경 과정 내 문서변경 log](https://source.chromium.org/chromium/chromium/src/+/main:docs/testing/web_test_baseline_fallback.md;l=137;drf=docs%2Ftesting%2Flayout_test_baseline_fallback.md;drc=b53757e2304cc4b48a0d6e26ef9b0585fbc5382a;bpv=1;bpt=0;dlc=89eeaa5ad4a121168286c9e1ebfbe4e63ff67f8b;dlf=docs%2Ftesting%2Flayout_test_baseline_fallback.md)
 
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Yelihi","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Yelihi.png?size=192","alt":"Yelihi 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Yelihi"}],["$","a",null,{"href":"https://github.com/Yelihi","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Yelihi"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8397547","title":"[Blink] Add WTF hash traits for DOMNodeIdType","date":"$D2026-09-15T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8397547","labels":["dom","hash"],"status":"merged","excerpt":"Blink에서 DOM 노드 ID를 타입 안전한 DOMNodeIdType으로 점진적으로 전환하기 위해 WTF HashMap과 HashSet에서 사용할 해시 특성을 추가했습니다. 기\n존 정수 키의 유효 범위와 GC 정책을 유지하는 데 초점을 맞춘 첫 번째 CL이며, 리뷰와 CQ 검증을 거","content":"$1b"},{"slug":"8350946","title":"[Mac] Route reserved shortcuts from child windows","date":"$D2026-09-10T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8350946","labels":["ui/base/cocoa","macOS","omnibox","IME"],"status":"merged","excerpt":"macOS의 WebUI 옴니박스 팝업에서 한글 조합 중 첫 번째 `Cmd+T`가 무시되는 문제를 수정했습니다. 자식 창에서 빠져 있던 단축키 선처리를 부모 브라우저 창으로 연결하는 작업입니다. 처음에는 `CommandDispatcher` 내부를 수정했고, 최종적으로는 **부모에게 선처","content":"$1c"},{"slug":"8277215","title":"Don't ignore CancelDownload() while a completion callback is pending","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8277215","labels":["download"],"status":"abandoned","excerpt":"Chromium Background Download Service에서 다운로드 완료와 취소 사이에 발생하는 late callback 문제를 분석하고 개선을 시도한 기여","content":"$1d"},{"slug":"8301932","title":"XML and JSON mime type matching should be broader","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8301932","labels":["wpt","xml","prototype"],"status":"merged","excerpt":"Chromium의 XML MIME Type 판별 로직을 MIME Sniffing 표준에 맞게 개선한 기여","content":"$1e"},{"slug":"8316987","title":"Remove stale Background Fetch cancellation TODOs","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8316987","labels":["backgroundFetch"],"status":"merged","excerpt":"Chromium Background Fetch에 남아 있던 불필요한 TODO를 제거한 기여","content":"$1f"},{"slug":"8260551","title":"Remove non-standard RTCConfiguration.iceTransports alias","date":"$D2026-08-21T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8260551","labels":["blink","webrtc","interop-2026"],"status":"merged","excerpt":"Blink의 `RTCConfiguration.iceTransports` 비표준 alias를 기본 동작에서 제거하고, Interop 2026 WPT가 기대하는 표준 동작에 맞춘 변경입니다.","content":"$20"},{"slug":"8221527","title":"Add crash test for focused iframe adopt into active document","date":"$D2026-08-13T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8221527","labels":["wpt","iframe"],"status":"merged","excerpt":"Element 가 focus 변경 시점에 활성화된 iframe 으로 요소가 이동하게 되는 케이스에 대한 Crash Test 추가(WPT)","content":"$21"},{"slug":"8146040","title":"Fix stale rebaseline fallback documentation","date":"$D2026-07-25T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://chromium-review.googlesource.com/c/chromium/src/+/8146040","labels":["docs","fix"],"status":"merged","excerpt":"Blink web test 문서의 rebaseline 설명이 현재 코드 구조와 맞지 않는 점이 발견되어, 문서를 수정하였습니다.","content":"$22"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Yelihi","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Yelihi.png?size=192","alt":"Yelihi 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Yelihi"}],["$","a",null,{"href":"https://github.com/Yelihi","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Yelihi"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8424960","title":"[webgl] Return null for invalid uniform queries","date":"$D2026-09-20T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8424960","labels":["webgl"],"status":"merged","excerpt":"Chromium의 WebGL 2 API인 getUniformIndices()가 오류 상황에서 잘못된 반환값을 전달하는 문제를 수정하고, Khronos WebGL 테스트에 회귀 테스트를 추가했습니다.","content":"$1b"},{"slug":"8397547","title":"[Blink] Add WTF hash traits for DOMNodeIdType","date":"$D2026-09-15T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8397547","labels":["dom","hash"],"status":"merged","excerpt":"Blink에서 DOM 노드 ID를 타입 안전한 DOMNodeIdType으로 점진적으로 전환하기 위해 WTF HashMap과 HashSet에서 사용할 해시 특성을 추가했습니다. 기\n존 정수 키의 유효 범위와 GC 정책을 유지하는 데 초점을 맞춘 첫 번째 CL이며, 리뷰와 CQ 검증을 거","content":"$1c"},{"slug":"8350946","title":"[Mac] Route reserved shortcuts from child windows","date":"$D2026-09-10T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8350946","labels":["ui/base/cocoa","macOS","omnibox","IME"],"status":"merged","excerpt":"macOS의 WebUI 옴니박스 팝업에서 한글 조합 중 첫 번째 `Cmd+T`가 무시되는 문제를 수정했습니다. 자식 창에서 빠져 있던 단축키 선처리를 부모 브라우저 창으로 연결하는 작업입니다. 처음에는 `CommandDispatcher` 내부를 수정했고, 최종적으로는 **부모에게 선처","content":"$1d"},{"slug":"8277215","title":"Don't ignore CancelDownload() while a completion callback is pending","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8277215","labels":["download"],"status":"abandoned","excerpt":"Chromium Background Download Service에서 다운로드 완료와 취소 사이에 발생하는 late callback 문제를 분석하고 개선을 시도한 기여","content":"$1e"},{"slug":"8301932","title":"XML and JSON mime type matching should be broader","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8301932","labels":["wpt","xml","prototype"],"status":"merged","excerpt":"Chromium의 XML MIME Type 판별 로직을 MIME Sniffing 표준에 맞게 개선한 기여","content":"$1f"},{"slug":"8316987","title":"Remove stale Background Fetch cancellation TODOs","date":"$D2026-09-08T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8316987","labels":["backgroundFetch"],"status":"merged","excerpt":"Chromium Background Fetch에 남아 있던 불필요한 TODO를 제거한 기여","content":"$20"},{"slug":"8260551","title":"Remove non-standard RTCConfiguration.iceTransports alias","date":"$D2026-08-21T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8260551","labels":["blink","webrtc","interop-2026"],"status":"merged","excerpt":"Blink의 `RTCConfiguration.iceTransports` 비표준 alias를 기본 동작에서 제거하고, Interop 2026 WPT가 기대하는 표준 동작에 맞춘 변경입니다.","content":"$21"},{"slug":"8221527","title":"Add crash test for focused iframe adopt into active document","date":"$D2026-08-13T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://crrev.com/c/8221527","labels":["wpt","iframe"],"status":"merged","excerpt":"Element 가 focus 변경 시점에 활성화된 iframe 으로 요소가 이동하게 되는 케이스에 대한 Crash Test 추가(WPT)","content":"$22"},{"slug":"8146040","title":"Fix stale rebaseline fallback documentation","date":"$D2026-07-25T00:00:00.000Z","author":"Yelihi","contributionUrl":"https://chromium-review.googlesource.com/c/chromium/src/+/8146040","labels":["docs","fix"],"status":"merged","excerpt":"Blink web test 문서의 rebaseline 설명이 현재 코드 구조와 맞지 않는 점이 발견되어, 문서를 수정하였습니다.","content":"$23"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-23:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"Yelihi | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Yelihi님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L23","4",{}]],"error":null,"digest":"$undefined"}
+24:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"Yelihi | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Yelihi님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L24","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
