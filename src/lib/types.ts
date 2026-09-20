@@ -29,6 +29,7 @@ export interface ContributorSummary {
   total: number;
   merged: number;
   inReview: number;
+  abandoned: number;
   // ISO date of the contributor's most recent contribution (max date).
   lastActive: string;
 }
