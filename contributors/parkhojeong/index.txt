@@ -5,9 +5,9 @@
 c:I[7150,[],""]
 :HL["/contributions/_next/static/media/1e41be92c43b3255-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/contributions/_next/static/css/e5fe22ea6739ba29.css","style"]
+:HL["/contributions/_next/static/css/c8ceb2912a9774f2.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"5Oo4u8hnWVT15yn6Xch9H","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/e5fe22ea6739ba29.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"lWPsi5VOKCeCbdMhYq6bw","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/c8ceb2912a9774f2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[8924,[],""]
 f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","177","static/chunks/app/layout-222c019a5450d2d8.js"],"default"]
@@ -24,7 +24,109 @@ f:I[3195,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["619","static/chunks/619-ba102abea3e3d0e4.js","356","static/chunks/356-275fd0d58877acdc.js","538","static/chunks/app/contributors/%5Busername%5D/page-e34eff5c90d268c8.js"],"default"]
-1b:Te8e,
+1b:Tad1,
+세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고
+똑바로 표시되는 문제를 수정했습니다.
+
+## 문제 설명
+
+`HarfBuzzShaper`는 8비트 문자열에 대해 문자 방향에 따른 구간 분할을 생략합니다.
+따라서 8비트로 저장된 사용자 지정 하이픈 문자열 `+=`는 세로쓰기의
+`text-orientation: mixed`에서도 올바른 회전이 적용되지 않았습니다.
+
+이로 인해 `css/css-text/hyphens/hyphens-vertical-003.html` WPT가 실패했습니다.
+
+## 해결 내용
+
+- `HyphenResult::Shape()`에서 글꼴 방향이 `kVerticalMixed`인 경우
+  `text_.Ensure16Bit()`를 호출하여 하이픈 문자열을 16비트로 저장하도록 했습니다.
+  이를 통해 shaper가 문자 방향 처리를 적용할 수 있도록 했습니다.
+- 기본 활성화된 `HyphenVerticalOrientationFix` 런타임 플래그를 추가하여,
+  필요할 때 플래그를 비활성화하면 기존 동작으로 돌아갈 수 있도록 했습니다.
+- 가로쓰기, 세로쓰기의 `upright`와 `mixed`를 검증하는 단위 테스트를 추가하고,
+  해당 WPT의 실패 기대값을 제거했습니다.
+
+## 테스트 방법
+
+CL에 기록한 단위 테스트는 다음과 같습니다.
+
+```bash
+blink_unittests --gtest_filter="HyphenResultTest.*"
+```
+
+각 테스트는 플래그를 켠 경우와 끈 경우 모두에서 글리프 회전 값을 확인합니다.
+가로쓰기와 세로쓰기 `upright`의 기존 동작을 유지하면서, 세로쓰기 `mixed`에서는
+플래그가 켜졌을 때 `+=`가 옆으로 회전하는지 검증합니다.
+
+관련 WPT는 `external/wpt/css/css-text/hyphens/hyphens-vertical-003.html`입니다.
+Gerrit의 CQ dry run 통과 후, 2026년 9월 18일 Chromium main에 병합되었습니다.
+
+## 배운 점
+
+- 같은 문자열이라도 내부 저장 방식이 8비트인지 16비트인지에 따라 shaper의
+  처리 경로가 달라질 수 있으므로, 렌더링 문제를 분석할 때 저장 방식도 확인해야 합니다.
+- 수정 대상인 세로쓰기 `mixed`뿐 아니라 가로쓰기와 `upright`도 함께 검증해야
+  다른 쓰기 방향에 회귀 문제가 생기지 않는지 확인할 수 있습니다.
+- 런타임 플래그로 변경 동작을 제어하면 문제가 발생했을 때 기존 동작으로 빠르게
+  되돌릴 수 있으며, 플래그를 켠 경우와 끈 경우 모두 테스트해야 합니다.
+
+## 참고 자료
+
+- [작업 이슈 #448](https://github.com/OSSCA-chromium/contributions/issues/448)
+- [Gerrit CL 8409931](https://crrev.com/c/8409931)
+- [Chromium Issue 562849567](https://issues.chromium.org/issues/562849567)
+- [관련 WPT 결과](https://wpt.fyi/results/css/css-text/hyphens/hyphens-vertical-003.html)
+1c:Ta4d,
+Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의
+단어 경계를 올바르게 판단하도록 수정했습니다.
+
+## 문제 설명
+
+capitalize 처리에서는 `previous_character`로 이전 문자의 문맥을 전달하여
+단어 경계를 판단합니다. 기존에는 UTF-16 코드 유닛 하나만 저장할 수 있어,
+두 코드 유닛으로 표현되는 supplementary code point를 온전히 보존하지 못했습니다.
+
+이로 인해 `::first-letter`가 적용된 텍스트의 대문자 변환이 잘못되어
+`css/css-pseudo/first-letter-capitalize-supplementary-char.html` WPT가 실패했습니다.
+
+## 해결 내용
+
+- `previous_character`를 `UChar32`로 변경하고, 이전 문자를 코드 포인트 단위로
+  전달하도록 관련 레이아웃 및 텍스트 처리 코드를 수정했습니다.
+- 보존된 코드 포인트를 단어 경계 판단에 사용하도록 capitalize 처리를 보완했습니다.
+- 기본 활성화된 `CapitalizeAfterSupplementaryCharacterFix` 런타임 플래그로
+  변경 동작을 제어하도록 했습니다.
+- 회귀 테스트를 추가하고 해당 WPT의 실패 기대값을 제거했습니다.
+
+## 테스트 방법
+
+CL에 기록한 검증 대상은 다음과 같습니다.
+
+```bash
+wtf_unittests --gtest_filter=CaseMapTest.ToTitleWithPreviousCharacter
+blink_platform_unittests --gtest_filter="CapitalizeTest*"
+blink_unittests --gtest_filter="*CapitalizationAfterSupplementaryCharacter"
+```
+
+관련 WPT는 `external/wpt/css/css-pseudo/first-letter-capitalize-supplementary-char.html`입니다.
+Gerrit의 CQ dry run 통과 후, 2026년 9월 16일 Chromium main에 병합되었습니다.
+
+## 배운 점
+
+- UTF-16 코드 유닛과 유니코드 코드 포인트를 구분해야 하며, 이전 문자 문맥을
+  전달할 때도 supplementary character를 온전히 보존해야 합니다.
+- 텍스트 조각의 대문자 변환은 앞선 문자의 단어 경계 문맥에 영향을 받으므로,
+  문자열 변환과 레이아웃 양쪽에서 회귀 테스트가 필요합니다.
+- 변경 동작을 런타임 플래그로 제어하고 기존 코드를 보존하면, 예상하지 못한
+  문제가 발생했을 때 플래그를 비활성화하여 기존 동작으로 빠르게 되돌릴 수 있습니다.
+
+## 참고 자료
+
+- [작업 이슈 #363](https://github.com/OSSCA-chromium/contributions/issues/363)
+- [Gerrit CL 8311028](https://crrev.com/c/8311028)
+- [Chromium Issue 501115609](https://issues.chromium.org/issues/501115609)
+- [관련 WPT 결과](https://wpt.fyi/results/css/css-pseudo/first-letter-capitalize-supplementary-char.html)
+1d:Te8e,
 Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,
 링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을
 테스트로 명시했습니다.
@@ -104,7 +206,7 @@ Gerrit LUCI dry run과 제출 전 전체 CQ도 통과했으며, CL은 Chromium m
 - [Linux/ChromeOS inotify 구현](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_inotify.cc)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-1c:Tc0f,
+1e:Tc0f,
 Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도
 `FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.
 
@@ -176,7 +278,7 @@ Gerrit LUCI dry-run과 제출 전 전체 CQ가 통과했으며, CL은 Chromium m
 - [Windows FilePathWatcher 필터링 로직](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_win.cc)
 - [Apple 관련 선행 CL 8042283](https://crrev.com/c/8042283)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
-1d:T5a6,
+1f:T5a6,
 `ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스
 오타를 수정했습니다.
 
@@ -223,7 +325,7 @@ Gitiles에서 변경된 링크가 정상적으로 열리는 것을 확인했습�
 - [헤더 이름 변경 CL 6938086](https://crrev.com/c/6938086)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-1e:T65e,
+20:T65e,
 지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.
 
 ## 문제 설명
@@ -268,9 +370,9 @@ Gitiles에서 LaCrOS 항목이 제거된 것을 확인했습니다.
 - [LaCrOS 문서 삭제 CL 5892904](https://crrev.com/c/5892904)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$1b"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$1c"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$1d"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$1e"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8409931","title":"[Blink] Fix hyphen orientation in vertical text","date":"$D2026-09-16T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8409931","labels":["blink","css"],"status":"merged","excerpt":"세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고\n똑바로 표시되는 문제를 수정했습니다.","content":"$1b"},{"slug":"8311028","title":"[Blink] Fix capitalization after supplementary characters","date":"$D2026-08-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311028","labels":["blink","css"],"status":"merged","excerpt":"Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의\n단어 경계를 올바르게 판단하도록 수정했습니다.","content":"$1c"},{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$1d"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$1e"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$1f"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$20"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-1f:I[622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1f","4",{}]],"error":null,"digest":"$undefined"}
+21:I[622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L21","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
