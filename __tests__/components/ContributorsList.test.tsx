@@ -16,8 +16,8 @@ const summaries = [
     isValidGithubUser: true,
     total: 5,
     merged: 0,
-    inReview: 5,
-    abandoned: 0,
+    inReview: 3,
+    abandoned: 2,
     lastActive: '2025-01-01T00:00:00.000Z',
   },
 ];
@@ -47,4 +47,15 @@ test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
   const links = screen.getAllByRole('link');
   expect(links[0]).toHaveTextContent('alice'); // merged 1
   expect(links[1]).toHaveTextContent('bob'); // merged 0
+});
+
+test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으로 표시한다', () => {
+  render(<ContributorsList summaries={summaries} />);
+  expect(screen.getByRole('option', { name: 'Abandoned' })).toHaveValue('abandoned');
+  fireEvent.change(screen.getByLabelText('정렬 기준'), {
+    target: { value: 'abandoned' },
+  });
+  const links = screen.getAllByRole('link');
+  expect(links[0]).toHaveTextContent('bob'); // abandoned 2
+  expect(links[1]).toHaveTextContent('alice'); // abandoned 0
 });

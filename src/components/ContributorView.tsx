@@ -6,16 +6,14 @@ import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import PatchTable from '@/components/PatchTable';
 import YearSelector from '@/components/YearSelector';
 
-// Accent dot color per strip cell — same c1/c2/c3 scale as the home strip,
-// just three cells instead of four (no c4).
-const STRIP_ACCENTS = ['bg-c1', 'bg-c2', 'bg-c3'];
+// Match the four status summary cells to the home strip.
+const STRIP_ACCENTS = ['bg-c1', 'bg-c2', 'bg-c3', 'bg-c4'];
 
-// A 3-col strip only needs one fold point: drop straight to 1 col on narrow
-// screens (home's 4-col strip needs an intermediate 2-col step; 3 doesn't).
 const STRIP_BORDERS = [
   '',
-  'border-l border-mline max-[480px]:border-l-0 max-[480px]:border-t',
-  'border-l border-mline max-[480px]:border-l-0 max-[480px]:border-t',
+  'border-l border-mline max-[380px]:border-l-0 max-[380px]:border-t',
+  'border-l border-mline max-[620px]:border-l-0 max-[620px]:border-t',
+  'border-l border-mline max-[380px]:border-l-0 max-[620px]:border-t',
 ];
 
 export default function ContributorView({
@@ -33,11 +31,13 @@ export default function ContributorView({
   const total = filtered.length;
   const merged = filtered.filter((c) => c.status === 'merged').length;
   const inReview = filtered.filter((c) => c.status === 'in review').length;
+  const abandoned = filtered.filter((c) => c.status === 'abandoned').length;
   const yearLabel = year === 'all' ? '전체' : year;
   const strip = [
     { value: total, label: '총 기여' },
     { value: merged, label: 'Merged' },
     { value: inReview, label: 'In Review' },
+    { value: abandoned, label: 'Abandoned' },
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function ContributorView({
         </p>
       ) : (
         <>
-          <div className="mb-8 grid grid-cols-3 overflow-hidden rounded-2xl bg-m1 max-[480px]:grid-cols-1">
+          <div className="mb-8 grid grid-cols-4 overflow-hidden rounded-2xl bg-m1 max-[620px]:grid-cols-2 max-[380px]:grid-cols-1">
             {strip.map((cell, i) => (
               <div key={cell.label} className={`px-[18px] py-4 ${STRIP_BORDERS[i]}`}>
                 <span
