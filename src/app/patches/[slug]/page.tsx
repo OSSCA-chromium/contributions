@@ -5,11 +5,7 @@ import {
 } from '@/lib/contributions';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import StatusBadge from '@/components/StatusBadge';
-import LabelChip from '@/components/LabelChip';
-import ContributorAvatar from '@/components/ContributorAvatar';
-import YearBadge from '@/components/YearBadge';
-import { isValidGithubUsername } from '@/lib/contributions';
+import PatchMeta from '@/components/PatchMeta';
 
 interface ParamsProps {
   params: Promise<{ slug: string }>;
@@ -50,34 +46,7 @@ export default async function PatchPage({ params }: ParamsProps) {
       {/* 헤더 정보 */}
       <header className="mb-4">
         <h1 className="font-display text-4xl font-semibold tracking-tight mb-2 text-on-surface">{contribution.title}</h1>
-
-        {/* Status 배지를 먼저 표시하고 labels를 보여주기 */}
-        <div className="flex flex-wrap gap-2 mb-2">
-          <StatusBadge status={contribution.status} />
-          <YearBadge date={contribution.date} />
-          {contribution.labels.map((label) => (
-            <LabelChip key={label} label={label} />
-          ))}
-        </div>
-
-        <div className="flex items-center text-on-surface-variant mb-4">
-          <span className="mr-2">
-            {new Date(contribution.date).toLocaleDateString('ko-KR')}
-          </span>
-          <span className="flex items-center">
-            {isValidGithubUsername(contribution.author) ? (
-              <Link
-                href={`/contributors/${contribution.author}`}
-                className="flex items-center hover:text-primary"
-              >
-                <ContributorAvatar username={contribution.author} size={24} />
-                <span className="ml-2">{contribution.author}</span>
-              </Link>
-            ) : (
-              <span>{contribution.author}</span>
-            )}
-          </span>
-        </div>
+        <PatchMeta contribution={contribution} />
       </header>
 
       {/* 컨트리뷰션 링크 */}

@@ -25,6 +25,7 @@ export interface SearchIndexItem {
   slug: string;
   title: string;
   author: string;
+  repo?: string;
   module: string;
   kind: string;
   keywords: string[];

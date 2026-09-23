@@ -317,3 +317,105 @@ pre::-webkit-scrollbar-thumb {
 pre::-webkit-scrollbar-thumb:hover {
   background-color: #6b7280;
 }
+
+.patch-grid {
+  display: grid;
+  grid-template-columns: 92px 104px minmax(0, 1fr) 116px 112px;
+  grid-template-areas: "date id title author status";
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.patch-grid > * {
+  min-width: 0;
+}
+
+.patch-grid-heading {
+  border-bottom: 1px solid var(--color-outline);
+  color: var(--color-on-surface-variant);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0 0.75rem;
+}
+
+.patch-grid-row {
+  border-bottom: 1px solid var(--color-outline);
+  padding: 1rem 0;
+}
+
+.patch-cell-date {
+  grid-area: date;
+}
+
+.patch-cell-id {
+  grid-area: id;
+}
+
+.patch-cell-title {
+  grid-area: title;
+  overflow-wrap: anywhere;
+}
+
+.patch-cell-author {
+  grid-area: author;
+  overflow-wrap: anywhere;
+}
+
+.patch-cell-status {
+  grid-area: status;
+  justify-self: start;
+}
+
+.patch-cell-mobile-label {
+  display: none;
+}
+
+.patch-axis-meta span {
+  overflow-wrap: anywhere;
+}
+
+@media (width < 780px) {
+  .patch-grid-fold {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "title title" "date status" "id author";
+    gap: 0.5rem 0.75rem;
+  }
+
+  .patch-grid-heading {
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .patch-grid-row {
+    padding: 1rem 0;
+  }
+
+  .patch-cell-date,
+  .patch-cell-id,
+  .patch-cell-author,
+  .patch-cell-status {
+    align-items: center;
+    display: flex;
+    gap: 0.35rem;
+    font-size: 0.8125rem;
+  }
+
+  .patch-cell-status {
+    justify-self: end;
+  }
+
+  .patch-cell-mobile-label {
+    color: var(--color-on-surface-variant);
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 0.6875rem;
+    font-weight: 600;
+  }
+}
