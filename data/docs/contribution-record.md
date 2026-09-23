@@ -36,16 +36,27 @@ cp data/contributions/template.md data/contributions/6520751.md
 
 ### frontmatter 작성 규칙
 
-| 필드               | 값                                     | 예                          |
-| ------------------ | -------------------------------------- | --------------------------- |
-| `title`            | Gerrit에 올린 commit 제목 그대로       | `"Fix siso_tips.md link"`   |
-| `date`             | CL 업로드 날짜, `YYYY-MM-DD`           | `2026-07-25`                |
-| `author`           | 본인 GitHub ID                         | `amoseui`                   |
+| 필드               | 값                                      | 예                            |
+| ------------------ | --------------------------------------- | ----------------------------- |
+| `title`            | Gerrit에 올린 commit 제목 그대로        | `"Fix siso_tips.md link"`     |
+| `date`             | CL을 처음 업로드한 날짜, `YYYY-MM-DD`   | `2026-07-25`                  |
+| `author`           | 본인 GitHub ID                          | `amoseui`                     |
 | `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
-| `labels`           | 수정한 디렉터리 + 작업 성격            | `["docs", "fix"]`           |
-| `status`           | `in review`, `merged`, `abandoned`              | `in review`                 |
+| `module`           | 수정한 Chromium 모듈 또는 디렉터리      | `docs`                        |
+| `kind`             | 변경 유형                               | `fix`                         |
+| `keywords`         | 기존 검색어와 추가 검색어의 배열        | `["docs", "fix"]`            |
+| `status`           | 최초 `in review`, 결과에 따라 갱신      | `in review`                   |
+| `resolvedDate`     | 확인된 결과 날짜, `YYYY-MM-DD` (선택)   | `2026-08-01`                  |
 
-- CL을 중단했다면 `status: abandoned`로 기록하고 본문에 시도한 접근과 중단 이유를 적으세요.
+- `module`은 기여한 코드 영역 하나를, `kind`는 `fix`, `feature`, `refactor`,
+  `test`, `docs`, `cleanup` 등 변경 유형 하나를 적습니다. 세부 주제는
+  `keywords`에 순서대로 적으세요. 기존 기록의 `labels`는 검색어 유지를 위해
+  같은 순서로 `keywords`에 옮겼습니다. 새 기록에는 `labels`를 쓰지 않습니다.
+- 새 CL은 `status: in review`로 시작합니다. 결과가 확정되면 `merged` 또는
+  `abandoned`로 갱신합니다. CL을 중단했다면 본문에 시도한 접근과 중단 이유를
+  적으세요.
+- `resolvedDate`는 Gerrit에서 정확한 merge 또는 abandon 날짜를 확인한 경우에만
+  추가하세요. `date`는 결과와 관계없이 최초 업로드 날짜로 유지합니다.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub
@@ -96,9 +107,9 @@ git push origin 250725-contribution-6520751
   수정 커밋을 추가합니다.
 - PR이 merge되면 사이트에 자동 배포됩니다(수 분 소요).
 
-## 4. CL이 merge되면 — status 갱신
+## 4. CL 결과가 확정되면 — status 갱신
 
-Gerrit에서 CL이 최종 merge되면, 후속 PR로 `status`만 갱신합니다.
+Gerrit에서 CL이 merge되거나 abandon되면 후속 PR로 `status`를 갱신합니다.
 
 ```bash
 git checkout main && git pull
@@ -106,7 +117,10 @@ git checkout -b 250801-merged-6520751
 ```
 
 `data/contributions/6520751.md`의 frontmatter에서 `status: in review`를
-`status: merged`로 수정한 뒤, 같은 방식으로 커밋·push·PR을 올립니다.
+결과에 따라 `status: merged` 또는 `status: abandoned`로 수정합니다.
+Gerrit에서 정확한 결과 날짜를 확인했다면 `resolvedDate: YYYY-MM-DD`도
+추가하세요. `date`는 업로드 날짜이므로 바꾸지 않습니다. 같은 방식으로
+커밋·push·PR을 올립니다.
 
 ```bash
 git commit -am "contributions: Mark 6520751 as merged"

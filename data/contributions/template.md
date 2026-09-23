@@ -1,10 +1,13 @@
 ---
 title: "Gerrit 에 올린 commit 제목을 입력하세요"
-date: YYYY-MM-DD
+date: YYYY-MM-DD # Gerrit CL upload date
 author: GitHubId # github.com/GitHubId
 contribution_url: https://crrev.com/c/XXXXX # Add XXXXX from https://chromium-review.googlesource.com/c/chromium/src/+/XXXXX
-labels: ["label1", "label2"] # directory name and detail
-status: in review # in review, merged, abandoned 중 하나 선택
+module: directory/name # Chromium module or directory
+kind: fix # fix, feature, refactor, test, docs, cleanup, etc.
+keywords: ["keyword1", "keyword2"] # Additional search terms
+status: in review # Change to merged or abandoned after the Gerrit result is confirmed
+# resolvedDate: YYYY-MM-DD # Add only when the exact Gerrit result date is verified
 ---
 
 간략한 소개 문장을 작성하세요. 이 컨트리뷰션이 무엇에 관한 것인지 설명합니다.
