@@ -26,6 +26,25 @@ describe('contributions 유틸리티', () => {
   });
   
   describe('getAllContributions', () => {
+    it('attaches unique direct related slugs from issue, crbug, and explicit review IDs', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['123.md', '456.md', '789.md']);
+      (fs.readFileSync as jest.Mock).mockImplementation((file: string) => {
+        if (file.endsWith('123.md')) {
+          return `---\ntitle: First\ndate: 2026-01-01\nauthor: alice\nissue: 12\ncrbug: 34\nrelated: [789, 999, 789]\n---\nFirst body`;
+        }
+        if (file.endsWith('456.md')) {
+          return `---\ntitle: Second\ndate: 2026-01-03\nauthor: bob\nissue: 12\n---\nSecond body`;
+        }
+        return `---\ntitle: Third\ndate: 2025-12-31\nauthor: carol\ncrbug: 34\n---\nThird body`;
+      });
+
+      expect(getAllContributions().map(({ slug, relatedSlugs }) => ({ slug, relatedSlugs }))).toEqual([
+        { slug: '456', relatedSlugs: ['123'] },
+        { slug: '123', relatedSlugs: ['456', '789'] },
+        { slug: '789', relatedSlugs: ['123'] },
+      ]);
+    });
+
     it('normalizes legacy and canonical records without changing the upload date', async () => {
       (fs.readdirSync as jest.Mock).mockReturnValue(['123.md', '456.md']);
       (fs.readFileSync as jest.Mock).mockImplementation((file: string) =>
@@ -45,7 +64,12 @@ describe('contributions 유틸리티', () => {
         keywords: ['webrtc', 'chromium'], labels: ['webrtc', 'chromium'],
         repo: 'devtools/devtools-frontend', issue: 12, crbug: 34, related: [123],
       });
-      expect(await getContributionBySlug('456')).toMatchObject(canonical);
+      expect(await getContributionBySlug('456')).toMatchObject({
+        title: canonical.title,
+        date: canonical.date,
+        status: canonical.status,
+        related: canonical.related,
+      });
     });
 
     it('keeps separately supplied labels and keywords in their original order', () => {
