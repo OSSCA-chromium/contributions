@@ -32,7 +32,7 @@ function RelatedPatchGroup({
 
   return (
     <div role="rowgroup" aria-label={`연관 패치 ${group.items.length}건`} className="overflow-hidden rounded-xl border border-outline bg-surface">
-      <div role="row" className="patch-grid patch-grid-row">
+      <div role="row" className="patch-grid patch-grid-fold patch-grid-row">
         <div role="cell" aria-colspan={5} className="col-span-full">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2 text-sm">

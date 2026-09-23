@@ -96,7 +96,9 @@ test('related groups show their count, start collapsed, and expose accessible ex
 
   expect(rowgroup.parentElement).toBe(table);
   expect(Array.from(rowgroup.children).every((child) => child.getAttribute('role') === 'row')).toBe(true);
-  expect(within(rowgroup).getByRole('cell')).toHaveAttribute('aria-colspan', '5');
+  const headerCell = within(rowgroup).getByRole('cell');
+  expect(headerCell).toHaveAttribute('aria-colspan', '5');
+  expect(headerCell.parentElement).toHaveClass('patch-grid-fold');
   expect(expandButton).toHaveAttribute('aria-expanded', 'false');
   expect(expandButton).toHaveAttribute('aria-controls');
   const controlledIds = expandButton.getAttribute('aria-controls')!.split(' ');
