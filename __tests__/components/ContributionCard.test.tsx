@@ -11,6 +11,7 @@ const c = {
   keywords: ['docs'],
   labels: ['docs'],
   related: [],
+  relatedSlugs: [],
   status: 'merged' as const,
   excerpt: '요약 내용',
 };

@@ -6,6 +6,7 @@ import {
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PatchMeta from '@/components/PatchMeta';
+import JourneyStepper from '@/components/JourneyStepper';
 
 interface ParamsProps {
   params: Promise<{ slug: string }>;
@@ -48,6 +49,8 @@ export default async function PatchPage({ params }: ParamsProps) {
         <h1 className="font-display text-4xl font-semibold tracking-tight mb-2 text-on-surface">{contribution.title}</h1>
         <PatchMeta contribution={contribution} />
       </header>
+
+      <JourneyStepper contribution={contribution} />
 
       {/* 컨트리뷰션 링크 */}
       {contribution.contributionUrl && (
