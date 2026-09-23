@@ -68,6 +68,7 @@ function parseContribution(
     related: Array.isArray(data.related)
       ? data.related.map(normalizePositiveId).filter((id): id is number => id !== undefined)
       : [],
+    relatedSlugs: [],
     resolvedDate: normalizeDate(data.resolvedDate),
     status: normalizeStatus(data.status),
     excerpt,
@@ -80,6 +81,63 @@ export type { Contribution };
 
 // 하위 호환을 위해 @/lib/contributions 에서도 계속 export
 export { isValidGithubUsername };
+
+export function computeRelated(
+  items: Pick<Contribution, 'slug' | 'issue' | 'crbug' | 'related'>[]
+): Map<string, string[]> {
+  const neighbors = new Map(items.map(({ slug }) => [slug, new Set<string>()]));
+  const reviewById = new Map(
+    items
+      .filter(({ slug }) => /^[1-9]\d*$/.test(slug) && Number.isSafeInteger(Number(slug)))
+      .map(({ slug }) => [Number(slug), slug])
+  );
+  const order = new Map(items.map(({ slug }, index) => [slug, index]));
+
+  const connect = (left: string, right: string) => {
+    if (left === right) return;
+    neighbors.get(left)?.add(right);
+    neighbors.get(right)?.add(left);
+  };
+
+  const connectSharedIds = (field: 'issue' | 'crbug') => {
+    const groups = new Map<number, string[]>();
+    for (const item of items) {
+      const id = normalizePositiveId(item[field]);
+      if (id === undefined) continue;
+      const group = groups.get(id) ?? [];
+      group.push(item.slug);
+      groups.set(id, group);
+    }
+
+    for (const slugs of groups.values()) {
+      for (let i = 0; i < slugs.length; i++) {
+        for (let j = i + 1; j < slugs.length; j++) {
+          connect(slugs[i], slugs[j]);
+        }
+      }
+    }
+  };
+
+  connectSharedIds('issue');
+  connectSharedIds('crbug');
+
+  for (const item of items) {
+    for (const id of item.related) {
+      if (!Number.isSafeInteger(id) || id <= 0) continue;
+      const targetSlug = reviewById.get(id);
+      if (targetSlug) connect(item.slug, targetSlug);
+    }
+  }
+
+  return new Map(
+    items.map(({ slug }) => [
+      slug,
+      [...(neighbors.get(slug) ?? [])].sort(
+        (left, right) => (order.get(left) ?? 0) - (order.get(right) ?? 0)
+      ),
+    ])
+  );
+}
 
 // 컨트리뷰션 폴더가 없으면 생성
 try {
@@ -112,7 +170,12 @@ export function getAllContributions(): Contribution[] {
       });
 
     // 날짜순 정렬 (최신순)
-    return contributions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    contributions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const relatedBySlug = computeRelated(contributions);
+    return contributions.map((contribution) => ({
+      ...contribution,
+      relatedSlugs: relatedBySlug.get(contribution.slug) ?? [],
+    }));
   } catch (error) {
     console.error('Error getting contributions:', error);
     return [];

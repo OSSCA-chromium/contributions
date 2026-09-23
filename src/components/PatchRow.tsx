@@ -2,9 +2,23 @@ import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import StatusBadge from '@/components/StatusBadge';
 
-export default function PatchRow({ item }: { item: SearchIndexItem }) {
+export default function PatchRow({
+  item,
+  id,
+  hidden,
+}: {
+  item: SearchIndexItem;
+  id?: string;
+  hidden?: boolean;
+}) {
   return (
-    <div role="row" className="patch-grid patch-grid-fold patch-grid-row">
+    <div
+      id={id}
+      role="row"
+      hidden={hidden}
+      style={hidden ? { display: 'none' } : undefined}
+      className="patch-grid patch-grid-fold patch-grid-row"
+    >
       <div role="cell" className="patch-cell-date">
         <span className="patch-cell-mobile-label">업로드일</span>
         <time dateTime={item.date}>{item.date}</time>
