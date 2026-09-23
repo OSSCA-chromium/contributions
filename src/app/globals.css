@@ -4,61 +4,77 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #1a73e8;
+  --c1: #1967d2;
+  --c2: #1a73e8;
+  --c3: #669df6;
+  --c4: #aecbfa;
+  --m1: #f7f9fc;
+  --m2: #eef2fa;
+  --m3: #e3eaf8;
+  --mline: #dde3ec;
+  --color-primary: var(--c1);
   --color-on-primary: #ffffff;
-  --color-primary-container: #e8f0fe;
+  --color-primary-container: var(--m3);
   --color-background: #ffffff;
-  --color-surface: #f8f9fa;
-  --color-surface-variant: #f1f3f4;
+  --color-surface: var(--m1);
+  --color-surface-variant: var(--m2);
   --color-on-surface: #202124;
   --color-on-surface-variant: #5f6368;
-  --color-outline: #dadce0;
+  --color-outline: var(--mline);
   --color-success: #188038;
-  --color-info: #4285f4;
+  --color-info: var(--c2);
   --color-warning: #f9ab00;
   --color-error: #d93025;
-  --color-link: #1a73e8;
+  --color-link: var(--c1);
   --chart-merged: #34a853;
-  --chart-in-review: #4285f4;
+  --chart-in-review: var(--c2);
   --chart-abandoned: #fbbc04;
   --chart-unknown: #9aa0a6;
-  --chart-bar: #4285f4;
-  --mesh-base: #f8f9fa;
-  --mesh-blue: rgba(66, 133, 244, 0.16);
-  --mesh-green: rgba(52, 168, 83, 0.14);
-  --mesh-yellow: rgba(251, 188, 4, 0.14);
-  --mesh-red: rgba(234, 67, 53, 0.1);
-  --gradient-from: #1767d1;
-  --gradient-to: #679ef5;
+  --chart-bar: var(--c2);
+  --mesh-base: var(--m1);
+  --mesh-blue: rgba(26, 115, 232, 0.16);
+  --mesh-green: rgba(102, 157, 246, 0.12);
+  --mesh-yellow: rgba(174, 203, 250, 0.2);
+  --mesh-red: rgba(25, 103, 210, 0.08);
+  --gradient-from: var(--c1);
+  --gradient-to: var(--c3);
 }
 
 .dark {
-  --color-primary: #8ab4f8;
+  --c1: #8ab4f8;
+  --c2: #a8c7fa;
+  --c3: #c6dafc;
+  --c4: #d2e3fc;
+  --m1: #292a2d;
+  --m2: #3c4043;
+  --m3: #28374e;
+  --mline: #5f6368;
+  --color-primary: var(--c1);
   --color-on-primary: #202124;
-  --color-primary-container: #28374e;
+  --color-primary-container: var(--m3);
   --color-background: #202124;
-  --color-surface: #292a2d;
-  --color-surface-variant: #3c4043;
+  --color-surface: var(--m1);
+  --color-surface-variant: var(--m2);
   --color-on-surface: #e8eaed;
   --color-on-surface-variant: #9aa0a6;
-  --color-outline: #5f6368;
+  --color-outline: var(--mline);
   --color-success: #81c995;
-  --color-info: #8ab4f8;
+  --color-info: var(--c2);
   --color-warning: #fdd663;
   --color-error: #f28b82;
-  --color-link: #8ab4f8;
+  --color-link: var(--c1);
   --chart-merged: #81c995;
-  --chart-in-review: #8ab4f8;
+  --chart-in-review: var(--c2);
   --chart-abandoned: #fdd663;
   --chart-unknown: #9aa0a6;
-  --chart-bar: #8ab4f8;
-  --mesh-base: #292a2d;
-  --mesh-blue: rgba(138, 180, 248, 0.14);
-  --mesh-green: rgba(129, 201, 149, 0.12);
-  --mesh-yellow: rgba(253, 214, 99, 0.1);
-  --mesh-red: rgba(242, 139, 130, 0.08);
-  --gradient-from: #8ab4f8;
-  --gradient-to: #c6dafc;
+  --chart-bar: var(--c2);
+  --mesh-base: var(--m1);
+  --mesh-blue: rgba(138, 180, 248, 0.16);
+  --mesh-green: rgba(168, 199, 250, 0.12);
+  --mesh-yellow: rgba(198, 218, 252, 0.14);
+  --mesh-red: rgba(138, 180, 248, 0.08);
+  --gradient-from: var(--c1);
+  --gradient-to: var(--c3);
 }
 
 @theme inline {
@@ -149,9 +165,9 @@ a {
   height: 4px;
   background-image: linear-gradient(
     90deg,
-    #1a74e7 0 33.4%,
-    #679ef5 33.4% 66.7%,
-    #afccf9 66.7% 100%
+    var(--c2) 0 33.4%,
+    var(--c3) 33.4% 66.7%,
+    var(--c4) 66.7% 100%
   );
 }
 

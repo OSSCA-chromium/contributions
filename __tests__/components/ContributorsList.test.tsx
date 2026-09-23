@@ -49,6 +49,16 @@ test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
   expect(links[1]).toHaveTextContent('bob'); // merged 0
 });
 
+test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
+  render(<ContributorsList summaries={summaries} />);
+  fireEvent.change(screen.getByLabelText('정렬 기준'), {
+    target: { value: 'inReview' },
+  });
+  const links = screen.getAllByRole('link');
+  expect(links[0]).toHaveTextContent('bob'); // inReview 3
+  expect(links[1]).toHaveTextContent('alice'); // inReview 0
+});
+
 test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으로 표시한다', () => {
   render(<ContributorsList summaries={summaries} />);
   expect(screen.getByRole('option', { name: 'Abandoned' })).toHaveValue('abandoned');
