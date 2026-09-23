@@ -47,14 +47,14 @@ export default function ContributorsList({
 
   return (
     <>
-      <div className="flex justify-end mb-4">
+      <div className="mb-3 flex justify-end">
         <label className="inline-flex items-center gap-2 text-sm text-on-surface-variant">
           정렬
           <select
             aria-label="정렬 기준"
             value={sortKey}
             onChange={(e) => setSortKey(e.target.value as SortKey)}
-            className="bg-surface border border-outline rounded-xl px-2 py-1 text-on-surface"
+            className="rounded-lg border border-outline bg-surface px-2.5 py-1.5 text-sm text-on-surface"
           >
             {SORT_OPTIONS.map((o) => (
               <option key={o.key} value={o.key}>
@@ -64,7 +64,7 @@ export default function ContributorsList({
           </select>
         </label>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1.5">
         {sorted.map((summary) => (
           <ContributorRow key={summary.username} summary={summary} />
         ))}
