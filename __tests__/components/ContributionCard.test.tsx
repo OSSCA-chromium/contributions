@@ -6,7 +6,11 @@ const c = {
   title: '테스트 제목',
   date: '2025-05-08',
   author: 'octocat',
+  module: 'docs',
+  kind: 'fix',
+  keywords: ['docs'],
   labels: ['docs'],
+  related: [],
   status: 'merged' as const,
   excerpt: '요약 내용',
 };

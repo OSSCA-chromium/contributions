@@ -7,43 +7,9 @@ import {
   isValidGithubUsername,
 } from '@/lib/contributions';
 
-// fs 및 path 모듈 모킹
+// Mock only the filesystem so frontmatter is parsed by real gray-matter.
 jest.mock('fs');
 jest.mock('path');
-jest.mock('gray-matter', () => {
-  return jest.fn().mockImplementation((content) => {
-    // 간단한 마크다운 파싱 모킹
-    const frontmatterMatch = content.match(/---\n([\s\S]*?)\n---\n([\s\S]*)/);
-    
-    if (frontmatterMatch) {
-      try {
-        const frontmatterString = frontmatterMatch[1];
-        const content = frontmatterMatch[2];
-        
-        // 기본적인 YAML 파싱 모의
-        const frontmatterLines = frontmatterString.split('\n');
-        const data: Record<string, string> = {};
-        
-        frontmatterLines.forEach((line: string) => {
-          const [key, ...valueParts] = line.split(':');
-          if (key && valueParts.length) {
-            data[key.trim()] = valueParts.join(':').trim();
-          }
-        });
-        
-        return {
-          data,
-          content
-        };
-      } catch (_) {
-        // 파싱 오류 시 빈 데이터 반환
-        return { data: {}, content: content };
-      }
-    }
-    
-    return { data: {}, content };
-  });
-});
 
 describe('contributions 유틸리티', () => {
   beforeEach(() => {
@@ -60,6 +26,37 @@ describe('contributions 유틸리티', () => {
   });
   
   describe('getAllContributions', () => {
+    it('normalizes legacy and canonical records without changing the upload date', async () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['123.md', '456.md']);
+      (fs.readFileSync as jest.Mock).mockImplementation((file: string) =>
+        file.endsWith('123.md')
+          ? `---\ntitle: Legacy\ndate: 2025-05-08\nauthor: octocat\ncontribution_url: https://crrev.com/c/123\nlabels: [webrtc]\nstatus: in review\n---\nLegacy body`
+          : `---\ntitle: Canonical\ndate: 2025-05-09\nresolvedDate: 2025-05-12\nauthor: hubot\ncontribution_url: https://crrev.com/c/456\nmodule: blink/renderer\nkind: fix\nkeywords: [webrtc, chromium]\nrepo: devtools/devtools-frontend\nissue: 12\ncrbug: 34\nrelated: [123]\nstatus: merged\n---\nCanonical body`
+      );
+
+      const [canonical, legacy] = getAllContributions();
+      expect(legacy).toMatchObject({
+        date: '2025-05-08', status: 'in review', module: '', kind: '',
+        keywords: ['webrtc'], labels: ['webrtc'], related: [],
+      });
+      expect(canonical).toMatchObject({
+        date: '2025-05-09', resolvedDate: '2025-05-12', status: 'merged',
+        module: 'blink/renderer', kind: 'fix',
+        keywords: ['webrtc', 'chromium'], labels: ['webrtc', 'chromium'],
+        repo: 'devtools/devtools-frontend', issue: 12, crbug: 34, related: [123],
+      });
+      expect(await getContributionBySlug('456')).toMatchObject(canonical);
+    });
+
+    it('keeps separately supplied labels and keywords in their original order', () => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['123.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---\ntitle: Both aliases\ndate: 2025-05-08\nauthor: octocat\ncontribution_url: https://crrev.com/c/123\nlabels: [legacy, legacy2]\nkeywords: [new, new2]\nstatus: abandoned\n---\nBody`);
+
+      expect(getAllContributions()[0]).toMatchObject({
+        labels: ['legacy', 'legacy2'], keywords: ['new', 'new2'], status: 'abandoned',
+      });
+    });
+
     it.each([
       ['abandoned', 'abandoned'],
       ['draft', undefined],
