@@ -5,6 +5,7 @@ export function buildSearchIndex(contributions: Contribution[]): SearchIndexItem
     slug: c.slug,
     title: c.title,
     author: c.author,
+    ...(c.repo ? { repo: c.repo } : {}),
     module: c.module,
     kind: c.kind,
     keywords: c.keywords,
