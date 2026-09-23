@@ -70,7 +70,6 @@ test('free-text search matches every archive field and both keyword arrays', () 
 
 test('module and kind chips combine as filters', () => {
   render(<ContributionSearch items={items} />);
-  fireEvent.click(screen.getByText('모듈 및 종류 필터'));
   fireEvent.click(screen.getByRole('button', { name: '모듈: blink/renderer' }));
   fireEvent.click(screen.getByRole('button', { name: '종류: cleanup' }));
 
@@ -81,7 +80,6 @@ test('module and kind chips combine as filters', () => {
 
 test('module option search narrows the available module chips', () => {
   render(<ContributionSearch items={items} />);
-  fireEvent.click(screen.getByText('모듈 및 종류 필터'));
   fireEvent.change(screen.getByRole('searchbox', { name: '모듈 옵션 검색' }), {
     target: { value: 'docs' },
   });
@@ -109,13 +107,28 @@ test('year selector keeps its date filter behavior', () => {
   render(<ContributionSearch items={items} />);
   fireEvent.click(within(screen.getByRole('group', { name: '연도 선택' })).getByRole('button', { name: '2025' }));
 
-  expect(screen.getByText('Document the build setup')).toBeInTheDocument();
-  expect(screen.queryByText('Set up WebRTC tests')).not.toBeInTheDocument();
+  const table = screen.getByRole('table', { name: '기여 아카이브' });
+  expect(within(table).getByText('Document the build setup')).toBeInTheDocument();
+  expect(within(table).queryByText('Set up WebRTC coverage')).not.toBeInTheDocument();
+  expect(within(table).getAllByRole('row')).toHaveLength(2);
+});
+
+test('axis filter chips start expanded and the disclosure can collapse and reopen', () => {
+  render(<ContributionSearch items={items} />);
+  const summary = screen.getByText('모듈 및 종류 필터');
+  const disclosure = summary.closest('details');
+
+  expect(disclosure?.open).toBe(true);
+
+  fireEvent.click(summary);
+  expect(disclosure?.open).toBe(false);
+
+  fireEvent.click(summary);
+  expect(disclosure?.open).toBe(true);
 });
 
 test('search precedes status and year, which precede module and kind filters', () => {
   render(<ContributionSearch items={items} />);
-  fireEvent.click(screen.getByText('모듈 및 종류 필터'));
 
   const search = screen.getByRole('searchbox', { name: '아카이브 검색' });
   const status = screen.getByRole('group', { name: '상태 선택' });

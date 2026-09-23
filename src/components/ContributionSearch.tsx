@@ -109,7 +109,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
           <YearSelector years={years} value={year} onChange={setYear} />
         </div>
 
-        <details className="rounded-xl border border-outline bg-surface">
+        <details open className="rounded-xl border border-outline bg-surface">
           <summary className="cursor-pointer px-4 py-2 font-medium text-on-surface">
             모듈 및 종류 필터
             {(selectedModules.length > 0 || selectedKinds.length > 0) && (
