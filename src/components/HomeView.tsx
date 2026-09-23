@@ -33,21 +33,21 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
 
   return (
     <>
-      <section className="mb-10">
-        <div className="brand-mesh rounded-[32px] px-6 py-8 sm:px-10 sm:py-10 mb-6">
-          <h1 className="font-display brand-gradient-text max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+      <section className="mb-8">
+        <div className="brand-mesh mb-5 rounded-2xl px-5 py-7 sm:px-8 sm:py-8">
+          <h1 className="mb-5 max-w-3xl font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
             OSSCA Chromium Contributions
           </h1>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5">
             <Link
               href="/docs"
-              className="rounded-full bg-primary px-5 py-2.5 font-medium text-on-primary transition-opacity hover:opacity-90"
+              className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
             >
               가이드 시작하기
             </Link>
             <Link
               href="/patches"
-              className="rounded-full border border-outline px-5 py-2.5 font-medium text-on-surface transition-colors hover:bg-surface-variant"
+              className="rounded-full border border-outline bg-background/70 px-4 py-2 text-sm font-medium text-on-surface transition-colors hover:bg-surface-variant"
             >
               컨트리뷰션 보기
             </Link>
@@ -64,20 +64,20 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         </p>
       ) : (
         <>
-          <section className="mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-primary">{stats.total}</div>
+          <section className="mb-8">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-outline bg-surface p-4 text-center">
+                <div className="font-display text-3xl font-semibold text-primary">{stats.total}</div>
                 <div className="text-sm text-on-surface-variant">총 컨트리뷰션</div>
               </div>
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-success">
+              <div className="rounded-2xl border border-outline bg-surface p-4 text-center">
+                <div className="font-display text-3xl font-semibold text-success">
                   {Math.round(stats.mergedRatio * 100)}%
                 </div>
                 <div className="text-sm text-on-surface-variant">Merged 비율</div>
               </div>
-              <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-                <div className="font-display text-4xl font-semibold text-info">{stats.contributorCount}</div>
+              <div className="rounded-2xl border border-outline bg-surface p-4 text-center">
+                <div className="font-display text-3xl font-semibold text-info">{stats.contributorCount}</div>
                 <div className="text-sm text-on-surface-variant">기여자 수</div>
               </div>
             </div>
@@ -88,32 +88,32 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
             </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
+          <section className="mb-8">
+            <h2 className="mb-4 font-display text-xl font-semibold tracking-tight text-on-surface sm:text-2xl">
               Recent contributions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {recent.map((item) => (
                 <ContributionCard key={item.slug} contribution={item} />
               ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <Link href="/patches" className="text-link hover:underline font-medium inline-flex items-center">
                 모든 컨트리뷰션 보기 →
               </Link>
             </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight mb-5 text-on-surface">
+          <section className="mb-8">
+            <h2 className="mb-4 font-display text-xl font-semibold tracking-tight text-on-surface sm:text-2xl">
               Contributors
             </h2>
-            <div className="flex flex-wrap gap-[18px]">
+            <div className="flex flex-wrap gap-3">
               {contributors.map((username) => (
                 <ContributorAvatar key={username} username={username} size={48} linkToProfile />
               ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <Link href="/contributors" className="text-link hover:underline font-medium inline-flex items-center">
                 전체 보기 →
               </Link>

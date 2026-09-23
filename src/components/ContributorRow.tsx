@@ -15,7 +15,7 @@ function StatBadge({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full font-medium whitespace-nowrap ${className}`}
+      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap ${className}`}
     >
       <span>{label}</span>
       <span className="tabular-nums text-center inline-block min-w-[2ch]">
@@ -38,11 +38,11 @@ export default function ContributorRow({
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex flex-wrap items-center gap-2 bg-surface border border-outline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
+    <div className="flex flex-wrap items-center gap-2 rounded-xl border border-outline bg-surface px-3 py-2 transition-colors hover:border-primary text-on-surface sm:px-4">
       <ContributorAvatar username={username} size={32} />
       <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
 
-      <div className="order-last flex w-full flex-wrap gap-2 md:order-none md:w-auto">
+      <div className="order-last flex w-full flex-wrap gap-1.5 md:order-none md:w-auto">
         <StatBadge
           label="TOTAL"
           count={total}

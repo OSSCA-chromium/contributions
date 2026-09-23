@@ -40,6 +40,20 @@ test('computeStats는 총계/상태/월별/기여자/머지비율을 계산한�
   expect(s.topContributors[0]).toEqual({ username: 'octocat', count: 2 });
 });
 
+test('computeStats는 merged, in review, abandoned 상태를 각각 집계한다', () => {
+  const s = computeStats([
+    { author: 'alice', date: '2026-01-01', status: 'merged' },
+    { author: 'bob', date: '2026-01-02', status: 'in review' },
+    { author: 'carol', date: '2026-01-03', status: 'abandoned' },
+  ]);
+
+  expect(s.byStatus).toEqual([
+    { status: 'merged', count: 1 },
+    { status: 'in review', count: 1 },
+    { status: 'abandoned', count: 1 },
+  ]);
+});
+
 test('월별 집계는 Date 객체를 KST(서울) 기준으로 분류한다', () => {
   // UTC 2025-12-31 15:00 = KST 2026-01-01 00:00 → '2026-01'
   const record = {

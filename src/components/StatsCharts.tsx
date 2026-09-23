@@ -49,10 +49,10 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
   const topContributors = stats.topContributors.slice(0, 10);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       {/* 상태 분포 */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">상태 분포</h3>
+      <div className="rounded-2xl border border-outline bg-surface p-4 sm:p-5">
+        <h3 className="mb-3 text-base font-semibold text-on-surface">상태 분포</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -80,8 +80,8 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
       </div>
 
       {/* 월별 추이 */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">월별 추이</h3>
+      <div className="rounded-2xl border border-outline bg-surface p-4 sm:p-5">
+        <h3 className="mb-3 text-base font-semibold text-on-surface">월별 추이</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={stats.byMonth}>
@@ -95,8 +95,8 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
       </div>
 
       {/* 기여자 랭킹 (Top 10) */}
-      <div className="bg-surface border border-outline rounded-[28px] p-6 lg:col-span-2">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">
+      <div className="rounded-2xl border border-outline bg-surface p-4 sm:p-5 lg:col-span-2">
+        <h3 className="mb-3 text-base font-semibold text-on-surface">
           기여자 랭킹 (Top 10)
         </h3>
         <div style={{ height: Math.max(topContributors.length * 36, 120) }}>

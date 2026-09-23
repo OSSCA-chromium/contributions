@@ -52,22 +52,22 @@ export default function RootLayout({
       <body
         className={`${roboto.className} ${outfit.variable} bg-background text-on-surface min-h-screen flex flex-col`}
       >
-        <header className="bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20">
+        <header className="sticky top-0 z-20 border-b border-outline/60 bg-background/90 py-3 backdrop-blur-md">
           <div className="container mx-auto px-4 lg:px-6">
-            <nav className="flex flex-col sm:flex-row justify-between items-center">
+            <nav className="flex flex-col items-center justify-between gap-3 sm:flex-row">
               <Link
                 href="/"
-                className="font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center"
+                className="mb-0 flex items-center font-display text-xl font-semibold tracking-tight"
               >
                 <Image src={LogoImage} alt="OSSCA Chromium 로고" width={32} height={32} className="mr-2" />
                 OSSCA Chromium
               </Link>
-              <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+              <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface"
+                    className="rounded-full px-3 py-1.5 text-sm font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface"
                   >
                     {link.label}
                   </Link>
@@ -77,7 +77,7 @@ export default function RootLayout({
                   href="https://github.com/OSSCA-chromium/contributions"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90"
+                  className="ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
                   aria-label="GitHub 저장소"
                 >
                   <svg
@@ -95,10 +95,12 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
+        <main className="container mx-auto flex-grow px-4 py-6 sm:py-8 lg:px-6">
+          {children}
+        </main>
         <footer className="border-t border-outline/60 mt-12">
           <div className="chromium-strip" aria-hidden="true" />
-          <div className="container mx-auto px-4 pt-8 pb-6">
+          <div className="container mx-auto px-4 pt-6 pb-5 lg:px-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-on-surface-variant">
               <div className="flex flex-wrap items-center justify-center gap-4">
                 {NAV_LINKS.map((link) => (
