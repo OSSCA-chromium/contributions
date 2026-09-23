@@ -13,7 +13,9 @@ function toMonth(date: unknown): string {
 
 // 컨트리뷰션 목록으로부터 통계(총계/상태/월별/기여자/머지비율)를 집계
 export function computeStats(
-  contributions: Pick<Contribution, 'status' | 'date' | 'author'>[]
+  contributions: (Pick<Contribution, 'author' | 'status'> & {
+    date: string | Date;
+  })[]
 ): Stats {
   const total = contributions.length;
   const statusMap = new Map<string, number>();

@@ -16,11 +16,64 @@ function normalizeStatus(value: unknown): ContributionStatus | undefined {
     : undefined;
 }
 
-// frontmatter labels를 string[]으로 정규화
-function normalizeLabels(value: unknown): string[] {
-  if (Array.isArray(value)) return value;
-  if (value) return [value as string];
-  return [];
+export function normalizeStringArray(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === 'string');
+  }
+  return typeof value === 'string' ? [value] : [];
+}
+
+function normalizeDate(value: unknown): string | undefined {
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? undefined : value.toISOString().slice(0, 10);
+  }
+  return typeof value === 'string' && value ? value : undefined;
+}
+
+function normalizePositiveId(value: unknown): number | undefined {
+  return Number.isSafeInteger(value) && (value as number) > 0
+    ? value as number
+    : undefined;
+}
+
+function parseContribution(
+  slug: string,
+  data: Record<string, unknown>,
+  content: string,
+  contentHtml?: string
+): Contribution {
+  const keywords = normalizeStringArray(data.keywords ?? data.labels);
+  const labels = normalizeStringArray(data.labels ?? data.keywords);
+  const excerpt = content
+    .split('\n\n')
+    .slice(0, 2)
+    .join('\n\n')
+    .replace(/^#+\s+.+$/gm, '')
+    .substring(0, 160)
+    .trim();
+
+  return {
+    slug,
+    title: typeof data.title === 'string' && data.title ? data.title : '제목 없음',
+    date: normalizeDate(data.date) ?? new Date().toISOString().slice(0, 10),
+    author: typeof data.author === 'string' && data.author ? data.author : '익명',
+    contributionUrl: typeof data.contribution_url === 'string' ? data.contribution_url : '',
+    module: typeof data.module === 'string' ? data.module : '',
+    kind: typeof data.kind === 'string' ? data.kind : '',
+    keywords,
+    labels,
+    repo: typeof data.repo === 'string' ? data.repo : undefined,
+    issue: normalizePositiveId(data.issue),
+    crbug: normalizePositiveId(data.crbug),
+    related: Array.isArray(data.related)
+      ? data.related.map(normalizePositiveId).filter((id): id is number => id !== undefined)
+      : [],
+    resolvedDate: normalizeDate(data.resolvedDate),
+    status: normalizeStatus(data.status),
+    excerpt,
+    content,
+    ...(contentHtml === undefined ? {} : { contentHtml }),
+  };
 }
 
 export type { Contribution };
@@ -55,26 +108,7 @@ export function getAllContributions(): Contribution[] {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const matterResult = matter(fileContents);
 
-        // 첫 두 문단 정도를 발췌문으로 사용
-        const excerpt = matterResult.content
-          .split('\n\n')
-          .slice(0, 2)
-          .join('\n\n')
-          .replace(/^#+\s+.+$/gm, '') // 헤더 제거
-          .substring(0, 160)
-          .trim();
-
-        return {
-          slug,
-          title: matterResult.data.title || '제목 없음',
-          date: matterResult.data.date || new Date().toISOString(),
-          author: matterResult.data.author || '익명',
-          contributionUrl: matterResult.data.contribution_url || '',
-          labels: normalizeLabels(matterResult.data.labels),
-          status: normalizeStatus(matterResult.data.status),
-          excerpt: excerpt,
-          content: matterResult.content,
-        };
+        return parseContribution(slug, matterResult.data, matterResult.content);
       });
 
     // 날짜순 정렬 (최신순)
@@ -104,27 +138,7 @@ export async function getContributionBySlug(slug: string): Promise<Contribution 
     // 마크다운을 HTML로 변환 (단일 파이프라인)
     const contentHtml = markdownToHtml(matterResult.content);
 
-    // 첫 두 문단 정도를 발췌문으로 사용
-    const excerpt = matterResult.content
-      .split('\n\n')
-      .slice(0, 2)
-      .join('\n\n')
-      .replace(/^#+\s+.+$/gm, '') // 헤더 제거
-      .substring(0, 160)
-      .trim();
-
-    return {
-      slug,
-      title: matterResult.data.title || '제목 없음',
-      date: matterResult.data.date || new Date().toISOString(),
-      author: matterResult.data.author || '익명',
-      contributionUrl: matterResult.data.contribution_url || '',
-      labels: normalizeLabels(matterResult.data.labels),
-      status: normalizeStatus(matterResult.data.status),
-      excerpt: excerpt,
-      content: matterResult.content,
-      contentHtml,
-    };
+    return parseContribution(slug, matterResult.data, matterResult.content, contentHtml);
   } catch (error) {
     console.error('Error getting contribution:', error);
     return null;
@@ -169,4 +183,4 @@ export function getUniqueContributors(): { username: string; isValidGithubUser: 
     username,
     isValidGithubUser
   }));
-} 
+}

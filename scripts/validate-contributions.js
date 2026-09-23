@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'labels', 'status'];
+const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'status'];
 const STATUSES = ['in review', 'merged', 'abandoned'];
 
 // YYYY-MM-DD 문자열이 실제로 존재하는 날짜인지 확인(2025-13-40, 2025-02-30 등 배제)
@@ -52,21 +52,51 @@ function validateFrontmatter(data) {
     }
   }
 
-  if (data.date !== undefined && data.date !== '') {
-    const d = data.date;
+  for (const field of ['date', 'resolvedDate']) {
+    const d = data[field];
+    if (d === undefined && field === 'resolvedDate') continue;
     const ok =
       (typeof d === 'string' && isRealDate(d)) ||
       (d instanceof Date && !Number.isNaN(d.getTime()));
-    if (!ok) errors.push('date must be a valid YYYY-MM-DD');
+    if (!ok) errors.push(`${field} must be a valid YYYY-MM-DD`);
   }
 
-  if (data.labels !== undefined) {
-    if (!Array.isArray(data.labels) || data.labels.length === 0) {
-      errors.push('labels must be a non-empty array');
-    } else if (
-      !data.labels.every((l) => typeof l === 'string' && l.trim() !== '')
-    ) {
-      errors.push('labels must contain only non-empty strings');
+  const hasKeywords = Array.isArray(data.keywords) && data.keywords.length > 0;
+  const hasLabels = Array.isArray(data.labels) && data.labels.length > 0;
+  if (!hasKeywords && !hasLabels) {
+    errors.push('keywords or labels must be a non-empty array');
+  }
+
+  for (const field of ['keywords', 'labels']) {
+    if (data[field] !== undefined) {
+      if (!Array.isArray(data[field]) || data[field].length === 0) {
+        errors.push(`${field} must be a non-empty array`);
+      } else if (
+        !data[field].every((item) => typeof item === 'string' && item.trim() !== '')
+      ) {
+        errors.push(`${field} must contain only non-empty strings`);
+      }
+    }
+  }
+
+  for (const field of ['module', 'kind', 'repo']) {
+    if (data[field] !== undefined &&
+        (typeof data[field] !== 'string' || data[field].trim() === '')) {
+      errors.push(`${field} must be a non-empty string`);
+    }
+  }
+
+  for (const field of ['issue', 'crbug']) {
+    if (data[field] !== undefined &&
+        (!Number.isSafeInteger(data[field]) || data[field] <= 0)) {
+      errors.push(`${field} must be a positive integer`);
+    }
+  }
+
+  if (data.related !== undefined) {
+    if (!Array.isArray(data.related) ||
+        !data.related.every((id) => Number.isSafeInteger(id) && id > 0)) {
+      errors.push('related must be an array of positive integers');
     }
   }
 
@@ -81,8 +111,8 @@ function validateFrontmatter(data) {
 // - 따옴표로 감싼 값: 따옴표 안 내용을 그대로 반환(내부 #를 주석으로 보지 않음)
 // - 따옴표 없는 값: 인라인 YAML 주석(# ...)만 제거
 // date 줄이 없으면 undefined.
-function extractRawDate(matterText) {
-  const m = /^date:\s*(.+?)\s*$/m.exec(matterText || '');
+function extractRawDate(matterText, field = 'date') {
+  const m = new RegExp(`^${field}:\\s*(.+?)\\s*$`, 'm').exec(matterText || '');
   if (!m) return undefined;
   const raw = m[1].trim();
   const quoted = /^(['"])([\s\S]*?)\1/.exec(raw);
@@ -107,6 +137,8 @@ function validateAll(dir) {
       // 뽑아 검증해야 형식·실존 여부를 정확히 잡는다.
       const rawDate = extractRawDate(parsed.matter);
       if (rawDate !== undefined) data.date = rawDate;
+      const rawResolvedDate = extractRawDate(parsed.matter, 'resolvedDate');
+      if (rawResolvedDate !== undefined) data.resolvedDate = rawResolvedDate;
       errors = validateFrontmatter(data);
     } catch (e) {
       errors = [`YAML parse error: ${e.message}`];

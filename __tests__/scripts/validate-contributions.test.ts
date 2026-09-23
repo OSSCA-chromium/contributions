@@ -1,7 +1,11 @@
 import {
   validateFrontmatter,
+  validateAll,
   extractRawDate,
 } from '../../scripts/validate-contributions';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
 const valid = {
   title: 'Fix docs link',
@@ -18,6 +22,56 @@ test('유효한 frontmatter는 위반이 없다', () => {
 
 test('Date 객체 date도 허용한다', () => {
   expect(validateFrontmatter({ ...valid, date: new Date('2025-05-08') })).toEqual([]);
+});
+
+test('canonical frontmatter accepts keywords without labels', () => {
+  const { labels, ...legacyWithoutLabels } = valid;
+  expect(validateFrontmatter({
+    ...legacyWithoutLabels,
+    module: 'blink/renderer',
+    kind: 'fix',
+    keywords: ['web-standards'],
+    repo: 'chromium/src',
+    issue: 123,
+    crbug: 456,
+    related: [789],
+    resolvedDate: '2025-05-09',
+  })).toEqual([]);
+});
+
+test('at least one non-empty keyword source is required', () => {
+  const { labels, ...withoutLabels } = valid;
+  expect(validateFrontmatter(withoutLabels).some((e) => e.includes('keywords or labels'))).toBe(true);
+  expect(validateFrontmatter({ ...valid, labels: [], keywords: [] })
+    .some((e) => e.includes('keywords or labels'))).toBe(true);
+});
+
+test('invalid optional metadata is rejected', () => {
+  const cases: Array<[string, unknown]> = [
+    ['module', ''],
+    ['kind', 42],
+    ['repo', ''],
+    ['issue', 0],
+    ['issue', '12'],
+    ['crbug', -1],
+    ['related', [1, '2']],
+    ['related', 1],
+    ['resolvedDate', '2025-02-30'],
+  ];
+  for (const [field, value] of cases) {
+    expect(validateFrontmatter({ ...valid, [field]: value })
+      .some((e) => e.includes(field))).toBe(true);
+  }
+});
+
+test('raw resolvedDate must be a real YYYY-MM-DD date', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'contribution-validator-'));
+  try {
+    fs.writeFileSync(path.join(dir, '123.md'), `---\ntitle: Fix docs link\ndate: 2025-05-08\nresolvedDate: 2025-02-30\nauthor: octocat\ncontribution_url: https://crrev.com/c/123\nlabels: [docs]\nstatus: merged\n---\nBody\n`);
+    expect(validateAll(dir)[0].errors.some((e) => e.includes('resolvedDate'))).toBe(true);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test('잘못된 status를 잡는다', () => {

@@ -6,7 +6,15 @@ export interface Contribution {
   date: string;
   author: string;
   contributionUrl?: string;
+  module: string;
+  kind: string;
+  keywords: string[];
   labels: string[];
+  repo?: string;
+  issue?: number;
+  crbug?: number;
+  related: number[];
+  resolvedDate?: string;
   status?: ContributionStatus;
   excerpt: string;
   content?: string;
@@ -17,7 +25,11 @@ export interface SearchIndexItem {
   slug: string;
   title: string;
   author: string;
+  module: string;
+  kind: string;
+  keywords: string[];
   labels: string[];
+  related: number[];
   status?: ContributionStatus;
   date: string;
   excerpt: string;

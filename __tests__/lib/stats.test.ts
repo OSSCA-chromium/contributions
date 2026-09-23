@@ -42,16 +42,15 @@ test('computeStats는 총계/상태/월별/기여자/머지비율을 계산한�
 
 test('월별 집계는 Date 객체를 KST(서울) 기준으로 분류한다', () => {
   // UTC 2025-12-31 15:00 = KST 2026-01-01 00:00 → '2026-01'
-  const s = computeStats([
-    {
-      slug: 'x',
-      title: 'x',
-      date: new Date('2025-12-31T15:00:00.000Z'),
-      author: 'octocat',
-      labels: [],
-      status: 'merged' as const,
-      excerpt: '',
-    },
-  ]);
+  const record = {
+    slug: 'x',
+    title: 'x',
+    date: new Date('2025-12-31T15:00:00.000Z'),
+    author: 'octocat',
+    labels: [],
+    status: 'merged' as const,
+    excerpt: '',
+  };
+  const s = computeStats([record]);
   expect(s.byMonth[0].month).toBe('2026-01');
 });
