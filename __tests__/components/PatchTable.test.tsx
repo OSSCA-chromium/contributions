@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import PatchTable from '@/components/PatchTable';
 import type { SearchIndexItem } from '@/lib/types';
 
@@ -74,6 +74,14 @@ test('archive title links to its local patch detail route', () => {
   );
 });
 
+test('singleton rows are direct children of the accessible table', () => {
+  render(<PatchTable items={[items[0]]} />);
+
+  const table = screen.getByRole('table', { name: '기여 아카이브' });
+  const row = screen.getByRole('row', { name: /Set up WebRTC tests/ });
+  expect(row.parentElement).toBe(table);
+});
+
 test('related groups show their count, start collapsed, and expose accessible expand controls', () => {
   const relatedItems = [
     { ...items[0], issue: 31, crbug: 700, relatedSlugs: ['2023456'] },
@@ -83,8 +91,23 @@ test('related groups show their count, start collapsed, and expose accessible ex
   render(<PatchTable items={relatedItems} />);
 
   const expandButton = screen.getByRole('button', { name: '전체 2건 펼치기' });
+  const table = screen.getByRole('table', { name: '기여 아카이브' });
+  const rowgroup = screen.getByRole('rowgroup', { name: '연관 패치 2건' });
+
+  expect(rowgroup.parentElement).toBe(table);
+  expect(Array.from(rowgroup.children).every((child) => child.getAttribute('role') === 'row')).toBe(true);
+  expect(within(rowgroup).getByRole('cell')).toHaveAttribute('aria-colspan', '5');
   expect(expandButton).toHaveAttribute('aria-expanded', 'false');
   expect(expandButton).toHaveAttribute('aria-controls');
+  const controlledIds = expandButton.getAttribute('aria-controls')!.split(' ');
+  expect(controlledIds).toHaveLength(2);
+  for (const id of controlledIds) {
+    const row = document.getElementById(id);
+    expect(row).toHaveAttribute('role', 'row');
+    expect(row?.parentElement).toBe(rowgroup);
+    expect(row).toHaveAttribute('hidden');
+  }
+  expect(screen.getAllByRole('row')).toHaveLength(2);
   expect(screen.getByRole('link', { name: 'crbug 700' })).toHaveAttribute(
     'href',
     'https://crbug.com/700'
@@ -96,6 +119,7 @@ test('related groups show their count, start collapsed, and expose accessible ex
     'aria-expanded',
     'true'
   );
+  expect(screen.getAllByRole('row')).toHaveLength(4);
   expect(screen.getByRole('link', { name: 'Set up WebRTC tests' })).toBeInTheDocument();
 });
 

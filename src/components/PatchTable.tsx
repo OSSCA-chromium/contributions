@@ -1,6 +1,6 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { useState } from 'react';
 import type { SearchIndexItem } from '@/lib/types';
 import PatchRow from '@/components/PatchRow';
 import { groupByRelated, type GroupedRow } from '@/lib/grouping';
@@ -11,7 +11,7 @@ function RelatedPatchGroup({
   group: Extract<GroupedRow<SearchIndexItem>, { type: 'group' }>;
 }) {
   const [expanded, setExpanded] = useState(false);
-  const controlId = `related-patches-${useId().replace(/:/g, '')}`;
+  const memberRowIds = group.items.map((item) => `patch-row-${item.slug}`);
 
   const label = group.reason === 'crbug'
     ? '공통 crbug'
@@ -31,34 +31,43 @@ function RelatedPatchGroup({
       : undefined;
 
   return (
-    <div role="group" aria-label={`연관 패치 ${group.items.length}건`} className="overflow-hidden rounded-xl border border-outline bg-surface">
-      <div className="flex flex-wrap items-center justify-between gap-3 p-3">
-        <div className="flex flex-wrap items-center gap-2 text-sm">
-          <span className="font-medium">{label}</span>
-          {relationLink && (
-            <a
-              href={relationLink.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-link hover:underline"
+    <div role="rowgroup" aria-label={`연관 패치 ${group.items.length}건`} className="overflow-hidden rounded-xl border border-outline bg-surface">
+      <div role="row" className="patch-grid patch-grid-row">
+        <div role="cell" aria-colspan={5} className="col-span-full">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2 text-sm">
+              <span className="font-medium">{label}</span>
+              {relationLink && (
+                <a
+                  href={relationLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link hover:underline"
+                >
+                  {relationLink.name}
+                </a>
+              )}
+            </div>
+            <button
+              type="button"
+              aria-expanded={expanded}
+              aria-controls={memberRowIds.join(' ')}
+              onClick={() => setExpanded((value) => !value)}
+              className="rounded-lg border border-outline px-3 py-1.5 text-sm font-medium text-link hover:bg-surface-variant focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              {relationLink.name}
-            </a>
-          )}
+              전체 {group.items.length}건 {expanded ? '접기' : '펼치기'}
+            </button>
+          </div>
         </div>
-        <button
-          type="button"
-          aria-expanded={expanded}
-          aria-controls={controlId}
-          onClick={() => setExpanded((value) => !value)}
-          className="rounded-lg border border-outline px-3 py-1.5 text-sm font-medium text-link hover:bg-surface-variant focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        >
-          전체 {group.items.length}건 {expanded ? '접기' : '펼치기'}
-        </button>
       </div>
-      <div id={controlId} hidden={!expanded} className="divide-y divide-outline">
-        {group.items.map((item) => <PatchRow key={item.slug} item={item} />)}
-      </div>
+      {group.items.map((item, index) => (
+        <PatchRow
+          key={item.slug}
+          id={memberRowIds[index]}
+          hidden={!expanded}
+          item={item}
+        />
+      ))}
     </div>
   );
 }
@@ -77,12 +86,10 @@ export default function PatchTable({ items }: { items: SearchIndexItem[] }) {
           <div role="columnheader" className="patch-cell-status">상태</div>
         </div>
       </div>
-      <div role="rowgroup">
-        {rows.map((row) => row.type === 'single'
-          ? <PatchRow key={row.item.slug} item={row.item} />
-          : <RelatedPatchGroup key={row.items.map((item) => item.slug).join('-')} group={row} />
-        )}
-      </div>
+      {rows.map((row) => row.type === 'single'
+        ? <PatchRow key={row.item.slug} item={row.item} />
+        : <RelatedPatchGroup key={row.items.map((item) => item.slug).join('-')} group={row} />
+      )}
     </div>
   );
 }
