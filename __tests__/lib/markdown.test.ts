@@ -95,6 +95,18 @@ describe('markdown 유틸리티', () => {
       expect(html).toContain('</code></pre>');
     });
 
+    it('Mermaid는 실행하지 않고 언어 표시와 이스케이프된 원문을 보존합니다', () => {
+      const source = 'flowchart TD\nA["<script>alert(1)</script> & 한글"] --> B';
+      const html = markdownToHtml(`\`\`\`mermaid\n${source}\n\`\`\``);
+      const container = document.createElement('div');
+      container.innerHTML = html;
+
+      expect(container.querySelector('pre > code.language-mermaid')?.textContent).toBe(source);
+      expect(container.querySelector('script, svg')).toBeNull();
+      expect(html).toContain('&lt;script&gt;');
+      expect(html).toContain('&amp;');
+    });
+
     it('기본 리스트를 변환합니다', () => {
       const html = markdownToHtml('- 항목 1\n- 항목 2\n- 항목 3');
 
@@ -236,4 +248,4 @@ title: 발췌문 테스트
       expect(content?.excerpt).toContain('이것은 첫 번째 단락입니다.');
     });
   });
-}); 
+});

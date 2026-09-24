@@ -80,6 +80,9 @@ marked.use({
   async: false,
   renderer: {
     code({ text, lang }) {
+      if (lang === 'mermaid') {
+        return `<pre><code class="hljs language-mermaid">${escapeHtml(text)}</code></pre>`;
+      }
       if (lang && hljs.getLanguage(lang)) {
         try {
           const highlighted = hljs.highlight(text, { language: lang }).value;

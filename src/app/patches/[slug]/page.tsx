@@ -9,6 +9,7 @@ import StatusBadge from '@/components/StatusBadge';
 import LabelChip from '@/components/LabelChip';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import YearBadge from '@/components/YearBadge';
+import MermaidRenderer from '@/components/MermaidRenderer';
 import { isValidGithubUsername } from '@/lib/contributions';
 
 interface ParamsProps {
@@ -110,9 +111,13 @@ export default async function PatchPage({ params }: ParamsProps) {
 
       {/* HTML Content */}
       <main
+        id={`patch-content-${slug}`}
         className="prose dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: contribution.contentHtml ?? '' }}
       />
+      {contribution.contentHtml?.includes('class="hljs language-mermaid"') && (
+        <MermaidRenderer key={slug} containerId={`patch-content-${slug}`} />
+      )}
 
       {/* 다른 컨트리뷰션 목록으로 돌아가기 */}
       <div className="border-t border-outline pt-6 mt-8">

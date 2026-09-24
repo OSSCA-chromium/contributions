@@ -171,6 +171,18 @@ a {
 }
 
 /* 콘텐츠 넘침 방지를 위한 스타일 */
+.mermaid-diagram {
+  overflow-x: auto;
+  margin-block: 1.5rem;
+  background-color: #fff;
+  color: #202124;
+}
+
+.mermaid-diagram > svg {
+  height: auto;
+  margin-inline: auto;
+}
+
 img,
 svg,
 video,
