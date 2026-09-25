@@ -7,7 +7,7 @@ c:I[57150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/3b65cb70c8c7febe.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"eFJNkSMkP5SttBkUsvHu8","p":"/contributions","c":["","contributors","Indigochi1d",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Indigochi1d","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Indigochi1d","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"RYB7L66VxJamfdI-8pWW8","p":"/contributions","c":["","contributors","Indigochi1d",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","Indigochi1d","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","Indigochi1d","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[98924,[],""]
 f:I[43195,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","7177","static/chunks/app/layout-6bcb8c5142ab06c3.js"],"default"]
@@ -24,7 +24,88 @@ f:I[43195,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks
 a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
 b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
 1a:I[7475,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","2538","static/chunks/app/contributors/%5Busername%5D/page-b621506314bc22ee.js"],"default"]
-1b:T218f,
+1b:T182f,Chromium viz 계층에서 swap이 실패했을 때, 여전히 화면에 표시 중인 오버레이의 접근 권한이 파괴되던 버그를 수정했다. `DoFinishSwapBuffers()`가 swap 결과를 인자로 받으면서도 읽지 않고 이전 프레임의 오버레이를 무조건 해제하던 것이 원인이었기에 해제 대상을 결정하는 시점을 제출(`Present()`)에서 완료(`DoFinishSwapBuffers()`)로 옮겨 해결했다.
+
+## 문제 설명
+
+<img src="https://lh3.googleusercontent.com/d/1-vx3HPB75u9dPh8FX581b7a0cD6r2NvI" width="800px" alt="fig1-overlay-lifetime">
+
+1. 오버레이는 하드웨어에 제출된 뒤에도 다음 프레임이 덮어쓸 때까지 계속 화면에 표시된다. 그래서 해제를 한 프레임 미뤄야 하고, `SkiaOutputDeviceBufferQueue`는 이를 참조 카운트로 관리한다. 
+2. `Unref()`는 카운트를 하나 줄이는 것에서 끝나지 않고 representation과 scoped read access를 파괴한다.
+
+### 원인
+
+<img src="https://lh3.googleusercontent.com/d/1UcdnUn1juJ6VWzRMvB_GMUsMklAMkJsW" width="800px" alt="fig2-before-binding">
+
+`Present()`가 해제 대상 목록을 완료 콜백에 바인딩한다. `base::BindOnce`는 인자를 자기 내부 필드로 이동시켜 보관하므로 이 시점에 해제 대상이 고정된다. 그래서 `DoFinishSwapBuffers()`는 `result.swap_result`를 인자로 받고도 읽지 않았다. 읽어봐야 바꿀 수 없었기 때문이다.
+
+쉽게 생각했을 때 `if`문 하나를 추가하는 것으로 해결하고자 하였으나 해결되지 않았다. 실패했을 때 해제해야 하는 것은 이번 프레임의 목록인데 그 목록은 다음 콜백에 바인딩될 예정이라 이 함수에서는 접근할 수 없었다.
+
+### 증상
+
+<img src="https://lh3.googleusercontent.com/d/1ZKbvSvSAOIfqRd4BbZMnbBIqvgrqeTYZ" width="800px" alt="fig3-swap-failed-timeline">
+
+swap이 실패하면 그 프레임은 화면에 표시되지 못하므로 이전 프레임이 그대로 표시되고 있다. 그런데 코드는 바로 그 이전 프레임을 파괴한다. 반대로 화면에 표시된 적 없는 오버레이는 한 프레임 더 유지하고 있다.
+
+## 해결 내용
+
+### 1. 겹친 의미를 가진 변수를 분리
+
+<img src="https://lh3.googleusercontent.com/d/1hyJR00X8qnZQfeBNkGM3J0NbkVTE1d5U" width="800px" alt="fig4-state-split">
+
+`committed_overlay_mailboxes_` 하나가 **제출됨**과 **표시 중**을 같이 뜻하고 있었다. swap이 성공하는 동안에는 두 의미가 같지만 실패하면 달라지는데, 변수가 하나뿐이라 그 상태를 표현할 수 없었다. 
+따라서 pending, submitted, presented 세 단계로 나눴다. 중간 단계는 `circular_deque`로 두어 부모 클래스의 `SkiaOutputDevice::pending_swaps_`와 같은 순서로 꺼낸다.
+
+### 2. 결정을 완료 시점으로 이동
+
+<img src="https://lh3.googleusercontent.com/d/16MGtH9I0exFkqlOdZFzzypEpm5guVH1U" width="800px" alt="fig5-decision-relocation">
+
+```cpp
+// Present() — 결정하지 않고 큐에 적재만
+submitted_overlay_mailboxes_.push_back(std::move(pending_overlay_mailboxes_));
+pending_overlay_mailboxes_.clear();
+
+// DoFinishSwapBuffers() — 결과를 아는 지금 판단
+if (result.swap_result == gfx::SwapResult::SWAP_ACK) {
+  replaced = std::exchange(presented_overlay_mailboxes_, std::move(swapped));
+} else {
+  replaced = std::move(swapped);  // 화면은 그대로, 못 뜬 이번 것을 해제
+}
+```
+
+`SWAP_ACK`만 성공으로 보는 화이트리스트를 택했다. 
+`SWAP_NAK_RECREATE_BUFFERS`는 `HardwareDisplayController`와 `DrmWindow` 양쪽에서 page flip을 커밋하기 전에 반환하고 `swap_result.h`는 `SWAP_SKIPPED`를 `SWAP_FAILED`처럼 다루라고 적어두었다.
+
+## 테스트 방법
+
+1. 회귀 테스트 `ScheduleOverlaysSwapFailed`를 추가했다. `<Figure 3>`의 three-frame 시나리오를 그대로 코드로 옮겼다. 
+또한, 기존 `MockPresenter::SwapComplete()`가 `SWAP_ACK`을 하드코딩하고 있어서 실패한 swap을 흉내낼 수 없었고, 결과를 인자로 받도록 고쳤다.
+
+2. 테스트가 실제로 버그를 잡는지 역으로 확인했다. 수정 로직만 임시로 되돌리자 정확히 세 지점에서 실패했다.
+
+```text
+HasOverlay(A) → false   ← 화면에 떠 있는데 파괴됨
+HasOverlay(B) → true    ← 못 뜬 건데 살아있음
+```
+
+3. `viz_unittests` 2,424개가 전부 통과한다.
+
+실제 `SWAP_FAILED`는 주로 ChromeOS DRM 경로에서 발생하기 때문에 로컬 macOS 테스트로는 검증되지 않는다. CQ의 ChromeOS 빌더를 확인해야 했고 26.09.25일자로 CQ Dry Run이 pass 됨을 확인했다.
+
+## 배운 점
+
+- 표면적으로는 `if`문이 빠진 것처럼 보이지만, 실제로는 결정을 내리는 시점이 정보가 도착하는 시점보다 앞서 있는 구조 문제였다(`<Figure 5>`). 이런 경우에는 분기를 추가하려 해도 한쪽 가지에 넣을 데이터가 존재하지 않는다.
+- 이름 하나가 두 의미를 겸하면 표현할 수 없는 상태가 생긴다. 변수를 나눈 것이 리팩터링이 아니라 수정의 일부였던 이유다.
+- `SkiaOutputSurfaceImplOnGpu::PostSubmit()`의 skip 경로는 `Present()`를 거치지 않아 `pending_overlay_mailboxes_`가 비워지지 않는다. `Reshape()`의 `DCHECK`가 실패할 수 있어 별도 이슈로 낼 만하다.
+
+## 참고 자료
+
+- [이슈 40248635](https://crbug.com/40248635), [CL 8448731](https://crrev.com/c/8448731)
+- [`skia_output_device_buffer_queue.cc`](https://source.chromium.org/chromium/chromium/src/+/main:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc) (수정 대상)
+- [`skia_output_device.cc`](https://source.chromium.org/chromium/chromium/src/+/main:components/viz/service/display_embedder/skia_output_device.cc) (`pending_swaps_` FIFO 큐)
+- [`ui/gfx/swap_result.h`](https://source.chromium.org/chromium/chromium/src/+/main:ui/gfx/swap_result.h) (`SwapResult` 의미)
+- [`hardware_display_controller.cc`](https://source.chromium.org/chromium/chromium/src/+/main:ui/ozone/platform/drm/gpu/hardware_display_controller.cc) (`SWAP_NAK_RECREATE_BUFFERS` 반환 지점)
+1c:T218f,
 Chromium의 디스플레이 컴포지터(viz)에서 의미를 잃은 capability 플래그 `supports_surfaceless`를 제거하고, 같은 사실을 표현하는 `renderer_allocates_images`로 통일한 코드 정리 작업입니다.
 
 ## 문제 설명
@@ -128,7 +209,7 @@ git cl presubmit
 - [CL:4062650](https://crrev.com/c/4062650) — Use new Presenter class in viz for surfaceless presentation  
 
 
-1c:T159c,
+1d:T159c,
 base::SequenceBound의 AsyncCall() 빌더 체인이 강제하는 호출 순서 계약을 검증하는 nocompile 테스트를 추가하고, 
 그 자리를 차지하고 있던 빈 껍데기 테스트를 제거했습니다. 2020년부터 6년간 방치된 TODO를 구현한 작업입니다.
 
@@ -222,7 +303,7 @@ Chromium은 이걸 락이 아니라 **시퀀스**로 푼다. 시퀀스는 작업
 
 - [CL:400416:이전 작업 맥락](https://crrev.com/c/4004169)
 - [nocompile 코드 형식 참고](https://source.chromium.org/chromium/chromium/src/+/main:base/containers/heap_array_nocompile.nc)
-1d:T80c,
+1e:T80c,
 docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.
 
 ## 문제 설명
@@ -250,9 +331,9 @@ docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링�
 ## 참고 자료
 - [원본 삭제 CL: Remove outdated perf regression gardening docs](https://crrev.com/c/5783169)
 - [Chromium Issue 538651940](https://crbug.com/538651940)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Indigochi1d.png?size=192","alt":"Indigochi1d 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Indigochi1d"}],["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Indigochi1d"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8348446","title":"[viz] Remove Capabilities::supports_surfaceless","date":"$D2026-09-05T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8348446","labels":["viz"],"status":"merged","excerpt":"Chromium의 디스플레이 컴포지터(viz)에서 의미를 잃은 capability 플래그 `supports_surfaceless`를 제거하고, 같은 사실을 표현하는 `renderer_allocates_images`로 통일한 코드 정리 작업입니다.","content":"$1b"},{"slug":"8284898","title":"[base] Add nocompile tests for SequenceBound","date":"$D2026-08-24T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8284898","labels":["base"],"status":"merged","excerpt":"base::SequenceBound의 AsyncCall() 빌더 체인이 강제하는 호출 순서 계약을 검증하는 nocompile 테스트를 추가하고, \n그 자리를 차지하고 있던 빈 껍데기 테스트를 제거했습니다. 2020년부터 6년간 방치된 TODO를 구현한 작업입니다.\n\n\nSequenceB","content":"$1c"},{"slug":"8146559","title":"Fix broken perf_regression_sheriffing.md link in perf waterfall doc","date":"$D2026-07-25T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8146559","labels":["docs","fix"],"status":"merged","excerpt":"docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.\n\n\n- `perf_re","content":"$1d"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/Indigochi1d.png?size=192","alt":"Indigochi1d 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"Indigochi1d"}],["$","a",null,{"href":"https://github.com/Indigochi1d","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","Indigochi1d"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8448731","title":"[viz] Don't release presented overlays on failed swaps","date":"$D2026-09-24T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8448731","labels":["viz"],"status":"in review","excerpt":"Chromium viz 계층에서 swap이 실패했을 때, 여전히 화면에 표시 중인 오버레이의 접근 권한이 파괴되던 버그를 수정했다. `DoFinishSwapBuffers()`가 swap 결과를 인자로 받으면서도 읽지 않고 이전 프레임의 오버레이를 무조건 해제하던 것이 원인이었기에 해제","content":"$1b"},{"slug":"8348446","title":"[viz] Remove Capabilities::supports_surfaceless","date":"$D2026-09-05T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8348446","labels":["viz"],"status":"merged","excerpt":"Chromium의 디스플레이 컴포지터(viz)에서 의미를 잃은 capability 플래그 `supports_surfaceless`를 제거하고, 같은 사실을 표현하는 `renderer_allocates_images`로 통일한 코드 정리 작업입니다.","content":"$1c"},{"slug":"8284898","title":"[base] Add nocompile tests for SequenceBound","date":"$D2026-08-24T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8284898","labels":["base"],"status":"merged","excerpt":"base::SequenceBound의 AsyncCall() 빌더 체인이 강제하는 호출 순서 계약을 검증하는 nocompile 테스트를 추가하고, \n그 자리를 차지하고 있던 빈 껍데기 테스트를 제거했습니다. 2020년부터 6년간 방치된 TODO를 구현한 작업입니다.\n\n\nSequenceB","content":"$1d"},{"slug":"8146559","title":"Fix broken perf_regression_sheriffing.md link in perf waterfall doc","date":"$D2026-07-25T00:00:00.000Z","author":"Indigochi1d","contributionUrl":"https://crrev.com/c/8146559","labels":["docs","fix"],"status":"merged","excerpt":"docs/speed/perf_waterfall.md에 남아 있던 perf_regression_sheriffing.md 링크 두 건과 관련된 연락처를 문서에서 삭제하고 문장을 수정했습니다. 또, 첫 컨트리뷰션을 위해 AUTHORS에 이름을 추가한 컨트리뷰션입니다.\n\n\n- `perf_re","content":"$1e"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-1e:I[80622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"Indigochi1d | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Indigochi1d님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1e","4",{}]],"error":null,"digest":"$undefined"}
+1f:I[80622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"Indigochi1d | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Indigochi1d님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1f","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
