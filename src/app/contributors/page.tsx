@@ -7,8 +7,7 @@ export const metadata: Metadata = {
   description: 'OSSCA Chromium 컨트리뷰션에 참여한 기여자 목록입니다.',
 };
 
-// Contributor directory: full list with a sort menu (latest / total / merged /
-// in review). Server component; ContributorsList (client) handles sorting.
+// Contributor directory. Server component; ContributorsList handles sorting.
 export default function ContributorsPage() {
   const summaries = getContributorSummaries();
 

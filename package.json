@@ -22,6 +22,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "marked": "^15.0.11",
+    "mermaid": "11.17.2",
     "next": "^15.5.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

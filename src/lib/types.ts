@@ -1,4 +1,4 @@
-export type ContributionStatus = 'in review' | 'merged' | 'draft';
+export type ContributionStatus = 'in review' | 'merged' | 'abandoned';
 
 export interface Contribution {
   slug: string;
@@ -29,6 +29,7 @@ export interface ContributorSummary {
   total: number;
   merged: number;
   inReview: number;
+  abandoned: number;
   // ISO date of the contributor's most recent contribution (max date).
   lastActive: string;
 }

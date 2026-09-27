@@ -21,6 +21,7 @@ export default function ContributorView({
   const total = filtered.length;
   const merged = filtered.filter((c) => c.status === 'merged').length;
   const inReview = filtered.filter((c) => c.status === 'in review').length;
+  const abandoned = filtered.filter((contribution) => contribution.status === 'abandoned').length;
   const yearLabel = year === 'all' ? '전체' : year;
 
   return (
@@ -29,7 +30,7 @@ export default function ContributorView({
         <YearSelector years={years} value={year} onChange={setYear} />
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
           <div className="font-display text-3xl font-semibold text-primary">{total}</div>
           <div className="text-sm text-on-surface-variant">총 기여</div>
@@ -41,6 +42,10 @@ export default function ContributorView({
         <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
           <div className="font-display text-3xl font-semibold text-info">{inReview}</div>
           <div className="text-sm text-on-surface-variant">In Review</div>
+        </div>
+        <div className="bg-surface border border-outline rounded-3xl p-5 text-center">
+          <div className="font-display text-3xl font-semibold text-amber-700 dark:text-warning">{abandoned}</div>
+          <div className="text-sm text-on-surface-variant">Abandoned</div>
         </div>
       </div>
 
