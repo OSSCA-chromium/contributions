@@ -2,7 +2,7 @@
 name: Components 분석
 about: Chromium components/ 폴더 분석 실습
 title: "[components 분석] 이름"
-labels: exercise, 2026
+labels: 2026, exercise
 assignees: ''
 
 ---

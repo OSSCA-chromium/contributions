@@ -2,8 +2,8 @@
 name: Q&A
 about: Chromium 기여 활동 중 궁금한 점 질문
 title: "[Q&A] 질문 제목"
-labels: question, 2026
-assignees: 'amoseui'
+labels: '2026'
+assignees: amoseui
 
 ---
 

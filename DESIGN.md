@@ -4,7 +4,7 @@
 
 Google I/O's marketing design is confident but clean. Pages sit on a white canvas (`{colors.background}`) with deep Google-grey ink (`{colors.on-surface}` — #202124), and colour arrives through the four-colour Google chord — blue, green, yellow, red — used as accents, chart hues, and gradient washes, never as heavy colour fields. The signature atmospheric move is a soft pastel mesh of the four brand colours behind the hero, and a Chromium-blue gradient (`#1767d1 → #679ef5`, from the official Chromium logo blues) on marquee text.
 
-The brand anchor is **Google Blue** (`{colors.primary}` — #1a73e8 for actions, #4285f4 in charts/gradients). It owns every CTA, active filter, link… the other three colours support: green for success/merged, yellow for drafts/warnings, red strictly for deadlines/errors. Dark mode mirrors Google's dark theme: near-black grey surfaces (#202124 / #292a2d) with the softened accent set (#8ab4f8, #81c995, #fdd663, #f28b82).
+The brand anchor is **Google Blue** (`{colors.primary}` — #1a73e8 for actions, #4285f4 in charts/gradients). It owns every CTA, active filter, link… the other three colours support: green for success/merged, yellow for abandoned contributions/warnings, red strictly for deadlines/errors. Dark mode mirrors Google's dark theme: near-black grey surfaces (#202124 / #292a2d) with the softened accent set (#8ab4f8, #81c995, #fdd663, #f28b82).
 
 Geometry is friendly and pill-first: buttons and chips are fully rounded (`{rounded.pill}`), cards round at 16–32px, and the hero panel bows out at 32px+. Type is Google Sans in spirit — headlines in a geometric grotesque at 500–700, **sentence case, never all-caps** — over a quiet grotesque body face.
 
@@ -26,7 +26,7 @@ Geometry is friendly and pill-first: buttons and chips are fully rounded (`{roun
 - **Google Blue (action)** (`{colors.primary}` — light #1a73e8 / dark #8ab4f8): every CTA, active filter, link, focus ring.
 - **Chart Blue** (`{chart.bar}` — #4285f4 light / #8ab4f8 dark): charts and gradients.
 - **Green** (`{colors.success}` — light #188038 text · #34a853 fills / dark #81c995): merged status, success stats.
-- **Yellow** (`{colors.warning}` — light #f9ab00 / dark #fdd663): draft status, caution badges — always with dark ink text.
+- **Yellow** (`{colors.warning}` — light #f9ab00 / dark #fdd663): abandoned status, caution badges — always with dark ink text.
 - **Red** (`{colors.error}` — light #d93025 / dark #f28b82): deadlines only. Never decorative.
 
 ### Surface
@@ -114,7 +114,7 @@ Depth comes from borders and subtle tint changes — Google I/O barely uses shad
 ### Chips & Badges
 
 - **`filter-chip`** — pill; active = blue fill + on-primary text, inactive = `{colors.surface-variant}` + muted ink.
-- **`status-badge`** — pill, caption type: merged = green fill (+white/dark-ink per mode), in review = blue fill, draft = yellow fill + dark ink.
+- **`status-badge`** — pill, caption type: merged = green fill (+white/dark-ink per mode), in review = blue fill, abandoned = yellow fill + dark ink.
 - **`label-chip`** — `{colors.primary-container}` fill + blue text.
 
 ### Cards & Containers

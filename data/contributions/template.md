@@ -4,7 +4,7 @@ date: YYYY-MM-DD
 author: GitHubId # github.com/GitHubId
 contribution_url: https://crrev.com/c/XXXXX # Add XXXXX from https://chromium-review.googlesource.com/c/chromium/src/+/XXXXX
 labels: ["label1", "label2"] # directory name and detail
-status: in review # in review, merged 중 하나 선택
+status: in review # in review, merged, abandoned 중 하나 선택
 ---
 
 간략한 소개 문장을 작성하세요. 이 컨트리뷰션이 무엇에 관한 것인지 설명합니다.
@@ -20,6 +20,8 @@ status: in review # in review, merged 중 하나 선택
 ## 해결 내용
 
 어떻게 문제를 해결했는지 설명하세요.
+
+abandoned 상태라면 시도한 접근 방법과 변경을 중단한 이유를 작성하세요.
 
 1. 첫 번째 접근 방법
 2. 구현 세부 사항

@@ -4,13 +4,14 @@ import { useMemo, useState } from 'react';
 import type { ContributorSummary } from '@/lib/types';
 import ContributorRow from '@/components/ContributorRow';
 
-export type SortKey = 'latest' | 'total' | 'merged' | 'inReview';
+export type SortKey = 'latest' | 'total' | 'merged' | 'inReview' | 'abandoned';
 
 const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: 'latest', label: '최신' },
   { key: 'total', label: '총 기여' },
   { key: 'merged', label: 'Merged' },
   { key: 'inReview', label: 'In review' },
+  { key: 'abandoned', label: 'Abandoned' },
 ];
 
 // Sort a copy of the summaries by the chosen key, always descending.
@@ -28,6 +29,8 @@ function sortSummaries(
       return copy.sort((a, b) => b.merged - a.merged);
     case 'inReview':
       return copy.sort((a, b) => b.inReview - a.inReview);
+    case 'abandoned':
+      return copy.sort((a, b) => b.abandoned - a.abandoned);
   }
 }
 

@@ -25,7 +25,7 @@ function StatBadge({
   );
 }
 
-// Directory list row for a single contributor. TOTAL/MERGED/IN REVIEW are pill
+// Directory list row for a single contributor. Total and status counts are pill
 // badges with inline counts (same status colors as StatusBadge). When the
 // username is a valid GitHub handle the whole row links to the profile page.
 export default function ContributorRow({
@@ -33,30 +33,37 @@ export default function ContributorRow({
 }: {
   summary: ContributorSummary;
 }) {
-  const { username, isValidGithubUser, total, merged, inReview, lastActive } =
+  const { username, isValidGithubUser, total, merged, inReview, abandoned, lastActive } =
     summary;
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex items-center gap-2 bg-surface border border-outline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
+    <div className="flex flex-wrap items-center gap-2 bg-surface border border-outline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
       <ContributorAvatar username={username} size={32} />
       <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
 
-      <StatBadge
-        label="TOTAL"
-        count={total}
-        className="bg-on-surface text-surface"
-      />
-      <StatBadge
-        label="MERGED"
-        count={merged}
-        className="bg-success text-white dark:text-black"
-      />
-      <StatBadge
-        label="IN REVIEW"
-        count={inReview}
-        className="bg-primary text-on-primary"
-      />
+      <div className="order-last flex w-full flex-wrap gap-2 md:order-none md:w-auto">
+        <StatBadge
+          label="TOTAL"
+          count={total}
+          className="bg-on-surface text-surface"
+        />
+        <StatBadge
+          label="MERGED"
+          count={merged}
+          className="bg-success text-white dark:text-black"
+        />
+        <StatBadge
+          label="IN REVIEW"
+          count={inReview}
+          className="bg-primary text-on-primary"
+        />
+        <StatBadge
+          label="ABANDONED"
+          count={abandoned}
+          className="bg-warning text-black"
+        />
+      </div>
 
       {updated && (
         <span className="hidden sm:inline text-xs text-on-surface-variant whitespace-nowrap">

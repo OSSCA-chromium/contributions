@@ -11,8 +11,7 @@ npm test -- <pattern>  # single file/pattern, e.g. npm test -- ContributorRow.te
 npm run lint           # next lint (ESLint)
 npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
-npm run build          # static export to out/
-npm run deploy         # build + publish out/ to gh-pages
+npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
 CI (`.github/workflows/pr-checks.yml`, runs on PRs) executes, in order: `npm ci → test → lint → validate:data → lint:md → build`. Run the same locally before pushing.
@@ -45,7 +44,7 @@ Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists
 
 ## Data conventions
 
-Contribution frontmatter (see `data/contributions/template.md`): `title`, `date` (YYYY-MM-DD), `author` (GitHub username), `contribution_url`, `labels` (array), `status` (`in review` | `merged` | `draft`). Copy `template.md` to `{ChromiumReviewId}.md`.
+Contribution frontmatter (see `data/contributions/template.md`): `title`, `date` (YYYY-MM-DD), `author` (GitHub username), `contribution_url`, `labels` (array), `status` (`in review` | `merged` | `abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`.
 
 - `npm run validate:data` gates frontmatter in CI. A malformed `date` (e.g. a typo like `2025-05-D8`) parses to `NaN` and silently breaks date sorting — keep dates valid `YYYY-MM-DD`.
 - `gray-matter` may hand back `date` as a `Date` object, so normalize with `new Date(c.date)` before comparing.

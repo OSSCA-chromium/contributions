@@ -60,6 +60,25 @@ describe('contributions 유틸리티', () => {
   });
   
   describe('getAllContributions', () => {
+    it.each([
+      ['abandoned', 'abandoned'],
+      ['draft', undefined],
+    ])('%s 상태를 목록과 상세에서 %s로 읽는다', async (status, expected) => {
+      (fs.readdirSync as jest.Mock).mockReturnValue(['123.md']);
+      (fs.readFileSync as jest.Mock).mockReturnValue(`---
+title: Fix docs
+date: 2026-09-05
+author: octocat
+contribution_url: https://crrev.com/c/123
+labels: [docs]
+status: ${status}
+---
+Contribution content`);
+
+      expect(getAllContributions()[0].status).toBe(expected);
+      expect((await getContributionBySlug('123'))?.status).toBe(expected);
+    });
+
     it('모든 컨트리뷰션을 가져옵니다', () => {
       // 가상의 파일 목록 생성
       (fs.readdirSync as jest.Mock).mockReturnValue(['test1.md', 'test2.md', 'not-a-markdown.txt']);
@@ -166,4 +185,4 @@ contribution_url: https://example.com
       expect(isValidGithubUsername('')).toBe(false);
     });
   });
-}); 
+});
