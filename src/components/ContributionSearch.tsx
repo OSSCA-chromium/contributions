@@ -12,7 +12,7 @@ type Axis = 'module' | 'kind';
 
 const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
   { value: 'all', label: '전체' },
-  { value: 'in review', label: 'In Review' },
+  { value: 'in review', label: 'In review' },
   { value: 'merged', label: 'Merged' },
   { value: 'abandoned', label: 'Abandoned' },
 ];

@@ -122,7 +122,7 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Contributors')).toBeInTheDocument();
+    expect(screen.getByText('기여자')).toBeInTheDocument();
   });
 
   it('Contributors 섹션에 전체 보기 링크가 있습니다', () => {

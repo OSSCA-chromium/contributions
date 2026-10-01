@@ -36,7 +36,7 @@ function SectionHeader({
 }) {
   return (
     <div className="mb-3.5 flex items-baseline justify-between gap-3">
-      <h2 className="text-[12px] font-semibold uppercase tracking-[0.09em] text-on-surface-variant">
+      <h2 className="section-title">
         {title}
       </h2>
       <Link href={href} className="text-[13.5px] font-medium text-link hover:underline">
@@ -78,7 +78,7 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   return (
     <>
       <section>
-        <h1 className="mb-2.5 text-[27px] font-bold leading-[1.3] tracking-[-0.025em]">
+        <h1 className="page-title mb-6">
           Chromium 기여 아카이브
         </h1>
         <p className="max-w-[66ch] text-[14.5px] text-on-surface-variant">
@@ -120,7 +120,7 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
           </section>
 
           <section className="mt-[34px]">
-            <SectionHeader title="Contributors" href="/contributors" linkLabel="전체 보기 →" />
+            <SectionHeader title="기여자" href="/contributors" linkLabel="전체 보기 →" />
             <div className="flex flex-wrap gap-[18px]">
               {contributors.map((username) => (
                 <ContributorAvatar key={username} username={username} size={48} linkToProfile />

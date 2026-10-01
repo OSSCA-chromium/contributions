@@ -13,7 +13,7 @@ export default function StatsPage() {
 
   return (
     <div>
-      <h1 className="mb-2.5 text-[27px] font-bold leading-[1.3] tracking-[-0.025em] text-on-surface">
+      <h1 className="page-title mb-6">
         통계
       </h1>
       <StatsView items={items} />

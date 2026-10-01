@@ -44,22 +44,22 @@ export default function ContributorRow({
 
       <div className="order-last flex w-full flex-wrap gap-2 md:order-none md:w-auto">
         <StatBadge
-          label="TOTAL"
+          label="총 기여"
           count={total}
           className="bg-m3 text-badge-off"
         />
         <StatBadge
-          label="MERGED"
+          label="Merged"
           count={merged}
           className="bg-success-weak text-badge-ok"
         />
         <StatBadge
-          label="IN REVIEW"
+          label="In review"
           count={inReview}
           className="bg-primary-weak text-primary"
         />
         <StatBadge
-          label="ABANDONED"
+          label="Abandoned"
           count={abandoned}
           className="bg-gray-weak text-badge-off"
         />

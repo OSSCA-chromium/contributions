@@ -130,7 +130,7 @@
   --color-badge-off: var(--color-badge-off);
   --color-gray-weak: var(--color-gray-weak);
   --color-primary-weak: var(--color-primary-weak);
-  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
@@ -499,4 +499,42 @@ pre::-webkit-scrollbar-thumb:hover {
     font-size: 0.6875rem;
     font-weight: 600;
   }
+}
+
+/* Shared page frame and heading hierarchy across all routes. */
+.site-container {
+  width: 100%;
+  max-width: 1800px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 3rem);
+}
+
+.page-title {
+  font-family: inherit;
+  font-size: clamp(1.625rem, 1.25rem + 1vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+.section-title {
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: var(--color-on-surface);
+}
+
+.reading-content {
+  width: 100%;
+  max-width: 80ch;
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
 }

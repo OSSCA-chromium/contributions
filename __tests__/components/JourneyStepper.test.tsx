@@ -19,9 +19,9 @@ const contribution: Contribution = {
 };
 
 test.each([
-  ['in review', 'IN REVIEW'],
-  ['merged', 'MERGED'],
-  ['abandoned', 'ABANDONED'],
+  ['in review', 'In review'],
+  ['merged', 'Merged'],
+  ['abandoned', 'Abandoned'],
 ] as [ContributionStatus, string][])('shows the upload stage and %s result status without inventing a result date', (status, label) => {
   render(<JourneyStepper contribution={{ ...contribution, status }} />);
 

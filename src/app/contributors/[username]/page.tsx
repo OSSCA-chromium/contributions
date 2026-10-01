@@ -55,7 +55,7 @@ export default async function ContributorPage({ params }: ParamsProps) {
           <ContributorAvatar username={username} size={96} />
         </a>
         <div className="text-center sm:text-left">
-          <h1 className="text-[27px] font-bold leading-[1.3] tracking-[-0.025em] text-on-surface">
+          <h1 className="page-title mb-6">
             {username}
           </h1>
           <a

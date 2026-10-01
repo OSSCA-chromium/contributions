@@ -23,7 +23,7 @@ const STATUS_COLORS: Record<string, string> = {
 
 const STATUS_LABELS: Record<string, string> = {
   merged: 'Merged',
-  'in review': 'In Review',
+  'in review': 'In review',
   abandoned: 'Abandoned',
   unknown: '기타',
 };
@@ -53,7 +53,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
     <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-2">
       {/* 상태 분포 */}
       <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">상태 분포</h3>
+        <h3 className="section-title mb-4">상태 분포</h3>
         <div className="h-72 min-w-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -82,7 +82,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
 
       {/* 월별 추이 */}
       <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">월별 추이</h3>
+        <h3 className="section-title mb-4">월별 추이</h3>
         <div className="h-72 min-w-0">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={stats.byMonth}>
@@ -97,7 +97,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
 
       {/* 기여자 랭킹 (Top 10) */}
       <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6 lg:col-span-2">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">
+        <h3 className="section-title mb-4">
           기여자 랭킹 (Top 10)
         </h3>
         <div style={{ height: Math.max(topContributors.length * 36, 120) }}>
@@ -123,7 +123,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
 
       {/* 모듈 분포 (Top 10) */}
       <div className="min-w-0 rounded-[20px] border border-mline bg-m1 p-4 sm:p-6 lg:col-span-2">
-        <h3 className="text-lg font-semibold text-on-surface mb-4">
+        <h3 className="section-title mb-4">
           모듈 분포 (Top 10)
         </h3>
         <div style={{ height: Math.max(topModules.length * 36, 120) }}>

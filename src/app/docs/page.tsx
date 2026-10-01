@@ -21,18 +21,18 @@ export default function DocsIndexPage() {
   }
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 p-4 lg:flex-row">
+    <div className="flex flex-col gap-8 lg:flex-row">
       <aside className="lg:w-56 lg:flex-shrink-0">
         <DocsSidebar items={docs} />
       </aside>
 
-      <main className="min-w-0 flex-1">
-        <h1 className="font-display mb-6 text-4xl font-semibold tracking-tight text-on-surface">문서</h1>
+      <div className="min-w-0 flex-1">
+        <h1 className="page-title mb-6">문서</h1>
         {docs.length > 0 ? (
           <div className="space-y-6">
             {[...groups.entries()].map(([group, items]) => (
               <section key={group}>
-                <h2 className="mb-2 border-b border-outline pb-1.5 text-sm font-bold uppercase tracking-wider text-primary">
+                <h2 className="mb-2 border-b border-outline pb-1.5 text-sm font-semibold text-primary">
                   {group}
                 </h2>
                 <ul className="space-y-0.5">
@@ -58,7 +58,7 @@ export default function DocsIndexPage() {
         ) : (
           <p className="text-on-surface-variant">등록된 문서가 없습니다.</p>
         )}
-      </main>
+      </div>
     </div>
   );
 }

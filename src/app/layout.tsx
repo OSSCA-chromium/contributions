@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Outfit } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import ChromiumMark from "@/components/ChromiumMark";
@@ -8,12 +8,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Analytics from "@/components/Analytics";
 import "./globals.css";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-outfit",
-});
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-roboto" });
 
 // 시작 연도(2025)부터 빌드 시점 연도까지. 정적 export라 빌드 때 고정된다.
 function copyrightYears(): string {
@@ -28,11 +23,11 @@ export const metadata: Metadata = {
 };
 
 const NAV_LINKS = [
-  { href: "/docs", label: "Guide" },
-  { href: "/patches", label: "Contributions" },
-  { href: "/contributors", label: "Contributors" },
-  { href: "/stats", label: "Stats" },
-  { href: "/schedule", label: "Schedule" },
+  { href: "/docs", label: "가이드" },
+  { href: "/patches", label: "기여 목록" },
+  { href: "/contributors", label: "기여자" },
+  { href: "/stats", label: "통계" },
+  { href: "/schedule", label: "일정" },
 ];
 
 export default function RootLayout({
@@ -51,7 +46,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${roboto.className} ${outfit.variable} bg-background text-on-surface min-h-screen flex flex-col`}
+        className={`${roboto.className} ${roboto.variable} bg-background text-on-surface min-h-screen flex flex-col`}
       >
         <header className="sticky top-0 z-20 border-b border-mline bg-background">
           <div
@@ -62,7 +57,7 @@ export default function RootLayout({
             }}
             aria-hidden="true"
           />
-          <div className="mx-auto grid min-h-14 max-w-[1060px] grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 px-5 py-2 min-[901px]:flex min-[901px]:gap-x-5 min-[901px]:py-0">
+          <div className="site-container grid min-h-14 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 py-2 min-[901px]:flex min-[901px]:gap-x-5 min-[901px]:py-0">
             <Link
               href="/"
               className="mr-auto flex items-center gap-2.5 font-display text-[15.5px] font-medium tracking-[-0.01em]"
@@ -79,7 +74,7 @@ export default function RootLayout({
                 href="https://github.com/OSSCA-chromium/contributions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-3 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90 sm:px-5"
+                className="ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-3 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90 sm:"
                 aria-label="GitHub 저장소"
               >
                 <svg
@@ -96,9 +91,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="mx-auto w-full min-w-0 max-w-[1060px] px-5 py-8 flex-grow">{children}</main>
+        <main className="site-container min-w-0 py-8 flex-grow">{children}</main>
         <footer className="mt-14 border-t border-outline">
-          <div className="mx-auto max-w-[1060px] px-5 pt-6 pb-12">
+          <div className="site-container pt-6 pb-12">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-on-surface-variant">
               <div className="flex flex-wrap items-center justify-center gap-4">
                 {NAV_LINKS.map((link) => (

@@ -4,7 +4,7 @@ import ContributionSearch from '@/components/ContributionSearch';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contributions | OSSCA Chromium',
+  title: '기여 목록 | OSSCA Chromium',
   description: 'Chromium 프로젝트 컨트리뷰션 모음입니다.',
 };
 
@@ -14,7 +14,7 @@ export default function PatchesPage() {
 
   return (
     <div>
-      <h1 className="mb-2.5 text-[27px] font-bold tracking-[-0.025em]">기여 목록</h1>
+      <h1 className="page-title mb-6">기여 목록</h1>
       <p className="mb-6 text-[14.5px] text-on-surface-variant">모듈과 종류별로 Chromium 팀의 기여를 찾아보세요.</p>
       {items.length > 0 ? (
         <ContributionSearch items={items} />

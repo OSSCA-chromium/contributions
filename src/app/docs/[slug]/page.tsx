@@ -41,18 +41,18 @@ export default async function DocPage({ params }: ParamsProps) {
     currentIndex >= 0 && currentIndex < nav.length - 1 ? nav[currentIndex + 1] : null;
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-6 p-4 lg:flex-row">
+    <div className="flex flex-col gap-8 lg:flex-row">
       {/* 좌측 사이드바 */}
       <aside className="lg:w-48 lg:flex-shrink-0">
         <DocsSidebar items={nav} activeSlug={slug} />
       </aside>
 
       {/* 본문 */}
-      <main className="min-w-0 flex-1">
-        <h1 className="font-display mb-6 text-4xl font-semibold tracking-tight text-on-surface">{doc.meta.title}</h1>
+      <div className="min-w-0 flex-1">
+        <h1 className="page-title mb-6">{doc.meta.title}</h1>
 
         <article
-          className="prose dark:prose-invert max-w-none"
+          className="reading-content prose dark:prose-invert [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: doc.contentHtml }}
         />
 
@@ -81,11 +81,11 @@ export default async function DocPage({ params }: ParamsProps) {
             <span />
           )}
         </nav>
-      </main>
+      </div>
 
       {/* 우측 목차 */}
       <aside className="order-first lg:order-last lg:w-40 lg:flex-shrink-0">
-        <div className="lg:sticky lg:top-4">
+        <div className="lg:sticky lg:top-24">
           <TableOfContents headings={doc.headings} />
         </div>
       </aside>
