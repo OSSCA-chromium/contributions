@@ -30,7 +30,7 @@ test('detail metadata labels the Gerrit date as upload date', () => {
 test('detail metadata shows author, taxonomy, optional repository, review ID, and status', () => {
   render(<PatchMeta contribution={contribution} />);
 
-  expect(screen.getByRole('link', { name: 'alice' })).toHaveAttribute(
+  expect(screen.getByRole('link', { name: 'alice 프로필 이미지' })).toHaveAttribute(
     'href',
     '/contributors/alice'
   );

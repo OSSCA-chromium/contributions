@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import StatusBadge from '@/components/StatusBadge';
+import ContributorAvatar from '@/components/ContributorAvatar';
 import AxisTag from '@/components/AxisTag';
 
 export default function PatchRow({
@@ -48,7 +49,7 @@ export default function PatchRow({
 
       <div role="cell" className="patch-cell-author text-[12px] text-on-surface-variant">
         <span className="patch-cell-mobile-label">작성자</span>
-        <span className="break-words">{item.author}</span>
+        <ContributorAvatar username={item.author} size={32} linkToProfile />
       </div>
 
       <div role="cell" className="patch-cell-status">

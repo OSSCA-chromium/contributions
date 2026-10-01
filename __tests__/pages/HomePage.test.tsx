@@ -193,7 +193,7 @@ describe('홈페이지', () => {
     expect(screen.getByText('2025 contribution')).toBeInTheDocument();
     expect(screen.queryByText('2026 contribution')).toBeNull();
     expect(screen.getByText('누적 기여').previousElementSibling).toHaveTextContent('1');
-    expect(screen.getByRole('link', { name: 'bob 프로필 이미지' })).toHaveAttribute(
+    expect(screen.getAllByRole('link', { name: 'bob 프로필 이미지' })[0]).toHaveAttribute(
       'href',
       '/contributors/bob'
     );

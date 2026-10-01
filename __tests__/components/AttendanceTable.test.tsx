@@ -12,7 +12,8 @@ test('인원별 출석률을 렌더한다', () => {
       }}
     />
   );
-  expect(screen.getByText('alice')).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: 'alice 프로필 이미지' })).toBeInTheDocument();
+  expect(screen.queryByText('alice')).not.toBeInTheDocument();
   expect(screen.getByText('1 / 2')).toBeInTheDocument();
   expect(screen.getByText('50%')).toBeInTheDocument();
 });

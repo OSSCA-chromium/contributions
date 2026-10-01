@@ -25,8 +25,8 @@ const summaries = [
 test('기본은 최신순(lastActive desc): alice가 먼저', () => {
   render(<ContributorsList summaries={summaries} />);
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveTextContent('alice'); // 2025-06
-  expect(links[1]).toHaveTextContent('bob'); // 2025-01
+  expect(links[0]).toHaveAttribute('href', '/contributors/alice'); // 2025-06
+  expect(links[1]).toHaveAttribute('href', '/contributors/bob'); // 2025-01
 });
 
 test('total 정렬 선택 시 total desc: bob이 먼저', () => {
@@ -35,8 +35,8 @@ test('total 정렬 선택 시 total desc: bob이 먼저', () => {
     target: { value: 'total' },
   });
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveTextContent('bob'); // total 5
-  expect(links[1]).toHaveTextContent('alice'); // total 1
+  expect(links[0]).toHaveAttribute('href', '/contributors/bob'); // total 5
+  expect(links[1]).toHaveAttribute('href', '/contributors/alice'); // total 1
 });
 
 test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
@@ -45,8 +45,8 @@ test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
     target: { value: 'merged' },
   });
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveTextContent('alice'); // merged 1
-  expect(links[1]).toHaveTextContent('bob'); // merged 0
+  expect(links[0]).toHaveAttribute('href', '/contributors/alice'); // merged 1
+  expect(links[1]).toHaveAttribute('href', '/contributors/bob'); // merged 0
 });
 
 test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
@@ -55,8 +55,8 @@ test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
     target: { value: 'inReview' },
   });
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveTextContent('bob'); // inReview 3
-  expect(links[1]).toHaveTextContent('alice'); // inReview 0
+  expect(links[0]).toHaveAttribute('href', '/contributors/bob'); // inReview 3
+  expect(links[1]).toHaveAttribute('href', '/contributors/alice'); // inReview 0
 });
 
 test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으로 표시한다', () => {
@@ -66,6 +66,6 @@ test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으�
     target: { value: 'abandoned' },
   });
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveTextContent('bob'); // abandoned 2
-  expect(links[1]).toHaveTextContent('alice'); // abandoned 0
+  expect(links[0]).toHaveAttribute('href', '/contributors/bob'); // abandoned 2
+  expect(links[1]).toHaveAttribute('href', '/contributors/alice'); // abandoned 0
 });

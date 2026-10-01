@@ -1,3 +1,4 @@
+import ContributorAvatar from '@/components/ContributorAvatar';
 import type { AttendanceStats } from '@/lib/types';
 
 export default function AttendanceTable({ stats }: { stats: AttendanceStats }) {
@@ -17,7 +18,7 @@ export default function AttendanceTable({ stats }: { stats: AttendanceStats }) {
       <tbody>
         {stats.records.map((r) => (
           <tr key={r.username} className="border-b border-outline">
-            <td className="py-2 pr-4 text-on-surface">{r.username}</td>
+            <td className="py-2 pr-4 text-on-surface"><ContributorAvatar username={r.username} size={32} linkToProfile /></td>
             <td className="py-2 pr-4 text-on-surface-variant">
               {r.attended} / {r.totalMeetings}
             </td>

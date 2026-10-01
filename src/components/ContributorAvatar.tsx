@@ -18,18 +18,24 @@ export default function ContributorAvatar({
       alt={`${username} 프로필 이미지`}
       width={size}
       height={size}
-      className="rounded-full"
+      className="rounded-full border border-mline object-cover"
     />
   ) : (
-    <div
-      className="rounded-full bg-primary flex items-center justify-center text-on-primary font-bold"
-      style={{ width: size, height: size }}
+    <svg
+      role="img"
+      aria-label={`${username} 프로필 이미지`}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className="rounded-full bg-primary-weak p-1 text-primary"
     >
-      {username.charAt(0).toUpperCase()}
-    </div>
+      <circle cx="12" cy="8" r="4" fill="currentColor" />
+      <path d="M4 23v-3a8 8 0 0 1 16 0v3Z" fill="currentColor" />
+    </svg>
   );
+  const className = 'inline-flex shrink-0 rounded-full align-middle';
   if (valid && linkToProfile) {
-    return <Link href={`/contributors/${username}`}>{inner}</Link>;
+    return <Link href={`/contributors/${username}`} title={username} className={className}>{inner}</Link>;
   }
-  return inner;
+  return <span title={username} className={className}>{inner}</span>;
 }
