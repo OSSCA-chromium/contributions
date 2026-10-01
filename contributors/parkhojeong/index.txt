@@ -7,7 +7,7 @@ c:I[57150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/3b65cb70c8c7febe.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"PAA4nnj05GZt13bY7uM8g","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"2xOJYT4-Yk64M4RTSjY5i","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[98924,[],""]
 f:I[43195,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","7177","static/chunks/app/layout-6bcb8c5142ab06c3.js"],"default"]
@@ -2242,7 +2242,1674 @@ Chromium main에 병합되었습니다.
 - [Gerrit CL 8398154](https://crrev.com/c/8398154)
 - [`certificate section` Lit 전환 CL 8324787](https://crrev.com/c/8324787)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8398688](https://crrev.com/c/8398688)
-2d:T9b3,
+2d:Tcf3f,
+`certificate section` Lit 전환(CL 8324787)과 DOM 출력의 주석 노드 제외(CL 8402060)를 반영해,
+보안 웹 테스트 9개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.
+
+## 문제 설명
+
+두 CL 반영 후 변경된 DOM 출력에 맞춰 기존 기대 결과를 갱신해야 했습니다.
+
+## 해결 내용
+
+`-expected.txt` 9개에서 주석 노드 출력을 제거하고, `certificate section`의 구조와 버튼
+속성 변경을 반영했습니다. `TestExpectations`에서는 CL 8398154의 2개 항목과
+CL 8406865의 7개 항목을 합쳐 `[ Failure Pass ]` 항목 9개와 관련 주석을 제거했습니다.
+
+전체 코드 diff는 다음과 같습니다.
+
+```diff
+diff --git a/third_party/blink/web_tests/TestExpectations b/third_party/blink/web_tests/TestExpectations
+index eda3508b..8631a5d5 100644
+--- a/third_party/blink/web_tests/TestExpectations
++++ b/third_party/blink/web_tests/TestExpectations
+@@ -4171,19 +4171,6 @@
+ crbug.com/535451658 http/tests/devtools/console-xhr-logging-async.js [ Failure Pass ]
+ crbug.com/535451658 http/tests/devtools/console-xhr-logging.js [ Failure Pass ]
+
+-## Disable layout tests to land crrev.com/c/8324787
+-crbug.com/407750721 http/tests/devtools/security/origin-view-ct-compliance.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/security-details-updated-with-security-state.js [ Failure Pass ]
+-
+-## Disable layout tests to land crrev.com/c/8402060
+-crbug.com/407750721 http/tests/devtools/security/blank-origins-not-shown.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/failed-request.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/main-origin-assigned-despite-request-missing.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/origin-view-noncryptographic-secure-origin.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/origin-view-then-interstitial.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/security-explanation-ordering.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/security-unknown-resource.js [ Failure Pass ]
+-
+
+ # See also crbug.com/920100 (sheriff 2019-01-09).
+ crbug.com/626703 external/wpt/referrer-policy/css-integration/svg/external-stylesheet.html [ Failure Timeout ]
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/blank-origins-not-shown-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/blank-origins-not-shown-expected.txt
+index 61175ef..23e486c 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/blank-origins-not-shown-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/blank-origins-not-shown-expected.txt
+@@ -4,34 +4,22 @@
+ Group: Unknown / canceled
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ foo.test
+ </SPAN>
+
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/failed-request-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/failed-request-expected.txt
+index d88a19a..46ed30c 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/failed-request-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/failed-request-expected.txt
+@@ -4,67 +4,43 @@
+ Group: Secure origins
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-secure >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-secure >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ foo.test
+ </SPAN>
+ Group: Unknown / canceled
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ does-not-resolve.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ does-not-resolve.test
+ </SPAN>
+
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/main-origin-assigned-despite-request-missing-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/main-origin-assigned-despite-request-missing-expected.txt
+index b022735..afb65aed 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/main-origin-assigned-despite-request-missing-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/main-origin-assigned-despite-request-missing-expected.txt
+@@ -5,99 +5,63 @@
+ Group: Main origin
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ http
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ 127.0.0.1:8000
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ http
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ 127.0.0.1:8000
+ </SPAN>
+ Group: Unknown / canceled
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ foo.test
+ </SPAN>
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ bar.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ bar.test
+ </SPAN>
+
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+index d585f34..ab3366f 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+@@ -7,11 +7,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -23,47 +19,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ https
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+@@ -72,71 +46,37 @@
+         </DIV>
+     </DIV>
+     <DIV class=origin-view-section connection-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+-            <#comment >
+-            </#comment>
+ Connection
+         </DIV>
+-        <#comment >
+-        </#comment>
+         <TABLE class=details-table >
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key_Exchange
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cypher with Mac
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+         </TABLE>
+-        <#comment >
+-        </#comment>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section certificate-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+ Certificate
+         </DIV>
+@@ -154,33 +94,13 @@
+ SAN
+                 </TD>
+                 <TD >
+-                    <DIV >
+-                        <#comment >
+-                        </#comment>
+-                        <DIV class= san  >
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                    <DIV class= san  >
++                        <SPAN class= san-entry  >
+ foo.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                        </SPAN>
++                        <SPAN class= san-entry  >
+ *.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                        </DIV>
++                        </SPAN>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -212,24 +132,12 @@
+                 <TD >
+                 </TD>
+                 <TD >
+-                    <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate-for-origin title=Open full certificate details >
++                    <DEVTOOLS-BUTTON class=origin-button role=presentation title=Open full certificate details >
+ Open full certificate details
+                         <#document-fragment >
+-                            <#comment >
+-                            </#comment>
+                             <STYLE >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+                             </STYLE>
+-                            <BUTTON class=outlined title=Open full certificate details aria-label=Open full certificate details >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
++                            <BUTTON title=Open full certificate details class= outlined  aria-label=Open full certificate details jslog=Action; track: click; context: security.view-certificate-for-origin >
+                                 <SLOT >
+                                 </SLOT>
+                             </BUTTON>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-noncryptographic-secure-origin-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-noncryptographic-secure-origin-expected.txt
+index cd8bf01..25e41caf 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-noncryptographic-secure-origin-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-noncryptographic-secure-origin-expected.txt
+@@ -7,11 +7,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -23,47 +19,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ chrome-test
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-then-interstitial-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-then-interstitial-expected.txt
+index 9df54c2..afbd27d 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-then-interstitial-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-then-interstitial-expected.txt
+@@ -57,11 +57,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -73,47 +69,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-insecure >
+-                    <#comment >
+-                    </#comment>
+ http
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+index b486678..168f9bc3 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+@@ -5,163 +5,103 @@
+ Group: Secure origins
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-secure >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-secure >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ foo.test
+ </SPAN>
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-secure >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ ecdhe.foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-secure >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ ecdhe.foo.test
+ </SPAN>
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-secure >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ tls13.foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-secure >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ tls13.foo.test
+ </SPAN>
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-secure >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ ech.foo.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-secure >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ ech.foo.test
+ </SPAN>
+ Group: Unknown / canceled
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ https
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ bar.test
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ https
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ bar.test
+ </SPAN>
+ Origin view (https://foo.test) -----------------
+@@ -171,11 +111,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -187,47 +123,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ https
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+@@ -236,71 +150,37 @@
+         </DIV>
+     </DIV>
+     <DIV class=origin-view-section connection-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+-            <#comment >
+-            </#comment>
+ Connection
+         </DIV>
+-        <#comment >
+-        </#comment>
+         <TABLE class=details-table >
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key_Exchange
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cypher with Mac
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+         </TABLE>
+-        <#comment >
+-        </#comment>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section certificate-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+ Certificate
+         </DIV>
+@@ -318,33 +198,13 @@
+ SAN
+                 </TD>
+                 <TD >
+-                    <DIV >
+-                        <#comment >
+-                        </#comment>
+-                        <DIV class= san  >
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                    <DIV class= san  >
++                        <SPAN class= san-entry  >
+ foo.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                        </SPAN>
++                        <SPAN class= san-entry  >
+ *.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                        </DIV>
++                        </SPAN>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -376,24 +236,12 @@
+                 <TD >
+                 </TD>
+                 <TD >
+-                    <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate-for-origin title=Open full certificate details >
++                    <DEVTOOLS-BUTTON class=origin-button role=presentation title=Open full certificate details >
+ Open full certificate details
+                         <#document-fragment >
+-                            <#comment >
+-                            </#comment>
+                             <STYLE >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+                             </STYLE>
+-                            <BUTTON class=outlined title=Open full certificate details aria-label=Open full certificate details >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
++                            <BUTTON title=Open full certificate details class= outlined  aria-label=Open full certificate details jslog=Action; track: click; context: security.view-certificate-for-origin >
+                                 <SLOT >
+                                 </SLOT>
+                             </BUTTON>
+@@ -411,11 +259,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -427,47 +271,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ https
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ ecdhe.foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+@@ -476,87 +298,45 @@
+         </DIV>
+     </DIV>
+     <DIV class=origin-view-section connection-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+-            <#comment >
+-            </#comment>
+ Connection
+         </DIV>
+-        <#comment >
+-        </#comment>
+         <TABLE class=details-table >
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ ECDSA_RSA with X25519
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+         </TABLE>
+-        <#comment >
+-        </#comment>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section certificate-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+ Certificate
+         </DIV>
+@@ -574,24 +354,10 @@
+ SAN
+                 </TD>
+                 <TD >
+-                    <DIV >
+-                        <#comment >
+-                        </#comment>
+-                        <DIV class= san  >
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                    <DIV class= san  >
++                        <SPAN class= san-entry  >
+ ecdhe.foo.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                        </DIV>
++                        </SPAN>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -623,24 +389,12 @@
+                 <TD >
+                 </TD>
+                 <TD >
+-                    <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate-for-origin title=Open full certificate details >
++                    <DEVTOOLS-BUTTON class=origin-button role=presentation title=Open full certificate details >
+ Open full certificate details
+                         <#document-fragment >
+-                            <#comment >
+-                            </#comment>
+                             <STYLE >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+                             </STYLE>
+-                            <BUTTON class=outlined title=Open full certificate details aria-label=Open full certificate details >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
++                            <BUTTON title=Open full certificate details class= outlined  aria-label=Open full certificate details jslog=Action; track: click; context: security.view-certificate-for-origin >
+                                 <SLOT >
+                                 </SLOT>
+                             </BUTTON>
+@@ -658,11 +412,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -674,47 +424,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ https
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ tls13.foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+@@ -723,87 +451,45 @@
+         </DIV>
+     </DIV>
+     <DIV class=origin-view-section connection-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+-            <#comment >
+-            </#comment>
+ Connection
+         </DIV>
+-        <#comment >
+-        </#comment>
+         <TABLE class=details-table >
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ TLS 1.3
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ X25519
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+         </TABLE>
+-        <#comment >
+-        </#comment>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section certificate-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+ Certificate
+         </DIV>
+@@ -821,24 +507,10 @@
+ SAN
+                 </TD>
+                 <TD >
+-                    <DIV >
+-                        <#comment >
+-                        </#comment>
+-                        <DIV class= san  >
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                    <DIV class= san  >
++                        <SPAN class= san-entry  >
+ tls13.foo.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                        </DIV>
++                        </SPAN>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -870,24 +542,12 @@
+                 <TD >
+                 </TD>
+                 <TD >
+-                    <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate-for-origin title=Open full certificate details >
++                    <DEVTOOLS-BUTTON class=origin-button role=presentation title=Open full certificate details >
+ Open full certificate details
+                         <#document-fragment >
+-                            <#comment >
+-                            </#comment>
+                             <STYLE >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+                             </STYLE>
+-                            <BUTTON class=outlined title=Open full certificate details aria-label=Open full certificate details >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
++                            <BUTTON title=Open full certificate details class= outlined  aria-label=Open full certificate details jslog=Action; track: click; context: security.view-certificate-for-origin >
+                                 <SLOT >
+                                 </SLOT>
+                             </BUTTON>
+@@ -905,11 +565,7 @@
+     <STYLE >
+     </STYLE>
+     <DIV class=title-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=title-section-header role=heading aria-level=1 >
+-            <#comment >
+-            </#comment>
+ Origin
+         </DIV>
+         <DIV class=origin-display >
+@@ -921,47 +577,25 @@
+                     </SPAN>
+                 </#document-fragment>
+             </DEVTOOLS-ICON>
+-            <#comment >
+-            </#comment>
+             <SPAN class=highlighted-url >
+                 <SPAN class=url-scheme-secure >
+-                    <#comment >
+-                    </#comment>
+ https
+                 </SPAN>
+                 <SPAN class=url-scheme-separator >
+-                    <#comment >
+-                    </#comment>
+ ://
+                 </SPAN>
+                 <SPAN >
+-                    <#comment >
+-                    </#comment>
+ ech.foo.test
+                 </SPAN>
+             </SPAN>
+         </DIV>
+         <DIV class=view-network-button >
+             <DEVTOOLS-BUTTON role=presentation >
+-                <#comment >
+-                </#comment>
+ View requests in Network panel
+                 <#document-fragment >
+-                    <#comment >
+-                    </#comment>
+                     <STYLE >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                     </STYLE>
+                     <BUTTON class= outlined  jslog=Action; track: click; context: reveal-in-network >
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+-                        <#comment >
+-                        </#comment>
+                         <SLOT >
+                         </SLOT>
+                     </BUTTON>
+@@ -970,103 +604,53 @@
+         </DIV>
+     </DIV>
+     <DIV class=origin-view-section connection-section >
+-        <#comment >
+-        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+-            <#comment >
+-            </#comment>
+ Connection
+         </DIV>
+-        <#comment >
+-        </#comment>
+         <TABLE class=details-table >
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ TLS 1.3
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ X25519
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+-            <#comment >
+-            </#comment>
+             <TR class=details-table-row >
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ Encrypted ClientHello
+                 </TD>
+                 <TD >
+-                    <#comment >
+-                    </#comment>
+ enabled
+                 </TD>
+             </TR>
+-            <#comment >
+-            </#comment>
+         </TABLE>
+-        <#comment >
+-        </#comment>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section certificate-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+ Certificate
+         </DIV>
+@@ -1084,24 +668,10 @@
+ SAN
+                 </TD>
+                 <TD >
+-                    <DIV >
+-                        <#comment >
+-                        </#comment>
+-                        <DIV class= san  >
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                            <SPAN class= san-entry  >
+-                                <#comment >
+-                                </#comment>
++                    <DIV class= san  >
++                        <SPAN class= san-entry  >
+ ech.foo.test
+-                            </SPAN>
+-                            <#comment >
+-                            </#comment>
+-                            <#comment >
+-                            </#comment>
+-                        </DIV>
++                        </SPAN>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -1133,24 +703,12 @@
+                 <TD >
+                 </TD>
+                 <TD >
+-                    <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate-for-origin title=Open full certificate details >
++                    <DEVTOOLS-BUTTON class=origin-button role=presentation title=Open full certificate details >
+ Open full certificate details
+                         <#document-fragment >
+-                            <#comment >
+-                            </#comment>
+                             <STYLE >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+                             </STYLE>
+-                            <BUTTON class=outlined title=Open full certificate details aria-label=Open full certificate details >
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
+-                                <#comment >
+-                                </#comment>
++                            <BUTTON title=Open full certificate details class= outlined  aria-label=Open full certificate details jslog=Action; track: click; context: security.view-certificate-for-origin >
+                                 <SLOT >
+                                 </SLOT>
+                             </BUTTON>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/security-explanation-ordering-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/security-explanation-ordering-expected.txt
+index 815fab2..c21323a 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/security-explanation-ordering-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/security-explanation-ordering-expected.txt
+@@ -24,21 +24,9 @@
+         <DEVTOOLS-BUTTON role=button class=origin-button jslog=Action; track: click; context: security.view-certificate >
+ View certificate
+             <#document-fragment >
+-                <#comment >
+-                </#comment>
+                 <STYLE >
+-                    <#comment >
+-                    </#comment>
+-                    <#comment >
+-                    </#comment>
+                 </STYLE>
+                 <BUTTON class=outlined >
+-                    <#comment >
+-                    </#comment>
+-                    <#comment >
+-                    </#comment>
+-                    <#comment >
+-                    </#comment>
+                     <SLOT >
+                     </SLOT>
+                 </BUTTON>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/security-unknown-resource-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/security-unknown-resource-expected.txt
+index b223ed5..4cad8fd 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/security-unknown-resource-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/security-unknown-resource-expected.txt
+@@ -4,34 +4,22 @@
+ Group: Unknown / canceled
+ <SPAN class=highlighted-url >
+     <SPAN class=url-scheme-unknown >
+-        <#comment >
+-        </#comment>
+ http
+     </SPAN>
+     <SPAN class=url-scheme-separator >
+-        <#comment >
+-        </#comment>
+ ://
+     </SPAN>
+     <SPAN >
+-        <#comment >
+-        </#comment>
+ unknown
+     </SPAN>
+ </SPAN>
+ <SPAN class=url-scheme-unknown >
+-    <#comment >
+-    </#comment>
+ http
+ </SPAN>
+ <SPAN class=url-scheme-separator >
+-    <#comment >
+-    </#comment>
+ ://
+ </SPAN>
+ <SPAN >
+-    <#comment >
+-    </#comment>
+ unknown
+ </SPAN>
+
+```
+
+## 테스트 방법
+
+최종 patchset의 CQ 실행은 통과했으며, 2026년 9월 18일(한국 시간)
+Chromium main에 병합되었습니다.
+
+## 배운 점
+
+기대 결과를 갱신할 때는 함께 반영된 구현·테스트 출력 변경을 확인하고,
+각 변경을 위해 추가한 임시 설정도 모두 제거해야 합니다.
+
+## 참고 자료
+
+- [작업 이슈 #336](https://github.com/OSSCA-chromium/contributions/issues/336)
+- [Gerrit CL 8398688](https://crrev.com/c/8398688)
+- [`certificate section` Lit 전환 CL 8324787](https://crrev.com/c/8324787)
+- [`certificate section` 전환을 위한 기대값 임시 조정 CL 8398154](https://crrev.com/c/8398154)
+- [DOM 출력의 주석 노드 제외 CL 8402060](https://crrev.com/c/8402060)
+- [주석 노드 제외를 위한 기대값 임시 조정 CL 8406865](https://crrev.com/c/8406865)
+2e:T9b3,
 기존 웹 테스트의 기대 결과에 Lit 마커가 포함되지 않도록,
 `TestRunner.dumpDeepInnerHTML()`에서 주석 노드를 제외했습니다.
 
@@ -2297,7 +3964,7 @@ DOM 출력 기반 테스트에서는 렌더링 프레임워크의 내부 주석�
 - [`certificate section` 전환을 위한 기대값 임시 조정 CL 8398154](https://crrev.com/c/8398154)
 - [주석 노드 제외를 위한 기대값 임시 조정 CL 8406865](https://crrev.com/c/8406865)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8398688](https://crrev.com/c/8398688)
-2e:Ta2e,
+2f:Ta2e,
 DOM 출력의 주석 노드 제외를 반영하기 위해 보안 웹 테스트 7개의 기대값을
 임시 조정했습니다.
 
@@ -2352,7 +4019,7 @@ Chromium main에 병합되었습니다.
 - [Gerrit CL 8406865](https://crrev.com/c/8406865)
 - [DOM 출력의 주석 노드 제외 CL 8402060](https://crrev.com/c/8402060)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8398688](https://crrev.com/c/8398688)
-2f:T37c8,
+30:T37c8,
 보안 웹 테스트 4개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.
 
 ## 문제 설명
@@ -2719,7 +4386,7 @@ Chromium main에 병합되었습니다.
 - [Gerrit CL 8399066](https://crrev.com/c/8399066)
 - [`title section` Lit 전환 CL 8289248](https://crrev.com/c/8289248)
 - [테스트 기대값 임시 조정 CL 8297118](https://crrev.com/c/8297118)
-30:T4412,
+31:T4412,
 SecurityOriginView의 `certificate section`을 Lit으로 전환했습니다. certificate details 표시와
 certificate viewer를 여는 동작의 테스트를 추가했습니다.
 
@@ -3102,7 +4769,7 @@ index 0ed93e9..28f4c7a 100644
 - [Gerrit CL 8324787](https://crrev.com/c/8324787)
 - [`certificate section` 전환을 위한 기대값 임시 조정 CL 8398154](https://crrev.com/c/8398154)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8398688](https://crrev.com/c/8398688)
-31:Ta4d,
+32:Ta4d,
 Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의
 단어 경계를 올바르게 판단하도록 수정했습니다.
 
@@ -3152,7 +4819,488 @@ Gerrit의 CQ dry run 통과 후, 2026년 9월 16일 Chromium main에 병합되�
 - [Gerrit CL 8311028](https://crrev.com/c/8311028)
 - [Chromium Issue 501115609](https://issues.chromium.org/issues/501115609)
 - [관련 WPT 결과](https://wpt.fyi/results/css/css-pseudo/first-letter-capitalize-supplementary-char.html)
-32:T7d9,
+33:T37a7,
+보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.
+
+## 문제 설명
+
+CL 8303474 반영 후, 변경된 DOM 출력에 맞춰 기대 결과를 갱신해야 했습니다.
+
+## 해결 내용
+
+테스트 2개의 `-expected.txt`에 Lit 주석 노드와 `connection-section` 클래스
+추가를 반영하고, `TestExpectations`에서 관련 `[ Failure Pass ]` 항목과 주석을
+제거했습니다.
+
+전체 코드 diff는 다음과 같습니다.
+
+```diff
+diff --git a/third_party/blink/web_tests/TestExpectations b/third_party/blink/web_tests/TestExpectations
+index 52b09d7..883a9e1 100644
+--- a/third_party/blink/web_tests/TestExpectations
++++ b/third_party/blink/web_tests/TestExpectations
+@@ -4197,10 +4197,6 @@
+ crbug.com/535451658 http/tests/devtools/console-xhr-logging-async.js [ Failure Pass ]
+ crbug.com/535451658 http/tests/devtools/console-xhr-logging.js [ Failure Pass ]
+
+-## Disable layout tests to land crrev.com/c/8303474
+-crbug.com/407750721 http/tests/devtools/security/origin-view-ct-compliance.js [ Failure Pass ]
+-crbug.com/407750721 http/tests/devtools/security/security-details-updated-with-security-state.js [ Failure Pass ]
+-
+
+ # See also crbug.com/920100 (sheriff 2019-01-09).
+ crbug.com/626703 external/wpt/referrer-policy/css-integration/svg/external-stylesheet.html [ Failure Timeout ]
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+index 9c33378..e399e52 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+@@ -71,36 +71,70 @@
+             </DEVTOOLS-BUTTON>
+         </DIV>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section connection-section >
++        <#comment >
++        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
++            <#comment >
++            </#comment>
+ Connection
+         </DIV>
++        <#comment >
++        </#comment>
+         <TABLE class=details-table >
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key_Exchange
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cypher with Mac
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
+         </TABLE>
++        <#comment >
++        </#comment>
+     </DIV>
+     <DIV class=origin-view-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+index 523a88a..1a5dc80 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+@@ -235,36 +235,70 @@
+             </DEVTOOLS-BUTTON>
+         </DIV>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section connection-section >
++        <#comment >
++        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
++            <#comment >
++            </#comment>
+ Connection
+         </DIV>
++        <#comment >
++        </#comment>
+         <TABLE class=details-table >
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key_Exchange
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cypher with Mac
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
+         </TABLE>
++        <#comment >
++        </#comment>
+     </DIV>
+     <DIV class=origin-view-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+@@ -441,44 +475,86 @@
+             </DEVTOOLS-BUTTON>
+         </DIV>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section connection-section >
++        <#comment >
++        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
++            <#comment >
++            </#comment>
+ Connection
+         </DIV>
++        <#comment >
++        </#comment>
+         <TABLE class=details-table >
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ TLS 1.2
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ ECDSA_RSA with X25519
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
+         </TABLE>
++        <#comment >
++        </#comment>
+     </DIV>
+     <DIV class=origin-view-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+@@ -646,44 +722,86 @@
+             </DEVTOOLS-BUTTON>
+         </DIV>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section connection-section >
++        <#comment >
++        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
++            <#comment >
++            </#comment>
+ Connection
+         </DIV>
++        <#comment >
++        </#comment>
+         <TABLE class=details-table >
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ TLS 1.3
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ X25519
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
+         </TABLE>
++        <#comment >
++        </#comment>
+     </DIV>
+     <DIV class=origin-view-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+@@ -851,52 +969,102 @@
+             </DEVTOOLS-BUTTON>
+         </DIV>
+     </DIV>
+-    <DIV class=origin-view-section >
++    <DIV class=origin-view-section connection-section >
++        <#comment >
++        </#comment>
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
++            <#comment >
++            </#comment>
+ Connection
+         </DIV>
++        <#comment >
++        </#comment>
+         <TABLE class=details-table >
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Protocol
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ TLS 1.3
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Key exchange
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ X25519
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Server signature
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ RSA-PSS with SHA-256
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Cipher
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ AES-128-GCM
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
++            <#comment >
++            </#comment>
+             <TR class=details-table-row >
+                 <TD >
++                    <#comment >
++                    </#comment>
+ Encrypted ClientHello
+                 </TD>
+                 <TD >
++                    <#comment >
++                    </#comment>
+ enabled
+                 </TD>
+             </TR>
++            <#comment >
++            </#comment>
+         </TABLE>
++        <#comment >
++        </#comment>
+     </DIV>
+     <DIV class=origin-view-section >
+         <DIV class=origin-view-section-title role=heading aria-level=2 >
+```
+
+## 테스트 방법
+
+Gerrit에 기록된 CQ 실행은 통과했으며, 2026년 9월 10일(한국 시간)
+Chromium main에 병합되었습니다.
+
+## 배운 점
+
+DOM 출력 기반 테스트는 Lit 주석 노드 추가에도 기대 결과 갱신이 필요합니다.
+리뷰에서는 해당 테스트를 DevTools 쪽 E2E 테스트로 옮기자는 제안을 받았습니다.
+
+## 참고 자료
+
+- [작업 이슈 #336](https://github.com/OSSCA-chromium/contributions/issues/336)
+- [Gerrit CL 8311089](https://crrev.com/c/8311089)
+- [`connection section` Lit 전환 CL 8303474](https://crrev.com/c/8303474)
+- [테스트 기대값 임시 조정 CL 8302454](https://crrev.com/c/8302454)
+34:T7d9,
 `connection section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.
 
 ## 문제 설명
@@ -3201,7 +5349,7 @@ Chromium main에 병합되었습니다.
 - [Gerrit CL 8302454](https://crrev.com/c/8302454)
 - [`connection section` Lit 전환 CL 8303474](https://crrev.com/c/8303474)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8311089](https://crrev.com/c/8311089)
-33:T4c21,
+35:T4c21,
 SecurityOriginView의 `connection section`을 Lit으로 전환했습니다. `protocol`, `key exchange`,
 `server signature`, `cipher`, Encrypted ClientHello 표시 테스트를 추가하고,
 `security details`가 없으면 이 영역을 표시하지 않는지 검증했습니다.
@@ -3610,7 +5758,7 @@ index effa96f..b0371f0 100644
 - [Gerrit CL 8303474](https://crrev.com/c/8303474)
 - [테스트 기대값 임시 조정 CL 8302454](https://crrev.com/c/8302454)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8311089](https://crrev.com/c/8311089)
-34:T8cc,
+36:T8cc,
 `title section`의 Lit 전환을 위해 보안 웹 테스트 4개의 기대값을 임시 조정했습니다.
 
 ## 문제 설명
@@ -3661,7 +5809,7 @@ Gerrit에 기록된 CQ 실행 통과 결과와 최종 병합 상태를 확인했
 - [Gerrit CL 8297118](https://crrev.com/c/8297118)
 - [`title section` Lit 전환 CL 8289248](https://crrev.com/c/8289248)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8399066](https://crrev.com/c/8399066)
-35:T340d,
+37:T340d,
 SecurityOriginView의 `title section`을 Lit으로 전환했습니다. 렌더링, `security state` 갱신,
 Network panel에서 해당 Origin의 요청을 표시하는 동작의 테스트를 추가했습니다.
 
@@ -3952,7 +6100,7 @@ index b6292dd..0ed93e9 100644
 - [Gerrit CL 8289248](https://crrev.com/c/8289248)
 - [테스트 기대값 임시 조정 CL 8297118](https://crrev.com/c/8297118)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8399066](https://crrev.com/c/8399066)
-36:Te8e,
+38:Te8e,
 Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,
 링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을
 테스트로 명시했습니다.
@@ -4032,7 +6180,7 @@ Gerrit LUCI dry run과 제출 전 전체 CQ도 통과했으며, CL은 Chromium m
 - [Linux/ChromeOS inotify 구현](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_inotify.cc)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-37:Tc0f,
+39:Tc0f,
 Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도
 `FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.
 
@@ -4104,7 +6252,7 @@ Gerrit LUCI dry-run과 제출 전 전체 CQ가 통과했으며, CL은 Chromium m
 - [Windows FilePathWatcher 필터링 로직](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_win.cc)
 - [Apple 관련 선행 CL 8042283](https://crrev.com/c/8042283)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
-38:T5a6,
+3a:T5a6,
 `ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스
 오타를 수정했습니다.
 
@@ -4151,7 +6299,7 @@ Gitiles에서 변경된 링크가 정상적으로 열리는 것을 확인했습�
 - [헤더 이름 변경 CL 6938086](https://crrev.com/c/6938086)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-39:T65e,
+3b:T65e,
 지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.
 
 ## 문제 설명
@@ -4196,7 +6344,7 @@ Gitiles에서 LaCrOS 항목이 제거된 것을 확인했습니다.
 - [LaCrOS 문서 삭제 CL 5892904](https://crrev.com/c/5892904)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-3a:T2346,
+3c:T2346,
 SAN Lit 전환을 반영하기 위해 테스트 기대값을 임시 조정한 CL 8096246의
 후속 작업입니다. 보안 웹 테스트 2개의 기대 결과를 갱신하고, 성공과 실패를
 모두 허용하던 임시 설정을 제거했습니다.
@@ -4418,7 +6566,7 @@ third_party/blink/tools/run_web_tests.py http/tests/devtools/security/
 - [Gerrit CL 8140384](https://crrev.com/c/8140384)
 - [SAN Lit 전환 CL 8045801](https://crrev.com/c/8045801)
 - [테스트 기대값 임시 조정 CL 8096246](https://crrev.com/c/8096246)
-3b:Tc39,
+3d:Tc39,
 SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가
 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.
 DevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을
@@ -4486,7 +6634,7 @@ third_party/blink/tools/run_web_tests.py http/tests/devtools/security/
 - [Gerrit CL 8096246](https://crrev.com/c/8096246)
 - [SAN Lit 전환 CL 8045801](https://crrev.com/c/8045801)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8140384](https://crrev.com/c/8140384)
-3c:T3e8d,
+3e:T3e8d,
 SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에
 accessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로
 유지했습니다.
@@ -4867,7 +7015,7 @@ CL 8140384에서 Chromium 쪽 기대 결과를 갱신했습니다.
 - [Gerrit CL 8045801](https://crrev.com/c/8045801)
 - [테스트 기대값 임시 조정 CL 8096246](https://crrev.com/c/8096246)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8140384](https://crrev.com/c/8140384)
-3d:T6552,
+3f:T6552,
 Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.
 
 ## 문제 설명
@@ -5753,7 +7901,7 @@ Chromium main에 병합되었습니다.
 - [Origin Lit 전환 CL 7969697](https://crrev.com/c/7969697)
 - [테스트 기대값 임시 조정 CL 8038580](https://crrev.com/c/8038580)
 - [UI 문구 변경 CL 8069249](https://crrev.com/c/8069249)
-3e:Tb9d,
+40:Tb9d,
 Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도
 이벤트가 발생하지 않는지 검증했습니다.
 
@@ -5825,7 +7973,7 @@ CQ를 거쳐 2026년 7월 8일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8042283](https://crrev.com/c/8042283)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-3f:Td76,
+41:Td76,
 Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.
 
 ## 문제 설명
@@ -5892,7 +8040,7 @@ CQ를 거쳐 2026년 7월 3일 Chromium main에 병합되었습니다.
 - [Gerrit CL 8038580](https://crrev.com/c/8038580)
 - [Origin Lit 전환 CL 7969697](https://crrev.com/c/7969697)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8042189](https://crrev.com/c/8042189)
-40:T96a,
+42:T96a,
 존재하지 않는 감시 파일의 부모 디렉터리를 생성해도
 파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.
 
@@ -5951,7 +8099,7 @@ CQ를 거쳐 2026년 7월 7일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8030244](https://crrev.com/c/8030244)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-41:T8ed,
+43:T8ed,
 존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도
 파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.
 
@@ -6009,7 +8157,7 @@ CQ를 거쳐 2026년 7월 2일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8031240](https://crrev.com/c/8031240)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-42:Tab8,
+44:Tab8,
 Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야
 하는 경우를 검증하도록 테스트를 보완했습니다.
 
@@ -6078,7 +8226,7 @@ CQ를 거쳐 2026년 6월 30일 Chromium main에 병합되었습니다.
 - [Gerrit CL 8015022](https://crrev.com/c/8015022)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-43:T22a4,
+45:T22a4,
 SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.
 
 ## 문제 설명
@@ -6286,7 +8434,7 @@ SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템
 - [Gerrit CL 7969697](https://crrev.com/c/7969697)
 - [테스트 기대값 임시 조정 CL 8038580](https://crrev.com/c/8038580)
 - [기대 결과 갱신 CL 8042189](https://crrev.com/c/8042189)
-44:Tbd0,
+46:Tbd0,
 존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면
 `FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.
 
@@ -6347,7 +8495,7 @@ Gerrit에서 CQ dry run 통과와 최종 제출을 확인했으며,
 - [병합된 테스트 코드](https://chromium.googlesource.com/chromium/src/+/607cac6f1c4dabaed5a07c87d35a546d2cedbbe4/base/files/file_path_watcher_unittest.cc)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-45:Tc7c,
+47:Tc7c,
 Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.
 
 ## 문제 설명
@@ -6425,7 +8573,7 @@ CQ를 거쳐 2026년 6월 9일 Chromium main에 병합되었습니다.
 - [Gerrit CL 7895660](https://crrev.com/c/7895660)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-46:T87a,
+48:T87a,
 VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.
 
 ## 문제 설명
@@ -6482,7 +8630,7 @@ CQ를 통해 2026년 6월 4일(한국 시간) Chromium main에 병합되었습�
 ## 참고 자료
 
 - [Gerrit CL 7893345](https://crrev.com/c/7893345)
-47:T6f5,
+49:T6f5,
 Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.
 
 ## 문제 설명
@@ -6539,9 +8687,9 @@ CQ를 통해 2026년 6월 2일(한국 시간) Chromium main에 병합되었습�
 ## 참고 자료
 
 - [Gerrit CL 7887496](https://crrev.com/c/7887496)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8483194","title":"[DevTools] Remove mixed-content-active-and-passive-reload test after crrev.com/c/8467003","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483194","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8467003에서 unit test로 옮긴 기존 `mixed-content-active-and-passive-reload` 웹 테스트를 제거했습니다.","content":"$1b"},{"slug":"8483671","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8451582","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483671","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 1개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$1c"},{"slug":"8468010","title":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode","date":"$D2026-09-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8468010","labels":["blink","html"],"status":"merged","excerpt":"HTML 스펙에 따르면 `in head noscript` insertion mode에서는 `head`와 `noscript`\n시작 태그를 무시해야 합니다. 기존에는 이 모드에서 `head` 시작 태그를 만나면 잘못해서\n`in head` 모드로 전환했습니다. `head` 시작 태그를 무시","content":"$1d"},{"slug":"8467003","title":"Migrate devtools/security/mixed-content-active-and-passive-reload.js to a unit test","date":"$D2026-09-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8467003","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `mixed-content-active-and-passive-reload.js`를 DevTools unit test로 옮겼습니다.\nrequest가 기록되면 active·passive mixed content의 reload 안내가 Network panel 링크로\n바뀌는","content":"$1e"},{"slug":"8457503","title":"[DevTools] Remove blocked-mixed-content test after crrev.com/c/8457645","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457503","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8457645에서 unit test로 옮긴 기존 `blocked-mixed-content` 웹 테스트를 제거했습니다.","content":"$1f"},{"slug":"8457645","title":"Migrate devtools/security/blocked-mixed-content.js to a unit test","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457645","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `blocked-mixed-content.js`를 DevTools unit test로 옮겼습니다.\n차단된 mixed content의 설명과 request 링크가 Security panel에 표시되는지 검증합니다.","content":"$20"},{"slug":"8458524","title":"[DevTools] Disable layout tests to land crrev.com/c/8451582","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8458524","labels":["devtools","testing"],"status":"merged","excerpt":"`note section`의 변경을 반영하기 위해 보안 웹 테스트 1개의 기대값을 임시 조정했습니다.","content":"$21"},{"slug":"8460722","title":"[DevTools] Remove failed-request test after crrev.com/c/8449733","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8460722","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8449733에서 unit test로 옮긴 기존 `failed-request` 웹 테스트를 제거했습니다.","content":"$22"},{"slug":"8449733","title":"Migrate devtools/security/failed-request.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449733","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `failed-request.js`를 DevTools unit test로 옮겼습니다.\n실패한 request의 origin이 Security sidebar에 올바르게 표시되는지 검증합니다.","content":"$23"},{"slug":"8449930","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8426420","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449930","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$24"},{"slug":"8450050","title":"Migrate devtools/security/blank-origin-not-shown.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450050","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 blank origin 웹 테스트를 DevTools의 unit test로 옮겼습니다.\nSecurity sidebar에 blank origin이 표시되지 않는지 검증합니다.","content":"$25"},{"slug":"8450591","title":"[DevTools] Remove blank-origins-not-shown test after crrev.com/c/8450050","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450591","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8450050에서 unit test로 옮긴 기존 `blank-origins-not-shown` 웹 테스트를 제거했습니다.","content":"$26"},{"slug":"8451582","title":"[security] Migrate SecurityOriginView note section to Lit","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8451582","labels":["devtools","refactor"],"status":"merged","excerpt":"`SecurityOriginView`의 `note section`을 Lit으로 전환하고, 표시 조건과 캐시 안내\n테스트를 추가했습니다. `Certificate Transparency section`(CT section)이 표시되지\n않을 때 일반 안내 문구도 누락되던 문제를 함께 수정했","content":"$27"},{"slug":"8425664","title":"[DevTools] Disable layout tests to land crrev.com/c/8426420","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425664","labels":["devtools","testing"],"status":"merged","excerpt":"`Certificate Transparency section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$28"},{"slug":"8425980","title":"[css-pseudo] Support 'quotes' property in ::marker","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425980","labels":["blink","css"],"status":"merged","excerpt":"CSSWG 결정에 따라 `::marker`에서 `quotes` 속성을 지원하도록 했습니다.","content":"$29"},{"slug":"8426420","title":"[security] Migrate SecurityOriginView certificate transparency section to Lit","date":"$D2026-09-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8426420","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `Certificate Transparency section`을 Lit으로 전환했습니다. CT compliance 안내\n문구, Signed Certificate Timestamp(SCT) 표시, 상세 보기 전환 테스트를 추가했습니다.","content":"$2a"},{"slug":"8409931","title":"[Blink] Fix hyphen orientation in vertical text","date":"$D2026-09-16T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8409931","labels":["blink","css"],"status":"merged","excerpt":"세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고\n똑바로 표시되는 문제를 수정했습니다.","content":"$2b"},{"slug":"8398154","title":"[DevTools] Disable layout tests to land crrev.com/c/8324787","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8398154","labels":["devtools","testing"],"status":"merged","excerpt":"`certificate section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$2c"},{"slug":"8402060","title":"[test_runner] Skip comment nodes in deep HTML dumps","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8402060","labels":["devtools","testing"],"status":"merged","excerpt":"기존 웹 테스트의 기대 결과에 Lit 마커가 포함되지 않도록,\n`TestRunner.dumpDeepInnerHTML()`에서 주석 노드를 제외했습니다.","content":"$2d"},{"slug":"8406865","title":"[DevTools] Disable layout tests to land crrev.com/c/8402060","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8406865","labels":["devtools","testing"],"status":"merged","excerpt":"DOM 출력의 주석 노드 제외를 반영하기 위해 보안 웹 테스트 7개의 기대값을\n임시 조정했습니다.","content":"$2e"},{"slug":"8399066","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8289248","date":"$D2026-09-11T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8399066","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 4개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$2f"},{"slug":"8324787","title":"[security] Migrate SecurityOriginView certificate section to Lit","date":"$D2026-08-31T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8324787","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `certificate section`을 Lit으로 전환했습니다. certificate details 표시와\ncertificate viewer를 여는 동작의 테스트를 추가했습니다.","content":"$30"},{"slug":"8311028","title":"[Blink] Fix capitalization after supplementary characters","date":"$D2026-08-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311028","labels":["blink","css"],"status":"merged","excerpt":"Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의\n단어 경계를 올바르게 판단하도록 수정했습니다.","content":"$31"},{"slug":"8302454","title":"[DevTools] Disable layout tests to land crrev.com/c/8303474","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8302454","labels":["devtools","testing"],"status":"merged","excerpt":"`connection section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$32"},{"slug":"8303474","title":"[security] Migrate SecurityOriginView connection section to Lit","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8303474","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `connection section`을 Lit으로 전환했습니다. `protocol`, `key exchange`,\n`server signature`, `cipher`, Encrypted ClientHello 표시 테스트를 추가하고,\n`security","content":"$33"},{"slug":"8297118","title":"[DevTools] Disable layout tests to land crrev.com/c/8289248","date":"$D2026-08-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8297118","labels":["devtools","testing"],"status":"merged","excerpt":"`title section`의 Lit 전환을 위해 보안 웹 테스트 4개의 기대값을 임시 조정했습니다.","content":"$34"},{"slug":"8289248","title":"[security] Migrate SecurityOriginView title section to Lit","date":"$D2026-08-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8289248","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `title section`을 Lit으로 전환했습니다. 렌더링, `security state` 갱신,\nNetwork panel에서 해당 Origin의 요청을 표시하는 동작의 테스트를 추가했습니다.","content":"$35"},{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$36"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$37"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$38"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$39"},{"slug":"8140384","title":"[DevTools] Re-baseline and re-enable security web tests after crrev.com/c/8045801","date":"$D2026-07-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8140384","labels":["devtools","testing"],"status":"merged","excerpt":"SAN Lit 전환을 반영하기 위해 테스트 기대값을 임시 조정한 CL 8096246의\n후속 작업입니다. 보안 웹 테스트 2개의 기대 결과를 갱신하고, 성공과 실패를\n모두 허용하던 임시 설정을 제거했습니다.","content":"$3a"},{"slug":"8096246","title":"Disable layout tests to land crrev.com/c/8045801","date":"$D2026-07-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8096246","labels":["devtools","testing"],"status":"merged","excerpt":"SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가\n일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.\nDevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을\n제거하는 작업을 후속 CL로 진행했습니다.","content":"$3b"},{"slug":"8045801","title":"[security] Render the SAN with Lit","date":"$D2026-07-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8045801","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에\naccessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로\n유지했습니다.","content":"$3c"},{"slug":"8042189","title":"Re-baseline and re-enable DevTools security layout tests after crrev.com/c/7969697","date":"$D2026-07-05T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042189","labels":["devtools","testing"],"status":"merged","excerpt":"Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.","content":"$3d"},{"slug":"8042283","title":"base: Test no event for directory touch on Apple","date":"$D2026-07-04T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042283","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도\n이벤트가 발생하지 않는지 검증했습니다.","content":"$3e"},{"slug":"8038580","title":"Disable layout tests to land crrev.com/c/7969697","date":"$D2026-07-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8038580","labels":["devtools","testing"],"status":"merged","excerpt":"Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.","content":"$3f"},{"slug":"8030244","title":"base: Test no event when non-existent watched file's parent is created","date":"$D2026-07-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8030244","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 부모 디렉터리를 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$40"},{"slug":"8031240","title":"base: Test no event when creating directory chain","date":"$D2026-07-01T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8031240","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$41"},{"slug":"8015022","title":"base: Test no event for directory attribute changes on Apple","date":"$D2026-06-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8015022","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야\n하는 경우를 검증하도록 테스트를 보완했습니다.","content":"$42"},{"slug":"7969697","title":"[security] Render the origin display with Lit","date":"$D2026-06-19T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7969697","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.","content":"$43"},{"slug":"7906916","title":"base: Test no event when creating parent dir","date":"$D2026-06-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7906916","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면\n`FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.","content":"$44"},{"slug":"7895660","title":"base: Test file modification in WatchDirectory on Apple","date":"$D2026-06-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7895660","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.","content":"$45"},{"slug":"7893345","title":"Replace deprecated VS Code protobuf extension","date":"$D2026-06-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7893345","labels":["docs","fix"],"status":"merged","excerpt":"VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.","content":"$46"},{"slug":"7887496","title":"docs: Fix Web Tests link in Linux Web tests guide","date":"$D2026-05-30T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7887496","labels":["docs","fix"],"status":"merged","excerpt":"Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.","content":"$47"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8483194","title":"[DevTools] Remove mixed-content-active-and-passive-reload test after crrev.com/c/8467003","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483194","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8467003에서 unit test로 옮긴 기존 `mixed-content-active-and-passive-reload` 웹 테스트를 제거했습니다.","content":"$1b"},{"slug":"8483671","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8451582","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483671","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 1개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$1c"},{"slug":"8468010","title":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode","date":"$D2026-09-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8468010","labels":["blink","html"],"status":"merged","excerpt":"HTML 스펙에 따르면 `in head noscript` insertion mode에서는 `head`와 `noscript`\n시작 태그를 무시해야 합니다. 기존에는 이 모드에서 `head` 시작 태그를 만나면 잘못해서\n`in head` 모드로 전환했습니다. `head` 시작 태그를 무시","content":"$1d"},{"slug":"8467003","title":"Migrate devtools/security/mixed-content-active-and-passive-reload.js to a unit test","date":"$D2026-09-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8467003","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `mixed-content-active-and-passive-reload.js`를 DevTools unit test로 옮겼습니다.\nrequest가 기록되면 active·passive mixed content의 reload 안내가 Network panel 링크로\n바뀌는","content":"$1e"},{"slug":"8457503","title":"[DevTools] Remove blocked-mixed-content test after crrev.com/c/8457645","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457503","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8457645에서 unit test로 옮긴 기존 `blocked-mixed-content` 웹 테스트를 제거했습니다.","content":"$1f"},{"slug":"8457645","title":"Migrate devtools/security/blocked-mixed-content.js to a unit test","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457645","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `blocked-mixed-content.js`를 DevTools unit test로 옮겼습니다.\n차단된 mixed content의 설명과 request 링크가 Security panel에 표시되는지 검증합니다.","content":"$20"},{"slug":"8458524","title":"[DevTools] Disable layout tests to land crrev.com/c/8451582","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8458524","labels":["devtools","testing"],"status":"merged","excerpt":"`note section`의 변경을 반영하기 위해 보안 웹 테스트 1개의 기대값을 임시 조정했습니다.","content":"$21"},{"slug":"8460722","title":"[DevTools] Remove failed-request test after crrev.com/c/8449733","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8460722","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8449733에서 unit test로 옮긴 기존 `failed-request` 웹 테스트를 제거했습니다.","content":"$22"},{"slug":"8449733","title":"Migrate devtools/security/failed-request.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449733","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `failed-request.js`를 DevTools unit test로 옮겼습니다.\n실패한 request의 origin이 Security sidebar에 올바르게 표시되는지 검증합니다.","content":"$23"},{"slug":"8449930","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8426420","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449930","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$24"},{"slug":"8450050","title":"Migrate devtools/security/blank-origin-not-shown.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450050","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 blank origin 웹 테스트를 DevTools의 unit test로 옮겼습니다.\nSecurity sidebar에 blank origin이 표시되지 않는지 검증합니다.","content":"$25"},{"slug":"8450591","title":"[DevTools] Remove blank-origins-not-shown test after crrev.com/c/8450050","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450591","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8450050에서 unit test로 옮긴 기존 `blank-origins-not-shown` 웹 테스트를 제거했습니다.","content":"$26"},{"slug":"8451582","title":"[security] Migrate SecurityOriginView note section to Lit","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8451582","labels":["devtools","refactor"],"status":"merged","excerpt":"`SecurityOriginView`의 `note section`을 Lit으로 전환하고, 표시 조건과 캐시 안내\n테스트를 추가했습니다. `Certificate Transparency section`(CT section)이 표시되지\n않을 때 일반 안내 문구도 누락되던 문제를 함께 수정했","content":"$27"},{"slug":"8425664","title":"[DevTools] Disable layout tests to land crrev.com/c/8426420","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425664","labels":["devtools","testing"],"status":"merged","excerpt":"`Certificate Transparency section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$28"},{"slug":"8425980","title":"[css-pseudo] Support 'quotes' property in ::marker","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425980","labels":["blink","css"],"status":"merged","excerpt":"CSSWG 결정에 따라 `::marker`에서 `quotes` 속성을 지원하도록 했습니다.","content":"$29"},{"slug":"8426420","title":"[security] Migrate SecurityOriginView certificate transparency section to Lit","date":"$D2026-09-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8426420","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `Certificate Transparency section`을 Lit으로 전환했습니다. CT compliance 안내\n문구, Signed Certificate Timestamp(SCT) 표시, 상세 보기 전환 테스트를 추가했습니다.","content":"$2a"},{"slug":"8409931","title":"[Blink] Fix hyphen orientation in vertical text","date":"$D2026-09-16T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8409931","labels":["blink","css"],"status":"merged","excerpt":"세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고\n똑바로 표시되는 문제를 수정했습니다.","content":"$2b"},{"slug":"8398154","title":"[DevTools] Disable layout tests to land crrev.com/c/8324787","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8398154","labels":["devtools","testing"],"status":"merged","excerpt":"`certificate section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$2c"},{"slug":"8398688","title":"[DevTools] Rebaseline and re-enable tests after CL 8324787, 8402060","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8398688","labels":["devtools","testing"],"status":"merged","excerpt":"`certificate section` Lit 전환(CL 8324787)과 DOM 출력의 주석 노드 제외(CL 8402060)를 반영해,\n보안 웹 테스트 9개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$2d"},{"slug":"8402060","title":"[test_runner] Skip comment nodes in deep HTML dumps","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8402060","labels":["devtools","testing"],"status":"merged","excerpt":"기존 웹 테스트의 기대 결과에 Lit 마커가 포함되지 않도록,\n`TestRunner.dumpDeepInnerHTML()`에서 주석 노드를 제외했습니다.","content":"$2e"},{"slug":"8406865","title":"[DevTools] Disable layout tests to land crrev.com/c/8402060","date":"$D2026-09-14T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8406865","labels":["devtools","testing"],"status":"merged","excerpt":"DOM 출력의 주석 노드 제외를 반영하기 위해 보안 웹 테스트 7개의 기대값을\n임시 조정했습니다.","content":"$2f"},{"slug":"8399066","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8289248","date":"$D2026-09-11T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8399066","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 4개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$30"},{"slug":"8324787","title":"[security] Migrate SecurityOriginView certificate section to Lit","date":"$D2026-08-31T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8324787","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `certificate section`을 Lit으로 전환했습니다. certificate details 표시와\ncertificate viewer를 여는 동작의 테스트를 추가했습니다.","content":"$31"},{"slug":"8311028","title":"[Blink] Fix capitalization after supplementary characters","date":"$D2026-08-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311028","labels":["blink","css"],"status":"merged","excerpt":"Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의\n단어 경계를 올바르게 판단하도록 수정했습니다.","content":"$32"},{"slug":"8311089","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8303474","date":"$D2026-08-28T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311089","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$33"},{"slug":"8302454","title":"[DevTools] Disable layout tests to land crrev.com/c/8303474","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8302454","labels":["devtools","testing"],"status":"merged","excerpt":"`connection section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$34"},{"slug":"8303474","title":"[security] Migrate SecurityOriginView connection section to Lit","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8303474","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `connection section`을 Lit으로 전환했습니다. `protocol`, `key exchange`,\n`server signature`, `cipher`, Encrypted ClientHello 표시 테스트를 추가하고,\n`security","content":"$35"},{"slug":"8297118","title":"[DevTools] Disable layout tests to land crrev.com/c/8289248","date":"$D2026-08-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8297118","labels":["devtools","testing"],"status":"merged","excerpt":"`title section`의 Lit 전환을 위해 보안 웹 테스트 4개의 기대값을 임시 조정했습니다.","content":"$36"},{"slug":"8289248","title":"[security] Migrate SecurityOriginView title section to Lit","date":"$D2026-08-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8289248","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `title section`을 Lit으로 전환했습니다. 렌더링, `security state` 갱신,\nNetwork panel에서 해당 Origin의 요청을 표시하는 동작의 테스트를 추가했습니다.","content":"$37"},{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$38"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$39"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$3a"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$3b"},{"slug":"8140384","title":"[DevTools] Re-baseline and re-enable security web tests after crrev.com/c/8045801","date":"$D2026-07-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8140384","labels":["devtools","testing"],"status":"merged","excerpt":"SAN Lit 전환을 반영하기 위해 테스트 기대값을 임시 조정한 CL 8096246의\n후속 작업입니다. 보안 웹 테스트 2개의 기대 결과를 갱신하고, 성공과 실패를\n모두 허용하던 임시 설정을 제거했습니다.","content":"$3c"},{"slug":"8096246","title":"Disable layout tests to land crrev.com/c/8045801","date":"$D2026-07-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8096246","labels":["devtools","testing"],"status":"merged","excerpt":"SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가\n일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.\nDevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을\n제거하는 작업을 후속 CL로 진행했습니다.","content":"$3d"},{"slug":"8045801","title":"[security] Render the SAN with Lit","date":"$D2026-07-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8045801","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에\naccessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로\n유지했습니다.","content":"$3e"},{"slug":"8042189","title":"Re-baseline and re-enable DevTools security layout tests after crrev.com/c/7969697","date":"$D2026-07-05T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042189","labels":["devtools","testing"],"status":"merged","excerpt":"Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.","content":"$3f"},{"slug":"8042283","title":"base: Test no event for directory touch on Apple","date":"$D2026-07-04T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042283","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도\n이벤트가 발생하지 않는지 검증했습니다.","content":"$40"},{"slug":"8038580","title":"Disable layout tests to land crrev.com/c/7969697","date":"$D2026-07-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8038580","labels":["devtools","testing"],"status":"merged","excerpt":"Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.","content":"$41"},{"slug":"8030244","title":"base: Test no event when non-existent watched file's parent is created","date":"$D2026-07-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8030244","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 부모 디렉터리를 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$42"},{"slug":"8031240","title":"base: Test no event when creating directory chain","date":"$D2026-07-01T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8031240","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$43"},{"slug":"8015022","title":"base: Test no event for directory attribute changes on Apple","date":"$D2026-06-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8015022","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야\n하는 경우를 검증하도록 테스트를 보완했습니다.","content":"$44"},{"slug":"7969697","title":"[security] Render the origin display with Lit","date":"$D2026-06-19T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7969697","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.","content":"$45"},{"slug":"7906916","title":"base: Test no event when creating parent dir","date":"$D2026-06-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7906916","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면\n`FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.","content":"$46"},{"slug":"7895660","title":"base: Test file modification in WatchDirectory on Apple","date":"$D2026-06-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7895660","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.","content":"$47"},{"slug":"7893345","title":"Replace deprecated VS Code protobuf extension","date":"$D2026-06-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7893345","labels":["docs","fix"],"status":"merged","excerpt":"VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.","content":"$48"},{"slug":"7887496","title":"docs: Fix Web Tests link in Linux Web tests guide","date":"$D2026-05-30T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7887496","labels":["docs","fix"],"status":"merged","excerpt":"Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.","content":"$49"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-48:I[80622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L48","4",{}]],"error":null,"digest":"$undefined"}
+4a:I[80622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L4a","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
