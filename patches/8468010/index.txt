@@ -1,0 +1,102 @@
+1:"$Sreact.fragment"
+2:I[52619,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","6365","static/chunks/app/patches/%5Bslug%5D/page-d45f2eff20eb376f.js"],""]
+3:I[81356,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","6365","static/chunks/app/patches/%5Bslug%5D/page-d45f2eff20eb376f.js"],"Image"]
+4:I[49196,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","7177","static/chunks/app/layout-6bcb8c5142ab06c3.js"],"default"]
+c:I[57150,[],""]
+:HL["/contributions/_next/static/media/1e41be92c43b3255-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/contributions/_next/static/css/3b65cb70c8c7febe.css","style"]
+:HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
+0:{"P":null,"b":"mJNrm0sY87dz7dq-JCYG9","p":"/contributions","c":["","patches","8468010",""],"i":false,"f":[[["",{"children":["patches",{"children":[["slug","8468010","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["patches","$L8",{"children":[["slug","8468010","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+d:I[9766,[],""]
+e:I[98924,[],""]
+f:I[43195,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","7177","static/chunks/app/layout-6bcb8c5142ab06c3.js"],"default"]
+11:I[24431,[],"OutletBoundary"]
+13:I[15278,[],"AsyncMetadataOutlet"]
+15:I[24431,[],"ViewportBoundary"]
+17:I[24431,[],"MetadataBoundary"]
+18:"$Sreact.suspense"
+5:["$","main",null,{"className":"container mx-auto px-4 py-8 flex-grow","children":["$","$Ld",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center py-20","children":[["$","h1",null,{"className":"font-display brand-gradient-text text-6xl font-bold tracking-tight mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl mb-6 text-on-surface","children":"페이지를 찾을 수 없습니다"}],["$","p",null,{"className":"mb-8 text-on-surface-variant","children":"요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다."}],["$","$L2",null,{"href":"/","className":"rounded-full bg-primary px-6 py-3 font-medium text-on-primary transition-opacity hover:opacity-90","children":"홈으로 돌아가기"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]
+6:["$","footer",null,{"className":"border-t border-outline/60 mt-12","children":[["$","div",null,{"className":"chromium-strip","aria-hidden":"true"}],["$","div",null,{"className":"container mx-auto px-4 pt-8 pb-6","children":["$","div",null,{"className":"flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-on-surface-variant","children":[["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-4","children":[["$","$L2","/docs",{"href":"/docs","className":"transition-colors hover:text-primary","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"transition-colors hover:text-primary","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"transition-colors hover:text-primary","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"transition-colors hover:text-primary","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"transition-colors hover:text-primary","children":"Schedule"}]]}],["$","div",null,{"className":"flex items-center gap-2","children":[["$","p",null,{"children":["© ","2025-2026"," OSSCA Chromium. All rights reserved."]}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"text-on-surface-variant hover:text-primary transition-colors","aria-label":"GitHub 저장소","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"20","height":"20","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}]}]]}]]}]}]]}]
+7:["$","$Lf",null,{}]
+8:["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L11",null,{"children":["$L12",["$","$L13",null,{"promise":"$@14"}]]}]]}]
+b:["$","$1","h",{"children":[null,[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L17",null,{"children":["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":"$L19"}]}]}]]}]
+1a:T18a6,<p>HTML 스펙에 따르면 <code>in head noscript</code> insertion mode에서는 <code>head</code>와 <code>noscript</code><br />시작 태그를 무시해야 합니다. 기존에는 이 모드에서 <code>head</code> 시작 태그를 만나면 잘못해서<br /><code>in head</code> 모드로 전환했습니다. <code>head</code> 시작 태그를 무시하도록 수정했습니다.</p>
+<p>변경은 기본 활성화된 runtime flag로 제어하며, 필요하면 flag를 비활성화해<br />기존 동작으로 되돌릴 수 있습니다.</p>
+<h2 id="문제-설명">문제 설명</h2><p>scripting이 비활성화된 상태에서 <code>&lt;head&gt;&lt;noscript&gt;&lt;head&gt;&lt;style&gt;&lt;/style&gt;</code>을 파싱하면,<br />중첩된 <code>&lt;head&gt;</code> 때문에 <code>in head noscript</code> 모드를 벗어나 이후 <code>&lt;style&gt;</code>이<br /><code>&lt;noscript&gt;</code>의 자식으로 생성되지 않았습니다. 이로 인해<br /><code>inhead-noscript-head.html</code> WPT가 실패했습니다.</p>
+<h2 id="해결-내용">해결 내용</h2><ul>
+<li><code>HTMLTreeBuilder::ProcessStartTag()</code>의 <code>kInHeadNoscriptMode</code> 처리에<br /><code>HTMLTag::kHead</code> 분기를 추가했습니다.</li>
+<li>해당 시작 태그를 parse error로 처리하고 반환해, insertion mode를 유지한 채<br />태그를 무시하도록 했습니다.</li>
+<li><code>HTMLParserIgnoreHeadInNoscript</code>를 <code>stable</code> 상태의 runtime flag로 추가했습니다.<br />flag가 꺼져 있으면 기존 처리 경로를 따릅니다.</li>
+<li>해당 WPT의 실패 기대 결과 파일을 제거했습니다.</li>
+</ul>
+<p>전체 코드 diff는 다음과 같습니다.</p>
+<pre><code class="hljs language-diff"><span class="hljs-comment">diff --git a/third_party/blink/renderer/core/html/parser/html_tree_builder.cc b/third_party/blink/renderer/core/html/parser/html_tree_builder.cc</span>
+<span class="hljs-comment">index 9ef1fd9..e7c4768 100644</span>
+<span class="hljs-comment">--- a/third_party/blink/renderer/core/html/parser/html_tree_builder.cc</span>
+<span class="hljs-comment">+++ b/third_party/blink/renderer/core/html/parser/html_tree_builder.cc</span>
+<span class="hljs-meta">@@ -1628,6 +1628,12 @@</span>
+           DCHECK(did_process);
+           return;
+         }
+<span class="hljs-addition">+        case HTMLTag::kHead:</span>
+<span class="hljs-addition">+          if (!RuntimeEnabledFeatures::</span>
+<span class="hljs-addition">+                  HTMLParserIgnoreHeadInNoscriptEnabled()) {</span>
+<span class="hljs-addition">+            break;</span>
+<span class="hljs-addition">+          }</span>
+<span class="hljs-addition">+          [[fallthrough]];</span>
+         case HTMLTag::kNoscript:
+           ParseError(token);
+           return;
+<span class="hljs-comment">diff --git a/third_party/blink/renderer/platform/runtime_enabled_features.json5 b/third_party/blink/renderer/platform/runtime_enabled_features.json5</span>
+<span class="hljs-comment">index aadf02124..4a2c1de 100644</span>
+<span class="hljs-comment">--- a/third_party/blink/renderer/platform/runtime_enabled_features.json5</span>
+<span class="hljs-comment">+++ b/third_party/blink/renderer/platform/runtime_enabled_features.json5</span>
+<span class="hljs-meta">@@ -3654,6 +3654,12 @@</span>
+       status: "stable",
+     },
+     {
+<span class="hljs-addition">+      // Kill switch for ignoring head start tags in the "in head noscript"</span>
+<span class="hljs-addition">+      // insertion mode. https://crbug.com/40775952</span>
+<span class="hljs-addition">+      name: "HTMLParserIgnoreHeadInNoscript",</span>
+<span class="hljs-addition">+      status: "stable",</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    {</span>
+       // Killswitch for crbug.com/40727112: emit a bogus comment for an
+       // incomplete markup declaration at end of input instead of dropping the
+       // rest of the document.
+<span class="hljs-comment">diff --git a/third_party/blink/web_tests/external/wpt/html/syntax/parsing/inhead-noscript-head-expected.txt b/third_party/blink/web_tests/external/wpt/html/syntax/parsing/inhead-noscript-head-expected.txt</span>
+deleted file mode 100644
+<span class="hljs-comment">index 9b05679a..0000000</span>
+<span class="hljs-comment">--- a/third_party/blink/web_tests/external/wpt/html/syntax/parsing/inhead-noscript-head-expected.txt</span>
+<span class="hljs-comment">+++ /dev/null</span>
+<span class="hljs-meta">@@ -1,5 +0,0 @@</span>
+<span class="hljs-deletion">-This is a testharness.js-based test.</span>
+<span class="hljs-deletion">-[FAIL] When the scripting flag is disabled, a head start tag in "in head noscript" mode should be ignored</span>
+<span class="hljs-deletion">-  assert_equals: expected "[object HTMLStyleElement]" but got "null"</span>
+<span class="hljs-deletion">-Harness: the test ran to completion.</span>
+<span class="hljs-deletion">-</span></code></pre><h2 id="테스트-방법">테스트 방법</h2><p>CL에 기록한 검증 대상은 다음 WPT입니다.</p>
+<ul>
+<li><code>external/wpt/html/syntax/parsing/inhead-noscript-head.html</code></li>
+</ul>
+<p>이 테스트는 scripting이 비활성화된 iframe에서 중첩된 <code>&lt;head&gt;</code>를 파싱한 뒤,<br /><code>&lt;noscript&gt;</code>의 첫 자식이 <code>HTMLStyleElement</code>인지 확인합니다.</p>
+<p>CQ를 통해 2026년 10월 1일(한국 시간) Chromium main에 병합되었습니다.</p>
+<h2 id="배운-점">배운 점</h2><ul>
+<li>HTML parser는 잘못된 태그를 만났을 때도 스펙에 정해진 오류 처리와 insertion mode를<br />따라야 이후 DOM을 올바르게 구성할 수 있습니다.</li>
+<li>기본 활성화된 runtime flag를 두면, 문제가 발견됐을 때 flag를 비활성화해<br />기존 파싱 동작으로 되돌릴 수 있습니다.</li>
+</ul>
+<h2 id="참고-자료">참고 자료</h2><ul>
+<li><a href="https://github.com/OSSCA-chromium/contributions/issues/555">작업 이슈 #555</a></li>
+<li><a href="https://crrev.com/c/8468010">Gerrit CL 8468010</a></li>
+<li><a href="https://crbug.com/40775952">Chromium Issue 40775952</a></li>
+<li><a href="https://html.spec.whatwg.org/#parsing-main-inheadnoscript">HTML parsing 규칙: in head noscript</a></li>
+</ul>
+10:["$","article",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"mb-4","children":[["$","h1",null,{"className":"font-display text-4xl font-semibold tracking-tight mb-2 text-on-surface","children":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode"}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-2","children":[["$","span",null,{"className":"px-2 py-1 text-xs rounded-full font-medium whitespace-nowrap shrink-0 bg-success text-white dark:text-black","children":"MERGED"}],["$","span",null,{"className":"rounded-full bg-surface-variant px-2 py-0.5 text-xs text-on-surface-variant","children":"2026"}],[["$","span","blink",{"className":"px-2 py-1 bg-primary-container text-primary text-xs rounded-full","children":"blink"}],["$","span","html",{"className":"px-2 py-1 bg-primary-container text-primary text-xs rounded-full","children":"html"}]]]}],["$","div",null,{"className":"flex items-center text-on-surface-variant mb-4","children":[["$","span",null,{"className":"mr-2","children":"2026. 9. 26."}],["$","span",null,{"className":"flex items-center","children":["$","$L2",null,{"href":"/contributors/parkhojeong","className":"flex items-center hover:text-primary","children":[["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=48","alt":"parkhojeong 프로필 이미지","width":24,"height":24,"className":"rounded-full"}],["$","span",null,{"className":"ml-2","children":"parkhojeong"}]]}]}]]}]]}],["$","div",null,{"className":"mb-4","children":["$","a",null,{"href":"https://crrev.com/c/8468010","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center text-link hover:underline","children":["https://crrev.com/c/8468010",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4 ml-1","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"}]}]]}]}],["$","main",null,{"id":"patch-content-8468010","className":"prose dark:prose-invert max-w-none","dangerouslySetInnerHTML":{"__html":"$1a"}}],false,"$L1b"]}]
+1b:["$","div",null,{"className":"border-t border-outline pt-6 mt-8","children":["$","$L2",null,{"href":"/patches","className":"inline-flex items-center text-link hover:underline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4 mr-1","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 19l-7-7m0 0l7-7m-7 7h18"}]}],"모든 컨트리뷰션 보기"]}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+12:null
+1c:I[80622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"HTML 스펙에 따르면 `in head noscript` insertion mode에서는 `head`와 `noscript`\n시작 태그를 무시해야 합니다. 기존에는 이 모드에서 `head` 시작 태그를 만나면 잘못해서\n`in head` 모드로 전환했습니다. `head` 시작 태그를 무시"}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L1c","4",{}]],"error":null,"digest":"$undefined"}
+19:"$14:metadata"
