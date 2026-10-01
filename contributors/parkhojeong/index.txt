@@ -7,7 +7,7 @@ c:I[57150,[],""]
 :HL["/contributions/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/contributions/_next/static/css/3b65cb70c8c7febe.css","style"]
 :HL["/contributions/_next/static/css/7f6bd37aab40623f.css","style"]
-0:{"P":null,"b":"6S4N9oapLxc5dOS_Fjn36","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
+0:{"P":null,"b":"MKJDZ8NjaZR0bTAlBBw9y","p":"/contributions","c":["","contributors","parkhojeong",""],"i":false,"f":[[["",{"children":["contributors",{"children":[["username","parkhojeong","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/contributions/_next/static/css/3b65cb70c8c7febe.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();"}}]}],["$","body",null,{"className":"__className_dc557a __variable_4936b8 bg-background text-on-surface min-h-screen flex flex-col","children":[["$","header",null,{"className":"bg-background/80 backdrop-blur-md border-b border-outline/60 py-3 sticky top-0 z-20","children":["$","div",null,{"className":"container mx-auto px-4 lg:px-6","children":["$","nav",null,{"className":"flex flex-col sm:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"font-display text-xl font-semibold tracking-tight mb-3 sm:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/contributions/_next/static/media/logo.7799f1a0.png","height":256,"width":256,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAMFBMVEX+0376oiT64Kr+3JNMaXH93Jj7v1T914/90Xn/skH43aL/9sr86b3/66f/5Jb8xWLQI6CgAAAACnRSTlOyL/7xAPn7+ust2EYa1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUCJkVyEkSACEIALFmURRQ///bqckx+GYMtiPrRtwlcOab84CVpmoZ1pmZbVD5D4hVd5ngQgTiHzngAYrcc7kQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-1 sm:gap-2","children":[[["$","$L2","/docs",{"href":"/docs","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Guide"}],["$","$L2","/patches",{"href":"/patches","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributions"}],["$","$L2","/contributors",{"href":"/contributors","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Contributors"}],["$","$L2","/stats",{"href":"/stats","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Stats"}],["$","$L2","/schedule",{"href":"/schedule","className":"rounded-full px-4 py-2 font-medium text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-on-surface","children":"Schedule"}]],["$","$L4",null,{}],["$","a",null,{"href":"https://github.com/OSSCA-chromium/contributions","target":"_blank","rel":"noopener noreferrer","className":"ml-1 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-medium text-on-primary transition-opacity hover:opacity-90","aria-label":"GitHub 저장소","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"18","height":"18","viewBox":"0 0 24 24","fill":"currentColor","children":["$","path",null,{"d":"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"}]}],"GitHub"]}]]}]]}]}]}],"$L5","$L6","$L7"]}]]}]]}],{"children":["contributors","$L8",{"children":[["username","parkhojeong","d"],"$L9",{"children":["__PAGE__","$La",{},null,false]},null,false]},null,false]},null,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"s":false,"S":true}
 d:I[9766,[],""]
 e:I[98924,[],""]
 f:I[43195,["2619","static/chunks/2619-04bc32f026a0d946.js","1356","static/chunks/1356-a67303a4b8f6eda2.js","7177","static/chunks/app/layout-6bcb8c5142ab06c3.js"],"default"]
@@ -3094,7 +3094,298 @@ Gerrit에 기록된 CQ 실행 통과 결과와 최종 병합 상태를 확인했
 - [Gerrit CL 8297118](https://crrev.com/c/8297118)
 - [`title section` Lit 전환 CL 8289248](https://crrev.com/c/8289248)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8399066](https://crrev.com/c/8399066)
-31:Te8e,
+31:T340d,
+SecurityOriginView의 `title section`을 Lit으로 전환했습니다. 렌더링, `security state` 갱신,
+Network panel에서 해당 Origin의 요청을 표시하는 동작의 테스트를 추가했습니다.
+
+## 문제 설명
+
+`SecurityOriginView`의 `title section`에서는 Origin 아이콘과 URL만 Lit으로
+렌더링하고, 제목과 Network panel 버튼은 DOM 생성·수정 코드로 구성하고
+있었습니다. 이 영역 전체를 Lit 템플릿으로 전환하는 작업입니다.
+
+## 해결 내용
+
+- `renderTitleSection()`에서 제목, `security state` 아이콘, URL, Network panel 버튼을
+  함께 렌더링하도록 했습니다. 생성자와 `setSecurityState()`에서
+  `#renderTitleSection()`을 호출합니다.
+- 아이콘 이름을 반환하는 함수를 분리해 Lit 템플릿에서 사용하고, 기존 아이콘
+  요소 생성 함수도 이 함수를 사용하도록 했습니다.
+- Network panel 버튼을 Lit 템플릿에 선언하고, 클릭 처리를 `#revealInNetwork`로
+  옮겼습니다. Origin의 host와 scheme을 요청 필터로 전달하는 동작은 유지했습니다.
+- 제목의 `role="heading"`과 `aria-level="1"`을 유지했습니다. 리뷰 의견에 따라
+  버튼의 `role="link"` 지정과 이를 확인하던 테스트 assertion은 제거했습니다.
+- `title section`의 단위 테스트 3개와 테스트에 필요한 빌드 의존성을 추가했습니다.
+
+전체 코드 diff는 다음과 같습니다.
+
+```diff
+diff --git a/front_end/panels/security/BUILD.gn b/front_end/panels/security/BUILD.gn
+index 76d480e..a5e7ef9 100644
+--- a/front_end/panels/security/BUILD.gn
++++ b/front_end/panels/security/BUILD.gn
+@@ -78,9 +78,11 @@
+
+   ts_deps = [
+     ":bundle",
++    "../../core/common:bundle",
+     "../../core/platform:bundle",
+     "../../core/sdk:bundle",
+     "../../generated",
++    "../../panels/network/forward:bundle",
+     "../../testing",
+   ]
+ }
+diff --git a/front_end/panels/security/SecurityPanel.test.ts b/front_end/panels/security/SecurityPanel.test.ts
+index cb5690d..e654871 100644
+--- a/front_end/panels/security/SecurityPanel.test.ts
++++ b/front_end/panels/security/SecurityPanel.test.ts
+@@ -5,6 +5,7 @@
+ import {assert} from 'chai';
+ import sinon from 'sinon';
+
++import * as Common from '../../core/common/common.js';
+ import * as Platform from '../../core/platform/platform.js';
+ import * as SDK from '../../core/sdk/sdk.js';
+ import * as Protocol from '../../generated/protocol.js';
+@@ -12,6 +13,7 @@
+ import {createTarget, describeWithEnvironment} from '../../testing/EnvironmentHelpers.js';
+ import {createNetworkRequest} from '../../testing/NetworkRequestHelpers.js';
+ import {getMainFrame, navigate} from '../../testing/ResourceTreeHelpers.js';
++import * as NetworkForward from '../network/forward/forward.js';
+
+ import * as Security from './security.js';
+
+@@ -191,6 +193,77 @@
+     });
+   });
+
++  describe('title section', () => {
++    it('renders the title, origin, and Network panel button', () => {
++      const origin = urlString`https://foo.bar`;
++      const view = new Security.SecurityPanel.SecurityOriginView(origin, createOriginState());
++
++      assert.isTrue(view.element.classList.contains('security-origin-view'));
++
++      const titleSection = view.element.querySelector('.title-section');
++      assert.instanceOf(titleSection, HTMLElement);
++
++      const title = titleSection.querySelector('.title-section-header');
++      assert.instanceOf(title, HTMLElement);
++      assert.strictEqual(title.textContent, 'Origin');
++      assert.strictEqual(title.getAttribute('role'), 'heading');
++      assert.strictEqual(title.getAttribute('aria-level'), '1');
++
++      const originDisplay = titleSection.querySelector('.origin-display');
++      assert.instanceOf(originDisplay, HTMLElement);
++      assert.strictEqual(originDisplay.textContent, origin);
++
++      const networkButton = titleSection.querySelector('.view-network-button devtools-button');
++      assert.instanceOf(networkButton, HTMLElement);
++      assert.strictEqual(networkButton.textContent, 'View requests in Network panel');
++    });
++
++    it('updates the origin display when the security state changes', () => {
++      const view = new Security.SecurityPanel.SecurityOriginView(urlString`https://foo.bar`, createOriginState());
++
++      const initialOriginDisplay = view.element.querySelector('.origin-display');
++      assert.instanceOf(initialOriginDisplay, HTMLElement);
++
++      const initialIcon = initialOriginDisplay.querySelector('devtools-icon');
++      assert.instanceOf(initialIcon, HTMLElement);
++      assert.strictEqual(initialIcon.getAttribute('name'), 'lock');
++      assert.isTrue(initialIcon.classList.contains('security-property-secure'));
++
++      assert.exists(initialOriginDisplay.querySelector('.url-scheme-secure'));
++
++      view.setSecurityState(Protocol.Security.SecurityState.Insecure);
++
++      const updatedOriginDisplay = view.element.querySelector('.origin-display');
++      assert.instanceOf(updatedOriginDisplay, HTMLElement);
++
++      const updatedIcon = updatedOriginDisplay.querySelector('devtools-icon');
++      assert.instanceOf(updatedIcon, HTMLElement);
++      assert.strictEqual(updatedIcon.getAttribute('name'), 'warning');
++      assert.isTrue(updatedIcon.classList.contains('security-property-insecure'));
++      assert.isFalse(updatedIcon.classList.contains('security-property-secure'));
++
++      assert.exists(updatedOriginDisplay.querySelector('.url-scheme-insecure'));
++      assert.notExists(updatedOriginDisplay.querySelector('.url-scheme-secure'));
++    });
++
++    it('reveals requests in the Network panel', () => {
++      const revealStub = sinon.stub(Common.Revealer.RevealerRegistry.instance(), 'reveal').resolves();
++      const view = new Security.SecurityPanel.SecurityOriginView(urlString`https://foo.bar`, createOriginState());
++
++      const networkButton = view.element.querySelector('.view-network-button devtools-button');
++      assert.instanceOf(networkButton, HTMLElement);
++      networkButton.click();
++
++      sinon.assert.calledOnce(revealStub);
++      const [requestFilter] = revealStub.firstCall.args;
++      assert.instanceOf(requestFilter, NetworkForward.UIFilter.UIRequestFilter);
++      assert.deepEqual(requestFilter.filters, [
++        {filterType: NetworkForward.UIFilter.FilterType.Domain, filterValue: 'foo.bar'},
++        {filterType: NetworkForward.UIFilter.FilterType.Scheme, filterValue: 'https'},
++      ]);
++    });
++  });
++
+   it('renders an empty SAN', () => {
+     const view = new Security.SecurityPanel.SecurityOriginView(urlString`https://foo.bar`, createOriginState());
+
+diff --git a/front_end/panels/security/SecurityPanel.ts b/front_end/panels/security/SecurityPanel.ts
+index b6292dd..0ed93e9 100644
+--- a/front_end/panels/security/SecurityPanel.ts
++++ b/front_end/panels/security/SecurityPanel.ts
+@@ -459,8 +459,7 @@
+ const WARNING_ICON_NAME = 'warning';
+ const UNKNOWN_ICON_NAME = 'indeterminate-question-box';
+
+-export function getSecurityStateIconForDetailedView(
+-    securityState: Protocol.Security.SecurityState, className: string): Icon {
++function getSecurityStateIconNameForDetailedView(securityState: Protocol.Security.SecurityState): string {
+   let iconName: string;
+
+   switch (securityState) {
+@@ -478,7 +477,12 @@
+       break;
+   }
+
+-  return createIcon(iconName, className);
++  return iconName;
++}
++
++export function getSecurityStateIconForDetailedView(securityState: Protocol.Security.SecurityState,
++                                                    className: string): Icon {
++  return createIcon(getSecurityStateIconNameForDetailedView(securityState), className);
+ }
+
+ export function getSecurityStateIconForOverview(
+@@ -1426,9 +1430,30 @@
+   // clang-format on
+ }
+
++function renderTitleSection(origin: Platform.DevToolsPath.UrlString, securityState: Protocol.Security.SecurityState,
++                            onRevealInNetwork: (event: Event) => void): TemplateResult {
++  // clang-format off
++  return html`
++    <div class="title-section-header" role="heading" aria-level="1">${i18nString(UIStrings.origin)}</div>
++    <div class="origin-display">
++      <devtools-icon
++          name=${getSecurityStateIconNameForDetailedView(securityState)}
++          class=${`security-property security-property-${securityState}`}>
++      </devtools-icon>
++      ${renderHighlightedUrl(origin, securityState)}
++    </div>
++    <div class="view-network-button">
++      <devtools-button
++          .variant=${Buttons.Button.Variant.OUTLINED}
++          .jslogContext=${'reveal-in-network'}
++          @click=${onRevealInNetwork}>${i18nString(UIStrings.viewRequestsInNetworkPanel)}</devtools-button>
++    </div>`;
++  // clang-format on
++}
++
+ export class SecurityOriginView extends UI.Widget.VBox {
+   readonly #origin: Platform.DevToolsPath.UrlString;
+-  readonly #originDisplay: HTMLElement;
++  readonly #titleSection: HTMLElement;
+
+   constructor(origin: Platform.DevToolsPath.UrlString, originState: OriginState) {
+     super({jslog: `${VisualLogging.pane('security.origin-view')}`});
+@@ -1438,25 +1463,8 @@
+
+     this.element.classList.add('security-origin-view');
+
+-    const titleSection = this.element.createChild('div', 'title-section');
+-    const titleDiv = titleSection.createChild('div', 'title-section-header');
+-    titleDiv.textContent = i18nString(UIStrings.origin);
+-    UI.ARIAUtils.markAsHeading(titleDiv, 1);
+-
+-    this.#originDisplay = titleSection.createChild('div', 'origin-display');
+-    this.#renderOriginDisplay(originState.securityState);
+-
+-    const originNetworkDiv = titleSection.createChild('div', 'view-network-button');
+-    const originNetworkButton = UI.UIUtils.createTextButton(i18nString(UIStrings.viewRequestsInNetworkPanel), event => {
+-      event.consume();
+-      const parsedURL = new Common.ParsedURL.ParsedURL(origin);
+-      void Common.Revealer.reveal(NetworkForward.UIFilter.UIRequestFilter.filters([
+-        {filterType: NetworkForward.UIFilter.FilterType.Domain, filterValue: parsedURL.host},
+-        {filterType: NetworkForward.UIFilter.FilterType.Scheme, filterValue: parsedURL.scheme},
+-      ]));
+-    }, {jslogContext: 'reveal-in-network'});
+-    originNetworkDiv.appendChild(originNetworkButton);
+-    UI.ARIAUtils.markAsLink(originNetworkButton);
++    this.#titleSection = this.element.createChild('div', 'title-section');
++    this.#renderTitleSection(originState.securityState);
+
+     if (originState.securityDetails) {
+       const connectionSection = this.element.createChild('div', 'origin-view-section connection-section');
+@@ -1612,21 +1620,22 @@
+   }
+
+   setSecurityState(newSecurityState: Protocol.Security.SecurityState): void {
+-    this.#renderOriginDisplay(newSecurityState);
++    this.#renderTitleSection(newSecurityState);
+   }
+
+-  #renderOriginDisplay(securityState: Protocol.Security.SecurityState): void {
+-    const icon =
+-        getSecurityStateIconForDetailedView(securityState, `security-property security-property-${securityState}`);
+-
+-    // clang-format off
++  #renderTitleSection(securityState: Protocol.Security.SecurityState): void {
+     // eslint-disable-next-line @devtools/no-lit-render-outside-of-view
+-    render(html`
+-      ${icon}
+-      ${renderHighlightedUrl(this.#origin, securityState)}
+-    `, this.#originDisplay);
+-    // clang-format on
++    render(renderTitleSection(this.#origin, securityState, this.#revealInNetwork), this.#titleSection);
+   }
++
++  #revealInNetwork = (event: Event): void => {
++    event.consume();
++    const parsedURL = new Common.ParsedURL.ParsedURL(this.#origin);
++    void Common.Revealer.reveal(NetworkForward.UIFilter.UIRequestFilter.filters([
++      {filterType: NetworkForward.UIFilter.FilterType.Domain, filterValue: parsedURL.host},
++      {filterType: NetworkForward.UIFilter.FilterType.Scheme, filterValue: parsedURL.scheme},
++    ]));
++  };
+ }
+
+ export class SecurityDetailsTable {
+```
+
+## 테스트 방법
+
+`SecurityPanel.test.ts`에 다음 세 단위 테스트를 추가했습니다.
+
+- 제목과 제목의 접근성 속성, Origin URL, Network panel 버튼 문구 확인
+- `security state`를 `Secure`에서 `Insecure`로 바꾸면 아이콘과 URL scheme의 클래스가
+  갱신되는지 확인
+- 버튼 클릭 시 Revealer가 한 번 호출되고, `foo.bar`와 `https`가 각각
+  Domain과 Scheme 필터로 전달되는지 확인
+
+리뷰 중 Chromium 보안 웹 테스트 4개의 실패가 보고되어, CL 8297118에서
+기대값을 임시 조정했습니다. 최종 patchset의 CQ 실행은 통과했으며,
+2026년 9월 10일(한국 시간) DevTools main에 병합되었습니다.
+
+## 배운 점
+
+- 일부만 Lit으로 전환된 영역을 확장할 때는 초기 렌더링뿐 아니라 상태 변경과
+  버튼 클릭 동작도 함께 검증해야 합니다.
+- 커스텀 버튼의 접근성 처리는 바깥 요소와 내부의 실제 버튼을 구분해서
+  확인해야 합니다. 이 CL에서는 리뷰를 통해 `role="link"` 지정을 제거했습니다.
+
+## 참고 자료
+
+- [작업 이슈 #336](https://github.com/OSSCA-chromium/contributions/issues/336)
+- [Gerrit CL 8289248](https://crrev.com/c/8289248)
+- [테스트 기대값 임시 조정 CL 8297118](https://crrev.com/c/8297118)
+- [기대 결과 갱신 및 임시 설정 제거 CL 8399066](https://crrev.com/c/8399066)
+32:Te8e,
 Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,
 링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을
 테스트로 명시했습니다.
@@ -3174,7 +3465,7 @@ Gerrit LUCI dry run과 제출 전 전체 CQ도 통과했으며, CL은 Chromium m
 - [Linux/ChromeOS inotify 구현](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_inotify.cc)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-32:Tc0f,
+33:Tc0f,
 Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도
 `FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.
 
@@ -3246,7 +3537,7 @@ Gerrit LUCI dry-run과 제출 전 전체 CQ가 통과했으며, CL은 Chromium m
 - [Windows FilePathWatcher 필터링 로직](https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_path_watcher_win.cc)
 - [Apple 관련 선행 CL 8042283](https://crrev.com/c/8042283)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
-33:T5a6,
+34:T5a6,
 `ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스
 오타를 수정했습니다.
 
@@ -3293,7 +3584,7 @@ Gitiles에서 변경된 링크가 정상적으로 열리는 것을 확인했습�
 - [헤더 이름 변경 CL 6938086](https://crrev.com/c/6938086)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-34:T65e,
+35:T65e,
 지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.
 
 ## 문제 설명
@@ -3338,7 +3629,229 @@ Gitiles에서 LaCrOS 항목이 제거된 것을 확인했습니다.
 - [LaCrOS 문서 삭제 CL 5892904](https://crrev.com/c/5892904)
 - [Chromium Bug 538651940](https://crbug.com/538651940)
 - [작업 이슈 #202](https://github.com/OSSCA-chromium/contributions/issues/202)
-35:Tc39,
+36:T2346,
+SAN Lit 전환을 반영하기 위해 테스트 기대값을 임시 조정한 CL 8096246의
+후속 작업입니다. 보안 웹 테스트 2개의 기대 결과를 갱신하고, 성공과 실패를
+모두 허용하던 임시 설정을 제거했습니다.
+
+## 문제 설명
+
+CL 8096246에서는 SAN Lit 전환을 위해 보안 웹 테스트 2개의 기대값을
+임시로 조정했습니다. DevTools 변경이 Chromium에 반영된 뒤에는 새 DOM 출력에
+맞게 기대 결과를 갱신하고, 정상적인 검증 기준으로 되돌려야 했습니다.
+
+## 해결 내용
+
+- `origin-view-ct-compliance-expected.txt`와
+  `security-details-updated-with-security-state-expected.txt`에 SAN 표시의
+  DOM 변경을 반영했습니다. Lit이 추가한 주석 노드, SAN 목록을 감싸는 요소와
+  클래스 속성 출력의 변경을 포함합니다.
+- `TestExpectations`에서 관련 `[ Failure Pass ]` 항목 2개와 주석을 제거했습니다.
+
+전체 코드 diff는 다음과 같습니다.
+
+```diff
+diff --git a/third_party/blink/web_tests/TestExpectations b/third_party/blink/web_tests/TestExpectations
+index 33ade5d..093b006a 100644
+--- a/third_party/blink/web_tests/TestExpectations
++++ b/third_party/blink/web_tests/TestExpectations
+@@ -68,10 +68,6 @@
+
+ crbug.com/457388389 http/tests/devtools/sources/debugger-pause/set-return-value.js [ Failure Pass Timeout ]
+
+-# Disable layout tests to land crrev.com/c/8045801
+-http/tests/devtools/security/origin-view-ct-compliance.js [ Failure Pass ]
+-http/tests/devtools/security/security-details-updated-with-security-state.js [ Failure Pass ]
+-
+ # Disabled to land https://crrev.com/c/8117529
+ crbug.com/407751377 http/tests/devtools/a11y-axe-core/settings/locations-a11y-test.js [ Failure Pass Timeout ]
+
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+index 75dcc68..9c33378 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/origin-view-ct-compliance-expected.txt
+@@ -121,12 +121,32 @@
+                 </TD>
+                 <TD >
+                     <DIV >
+-                        <SPAN class=san-entry >
++                        <#comment >
++                        </#comment>
++                        <DIV class= san  >
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ foo.test
+-                        </SPAN>
+-                        <SPAN class=san-entry >
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ *.test
+-                        </SPAN>
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                        </DIV>
+                     </DIV>
+                 </TD>
+             </TR>
+diff --git a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+index daaa8281..523a88a 100644
+--- a/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
++++ b/third_party/blink/web_tests/http/tests/devtools/security/security-details-updated-with-security-state-expected.txt
+@@ -285,12 +285,32 @@
+                 </TD>
+                 <TD >
+                     <DIV >
+-                        <SPAN class=san-entry >
++                        <#comment >
++                        </#comment>
++                        <DIV class= san  >
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ foo.test
+-                        </SPAN>
+-                        <SPAN class=san-entry >
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ *.test
+-                        </SPAN>
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                        </DIV>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -479,9 +499,23 @@
+                 </TD>
+                 <TD >
+                     <DIV >
+-                        <SPAN class=san-entry >
++                        <#comment >
++                        </#comment>
++                        <DIV class= san  >
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ ecdhe.foo.test
+-                        </SPAN>
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                        </DIV>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -670,9 +704,23 @@
+                 </TD>
+                 <TD >
+                     <DIV >
+-                        <SPAN class=san-entry >
++                        <#comment >
++                        </#comment>
++                        <DIV class= san  >
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ tls13.foo.test
+-                        </SPAN>
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                        </DIV>
+                     </DIV>
+                 </TD>
+             </TR>
+@@ -869,9 +917,23 @@
+                 </TD>
+                 <TD >
+                     <DIV >
+-                        <SPAN class=san-entry >
++                        <#comment >
++                        </#comment>
++                        <DIV class= san  >
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                            <SPAN class= san-entry  >
++                                <#comment >
++                                </#comment>
+ ech.foo.test
+-                        </SPAN>
++                            </SPAN>
++                            <#comment >
++                            </#comment>
++                            <#comment >
++                            </#comment>
++                        </DIV>
+                     </DIV>
+                 </TD>
+             </TR>
+```
+
+## 테스트 방법
+
+CL에 기록한 테스트는 다음과 같습니다.
+
+```bash
+third_party/blink/tools/run_web_tests.py http/tests/devtools/security/
+```
+
+2026년 7월 24일 Chromium main에 병합되었습니다.
+
+## 배운 점
+
+- DOM을 출력하는 테스트는 화면에 보이는 내용이 같아도 요소 구조나
+  Lit 주석 노드가 달라지면 기대 결과를 갱신해야 합니다.
+- 기대 결과 갱신과 함께 임시 설정을 제거해야 이후 예상 밖의 실패를
+  다시 검출할 수 있습니다.
+
+## 참고 자료
+
+- [작업 이슈 #186](https://github.com/OSSCA-chromium/contributions/issues/186)
+- [Gerrit CL 8140384](https://crrev.com/c/8140384)
+- [SAN Lit 전환 CL 8045801](https://crrev.com/c/8045801)
+- [테스트 기대값 임시 조정 CL 8096246](https://crrev.com/c/8096246)
+37:Tc39,
 SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가
 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.
 DevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을
@@ -3406,7 +3919,7 @@ third_party/blink/tools/run_web_tests.py http/tests/devtools/security/
 - [Gerrit CL 8096246](https://crrev.com/c/8096246)
 - [SAN Lit 전환 CL 8045801](https://crrev.com/c/8045801)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8140384](https://crrev.com/c/8140384)
-36:T3e8d,
+38:T3e8d,
 SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에
 accessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로
 유지했습니다.
@@ -3787,7 +4300,7 @@ CL 8140384에서 Chromium 쪽 기대 결과를 갱신했습니다.
 - [Gerrit CL 8045801](https://crrev.com/c/8045801)
 - [테스트 기대값 임시 조정 CL 8096246](https://crrev.com/c/8096246)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8140384](https://crrev.com/c/8140384)
-37:T6552,
+39:T6552,
 Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.
 
 ## 문제 설명
@@ -4673,7 +5186,7 @@ Chromium main에 병합되었습니다.
 - [Origin Lit 전환 CL 7969697](https://crrev.com/c/7969697)
 - [테스트 기대값 임시 조정 CL 8038580](https://crrev.com/c/8038580)
 - [UI 문구 변경 CL 8069249](https://crrev.com/c/8069249)
-38:Tb9d,
+3a:Tb9d,
 Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도
 이벤트가 발생하지 않는지 검증했습니다.
 
@@ -4745,7 +5258,7 @@ CQ를 거쳐 2026년 7월 8일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8042283](https://crrev.com/c/8042283)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-39:Td76,
+3b:Td76,
 Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.
 
 ## 문제 설명
@@ -4812,7 +5325,7 @@ CQ를 거쳐 2026년 7월 3일 Chromium main에 병합되었습니다.
 - [Gerrit CL 8038580](https://crrev.com/c/8038580)
 - [Origin Lit 전환 CL 7969697](https://crrev.com/c/7969697)
 - [기대 결과 갱신 및 임시 설정 제거 CL 8042189](https://crrev.com/c/8042189)
-3a:T96a,
+3c:T96a,
 존재하지 않는 감시 파일의 부모 디렉터리를 생성해도
 파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.
 
@@ -4871,7 +5384,7 @@ CQ를 거쳐 2026년 7월 7일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8030244](https://crrev.com/c/8030244)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-3b:T8ed,
+3d:T8ed,
 존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도
 파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.
 
@@ -4929,7 +5442,7 @@ CQ를 거쳐 2026년 7월 2일(한국 시간) Chromium main에 병합되었습�
 - [Gerrit CL 8031240](https://crrev.com/c/8031240)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-3c:Tab8,
+3e:Tab8,
 Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야
 하는 경우를 검증하도록 테스트를 보완했습니다.
 
@@ -4998,7 +5511,7 @@ CQ를 거쳐 2026년 6월 30일 Chromium main에 병합되었습니다.
 - [Gerrit CL 8015022](https://crrev.com/c/8015022)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-3d:T22a4,
+3f:T22a4,
 SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.
 
 ## 문제 설명
@@ -5206,7 +5719,7 @@ SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템
 - [Gerrit CL 7969697](https://crrev.com/c/7969697)
 - [테스트 기대값 임시 조정 CL 8038580](https://crrev.com/c/8038580)
 - [기대 결과 갱신 CL 8042189](https://crrev.com/c/8042189)
-3e:Tbd0,
+40:Tbd0,
 존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면
 `FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.
 
@@ -5267,7 +5780,7 @@ Gerrit에서 CQ dry run 통과와 최종 제출을 확인했으며,
 - [병합된 테스트 코드](https://chromium.googlesource.com/chromium/src/+/607cac6f1c4dabaed5a07c87d35a546d2cedbbe4/base/files/file_path_watcher_unittest.cc)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-3f:Tc7c,
+41:Tc7c,
 Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.
 
 ## 문제 설명
@@ -5345,7 +5858,7 @@ CQ를 거쳐 2026년 6월 9일 Chromium main에 병합되었습니다.
 - [Gerrit CL 7895660](https://crrev.com/c/7895660)
 - [Chromium Issue 40263777](https://crbug.com/40263777)
 - [Chromium Issue 321980307](https://crbug.com/321980307)
-40:T87a,
+42:T87a,
 VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.
 
 ## 문제 설명
@@ -5402,7 +5915,7 @@ CQ를 통해 2026년 6월 4일(한국 시간) Chromium main에 병합되었습�
 ## 참고 자료
 
 - [Gerrit CL 7893345](https://crrev.com/c/7893345)
-41:T6f5,
+43:T6f5,
 Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.
 
 ## 문제 설명
@@ -5459,9 +5972,9 @@ CQ를 통해 2026년 6월 2일(한국 시간) Chromium main에 병합되었습�
 ## 참고 자료
 
 - [Gerrit CL 7887496](https://crrev.com/c/7887496)
-10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8483194","title":"[DevTools] Remove mixed-content-active-and-passive-reload test after crrev.com/c/8467003","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483194","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8467003에서 unit test로 옮긴 기존 `mixed-content-active-and-passive-reload` 웹 테스트를 제거했습니다.","content":"$1b"},{"slug":"8483671","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8451582","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483671","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 1개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$1c"},{"slug":"8468010","title":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode","date":"$D2026-09-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8468010","labels":["blink","html"],"status":"merged","excerpt":"HTML 스펙에 따르면 `in head noscript` insertion mode에서는 `head`와 `noscript`\n시작 태그를 무시해야 합니다. 기존에는 이 모드에서 `head` 시작 태그를 만나면 잘못해서\n`in head` 모드로 전환했습니다. `head` 시작 태그를 무시","content":"$1d"},{"slug":"8467003","title":"Migrate devtools/security/mixed-content-active-and-passive-reload.js to a unit test","date":"$D2026-09-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8467003","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `mixed-content-active-and-passive-reload.js`를 DevTools unit test로 옮겼습니다.\nrequest가 기록되면 active·passive mixed content의 reload 안내가 Network panel 링크로\n바뀌는","content":"$1e"},{"slug":"8457503","title":"[DevTools] Remove blocked-mixed-content test after crrev.com/c/8457645","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457503","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8457645에서 unit test로 옮긴 기존 `blocked-mixed-content` 웹 테스트를 제거했습니다.","content":"$1f"},{"slug":"8457645","title":"Migrate devtools/security/blocked-mixed-content.js to a unit test","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457645","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `blocked-mixed-content.js`를 DevTools unit test로 옮겼습니다.\n차단된 mixed content의 설명과 request 링크가 Security panel에 표시되는지 검증합니다.","content":"$20"},{"slug":"8458524","title":"[DevTools] Disable layout tests to land crrev.com/c/8451582","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8458524","labels":["devtools","testing"],"status":"merged","excerpt":"`note section`의 변경을 반영하기 위해 보안 웹 테스트 1개의 기대값을 임시 조정했습니다.","content":"$21"},{"slug":"8460722","title":"[DevTools] Remove failed-request test after crrev.com/c/8449733","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8460722","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8449733에서 unit test로 옮긴 기존 `failed-request` 웹 테스트를 제거했습니다.","content":"$22"},{"slug":"8449733","title":"Migrate devtools/security/failed-request.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449733","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `failed-request.js`를 DevTools unit test로 옮겼습니다.\n실패한 request의 origin이 Security sidebar에 올바르게 표시되는지 검증합니다.","content":"$23"},{"slug":"8449930","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8426420","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449930","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$24"},{"slug":"8450050","title":"Migrate devtools/security/blank-origin-not-shown.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450050","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 blank origin 웹 테스트를 DevTools의 unit test로 옮겼습니다.\nSecurity sidebar에 blank origin이 표시되지 않는지 검증합니다.","content":"$25"},{"slug":"8450591","title":"[DevTools] Remove blank-origins-not-shown test after crrev.com/c/8450050","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450591","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8450050에서 unit test로 옮긴 기존 `blank-origins-not-shown` 웹 테스트를 제거했습니다.","content":"$26"},{"slug":"8451582","title":"[security] Migrate SecurityOriginView note section to Lit","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8451582","labels":["devtools","refactor"],"status":"merged","excerpt":"`SecurityOriginView`의 `note section`을 Lit으로 전환하고, 표시 조건과 캐시 안내\n테스트를 추가했습니다. `Certificate Transparency section`(CT section)이 표시되지\n않을 때 일반 안내 문구도 누락되던 문제를 함께 수정했","content":"$27"},{"slug":"8425664","title":"[DevTools] Disable layout tests to land crrev.com/c/8426420","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425664","labels":["devtools","testing"],"status":"merged","excerpt":"`Certificate Transparency section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$28"},{"slug":"8425980","title":"[css-pseudo] Support 'quotes' property in ::marker","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425980","labels":["blink","css"],"status":"merged","excerpt":"CSSWG 결정에 따라 `::marker`에서 `quotes` 속성을 지원하도록 했습니다.","content":"$29"},{"slug":"8426420","title":"[security] Migrate SecurityOriginView certificate transparency section to Lit","date":"$D2026-09-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8426420","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `Certificate Transparency section`을 Lit으로 전환했습니다. CT compliance 안내\n문구, Signed Certificate Timestamp(SCT) 표시, 상세 보기 전환 테스트를 추가했습니다.","content":"$2a"},{"slug":"8409931","title":"[Blink] Fix hyphen orientation in vertical text","date":"$D2026-09-16T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8409931","labels":["blink","css"],"status":"merged","excerpt":"세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고\n똑바로 표시되는 문제를 수정했습니다.","content":"$2b"},{"slug":"8399066","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8289248","date":"$D2026-09-11T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8399066","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 4개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$2c"},{"slug":"8324787","title":"[security] Migrate SecurityOriginView certificate section to Lit","date":"$D2026-08-31T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8324787","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `certificate section`을 Lit으로 전환했습니다. certificate details 표시와\ncertificate viewer를 여는 동작의 테스트를 추가했습니다.","content":"$2d"},{"slug":"8311028","title":"[Blink] Fix capitalization after supplementary characters","date":"$D2026-08-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311028","labels":["blink","css"],"status":"merged","excerpt":"Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의\n단어 경계를 올바르게 판단하도록 수정했습니다.","content":"$2e"},{"slug":"8302454","title":"[DevTools] Disable layout tests to land crrev.com/c/8303474","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8302454","labels":["devtools","testing"],"status":"merged","excerpt":"`connection section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$2f"},{"slug":"8297118","title":"[DevTools] Disable layout tests to land crrev.com/c/8289248","date":"$D2026-08-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8297118","labels":["devtools","testing"],"status":"merged","excerpt":"`title section`의 Lit 전환을 위해 보안 웹 테스트 4개의 기대값을 임시 조정했습니다.","content":"$30"},{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$31"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$32"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$33"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$34"},{"slug":"8096246","title":"Disable layout tests to land crrev.com/c/8045801","date":"$D2026-07-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8096246","labels":["devtools","testing"],"status":"merged","excerpt":"SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가\n일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.\nDevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을\n제거하는 작업을 후속 CL로 진행했습니다.","content":"$35"},{"slug":"8045801","title":"[security] Render the SAN with Lit","date":"$D2026-07-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8045801","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에\naccessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로\n유지했습니다.","content":"$36"},{"slug":"8042189","title":"Re-baseline and re-enable DevTools security layout tests after crrev.com/c/7969697","date":"$D2026-07-05T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042189","labels":["devtools","testing"],"status":"merged","excerpt":"Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.","content":"$37"},{"slug":"8042283","title":"base: Test no event for directory touch on Apple","date":"$D2026-07-04T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042283","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도\n이벤트가 발생하지 않는지 검증했습니다.","content":"$38"},{"slug":"8038580","title":"Disable layout tests to land crrev.com/c/7969697","date":"$D2026-07-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8038580","labels":["devtools","testing"],"status":"merged","excerpt":"Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.","content":"$39"},{"slug":"8030244","title":"base: Test no event when non-existent watched file's parent is created","date":"$D2026-07-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8030244","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 부모 디렉터리를 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$3a"},{"slug":"8031240","title":"base: Test no event when creating directory chain","date":"$D2026-07-01T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8031240","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$3b"},{"slug":"8015022","title":"base: Test no event for directory attribute changes on Apple","date":"$D2026-06-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8015022","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야\n하는 경우를 검증하도록 테스트를 보완했습니다.","content":"$3c"},{"slug":"7969697","title":"[security] Render the origin display with Lit","date":"$D2026-06-19T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7969697","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.","content":"$3d"},{"slug":"7906916","title":"base: Test no event when creating parent dir","date":"$D2026-06-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7906916","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면\n`FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.","content":"$3e"},{"slug":"7895660","title":"base: Test file modification in WatchDirectory on Apple","date":"$D2026-06-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7895660","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.","content":"$3f"},{"slug":"7893345","title":"Replace deprecated VS Code protobuf extension","date":"$D2026-06-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7893345","labels":["docs","fix"],"status":"merged","excerpt":"VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.","content":"$40"},{"slug":"7887496","title":"docs: Fix Web Tests link in Linux Web tests guide","date":"$D2026-05-30T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7887496","labels":["docs","fix"],"status":"merged","excerpt":"Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.","content":"$41"}]}]]}]
+10:["$","div",null,{"className":"mx-auto max-w-7xl p-4","children":[["$","header",null,{"className":"flex flex-col sm:flex-row items-center gap-4 mb-8","children":[["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","children":["$","$L3",null,{"src":"https://github.com/parkhojeong.png?size=192","alt":"parkhojeong 프로필 이미지","width":96,"height":96,"className":"rounded-full"}]}],["$","div",null,{"className":"text-center sm:text-left","children":[["$","h1",null,{"className":"font-display text-3xl font-semibold tracking-tight text-on-surface","children":"parkhojeong"}],["$","a",null,{"href":"https://github.com/parkhojeong","target":"_blank","rel":"noopener noreferrer","className":"text-link hover:underline","children":["github.com/","parkhojeong"]}]]}]]}],["$","$L1a",null,{"contributions":[{"slug":"8483194","title":"[DevTools] Remove mixed-content-active-and-passive-reload test after crrev.com/c/8467003","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483194","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8467003에서 unit test로 옮긴 기존 `mixed-content-active-and-passive-reload` 웹 테스트를 제거했습니다.","content":"$1b"},{"slug":"8483671","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8451582","date":"$D2026-09-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8483671","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 1개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$1c"},{"slug":"8468010","title":"[Blink] Ignore <head> start tags in \"in head noscript\" insertion mode","date":"$D2026-09-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8468010","labels":["blink","html"],"status":"merged","excerpt":"HTML 스펙에 따르면 `in head noscript` insertion mode에서는 `head`와 `noscript`\n시작 태그를 무시해야 합니다. 기존에는 이 모드에서 `head` 시작 태그를 만나면 잘못해서\n`in head` 모드로 전환했습니다. `head` 시작 태그를 무시","content":"$1d"},{"slug":"8467003","title":"Migrate devtools/security/mixed-content-active-and-passive-reload.js to a unit test","date":"$D2026-09-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8467003","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `mixed-content-active-and-passive-reload.js`를 DevTools unit test로 옮겼습니다.\nrequest가 기록되면 active·passive mixed content의 reload 안내가 Network panel 링크로\n바뀌는","content":"$1e"},{"slug":"8457503","title":"[DevTools] Remove blocked-mixed-content test after crrev.com/c/8457645","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457503","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8457645에서 unit test로 옮긴 기존 `blocked-mixed-content` 웹 테스트를 제거했습니다.","content":"$1f"},{"slug":"8457645","title":"Migrate devtools/security/blocked-mixed-content.js to a unit test","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8457645","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `blocked-mixed-content.js`를 DevTools unit test로 옮겼습니다.\n차단된 mixed content의 설명과 request 링크가 Security panel에 표시되는지 검증합니다.","content":"$20"},{"slug":"8458524","title":"[DevTools] Disable layout tests to land crrev.com/c/8451582","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8458524","labels":["devtools","testing"],"status":"merged","excerpt":"`note section`의 변경을 반영하기 위해 보안 웹 테스트 1개의 기대값을 임시 조정했습니다.","content":"$21"},{"slug":"8460722","title":"[DevTools] Remove failed-request test after crrev.com/c/8449733","date":"$D2026-09-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8460722","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8449733에서 unit test로 옮긴 기존 `failed-request` 웹 테스트를 제거했습니다.","content":"$22"},{"slug":"8449733","title":"Migrate devtools/security/failed-request.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449733","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 `failed-request.js`를 DevTools unit test로 옮겼습니다.\n실패한 request의 origin이 Security sidebar에 올바르게 표시되는지 검증합니다.","content":"$23"},{"slug":"8449930","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8426420","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8449930","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 2개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$24"},{"slug":"8450050","title":"Migrate devtools/security/blank-origin-not-shown.js to a unit test","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450050","labels":["devtools","testing"],"status":"merged","excerpt":"Chromium의 blank origin 웹 테스트를 DevTools의 unit test로 옮겼습니다.\nSecurity sidebar에 blank origin이 표시되지 않는지 검증합니다.","content":"$25"},{"slug":"8450591","title":"[DevTools] Remove blank-origins-not-shown test after crrev.com/c/8450050","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8450591","labels":["devtools","testing"],"status":"merged","excerpt":"CL 8450050에서 unit test로 옮긴 기존 `blank-origins-not-shown` 웹 테스트를 제거했습니다.","content":"$26"},{"slug":"8451582","title":"[security] Migrate SecurityOriginView note section to Lit","date":"$D2026-09-23T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8451582","labels":["devtools","refactor"],"status":"merged","excerpt":"`SecurityOriginView`의 `note section`을 Lit으로 전환하고, 표시 조건과 캐시 안내\n테스트를 추가했습니다. `Certificate Transparency section`(CT section)이 표시되지\n않을 때 일반 안내 문구도 누락되던 문제를 함께 수정했","content":"$27"},{"slug":"8425664","title":"[DevTools] Disable layout tests to land crrev.com/c/8426420","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425664","labels":["devtools","testing"],"status":"merged","excerpt":"`Certificate Transparency section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$28"},{"slug":"8425980","title":"[css-pseudo] Support 'quotes' property in ::marker","date":"$D2026-09-21T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8425980","labels":["blink","css"],"status":"merged","excerpt":"CSSWG 결정에 따라 `::marker`에서 `quotes` 속성을 지원하도록 했습니다.","content":"$29"},{"slug":"8426420","title":"[security] Migrate SecurityOriginView certificate transparency section to Lit","date":"$D2026-09-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8426420","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `Certificate Transparency section`을 Lit으로 전환했습니다. CT compliance 안내\n문구, Signed Certificate Timestamp(SCT) 표시, 상세 보기 전환 테스트를 추가했습니다.","content":"$2a"},{"slug":"8409931","title":"[Blink] Fix hyphen orientation in vertical text","date":"$D2026-09-16T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8409931","labels":["blink","css"],"status":"merged","excerpt":"세로쓰기에서 사용자 지정 하이픈 문자열 `+=`가 옆으로 회전하지 않고\n똑바로 표시되는 문제를 수정했습니다.","content":"$2b"},{"slug":"8399066","title":"[DevTools] Rebaseline and re-enable tests after crrev.com/c/8289248","date":"$D2026-09-11T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8399066","labels":["devtools","testing"],"status":"merged","excerpt":"보안 웹 테스트 4개의 기대 결과를 갱신하고 임시 설정을 제거했습니다.","content":"$2c"},{"slug":"8324787","title":"[security] Migrate SecurityOriginView certificate section to Lit","date":"$D2026-08-31T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8324787","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `certificate section`을 Lit으로 전환했습니다. certificate details 표시와\ncertificate viewer를 여는 동작의 테스트를 추가했습니다.","content":"$2d"},{"slug":"8311028","title":"[Blink] Fix capitalization after supplementary characters","date":"$D2026-08-29T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8311028","labels":["blink","css"],"status":"merged","excerpt":"Blink의 `text-transform: capitalize` 처리에서 supplementary character 뒤의\n단어 경계를 올바르게 판단하도록 수정했습니다.","content":"$2e"},{"slug":"8302454","title":"[DevTools] Disable layout tests to land crrev.com/c/8303474","date":"$D2026-08-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8302454","labels":["devtools","testing"],"status":"merged","excerpt":"`connection section`의 Lit 전환을 위해 보안 웹 테스트 2개의 기대값을 임시 조정했습니다.","content":"$2f"},{"slug":"8297118","title":"[DevTools] Disable layout tests to land crrev.com/c/8289248","date":"$D2026-08-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8297118","labels":["devtools","testing"],"status":"merged","excerpt":"`title section`의 Lit 전환을 위해 보안 웹 테스트 4개의 기대값을 임시 조정했습니다.","content":"$30"},{"slug":"8289248","title":"[security] Migrate SecurityOriginView title section to Lit","date":"$D2026-08-25T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8289248","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `title section`을 Lit으로 전환했습니다. 렌더링, `security state` 갱신,\nNetwork panel에서 해당 Origin의 요청을 표시하는 동작의 테스트를 추가했습니다.","content":"$31"},{"slug":"8254421","title":"base: Test no event when symlink target dir is created on Linux/ChromeOS","date":"$D2026-08-18T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8254421","labels":["base","testing"],"status":"merged","excerpt":"Linux와 ChromeOS에서 존재하지 않는 파일을 심볼릭 링크 경로로 감시할 때,\n링크의 대상 디렉터리만 생성하면 `FilePathWatcher` 이벤트가 발생하지 않는 동작을\n테스트로 명시했습니다.","content":"$32"},{"slug":"8228946","title":"base: Test no event for directory touch on Windows","date":"$D2026-08-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8228946","labels":["base","testing"],"status":"merged","excerpt":"Windows에서 재귀적으로 감시 중인 디렉터리를 touch해도\n`FilePathWatcher` 이벤트가 전달되지 않는 동작을 테스트로 검증했습니다.","content":"$33"},{"slug":"8147039","title":"Fix broken link to ui/gfx/native_widget_types.h","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147039","labels":["docs","fix"],"status":"merged","excerpt":"`ui/gfx/native_widget_types.h`를 가리키는 깨진 링크와 타입 네임스페이스\n오타를 수정했습니다.","content":"$34"},{"slug":"8147339","title":"Remove LaCrOS entry from the UI glossary","date":"$D2026-07-26T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8147339","labels":["docs","fix"],"status":"merged","excerpt":"지원이 종료된 LaCrOS를 UI 용어집에서 제거했습니다.","content":"$35"},{"slug":"8140384","title":"[DevTools] Re-baseline and re-enable security web tests after crrev.com/c/8045801","date":"$D2026-07-24T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8140384","labels":["devtools","testing"],"status":"merged","excerpt":"SAN Lit 전환을 반영하기 위해 테스트 기대값을 임시 조정한 CL 8096246의\n후속 작업입니다. 보안 웹 테스트 2개의 기대 결과를 갱신하고, 성공과 실패를\n모두 허용하던 임시 설정을 제거했습니다.","content":"$36"},{"slug":"8096246","title":"Disable layout tests to land crrev.com/c/8045801","date":"$D2026-07-15T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8096246","labels":["devtools","testing"],"status":"merged","excerpt":"SAN 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 2개가\n일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.\nDevTools 변경이 Chromium에 반영된 뒤 기대 결과를 갱신하고 임시 설정을\n제거하는 작업을 후속 CL로 진행했습니다.","content":"$37"},{"slug":"8045801","title":"[security] Render the SAN with Lit","date":"$D2026-07-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8045801","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 SAN 표시를 Lit으로 전환했습니다. devtools-button에\naccessibleExpanded 속성을 추가하고, createSanDiv는 기존 UI와 연결하는 함수로\n유지했습니다.","content":"$38"},{"slug":"8042189","title":"Re-baseline and re-enable DevTools security layout tests after crrev.com/c/7969697","date":"$D2026-07-05T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042189","labels":["devtools","testing"],"status":"merged","excerpt":"Origin Lit 전환 이후 보안 웹 테스트 8개의 기대 결과를 갱신하고, 성공과 실패를 모두 허용하던 임시 설정을 제거했습니다.","content":"$39"},{"slug":"8042283","title":"base: Test no event for directory touch on Apple","date":"$D2026-07-04T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8042283","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 재귀 감시 중인 디렉터리의 접근 시간과 수정 시간을 변경해도\n이벤트가 발생하지 않는지 검증했습니다.","content":"$3a"},{"slug":"8038580","title":"Disable layout tests to land crrev.com/c/7969697","date":"$D2026-07-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8038580","labels":["devtools","testing"],"status":"merged","excerpt":"Origin 표시의 Lit 전환을 반영할 수 있도록, Chromium 보안 웹 테스트 8개가 일시적으로 성공과 실패를 모두 허용하도록 기대값을 조정했습니다.","content":"$3b"},{"slug":"8030244","title":"base: Test no event when non-existent watched file's parent is created","date":"$D2026-07-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8030244","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 부모 디렉터리를 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$3c"},{"slug":"8031240","title":"base: Test no event when creating directory chain","date":"$D2026-07-01T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8031240","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 감시 파일의 상위 디렉터리들을 연속으로 생성해도\n파일 감시 이벤트가 발생하지 않는지 검증하도록 테스트를 보완했습니다.","content":"$3d"},{"slug":"8015022","title":"base: Test no event for directory attribute changes on Apple","date":"$D2026-06-27T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/8015022","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 상위 디렉터리의 권한 변경 시 파일 감시 이벤트가 발생하지 않아야\n하는 경우를 검증하도록 테스트를 보완했습니다.","content":"$3e"},{"slug":"7969697","title":"[security] Render the origin display with Lit","date":"$D2026-06-19T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7969697","labels":["devtools","refactor"],"status":"merged","excerpt":"SecurityOriginView의 `security state` 아이콘과 Origin URL 표시를 Lit 템플릿으로 전환했습니다.","content":"$3f"},{"slug":"7906916","title":"base: Test no event when creating parent dir","date":"$D2026-06-06T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7906916","labels":["base","testing"],"status":"merged","excerpt":"존재하지 않는 파일을 감시할 때, 부모 디렉터리만 생성하면\n`FilePathWatcher` 이벤트가 발생하지 않는 동작을 테스트로 검증했습니다.","content":"$40"},{"slug":"7895660","title":"base: Test file modification in WatchDirectory on Apple","date":"$D2026-06-03T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7895660","labels":["base","testing"],"status":"merged","excerpt":"Apple에서 디렉터리를 비재귀적으로 감시할 때 내부 파일의 내용을 수정해도 이벤트가 발생하지 않는 동작을 검증하도록 테스트를 보완했습니다.","content":"$41"},{"slug":"7893345","title":"Replace deprecated VS Code protobuf extension","date":"$D2026-06-02T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7893345","labels":["docs","fix"],"status":"merged","excerpt":"VS Code에서 deprecated로 표시된 `vscode-proto3`를 대체 확장인 `Protobuf VSC`로 교체했습니다.","content":"$42"},{"slug":"7887496","title":"docs: Fix Web Tests link in Linux Web tests guide","date":"$D2026-05-30T00:00:00.000Z","author":"parkhojeong","contributionUrl":"https://crrev.com/c/7887496","labels":["docs","fix"],"status":"merged","excerpt":"Linux Web Tests 가이드의 깨진 상대 링크를 수정했습니다.","content":"$43"}]}]]}]
 16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 12:null
-42:I[80622,[],"IconMark"]
-14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L42","4",{}]],"error":null,"digest":"$undefined"}
+44:I[80622,[],"IconMark"]
+14:{"metadata":[["$","title","0",{"children":"parkhojeong | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"parkhojeong님의 컨트리뷰션 목록입니다."}],["$","meta","2",{"name":"google-site-verification","content":"6lATKwyH4W3FqgJMSzFuiaY0zgSyYNmgpPqSTgB2PmE"}],["$","link","3",{"rel":"icon","href":"/contributions/icon.png?7799f1a0e0aceb83","type":"image/png","sizes":"256x256"}],["$","$L44","4",{}]],"error":null,"digest":"$undefined"}
 19:"$14:metadata"
