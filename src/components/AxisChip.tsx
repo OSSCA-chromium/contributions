@@ -19,10 +19,12 @@ export default function AxisChip({
       onClick={onClick}
       aria-label={`${axisLabel}: ${value}`}
       aria-pressed={selected}
-      className={`rounded-full border px-3 py-1 text-sm transition-colors ${
+      className={`max-w-full break-words rounded-lg border px-2.5 py-1 text-[12px] font-medium transition-colors ${
         selected
           ? 'border-primary bg-primary text-on-primary'
-          : 'border-outline bg-surface-variant text-on-surface-variant hover:bg-primary-container'
+          : axis === 'kind'
+            ? 'border-transparent bg-kind-weak text-kind hover:border-kind'
+            : 'border-transparent bg-primary-weak text-primary hover:border-primary'
       }`}
     >
       {value}

@@ -25,7 +25,7 @@ describe('홈페이지', () => {
     );
 
     // 히어로 타이틀과 빈 상태 안내 체크
-    expect(screen.getByText('OSSCA Chromium Contributions')).toBeInTheDocument();
+    expect(screen.getByText('Chromium 기여 아카이브')).toBeInTheDocument();
     expect(screen.getByText('2026년 컨트리뷰션이 아직 없습니다.')).toBeInTheDocument();
   });
 
@@ -36,7 +36,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -48,7 +53,7 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Recent contributions')).toBeInTheDocument();
+    expect(screen.getByText('최근 기여')).toBeInTheDocument();
   });
 
   it('컨트리뷰션이 있을 경우 목록이 표시됩니다', () => {
@@ -59,7 +64,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
       {
@@ -67,7 +77,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 2',
         date: '2026-01-02',
         author: '김철수',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 2 내용',
       },
     ];
@@ -90,7 +105,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -112,7 +132,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: 'octocat',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -162,12 +187,12 @@ describe('홈페이지', () => {
     render(<HomePage />);
 
     expect(screen.getByText('2026 contribution')).toBeInTheDocument();
-    expect(screen.getByText('총 컨트리뷰션').previousElementSibling).toHaveTextContent('1');
+    expect(screen.getByText('누적 기여').previousElementSibling).toHaveTextContent('1');
     fireEvent.click(screen.getByRole('button', { name: '2025' }));
 
     expect(screen.getByText('2025 contribution')).toBeInTheDocument();
     expect(screen.queryByText('2026 contribution')).toBeNull();
-    expect(screen.getByText('총 컨트리뷰션').previousElementSibling).toHaveTextContent('1');
+    expect(screen.getByText('누적 기여').previousElementSibling).toHaveTextContent('1');
     expect(screen.getByRole('link', { name: 'bob 프로필 이미지' })).toHaveAttribute(
       'href',
       '/contributors/bob'

@@ -31,7 +31,7 @@ function RelatedPatchGroup({
       : undefined;
 
   return (
-    <div role="rowgroup" aria-label={`연관 패치 ${group.items.length}건`} className="overflow-hidden rounded-xl border border-outline bg-surface">
+    <div role="rowgroup" aria-label={`연관 패치 ${group.items.length}건`} className="overflow-hidden bg-m1">
       <div role="row" className="patch-grid patch-grid-fold patch-grid-row">
         <div role="cell" aria-colspan={5} className="col-span-full">
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -76,7 +76,7 @@ export default function PatchTable({ items }: { items: SearchIndexItem[] }) {
   const rows = groupByRelated(items);
 
   return (
-    <div role="table" aria-label="기여 아카이브" className="patch-table w-full">
+    <div role="table" aria-label="기여 아카이브" className="patch-table w-full overflow-hidden rounded-2xl border border-mline">
       <div role="rowgroup">
         <div role="row" className="patch-grid patch-grid-heading">
           <div role="columnheader" className="patch-cell-date">업로드일</div>
