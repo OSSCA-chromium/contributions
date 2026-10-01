@@ -37,21 +37,25 @@ test('computeStats는 총계/상태/월별/기여자/머지비율을 계산한�
   expect(s.mergedRatio).toBeCloseTo(2 / 3);
   expect(s.byStatus.find((x) => x.status === 'merged')?.count).toBe(2);
   expect(s.byMonth.find((x) => x.month === '2025-05')?.count).toBe(2);
-  expect(s.topContributors[0]).toEqual({ username: 'octocat', count: 2 });
+  expect(s.topContributors[0]).toEqual({
+    username: 'octocat', count: 2,
+    byStatus: [{ status: 'merged', count: 1 }, { status: 'in review', count: 1 }],
+  });
 });
 
-test('computeStats는 merged, in review, abandoned 상태를 각각 집계한다', () => {
+test('computeStats counts statuses and uses them to rank contributors with equal totals', () => {
   const s = computeStats([
-    { author: 'alice', date: '2026-01-01', status: 'merged' },
-    { author: 'bob', date: '2026-01-02', status: 'in review' },
     { author: 'carol', date: '2026-01-03', status: 'abandoned' },
+    { author: 'bob', date: '2026-01-02', status: 'in review' },
+    { author: 'alice', date: '2026-01-01', status: 'merged' },
   ]);
 
   expect(s.byStatus).toEqual([
-    { status: 'merged', count: 1 },
-    { status: 'in review', count: 1 },
     { status: 'abandoned', count: 1 },
+    { status: 'in review', count: 1 },
+    { status: 'merged', count: 1 },
   ]);
+  expect(s.topContributors.map(contributor => contributor.username)).toEqual(['alice', 'bob', 'carol']);
 });
 
 test('module summaries count each patch once and exclude missing module tags', () => {

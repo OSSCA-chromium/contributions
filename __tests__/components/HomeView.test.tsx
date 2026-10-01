@@ -21,15 +21,15 @@ test('the archive home shows recent patches in an accessible table and filters i
   expect(within(table).getByRole('link', { name: 'Patch 1' })).toHaveAttribute('href', '/patches/1');
   expect(within(table).getByRole('link', { name: 'Patch 2' })).toBeInTheDocument();
   expect(within(table).queryByRole('link', { name: 'Patch 3' })).toBeNull();
-  expect(screen.getByText('누적 기여').previousElementSibling).toHaveTextContent('2');
-  expect(screen.getByText('머지 완료').previousElementSibling).toHaveTextContent('1');
-  expect(screen.getByText('모듈').previousElementSibling).toHaveTextContent('2');
+  expect(screen.getByText('누적 기여').nextElementSibling).toHaveTextContent('2');
+  expect(screen.getByText('머지 완료').nextElementSibling).toHaveTextContent('1');
+  expect(screen.getByText('모듈').nextElementSibling).toHaveTextContent('2');
 
   fireEvent.click(screen.getByRole('button', { name: '2025' }));
 
   expect(within(table).getByRole('link', { name: 'Patch 3' })).toBeInTheDocument();
   expect(within(table).queryByRole('link', { name: 'Patch 1' })).toBeNull();
-  expect(screen.getByText('누적 기여').previousElementSibling).toHaveTextContent('1');
-  expect(screen.getByText('머지 완료').previousElementSibling).toHaveTextContent('0');
-  expect(screen.getByText('모듈').previousElementSibling).toHaveTextContent('1');
+  expect(screen.getByText('누적 기여').nextElementSibling).toHaveTextContent('1');
+  expect(screen.getByText('머지 완료').nextElementSibling).toHaveTextContent('0');
+  expect(screen.getByText('모듈').nextElementSibling).toHaveTextContent('1');
 });

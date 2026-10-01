@@ -20,7 +20,7 @@ export function computeStats(
   const total = contributions.length;
   const statusMap = new Map<string, number>();
   const monthMap = new Map<string, number>();
-  const contribMap = new Map<string, number>();
+  const contribMap = new Map<string, { count: number; statuses: Map<string, number> }>();
   const moduleMap = new Map<string, number>();
   let merged = 0;
 
@@ -31,7 +31,10 @@ export function computeStats(
     // gray-matter가 frontmatter 날짜를 Date 객체로 파싱하는 경우가 있어 YYYY-MM으로 정규화
     const month = toMonth(c.date);
     monthMap.set(month, (monthMap.get(month) ?? 0) + 1);
-    contribMap.set(c.author, (contribMap.get(c.author) ?? 0) + 1);
+    const contributor = contribMap.get(c.author) ?? { count: 0, statuses: new Map<string, number>() };
+    contributor.count++;
+    contributor.statuses.set(status, (contributor.statuses.get(status) ?? 0) + 1);
+    contribMap.set(c.author, contributor);
     if (c.module) moduleMap.set(c.module, (moduleMap.get(c.module) ?? 0) + 1);
   }
 
@@ -42,8 +45,17 @@ export function computeStats(
       .map(([month, count]) => ({ month, count }))
       .sort((a, b) => a.month.localeCompare(b.month)),
     topContributors: [...contribMap]
-      .map(([username, count]) => ({ username, count }))
-      .sort((a, b) => b.count - a.count),
+      .sort(([, a], [, b]) =>
+        b.count - a.count ||
+        (b.statuses.get('merged') ?? 0) - (a.statuses.get('merged') ?? 0) ||
+        (b.statuses.get('in review') ?? 0) - (a.statuses.get('in review') ?? 0) ||
+        (b.statuses.get('abandoned') ?? 0) - (a.statuses.get('abandoned') ?? 0)
+      )
+      .map(([username, contributor]) => ({
+        username,
+        count: contributor.count,
+        byStatus: [...contributor.statuses].map(([status, count]) => ({ status, count })),
+      })),
     contributorCount: contribMap.size,
     mergedRatio: total ? merged / total : 0,
     moduleCount: moduleMap.size,

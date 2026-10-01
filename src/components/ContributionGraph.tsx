@@ -32,7 +32,7 @@ export default function ContributionGraph({ items, compact = false }: { items: S
   const allGraph = useMemo(() => createContributionGraph(items), [items]);
   const activeProject = allGraph.projects.some(p => p.repo === project) ? project : 'all';
   const graph = useMemo(() => createContributionGraph(activeProject === 'all' ? items : items.filter(item => (item.repo?.trim() || 'chromium/src') === activeProject)), [items, activeProject]);
-  const layout = useMemo(() => layoutContributionGraph(graph, width), [graph, width]);
+  const layout = useMemo(() => layoutContributionGraph(graph, width, compact), [graph, width, compact]);
   const points = useMemo(() => new Map(layout.nodes.map(node => [node.slug, node])), [layout]);
   const selected = points.get(selectedSlug);
   const neighbors = useMemo(() => graph.edges.flatMap(edge => {
@@ -80,7 +80,7 @@ export default function ContributionGraph({ items, compact = false }: { items: S
                   <text x={cloud.x + cloud.width / 2} y={cloud.y + cloud.height * .24} textAnchor="middle" fill="var(--color-on-surface)" fontSize={width < 640 && i > 0 ? 12 : 16} fontWeight="600">
                     {cloud.label === 'DevTools frontend' && width < 640 ? <><tspan x={cloud.x + cloud.width / 2} dy="-5">DevTools</tspan><tspan x={cloud.x + cloud.width / 2} dy="15">frontend</tspan></> : cloud.label}
                   </text>
-                  <text x={cloud.x + cloud.width / 2} y={cloud.y + cloud.height * .34} textAnchor="middle" fill="var(--color-on-surface-variant)" fontSize="12">{cloud.count}건 · {Math.round(cloud.count / graph.nodes.length * 100)}%</text>
+                  <text x={cloud.x + cloud.width / 2} y={cloud.y + cloud.height * (width < 640 && i > 0 ? .40 : .34)} textAnchor="middle" fill="var(--color-on-surface-variant)" fontSize="12">{cloud.count}건 · {Math.round(cloud.count / graph.nodes.length * 100)}%</text>
                 </g>
               ))}
               <g aria-hidden="true">

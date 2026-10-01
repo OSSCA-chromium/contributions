@@ -50,3 +50,8 @@ test.each([360, 1440])('lays out finite, deterministic points inside their proje
     expect(node.y).toBeLessThan(layout.height);
   }
 });
+
+test('keeps the home summary shorter than the full statistics graph', () => {
+  const graph = createContributionGraph([item('1'), item('2', { repo: 'v8/v8' })]);
+  expect(layoutContributionGraph(graph, 1440, true).height).toBeLessThan(layoutContributionGraph(graph, 1440).height);
+});

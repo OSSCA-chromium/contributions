@@ -55,7 +55,7 @@ export interface Stats {
   total: number;
   byStatus: { status: string; count: number }[];
   byMonth: { month: string; count: number }[];
-  topContributors: { username: string; count: number }[];
+  topContributors: { username: string; count: number; byStatus: { status: string; count: number }[] }[];
   contributorCount: number;
   mergedRatio: number;
   moduleCount: number;

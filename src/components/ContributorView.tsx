@@ -4,17 +4,8 @@ import { useMemo, useState } from 'react';
 import type { Contribution } from '@/lib/types';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import PatchTable from '@/components/PatchTable';
+import SummaryMetrics from '@/components/SummaryMetrics';
 import YearSelector from '@/components/YearSelector';
-
-// Match the four status summary cells to the home strip.
-const STRIP_ACCENTS = ['bg-c1', 'bg-c2', 'bg-c3', 'bg-c4'];
-
-const STRIP_BORDERS = [
-  '',
-  'border-l border-mline max-[380px]:border-l-0 max-[380px]:border-t',
-  'border-l border-mline max-[620px]:border-l-0 max-[620px]:border-t',
-  'border-l border-mline max-[380px]:border-l-0 max-[620px]:border-t',
-];
 
 export default function ContributorView({
   contributions,
@@ -52,20 +43,7 @@ export default function ContributorView({
         </p>
       ) : (
         <>
-          <div className="mb-8 grid grid-cols-4 overflow-hidden rounded-2xl bg-m1 max-[620px]:grid-cols-2 max-[380px]:grid-cols-1">
-            {strip.map((cell, i) => (
-              <div key={cell.label} className={`px-[18px] py-4 ${STRIP_BORDERS[i]}`}>
-                <span
-                  aria-hidden="true"
-                  className={`mt-[1.5px] mb-[11px] ml-[1.5px] block h-[9px] w-[9px] rounded-full ring-[1.5px] ring-c1 ${STRIP_ACCENTS[i]}`}
-                />
-                <b className="block text-[27px] font-bold leading-[1.15] tracking-[-0.03em] tabular-nums">
-                  {cell.value}
-                </b>
-                <span className="text-[12.5px] text-on-surface-variant">{cell.label}</span>
-              </div>
-            ))}
-          </div>
+          <div className="mb-8"><SummaryMetrics cells={strip} /></div>
 
           <h2 className="mb-3.5 section-title">
             컨트리뷰션

@@ -16,7 +16,7 @@ export default function SiteNav({ links }: { links: NavLink[] }) {
   const current = normalize(usePathname());
 
   return (
-    <nav className="flex flex-wrap gap-1 text-sm">
+    <nav className="flex flex-wrap gap-1 text-[13px] sm:text-sm">
       {links.map(({ href, label }) => {
         const target = normalize(href);
         // Sub-routes count as active too, e.g. a patch detail page keeps
@@ -27,7 +27,7 @@ export default function SiteNav({ links }: { links: NavLink[] }) {
             key={href}
             href={href}
             aria-current={active ? 'page' : undefined}
-            className={`rounded-full px-3 py-1.5 ${
+            className={`rounded-full px-2 py-1.5 sm:px-3 ${
               active
                 ? 'bg-primary-weak text-primary font-semibold'
                 : 'text-on-surface-variant hover:bg-m2'
