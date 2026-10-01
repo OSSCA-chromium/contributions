@@ -45,7 +45,6 @@ export function generateStaticParams() {
 // uses, so a chain (A-B via crbug, B-C via `related`) shows the whole family
 // here as well.
 function relatedPatches(contribution: Contribution): Contribution[] {
-  if (contribution.relatedSlugs.length === 0) return [];
   const row = groupByRelated(getAllContributions()).find(
     (r) => r.type === 'group' && r.items.some((i) => i.slug === contribution.slug)
   );

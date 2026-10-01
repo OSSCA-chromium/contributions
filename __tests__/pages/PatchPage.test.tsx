@@ -22,7 +22,7 @@ const contribution: Contribution = {
 };
 
 test('detail sidebar shows metadata, related patches, and the current journey semantics', async () => {
-  (getContributionBySlug as jest.Mock).mockResolvedValue(contribution);
+  (getContributionBySlug as jest.Mock).mockResolvedValue({ ...contribution, relatedSlugs: [] });
   (getAllContributions as jest.Mock).mockReturnValue([
     contribution,
     { ...contribution, slug: '124', title: 'Related rendering fix', related: [123], relatedSlugs: ['123'] },
