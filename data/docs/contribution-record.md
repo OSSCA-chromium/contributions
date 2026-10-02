@@ -181,6 +181,50 @@ git commit -am "contributions: Mark 6520751 as merged"
 git push origin 250801-merged-6520751
 ```
 
+### 관리자 일괄 갱신
+
+멘티는 위 절차로 기여 내용과 회고, 초기 `module`·`kind`·`keywords`를
+기록합니다. 관리자는 별도의 일괄 갱신으로 외부 리뷰의 실제 날짜와 상태를
+확인합니다. 갱신 플래그를 멘티의 frontmatter에 추가할 필요는 없습니다.
+
+```bash
+npm run sync:contributions -- --dry-run   # 변경 미리보기
+npm run sync:contributions                # 날짜·상태 반영
+```
+
+- 공개 Gerrit·GitHub PR의 생성 시각과 실제 머지·중단 시각을 UTC 날짜로
+  반영합니다. 본문·회고·작성자·관련 링크와 초기 분류는 보존합니다.
+- 확인을 완료한 Merged 항목은 별도 관리 파일
+  `data/maintenance/contribution-sync.json`의 `finalized` 플래그로 표시하고
+  다음 기본 실행에서 건너뜁니다. 날짜·상태·리뷰 URL을 수동으로 바꾸면
+  저장된 지문이 달라져 다시 확인합니다. Abandoned 항목은 복원될 수 있어
+  계속 확인합니다.
+- 실제 날짜와 관리자가 확인한 시각은 다릅니다. 관리 파일의 `verifiedAt`은
+  확인 이력이며 사이트의 기여 날짜로 사용하지 않습니다.
+- 미리보기와 실패한 조회는 갱신 완료 플래그를 기록하지 않습니다.
+  실행 결과는 `.cache/contribution-sync/report.json`에서 확인합니다.
+
+분류 기준을 바꾸거나 기존 Merged 항목까지 다시 확인하려면 강제 실행합니다.
+
+```bash
+npm run sync:contributions -- --force --dry-run
+```
+
+스크립트는 날짜·상태를 확정하고, 저장소의 `sync-contributions` skill은
+전체 기여 기록·변경 파일·현재 분포를 보고 `module`과 `kind`를 검토합니다.
+검토한 분류 변경만 별도 JSON으로 전달해 적용합니다.
+
+```bash
+npm run sync:contributions -- --force --classification-file .cache/contribution-sync/classifications.json
+```
+
+분류 파일은 `{ "8300812": { "module": "blink", "kind": "fix" } }`처럼
+기여 ID별로 작성합니다. 생략한 값은 유지하고, 모듈이 바뀌면 이전 값은
+검색어에 보존합니다. 스크립트의 `--force`만으로 분류를 자동 추정하지 않습니다.
+skill 절차는 저장소의 `.agents/skills/sync-contributions/SKILL.md`에 있습니다.
+
+일괄 갱신은 멘티의 신규 기여 PR과 별도 관리 PR로 올립니다.
+
 ## 5. GitHub 이슈·프로젝트 보드
 
 - 실습 이슈는 오른쪽 **Assignees**에 본인을 직접 지정(self-assign)해

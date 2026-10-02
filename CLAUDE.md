@@ -11,6 +11,7 @@ npm test -- <pattern>  # single file/pattern, e.g. npm test -- ContributorRow.te
 npm run lint           # next lint (ESLint)
 npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
+npm run sync:contributions -- --dry-run # maintainer metadata refresh preview
 npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
@@ -63,6 +64,17 @@ new records use `keywords` without `labels`. Add optional `repo`, `issue`,
 - `npm run validate:data` gates frontmatter in CI. A malformed `date` (e.g. a typo like `2025-05-D8`) parses to `NaN` and silently breaks date sorting — keep dates valid `YYYY-MM-DD`.
 - `gray-matter` may hand back `date` as a `Date` object, so normalize with `new Date(c.date)` before comparing.
 - `isValidGithubUsername` (`src/lib/github.ts`) gates whether a contributor links to a profile page; invalid handles render a fallback avatar with no link (the `[username]` route only `generateStaticParams` for valid handles).
+
+Mentees author contribution Markdown; maintainers run `sync:contributions`
+to refresh verified public review dates/status. Completion flags live in
+`data/maintenance/contribution-sync.json`, never in mentee frontmatter.
+Regular runs skip successfully finalized Merged records whose metadata
+fingerprint still matches. `--force` checks all records; classification
+changes are explicit decisions from the repository's
+`.agents/skills/sync-contributions/SKILL.md`, supplied with
+`--classification-file`. Dry runs never change records or completion flags.
+Keep generated data/state updates separate from script changes and new
+mentee contributions. Preserve authored bodies and `template.md`.
 
 ## Commit & workflow conventions
 
