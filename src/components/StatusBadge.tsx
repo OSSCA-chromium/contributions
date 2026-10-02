@@ -1,11 +1,12 @@
 import type { ContributionStatus } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 
 // IN REVIEW has no mockup counterpart (design C only specified merged/abandoned);
 // it reuses the link-blue pair, which clears 4.5:1 on primary-weak in both themes.
 const MAP: Record<ContributionStatus, { label: string; cls: string }> = {
-  merged: { label: 'Merged', cls: 'bg-success-weak text-badge-ok' },
-  abandoned: { label: 'Abandoned', cls: 'bg-gray-weak text-badge-off' },
-  'in review': { label: 'In review', cls: 'bg-primary-weak text-primary' },
+  merged: { label: CONTRIBUTION_STATUS_LABELS.merged, cls: 'bg-success-weak text-badge-ok' },
+  abandoned: { label: CONTRIBUTION_STATUS_LABELS.abandoned, cls: 'bg-gray-weak text-badge-off' },
+  'in review': { label: CONTRIBUTION_STATUS_LABELS['in review'], cls: 'bg-primary-weak text-primary' },
 };
 
 export default function StatusBadge({ status }: { status?: ContributionStatus }) {

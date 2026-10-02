@@ -19,7 +19,7 @@ test('유효한 기여자 행에 username·상태별 건수·프로필 링크가
   expect(screen.queryByText('octocat')).not.toBeInTheDocument();
   expect(screen.getByText('총 기여')).toBeInTheDocument();
   expect(screen.getByText('Merged')).toBeInTheDocument();
-  expect(screen.getByText('In review').parentElement).toHaveTextContent('In review1');
+  expect(screen.getByText('In Review').parentElement).toHaveTextContent('In Review1');
   expect(screen.getByText('Abandoned').parentElement).toHaveTextContent('Abandoned2');
   expect(screen.getByText('7')).toBeInTheDocument(); // total
   expect(screen.getByText('4')).toBeInTheDocument(); // merged

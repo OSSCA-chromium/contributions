@@ -19,7 +19,7 @@ const contribution: Contribution = {
 };
 
 test.each([
-  ['in review', 'In review'],
+  ['in review', 'In Review'],
   ['merged', 'Merged'],
   ['abandoned', 'Abandoned'],
 ] as [ContributionStatus, string][])('shows the upload stage and %s result status without inventing a result date', (status, label) => {

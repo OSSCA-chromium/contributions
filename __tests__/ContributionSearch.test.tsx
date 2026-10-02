@@ -92,7 +92,7 @@ test('module option search narrows the available module chips', () => {
 });
 
 test.each([
-  ['In review', 'Set up WebRTC coverage'],
+  ['In Review', 'Set up WebRTC coverage'],
   ['Merged', 'Document the build setup'],
   ['Abandoned', 'Clean up rendering tests'],
 ])('status filter selects %s records', (status, title) => {
