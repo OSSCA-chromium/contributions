@@ -56,8 +56,8 @@ test('archive table shows upload date, review ID, axes, authors, and all statuse
   expect(screen.getByRole('columnheader', { name: '업로드일' })).toBeInTheDocument();
   expect(screen.getByText('2026-05-08')).toBeInTheDocument();
   expect(screen.getByText('1012345')).toBeInTheDocument();
-  expect(screen.getAllByText('모듈: blink/renderer')).toHaveLength(2);
-  expect(screen.getByText('종류: test')).toBeInTheDocument();
+  expect(screen.getAllByText('blink/renderer')).toHaveLength(2);
+  expect(screen.getByText('test')).toBeInTheDocument();
   expect(screen.getByText('devtools/devtools-frontend')).toBeInTheDocument();
   expect(screen.getByRole('img', { name: 'alice 프로필 이미지' })).toBeInTheDocument();
   expect(screen.queryByText('alice')).not.toBeInTheDocument();

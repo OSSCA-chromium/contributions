@@ -81,7 +81,7 @@ export default function PatchTable({ items }: { items: SearchIndexItem[] }) {
         <div role="row" className="patch-grid patch-grid-heading">
           <div role="columnheader" className="patch-cell-date">업로드일</div>
           <div role="columnheader" className="patch-cell-id">리뷰 ID</div>
-          <div role="columnheader" className="patch-cell-title">제목 · 모듈 · 종류</div>
+          <div role="columnheader" className="patch-cell-title">기여</div>
           <div role="columnheader" className="patch-cell-author">작성자</div>
           <div role="columnheader" className="patch-cell-status">상태</div>
         </div>

@@ -76,7 +76,8 @@ function resolveHeading(raw: string): { id: string; text: string } {
 // marked 설정 (단일 파이프라인). 코드 하이라이팅 + 헤딩 slug id.
 marked.use({
   gfm: true,
-  breaks: true,
+  // Source wrapping should reflow with the page; explicit hard breaks remain.
+  breaks: false,
   async: false,
   renderer: {
     code({ text, lang }) {

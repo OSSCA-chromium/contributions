@@ -39,8 +39,8 @@ export default function PatchRow({
           {item.title}
         </Link>
         <div className="patch-axis-meta mt-1.5 flex flex-wrap items-center gap-1.5">
-          <AxisTag axis="module" value={item.module || '기타'} showLabel />
-          <AxisTag axis="kind" value={item.kind || '기타'} showLabel />
+          <AxisTag axis="module" value={item.module || '기타'} />
+          <AxisTag axis="kind" value={item.kind || '기타'} />
           {item.repo && item.repo !== 'chromium/src' && (
             <AxisTag axis="repo" value={item.repo} />
           )}
