@@ -53,7 +53,7 @@ test('archive table shows upload date, review ID, axes, authors, and all statuse
 
   expect(screen.getByRole('table', { name: '기여 아카이브' })).toBeInTheDocument();
   expect(screen.getAllByRole('columnheader')).toHaveLength(5);
-  expect(screen.getByRole('columnheader', { name: '업로드일' })).toBeInTheDocument();
+  expect(screen.getByRole('columnheader', { name: 'Created' })).toBeInTheDocument();
   expect(screen.getByText('2026-05-08')).toBeInTheDocument();
   expect(screen.getByText('1012345')).toBeInTheDocument();
   expect(screen.getAllByText('blink/renderer')).toHaveLength(2);

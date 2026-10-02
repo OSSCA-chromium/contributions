@@ -62,7 +62,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
         </div>
       </ChartPanel>
 
-      <ChartPanel title="월별 추이" description="패치 업로드일을 기준으로 집계">
+      <ChartPanel title="월별 추이" description="Created 날짜를 기준으로 집계">
         <div className="h-64 min-w-0" aria-hidden="true">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart accessibilityLayer={false} data={stats.byMonth} margin={{ top: 8, right: 8, bottom: 0, left: -20 }}>

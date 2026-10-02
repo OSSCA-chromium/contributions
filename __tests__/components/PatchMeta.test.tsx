@@ -19,12 +19,12 @@ const contribution: Contribution = {
   excerpt: 'Browser peer connection coverage',
 };
 
-test('detail metadata labels the Gerrit date as upload date', () => {
+test('detail metadata labels the review creation date as Created', () => {
   render(<PatchMeta contribution={contribution} />);
 
-  expect(screen.getByText('업로드일')).toBeInTheDocument();
+  expect(screen.getByText('Created')).toBeInTheDocument();
   expect(screen.getByText('2026-05-08')).toBeInTheDocument();
-  expect(screen.queryByText('결과일')).not.toBeInTheDocument();
+  expect(screen.queryByText('Closed')).not.toBeInTheDocument();
 });
 
 test('detail metadata shows author, taxonomy, optional repository, review ID, and status', () => {

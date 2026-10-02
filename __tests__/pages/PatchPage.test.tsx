@@ -34,8 +34,8 @@ test('detail sidebar shows metadata, related patches, and the current journey se
   expect(within(sidebar).getByRole('link', { name: 'Related rendering fix' })).toHaveAttribute('href', '/patches/124');
   expect(within(sidebar).getByRole('link', { name: 'Gerrit 리뷰 123' })).toHaveAttribute('href', 'https://crrev.com/c/123');
   const journey = within(sidebar).getByRole('list', { name: '패치 진행 여정' });
-  expect(within(journey).getByText('업로드일')).toBeInTheDocument();
-  expect(within(journey).queryByText('결과일')).not.toBeInTheDocument();
+  expect(within(journey).getByText('Created')).toBeInTheDocument();
+  expect(within(journey).queryByText('Closed')).not.toBeInTheDocument();
   expect(screen.getByText('Patch retrospective')).toBeInTheDocument();
   expect(screen.getByTestId('mermaid')).toHaveAttribute('data-container', 'patch-content-123');
   expect(document.getElementById('patch-content-123')).toContainElement(screen.getByText('Patch retrospective'));

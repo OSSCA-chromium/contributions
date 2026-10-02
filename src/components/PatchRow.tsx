@@ -22,7 +22,7 @@ export default function PatchRow({
       className="patch-grid patch-grid-fold patch-grid-row"
     >
       <div role="cell" className="patch-cell-date font-mono text-[12px] text-on-surface-variant">
-        <span className="patch-cell-mobile-label">업로드일</span>
+        <span className="patch-cell-mobile-label">Created</span>
         <time dateTime={item.date}>{item.date}</time>
       </div>
 

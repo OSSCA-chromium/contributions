@@ -16,7 +16,7 @@ export default function StatsPage() {
       <h1 className="page-title mb-6">
         통계
       </h1>
-      <p className="mb-6 max-w-[75ch] text-sm text-on-surface-variant">프로젝트별 기여 분포와 연관 패치, 업로드 추이와 처리 현황을 함께 살펴보세요.</p>
+      <p className="mb-6 max-w-[75ch] text-sm text-on-surface-variant">리뷰 생성 추이와 기여자별 분포, 처리 현황을 함께 살펴보세요.</p>
       <StatsView items={items} />
     </div>
   );

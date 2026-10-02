@@ -57,10 +57,12 @@ cp data/contributions/template.md data/contributions/6520751.md
   적으세요.
 - `resolvedDate`는 Gerrit에서 정확한 merge 또는 abandon 날짜를 확인한 경우에만
   추가하세요. `date`는 결과와 관계없이 최초 업로드 날짜로 유지합니다.
+- 사이트에는 `date`를 **Created**, `resolvedDate`를 **Closed**로 표시합니다.
+  리뷰 중이거나 종료 날짜가 확인되지 않은 항목에는 Closed를 표시하지 않습니다.
 - Gerrit의 최초 생성 시각 `created`를 `date`, 실제 제출 완료 시각 `submitted`를
   머지된 CL의 `resolvedDate`로 기록합니다. Abandoned CL은 마지막 abandon
   이벤트의 시각을 확인합니다. 댓글·patchset 변경에도 바뀌는 `updated`는
-  업로드일이나 결과 날짜로 사용하지 않습니다. 날짜는 모두 UTC의 `YYYY-MM-DD`입니다.
+  Created나 Closed 날짜로 사용하지 않습니다. 날짜는 모두 UTC의 `YYYY-MM-DD`입니다.
 - 독립 GitHub PR은 최초 생성 시각 `created_at`과 머지 시각 `merged_at`을
   같은 UTC 기준으로 사용합니다. 리뷰 중인 항목에는 결과 날짜를 적지 않습니다.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:

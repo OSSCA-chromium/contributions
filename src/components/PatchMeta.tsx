@@ -12,7 +12,7 @@ export default function PatchMeta({ contribution }: { contribution: Contribution
         <dd><ContributorAvatar username={contribution.author} size={36} linkToProfile /></dd>
       </div>
       <div className="grid grid-cols-[66px_minmax(0,1fr)] items-baseline gap-2">
-        <dt className="text-on-surface-variant">업로드일</dt>
+        <dt className="text-on-surface-variant">Created</dt>
         <dd>
           <time dateTime={contribution.date}>{contribution.date}</time>
         </dd>
