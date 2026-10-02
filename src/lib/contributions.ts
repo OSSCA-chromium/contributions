@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { markdownToHtml } from '@/lib/markdown';
 import { isValidGithubUsername } from '@/lib/github';
-import type { Contribution, ContributionStatus } from '@/lib/types';
+import type { Contribution, ContributionStatus, ExternalLink } from '@/lib/types';
 
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
 
@@ -36,6 +36,24 @@ function normalizePositiveId(value: unknown): number | undefined {
     : undefined;
 }
 
+function normalizeExternalLinks(value: unknown): ExternalLink[] {
+  if (!Array.isArray(value)) return [];
+  const links = new Map<string, ExternalLink>();
+  for (const item of value) {
+    if (!item || typeof item !== 'object' ||
+        typeof item.title !== 'string' || !item.title.trim() ||
+        typeof item.url !== 'string') continue;
+    try {
+      const url = new URL(item.url.trim());
+      if (url.protocol !== 'https:') continue;
+      if (!links.has(url.href)) links.set(url.href, { title: item.title.trim(), url: url.href });
+    } catch {
+      // Ignore malformed references when reading unvalidated local records.
+    }
+  }
+  return [...links.values()];
+}
+
 function parseContribution(
   slug: string,
   data: Record<string, unknown>,
@@ -44,6 +62,7 @@ function parseContribution(
 ): Contribution {
   const keywords = normalizeStringArray(data.keywords ?? data.labels);
   const labels = normalizeStringArray(data.labels ?? data.keywords);
+  const externalLinks = normalizeExternalLinks(data.externalLinks);
   const excerpt = content
     .split('\n\n')
     .slice(0, 2)
@@ -58,6 +77,7 @@ function parseContribution(
     date: normalizeDate(data.date) ?? new Date().toISOString().slice(0, 10),
     author: typeof data.author === 'string' && data.author ? data.author : '익명',
     contributionUrl: typeof data.contribution_url === 'string' ? data.contribution_url : '',
+    ...(externalLinks.length ? { externalLinks } : {}),
     module: typeof data.module === 'string' ? data.module : '',
     kind: typeof data.kind === 'string' ? data.kind : '',
     keywords,

@@ -143,6 +143,20 @@ export default async function PatchPage({ params }: ParamsProps) {
           <JourneyStepper contribution={contribution} />
         </SideCard>
 
+        {!!contribution.externalLinks?.length && (
+          <SideCard title="관련 이슈·PR">
+            <ul role="list" className="m-0 list-none p-0">
+              {contribution.externalLinks.map((link) => (
+                <li key={link.url} className="border-t border-mline py-2.5 first:border-t-0 first:pt-0">
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
+                    {link.title} <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </SideCard>
+        )}
+
         {related.length > 0 && (
           <SideCard title="연관 패치">
             {/* WebKit drops the list role when list-style is none. */}
