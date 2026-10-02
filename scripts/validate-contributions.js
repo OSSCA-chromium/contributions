@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const MODULES = require('../src/lib/module-taxonomy.json');
 
 const REQUIRED = ['title', 'date', 'author', 'contribution_url', 'status'];
 const STATUSES = ['in review', 'merged', 'abandoned'];
@@ -84,6 +85,11 @@ function validateFrontmatter(data) {
         (typeof data[field] !== 'string' || data[field].trim() === '')) {
       errors.push(`${field} must be a non-empty string`);
     }
+  }
+
+  if (typeof data.module === 'string' &&
+      !Object.prototype.hasOwnProperty.call(MODULES, data.module)) {
+    errors.push(`module must be one of: ${Object.keys(MODULES).join(', ')}`);
   }
 
   for (const field of ['issue', 'crbug']) {

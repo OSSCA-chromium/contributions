@@ -46,7 +46,8 @@ Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists
 
 Contribution frontmatter (see `data/contributions/template.md`): `title`,
 `date` (the original Gerrit CL upload date, YYYY-MM-DD), `author` (GitHub
-username), `contribution_url`, `module` (single Chromium module/directory),
+username), `contribution_url`, `module` (one stable area from
+`src/lib/module-taxonomy.json`; detailed paths belong in `keywords`),
 `kind` (single change type such as fix/feature/refactor/test/docs/cleanup),
 `keywords` (ordered search-term array), and `status` (`in review` | `merged` |
 `abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`. New records start

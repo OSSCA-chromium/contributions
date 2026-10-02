@@ -42,7 +42,7 @@ cp data/contributions/template.md data/contributions/6520751.md
 | `date`             | CL을 처음 업로드한 날짜, `YYYY-MM-DD`   | `2026-07-25`                  |
 | `author`           | 본인 GitHub ID                          | `amoseui`                     |
 | `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
-| `module`           | 수정한 Chromium 모듈 또는 디렉터리      | `docs`                        |
+| `module`           | 아래 기준의 상위 기능 영역 하나         | `blink`                       |
 | `kind`             | 변경 유형                               | `fix`                         |
 | `keywords`         | 기존 검색어와 추가 검색어의 배열        | `["docs", "fix"]`            |
 | `status`           | 최초 `in review`, 결과에 따라 갱신      | `in review`                   |
@@ -63,6 +63,41 @@ cp data/contributions/template.md data/contributions/6520751.md
   ID를 적으세요.
 - **템플릿의 안내 주석(`# github.com/GitHubId`, `# Add XXXXX from ...` 등)은
   모두 지우세요.**
+
+### 모듈 분류 기준
+
+`module`은 **기여의 핵심 동작을 담당하는 상위 영역**입니다. 세부 디렉터리,
+API 이름, 변경 유형을 새 모듈로 만들지 않습니다. 여러 영역을 수정한 경우
+주된 동작이 바뀐 영역 하나를 선택하고, 보조 영역은 `keywords`에 기록합니다.
+`AUTHORS`, 공통 빌드 설정이나 테스트 baseline만으로 모듈을 결정하지 않습니다.
+
+| 값 | 범위 |
+| --- | --- |
+| `base` | 공통 자료 구조, 파일 감시 등 기반 라이브러리 |
+| `blink` | DOM, CSS, 웹 API, 렌더링과 해당 기능의 WPT |
+| `browser` | 브라우저 기능과 공용 기능 컴포넌트 |
+| `content` | 브라우저·렌더러 프로세스 통합과 웹 콘텐츠 실행 |
+| `devtools` | Chrome DevTools 프런트엔드 |
+| `docs` | 공통 개발 문서와 빌드·테스트·개발 환경 가이드 |
+| `extensions` | 확장 프로그램, WebView와 확장 API |
+| `graphics` | GPU, Viz, 컴포지팅과 그래픽 출력 |
+| `media` | 오디오·비디오 파이프라인과 코덱 |
+| `network` | 네트워크 프로토콜, DNS와 네트워크 서비스 |
+| `platform` | ChromeOS, 장치 연동과 원격 실행 |
+| `security` | 암호화, 인증, 인증서, Safe Browsing과 샌드박스 |
+| `storage` | 파일 시스템 저장소, 할당량과 저장소 데이터베이스 |
+| `ui` | 공통 UI, Views, 접근성과 플랫폼 위젯 |
+| `v8` | JavaScript·WebAssembly 엔진 |
+
+- `net/dns`는 `network`, `components/viz`는 `graphics`,
+  `chrome/browser/ash`는 `platform`으로 기록합니다.
+- 특정 기능을 설명하는 문서는 해당 영역을 선택합니다. 예를 들어 샌드박스
+  문서는 `security`, Views 예제 문서는 `ui`입니다. 공통 개발 가이드는 `docs`입니다.
+- 저장소는 별도의 `repo`, 변경 유형은 `kind`, 세부 경로와 API 이름은
+  `keywords`로 구분합니다. 예를 들어 독립 CSS WPT도 모듈은 `blink`이고,
+  저장소는 `web-platform-tests/wpt`입니다.
+- 기존 세부 모듈 값은 검색어를 잃지 않도록 `keywords`에 보존합니다.
+  허용 목록을 늘릴 때는 기존 영역으로 분류할 수 없는지 먼저 검토합니다.
 
 ### 본문 작성
 

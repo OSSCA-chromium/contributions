@@ -1,3 +1,5 @@
+import { getModuleLabel } from '@/lib/modules';
+
 type Axis = 'module' | 'kind';
 
 export default function AxisChip({
@@ -12,6 +14,7 @@ export default function AxisChip({
   onClick: () => void;
 }) {
   const axisLabel = axis === 'module' ? '모듈' : '종류';
+  const displayValue = axis === 'module' ? getModuleLabel(value) : value;
 
   return (
     <button
@@ -27,7 +30,7 @@ export default function AxisChip({
             : 'border-transparent bg-primary-weak text-primary hover:border-primary'
       }`}
     >
-      {value}
+      {displayValue}
     </button>
   );
 }

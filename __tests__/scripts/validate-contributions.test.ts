@@ -28,7 +28,7 @@ test('canonical frontmatter accepts keywords without labels', () => {
   const { labels, ...legacyWithoutLabels } = valid;
   expect(validateFrontmatter({
     ...legacyWithoutLabels,
-    module: 'blink/renderer',
+    module: 'blink',
     kind: 'fix',
     keywords: ['web-standards'],
     repo: 'chromium/src',

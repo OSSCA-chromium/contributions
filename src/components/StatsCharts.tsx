@@ -5,6 +5,7 @@ import { Bar, BarChart, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis
 import type { Stats } from '@/lib/types';
 import { CONTRIBUTION_STATUS_LABELS as STATUS_LABELS } from '@/lib/status-labels';
 import ContributorAvatar from '@/components/ContributorAvatar';
+import { getModuleLabel } from '@/lib/modules';
 
 const STATUS_COLORS: Record<string, string> = {
   merged: 'var(--chart-merged)', 'in review': 'var(--chart-in-review)',
@@ -110,7 +111,7 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
         <ol className="space-y-4" aria-label="모듈별 기여 수">
           {topModules.map(module => <li key={module.module}>
             <div className="mb-1.5 flex items-baseline justify-between gap-3 text-sm">
-              <span className="min-w-0 break-all font-medium" title={module.module}>{module.module}</span>
+              <span className="min-w-0 break-words font-medium" title={getModuleLabel(module.module)}>{getModuleLabel(module.module)}</span>
               <span className="shrink-0 text-xs tabular-nums text-on-surface-variant">{module.count}건 · {share(module.count)}%</span>
             </div>
             <div className="h-2 overflow-hidden rounded-full bg-m3" aria-hidden="true"><div className="h-full rounded-full bg-c2" style={{ width: `${share(module.count)}%` }} /></div>

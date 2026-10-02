@@ -1,6 +1,7 @@
 import type { Contribution } from '@/lib/types';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import StatusBadge from '@/components/StatusBadge';
+import { getModuleLabel } from '@/lib/modules';
 
 export default function PatchMeta({ contribution }: { contribution: Contribution }) {
 
@@ -18,7 +19,7 @@ export default function PatchMeta({ contribution }: { contribution: Contribution
       </div>
       <div className="grid grid-cols-[66px_minmax(0,1fr)] items-baseline gap-2">
         <dt className="text-on-surface-variant">모듈</dt>
-        <dd>{contribution.module || '기타'}</dd>
+        <dd>{getModuleLabel(contribution.module) || '기타'}</dd>
       </div>
       <div className="grid grid-cols-[66px_minmax(0,1fr)] items-baseline gap-2">
         <dt className="text-on-surface-variant">종류</dt>
