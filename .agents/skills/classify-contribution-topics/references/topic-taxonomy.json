@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "axis": "work-purpose",
+  "topics": [
+    {
+      "id": "retirement",
+      "label": "만료·불용 코드 정리",
+      "description": "수명을 다한 feature flag, 운영 지표, 임시 호환 코드와 불용 코드를 제거",
+      "subtopics": [
+        {
+          "id": "feature-flags",
+          "label": "Feature flag·switch 제거",
+          "description": "수명이 끝난 rollout flag, kill switch와 명령행 switch 제거"
+        },
+        {
+          "id": "expired-metrics",
+          "label": "만료 운영 지표 제거",
+          "description": "유효 기간이 끝난 histogram과 계측 코드 제거"
+        },
+        {
+          "id": "temporary-compatibility",
+          "label": "임시 호환·유예 코드 제거",
+          "description": "이미 완료된 pref migration, workaround와 CHECK 유예 처리 제거"
+        },
+        {
+          "id": "unused-code",
+          "label": "불용 필드·include·주석 정리",
+          "description": "실제로 사용하지 않는 필드, include와 오래된 TODO 제거"
+        }
+      ]
+    },
+    {
+      "id": "modernization",
+      "label": "API·구현 현대화",
+      "description": "새 API, 타입, 프레임워크나 공통 구현 방식으로 이전",
+      "subtopics": [
+        {
+          "id": "hash-api",
+          "label": "Hash API 전환",
+          "description": "기존 crypto/sha2·SecureHash 호출을 crypto/hash API로 이전"
+        },
+        {
+          "id": "lit-migration",
+          "label": "Lit 전환",
+          "description": "DevTools UI의 렌더링 구현을 Lit으로 이전"
+        },
+        {
+          "id": "cpp-standard",
+          "label": "C++ 표준 API·수학 상수 전환",
+          "description": "문자열 검사와 수학 상수를 C++20·C++23 표준 API로 교체"
+        },
+        {
+          "id": "sql-api",
+          "label": "SQL accessor·transaction 정비",
+          "description": "수동 시간 변환을 sql::Statement 접근자로 바꾸거나 scoped transaction을 사용"
+        },
+        {
+          "id": "types-buffers",
+          "label": "타입·buffer API 정비",
+          "description": "타입 억제·any·원시 buffer 접근을 명시적 타입과 안전한 API로 변경"
+        },
+        {
+          "id": "shared-deprecated-api",
+          "label": "폐기 API·공통 구현 정비",
+          "description": "불필요한 deprecated overload를 제거하고 재사용할 구현·문자열을 공통화"
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "label": "웹 표준·엔진 동작 개선",
+      "description": "명세, 언어 규칙, Web API나 디버거 프로토콜의 기대 동작과 구현을 일치",
+      "subtopics": [
+        {
+          "id": "web-api-contracts",
+          "label": "Web API 계약·호출 순서 정합성",
+          "description": "IDL·객체 정체성·예외·반환값·이벤트 순서를 API 계약과 일치"
+        },
+        {
+          "id": "css-layout",
+          "label": "CSS·레이아웃 규칙 준수",
+          "description": "CSS 단위·transform·pseudo element·세로쓰기 규칙에 맞게 동작 개선"
+        },
+        {
+          "id": "text-parsing",
+          "label": "문자·구문 해석 개선",
+          "description": "CSS NUL 처리, Unicode 대문자화와 HTML 삽입 모드의 해석 규칙 개선"
+        },
+        {
+          "id": "mime-manifest",
+          "label": "MIME·manifest 프로토콜 처리",
+          "description": "MIME 매칭과 payment manifest Link header의 해석·오류 처리 개선"
+        },
+        {
+          "id": "debugger-state",
+          "label": "디버거 상태 유지",
+          "description": "Debugger.setSkipAllPauses 상태를 내부 실행과 navigation에서 보존"
+        },
+        {
+          "id": "js-numeric-time",
+          "label": "JavaScript 수치·시간 계산",
+          "description": "parseInt overflow와 시간대 offset의 수치 처리 규칙 개선"
+        }
+      ]
+    },
+    {
+      "id": "reliability",
+      "label": "안정성·자원 관리 개선",
+      "description": "오류·권한·취소·수명·격리 경계를 처리하고 자원 효율을 개선",
+      "subtopics": [
+        {
+          "id": "error-diagnostics",
+          "label": "오류 전달·실패 진단 강화",
+          "description": "파일 I/O 실패·API 실패 원인을 보존하고 진단·런타임 검사를 강화"
+        },
+        {
+          "id": "file-watchers",
+          "label": "파일 감시·이벤트 추적 개선",
+          "description": "inotify 순서·이동·mmap 알림과 Windows tracker의 과거 경로 타입 추적 개선"
+        },
+        {
+          "id": "async-lifetimes",
+          "label": "취소·종료·객체 수명 처리",
+          "description": "비동기 취소, transaction commit 이후 호출, cache 종료와 overlay 수명 처리"
+        },
+        {
+          "id": "file-properties",
+          "label": "파일 속성·생성 권한 보존",
+          "description": "umask, OPFS UTF-8 이름과 네이티브 MIME 타입 보존"
+        },
+        {
+          "id": "storage-isolation",
+          "label": "저장소 권한·격리 경계 검증",
+          "description": "StorageKey·isolated filesystem 경계와 transfer token의 권한을 일치"
+        },
+        {
+          "id": "cache-quota-data",
+          "label": "캐시·할당량·데이터 정리",
+          "description": "record version 캐시, quota 계산과 CacheStorage 삭제 처리를 정비"
+        }
+      ]
+    },
+    {
+      "id": "tests",
+      "label": "테스트 정비·검증 확대",
+      "description": "회귀 검증, 테스트 기반, 테스트 이전·재활성화·baseline 정비",
+      "subtopics": [
+        {
+          "id": "file-watcher-regressions",
+          "label": "파일 감시 회귀 검증",
+          "description": "파일·디렉터리·symlink 생성과 속성 변경 알림의 플랫폼별 기대 동작을 검증"
+        },
+        {
+          "id": "temporary-disable",
+          "label": "전환 중 테스트 일시 비활성화",
+          "description": "UI·test runner 전환을 진행하기 위해 기존 layout/web test를 잠시 비활성화"
+        },
+        {
+          "id": "unit-test-migration",
+          "label": "Unit test 이전·중복 테스트 제거",
+          "description": "기존 layout test를 unit test로 옮기고 대체된 이전 테스트를 제거"
+        },
+        {
+          "id": "baselines-reactivation",
+          "label": "Baseline 갱신·테스트 재활성화",
+          "description": "UI 전환 결과에 맞는 기대 출력을 갱신하고 비활성 테스트를 재활성화"
+        },
+        {
+          "id": "api-boundaries",
+          "label": "API·입력 경계 검증",
+          "description": "WPT, DOM crash, quota 실패, parser 분기와 compile-time 호출 계약을 검증"
+        },
+        {
+          "id": "test-infrastructure",
+          "label": "테스트 환경·도구 정비",
+          "description": "mock time, DOM dump와 기존 테스트의 가독성을 개선"
+        }
+      ]
+    },
+    {
+      "id": "docs",
+      "label": "문서·개발 환경 정비",
+      "description": "문서 링크, 가이드, 편집기 설정과 개발 도구 안내를 정비",
+      "subtopics": [
+        {
+          "id": "link-paths",
+          "label": "문서 링크 경로 오류 수정",
+          "description": "상대·절대 경로의 기준, 디렉터리 깊이와 잘못 지정된 경로를 수정"
+        },
+        {
+          "id": "moved-replaced-targets",
+          "label": "이동·대체된 문서·코드 참조 갱신",
+          "description": "이름 변경·이동·통합된 대상과 잘못된 예시를 현재 유효한 참조 대상으로 교체"
+        },
+        {
+          "id": "obsolete-references",
+          "label": "폐기 문서·코드 참조 제거",
+          "description": "대체 대상 없이 삭제된 문서·코드의 링크와 종료된 기능의 설명을 제거"
+        },
+        {
+          "id": "url-resources",
+          "label": "URL 형식·이미지 링크 수정",
+          "description": "스킴·이중 slash·소스 보기 URL과 이미지 참조를 올바르게 표시"
+        },
+        {
+          "id": "developer-guidance",
+          "label": "개발 환경·기술 안내 현행화",
+          "description": "폐기된 편집기 확장과 변경된 rebaseline·암호화 backend 안내를 갱신"
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "label": "사용자 경험·렌더링 개선",
+      "description": "브라우저 조작, 시각적 출력, 플랫폼 단축키 등 사용자 경험을 개선",
+      "subtopics": [
+        {
+          "id": "browser-usability",
+          "label": "브라우저 사용성 개선",
+          "description": "URL tooltip과 자식 창의 예약 단축키 전달을 개선"
+        },
+        {
+          "id": "rendering-visibility",
+          "label": "가시 영역·렌더링 판정 개선",
+          "description": "조상 clip을 반영해 checkerboarding의 가시 영역을 올바르게 판단"
+        }
+      ]
+    }
+  ]
+}
