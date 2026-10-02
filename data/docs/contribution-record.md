@@ -39,14 +39,14 @@ cp data/contributions/template.md data/contributions/6520751.md
 | 필드               | 값                                      | 예                            |
 | ------------------ | --------------------------------------- | ----------------------------- |
 | `title`            | Gerrit에 올린 commit 제목 그대로        | `"Fix siso_tips.md link"`     |
-| `date`             | CL을 처음 업로드한 날짜, `YYYY-MM-DD`   | `2026-07-25`                  |
+| `date`             | Gerrit `created`의 UTC 날짜             | `2026-07-25`                  |
 | `author`           | 본인 GitHub ID                          | `amoseui`                     |
 | `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
 | `module`           | 아래 기준의 상위 기능 영역 하나         | `blink`                       |
 | `kind`             | 변경 유형                               | `fix`                         |
 | `keywords`         | 기존 검색어와 추가 검색어의 배열        | `["docs", "fix"]`            |
 | `status`           | 최초 `in review`, 결과에 따라 갱신      | `in review`                   |
-| `resolvedDate`     | 확인된 결과 날짜, `YYYY-MM-DD` (선택)   | `2026-08-01`                  |
+| `resolvedDate`     | 확인된 머지·중단 UTC 날짜 (선택)        | `2026-08-01`                  |
 
 - `module`은 기여한 코드 영역 하나를, `kind`는 `fix`, `feature`, `refactor`,
   `test`, `docs`, `cleanup` 등 변경 유형 하나를 적습니다. 세부 주제는
@@ -57,6 +57,12 @@ cp data/contributions/template.md data/contributions/6520751.md
   적으세요.
 - `resolvedDate`는 Gerrit에서 정확한 merge 또는 abandon 날짜를 확인한 경우에만
   추가하세요. `date`는 결과와 관계없이 최초 업로드 날짜로 유지합니다.
+- Gerrit의 최초 생성 시각 `created`를 `date`, 실제 제출 완료 시각 `submitted`를
+  머지된 CL의 `resolvedDate`로 기록합니다. Abandoned CL은 마지막 abandon
+  이벤트의 시각을 확인합니다. 댓글·patchset 변경에도 바뀌는 `updated`는
+  업로드일이나 결과 날짜로 사용하지 않습니다. 날짜는 모두 UTC의 `YYYY-MM-DD`입니다.
+- 독립 GitHub PR은 최초 생성 시각 `created_at`과 머지 시각 `merged_at`을
+  같은 UTC 기준으로 사용합니다. 리뷰 중인 항목에는 결과 날짜를 적지 않습니다.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub
@@ -107,6 +113,19 @@ API 이름, 변경 유형을 새 모듈로 만들지 않습니다. 여러 영역
   됩니다.
 - 템플릿에 있는 `https://example.com` 같은 placeholder 링크는 반드시
   제거하세요.
+
+### 필요한 데이터만 기록하기
+
+- `date`와 `resolvedDate`는 최초 업로드와 결과 확정이라는 서로 다른 시점을
+  나타냅니다. 결과가 확인된 경우 두 날짜를 구분해 기록합니다.
+- `module`은 기능 영역, `kind`는 변경 유형, `keywords`는 검색어입니다.
+  같은 내용을 별도의 `labels` 필드로 중복 입력하지 않습니다.
+- `repo`, `issue`, `crbug`, `related`, `externalLinks`는 확인된 정보가 있을 때만
+  적습니다. 기본 저장소인 `chromium/src`와 비어 있는 선택 필드는 생략할 수 있습니다.
+- 파생 이슈·PR은 원본 기여의 `externalLinks`로 연결합니다. 자동 WPT export와
+  후속 테스트 PR을 새 기여로 중복 집계하지 않습니다.
+- 안내 주석·문구, 예시 제목과 placeholder 링크는 실제 기록에서 제거합니다.
+  테스트 코드 안에서 쓰는 `example.com` 같은 예시 값은 그대로 둡니다.
 
 ## 2. 로컬 검증
 

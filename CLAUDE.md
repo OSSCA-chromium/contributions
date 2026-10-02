@@ -45,7 +45,7 @@ Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists
 ## Data conventions
 
 Contribution frontmatter (see `data/contributions/template.md`): `title`,
-`date` (the original Gerrit CL upload date, YYYY-MM-DD), `author` (GitHub
+`date` (the UTC date of Gerrit `created`, YYYY-MM-DD), `author` (GitHub
 username), `contribution_url`, `module` (one stable area from
 `src/lib/module-taxonomy.json`; detailed paths belong in `keywords`),
 `kind` (single change type such as fix/feature/refactor/test/docs/cleanup),
@@ -53,7 +53,9 @@ username), `contribution_url`, `module` (one stable area from
 `abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`. New records start
 `in review`; update status to `merged` or `abandoned` after the Gerrit result is
 confirmed. Add optional `resolvedDate` only when the exact result date is
-verified; never change `date` to the resolution date. Legacy `labels` values
+verified: UTC `submitted` for merged CLs or the last abandon event for
+abandoned CLs, never `updated`. Independent GitHub PRs use UTC `created_at`
+and `merged_at`. Never change `date` to the resolution date. Legacy `labels` values
 were copied to `keywords` in their original order to preserve search terms;
 new records use `keywords` without `labels`. Add optional `repo`, `issue`,
 `crbug`, or `related` only when verified.
