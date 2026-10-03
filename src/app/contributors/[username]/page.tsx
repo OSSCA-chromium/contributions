@@ -4,7 +4,6 @@ import {
   getContributorByUsername,
   getContributorSlugs,
 } from '@/lib/contributors';
-import ContributorAvatar from '@/components/ContributorAvatar';
 import ContributorView from '@/components/ContributorView';
 
 interface ParamsProps {
@@ -45,31 +44,7 @@ export default async function ContributorPage({ params }: ParamsProps) {
 
   return (
     <div>
-      {/* 프로필 헤더 */}
-      <header className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-        <a
-          href={`https://github.com/${username}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ContributorAvatar username={username} size={96} />
-        </a>
-        <div className="text-center sm:text-left">
-          <h1 className="page-title mb-6">
-            {username}
-          </h1>
-          <a
-            href={`https://github.com/${username}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link hover:underline"
-          >
-            github.com/{username}
-          </a>
-        </div>
-      </header>
-
-      <ContributorView contributions={contributions} />
+      <ContributorView username={username} contributions={contributions} />
     </div>
   );
 }
