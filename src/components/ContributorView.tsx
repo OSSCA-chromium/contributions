@@ -36,7 +36,7 @@ export default function ContributorView({
   const strip = [
     { value: total, label: '총 기여' },
     { value: merged, label: 'Merged' },
-    { value: inReview, label: 'In Review' },
+    { value: inReview, label: 'In review' },
     { value: abandoned, label: 'Abandoned' },
   ];
 
@@ -67,7 +67,7 @@ export default function ContributorView({
             ))}
           </div>
 
-          <h2 className="mb-3.5 text-[12px] font-semibold uppercase tracking-[0.09em] text-on-surface-variant">
+          <h2 className="mb-3.5 section-title">
             컨트리뷰션
           </h2>
           <PatchTable items={filtered} />

@@ -12,7 +12,7 @@ export default function SchedulePage() {
 
   return (
     <div>
-      <h1 className="font-display mb-6 text-3xl font-semibold tracking-tight text-on-surface">일정</h1>
+      <h1 className="page-title mb-6">일정</h1>
       <ScheduleView meetings={meetings} />
     </div>
   );

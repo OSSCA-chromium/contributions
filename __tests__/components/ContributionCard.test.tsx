@@ -19,7 +19,7 @@ const c = {
 test('카드에 제목/상태/링크가 표시된다', () => {
   render(<ContributionCard contribution={c} />);
   expect(screen.getByText('테스트 제목')).toBeInTheDocument();
-  expect(screen.getByText('MERGED')).toBeInTheDocument();
+  expect(screen.getByText('Merged')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /테스트 제목/ })).toHaveAttribute(
     'href',
     '/patches/123'

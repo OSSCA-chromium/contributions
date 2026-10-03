@@ -60,9 +60,9 @@ test('archive table shows upload date, review ID, axes, authors, and all statuse
   expect(screen.getByText('종류: test')).toBeInTheDocument();
   expect(screen.getByText('devtools/devtools-frontend')).toBeInTheDocument();
   expect(screen.getByText('alice')).toBeInTheDocument();
-  expect(screen.getByText('IN REVIEW')).toBeInTheDocument();
-  expect(screen.getByText('MERGED')).toBeInTheDocument();
-  expect(screen.getByText('ABANDONED')).toBeInTheDocument();
+  expect(screen.getByText('In review')).toBeInTheDocument();
+  expect(screen.getByText('Merged')).toBeInTheDocument();
+  expect(screen.getByText('Abandoned')).toBeInTheDocument();
 });
 
 test('archive title links to its local patch detail route', () => {

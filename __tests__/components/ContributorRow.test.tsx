@@ -16,10 +16,10 @@ test('유효한 기여자 행에 username·상태별 건수·프로필 링크가
     />
   );
   expect(screen.getByText('octocat')).toBeInTheDocument();
-  expect(screen.getByText('TOTAL')).toBeInTheDocument();
-  expect(screen.getByText('MERGED')).toBeInTheDocument();
-  expect(screen.getByText('IN REVIEW').parentElement).toHaveTextContent('IN REVIEW1');
-  expect(screen.getByText('ABANDONED').parentElement).toHaveTextContent('ABANDONED2');
+  expect(screen.getByText('총 기여')).toBeInTheDocument();
+  expect(screen.getByText('Merged')).toBeInTheDocument();
+  expect(screen.getByText('In review').parentElement).toHaveTextContent('In review1');
+  expect(screen.getByText('Abandoned').parentElement).toHaveTextContent('Abandoned2');
   expect(screen.getByText('7')).toBeInTheDocument(); // total
   expect(screen.getByText('4')).toBeInTheDocument(); // merged
   expect(screen.getByText('1')).toBeInTheDocument(); // in review
@@ -45,6 +45,6 @@ test('유효하지 않은 username은 링크 없이 렌더된다', () => {
     />
   );
   expect(screen.getByText('홍길동')).toBeInTheDocument();
-  expect(screen.getByText('ABANDONED').parentElement).toHaveTextContent('ABANDONED0');
+  expect(screen.getByText('Abandoned').parentElement).toHaveTextContent('Abandoned0');
   expect(screen.queryByRole('link')).toBeNull();
 });

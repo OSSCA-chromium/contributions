@@ -55,7 +55,7 @@ function relatedPatches(contribution: Contribution): Contribution[] {
 function SideCard({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="overflow-hidden rounded-2xl bg-m1">
-      <h2 className="m-0 bg-m2 px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-on-surface-variant">
+      <h2 className="m-0 bg-m2 px-4 py-2.5 text-[11px] font-semibold text-on-surface-variant">
         {title}
       </h2>
       <div className="px-4 py-3.5">{children}</div>
@@ -75,9 +75,8 @@ export default async function PatchPage({ params }: ParamsProps) {
   const related = relatedPatches(contribution);
 
   return (
-    // The mockup folds to a single column at <=900px, below Tailwind's `lg`,
-    // so the two-column layout and the sticky sidebar both key off min-[901px].
-    <div className="grid grid-cols-1 items-start gap-[26px] min-[901px]:grid-cols-[minmax(0,1fr)_288px] min-[901px]:gap-10">
+    // Keep the sidebar beside the article only when both have enough room.
+    <div className="grid grid-cols-1 items-start gap-[26px] min-[1024px]:grid-cols-[minmax(0,1fr)_320px] min-[1024px]:gap-10">
       <article className="min-w-0 break-words">
         <header className="mb-6 border-b border-mline pb-[18px]">
           <p className="mb-2.5 text-[13px] text-on-surface-variant">
@@ -86,7 +85,7 @@ export default async function PatchPage({ params }: ParamsProps) {
             </Link>{' '}
             / <span className="font-mono">{contribution.slug}</span>
           </p>
-          <h1 className="mb-3.5 text-[29px] font-bold leading-[1.3] tracking-[-0.025em]">
+          <h1 className="page-title mb-6">
             {contribution.title}
           </h1>
           <div className="flex flex-wrap items-center gap-1.5">
@@ -102,7 +101,7 @@ export default async function PatchPage({ params }: ParamsProps) {
         {/* HTML Content */}
         <div
           id={`patch-content-${slug}`}
-          className="prose dark:prose-invert max-w-none [overflow-wrap:anywhere]"
+          className="reading-content prose dark:prose-invert [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: contribution.contentHtml ?? '' }}
         />
 
@@ -135,7 +134,7 @@ export default async function PatchPage({ params }: ParamsProps) {
         </div>
       </article>
 
-      <aside className="grid min-w-0 gap-5 break-words text-[13.5px] min-[901px]:sticky min-[901px]:top-[74px]">
+      <aside className="grid min-w-0 gap-5 break-words text-[13.5px] min-[1024px]:sticky min-[1024px]:top-[74px]">
         <SideCard title="기여 정보">
           <PatchMeta contribution={contribution} />
         </SideCard>
