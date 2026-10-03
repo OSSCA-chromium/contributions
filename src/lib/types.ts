@@ -32,6 +32,7 @@ export interface SearchIndexItem {
   slug: string;
   title: string;
   author: string;
+  contributionUrl?: string;
   repo?: string;
   module: string;
   kind: string;

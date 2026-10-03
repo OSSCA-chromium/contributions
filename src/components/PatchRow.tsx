@@ -28,7 +28,19 @@ export default function PatchRow({
 
       <div role="cell" className="patch-cell-id font-mono text-[12px] text-on-surface-variant">
         <span className="patch-cell-mobile-label">리뷰 ID</span>
-        <span>{item.slug}</span>
+        {item.contributionUrl ? (
+          <a
+            href={item.contributionUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${item.contributionUrl.startsWith('https://github.com/') ? 'GitHub PR' : 'Gerrit 리뷰'} ${item.slug}`}
+            className="text-link hover:underline"
+          >
+            {item.slug}
+          </a>
+        ) : (
+          <span>{item.slug}</span>
+        )}
       </div>
 
       <div role="cell" className="patch-cell-title min-w-0">
