@@ -41,6 +41,9 @@
   --m3: #e3eaf8;
   --mline: #dde3ec;
   /* Design C — chip and badge pairs (all >= 4.5:1 on their own background). */
+  --color-module: #7c4a03;
+  --color-module-weak: #feefc3;
+  --color-on-module: #ffffff;
   --color-kind: #8430ce;
   --color-kind-weak: #f3e8fd;
   --color-badge-ok: #137333;
@@ -86,6 +89,9 @@
   --m2: #303134;
   --m3: #3c4043;
   --mline: #3c4043;
+  --color-module: #fdd663;
+  --color-module-weak: #3f3219;
+  --color-on-module: #302400;
   --color-kind: #d7aefb;
   --color-kind-weak: #3a2d4d;
   --color-badge-ok: #81c995;
@@ -123,6 +129,9 @@
   --color-m2: var(--m2);
   --color-m3: var(--m3);
   --color-mline: var(--mline);
+  --color-module: var(--color-module);
+  --color-module-weak: var(--color-module-weak);
+  --color-on-module: var(--color-on-module);
   --color-kind: var(--color-kind);
   --color-kind-weak: var(--color-kind-weak);
   --color-badge-ok: var(--color-badge-ok);

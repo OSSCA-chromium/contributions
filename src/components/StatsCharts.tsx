@@ -11,6 +11,8 @@ const STATUS_COLORS: Record<string, string> = {
   merged: 'var(--chart-merged)', 'in review': 'var(--chart-in-review)',
   abandoned: 'var(--chart-abandoned)', unknown: 'var(--chart-unknown)',
 };
+const STATUS_ORDER = ['merged', 'in review', 'abandoned'];
+const STATUS_PRIORITY = new Map(STATUS_ORDER.map((status, index) => [status, index]));
 const TOOLTIP_STYLE = {
   backgroundColor: 'var(--color-background)', border: '1px solid var(--color-outline)',
   borderRadius: 12, color: 'var(--color-on-surface)',
@@ -26,9 +28,11 @@ function ChartPanel({ title, description, children }: { title: string; descripti
 }
 
 export default function StatsCharts({ stats }: { stats: Stats }) {
-  const statusData = stats.byStatus.map(s => ({ name: STATUS_LABELS[s.status] || s.status, value: s.count, key: s.status }));
+  const statusData = [...stats.byStatus]
+    .sort((a, b) => (STATUS_PRIORITY.get(a.status) ?? STATUS_ORDER.length) - (STATUS_PRIORITY.get(b.status) ?? STATUS_ORDER.length))
+    .map(s => ({ name: STATUS_LABELS[s.status] || s.status, value: s.count, key: s.status }));
   const topContributors = stats.topContributors.slice(0, 10);
-  const rankingStatuses = ['merged', 'in review', 'abandoned'];
+  const rankingStatuses = [...STATUS_ORDER];
   if (topContributors.some(contributor => contributor.byStatus.some(entry => entry.status === 'unknown'))) rankingStatuses.push('unknown');
   const topModules = stats.byModule.slice(0, 10);
   const share = (count: number) => Math.round(count / Math.max(stats.total, 1) * 100);

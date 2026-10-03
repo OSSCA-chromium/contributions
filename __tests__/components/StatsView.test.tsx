@@ -25,7 +25,7 @@ function item(
 }
 
 function statValue(label: string) {
-  const labelElement = screen.getByText(label);
+  const labelElement = screen.getByText(label, { selector: 'dt' });
   return labelElement.nextElementSibling;
 }
 
@@ -48,12 +48,19 @@ test('연도를 선택하면 통계 값을 필터링하면서 차트를 유지�
   );
 
   expect(statValue('총 컨트리뷰션')).toHaveTextContent('1');
+  expect(statValue('Merge 완료')).toHaveTextContent('1');
+  expect(statValue('리뷰 중')).toHaveTextContent('0');
   fireEvent.click(screen.getByRole('button', { name: '2025' }));
 
   expect(statValue('총 컨트리뷰션')).toHaveTextContent('2');
+  expect(statValue('Merge 완료')).toHaveTextContent('0');
+  expect(statValue('리뷰 중')).toHaveTextContent('1');
   expect(statValue('기여자 수')).toHaveTextContent('2');
   expect(screen.getByRole('heading', { name: '상태 분포' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: '2026' }));
+  expect(statValue('리뷰 중')).toHaveTextContent('0');
 });
 
 test('세 상태 데이터셋에서 전체 합계와 차트를 표시한다', () => {
@@ -67,8 +74,14 @@ test('세 상태 데이터셋에서 전체 합계와 차트를 표시한다', ()
     />
   );
 
-  expect(statValue('총 컨트리뷰션')).toHaveTextContent('3');
-  expect(statValue('Merged 비율')).toHaveTextContent('33%');
+  expect(screen.getAllByRole('term').map(term => [term.textContent, term.nextElementSibling?.textContent])).toEqual([
+    ['총 컨트리뷰션', '3'],
+    ['Merged 비율', '33%'],
+    ['Merge 완료', '1'],
+    ['리뷰 중', '1'],
+    ['기여자 수', '3'],
+    ['프로젝트 수', '1'],
+  ]);
   expect(screen.getByRole('heading', { name: '상태 분포' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
 });

@@ -10,7 +10,7 @@ jest.mock('recharts', () => {
 
 const stats: Stats = {
   total: 4, contributorCount: 2, mergedRatio: .5, moduleCount: 2,
-  byStatus: [{ status: 'merged', count: 2 }, { status: 'in review', count: 1 }, { status: 'abandoned', count: 1 }],
+  byStatus: [{ status: 'in review', count: 1 }, { status: 'abandoned', count: 1 }, { status: 'merged', count: 2 }],
   byMonth: [{ month: '2026-08', count: 1 }, { month: '2026-09', count: 3 }],
   topContributors: [
     { username: 'alice', count: 3, byStatus: [{ status: 'merged', count: 1 }, { status: 'in review', count: 1 }, { status: 'abandoned', count: 1 }] },
@@ -25,6 +25,10 @@ test('exposes status totals and shares alongside the donut', () => {
   expect(within(status).getByText('Merged')).toBeInTheDocument();
   expect(within(status).getByText('2건 · 50%')).toBeInTheDocument();
   expect(within(status).getAllByText('1건 · 25%')).toHaveLength(2);
+  const entries = within(screen.getByRole('list', { name: '상태별 기여 수' })).getAllByRole('listitem');
+  expect(within(entries[0]).getByText('Merged')).toBeInTheDocument();
+  expect(within(entries[1]).getByText('In Review')).toBeInTheDocument();
+  expect(within(entries[2]).getByText('Abandoned')).toBeInTheDocument();
 });
 
 test('shows contributor photos, readable module shares, and a monthly data table', () => {

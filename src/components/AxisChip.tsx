@@ -24,10 +24,12 @@ export default function AxisChip({
       aria-pressed={selected}
       className={`max-w-full break-words rounded-lg border px-2.5 py-1 text-[12px] font-medium transition-colors ${
         selected
-          ? 'border-primary bg-primary text-on-primary'
+          ? axis === 'module'
+            ? 'border-module bg-module text-on-module'
+            : 'border-primary bg-primary text-on-primary'
           : axis === 'kind'
             ? 'border-transparent bg-kind-weak text-kind hover:border-kind'
-            : 'border-transparent bg-primary-weak text-primary hover:border-primary'
+            : 'border-transparent bg-module-weak text-module hover:border-module'
       }`}
     >
       {displayValue}

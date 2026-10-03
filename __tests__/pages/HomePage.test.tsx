@@ -188,12 +188,12 @@ describe('홈페이지', () => {
     render(<HomePage />);
 
     expect(screen.getByText('2026 contribution')).toBeInTheDocument();
-    expect(screen.getByText('누적 기여').nextElementSibling).toHaveTextContent('1');
+    expect(screen.getByText('총 컨트리뷰션').nextElementSibling).toHaveTextContent('1');
     fireEvent.click(screen.getByRole('button', { name: '2025' }));
 
     expect(screen.getByText('2025 contribution')).toBeInTheDocument();
     expect(screen.queryByText('2026 contribution')).toBeNull();
-    expect(screen.getByText('누적 기여').nextElementSibling).toHaveTextContent('1');
+    expect(screen.getByText('총 컨트리뷰션').nextElementSibling).toHaveTextContent('1');
     expect(screen.getAllByRole('link', { name: 'bob 프로필 이미지' })[0]).toHaveAttribute(
       'href',
       '/contributors/bob'

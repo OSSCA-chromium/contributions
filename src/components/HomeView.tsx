@@ -9,7 +9,7 @@ import { SHOW_CONTRIBUTION_GRAPH } from '@/lib/feature-flags';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import PatchTable from '@/components/PatchTable';
 import ContributionGraph from '@/components/ContributionGraph';
-import SummaryMetrics from '@/components/SummaryMetrics';
+import ContributionSummary from '@/components/ContributionSummary';
 import YearSelector from '@/components/YearSelector';
 
 // Section header with a right-aligned archive link.
@@ -55,13 +55,6 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
   }, [filtered]);
 
   const yearLabel = year === 'all' ? '전체' : year;
-  const merged = stats.byStatus.find((s) => s.status === 'merged')?.count ?? 0;
-  const strip = [
-    { value: stats.total, label: '누적 기여' },
-    { value: merged, label: '머지 완료' },
-    { value: stats.moduleCount, label: '모듈' },
-    { value: stats.contributorCount, label: '참여 멘티' },
-  ];
 
   return (
     <>
@@ -76,7 +69,7 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         </p>
       ) : (
         <>
-          <div className="mt-[22px]"><SummaryMetrics cells={strip} /></div>
+          <div className="mt-[22px]"><ContributionSummary items={filtered} stats={stats} /></div>
 
           {SHOW_CONTRIBUTION_GRAPH && (
             <div className="mt-[34px]"><ContributionGraph items={filtered} compact /></div>

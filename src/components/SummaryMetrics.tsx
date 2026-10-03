@@ -1,8 +1,10 @@
 export default function SummaryMetrics({ cells }: {
   cells: { value: number | string; label: string; detail?: string }[];
 }) {
+  const columns = cells.length === 6 ? 'md:grid-cols-3 xl:grid-cols-6' : 'lg:grid-cols-4';
+
   return (
-    <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-mline bg-mline lg:grid-cols-4">
+    <dl className={`grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-mline bg-mline ${columns}`}>
       {cells.map((cell, index) => (
         <div key={cell.label} className="min-w-0 bg-m1 p-4 sm:p-5">
           <dt className="flex items-center gap-2 text-sm text-on-surface-variant">

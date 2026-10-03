@@ -14,7 +14,7 @@ export default function AxisTag({
   const label = axis === 'module' ? '모듈' : axis === 'kind' ? '종류' : '저장소';
   const displayValue = axis === 'module' ? getModuleLabel(value) : value;
   const colors = axis === 'module'
-    ? 'bg-primary-weak text-primary'
+    ? 'bg-module-weak text-module'
     : axis === 'kind'
       ? 'bg-kind-weak text-kind'
       : 'bg-gray-weak text-badge-off';
