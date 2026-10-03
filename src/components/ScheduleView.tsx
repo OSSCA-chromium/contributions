@@ -57,24 +57,22 @@ export default function ScheduleView({ meetings, today: todayProp }: ScheduleVie
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {months.map(({ year, month }) => {
         const key = `${year}-${String(month).padStart(2, '0')}`;
         const monthMeetings = meetings.filter((m) => m.date.slice(0, 7) === key);
         return (
-          <div key={key} className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-center">
+          <div key={key} className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
             {/* Left: this month's calendar */}
             <CalendarGrid year={year} month={month} meetings={meetings} today={today} />
             {/* Right: this month's events, vertically centered next to the calendar */}
             <div className="flex flex-col justify-center">
               {monthMeetings.length > 0 && (
-                <div className="rounded-2xl border border-outline bg-surface p-4 sm:p-5">
-                  <ScheduleList
-                    meetings={monthMeetings}
-                    showMonthHeaders={false}
-                    badgeColors={badgeColors}
-                  />
-                </div>
+                <ScheduleList
+                  meetings={monthMeetings}
+                  showMonthHeaders={false}
+                  badgeColors={badgeColors}
+                />
               )}
             </div>
           </div>

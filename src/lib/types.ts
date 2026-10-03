@@ -58,6 +58,8 @@ export interface Stats {
   topContributors: { username: string; count: number }[];
   contributorCount: number;
   mergedRatio: number;
+  moduleCount: number;
+  byModule: { module: string; count: number }[];
 }
 
 export interface DocMeta {

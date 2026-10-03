@@ -4,77 +4,95 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  --color-primary: #0b57d0;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e8f0fe;
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-surface-variant: #f1f3f4;
+  --color-on-surface: #202124;
+  --color-on-surface-variant: #5f6368;
+  --color-outline: #dadce0;
+  --color-success: #188038;
+  --color-info: #4285f4;
+  --color-warning: #f9ab00;
+  --color-error: #d93025;
+  --color-link: #0b57d0;
+  --chart-merged: #34a853;
+  --chart-in-review: #4285f4;
+  --chart-abandoned: #80868b;
+  --chart-unknown: #9aa0a6;
+  --chart-bar: #4285f4;
+  --mesh-base: #f8f9fa;
+  --mesh-blue: rgba(66, 133, 244, 0.16);
+  --mesh-green: rgba(52, 168, 83, 0.14);
+  --mesh-yellow: rgba(251, 188, 4, 0.14);
+  --mesh-red: rgba(234, 67, 53, 0.1);
+  --gradient-from: #1767d1;
+  --gradient-to: #679ef5;
+  /* Design C — Chromium logo blues (decorative only; never used as text color). */
   --c1: #1967d2;
   --c2: #1a73e8;
   --c3: #669df6;
   --c4: #aecbfa;
+  /* Design C — Material tonal surfaces. */
   --m1: #f7f9fc;
   --m2: #eef2fa;
   --m3: #e3eaf8;
   --mline: #dde3ec;
-  --color-primary: var(--c1);
-  --color-on-primary: #ffffff;
-  --color-primary-container: var(--m3);
-  --color-background: #ffffff;
-  --color-surface: var(--m1);
-  --color-surface-variant: var(--m2);
-  --color-on-surface: #202124;
-  --color-on-surface-variant: #5f6368;
-  --color-outline: var(--mline);
-  --color-success: #188038;
-  --color-info: var(--c2);
-  --color-warning: #f9ab00;
-  --color-error: #d93025;
-  --color-link: var(--c1);
-  --chart-merged: #34a853;
-  --chart-in-review: var(--c2);
-  --chart-abandoned: #fbbc04;
-  --chart-unknown: #9aa0a6;
-  --chart-bar: var(--c2);
-  --mesh-base: var(--m1);
-  --mesh-blue: rgba(26, 115, 232, 0.16);
-  --mesh-green: rgba(102, 157, 246, 0.12);
-  --mesh-yellow: rgba(174, 203, 250, 0.2);
-  --mesh-red: rgba(25, 103, 210, 0.08);
-  --gradient-from: var(--c1);
-  --gradient-to: var(--c3);
+  /* Design C — chip and badge pairs (all >= 4.5:1 on their own background). */
+  --color-kind: #8430ce;
+  --color-kind-weak: #f3e8fd;
+  --color-badge-ok: #137333;
+  --color-success-weak: #e6f4ea;
+  --color-badge-off: #5f6368;
+  --color-gray-weak: #f1f3f4;
+  --color-primary-weak: #d3e3fd;
 }
 
 .dark {
-  --c1: #8ab4f8;
-  --c2: #a8c7fa;
-  --c3: #c6dafc;
-  --c4: #d2e3fc;
-  --m1: #292a2d;
-  --m2: #3c4043;
-  --m3: #28374e;
-  --mline: #5f6368;
-  --color-primary: var(--c1);
+  --color-primary: #8ab4f8;
   --color-on-primary: #202124;
-  --color-primary-container: var(--m3);
+  --color-primary-container: #28374e;
   --color-background: #202124;
-  --color-surface: var(--m1);
-  --color-surface-variant: var(--m2);
+  --color-surface: #292a2d;
+  --color-surface-variant: #3c4043;
   --color-on-surface: #e8eaed;
   --color-on-surface-variant: #9aa0a6;
-  --color-outline: var(--mline);
+  --color-outline: #5f6368;
   --color-success: #81c995;
-  --color-info: var(--c2);
+  --color-info: #8ab4f8;
   --color-warning: #fdd663;
   --color-error: #f28b82;
-  --color-link: var(--c1);
+  --color-link: #8ab4f8;
   --chart-merged: #81c995;
-  --chart-in-review: var(--c2);
-  --chart-abandoned: #fdd663;
+  --chart-in-review: #8ab4f8;
+  --chart-abandoned: #bdc1c6;
   --chart-unknown: #9aa0a6;
-  --chart-bar: var(--c2);
-  --mesh-base: var(--m1);
-  --mesh-blue: rgba(138, 180, 248, 0.16);
-  --mesh-green: rgba(168, 199, 250, 0.12);
-  --mesh-yellow: rgba(198, 218, 252, 0.14);
-  --mesh-red: rgba(138, 180, 248, 0.08);
-  --gradient-from: var(--c1);
-  --gradient-to: var(--c3);
+  --chart-bar: #8ab4f8;
+  --mesh-base: #292a2d;
+  --mesh-blue: rgba(138, 180, 248, 0.14);
+  --mesh-green: rgba(129, 201, 149, 0.12);
+  --mesh-yellow: rgba(253, 214, 99, 0.1);
+  --mesh-red: rgba(242, 139, 130, 0.08);
+  --gradient-from: #8ab4f8;
+  --gradient-to: #c6dafc;
+  /* Design C — dark-mode counterparts (blue scale reversed: c1<->c4, c2<->c3). */
+  --c1: #aecbfa;
+  --c2: #669df6;
+  --c3: #1a73e8;
+  --c4: #1967d2;
+  --m1: #282a2d;
+  --m2: #303134;
+  --m3: #3c4043;
+  --mline: #3c4043;
+  --color-kind: #d7aefb;
+  --color-kind-weak: #3a2d4d;
+  --color-badge-ok: #81c995;
+  --color-success-weak: #1f3529;
+  --color-badge-off: #bdc1c6;
+  --color-gray-weak: #3c4043;
+  --color-primary-weak: #28374e;
 }
 
 @theme inline {
@@ -97,6 +115,21 @@
   --color-chart-abandoned: var(--chart-abandoned);
   --color-chart-unknown: var(--chart-unknown);
   --color-chart-bar: var(--chart-bar);
+  --color-c1: var(--c1);
+  --color-c2: var(--c2);
+  --color-c3: var(--c3);
+  --color-c4: var(--c4);
+  --color-m1: var(--m1);
+  --color-m2: var(--m2);
+  --color-m3: var(--m3);
+  --color-mline: var(--mline);
+  --color-kind: var(--color-kind);
+  --color-kind-weak: var(--color-kind-weak);
+  --color-badge-ok: var(--color-badge-ok);
+  --color-success-weak: var(--color-success-weak);
+  --color-badge-off: var(--color-badge-off);
+  --color-gray-weak: var(--color-gray-weak);
+  --color-primary-weak: var(--color-primary-weak);
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -165,9 +198,9 @@ a {
   height: 4px;
   background-image: linear-gradient(
     90deg,
-    var(--c2) 0 33.4%,
-    var(--c3) 33.4% 66.7%,
-    var(--c4) 66.7% 100%
+    #1a74e7 0 33.4%,
+    #679ef5 33.4% 66.7%,
+    #afccf9 66.7% 100%
   );
 }
 
@@ -184,6 +217,17 @@ a {
 }
 .prose :where(a):not(:where([class~="not-prose"] *)):hover {
   text-decoration: underline;
+}
+
+/* Match the archive's tonal inline code and section dividers. */
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  border-bottom: 1px solid var(--mline);
+  padding-bottom: 0.5rem;
+}
+
+.prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+  background: var(--m2);
+  color: var(--color-on-surface);
 }
 
 /* 콘텐츠 넘침 방지를 위한 스타일 */
@@ -348,10 +392,10 @@ pre::-webkit-scrollbar-thumb:hover {
 
 .patch-grid {
   display: grid;
-  grid-template-columns: 92px 104px minmax(0, 1fr) 116px 112px;
+  grid-template-columns: 88px 78px minmax(0, 1fr) 116px 104px;
   grid-template-areas: "date id title author status";
-  align-items: center;
-  gap: 0.75rem;
+  align-items: baseline;
+  gap: 4px 14px;
 }
 
 .patch-grid > * {
@@ -359,16 +403,25 @@ pre::-webkit-scrollbar-thumb:hover {
 }
 
 .patch-grid-heading {
-  border-bottom: 1px solid var(--color-outline);
+  border-bottom: 1px solid var(--mline);
+  background: var(--m2);
   color: var(--color-on-surface-variant);
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0 0 0.75rem;
+  padding: 0.5rem 1rem;
 }
 
 .patch-grid-row {
-  border-bottom: 1px solid var(--color-outline);
-  padding: 1rem 0;
+  border-bottom: 1px solid var(--mline);
+  padding: 0.625rem 1rem;
+}
+
+.patch-grid-row:hover {
+  background: var(--m1);
+}
+
+.patch-grid-row:last-child {
+  border-bottom: 0;
 }
 
 .patch-cell-date {
@@ -422,7 +475,7 @@ pre::-webkit-scrollbar-thumb:hover {
   }
 
   .patch-grid-row {
-    padding: 1rem 0;
+    padding: 1rem;
   }
 
   .patch-cell-date,

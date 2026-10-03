@@ -82,7 +82,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
           onChange={(event) => setQuery(event.target.value)}
           placeholder="검색..."
           aria-label="아카이브 검색"
-          className="w-full rounded-xl border border-outline bg-surface px-4 py-2.5 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
+          className="w-full rounded-xl border border-mline bg-m1 px-4 py-2.5 text-[14px] text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
         />
 
         <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
@@ -109,8 +109,8 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
           <YearSelector years={years} value={year} onChange={setYear} />
         </div>
 
-        <details open className="rounded-xl border border-outline bg-surface">
-          <summary className="cursor-pointer px-4 py-2 font-medium text-on-surface">
+        <details open className="rounded-2xl bg-m1">
+          <summary className="cursor-pointer px-4 py-3 text-[13px] font-semibold text-on-surface">
             모듈 및 종류 필터
             {(selectedModules.length > 0 || selectedKinds.length > 0) && (
               <span className="ml-2 text-sm text-on-surface-variant">
@@ -118,7 +118,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
               </span>
             )}
           </summary>
-          <div className="flex flex-col gap-4 border-t border-outline p-4">
+          <div className="flex flex-col gap-4 border-t border-mline p-4">
             <section aria-label="모듈 필터" className="space-y-2">
               <label htmlFor="module-filter-search" className="block text-sm font-medium">
                 모듈 옵션 검색
@@ -132,7 +132,7 @@ export default function ContributionSearch({ items }: { items: SearchIndexItem[]
                 placeholder="모듈 찾기..."
                 className="w-full rounded-lg border border-outline bg-background px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none md:max-w-sm"
               />
-              <div className="flex flex-wrap gap-2" role="group" aria-label="모듈">
+              <div className="flex max-h-48 flex-wrap gap-2 overflow-y-auto" role="group" aria-label="모듈">
                 {visibleModules.map((module) => (
                   <AxisChip
                     key={module}

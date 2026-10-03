@@ -15,7 +15,7 @@ function StatBadge({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap ${className}`}
+      className={`inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full font-medium whitespace-nowrap ${className}`}
     >
       <span>{label}</span>
       <span className="tabular-nums text-center inline-block min-w-[2ch]">
@@ -38,30 +38,30 @@ export default function ContributorRow({
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex flex-wrap items-center gap-2 rounded-xl border border-outline bg-surface px-3 py-2 transition-colors hover:border-primary text-on-surface sm:px-4">
+    <div className="flex flex-wrap items-center gap-2 bg-m1 border border-mline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
       <ContributorAvatar username={username} size={32} />
       <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
 
-      <div className="order-last flex w-full flex-wrap gap-1.5 md:order-none md:w-auto">
+      <div className="order-last flex w-full flex-wrap gap-2 md:order-none md:w-auto">
         <StatBadge
           label="TOTAL"
           count={total}
-          className="bg-on-surface text-surface"
+          className="bg-m3 text-badge-off"
         />
         <StatBadge
           label="MERGED"
           count={merged}
-          className="bg-success text-white dark:text-black"
+          className="bg-success-weak text-badge-ok"
         />
         <StatBadge
           label="IN REVIEW"
           count={inReview}
-          className="bg-primary text-on-primary"
+          className="bg-primary-weak text-primary"
         />
         <StatBadge
           label="ABANDONED"
           count={abandoned}
-          className="bg-warning text-black"
+          className="bg-gray-weak text-badge-off"
         />
       </div>
 

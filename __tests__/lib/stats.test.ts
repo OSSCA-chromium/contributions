@@ -54,6 +54,23 @@ test('computeStats는 merged, in review, abandoned 상태를 각각 집계한다
   ]);
 });
 
+test('module summaries count each patch once and exclude missing module tags', () => {
+  const s = computeStats([
+    { author: 'alice', date: '2026-10-01', status: 'merged', module: 'blink' },
+    { author: 'bob', date: '2026-10-01', status: 'abandoned', module: 'blink' },
+    { author: 'carol', date: '2026-10-01', status: 'in review', module: 'base' },
+    { author: 'dave', date: '2026-10-01', status: 'merged', module: '' },
+    { author: 'eve', date: '2026-10-01', status: 'merged' },
+  ]);
+
+  expect(s.moduleCount).toBe(2);
+  expect(s.byModule).toEqual([
+    { module: 'blink', count: 2 },
+    { module: 'base', count: 1 },
+  ]);
+  expect(s.total).toBe(5);
+});
+
 test('월별 집계는 Date 객체를 KST(서울) 기준으로 분류한다', () => {
   // UTC 2025-12-31 15:00 = KST 2026-01-01 00:00 → '2026-01'
   const record = {
