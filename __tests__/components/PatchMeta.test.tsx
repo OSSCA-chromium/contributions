@@ -14,6 +14,7 @@ const contribution: Contribution = {
   labels: ['browser-tests'],
   repo: 'devtools/devtools-frontend',
   related: [],
+  relatedSlugs: [],
   status: 'in review',
   excerpt: 'Browser peer connection coverage',
 };

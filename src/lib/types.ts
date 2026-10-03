@@ -14,6 +14,7 @@ export interface Contribution {
   issue?: number;
   crbug?: number;
   related: number[];
+  relatedSlugs: string[];
   resolvedDate?: string;
   status?: ContributionStatus;
   excerpt: string;
@@ -30,7 +31,10 @@ export interface SearchIndexItem {
   kind: string;
   keywords: string[];
   labels: string[];
+  issue?: number;
+  crbug?: number;
   related: number[];
+  relatedSlugs: string[];
   status?: ContributionStatus;
   date: string;
   excerpt: string;
