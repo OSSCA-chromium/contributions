@@ -92,17 +92,3 @@ export interface Meeting {
   content?: string;
   contentHtml?: string;
 }
-
-export interface AttendanceRecord {
-  username: string;
-  attended: number;
-  totalMeetings: number;
-  rate: number; // 0..1
-}
-
-export interface AttendanceStats {
-  meetingCount: number;
-  milestoneCount: number;
-  rosterSize: number;
-  records: AttendanceRecord[]; // rate desc, then username asc
-}

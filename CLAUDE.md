@@ -36,8 +36,8 @@ Three data domains:
 | Domain               | Data                      | Loaders                                                              | Pages                                       |
 | -------------------- | ------------------------- | -------------------------------------------------------------------- | ------------------------------------------- |
 | Contributions        | `data/contributions/*.md` | `contributions.ts`, `contributors.ts`, `stats.ts`, `search-index.ts` | `/patches`, `/contributors`, `/stats`, home |
-| Docs / guide         | `data/docs`, `data/guide` | `docs.ts`, `markdown.ts`                                             | `/docs`, `/guide`                           |
-| Schedule (from #150) | `data/meetings`           | `meetings.ts`, `calendar.ts`, `attendance.ts`, `periodColors.ts`     | `/schedule`                                 |
+| Docs / guide         | `data/docs`              | `docs.ts`, `markdown.ts`                                             | `/docs`, `/guide`                           |
+| Schedule (from #150) | `data/meetings`           | `meetings.ts`, `calendar.ts`, `periodColors.ts`                      | `/schedule`                                 |
 
 Key flow: `getAllContributions()` (reads files, sorted by `date` desc) feeds `getContributorSummaries()`, `buildSearchIndex()`, and `computeStats()`. Pages are server components; `HomeView`, `ContributorsList`, `StatsView`, `ScheduleView`, etc. are client components that receive the pre-built data and do the sorting/filtering.
 
