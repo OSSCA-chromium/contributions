@@ -11,8 +11,8 @@ test('status가 없으면 아무것도 렌더링하지 않는다', () => {
   expect(container).toBeEmptyDOMElement();
 });
 
-// 'In review'는 공백이 있는 두 단어라 좁은 카드에서 줄바꿈되면 배지가 깨진다.
+// Keep the two-word In Review label on one line in narrow cards.
 test('in review 배지는 줄바꿈되지 않는다', () => {
   render(<StatusBadge status="in review" />);
-  expect(screen.getByText('In review')).toHaveClass('whitespace-nowrap');
+  expect(screen.getByText('In Review')).toHaveClass('whitespace-nowrap');
 });

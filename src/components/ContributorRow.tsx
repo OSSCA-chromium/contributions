@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import type { ContributorSummary } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 
 // Pill badge with an inline count. tabular-nums keeps the count monospaced so
 // badge widths stay stable across rows when re-sorting.
@@ -48,17 +49,17 @@ export default function ContributorRow({
           className="bg-m3 text-badge-off"
         />
         <StatBadge
-          label="Merged"
+          label={CONTRIBUTION_STATUS_LABELS.merged}
           count={merged}
           className="bg-success-weak text-badge-ok"
         />
         <StatBadge
-          label="In review"
+          label={CONTRIBUTION_STATUS_LABELS['in review']}
           count={inReview}
           className="bg-primary-weak text-primary"
         />
         <StatBadge
-          label="Abandoned"
+          label={CONTRIBUTION_STATUS_LABELS.abandoned}
           count={abandoned}
           className="bg-gray-weak text-badge-off"
         />

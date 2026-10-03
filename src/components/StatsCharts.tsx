@@ -3,14 +3,12 @@
 import { useId, type ReactNode } from 'react';
 import { Bar, BarChart, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import type { Stats } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS as STATUS_LABELS } from '@/lib/status-labels';
 import ContributorAvatar from '@/components/ContributorAvatar';
 
 const STATUS_COLORS: Record<string, string> = {
   merged: 'var(--chart-merged)', 'in review': 'var(--chart-in-review)',
   abandoned: 'var(--chart-abandoned)', unknown: 'var(--chart-unknown)',
-};
-const STATUS_LABELS: Record<string, string> = {
-  merged: 'Merged', 'in review': 'In review', abandoned: 'Abandoned', unknown: '기타',
 };
 const TOOLTIP_STYLE = {
   backgroundColor: 'var(--color-background)', border: '1px solid var(--color-outline)',

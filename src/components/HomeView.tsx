@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
+import { SHOW_CONTRIBUTION_GRAPH } from '@/lib/feature-flags';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import PatchTable from '@/components/PatchTable';
 import ContributionGraph from '@/components/ContributionGraph';
@@ -64,19 +65,8 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
 
   return (
     <>
-      <section>
-        <h1 className="page-title mb-6">
-          Chromium 기여 아카이브
-        </h1>
-        <p className="max-w-[66ch] text-[14.5px] text-on-surface-variant">
-          오픈소스 컨트리뷰션 아카데미 Chromium 팀이 실제로 Chromium 코드베이스에 올린 패치를
-          기록하는 아카이브입니다. 각 기여는 과제 이슈에서 출발해 crbug, Gerrit 리뷰를 거쳐
-          머지되기까지의 과정과, 멘티가 직접 쓴 회고를 함께 담고 있습니다.
-        </p>
-        <div className="mt-4">
-          <YearSelector years={years} value={year} onChange={setYear} />
-        </div>
-      </section>
+      <h1 className="sr-only">홈</h1>
+      <YearSelector years={years} value={year} onChange={setYear} />
 
       {filtered.length === 0 ? (
         <p className="mt-[22px] text-on-surface">
@@ -88,7 +78,9 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         <>
           <div className="mt-[22px]"><SummaryMetrics cells={strip} /></div>
 
-          <div className="mt-[34px]"><ContributionGraph items={filtered} compact /></div>
+          {SHOW_CONTRIBUTION_GRAPH && (
+            <div className="mt-[34px]"><ContributionGraph items={filtered} compact /></div>
+          )}
 
           <section className="mt-[34px]">
             <SectionHeader title="최근 기여" href="/patches" linkLabel="전체 목록 →" />

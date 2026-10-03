@@ -61,7 +61,7 @@ test('archive table shows upload date, review ID, axes, authors, and all statuse
   expect(screen.getByText('devtools/devtools-frontend')).toBeInTheDocument();
   expect(screen.getByRole('img', { name: 'alice 프로필 이미지' })).toBeInTheDocument();
   expect(screen.queryByText('alice')).not.toBeInTheDocument();
-  expect(screen.getByText('In review')).toBeInTheDocument();
+  expect(screen.getByText('In Review')).toBeInTheDocument();
   expect(screen.getByText('Merged')).toBeInTheDocument();
   expect(screen.getByText('Abandoned')).toBeInTheDocument();
 });

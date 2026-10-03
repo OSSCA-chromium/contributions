@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { Contribution } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import PatchTable from '@/components/PatchTable';
 import SummaryMetrics from '@/components/SummaryMetrics';
@@ -26,9 +27,9 @@ export default function ContributorView({
   const yearLabel = year === 'all' ? '전체' : year;
   const strip = [
     { value: total, label: '총 기여' },
-    { value: merged, label: 'Merged' },
-    { value: inReview, label: 'In review' },
-    { value: abandoned, label: 'Abandoned' },
+    { value: merged, label: CONTRIBUTION_STATUS_LABELS.merged },
+    { value: inReview, label: CONTRIBUTION_STATUS_LABELS['in review'] },
+    { value: abandoned, label: CONTRIBUTION_STATUS_LABELS.abandoned },
   ];
 
   return (

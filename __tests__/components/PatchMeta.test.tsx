@@ -42,7 +42,7 @@ test('detail metadata shows author, taxonomy, optional repository, review ID, an
   expect(screen.getByText('devtools/devtools-frontend')).toBeInTheDocument();
   expect(screen.getByText('리뷰 ID')).toBeInTheDocument();
   expect(screen.getByText('1012345')).toBeInTheDocument();
-  expect(screen.getByText('In review')).toBeInTheDocument();
+  expect(screen.getByText('In Review')).toBeInTheDocument();
 });
 
 test('default Chromium repository is omitted from detail metadata', () => {

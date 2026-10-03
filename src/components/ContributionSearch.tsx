@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { ContributionStatus, SearchIndexItem } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 import AxisChip from '@/components/AxisChip';
 import PatchTable from '@/components/PatchTable';
 import YearSelector from '@/components/YearSelector';
@@ -12,9 +13,9 @@ type Axis = 'module' | 'kind';
 
 const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
   { value: 'all', label: '전체' },
-  { value: 'in review', label: 'In review' },
-  { value: 'merged', label: 'Merged' },
-  { value: 'abandoned', label: 'Abandoned' },
+  { value: 'in review', label: CONTRIBUTION_STATUS_LABELS['in review'] },
+  { value: 'merged', label: CONTRIBUTION_STATUS_LABELS.merged },
+  { value: 'abandoned', label: CONTRIBUTION_STATUS_LABELS.abandoned },
 ];
 
 export default function ContributionSearch({ items }: { items: SearchIndexItem[] }) {

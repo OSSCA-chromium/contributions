@@ -73,7 +73,7 @@ test('세 상태 데이터셋에서 전체 합계와 차트를 표시한다', ()
   expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
 });
 
-test('summarizes projects and modules from the same year as every chart and graph', () => {
+test('summarizes projects and modules while the contribution graph is disabled', () => {
   render(<StatsView items={[
     item('chromium', '2026-01-01', 'alice', 'merged'),
     { ...item('v8', '2026-01-02', 'bob', 'merged'), repo: 'v8/v8', module: 'v8' },
@@ -84,5 +84,6 @@ test('summarizes projects and modules from the same year as every chart and grap
   fireEvent.click(screen.getByRole('button', { name: '2025' }));
   expect(statValue('프로젝트 수')).toHaveTextContent('1');
   expect(screen.getByText('1개 모듈에 기여')).toBeInTheDocument();
-  expect(screen.getAllByRole('button', { name: /^패치 / })).toHaveLength(1);
+  expect(screen.queryByRole('heading', { name: '프로젝트별 기여와 연결' })).toBeNull();
+  expect(screen.queryAllByRole('button', { name: /^패치 / })).toHaveLength(0);
 });

@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
+import { SHOW_CONTRIBUTION_GRAPH } from '@/lib/feature-flags';
 import StatsCharts from '@/components/StatsCharts';
 import ContributionGraph from '@/components/ContributionGraph';
 import SummaryMetrics from '@/components/SummaryMetrics';
@@ -33,7 +34,9 @@ export default function StatsView({ items }: { items: SearchIndexItem[] }) {
       ) : (
         <>
           <div className="mb-6"><SummaryMetrics cells={strip} /></div>
-          <div className="mb-6"><ContributionGraph items={filtered} /></div>
+          {SHOW_CONTRIBUTION_GRAPH && (
+            <div className="mb-6"><ContributionGraph items={filtered} /></div>
+          )}
           <StatsCharts stats={stats} />
         </>
       )}

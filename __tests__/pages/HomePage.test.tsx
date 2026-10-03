@@ -15,7 +15,7 @@ describe('홈페이지', () => {
     localStorage.clear();
   });
 
-  it('타이틀과 소개 문구가 렌더링됩니다', () => {
+  it('keeps an accessible home heading and the empty-state notice', () => {
     // 빈 배열 반환하도록 모의 설정
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([]);
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
@@ -24,8 +24,8 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    // 히어로 타이틀과 빈 상태 안내 체크
-    expect(screen.getByText('Chromium 기여 아카이브')).toBeInTheDocument();
+    // Keep the page heading available without a visible hero.
+    expect(screen.getByRole('heading', { name: '홈', level: 1 })).toHaveClass('sr-only');
     expect(screen.getByText('2026년 컨트리뷰션이 아직 없습니다.')).toBeInTheDocument();
   });
 
@@ -54,6 +54,7 @@ describe('홈페이지', () => {
     );
 
     expect(screen.getByText('최근 기여')).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: '프로젝트별 기여와 연결' })).toBeNull();
   });
 
   it('컨트리뷰션이 있을 경우 목록이 표시됩니다', () => {

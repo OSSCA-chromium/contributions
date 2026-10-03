@@ -4,6 +4,7 @@ import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { createContributionGraph, layoutContributionGraph, type PositionedCloud } from '@/lib/contribution-graph';
 import type { SearchIndexItem } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import StatusBadge from '@/components/StatusBadge';
 
@@ -104,7 +105,7 @@ export default function ContributionGraph({ items, compact = false }: { items: S
           </div>
           <div className="flex flex-wrap items-center justify-between gap-2 border-t border-mline pt-3 text-xs text-on-surface-variant">
             <div className="flex flex-wrap gap-3">
-              {Object.entries({ merged: 'Merged', 'in review': 'In review', abandoned: 'Abandoned', unknown: '기타' }).filter(([key]) => graph.nodes.some(node => (node.status || 'unknown') === key)).map(([key, label]) => <span key={key} className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full" style={{ background: COLORS[key] }} />{label}</span>)}
+              {Object.entries(CONTRIBUTION_STATUS_LABELS).filter(([key]) => graph.nodes.some(node => (node.status || 'unknown') === key)).map(([key, label]) => <span key={key} className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full" style={{ background: COLORS[key] }} />{label}</span>)}
             </div>
             <p>연관 패치 {graph.relatedPatchCount}건 · 연결 {graph.edges.length}개</p>
           </div>

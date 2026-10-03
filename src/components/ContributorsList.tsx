@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { ContributorSummary } from '@/lib/types';
+import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
 import ContributorRow from '@/components/ContributorRow';
 
 export type SortKey = 'latest' | 'total' | 'merged' | 'inReview' | 'abandoned';
@@ -9,9 +10,9 @@ export type SortKey = 'latest' | 'total' | 'merged' | 'inReview' | 'abandoned';
 const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: 'latest', label: '최신' },
   { key: 'total', label: '총 기여' },
-  { key: 'merged', label: 'Merged' },
-  { key: 'inReview', label: 'In review' },
-  { key: 'abandoned', label: 'Abandoned' },
+  { key: 'merged', label: CONTRIBUTION_STATUS_LABELS.merged },
+  { key: 'inReview', label: CONTRIBUTION_STATUS_LABELS['in review'] },
+  { key: 'abandoned', label: CONTRIBUTION_STATUS_LABELS.abandoned },
 ];
 
 // Sort a copy of the summaries by the chosen key, always descending.
