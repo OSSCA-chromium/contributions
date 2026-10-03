@@ -8,24 +8,10 @@ import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import PatchTable from '@/components/PatchTable';
 import ContributionGraph from '@/components/ContributionGraph';
+import SummaryMetrics from '@/components/SummaryMetrics';
 import YearSelector from '@/components/YearSelector';
 
-// Accent dot color per strip cell, left to right — mirrors the mockup's
-// nth-child(1..4) --acc assignment (c1 = strongest blue, c4 = palest).
-const STRIP_ACCENTS = ['bg-c1', 'bg-c2', 'bg-c3', 'bg-c4'];
-
-// Divider per cell: a plain 4-col row only needs a left border on cells
-// 2-4. The mockup folds the grid to 2 cols at <=620px (cell 3 moves to
-// its own row) and to 1 col at <=380px (every cell but the first is on
-// its own row), swapping the left border for a top border at each fold.
-const STRIP_BORDERS = [
-  '',
-  'border-l border-mline max-[380px]:border-l-0 max-[380px]:border-t',
-  'border-l border-mline max-[620px]:border-l-0 max-[620px]:border-t',
-  'border-l border-mline max-[380px]:border-l-0 max-[620px]:border-t',
-];
-
-// Shared "SEC-H" header: small-caps section title + a right-aligned link.
+// Section header with a right-aligned archive link.
 function SectionHeader({
   title,
   href,
@@ -100,20 +86,7 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
         </p>
       ) : (
         <>
-          <div className="mt-[22px] grid grid-cols-4 overflow-hidden rounded-2xl bg-m1 max-[620px]:grid-cols-2 max-[380px]:grid-cols-1">
-            {strip.map((cell, i) => (
-              <div key={cell.label} className={`px-[18px] py-4 ${STRIP_BORDERS[i]}`}>
-                <span
-                  aria-hidden="true"
-                  className={`mt-[1.5px] mb-[11px] ml-[1.5px] block h-[9px] w-[9px] rounded-full ring-[1.5px] ring-c1 ${STRIP_ACCENTS[i]}`}
-                />
-                <b className="block text-[27px] font-bold leading-[1.15] tracking-[-0.03em] tabular-nums">
-                  {cell.value}
-                </b>
-                <span className="text-[12.5px] text-on-surface-variant">{cell.label}</span>
-              </div>
-            ))}
-          </div>
+          <div className="mt-[22px]"><SummaryMetrics cells={strip} /></div>
 
           <div className="mt-[34px]"><ContributionGraph items={filtered} compact /></div>
 

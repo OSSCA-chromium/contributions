@@ -26,7 +26,7 @@ function item(
 
 function statValue(label: string) {
   const labelElement = screen.getByText(label);
-  return labelElement.previousElementSibling;
+  return labelElement.nextElementSibling;
 }
 
 test('빈 데이터에서는 빈 상태를 보여 주고 통계 차트를 숨긴다', () => {
@@ -71,4 +71,18 @@ test('세 상태 데이터셋에서 전체 합계와 차트를 표시한다', ()
   expect(statValue('Merged 비율')).toHaveTextContent('33%');
   expect(screen.getByRole('heading', { name: '상태 분포' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
+});
+
+test('summarizes projects and modules from the same year as every chart and graph', () => {
+  render(<StatsView items={[
+    item('chromium', '2026-01-01', 'alice', 'merged'),
+    { ...item('v8', '2026-01-02', 'bob', 'merged'), repo: 'v8/v8', module: 'v8' },
+    { ...item('devtools', '2025-01-02', 'carol', 'merged'), repo: 'devtools/devtools-frontend' },
+  ]} />);
+  expect(statValue('프로젝트 수')).toHaveTextContent('2');
+  expect(screen.getByText('2개 모듈에 기여')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: '2025' }));
+  expect(statValue('프로젝트 수')).toHaveTextContent('1');
+  expect(screen.getByText('1개 모듈에 기여')).toBeInTheDocument();
+  expect(screen.getAllByRole('button', { name: /^패치 / })).toHaveLength(1);
 });

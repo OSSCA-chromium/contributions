@@ -47,17 +47,19 @@ export interface PositionedNode extends GraphNode { x: number; y: number }
 
 // The layout is deterministic so filtering and static rendering never depend
 // on a random seed. Each repository retains its own cloud, even for one patch.
-export function layoutContributionGraph(graph: ContributionGraph, width: number) {
+export function layoutContributionGraph(graph: ContributionGraph, width: number, compact = false) {
   const narrow = width < 640;
   const gap = 16;
   const secondary = graph.projects.length - 1;
-  const height = narrow ? 340 + Math.ceil(Math.max(secondary, 0) / 2) * 190 : Math.max(420, secondary * 160);
+  const mainHeight = compact ? 280 : 340;
+  const rowHeight = compact ? 160 : 190;
+  const height = narrow ? mainHeight + Math.ceil(Math.max(secondary, 0) / 2) * rowHeight : Math.max(compact ? 320 : 420, secondary * (compact ? 140 : 160));
   const clouds: PositionedCloud[] = graph.projects.map((project, index) => {
     if (!secondary) return { ...project, x: 8, y: 8, width: width - 16, height: height - 16 };
     if (narrow) {
-      if (!index) return { ...project, x: 8, y: 8, width: width - 16, height: 320 };
+      if (!index) return { ...project, x: 8, y: 8, width: width - 16, height: mainHeight - 20 };
       const cellWidth = (width - gap * 3) / 2;
-      return { ...project, x: gap + ((index - 1) % 2) * (cellWidth + gap), y: 344 + Math.floor((index - 1) / 2) * 190, width: cellWidth, height: 172 };
+      return { ...project, x: gap + ((index - 1) % 2) * (cellWidth + gap), y: mainHeight + 4 + Math.floor((index - 1) / 2) * rowHeight, width: cellWidth, height: rowHeight - 18 };
     }
     const mainWidth = width * 0.68;
     if (!index) return { ...project, x: 8, y: 8, width: mainWidth - 16, height: height - 16 };
