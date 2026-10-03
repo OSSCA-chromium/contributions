@@ -61,11 +61,53 @@ test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
 
 test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으로 표시한다', () => {
   render(<ContributorsList summaries={summaries} />);
-  expect(screen.getByRole('option', { name: 'Abandoned' })).toHaveValue('abandoned');
+  expect(screen.getByRole('option', { name: 'Abandoned' })).toHaveValue(
+    'abandoned',
+  );
   fireEvent.change(screen.getByLabelText('정렬 기준'), {
     target: { value: 'abandoned' },
   });
   const links = screen.getAllByRole('link');
   expect(links[0]).toHaveAttribute('href', '/contributors/bob'); // abandoned 2
   expect(links[1]).toHaveAttribute('href', '/contributors/alice'); // abandoned 0
+});
+
+test('기여자 검색은 대소문자와 앞뒤 공백을 무시하고 선택한 정렬을 유지한다', () => {
+  render(<ContributorsList summaries={summaries} />);
+  fireEvent.change(screen.getByLabelText('정렬 기준'), {
+    target: { value: 'total' },
+  });
+  fireEvent.change(screen.getByRole('searchbox', { name: '기여자 검색' }), {
+    target: { value: '  ALI  ' },
+  });
+
+  expect(screen.getAllByRole('link')).toHaveLength(1);
+  expect(screen.getByRole('link')).toHaveAttribute(
+    'href',
+    '/contributors/alice',
+  );
+
+  fireEvent.change(screen.getByRole('searchbox', { name: '기여자 검색' }), {
+    target: { value: '' },
+  });
+  expect(screen.getAllByRole('link')[0]).toHaveAttribute(
+    'href',
+    '/contributors/bob',
+  );
+});
+
+test('검색 결과가 없을 때 검색을 지우면 전체 기여자 목록으로 돌아온다', () => {
+  render(<ContributorsList summaries={summaries} />);
+  fireEvent.change(screen.getByRole('searchbox', { name: '기여자 검색' }), {
+    target: { value: 'nobody' },
+  });
+
+  expect(screen.queryByRole('link')).not.toBeInTheDocument();
+  expect(screen.getByText('검색 결과가 없습니다.')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: '검색 초기화' }));
+
+  expect(screen.getByRole('searchbox', { name: '기여자 검색' })).toHaveValue(
+    '',
+  );
+  expect(screen.getAllByRole('link')).toHaveLength(2);
 });
