@@ -34,7 +34,7 @@ export default function PatchMeta({ contribution }: { contribution: Contribution
         <dt className="text-on-surface-variant">리뷰 ID</dt>
         <dd className="font-mono">
           {contribution.contributionUrl ? (
-            <a href={contribution.contributionUrl} target="_blank" rel="noopener noreferrer" aria-label={`Gerrit 리뷰 ${contribution.slug}`} className="text-link hover:underline">
+            <a href={contribution.contributionUrl} target="_blank" rel="noopener noreferrer" aria-label={`${contribution.contributionUrl.startsWith('https://github.com/') ? 'GitHub PR' : 'Gerrit 리뷰'} ${contribution.slug}`} className="text-link hover:underline">
               <span>{contribution.slug}</span> <span aria-hidden="true">↗</span>
             </a>
           ) : contribution.slug}

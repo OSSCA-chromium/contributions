@@ -1,11 +1,17 @@
 export type ContributionStatus = 'in review' | 'merged' | 'abandoned';
 
+export interface ExternalLink {
+  title: string;
+  url: string;
+}
+
 export interface Contribution {
   slug: string;
   title: string;
   date: string;
   author: string;
   contributionUrl?: string;
+  externalLinks?: ExternalLink[];
   module: string;
   kind: string;
   keywords: string[];

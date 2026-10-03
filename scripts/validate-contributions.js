@@ -100,6 +100,30 @@ function validateFrontmatter(data) {
     }
   }
 
+  if (data.externalLinks !== undefined) {
+    if (!Array.isArray(data.externalLinks)) {
+      errors.push('externalLinks must be an array');
+    } else {
+      data.externalLinks.forEach((link, index) => {
+        const field = `externalLinks[${index}]`;
+        if (!link || typeof link !== 'object' || Array.isArray(link)) {
+          errors.push(`${field} must be an object`);
+          return;
+        }
+        if (typeof link.title !== 'string' || !link.title.trim()) {
+          errors.push(`${field}.title must be a non-empty string`);
+        }
+        try {
+          if (typeof link.url !== 'string' || new URL(link.url).protocol !== 'https:') {
+            errors.push(`${field}.url must be a valid https URL`);
+          }
+        } catch {
+          errors.push(`${field}.url must be a valid https URL`);
+        }
+      });
+    }
+  }
+
   if (data.status !== undefined && !STATUSES.includes(data.status)) {
     errors.push(`status must be one of: ${STATUSES.join(', ')}`);
   }

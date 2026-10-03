@@ -8,6 +8,9 @@ kind: fix # fix, feature, refactor, test, docs, cleanup, etc.
 keywords: ["keyword1", "keyword2"] # Additional search terms
 status: in review # Change to merged or abandoned after the Gerrit result is confirmed
 # resolvedDate: YYYY-MM-DD # Add only when the exact Gerrit result date is verified
+# externalLinks:
+#   - title: "WPT PR #12345"
+#     url: https://github.com/web-platform-tests/wpt/pull/12345
 ---
 
 간략한 소개 문장을 작성하세요. 이 컨트리뷰션이 무엇에 관한 것인지 설명합니다.
@@ -44,6 +47,17 @@ void SampleFunction() {
 1. 단위 테스트
 2. 통합 테스트
 3. 성능 테스트 결과
+
+## 관련 이슈와 외부 PR
+
+이 기여에서 파생된 이슈와 PR은 `externalLinks`에 제목과 HTTPS URL로 수집합니다.
+WPT 자동 export, 직접 등록한 crbug·WPT·W3C·WHATWG·Khronos 이슈,
+후속 테스트 PR 등을 원본 기여에 연결하며 별도 기여로 중복 집계하지 않습니다.
+
+- WPT export는 Gerrit의 변경 파일과 export 댓글, upstream PR을 대조합니다.
+- 직접 등록한 이슈와 PR은 원문에서 등록자·작성자를 확인합니다.
+- 외부 프로젝트에 독립적으로 진행한 PR은 별도 contribution으로 기록하고
+  `repo`와 실제 PR URL을 지정합니다.
 
 ## 배운 점
 
