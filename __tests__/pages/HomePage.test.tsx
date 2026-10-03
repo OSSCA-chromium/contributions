@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 import * as contributionsModule from '@/lib/contributions';
 
@@ -125,5 +125,52 @@ describe('홈페이지', () => {
     expect(
       screen.getByRole('link', { name: /전체 보기/ })
     ).toHaveAttribute('href', '/contributors');
+  });
+
+  it('선택한 연도에 맞춰 요약과 최근 기록을 갱신한다', () => {
+    (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([
+      {
+        slug: '2026-entry',
+        title: '2026 contribution',
+        date: '2026-01-01',
+        author: 'alice',
+        module: 'ui',
+        kind: 'fix',
+        keywords: [],
+        labels: [],
+        related: [],
+        relatedSlugs: [],
+        status: 'merged',
+        excerpt: '',
+      },
+      {
+        slug: '2025-entry',
+        title: '2025 contribution',
+        date: '2025-01-01',
+        author: 'bob',
+        module: 'ui',
+        kind: 'fix',
+        keywords: [],
+        labels: [],
+        related: [],
+        relatedSlugs: [],
+        status: 'in review',
+        excerpt: '',
+      },
+    ]);
+
+    render(<HomePage />);
+
+    expect(screen.getByText('2026 contribution')).toBeInTheDocument();
+    expect(screen.getByText('총 컨트리뷰션').previousElementSibling).toHaveTextContent('1');
+    fireEvent.click(screen.getByRole('button', { name: '2025' }));
+
+    expect(screen.getByText('2025 contribution')).toBeInTheDocument();
+    expect(screen.queryByText('2026 contribution')).toBeNull();
+    expect(screen.getByText('총 컨트리뷰션').previousElementSibling).toHaveTextContent('1');
+    expect(screen.getByRole('link', { name: 'bob 프로필 이미지' })).toHaveAttribute(
+      'href',
+      '/contributors/bob'
+    );
   });
 });

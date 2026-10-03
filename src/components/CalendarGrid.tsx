@@ -25,8 +25,8 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
   const periodColor = periodColorMap(meetings);
 
   return (
-    <div>
-      <div className="mb-2 text-center font-semibold text-on-surface">
+    <div className="rounded-2xl border border-outline bg-surface p-4 sm:p-5">
+      <div className="mb-3 text-center font-semibold text-on-surface">
         {year}년 {month}월
       </div>
       <div className="grid grid-cols-7">
@@ -43,7 +43,7 @@ export default function CalendarGrid({ year, month, meetings, today }: CalendarG
       </div>
       <div className="space-y-1">
         {weeks.map((week, wi) => (
-          <div key={wi} className="grid grid-cols-7">
+          <div key={wi} className="grid grid-cols-7 gap-px">
             {week.map((d, ci) => {
               if (!d.inMonth) {
                 return <div key={d.date} className="h-9" />;

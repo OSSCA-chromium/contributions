@@ -41,7 +41,7 @@ export default function ScheduleList({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {groupByMonth(meetings).map((group) => (
         <div key={group.key}>
           {showMonthHeaders && (
