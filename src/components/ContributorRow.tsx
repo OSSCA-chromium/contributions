@@ -25,7 +25,7 @@ function StatBadge({
   );
 }
 
-// Directory list row for a single contributor. Total and status counts are pill
+// Directory card for a single contributor. Total and status counts are pill
 // badges with inline counts (same status colors as StatusBadge). When the
 // username is a valid GitHub handle the whole row links to the profile page.
 export default function ContributorRow({
@@ -38,11 +38,10 @@ export default function ContributorRow({
   const updated = lastActive ? lastActive.slice(0, 10) : '';
 
   const inner = (
-    <div className="flex flex-wrap items-center gap-2 bg-m1 border border-mline rounded-2xl px-4 py-2.5 transition-colors hover:border-primary text-on-surface">
-      <ContributorAvatar username={username} size={32} />
-      <span className="font-semibold flex-1 min-w-0 truncate">{username}</span>
+    <div className="flex h-full flex-col items-center gap-4 bg-m1 border border-mline rounded-2xl p-5 transition-colors hover:border-primary text-on-surface">
+      <ContributorAvatar username={username} size={64} />
 
-      <div className="order-last flex w-full flex-wrap gap-2 md:order-none md:w-auto">
+      <div className="flex flex-wrap justify-center gap-2">
         <StatBadge
           label="총 기여"
           count={total}
@@ -66,7 +65,7 @@ export default function ContributorRow({
       </div>
 
       {updated && (
-        <span className="hidden sm:inline text-xs text-on-surface-variant whitespace-nowrap">
+        <span className="text-xs text-on-surface-variant whitespace-nowrap">
           Updated {updated}
         </span>
       )}
@@ -78,7 +77,7 @@ export default function ContributorRow({
 
   if (isValidGithubUser) {
     return (
-      <Link href={`/contributors/${username}`} className="block">
+      <Link href={`/contributors/${username}`} title={username} className="block h-full">
         {inner}
       </Link>
     );

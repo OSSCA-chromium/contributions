@@ -1,28 +1,14 @@
-import Link from 'next/link';
 import type { Contribution } from '@/lib/types';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import StatusBadge from '@/components/StatusBadge';
-import { isValidGithubUsername } from '@/lib/github';
 
 export default function PatchMeta({ contribution }: { contribution: Contribution }) {
-  const author = isValidGithubUsername(contribution.author) ? (
-    <Link
-      href={`/contributors/${contribution.author}`}
-      aria-label={contribution.author}
-      className="inline-flex items-center gap-2 text-link hover:underline"
-    >
-      <ContributorAvatar username={contribution.author} size={24} />
-      <span>{contribution.author}</span>
-    </Link>
-  ) : (
-    <span>{contribution.author}</span>
-  );
 
   return (
     <dl className="grid gap-3 text-[13px]">
       <div className="grid grid-cols-[66px_minmax(0,1fr)] items-baseline gap-2">
         <dt className="text-on-surface-variant">작성자</dt>
-        <dd>{author}</dd>
+        <dd><ContributorAvatar username={contribution.author} size={36} linkToProfile /></dd>
       </div>
       <div className="grid grid-cols-[66px_minmax(0,1fr)] items-baseline gap-2">
         <dt className="text-on-surface-variant">업로드일</dt>

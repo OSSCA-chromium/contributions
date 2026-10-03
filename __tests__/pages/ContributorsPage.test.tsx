@@ -19,8 +19,10 @@ describe('기여자 목록 페이지', () => {
 
     render(<ContributorsPage />);
 
-    expect(screen.getByText('octocat')).toBeInTheDocument();
-    expect(screen.getByText('hubot')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'octocat 프로필 이미지' })).toBeInTheDocument();
+  expect(screen.queryByText('octocat')).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'hubot 프로필 이미지' })).toBeInTheDocument();
+  expect(screen.queryByText('hubot')).not.toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: /octocat/ })
     ).toHaveAttribute('href', '/contributors/octocat');

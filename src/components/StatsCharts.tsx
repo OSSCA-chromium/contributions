@@ -12,6 +12,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+import ContributorAvatar from '@/components/ContributorAvatar';
 import type { Stats } from '@/lib/types';
 
 const STATUS_COLORS: Record<string, string> = {
@@ -100,25 +101,18 @@ export default function StatsCharts({ stats }: { stats: Stats }) {
         <h3 className="section-title mb-4">
           기여자 랭킹 (Top 10)
         </h3>
-        <div style={{ height: Math.max(topContributors.length * 36, 120) }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={topContributors}
-              layout="vertical"
-              margin={{ left: 0 }}
-            >
-              <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
-              <YAxis
-                type="category"
-                dataKey="username"
-                width={120}
-                tick={{ fontSize: 12 }}
-              />
-              <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'var(--color-surface-variant)' }} />
-              <Bar dataKey="count" name="기여 수" fill={BAR_COLOR} radius={[0, 6, 6, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <ol className="space-y-3" aria-label="기여자별 기여 수">
+          {topContributors.map((contributor, index) => (
+            <li key={contributor.username} className="flex items-center gap-3">
+              <span className="w-5 text-sm tabular-nums text-on-surface-variant">{index + 1}</span>
+              <ContributorAvatar username={contributor.username} size={36} linkToProfile />
+              <div className="h-3 flex-1 overflow-hidden rounded-full bg-m3" aria-hidden="true">
+                <div className="h-full rounded-full bg-primary" style={{ width: `${contributor.count / (topContributors[0]?.count || 1) * 100}%` }} />
+              </div>
+              <span className="w-10 text-right text-sm font-semibold tabular-nums">{contributor.count}</span>
+            </li>
+          ))}
+        </ol>
       </div>
 
       {/* 모듈 분포 (Top 10) */}

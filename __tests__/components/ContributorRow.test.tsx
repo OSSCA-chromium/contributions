@@ -15,7 +15,8 @@ test('유효한 기여자 행에 username·상태별 건수·프로필 링크가
       }}
     />
   );
-  expect(screen.getByText('octocat')).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: 'octocat 프로필 이미지' })).toBeInTheDocument();
+  expect(screen.queryByText('octocat')).not.toBeInTheDocument();
   expect(screen.getByText('총 기여')).toBeInTheDocument();
   expect(screen.getByText('Merged')).toBeInTheDocument();
   expect(screen.getByText('In review').parentElement).toHaveTextContent('In review1');
@@ -44,7 +45,8 @@ test('유효하지 않은 username은 링크 없이 렌더된다', () => {
       }}
     />
   );
-  expect(screen.getByText('홍길동')).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: '홍길동 프로필 이미지' })).toBeInTheDocument();
+  expect(screen.queryByText('홍길동')).not.toBeInTheDocument();
   expect(screen.getByText('Abandoned').parentElement).toHaveTextContent('Abandoned0');
   expect(screen.queryByRole('link')).toBeNull();
 });

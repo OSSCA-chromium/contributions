@@ -34,7 +34,6 @@ export default function ContributionCard({
 
       <div className="flex items-center gap-2 text-sm text-on-surface-variant mb-2">
         <ContributorAvatar username={author} size={18} />
-        <span>{author}</span>
         <span aria-hidden="true">·</span>
         <span>{new Date(date).toLocaleDateString('ko-KR')}</span>
         <YearBadge date={date} />

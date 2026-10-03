@@ -1,3 +1,4 @@
+import ContributorAvatar from '@/components/ContributorAvatar';
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import {
@@ -158,8 +159,9 @@ export default async function PatchPage({ params }: ParamsProps) {
                   >
                     {item.title}
                   </Link>
-                  <span className="mt-[3px] block text-[12px] text-on-surface-variant">
-                    {item.date} · {item.author} ·{' '}
+                  <span className="mt-[3px] flex items-center gap-2 text-[12px] text-on-surface-variant">
+                    <ContributorAvatar username={item.author} size={24} linkToProfile />
+                    {item.date} ·
                     <span className="font-mono">{item.slug}</span>
                   </span>
                 </li>
