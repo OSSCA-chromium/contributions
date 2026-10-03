@@ -5,6 +5,7 @@ import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import StatsCharts from '@/components/StatsCharts';
+import ContributionGraph from '@/components/ContributionGraph';
 import YearSelector from '@/components/YearSelector';
 
 // Accent dot color per strip cell — same c1/c2/c3 scale as the home/
@@ -22,7 +23,8 @@ const STRIP_BORDERS = [
 export default function StatsView({ items }: { items: SearchIndexItem[] }) {
   const years = useMemo(() => getAvailableYears(items), [items]);
   const [year, setYear] = useState(DEFAULT_YEAR);
-  const stats = useMemo(() => computeStats(filterByYear(items, year)), [items, year]);
+  const filtered = useMemo(() => filterByYear(items, year), [items, year]);
+  const stats = useMemo(() => computeStats(filtered), [filtered]);
   const strip = [
     { value: stats.total, label: '총 컨트리뷰션' },
     { value: `${Math.round(stats.mergedRatio * 100)}%`, label: 'Merged 비율' },
@@ -53,6 +55,7 @@ export default function StatsView({ items }: { items: SearchIndexItem[] }) {
               </div>
             ))}
           </div>
+          <div className="mb-6"><ContributionGraph items={filtered} /></div>
           <StatsCharts stats={stats} />
         </>
       )}

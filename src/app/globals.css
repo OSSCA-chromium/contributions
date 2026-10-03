@@ -538,3 +538,6 @@ pre::-webkit-scrollbar-thumb:hover {
   letter-spacing: -0.015em;
   line-height: 1.4;
 }
+
+.graph-node:focus { outline: none; }
+.graph-node:focus .graph-dot { stroke: var(--color-on-surface); stroke-width: 3; }

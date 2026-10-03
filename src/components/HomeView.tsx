@@ -7,6 +7,7 @@ import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import PatchTable from '@/components/PatchTable';
+import ContributionGraph from '@/components/ContributionGraph';
 import YearSelector from '@/components/YearSelector';
 
 // Accent dot color per strip cell, left to right — mirrors the mockup's
@@ -113,6 +114,8 @@ export default function HomeView({ items }: { items: SearchIndexItem[] }) {
               </div>
             ))}
           </div>
+
+          <div className="mt-[34px]"><ContributionGraph items={filtered} compact /></div>
 
           <section className="mt-[34px]">
             <SectionHeader title="최근 기여" href="/patches" linkLabel="전체 목록 →" />
