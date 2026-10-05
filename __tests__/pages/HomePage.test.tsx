@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 import * as contributionsModule from '@/lib/contributions';
 
@@ -15,7 +15,7 @@ describe('홈페이지', () => {
     localStorage.clear();
   });
 
-  it('타이틀과 소개 문구가 렌더링됩니다', () => {
+  it('keeps an accessible home heading and the empty-state notice', () => {
     // 빈 배열 반환하도록 모의 설정
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([]);
     (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
@@ -24,8 +24,8 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    // 히어로 타이틀과 빈 상태 안내 체크
-    expect(screen.getByText('OSSCA Chromium Contributions')).toBeInTheDocument();
+    // Keep the page heading available without a visible hero.
+    expect(screen.getByRole('heading', { name: '홈', level: 1 })).toHaveClass('sr-only');
     expect(screen.getByText('2026년 컨트리뷰션이 아직 없습니다.')).toBeInTheDocument();
   });
 
@@ -36,7 +36,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -48,7 +53,8 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Recent contributions')).toBeInTheDocument();
+    expect(screen.getByText('최근 기여')).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: '프로젝트별 기여와 연결' })).toBeNull();
   });
 
   it('컨트리뷰션이 있을 경우 목록이 표시됩니다', () => {
@@ -59,7 +65,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
       {
@@ -67,7 +78,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 2',
         date: '2026-01-02',
         author: '김철수',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 2 내용',
       },
     ];
@@ -90,7 +106,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: '홍길동',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -102,7 +123,7 @@ describe('홈페이지', () => {
       <HomePage />
     );
 
-    expect(screen.getByText('Contributors')).toBeInTheDocument();
+    expect(screen.getByText('기여자')).toBeInTheDocument();
   });
 
   it('Contributors 섹션에 전체 보기 링크가 있습니다', () => {
@@ -112,7 +133,12 @@ describe('홈페이지', () => {
         title: '테스트 컨트리뷰션 1',
         date: '2026-01-01',
         author: 'octocat',
+        module: 'blink',
+        kind: 'fix',
+        keywords: [],
         labels: [],
+        related: [],
+        relatedSlugs: [],
         excerpt: '테스트 컨트리뷰션 1 내용',
       },
     ];
@@ -125,5 +151,52 @@ describe('홈페이지', () => {
     expect(
       screen.getByRole('link', { name: /전체 보기/ })
     ).toHaveAttribute('href', '/contributors');
+  });
+
+  it('선택한 연도에 맞춰 요약과 최근 기록을 갱신한다', () => {
+    (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([
+      {
+        slug: '2026-entry',
+        title: '2026 contribution',
+        date: '2026-01-01',
+        author: 'alice',
+        module: 'ui',
+        kind: 'fix',
+        keywords: [],
+        labels: [],
+        related: [],
+        relatedSlugs: [],
+        status: 'merged',
+        excerpt: '',
+      },
+      {
+        slug: '2025-entry',
+        title: '2025 contribution',
+        date: '2025-01-01',
+        author: 'bob',
+        module: 'ui',
+        kind: 'fix',
+        keywords: [],
+        labels: [],
+        related: [],
+        relatedSlugs: [],
+        status: 'in review',
+        excerpt: '',
+      },
+    ]);
+
+    render(<HomePage />);
+
+    expect(screen.getByText('2026 contribution')).toBeInTheDocument();
+    expect(screen.getByText('총 컨트리뷰션').nextElementSibling).toHaveTextContent('1');
+    fireEvent.click(screen.getByRole('button', { name: '2025' }));
+
+    expect(screen.getByText('2025 contribution')).toBeInTheDocument();
+    expect(screen.queryByText('2026 contribution')).toBeNull();
+    expect(screen.getByText('총 컨트리뷰션').nextElementSibling).toHaveTextContent('1');
+    expect(screen.getAllByRole('link', { name: 'bob 프로필 이미지' })[0]).toHaveAttribute(
+      'href',
+      '/contributors/bob'
+    );
   });
 });

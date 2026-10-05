@@ -11,6 +11,7 @@ npm test -- <pattern>  # single file/pattern, e.g. npm test -- ContributorRow.te
 npm run lint           # next lint (ESLint)
 npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
+npm run sync:contributions -- --dry-run # maintainer metadata refresh preview
 npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
@@ -35,8 +36,8 @@ Three data domains:
 | Domain               | Data                      | Loaders                                                              | Pages                                       |
 | -------------------- | ------------------------- | -------------------------------------------------------------------- | ------------------------------------------- |
 | Contributions        | `data/contributions/*.md` | `contributions.ts`, `contributors.ts`, `stats.ts`, `search-index.ts` | `/patches`, `/contributors`, `/stats`, home |
-| Docs / guide         | `data/docs`, `data/guide` | `docs.ts`, `markdown.ts`                                             | `/docs`, `/guide`                           |
-| Schedule (from #150) | `data/meetings`           | `meetings.ts`, `calendar.ts`, `attendance.ts`, `periodColors.ts`     | `/schedule`                                 |
+| Docs / guide         | `data/docs`              | `docs.ts`, `markdown.ts`                                             | `/docs`, `/guide`                           |
+| Schedule (from #150) | `data/meetings`           | `meetings.ts`, `calendar.ts`, `periodColors.ts`                      | `/schedule`                                 |
 
 Key flow: `getAllContributions()` (reads files, sorted by `date` desc) feeds `getContributorSummaries()`, `buildSearchIndex()`, and `computeStats()`. Pages are server components; `HomeView`, `ContributorsList`, `StatsView`, `ScheduleView`, etc. are client components that receive the pre-built data and do the sorting/filtering.
 
@@ -44,11 +45,36 @@ Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists
 
 ## Data conventions
 
-Contribution frontmatter (see `data/contributions/template.md`): `title`, `date` (YYYY-MM-DD), `author` (GitHub username), `contribution_url`, `labels` (array), `status` (`in review` | `merged` | `abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`.
+Contribution frontmatter (see `data/contributions/template.md`): `title`,
+`date` (the UTC date of Gerrit `created`, YYYY-MM-DD), `author` (GitHub
+username), `contribution_url`, `module` (one stable area from
+`src/lib/module-taxonomy.json`; detailed paths belong in `keywords`),
+`kind` (single change type such as fix/feature/refactor/test/docs/cleanup),
+`keywords` (ordered search-term array), and `status` (`in review` | `merged` |
+`abandoned`). Copy `template.md` to `{ChromiumReviewId}.md`. New records start
+`in review`; update status to `merged` or `abandoned` after the Gerrit result is
+confirmed. Add optional `resolvedDate` only when the exact result date is
+verified: UTC `submitted` for merged CLs or the last abandon event for
+abandoned CLs, never `updated`. Independent GitHub PRs use UTC `created_at`
+and `merged_at`. Never change `date` to the resolution date. Legacy `labels` values
+were copied to `keywords` in their original order to preserve search terms;
+new records use `keywords` without `labels`. Add optional `repo`, `issue`,
+`crbug`, or `related` only when verified.
 
 - `npm run validate:data` gates frontmatter in CI. A malformed `date` (e.g. a typo like `2025-05-D8`) parses to `NaN` and silently breaks date sorting — keep dates valid `YYYY-MM-DD`.
 - `gray-matter` may hand back `date` as a `Date` object, so normalize with `new Date(c.date)` before comparing.
 - `isValidGithubUsername` (`src/lib/github.ts`) gates whether a contributor links to a profile page; invalid handles render a fallback avatar with no link (the `[username]` route only `generateStaticParams` for valid handles).
+
+Mentees author contribution Markdown; maintainers run `sync:contributions`
+to refresh verified public review dates/status. Completion flags live in
+`data/maintenance/contribution-sync.json`, never in mentee frontmatter.
+Regular runs skip successfully finalized Merged records whose metadata
+fingerprint still matches. `--force` checks all records; classification
+changes are explicit decisions from the repository's
+`.agents/skills/sync-contributions/SKILL.md`, supplied with
+`--classification-file`. Dry runs never change records or completion flags.
+Keep generated data/state updates separate from script changes and new
+mentee contributions. Preserve authored bodies and `template.md`.
 
 ## Commit & workflow conventions
 

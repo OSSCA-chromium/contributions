@@ -36,22 +36,76 @@ cp data/contributions/template.md data/contributions/6520751.md
 
 ### frontmatter 작성 규칙
 
-| 필드               | 값                                     | 예                          |
-| ------------------ | -------------------------------------- | --------------------------- |
-| `title`            | Gerrit에 올린 commit 제목 그대로       | `"Fix siso_tips.md link"`   |
-| `date`             | CL 업로드 날짜, `YYYY-MM-DD`           | `2026-07-25`                |
-| `author`           | 본인 GitHub ID                         | `amoseui`                   |
+| 필드               | 값                                      | 예                            |
+| ------------------ | --------------------------------------- | ----------------------------- |
+| `title`            | Gerrit에 올린 commit 제목 그대로        | `"Fix siso_tips.md link"`     |
+| `date`             | Gerrit `created`의 UTC 날짜             | `2026-07-25`                  |
+| `author`           | 본인 GitHub ID                          | `amoseui`                     |
 | `contribution_url` | `https://crrev.com/c/{ChromiumReviewId}` | `https://crrev.com/c/6520751` |
-| `labels`           | 수정한 디렉터리 + 작업 성격            | `["docs", "fix"]`           |
-| `status`           | `in review`, `merged`, `abandoned`              | `in review`                 |
+| `module`           | 아래 기준의 상위 기능 영역 하나         | `blink`                       |
+| `kind`             | 변경 유형                               | `fix`                         |
+| `keywords`         | 기존 검색어와 추가 검색어의 배열        | `["docs", "fix"]`            |
+| `status`           | 최초 `in review`, 결과에 따라 갱신      | `in review`                   |
+| `resolvedDate`     | 확인된 머지·중단 UTC 날짜 (선택)        | `2026-08-01`                  |
 
-- CL을 중단했다면 `status: abandoned`로 기록하고 본문에 시도한 접근과 중단 이유를 적으세요.
+- `module`은 기여한 코드 영역 하나를, `kind`는 `fix`, `feature`, `refactor`,
+  `test`, `docs`, `cleanup` 등 변경 유형 하나를 적습니다. 세부 주제는
+  `keywords`에 순서대로 적으세요. 기존 기록의 `labels`는 검색어 유지를 위해
+  같은 순서로 `keywords`에 옮겼습니다. 새 기록에는 `labels`를 쓰지 않습니다.
+- 새 CL은 `status: in review`로 시작합니다. 결과가 확정되면 `merged` 또는
+  `abandoned`로 갱신합니다. CL을 중단했다면 본문에 시도한 접근과 중단 이유를
+  적으세요.
+- `resolvedDate`는 Gerrit에서 정확한 merge 또는 abandon 날짜를 확인한 경우에만
+  추가하세요. `date`는 결과와 관계없이 최초 업로드 날짜로 유지합니다.
+- 사이트에는 `date`를 **Created**, `resolvedDate`를 **Closed**로 표시합니다.
+  리뷰 중이거나 종료 날짜가 확인되지 않은 항목에는 Closed를 표시하지 않습니다.
+- Gerrit의 최초 생성 시각 `created`를 `date`, 실제 제출 완료 시각 `submitted`를
+  머지된 CL의 `resolvedDate`로 기록합니다. Abandoned CL은 마지막 abandon
+  이벤트의 시각을 확인합니다. 댓글·patchset 변경에도 바뀌는 `updated`는
+  Created나 Closed 날짜로 사용하지 않습니다. 날짜는 모두 UTC의 `YYYY-MM-DD`입니다.
+- 독립 GitHub PR은 최초 생성 시각 `created_at`과 머지 시각 `merged_at`을
+  같은 UTC 기준으로 사용합니다. 리뷰 중인 항목에는 결과 날짜를 적지 않습니다.
 - `date`는 반드시 유효한 `YYYY-MM-DD` 형식이어야 합니다. 잘못된 날짜(예:
   `2025-05-D8`)는 CI에서 걸리고, 통과하더라도 목록 정렬을 조용히 깨뜨립니다.
 - `author`는 기여자 페이지 링크와 아바타에 그대로 사용되므로 정확한 GitHub
   ID를 적으세요.
 - **템플릿의 안내 주석(`# github.com/GitHubId`, `# Add XXXXX from ...` 등)은
   모두 지우세요.**
+
+### 모듈 분류 기준
+
+`module`은 **기여의 핵심 동작을 담당하는 상위 영역**입니다. 세부 디렉터리,
+API 이름, 변경 유형을 새 모듈로 만들지 않습니다. 여러 영역을 수정한 경우
+주된 동작이 바뀐 영역 하나를 선택하고, 보조 영역은 `keywords`에 기록합니다.
+`AUTHORS`, 공통 빌드 설정이나 테스트 baseline만으로 모듈을 결정하지 않습니다.
+
+| 값 | 범위 |
+| --- | --- |
+| `base` | 공통 자료 구조, 파일 감시 등 기반 라이브러리 |
+| `blink` | DOM, CSS, 웹 API, 렌더링과 해당 기능의 WPT |
+| `browser` | 브라우저 기능과 공용 기능 컴포넌트 |
+| `content` | 브라우저·렌더러 프로세스 통합과 웹 콘텐츠 실행 |
+| `devtools` | Chrome DevTools 프런트엔드 |
+| `docs` | 공통 개발 문서와 빌드·테스트·개발 환경 가이드 |
+| `extensions` | 확장 프로그램, WebView와 확장 API |
+| `graphics` | GPU, Viz, 컴포지팅과 그래픽 출력 |
+| `media` | 오디오·비디오 파이프라인과 코덱 |
+| `network` | 네트워크 프로토콜, DNS와 네트워크 서비스 |
+| `platform` | ChromeOS, 장치 연동과 원격 실행 |
+| `security` | 암호화, 인증, 인증서, Safe Browsing과 샌드박스 |
+| `storage` | 파일 시스템 저장소, 할당량과 저장소 데이터베이스 |
+| `ui` | 공통 UI, Views, 접근성과 플랫폼 위젯 |
+| `v8` | JavaScript·WebAssembly 엔진 |
+
+- `net/dns`는 `network`, `components/viz`는 `graphics`,
+  `chrome/browser/ash`는 `platform`으로 기록합니다.
+- 특정 기능을 설명하는 문서는 해당 영역을 선택합니다. 예를 들어 샌드박스
+  문서는 `security`, Views 예제 문서는 `ui`입니다. 공통 개발 가이드는 `docs`입니다.
+- 저장소는 별도의 `repo`, 변경 유형은 `kind`, 세부 경로와 API 이름은
+  `keywords`로 구분합니다. 예를 들어 독립 CSS WPT도 모듈은 `blink`이고,
+  저장소는 `web-platform-tests/wpt`입니다.
+- 기존 세부 모듈 값은 검색어를 잃지 않도록 `keywords`에 보존합니다.
+  허용 목록을 늘릴 때는 기존 영역으로 분류할 수 없는지 먼저 검토합니다.
 
 ### 본문 작성
 
@@ -61,6 +115,19 @@ cp data/contributions/template.md data/contributions/6520751.md
   됩니다.
 - 템플릿에 있는 `https://example.com` 같은 placeholder 링크는 반드시
   제거하세요.
+
+### 필요한 데이터만 기록하기
+
+- `date`와 `resolvedDate`는 최초 업로드와 결과 확정이라는 서로 다른 시점을
+  나타냅니다. 결과가 확인된 경우 두 날짜를 구분해 기록합니다.
+- `module`은 기능 영역, `kind`는 변경 유형, `keywords`는 검색어입니다.
+  같은 내용을 별도의 `labels` 필드로 중복 입력하지 않습니다.
+- `repo`, `issue`, `crbug`, `related`, `externalLinks`는 확인된 정보가 있을 때만
+  적습니다. 기본 저장소인 `chromium/src`와 비어 있는 선택 필드는 생략할 수 있습니다.
+- 파생 이슈·PR은 원본 기여의 `externalLinks`로 연결합니다. 자동 WPT export와
+  후속 테스트 PR을 새 기여로 중복 집계하지 않습니다.
+- 안내 주석·문구, 예시 제목과 placeholder 링크는 실제 기록에서 제거합니다.
+  테스트 코드 안에서 쓰는 `example.com` 같은 예시 값은 그대로 둡니다.
 
 ## 2. 로컬 검증
 
@@ -96,9 +163,9 @@ git push origin 250725-contribution-6520751
   수정 커밋을 추가합니다.
 - PR이 merge되면 사이트에 자동 배포됩니다(수 분 소요).
 
-## 4. CL이 merge되면 — status 갱신
+## 4. CL 결과가 확정되면 — status 갱신
 
-Gerrit에서 CL이 최종 merge되면, 후속 PR로 `status`만 갱신합니다.
+Gerrit에서 CL이 merge되거나 abandon되면 후속 PR로 `status`를 갱신합니다.
 
 ```bash
 git checkout main && git pull
@@ -106,12 +173,59 @@ git checkout -b 250801-merged-6520751
 ```
 
 `data/contributions/6520751.md`의 frontmatter에서 `status: in review`를
-`status: merged`로 수정한 뒤, 같은 방식으로 커밋·push·PR을 올립니다.
+결과에 따라 `status: merged` 또는 `status: abandoned`로 수정합니다.
+Gerrit에서 정확한 결과 날짜를 확인했다면 `resolvedDate: YYYY-MM-DD`도
+추가하세요. `date`는 업로드 날짜이므로 바꾸지 않습니다. 같은 방식으로
+커밋·push·PR을 올립니다.
 
 ```bash
 git commit -am "contributions: Mark 6520751 as merged"
 git push origin 250801-merged-6520751
 ```
+
+### 관리자 일괄 갱신
+
+멘티는 위 절차로 기여 내용과 회고, 초기 `module`·`kind`·`keywords`를
+기록합니다. 관리자는 별도의 일괄 갱신으로 외부 리뷰의 실제 날짜와 상태를
+확인합니다. 갱신 플래그를 멘티의 frontmatter에 추가할 필요는 없습니다.
+
+```bash
+npm run sync:contributions -- --dry-run   # 변경 미리보기
+npm run sync:contributions                # 날짜·상태 반영
+```
+
+- 공개 Gerrit·GitHub PR의 생성 시각과 실제 머지·중단 시각을 UTC 날짜로
+  반영합니다. 본문·회고·작성자·관련 링크와 초기 분류는 보존합니다.
+- 확인을 완료한 Merged 항목은 별도 관리 파일
+  `data/maintenance/contribution-sync.json`의 `finalized` 플래그로 표시하고
+  다음 기본 실행에서 건너뜁니다. 날짜·상태·리뷰 URL을 수동으로 바꾸면
+  저장된 지문이 달라져 다시 확인합니다. Abandoned 항목은 복원될 수 있어
+  계속 확인합니다.
+- 실제 날짜와 관리자가 확인한 시각은 다릅니다. 관리 파일의 `verifiedAt`은
+  확인 이력이며 사이트의 기여 날짜로 사용하지 않습니다.
+- 미리보기와 실패한 조회는 갱신 완료 플래그를 기록하지 않습니다.
+  실행 결과는 `.cache/contribution-sync/report.json`에서 확인합니다.
+
+분류 기준을 바꾸거나 기존 Merged 항목까지 다시 확인하려면 강제 실행합니다.
+
+```bash
+npm run sync:contributions -- --force --dry-run
+```
+
+스크립트는 날짜·상태를 확정하고, 저장소의 `sync-contributions` skill은
+전체 기여 기록·변경 파일·현재 분포를 보고 `module`과 `kind`를 검토합니다.
+검토한 분류 변경만 별도 JSON으로 전달해 적용합니다.
+
+```bash
+npm run sync:contributions -- --force --classification-file .cache/contribution-sync/classifications.json
+```
+
+분류 파일은 `{ "8300812": { "module": "blink", "kind": "fix" } }`처럼
+기여 ID별로 작성합니다. 생략한 값은 유지하고, 모듈이 바뀌면 이전 값은
+검색어에 보존합니다. 스크립트의 `--force`만으로 분류를 자동 추정하지 않습니다.
+skill 절차는 저장소의 `.agents/skills/sync-contributions/SKILL.md`에 있습니다.
+
+일괄 갱신은 멘티의 신규 기여 PR과 별도 관리 PR로 올립니다.
 
 ## 5. GitHub 이슈·프로젝트 보드
 

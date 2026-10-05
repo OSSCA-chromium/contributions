@@ -19,12 +19,12 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
   const slidesUrl = meeting.slides ? resolveSlidesUrl(meeting.slides) : null;
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
+    <div className="w-full">
       <Link href="/schedule" className="text-sm text-primary hover:underline">
         ← 일정으로 돌아가기
       </Link>
 
-      <h1 className="font-display mb-3 mt-4 text-4xl font-semibold tracking-tight text-on-surface">
+      <h1 className="page-title mb-6">
         {meeting.title}
       </h1>
 
@@ -47,7 +47,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
 
       {meeting.contentHtml && (
         <article
-          className="prose dark:prose-invert max-w-none"
+          className="prose dark:prose-invert max-w-none [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: meeting.contentHtml }}
         />
       )}
@@ -55,7 +55,7 @@ export default function MeetingDetail({ meeting }: { meeting: Meeting }) {
       {slidesUrl && (
         <section className="mt-10">
           <div className="mb-3 flex items-center justify-between">
-            <h2 className="font-display text-xl font-semibold text-on-surface">발표 자료</h2>
+            <h2 className="section-title mb-4">발표 자료</h2>
             <a
               href={slidesUrl}
               target="_blank"

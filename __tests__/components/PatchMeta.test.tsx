@@ -1,0 +1,54 @@
+import { render, screen } from '@testing-library/react';
+import PatchMeta from '@/components/PatchMeta';
+import type { Contribution } from '@/lib/types';
+
+const contribution: Contribution = {
+  slug: '1012345',
+  title: 'Set up WebRTC tests',
+  date: '2026-05-08',
+  author: 'alice',
+  contributionUrl: 'https://crrev.com/c/1012345',
+  module: 'blink/renderer',
+  kind: 'test',
+  keywords: ['webrtc'],
+  labels: ['browser-tests'],
+  repo: 'devtools/devtools-frontend',
+  related: [],
+  relatedSlugs: [],
+  status: 'in review',
+  excerpt: 'Browser peer connection coverage',
+};
+
+test('detail metadata labels the review creation date as Created', () => {
+  render(<PatchMeta contribution={contribution} />);
+
+  expect(screen.getByText('Created')).toBeInTheDocument();
+  expect(screen.getByText('2026-05-08')).toBeInTheDocument();
+  expect(screen.queryByText('Closed')).not.toBeInTheDocument();
+});
+
+test('detail metadata shows author, taxonomy, optional repository, review ID, and status', () => {
+  render(<PatchMeta contribution={contribution} />);
+
+  expect(screen.getByRole('link', { name: 'alice 프로필 이미지' })).toHaveAttribute(
+    'href',
+    '/contributors/alice'
+  );
+  expect(screen.getByText('모듈')).toBeInTheDocument();
+  expect(screen.getByText('blink/renderer')).toBeInTheDocument();
+  expect(screen.getByText('종류')).toBeInTheDocument();
+  expect(screen.getByText('test')).toBeInTheDocument();
+  expect(screen.getByText('저장소')).toBeInTheDocument();
+  expect(screen.getByText('devtools/devtools-frontend')).toBeInTheDocument();
+  expect(screen.getByText('리뷰 ID')).toBeInTheDocument();
+  expect(screen.getByText('1012345')).toBeInTheDocument();
+  expect(screen.getByText('In Review')).toBeInTheDocument();
+});
+
+test('default Chromium repository is omitted from detail metadata', () => {
+  const chromiumContribution: Contribution = { ...contribution, repo: 'chromium/src' };
+  render(<PatchMeta contribution={chromiumContribution} />);
+
+  expect(screen.queryByText('저장소')).not.toBeInTheDocument();
+  expect(screen.queryByText('chromium/src')).not.toBeInTheDocument();
+});

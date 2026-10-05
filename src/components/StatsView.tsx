@@ -4,13 +4,17 @@ import { useMemo, useState } from 'react';
 import type { SearchIndexItem } from '@/lib/types';
 import { computeStats } from '@/lib/stats';
 import { DEFAULT_YEAR, filterByYear, getAvailableYears } from '@/lib/years';
+import { SHOW_CONTRIBUTION_GRAPH } from '@/lib/feature-flags';
 import StatsCharts from '@/components/StatsCharts';
+import ContributionGraph from '@/components/ContributionGraph';
+import ContributionSummary from '@/components/ContributionSummary';
 import YearSelector from '@/components/YearSelector';
 
 export default function StatsView({ items }: { items: SearchIndexItem[] }) {
   const years = useMemo(() => getAvailableYears(items), [items]);
   const [year, setYear] = useState(DEFAULT_YEAR);
-  const stats = useMemo(() => computeStats(filterByYear(items, year)), [items, year]);
+  const filtered = useMemo(() => filterByYear(items, year), [items, year]);
+  const stats = useMemo(() => computeStats(filtered), [filtered]);
 
   return (
     <>
@@ -22,22 +26,10 @@ export default function StatsView({ items }: { items: SearchIndexItem[] }) {
         <p className="text-on-surface">표시할 데이터가 없습니다.</p>
       ) : (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-              <div className="font-display text-4xl font-semibold text-primary">{stats.total}</div>
-              <div className="text-sm text-on-surface-variant">총 컨트리뷰션</div>
-            </div>
-            <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-              <div className="font-display text-4xl font-semibold text-success">
-                {Math.round(stats.mergedRatio * 100)}%
-              </div>
-              <div className="text-sm text-on-surface-variant">Merged 비율</div>
-            </div>
-            <div className="bg-surface border border-outline rounded-3xl p-6 text-center">
-              <div className="font-display text-4xl font-semibold text-info">{stats.contributorCount}</div>
-              <div className="text-sm text-on-surface-variant">기여자 수</div>
-            </div>
-          </div>
+          <div className="mb-6"><ContributionSummary items={filtered} stats={stats} /></div>
+          {SHOW_CONTRIBUTION_GRAPH && (
+            <div className="mb-6"><ContributionGraph items={filtered} /></div>
+          )}
           <StatsCharts stats={stats} />
         </>
       )}

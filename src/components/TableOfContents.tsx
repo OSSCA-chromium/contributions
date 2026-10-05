@@ -12,7 +12,7 @@ export default function TableOfContents({
 
   return (
     <nav aria-label="목차" className="text-sm">
-      <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+      <h2 className="mb-2 text-xs font-semibold text-on-surface-variant">
         목차
       </h2>
       <ul className="space-y-1">

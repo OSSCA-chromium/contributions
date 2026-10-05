@@ -1,0 +1,102 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import StatsView from '@/components/StatsView';
+import type { SearchIndexItem } from '@/lib/types';
+
+function item(
+  slug: string,
+  date: string,
+  author: string,
+  status: SearchIndexItem['status']
+): SearchIndexItem {
+  return {
+    slug,
+    title: slug,
+    author,
+    module: 'ui',
+    kind: 'fix',
+    keywords: [],
+    labels: [],
+    related: [],
+    relatedSlugs: [],
+    status,
+    date,
+    excerpt: '',
+  };
+}
+
+function statValue(label: string) {
+  const labelElement = screen.getByText(label, { selector: 'dt' });
+  return labelElement.nextElementSibling;
+}
+
+test('빈 데이터에서는 빈 상태를 보여 주고 통계 차트를 숨긴다', () => {
+  render(<StatsView items={[]} />);
+
+  expect(screen.getByText('표시할 데이터가 없습니다.')).toBeInTheDocument();
+  expect(screen.queryByRole('heading', { name: '상태 분포' })).toBeNull();
+});
+
+test('연도를 선택하면 통계 값을 필터링하면서 차트를 유지한다', () => {
+  render(
+    <StatsView
+      items={[
+        item('2026-merged', '2026-01-01', 'alice', 'merged'),
+        item('2025-review', '2025-01-02', 'bob', 'in review'),
+        item('2025-abandoned', '2025-01-03', 'carol', 'abandoned'),
+      ]}
+    />
+  );
+
+  expect(statValue('총 컨트리뷰션')).toHaveTextContent('1');
+  expect(statValue('Merge 완료')).toHaveTextContent('1');
+  expect(statValue('리뷰 중')).toHaveTextContent('0');
+  fireEvent.click(screen.getByRole('button', { name: '2025' }));
+
+  expect(statValue('총 컨트리뷰션')).toHaveTextContent('2');
+  expect(statValue('Merge 완료')).toHaveTextContent('0');
+  expect(statValue('리뷰 중')).toHaveTextContent('1');
+  expect(statValue('기여자 수')).toHaveTextContent('2');
+  expect(screen.getByRole('heading', { name: '상태 분포' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: '2026' }));
+  expect(statValue('리뷰 중')).toHaveTextContent('0');
+});
+
+test('세 상태 데이터셋에서 전체 합계와 차트를 표시한다', () => {
+  render(
+    <StatsView
+      items={[
+        item('merged', '2026-01-01', 'alice', 'merged'),
+        item('in-review', '2026-01-02', 'bob', 'in review'),
+        item('abandoned', '2026-01-03', 'carol', 'abandoned'),
+      ]}
+    />
+  );
+
+  expect(screen.getAllByRole('term').map(term => [term.textContent, term.nextElementSibling?.textContent])).toEqual([
+    ['총 컨트리뷰션', '3'],
+    ['Merged 비율', '33%'],
+    ['Merge 완료', '1'],
+    ['리뷰 중', '1'],
+    ['기여자 수', '3'],
+    ['프로젝트 수', '1'],
+  ]);
+  expect(screen.getByRole('heading', { name: '상태 분포' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: '월별 추이' })).toBeInTheDocument();
+});
+
+test('summarizes projects and modules while the contribution graph is disabled', () => {
+  render(<StatsView items={[
+    item('chromium', '2026-01-01', 'alice', 'merged'),
+    { ...item('v8', '2026-01-02', 'bob', 'merged'), repo: 'v8/v8', module: 'v8' },
+    { ...item('devtools', '2025-01-02', 'carol', 'merged'), repo: 'devtools/devtools-frontend' },
+  ]} />);
+  expect(statValue('프로젝트 수')).toHaveTextContent('2');
+  expect(screen.getByText('2개 모듈에 기여')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: '2025' }));
+  expect(statValue('프로젝트 수')).toHaveTextContent('1');
+  expect(screen.getByText('1개 모듈에 기여')).toBeInTheDocument();
+  expect(screen.queryByRole('heading', { name: '프로젝트별 기여와 연결' })).toBeNull();
+  expect(screen.queryAllByRole('button', { name: /^패치 / })).toHaveLength(0);
+});

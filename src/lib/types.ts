@@ -1,12 +1,27 @@
 export type ContributionStatus = 'in review' | 'merged' | 'abandoned';
 
+export interface ExternalLink {
+  title: string;
+  url: string;
+}
+
 export interface Contribution {
   slug: string;
   title: string;
   date: string;
   author: string;
   contributionUrl?: string;
+  externalLinks?: ExternalLink[];
+  module: string;
+  kind: string;
+  keywords: string[];
   labels: string[];
+  repo?: string;
+  issue?: number;
+  crbug?: number;
+  related: number[];
+  relatedSlugs: string[];
+  resolvedDate?: string;
   status?: ContributionStatus;
   excerpt: string;
   content?: string;
@@ -17,7 +32,16 @@ export interface SearchIndexItem {
   slug: string;
   title: string;
   author: string;
+  contributionUrl?: string;
+  repo?: string;
+  module: string;
+  kind: string;
+  keywords: string[];
   labels: string[];
+  issue?: number;
+  crbug?: number;
+  related: number[];
+  relatedSlugs: string[];
   status?: ContributionStatus;
   date: string;
   excerpt: string;
@@ -38,9 +62,11 @@ export interface Stats {
   total: number;
   byStatus: { status: string; count: number }[];
   byMonth: { month: string; count: number }[];
-  topContributors: { username: string; count: number }[];
+  topContributors: { username: string; count: number; byStatus: { status: string; count: number }[] }[];
   contributorCount: number;
   mergedRatio: number;
+  moduleCount: number;
+  byModule: { module: string; count: number }[];
 }
 
 export interface DocMeta {
@@ -66,18 +92,4 @@ export interface Meeting {
   slides?: string; // 사이트 내 HTML 덱 경로(/slides/...) 또는 외부 URL
   content?: string;
   contentHtml?: string;
-}
-
-export interface AttendanceRecord {
-  username: string;
-  attended: number;
-  totalMeetings: number;
-  rate: number; // 0..1
-}
-
-export interface AttendanceStats {
-  meetingCount: number;
-  milestoneCount: number;
-  rosterSize: number;
-  records: AttendanceRecord[]; // rate desc, then username asc
 }

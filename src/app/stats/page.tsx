@@ -12,8 +12,11 @@ export default function StatsPage() {
   const items = buildSearchIndex(getAllContributions());
 
   return (
-    <div className="mx-auto max-w-7xl p-4">
-      <h1 className="font-display text-3xl font-semibold tracking-tight text-on-surface mb-6">통계</h1>
+    <div>
+      <h1 className="page-title mb-6">
+        통계
+      </h1>
+      <p className="mb-6 max-w-[75ch] text-sm text-on-surface-variant">리뷰 생성 추이와 기여자별 분포, 처리 현황을 함께 살펴보세요.</p>
       <StatsView items={items} />
     </div>
   );

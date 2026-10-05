@@ -2,19 +2,29 @@ name: PR Checks
 
 on:
   pull_request:
-    branches: [ main ]
   merge_group:
-    branches: [ main ]
+    branches: [main]
+  workflow_call:
+    inputs:
+      upload_pages_artifact:
+        description: Upload the validated static export for a main deployment
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -36,3 +46,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Upload GitHub Pages artifact
+        if: inputs.upload_pages_artifact && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: out

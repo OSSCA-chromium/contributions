@@ -21,7 +21,7 @@ export default function DocsSidebar({
     <nav aria-label="문서 목록" className="text-sm">
       {[...groups.entries()].map(([group, docs]) => (
         <div key={group} className="mb-4">
-          <h2 className="mb-1.5 border-b border-outline px-3 pb-1.5 text-[11px] font-bold uppercase tracking-wider text-primary">
+          <h2 className="mb-1.5 border-b border-outline px-3 pb-1.5 text-[11px] font-semibold text-primary">
             {group}
           </h2>
           <ul className="space-y-0.5">

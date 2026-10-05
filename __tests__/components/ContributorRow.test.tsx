@@ -13,20 +13,28 @@ test('유효한 기여자 행에 username·상태별 건수·프로필 링크가
         abandoned: 2,
         lastActive: '2025-06-04T00:00:00.000Z',
       }}
-    />
+    />,
   );
-  expect(screen.getByText('octocat')).toBeInTheDocument();
-  expect(screen.getByText('TOTAL')).toBeInTheDocument();
-  expect(screen.getByText('MERGED')).toBeInTheDocument();
-  expect(screen.getByText('IN REVIEW')).toBeInTheDocument();
-  expect(screen.getByText('ABANDONED').parentElement).toHaveTextContent('ABANDONED2');
-  expect(screen.getByText('7')).toBeInTheDocument(); // total
+  expect(
+    screen.getByRole('img', { name: 'octocat 프로필 이미지' }),
+  ).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'octocat' })).toBeInTheDocument();
+  expect(screen.getByText('Merged')).toBeInTheDocument();
+  expect(screen.getByText('In Review').closest('div')).toHaveTextContent(
+    'In Review1',
+  );
+  expect(screen.getByText('Abandoned').closest('div')).toHaveTextContent(
+    'Abandoned2',
+  );
   expect(screen.getByText('4')).toBeInTheDocument(); // merged
   expect(screen.getByText('1')).toBeInTheDocument(); // in review
-  expect(screen.getByText(/Updated 2025-06-04/)).toBeInTheDocument();
+  expect(screen.getByText('2025-06-04')).toHaveAttribute(
+    'datetime',
+    '2025-06-04',
+  );
   expect(screen.getByRole('link')).toHaveAttribute(
     'href',
-    '/contributors/octocat'
+    '/contributors/octocat',
   );
 });
 
@@ -42,9 +50,14 @@ test('유효하지 않은 username은 링크 없이 렌더된다', () => {
         abandoned: 0,
         lastActive: '2025-05-01T00:00:00.000Z',
       }}
-    />
+    />,
   );
-  expect(screen.getByText('홍길동')).toBeInTheDocument();
-  expect(screen.getByText('ABANDONED').parentElement).toHaveTextContent('ABANDONED0');
+  expect(
+    screen.getByRole('img', { name: '홍길동 프로필 이미지' }),
+  ).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: '홍길동' })).toBeInTheDocument();
+  expect(screen.getByText('Abandoned').closest('div')).toHaveTextContent(
+    'Abandoned0',
+  );
   expect(screen.queryByRole('link')).toBeNull();
 });

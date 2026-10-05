@@ -42,3 +42,6 @@ next-env.d.ts
 
 # superpowers (locally kept, not tracked)
 docs/superpowers/
+
+# Local maintainer reports and classification decisions
+/.cache/contribution-sync/
