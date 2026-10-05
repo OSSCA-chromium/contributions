@@ -2,17 +2,17 @@ import { computeRelated } from '@/lib/contributions';
 import { groupByRelated } from '@/lib/grouping';
 
 describe('computeRelated', () => {
-  test('connects records sharing positive issue and crbug IDs', () => {
+  test('connects shared assignments without merging distinct issues that share a crbug', () => {
     const related = computeRelated([
-      { slug: '101', issue: 31, crbug: 9001, related: [102] },
+      { slug: '101', issue: 31, crbug: 9001, related: [] },
       { slug: '102', issue: 31, crbug: 9002, related: [] },
       { slug: '103', issue: 32, crbug: 9001, related: [] },
       { slug: '104', issue: 0, crbug: -1, related: [] },
     ]);
 
-    expect(related.get('101')).toEqual(['102', '103']);
+    expect(related.get('101')).toEqual(['102']);
     expect(related.get('102')).toEqual(['101']);
-    expect(related.get('103')).toEqual(['101']);
+    expect(related.get('103')).toEqual([]);
     expect(related.get('104')).toEqual([]);
   });
 
@@ -32,9 +32,9 @@ describe('computeRelated', () => {
 describe('groupByRelated', () => {
   test('groups mixed transitive relations and preserves input order', () => {
     const records = [
-      { slug: '3', crbug: 700, related: [] },
+      { slug: '3', issue: 32, related: [] },
       { slug: '1', issue: 31, related: [] },
-      { slug: '2', issue: 31, crbug: 700, related: [] },
+      { slug: '2', issue: 31, related: [3] },
       { slug: '4', related: [] },
     ];
     const directRelations = computeRelated(records);
@@ -47,7 +47,9 @@ describe('groupByRelated', () => {
     expect(rows[0]).toMatchObject({
       type: 'group',
       items: [{ slug: '3' }, { slug: '1' }, { slug: '2' }],
+      reason: 'related',
     });
+    expect(rows[0]).not.toHaveProperty('relationId');
     expect(rows[1]).toEqual({
       type: 'single',
       item: { slug: '4', related: [], relatedSlugs: [] },
@@ -60,13 +62,13 @@ describe('groupByRelated', () => {
     ]);
   });
 
-  test('prefers crbug over issue and explicit-related reasons', () => {
+  test('labels the shared assignment even when a crbug is also shared', () => {
     const rows = groupByRelated([
       { slug: '1', relatedSlugs: ['2'], issue: 31, crbug: 700 },
       { slug: '2', relatedSlugs: ['1'], issue: 31, crbug: 700 },
     ]);
 
-    expect(rows[0]).toMatchObject({ type: 'group', reason: 'crbug', relationId: 700 });
+    expect(rows[0]).toMatchObject({ type: 'group', reason: 'issue', relationId: 31 });
   });
 
   test('prefers issue over explicit-related reason', () => {

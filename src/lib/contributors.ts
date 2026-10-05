@@ -3,9 +3,9 @@ import { isValidGithubUsername } from '@/lib/github';
 import type { Contribution, ContributorSummary } from '@/lib/types';
 
 // author별로 컨트리뷰션을 그룹화
-function groupByAuthor(): Map<string, Contribution[]> {
+function groupByAuthor(contributions: Contribution[] = getAllContributions()): Map<string, Contribution[]> {
   const groups = new Map<string, Contribution[]>();
-  for (const contribution of getAllContributions()) {
+  for (const contribution of contributions) {
     const author = contribution.author;
     if (!author) continue;
     const list = groups.get(author) ?? [];
@@ -41,8 +41,10 @@ function summarize(username: string, contributions: Contribution[]): Contributor
 }
 
 // 모든 기여자의 요약 통계 (총 기여 수 내림차순)
-export function getContributorSummaries(): ContributorSummary[] {
-  const groups = groupByAuthor();
+export function getContributorSummaries(
+  contributions: Contribution[] = getAllContributions(),
+): ContributorSummary[] {
+  const groups = groupByAuthor(contributions);
   return Array.from(groups.entries())
     .map(([username, contributions]) => summarize(username, contributions))
     .sort((a, b) => b.total - a.total);

@@ -61,6 +61,13 @@ were copied to `keywords` in their original order to preserve search terms;
 new records use `keywords` without `labels`. Add optional `repo`, `issue`,
 `crbug`, or `related` only when verified.
 
+Contribution tables always display individual records in the supplied order.
+Shared OSSCA assignment `issue` values and explicit `related` review IDs
+populate related-patch links in details and connections in the graph. A
+shared `crbug` alone does not connect records; umbrella bugs often span
+unrelated assignments and authors. Keep `crbug` as a reference link in
+patch details.
+
 - `npm run validate:data` gates frontmatter in CI. A malformed `date` (e.g. a typo like `2025-05-D8`) parses to `NaN` and silently breaks date sorting — keep dates valid `YYYY-MM-DD`.
 - `gray-matter` may hand back `date` as a `Date` object, so normalize with `new Date(c.date)` before comparing.
 - `isValidGithubUsername` (`src/lib/github.ts`) gates whether a contributor links to a profile page; invalid handles render a fallback avatar with no link (the `[username]` route only `generateStaticParams` for valid handles).

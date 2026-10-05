@@ -3,7 +3,7 @@ export type GroupedRow<T> =
   | {
       type: 'group';
       items: T[];
-      reason: 'crbug' | 'issue' | 'related';
+      reason: 'issue' | 'related';
       relationId?: number;
     };
 
@@ -11,30 +11,17 @@ type RelatedItem = {
   slug: string;
   relatedSlugs: string[];
   issue?: number;
-  crbug?: number;
 };
 
 function isPositiveId(value: unknown): value is number {
   return Number.isSafeInteger(value) && (value as number) > 0;
 }
 
-function sharedId<T extends RelatedItem>(items: T[], field: 'issue' | 'crbug') {
-  for (let i = 0; i < items.length; i++) {
-    const leftId = items[i][field];
-    if (!isPositiveId(leftId)) continue;
-    for (let j = i + 1; j < items.length; j++) {
-      if (items[j][field] === leftId) return leftId;
-    }
-  }
-  return undefined;
-}
-
 function getGroupReason<T extends RelatedItem>(items: T[]) {
-  const crbug = sharedId(items, 'crbug');
-  if (crbug !== undefined) return { reason: 'crbug' as const, relationId: crbug };
-
-  const issue = sharedId(items, 'issue');
-  if (issue !== undefined) return { reason: 'issue' as const, relationId: issue };
+  const issue = items[0]?.issue;
+  if (isPositiveId(issue) && items.every((item) => item.issue === issue)) {
+    return { reason: 'issue' as const, relationId: issue };
+  }
 
   return { reason: 'related' as const };
 }

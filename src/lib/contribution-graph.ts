@@ -7,7 +7,7 @@ const PROJECT_LABELS: Record<string, string> = {
 };
 
 export interface GraphNode extends SearchIndexItem { project: string }
-export interface GraphEdge { source: string; target: string; reason: 'crbug' | 'issue' | 'related' }
+export interface GraphEdge { source: string; target: string; reason: 'issue' | 'related' }
 export interface ProjectCloud { repo: string; label: string; count: number }
 export interface ContributionGraph {
   nodes: GraphNode[];
@@ -28,8 +28,7 @@ export function createContributionGraph(items: SearchIndexItem[]): ContributionG
       const other = bySlug.get(slug);
       if (!other || slug === node.slug) continue;
       const [source, target] = [node.slug, slug].sort();
-      const reason = node.crbug && node.crbug === other.crbug ? 'crbug'
-        : node.issue && node.issue === other.issue ? 'issue' : 'related';
+      const reason = node.issue && node.issue === other.issue ? 'issue' : 'related';
       edges.set(`${source}:${target}`, { source, target, reason });
       connected.add(source);
       connected.add(target);

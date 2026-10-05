@@ -9,7 +9,7 @@ const summaries = [
     merged: 1,
     inReview: 0,
     abandoned: 0,
-    lastActive: '2025-06-01T00:00:00.000Z',
+    lastActive: '2026-06-01T00:00:00.000Z',
   },
   {
     username: 'bob',
@@ -18,19 +18,21 @@ const summaries = [
     merged: 0,
     inReview: 3,
     abandoned: 2,
-    lastActive: '2025-01-01T00:00:00.000Z',
+    lastActive: '2026-01-01T00:00:00.000Z',
   },
 ];
 
+const summariesByYear = { all: summaries, '2026': summaries };
+
 test('기본은 최신순(lastActive desc): alice가 먼저', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   const links = screen.getAllByRole('link');
-  expect(links[0]).toHaveAttribute('href', '/contributors/alice'); // 2025-06
-  expect(links[1]).toHaveAttribute('href', '/contributors/bob'); // 2025-01
+  expect(links[0]).toHaveAttribute('href', '/contributors/alice'); // June 2026
+  expect(links[1]).toHaveAttribute('href', '/contributors/bob'); // January 2026
 });
 
 test('total 정렬 선택 시 total desc: bob이 먼저', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   fireEvent.change(screen.getByLabelText('정렬 기준'), {
     target: { value: 'total' },
   });
@@ -40,7 +42,7 @@ test('total 정렬 선택 시 total desc: bob이 먼저', () => {
 });
 
 test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   fireEvent.change(screen.getByLabelText('정렬 기준'), {
     target: { value: 'merged' },
   });
@@ -50,7 +52,7 @@ test('merged 정렬 선택 시 merged desc: alice가 먼저', () => {
 });
 
 test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   fireEvent.change(screen.getByLabelText('정렬 기준'), {
     target: { value: 'inReview' },
   });
@@ -60,7 +62,7 @@ test('in review 정렬 선택 시 inReview desc: bob이 먼저', () => {
 });
 
 test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으로 표시한다', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   expect(screen.getByRole('option', { name: 'Abandoned' })).toHaveValue(
     'abandoned',
   );
@@ -73,7 +75,7 @@ test('Abandoned 정렬 옵션을 선택하면 abandoned 건수 내림차순으�
 });
 
 test('기여자 검색은 대소문자와 앞뒤 공백을 무시하고 선택한 정렬을 유지한다', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   fireEvent.change(screen.getByLabelText('정렬 기준'), {
     target: { value: 'total' },
   });
@@ -97,7 +99,7 @@ test('기여자 검색은 대소문자와 앞뒤 공백을 무시하고 선택�
 });
 
 test('검색 결과가 없을 때 검색을 지우면 전체 기여자 목록으로 돌아온다', () => {
-  render(<ContributorsList summaries={summaries} />);
+  render(<ContributorsList summariesByYear={summariesByYear} />);
   fireEvent.change(screen.getByRole('searchbox', { name: '기여자 검색' }), {
     target: { value: 'nobody' },
   });
