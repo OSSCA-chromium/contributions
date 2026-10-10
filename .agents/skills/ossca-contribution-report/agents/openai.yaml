@@ -1,0 +1,4 @@
+interface:
+  display_name: "OSSCA Contribution Report"
+  short_description: "OSSCA project tables, charts, and Notion clipboard"
+  default_prompt: "Use $ossca-contribution-report to prepare project tables and charts from Contributions data while preserving verified crbug evidence."
