@@ -8,14 +8,16 @@ it does not query Gerrit at runtime. Record the selected year and displayed coun
 
 Pin the Git revision corresponding to the deployed site. Do not assume the local
 checkout or an older report is current. Public fetches need no API token; preserve
-the user's branch and unrelated files. A report-only operation belongs in an
-artifact directory such as `.cache/contribution-sync/`, not contribution Markdown.
+the user's branch and unrelated files. Use the selected report directory, which
+defaults to `reports/ossca/<year>/<run-id>/`, and keep evidence in its `evidence/`
+subdirectory. Honor a user-specified output location. Keep report artifacts out
+of contribution Markdown.
 
 Run from the Contributions repository root with its existing `gray-matter` dependency:
 
 ```bash
 node .agents/skills/ossca-contribution-report/scripts/snapshot_site.mjs --repo <checkout> --ref <pinned-revision> \
-  --year <YYYY> --output <snapshot-directory>
+  --year <YYYY> --output <report-directory>/evidence/snapshot
 ```
 
 This reads Git objects without checking out or changing the branch. It writes
@@ -26,8 +28,9 @@ Source statuses remain authoritative for a site-based report.
 ## Exact review dates and project
 
 ```bash
-python3 .agents/skills/ossca-contribution-report/scripts/verify_reviews.py --records <snapshot-directory>/site-records.json \
-  --output <evidence-directory>
+python3 .agents/skills/ossca-contribution-report/scripts/verify_reviews.py \
+  --records <report-directory>/evidence/snapshot/site-records.json \
+  --output <report-directory>/evidence/reviews
 ```
 
 This fetches anonymous public Gerrit/GitHub metadata and writes a manifest, raw

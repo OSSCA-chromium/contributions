@@ -26,15 +26,25 @@ Claude Code에서는 파일 확인에 `Read`·`Glob`·`Grep`, 아래 명령 실�
 
 새 증거 수집이나 데이터 필드 확인이 필요하면 [evidence.md](references/evidence.md)를 읽습니다. 이미 확인한 집계를 재포맷하는 요청에는 기존 `verified-counts.json`을 사용합니다.
 
+## 저장 위치
+
+기본 실행 디렉터리는 `reports/ossca/<연도>/<실행ID>/`입니다. 실행ID에는 날짜와 작업 이름을 사용합니다(예: `2026-10-10-final-report`). 사용자가 저장 경로를 지정하면 그 경로를 우선합니다. 아래 명령의 `<report-directory>`는 선택한 실행 디렉터리입니다.
+
+- `evidence/`: 사이트 snapshot, 리뷰 원본과 manifest, crbug 검증 자료
+- `tables/`: 보고서 표, HTML·Markdown·CSV, 검증된 집계 JSON
+- `charts/`: 차트 이미지와 멘티별 CSV
+
+결과를 재현할 수 있도록 입력 증거와 산출물을 같은 실행 디렉터리에 보관합니다. 기본 디렉터리는 `.gitignore`에서 로컬 산출물로 관리합니다.
+
 ## 표 생성
 
-각 스크립트의 `--help`는 파일이나 클립보드를 변경하지 않습니다. 명령은 Contributions 저장소 루트에서 실행합니다. 생성 결과와 수집 증거는 `.cache/contribution-sync/` 아래에 저장합니다.
+각 스크립트의 `--help`는 파일이나 클립보드를 변경하지 않습니다. 명령은 Contributions 저장소 루트에서 실행합니다.
 
 기존 수치를 유지하며 프로그램 이전을 Challenges에 합치는 경우:
 
 ```bash
 python3 .agents/skills/ossca-contribution-report/scripts/report.py --counts <verified-counts.json> \
-  --preprogram challenges --output <output-directory>
+  --preprogram challenges --output <report-directory>/tables
 ```
 
 기본 출력은 **전체 합계, Chromium, V8, WPT, DevTools 표 5개**입니다. HTML·Markdown·CSV와 검증된 집계 JSON을 생성합니다. 기간은 `--preprogram separate`로 별도 표시할 수 있습니다. 프로그램 이후 기록이 있으면 별도 열로 표시합니다. 숫자·날짜·인원은 고정하지 않습니다.
@@ -42,25 +52,33 @@ python3 .agents/skills/ossca-contribution-report/scripts/report.py --counts <ver
 새 기록에서 계산하는 경우:
 
 ```bash
-python3 .agents/skills/ossca-contribution-report/scripts/report.py --records <verified-site-records.json> \
-  --crbug <verified-activities.json> --snapshot <snapshot.json> \
+python3 .agents/skills/ossca-contribution-report/scripts/report.py \
+  --records <report-directory>/evidence/reviews/verified-site-records.json \
+  --crbug <verified-activities.json> --snapshot <report-directory>/evidence/snapshot/snapshot.json \
   --year 2026 --as-of 2026-10-06 \
   --challenges-start 2026-07-11 --challenges-end 2026-08-14 \
-  --masters-end 2026-10-24 --preprogram challenges --output <output-directory>
+  --masters-end 2026-10-24 --preprogram challenges --output <report-directory>/tables
 ```
 
 위 날짜는 사용 예시입니다. 실행 시 사용자가 선택한 연도와 기간을 적용합니다. 제출은 Created, Merge는 정확한 Submitted/Merged, crbug는 활동 이벤트의 UTC 날짜로 구분합니다. `updated`로 머지일을 대신하지 않습니다.
 
 ## 차트와 클립보드
 
-차트를 요청받으면 `python3 .agents/skills/ossca-contribution-report/scripts/charts.py --counts <generated-verified-counts.json> --output <chart-directory>`를 실행합니다. 필요하면 `--year`, `--as-of`, `--font`를 지정합니다. `matplotlib`이 필요합니다. 가로 누적 막대그래프는 기록이 있는 멘티 전원과 평균선을 표시하며, 상태 순서는 Merged → In Review → Abandoned입니다. 월별 데이터가 있으면 상태 분포·월별 차트도 생성합니다. PNG를 열어 글자·범례·겹침을 확인합니다.
+차트를 요청받으면 다음을 실행합니다:
+
+```bash
+python3 .agents/skills/ossca-contribution-report/scripts/charts.py \
+  --counts <report-directory>/tables/verified-counts.json --output <report-directory>/charts
+```
+
+필요하면 `--year`, `--as-of`, `--font`를 지정합니다. `matplotlib`이 필요합니다. 가로 누적 막대그래프는 기록이 있는 멘티 전원과 평균선을 표시하며, 상태 순서는 Merged → In Review → Abandoned입니다. 월별 데이터가 있으면 상태 분포·월별 차트도 생성합니다. PNG를 열어 글자·범례·겹침을 확인합니다.
 
 클립보드 저장을 요청받은 macOS에서는 다음을 실행합니다:
 
 ```bash
 swift .agents/skills/ossca-contribution-report/scripts/copy-notion.swift \
-  <output-directory>/notion-project-tables.html \
-  <output-directory>/notion-project-tables.md
+  <report-directory>/tables/notion-project-tables.html \
+  <report-directory>/tables/notion-project-tables.md
 ```
 
 이 스크립트는 HTML과 plain text를 함께 저장하고 실제 읽기 결과를 비교합니다. Notion 게시나 저장소 변경을 수행하지 않습니다.

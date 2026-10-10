@@ -45,3 +45,6 @@ docs/superpowers/
 
 # Local maintainer reports and classification decisions
 /.cache/contribution-sync/
+
+# Local OSSCA report outputs and reproducibility evidence
+/reports/ossca/
