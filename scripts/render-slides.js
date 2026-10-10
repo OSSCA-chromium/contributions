@@ -26,11 +26,24 @@ function findChrome() {
   return chrome;
 }
 
-// 덱 HTML에서 슬라이드 수와 제목을 읽는다.
+function plainText(html) {
+  return html
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// 덱 HTML에서 덱 제목과 슬라이드별 제목(첫 h1/h2, 없으면 빈 문자열)을 읽는다.
 function readDeck(html) {
-  const count = (html.match(/<section\b[^>]*\bclass="slide\b/g) || []).length;
-  const title = (/<title>([^<]*)<\/title>/.exec(html) || [])[1] || '발표 자료';
-  return { count, title: title.trim() };
+  const title = plainText((/<title>([^<]*)<\/title>/.exec(html) || [])[1] || '') || '발표 자료';
+  const slides = html
+    .split(/<section\b[^>]*\bclass="slide\b/)
+    .slice(1)
+    .map((body) => plainText((/<h[12][^>]*>([\s\S]*?)<\/h[12]>/.exec(body) || [])[1] || ''));
+  return { title, slides };
 }
 
 function previewName(n) {
@@ -38,26 +51,29 @@ function previewName(n) {
 }
 
 // GitHub에서 덱 디렉터리를 열면 모든 슬라이드가 보이도록 미리보기 목록을 만든다.
-function buildReadme(slug, title, count) {
+function buildReadme(slug, title, slides) {
   const lines = [
     `# ${title}`,
     '',
     '<!-- npm run slides:render 가 생성한 파일입니다. 직접 수정하지 마세요. -->',
     '',
     '- 원본: [`index.html`](index.html) — 슬라이드 내용은 이 파일에서 수정합니다.',
+    '- 스타일·동작: [`../_shared/`](../_shared) — 모든 덱이 함께 쓰는 `deck.css`, `deck.js`입니다.',
     `- 웹에서 보기: ${SITE_URL}/${slug}/`,
     '- 미리보기 갱신: `npm run slides:render` 실행 후 `preview/`와 이 파일을 함께 커밋합니다.',
   ];
-  for (let n = 1; n <= count; n++) {
-    lines.push('', `## ${n}`, '', `![슬라이드 ${n}](preview/${previewName(n)})`);
-  }
+  slides.forEach((heading, i) => {
+    const n = i + 1;
+    lines.push('', `## ${heading ? `${n}. ${heading}` : n}`, '', `![슬라이드 ${n}](preview/${previewName(n)})`);
+  });
   return `${lines.join('\n')}\n`;
 }
 
 function renderDeck(chrome, slug) {
   const deckDir = path.join(SLIDES_DIR, slug);
   const htmlPath = path.join(deckDir, 'index.html');
-  const { count, title } = readDeck(fs.readFileSync(htmlPath, 'utf8'));
+  const { title, slides } = readDeck(fs.readFileSync(htmlPath, 'utf8'));
+  const count = slides.length;
   if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
 
   // 슬라이드 수가 줄었을 때 예전 PNG가 남지 않도록 비우고 다시 만든다.
@@ -90,7 +106,7 @@ function renderDeck(chrome, slug) {
     fs.rmSync(profileDir, { recursive: true, force: true });
   }
 
-  fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, title, count));
+  fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, title, slides));
   console.log(`${slug}: ${count} slides → ${path.relative(process.cwd(), previewDir)}`);
 }
 
