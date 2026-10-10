@@ -13,7 +13,7 @@ npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
 npm run sync:contributions -- --dry-run # maintainer metadata refresh preview
 npm run slides:render  # re-render slide deck previews (public/slides/*/preview, needs Chrome)
-npm run slides:pdf     # export each deck to ./<slug>.pdf for sharing (git-ignored, needs Chrome)
+npm run slides:pdf     # bundle each deck's preview PNGs into ./<slug>.pdf (git-ignored, needs Chrome)
 npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
