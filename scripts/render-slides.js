@@ -26,11 +26,12 @@ function findChrome() {
   return chrome;
 }
 
-// 덱 HTML에서 슬라이드 수와 제목을 읽는다.
+// 덱 HTML에서 슬라이드 수, 제목, 한 줄 소개(<meta name="description">)를 읽는다.
 function readDeck(html) {
   const count = (html.match(/<section\b[^>]*\bclass="slide\b/g) || []).length;
   const title = (/<title>([^<]*)<\/title>/.exec(html) || [])[1] || '발표 자료';
-  return { count, title: title.trim() };
+  const description = (/<meta\s+name="description"\s+content="([^"]*)"/.exec(html) || [])[1] || '';
+  return { count, title: title.trim(), description: description.trim() };
 }
 
 function previewName(n) {
@@ -38,17 +39,18 @@ function previewName(n) {
 }
 
 // GitHub에서 덱 디렉터리를 열면 모든 슬라이드가 보이도록 미리보기 목록을 만든다.
-function buildReadme(slug, title, count) {
+function buildReadme(slug, { count, title, description }) {
   const lines = [
     `# ${title}`,
     '',
     '<!-- npm run slides:render 가 생성한 파일입니다. 직접 수정하지 마세요. -->',
     '',
+    ...(description ? [description, ''] : []),
     '- 원본: [`index.html`](index.html) — 수정한 뒤 `npm run slides:render`로 미리보기를 다시 만듭니다.',
     `- 웹에서 보기: ${SITE_URL}/${slug}/`,
   ];
   for (let n = 1; n <= count; n++) {
-    lines.push('', `## ${n}`, '', `![슬라이드 ${n}](preview/${previewName(n)})`);
+    lines.push('', `![슬라이드 ${n}](preview/${previewName(n)})`);
   }
   return `${lines.join('\n')}\n`;
 }
@@ -56,7 +58,8 @@ function buildReadme(slug, title, count) {
 function renderDeck(chrome, slug) {
   const deckDir = path.join(SLIDES_DIR, slug);
   const htmlPath = path.join(deckDir, 'index.html');
-  const { count, title } = readDeck(fs.readFileSync(htmlPath, 'utf8'));
+  const deck = readDeck(fs.readFileSync(htmlPath, 'utf8'));
+  const { count } = deck;
   if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
 
   // 슬라이드 수가 줄었을 때 예전 PNG가 남지 않도록 비우고 다시 만든다.
@@ -89,7 +92,7 @@ function renderDeck(chrome, slug) {
     fs.rmSync(profileDir, { recursive: true, force: true });
   }
 
-  fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, title, count));
+  fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, deck));
   console.log(`${slug}: ${count} slides → ${path.relative(process.cwd(), previewDir)}`);
 }
 
