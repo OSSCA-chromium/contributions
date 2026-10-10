@@ -71,45 +71,64 @@ function deckHtmlPath(slug) {
   return path.join(SLIDES_DIR, slug, 'index.html');
 }
 
+function countSlides(slug) {
+  const { count } = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
+  if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
+  return count;
+}
+
+// 슬라이드를 한 장씩 dir에 PNG로 찍는다. scale 2면 2560x1440으로 찍힌다.
+function captureSlides(chrome, profileDir, slug, dir, scale) {
+  const deckUrl = pathToFileURL(deckHtmlPath(slug)).href;
+  const count = countSlides(slug);
+  for (let n = 1; n <= count; n++) {
+    const out = path.join(dir, previewName(n));
+    runChrome(chrome, profileDir, [
+      '--hide-scrollbars',
+      `--force-device-scale-factor=${scale}`,
+      `--window-size=${WIDTH},${HEIGHT}`,
+      `--screenshot=${out}`,
+      `${deckUrl}?theme=light#${n}`,
+    ]);
+    if (!fs.existsSync(out)) throw new Error(`${slug}: ${n}번 슬라이드를 렌더하지 못했습니다.`);
+  }
+  return count;
+}
+
 function renderDeck(chrome, slug) {
   const deckDir = path.join(SLIDES_DIR, slug);
-  const deck = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
-  const { count } = deck;
-  if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
 
   // 슬라이드 수가 줄었을 때 예전 PNG가 남지 않도록 비우고 다시 만든다.
   const previewDir = path.join(deckDir, 'preview');
   fs.rmSync(previewDir, { recursive: true, force: true });
   fs.mkdirSync(previewDir, { recursive: true });
 
-  withProfile((profileDir) => {
-    const deckUrl = pathToFileURL(deckHtmlPath(slug)).href;
-    for (let n = 1; n <= count; n++) {
-      const out = path.join(previewDir, previewName(n));
-      runChrome(chrome, profileDir, [
-        '--hide-scrollbars',
-        '--force-device-scale-factor=1',
-        `--window-size=${WIDTH},${HEIGHT}`,
-        `--screenshot=${out}`,
-        `${deckUrl}?theme=light#${n}`,
-      ]);
-      if (!fs.existsSync(out)) throw new Error(`${slug}: ${n}번 슬라이드를 렌더하지 못했습니다.`);
-    }
-  });
+  withProfile((profileDir) => captureSlides(chrome, profileDir, slug, previewDir, 1));
 
+  const deck = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
   fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, deck));
-  console.log(`${slug}: ${count} slides → ${path.relative(process.cwd(), previewDir)}`);
+  console.log(`${slug}: ${deck.count} slides → ${path.relative(process.cwd(), previewDir)}`);
 }
 
-// 덱의 인쇄 스타일로 슬라이드당 한 쪽짜리 PDF를 현재 디렉터리에 만든다(커밋하지 않는 공유용).
+// 슬라이드당 한 쪽짜리 PDF를 현재 디렉터리에 만든다(커밋하지 않는 공유용).
+// 어떤 PDF 뷰어에서도 미리보기와 똑같이 보이도록, 2배 해상도 스크린샷을 쪽마다 넣는다.
 function exportPdf(chrome, slug) {
   const out = path.resolve(`${slug}.pdf`);
   withProfile((profileDir) => {
-    runChrome(chrome, profileDir, [
-      '--no-pdf-header-footer',
-      `--print-to-pdf=${out}`,
-      `${pathToFileURL(deckHtmlPath(slug)).href}?theme=light`,
-    ]);
+    const shotsDir = path.join(profileDir, 'slides');
+    fs.mkdirSync(shotsDir);
+    const count = captureSlides(chrome, profileDir, slug, shotsDir, 2);
+
+    const pages = Array.from({ length: count }, (_, i) => `<img src="${previewName(i + 1)}" />`).join('');
+    const sheet = path.join(shotsDir, 'sheet.html');
+    fs.writeFileSync(
+      sheet,
+      '<!doctype html><style>' +
+        `@page { size: ${WIDTH}px ${HEIGHT}px; margin: 0; } body { margin: 0; } ` +
+        `img { display: block; width: ${WIDTH}px; height: ${HEIGHT}px; } img + img { break-before: page; }` +
+        `</style>${pages}`
+    );
+    runChrome(chrome, profileDir, ['--no-pdf-header-footer', `--print-to-pdf=${out}`, pathToFileURL(sheet).href]);
   });
   if (!fs.existsSync(out)) throw new Error(`${slug}: PDF를 만들지 못했습니다.`);
   console.log(`${slug}: ${path.relative(process.cwd(), out)}`);
