@@ -7,6 +7,15 @@ description: Use when preparing OSSCA Chromium contribution statistics, project 
 
 이 저장소의 데이터 구조와 집계 기준을 사용하는 프로젝트 스킬입니다. Contributions 사이트와 대조할 수 있는 정량 보고서를 작성합니다. 집계 근거와 출력 형식을 분리하여, 표의 기간을 바꿔도 원본 날짜·상태·crbug 증거를 보존합니다.
 
+## Codex와 Claude Code에서 사용
+
+공통 원본은 `.agents/skills/ossca-contribution-report/`입니다. Claude Code의 `.claude/skills/ossca-contribution-report/`는 이 디렉터리를 가리키는 상대 symlink이며, 두 환경에서 같은 본문·참고 자료·스크립트를 사용합니다. `agents/openai.yaml`은 Codex용 표시 정보입니다. Claude Code의 프로젝트 스킬과 symlink 지원은 [공식 문서](https://code.claude.com/docs/en/skills#choose-where-skills-load)를 참고합니다.
+
+- Codex: `$ossca-contribution-report`로 호출합니다.
+- Claude Code: `/ossca-contribution-report`로 호출합니다. 예: `/ossca-contribution-report 기존 verified-counts.json으로 표 5개를 만들고 프로그램 이전을 Challenges에 합쳐줘.`
+
+Claude Code에서는 파일 확인에 `Read`·`Glob`·`Grep`, 아래 명령 실행에 `Bash`, PNG 검토에 `Read`, 요청받은 파일 편집에 `Write`·`Edit`를 사용합니다. Codex에서는 같은 작업에 제공된 파일·검색·명령·이미지 도구를 사용합니다. 명령의 경로와 집계 기준은 두 환경에서 동일합니다.
+
 ## 입력과 집계 기준
 
 - 사이트 기준 요청은 사이트에 등록된 해당 연도 기록과 등록 상태를 사용합니다. 연도 전체와 프로그램 기간을 구분하고, 조회일·원본 Git SHA를 남깁니다.
