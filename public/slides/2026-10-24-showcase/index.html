@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 OSSCA Chromium 최종 발표</title>
+    <meta
+      name="description"
+      content="2026 OSSCA 2차 발표평가(성과공유회)에서 Chromium 팀이 발표하는 자료입니다. 13주간의 컨트리뷰션 과정, 주요 기여 성과, 정량적 성과, 향후 계획을 다룹니다."
+    />
+    <script src="../_shared/deck.js"></script>
+    <link rel="stylesheet" href="../_shared/deck.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <!-- 표지 -->
+      <section class="slide bare mesh center cover">
+        <p class="brand"><span class="mark"></span>OSSCA Chromium</p>
+        <p><span class="chip">2026 오픈소스 컨트리뷰션 아카데미</span></p>
+        <h1>Chromium</h1>
+        <p class="tagline">Final evaluation</p>
+        <p class="event">2차 발표평가 (성과공유회) · 2026-10-24</p>
+      </section>
+
+      <!-- 목차 -->
+      <section class="slide agenda">
+        <h2>목차</h2>
+        <ol>
+          <li>
+            <span class="num">01</span>
+            <h3>프로젝트 소개 및 목표</h3>
+            <p>Chromium 팀 소개와 13주의 목표</p>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <h3>컨트리뷰션 과정</h3>
+            <p>이슈를 찾고, 고치고, 리뷰받은 방법</p>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <h3>주요 기여 성과</h3>
+            <p>4개 영역별 대표 기여</p>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <h3>정량적 성과</h3>
+            <p>CL · Merge로 본 실제 기여량</p>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <h3>향후 기여 계획</h3>
+            <p>프로그램 이후의 기여 계획</p>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <h3>Q &amp; A</h3>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 파트 1 · 프로젝트 소개 및 목표 -->
+      <section class="slide section center">
+        <p class="num">01</p>
+        <h2>프로젝트 소개 및 목표</h2>
+        <p class="sub">Chromium 팀은 무엇을 목표로 했나</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 핵심 메시지 — 229건 병합 -->
+      <section class="slide statement center">
+        <p class="big">문서 링크 한 줄에서 시작해</p>
+        <p class="big">Blink · V8 · DevTools까지</p>
+        <p class="big"><em>229건</em>의 CL이 병합됐습니다</p>
+        <p class="caption">
+          2026 OSSCA Chromium 팀 멘티 19명 · Chromium Gerrit 병합 기준 (10/10
+          조회)
+        </p>
+      </section>
+
+      <!-- Chromium 팀 소개 -->
+      <section class="slide">
+        <h2>Chromium 팀 소개</h2>
+        <p class="sub">2026 OSSCA 참여형 · 7/11 ~ 10/24</p>
+        <div class="split">
+          <ol class="items">
+            <li>
+              <span class="num">01</span>
+              <p>
+                Chrome · Edge 등이 기반으로 하는 오픈소스 브라우저.<br />
+                Gerrit CL → 코드 리뷰 → CQ → main 병합으로 기여합니다.
+              </p>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <p>
+                멘토 1명 · 멘티 20명(리드 멘티 2명), 매주 토요일 오프라인
+                모임.<br />
+                기여 내역은 OSSCA Chromium 기여 기록 사이트에 정리했습니다.
+              </p>
+            </li>
+          </ol>
+          <aside class="panel">
+            <div><b>13주</b><span>Challenges 4주 · Masters 9주</span></div>
+            <div><b>20명</b><span>멘티 (리드 멘티 2명 포함)</span></div>
+            <div><b>5개</b><span>기여한 저장소</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 13주의 목표 -->
+      <section class="slide">
+        <h2>13주의 목표</h2>
+        <p class="sub">작은 기여에서 꾸준한 기여자로</p>
+        <div class="steps">
+          <div>
+            <span class="chip solid">01</span>
+            <h3>기여 흐름<br />한 바퀴 돌기</h3>
+            <p>
+              빌드 환경 구축과 문서 링크 수정으로 Gerrit · 리뷰 · CQ를 직접 경험
+              (Challenges)
+            </p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">02</span>
+            <h3>동작을 바꾸는<br />코드 기여</h3>
+            <p>
+              버그 재현 → 수정 → 테스트 → 리뷰 반영까지 스스로 진행 (Masters)
+            </p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">03</span>
+            <h3>꾸준히 기여하는<br />Contributor</h3>
+            <p>관심 컴포넌트를 정해 프로그램 이후에도 기여, Committer에 도전</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 파트 2 · 컨트리뷰션 과정 -->
+      <section class="slide section center">
+        <p class="num">02</p>
+        <h2>컨트리뷰션 과정</h2>
+        <p class="sub">이슈를 찾고, 고치고, 리뷰받기까지</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 기여 사이클 -->
+      <section class="slide">
+        <h2>기여 사이클</h2>
+        <p class="sub">모든 멘티가 반복한 흐름</p>
+        <div class="steps">
+          <div>
+            <span class="chip solid">01</span>
+            <h3>이슈 발굴</h3>
+            <p>TODO · WPT 실패 · deprecated API를 추적해 OSSCA 이슈로 선점</p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">02</span>
+            <h3>재현 · 수정 · 테스트</h3>
+            <p>로컬에서 재현한 뒤 회귀 테스트와 함께 수정</p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">03</span>
+            <h3>리뷰 · CQ · 머지</h3>
+            <p>OWNERS 리뷰와 피드백 반영, CQ 통과 후 main 병합</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 함께 시작한 첫 코드 기여 (//crypto 마이그레이션) -->
+      <section class="slide">
+        <h2>함께 시작한 첫 코드 기여</h2>
+        <p class="sub">//crypto API 마이그레이션 · #282</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <p>
+                리드 멘티가 crypto/sha2.h → crypto/hash.h 이슈를 공유하고,
+                디렉터리별 sub-issue로 나눠 선착순 분담
+              </p>
+            </li>
+            <li>
+              <p>
+                수정 → 빌드 · 유닛 테스트 → CL 업로드 → 이슈 리뷰어와 디렉터리
+                OWNERS의 2단계 리뷰
+              </p>
+            </li>
+          </ul>
+          <aside class="panel">
+            <div><b>11명</b><span>참여 멘티</span></div>
+            <div><b>17건</b><span>업로드한 CL</span></div>
+            <div><b>17건</b><span>main에 병합 (10/10)</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 이슈를 찾는 세 가지 방법 -->
+      <section class="slide">
+        <h2>이슈를 찾는 세 가지 방법</h2>
+        <p class="sub">트래커만이 아니라 코드와 테스트에서</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <div>
+                <h3>TODO · deprecated 추적</h3>
+                <p>
+                  코드에 남은 TODO(crbug) · 만료 플래그 · 폐기 API를 스캔. 정리
+                  캠페인 36건, 직접 발굴 이슈 10건으로 이어짐
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>WPT 실패 → Blink 구현</h3>
+                <p>
+                  wpt.fyi의 실패에서 출발해 명세 · 다른 브라우저 동작 · 테스트
+                  이력을 비교하며 구현 원인을 추적
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>AI는 탐색, 검증은 직접</h3>
+                <p>
+                  AI로 탐색 범위를 좁히고, 코드와 테스트로 다시 확인. 활용법과
+                  고민은 팀 발표 세션에서 공유
+                </p>
+              </div>
+            </li>
+          </ul>
+          <aside class="panel">
+            <h3>이렇게 찾았어요</h3>
+            <div>
+              <strong>2016년 토크나이저 최적화</strong
+              ><span>변경 이력을 거슬러 NUL 버그 원인 확인</span>
+            </div>
+            <div>
+              <strong>WebCrypto supports()</strong
+              ><span>WPT로 Chrome만 다른 동작 발견</span>
+            </div>
+            <div>
+              <strong>Payment 매니페스트 TODO</strong
+              ><span>코드 주석의 TODO를 따라가 첫 기여</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 함께 배우는 팀 -->
+      <section class="slide">
+        <h2>함께 배우는 팀</h2>
+        <p class="sub">매주 기여 경험과 팁을 공유한 세션</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <p>
+                기여 워크플로우 8단계 정리 — 이슈 발굴부터 머지 후 마무리까지
+              </p>
+            </li>
+            <li>
+              <p>
+                viz · WebCrypto 등 컴포넌트 발표, AI 활용법과 한계에 대한 토론
+              </p>
+            </li>
+            <li><p>Chromium 아키텍처 인터랙티브 다이어그램 12장 공유</p></li>
+            <li>
+              <p>
+                기여 기록 사이트 개선 — Abandoned 집계, Mermaid 다이어그램
+                렌더링
+              </p>
+            </li>
+            <li>
+              <p>리드 멘티가 Gerrit · 리뷰 흐름이 낯선 멘티를 함께 지원</p>
+            </li>
+          </ul>
+          <aside class="panel">
+            <div><b>8단계</b><span>기여 워크플로우 정리</span></div>
+            <div><b>12장</b><span>아키텍처 다이어그램</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 파트 3 · 주요 기여 성과 -->
+      <section class="slide section center">
+        <p class="num">03</p>
+        <h2>주요 기여 성과</h2>
+        <p class="sub">웹 표준 · 플랫폼/엔진 · DevTools · 리팩토링</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 주요 기여 성과 한눈에 -->
+      <section class="slide">
+        <h2>주요 기여 성과 한눈에</h2>
+        <p class="sub">병합 CL 229건 중 4개 핵심 영역</p>
+        <div class="cards">
+          <div>
+            <span class="chip">웹 표준</span>
+            <b>23<small>병합 CL</small></b>
+            <p>명세 · WPT를 근거로 Blink · V8 동작 수정</p>
+            <p class="tags">CSS · WebCrypto · 접근성 · FormData</p>
+          </div>
+          <div>
+            <span class="chip">플랫폼 / 엔진</span>
+            <b>38<small>병합 CL</small></b>
+            <p>OS · 그래픽스 · 스토리지 계층의 버그 수정</p>
+            <p class="tags">FSA · FilePathWatcher · viz · macOS</p>
+          </div>
+          <div>
+            <span class="chip">DevTools</span>
+            <b>49<small>병합 CL</small></b>
+            <p>Security 패널 Lit 전환과 테스트 구조 정비</p>
+            <p class="tags">Lit · unit test 전환 · TS 타입</p>
+          </div>
+          <div>
+            <span class="chip">리팩토링</span>
+            <b>78<small>병합 CL</small></b>
+            <p>만료 코드 정리와 C++ 표준 API 현대화</p>
+            <p class="tags">플래그 정리 · sql · C++20/23</p>
+          </div>
+        </div>
+        <p class="footnote">
+          그 외 //crypto 공동 마이그레이션 17건 · 첫 기여 문서 수정 24건
+        </p>
+      </section>
+
+      <!-- 웹 표준 정합성 -->
+      <section class="slide">
+        <h2>웹 표준 정합성</h2>
+        <p class="sub">Blink · WPT · 명세 기반 수정 — 병합 23건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>CSS 토크나이저 NUL 처리</h3>
+            <p>
+              2016년 최적화까지 이력을 추적해 #&lt;NUL&gt; · -&lt;NUL&gt;
+              오분류를 수정, WPT 통과 (최인준)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>FormData · FileReader</h3>
+            <p>
+              File 객체 identity와 재진입 loadend를 명세대로 수정, WPT 2건
+              upstream 반영 (이승준)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Accessibility</h3>
+            <p>
+              role=form 갱신 · 숨겨진 caption 이름 계산 (곽정아), contextual
+              role · img alt는 리뷰 중 (박동한 · 송채현)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>WebCrypto</h3>
+            <p>
+              exportKey 오류 순서와 supports()를 표준대로 수정, CryptoKey
+              캐싱으로 WPT 통과 (최민섭)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 브라우저 플랫폼 · 엔진 -->
+      <section class="slide">
+        <h2>브라우저 플랫폼 · 엔진</h2>
+        <p class="sub">OS · 그래픽스 · 스토리지 — 병합 38건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>macOS 한글 IME + Cmd+T</h3>
+            <p>
+              WebUI 팝업 child window의 단축키 전달 경로를 추적해 수정, 회귀
+              테스트 추가 (최원익)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>Windows 이미지 드래그</h3>
+            <p>
+              포토샵 · 그림판으로 드래그되지 않던 문제를 CF_HDROP 전달로 해결 —
+              리뷰 중 (김성진)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>viz 렌더링 파이프라인</h3>
+            <p>
+              미사용 surfaceless · DXGI 플래그 정리, swap 실패 시 overlay 버그
+              수정은 리뷰 중 (김범수)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>파일 시스템 · Storage</h3>
+            <p>
+              FSA 쓰기 오류(ENOSPC) 전파, OPFS 비ASCII 이름, inotify 변경 알림
+              개선 (이승준)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DevTools · 디버깅 도구 -->
+      <section class="slide">
+        <h2>DevTools · 디버깅 도구</h2>
+        <p class="sub">프런트엔드부터 V8까지 — 병합 49건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>Security 패널 Lit 전환</h3>
+            <p>
+              SecurityOriginView 7개 영역을 선언형으로 전환하고 연계 테스트까지
+              정비, 23건 병합 (박호정)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>3개 저장소를 잇는 수정</h3>
+            <p>
+              V8 · Chromium · DevTools에 걸쳐 페이지 이동 후에도 skipAllPauses
+              설정 유지 (윤지윤)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Application · 툴바 버그</h3>
+            <p>
+              사이트 데이터 삭제 시 OPFS 누락, 툴바 정규식 토글 상태 불일치 수정
+              (이지현 · 권세빈)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>타입 안정성</h3>
+            <p>
+              @ts-expect-error를 걷어내며 숨어 있던 nullable 반환 타입을 찾아
+              수정 (권세빈 · 정수영)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 리팩토링 · 코드 정리 -->
+      <section class="slide">
+        <h2>리팩토링 · 코드 정리</h2>
+        <p class="sub">만료 코드 정리 · C++ 현대화 · 테스트 — 병합 78건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>정리 캠페인 36건</h3>
+            <p>
+              만료 플래그 · 킬스위치 · 히스토그램을 스크립트로 찾아 OWNERS
+              단위로 나눠 제출 (조성곤)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>DB 트랜잭션 안정화</h3>
+            <p>
+              QuotaDatabase를 sql::Transaction으로 전환해 DB 손상 복구의 전제
+              조건 해결 (조성곤)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>C++20/23 · 미디어 현대화</h3>
+            <p>
+              starts_with · contains · std::numbers 적용, BitReader의 span 전환
+              (최문기 · 정수영)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>sql 시간 접근자 통일</h3>
+            <p>
+              기능마다 손으로 쓰던 시각 변환을 공용 API로 영역별 CL 시리즈로
+              옮김 (조성곤)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 파트 4 · 정량적 성과 -->
+      <section class="slide section center">
+        <p class="num">04</p>
+        <h2>정량적 성과</h2>
+        <p class="sub">Chromium Gerrit 병합 CL 기준 · 10/10 조회</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 숫자로 본 13주 -->
+      <section class="slide">
+        <h2>숫자로 본 13주</h2>
+        <p class="sub">Chromium Gerrit 병합 기준</p>
+        <dl class="metrics">
+          <div>
+            <dt>병합된 CL</dt>
+            <dd>229</dd>
+          </div>
+          <div>
+            <dt>기여한 멘티</dt>
+            <dd>19명</dd>
+          </div>
+          <div>
+            <dt>업로드한 CL</dt>
+            <dd>309</dd>
+          </div>
+          <div>
+            <dt>기여한 저장소</dt>
+            <dd>5개</dd>
+          </div>
+        </dl>
+        <div class="notes">
+          <p>
+            멘티 19명이 올린 CL 중 main에 병합된 것을 Gerrit에서 직접
+            조회했습니다 (10/10 기준).
+          </p>
+          <p>
+            영역 분류는 CL 제목 · 프로젝트 기준이며 프로그램 시작 전 첫 기여도
+            포함했습니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- 멘티별 병합 CL -->
+      <section class="slide">
+        <h2>멘티별 병합 CL</h2>
+        <p class="sub">19명 · Gerrit 병합 기준 (10/10 조회)</p>
+        <div class="bars">
+          <div><b>55</b><span>조성곤</span></div>
+          <div><b>53</b><span>박호정</span></div>
+          <div><b>35</b><span>이승준</span></div>
+          <div><b>14</b><span>최문기</span></div>
+          <div><b>12</b><span>최원익</span></div>
+          <div><b>10</b><span>권세빈</span></div>
+          <div><b>7</b><span>최민섭</span></div>
+          <div><b>5</b><span>윤지윤</span></div>
+          <div><b>5</b><span>정수영</span></div>
+          <div><b>5</b><span>최인준</span></div>
+          <div><b>4</b><span>김범수</span></div>
+          <div><b>4</b><span>이혜원</span></div>
+          <div><b>3</b><span>김성진</span></div>
+          <div><b>3</b><span>박동한</span></div>
+          <div><b>3</b><span>송채현</span></div>
+          <div><b>3</b><span>최정겸</span></div>
+          <div><b>3</b><span>곽정아</span></div>
+          <div><b>3</b><span>이지현</span></div>
+          <div><b>2</b><span>정지우</span></div>
+        </div>
+      </section>
+
+      <!-- 기간별 · 기타 성과 -->
+      <section class="slide">
+        <h2>기간별 · 기타 성과</h2>
+        <p class="sub">Challenges 4주 vs Masters 9주</p>
+        <div class="tables">
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>기간</th>
+                  <th>업로드</th>
+                  <th>병합</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Challenges</td>
+                  <td>48</td>
+                  <td>39</td>
+                </tr>
+                <tr>
+                  <td>Masters</td>
+                  <td>261</td>
+                  <td>190</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>건수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WPT upstream 반영</td>
+                  <td>3건</td>
+                </tr>
+                <tr>
+                  <td>KhronosGroup/WebGL PR</td>
+                  <td>1건</td>
+                </tr>
+                <tr>
+                  <td>ChromeStatus 기능 등록</td>
+                  <td>2건</td>
+                </tr>
+                <tr>
+                  <td>tryjob 권한 획득</td>
+                  <td>2명</td>
+                </tr>
+                <tr>
+                  <td>팀 내 기여 발표 세션</td>
+                  <td>매주</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="notes">
+          <p>Masters 기간 병합 CL이 Challenges의 약 5배.</p>
+          <p>Challenges에는 프로그램 시작 전 첫 기여 포함.</p>
+        </div>
+      </section>
+
+      <!-- 파트 5 · 향후 기여 계획 -->
+      <section class="slide section center">
+        <p class="num">05</p>
+        <h2>향후 기여 계획</h2>
+        <p class="sub">프로그램이 끝나도 기여는 계속됩니다</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 향후 기여 계획 -->
+      <section class="slide">
+        <h2>향후 기여 계획</h2>
+        <p class="sub">각자의 영역에서, 그리고 함께</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>진행 중인 CL 마무리</h3>
+            <p>리뷰 중인 CL의 피드백을 반영해 머지까지 끝까지 완주</p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>관심 영역 심화</h3>
+            <p>
+              Accessibility · DevTools · media/audio · viz · storage 등 각자
+              고른 컴포넌트에서 꾸준히
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Committer 도전</h3>
+            <p>
+              여러 멘티가 1~2년 안에 Chromium Committer가 되는 것을 목표로 설정
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>함께 계속</h3>
+            <p>
+              팀 스터디를 이어가고, 다음 OSSCA에서는 리드 멘티로 경험을 돌려주기
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 파트 6 · Q & A -->
+      <section class="slide section center">
+        <p class="num">06</p>
+        <h2>Q &amp; A</h2>
+        <p class="sub">궁금한 점을 편하게 질문해 주세요</p>
+        <span class="mark"></span>
+      </section>
+
+      <!-- 마무리 인사 -->
+      <section class="slide bare mesh center closing">
+        <p class="lead">발표를 들어주셔서</p>
+        <h1>감사합니다 :)</h1>
+      </section>
+    </main>
+  </body>
+</html>
