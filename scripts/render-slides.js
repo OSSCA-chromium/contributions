@@ -38,7 +38,7 @@ function previewName(n) {
   return `slide-${String(n).padStart(2, '0')}.png`;
 }
 
-// GitHub에서 덱 디렉터리를 열면 모든 슬라이드가 보이도록 미리보기 목록을 만든다.
+// GitHub에서 덱 디렉터리를 열었을 때 보이는 안내문을 만든다.
 function buildReadme(slug, { count, title, description }) {
   const lines = [
     `# ${title}`,
@@ -47,11 +47,9 @@ function buildReadme(slug, { count, title, description }) {
     '',
     ...(description ? [description, ''] : []),
     '- 원본: [`index.html`](index.html) — 수정한 뒤 `npm run slides:render`로 미리보기를 다시 만듭니다.',
+    `- 미리보기: [\`preview/\`](preview) — 슬라이드별 PNG (\`${previewName(1)}\` ~ \`${previewName(count)}\`)`,
     `- 웹에서 보기: ${SITE_URL}/${slug}/`,
   ];
-  for (let n = 1; n <= count; n++) {
-    lines.push('', `![슬라이드 ${n}](preview/${previewName(n)})`);
-  }
   return `${lines.join('\n')}\n`;
 }
 
