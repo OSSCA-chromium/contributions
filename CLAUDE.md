@@ -44,7 +44,9 @@ Key flow: `getAllContributions()` (reads files, sorted by `date` desc) feeds `ge
 
 Slide decks are self-contained HTML at `public/slides/{slug}/index.html`,
 linked from a meeting with `slides: /slides/{slug}/` and embedded by
-`MeetingDetail`. Their inline tokens mirror `globals.css`. After editing a
+`MeetingDetail`. A deck holds only slide markup; styles and behavior come
+from `public/slides/_shared/deck.{css,js}`, whose tokens mirror
+`globals.css`. After editing a
 deck, run `npm run slides:render` and commit the regenerated `preview/*.png`
 and `README.md` with it so reviewers can see the slides on GitHub.
 
