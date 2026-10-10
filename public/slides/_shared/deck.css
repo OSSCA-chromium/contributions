@@ -109,7 +109,6 @@ body {
   justify-content: center;
 }
 .mesh {
-  --mark-moat: var(--mesh-base);
   background-color: var(--mesh-base);
   background-image:
     radial-gradient(55% 85% at 10% 0%, var(--mesh-blue), transparent 62%),
@@ -118,30 +117,14 @@ body {
     radial-gradient(40% 65% at 15% 100%, var(--mesh-red), transparent 65%);
 }
 
-/* CSS-only Chromium mark, same construction as src/components/ChromiumMark.tsx. */
+/* Chromium logo (chromium-logo.svg is the upstream product logo). */
 .mark {
   --size: 24px;
-  position: relative;
   display: inline-block;
   flex: none;
   width: var(--size);
   height: var(--size);
-  border-radius: 50%;
-  background: conic-gradient(
-    from -90deg,
-    var(--c1) 0 33.34%,
-    var(--c3) 33.34% 66.67%,
-    var(--c4) 66.67% 100%
-  );
-}
-.mark::after {
-  content: "";
-  position: absolute;
-  inset: calc(var(--size) * 5.5 / 24);
-  border-radius: 50%;
-  background: var(--c2);
-  box-shadow: 0 0 0 calc(var(--size) * 2.5 / 24)
-    var(--mark-moat, var(--color-background));
+  background: url("chromium-logo.svg") center / contain no-repeat;
 }
 .brand {
   display: flex;
