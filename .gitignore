@@ -45,3 +45,6 @@ docs/superpowers/
 
 # Local maintainer reports and classification decisions
 /.cache/contribution-sync/
+
+# Local slide deck exports (npm run slides:pdf)
+/*.pdf
