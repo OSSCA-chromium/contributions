@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 OSSCA Chromium 최종 발표</title>
+    <script>
+      // Follow the site theme (same localStorage key); ?theme=light|dark overrides it.
+      (function () {
+        try {
+          var forced = new URLSearchParams(location.search).get('theme');
+          var theme = forced || localStorage.getItem('theme');
+          var dark = theme ? theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Tokens mirror src/app/globals.css so the deck matches the site theme. */
+      :root {
+        --color-primary: #0b57d0;
+        --color-on-primary: #ffffff;
+        --color-primary-container: #e8f0fe;
+        --color-background: #ffffff;
+        --color-on-surface: #202124;
+        --color-on-surface-variant: #5f6368;
+        --chart-bar: #4285f4;
+        --mesh-base: #f8f9fa;
+        --mesh-blue: rgba(66, 133, 244, 0.16);
+        --mesh-green: rgba(52, 168, 83, 0.14);
+        --mesh-yellow: rgba(251, 188, 4, 0.14);
+        --mesh-red: rgba(234, 67, 53, 0.1);
+        --gradient-from: #1767d1;
+        --gradient-to: #679ef5;
+        --c1: #1967d2;
+        --c2: #1a73e8;
+        --c3: #669df6;
+        --c4: #aecbfa;
+        --m1: #f7f9fc;
+        --m2: #eef2fa;
+        --mline: #dde3ec;
+      }
+      .dark {
+        --color-primary: #8ab4f8;
+        --color-on-primary: #202124;
+        --color-primary-container: #28374e;
+        --color-background: #202124;
+        --color-on-surface: #e8eaed;
+        --color-on-surface-variant: #9aa0a6;
+        --chart-bar: #8ab4f8;
+        --mesh-base: #292a2d;
+        --mesh-blue: rgba(138, 180, 248, 0.14);
+        --mesh-green: rgba(129, 201, 149, 0.12);
+        --mesh-yellow: rgba(253, 214, 99, 0.1);
+        --mesh-red: rgba(242, 139, 130, 0.08);
+        --gradient-from: #8ab4f8;
+        --gradient-to: #c6dafc;
+        --c1: #aecbfa;
+        --c2: #669df6;
+        --c3: #1a73e8;
+        --c4: #1967d2;
+        --m1: #282a2d;
+        --m2: #303134;
+        --mline: #3c4043;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+      body {
+        background: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: Roboto, 'Noto Sans KR', system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        overflow: hidden;
+      }
+
+      /* Slides are laid out on a fixed 1280x720 stage and scaled to the viewport. */
+      .stage {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1280px;
+        height: 720px;
+        transform: translate(-50%, -50%) scale(var(--scale, 1));
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        padding: 68px 88px 84px;
+        background: var(--color-background);
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+      }
+      .slide.active { display: flex; }
+      .slide::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--c1) 0 25%, var(--c2) 25% 50%, var(--c3) 50% 75%, var(--c4) 75% 100%);
+      }
+      .center { justify-content: center; }
+      .mesh {
+        --mark-moat: var(--mesh-base);
+        background-color: var(--mesh-base);
+        background-image:
+          radial-gradient(55% 85% at 10% 0%, var(--mesh-blue), transparent 62%),
+          radial-gradient(50% 75% at 90% 8%, var(--mesh-green), transparent 60%),
+          radial-gradient(45% 70% at 78% 95%, var(--mesh-yellow), transparent 62%),
+          radial-gradient(40% 65% at 15% 100%, var(--mesh-red), transparent 65%);
+      }
+
+      /* CSS-only Chromium mark, same construction as src/components/ChromiumMark.tsx. */
+      .mark {
+        --size: 24px;
+        position: relative;
+        display: inline-block;
+        flex: none;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: conic-gradient(from -90deg, var(--c1) 0 33.34%, var(--c3) 33.34% 66.67%, var(--c4) 66.67% 100%);
+      }
+      .mark::after {
+        content: '';
+        position: absolute;
+        inset: calc(var(--size) * 5.5 / 24);
+        border-radius: 50%;
+        background: var(--c2);
+        box-shadow: 0 0 0 calc(var(--size) * 2.5 / 24) var(--mark-moat, var(--color-background));
+      }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+      .foot {
+        position: absolute;
+        left: 88px;
+        right: 88px;
+        bottom: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--mline);
+        padding-top: 14px;
+        font-size: 15px;
+        color: var(--color-on-surface-variant);
+        font-variant-numeric: tabular-nums;
+      }
+      .foot .mark { --size: 18px; }
+
+      h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.2; }
+      h2 { font-size: 42px; font-weight: 700; }
+      h3 { font-size: 25px; font-weight: 600; }
+      .sub { margin-top: 10px; font-size: 21px; color: var(--color-on-surface-variant); }
+      .muted { color: var(--color-on-surface-variant); }
+      .num { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+      .chip {
+        display: inline-block;
+        border-radius: 9999px;
+        padding: 6px 16px;
+        background: var(--color-primary-container);
+        color: var(--color-primary);
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .chip.solid { background: var(--color-primary); color: var(--color-on-primary); font-weight: 700; }
+
+      /* Cover and closing */
+      .cover .brand { position: absolute; left: 88px; top: 56px; font-size: 22px; }
+      .cover .brand .mark { --size: 32px; }
+      .cover h1 {
+        margin-top: 20px;
+        font-size: 140px;
+        font-weight: 700;
+        line-height: 1.1;
+        background-image: linear-gradient(90deg, var(--gradient-from), var(--gradient-to));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        width: fit-content;
+      }
+      .cover .tagline { margin-top: 8px; font-size: 30px; color: var(--color-on-surface-variant); }
+      .cover .event { position: absolute; left: 88px; bottom: 52px; font-size: 19px; color: var(--color-on-surface-variant); }
+      .closing .lead { font-size: 40px; font-weight: 500; color: var(--color-on-surface-variant); }
+      .closing h1 { margin-top: 12px; font-size: 112px; font-weight: 700; }
+
+      /* Section divider */
+      .section .num { font-size: 150px; line-height: 1; }
+      .section h2 { margin-top: 20px; font-size: 60px; }
+      .section .sub { margin-top: 16px; font-size: 25px; }
+      .section > .mark { --size: 300px; position: absolute; right: 110px; top: 50%; margin-top: -150px; }
+
+      /* Agenda */
+      .agenda { flex-direction: row; align-items: center; gap: 72px; }
+      .agenda h2 { flex: none; width: 260px; font-size: 64px; }
+      .agenda ol { flex: 1; list-style: none; }
+      .agenda li {
+        display: grid;
+        grid-template-columns: 64px auto 1fr;
+        align-items: baseline;
+        column-gap: 8px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--mline);
+      }
+      .agenda li:last-child { border-bottom: 0; }
+      .agenda li p { justify-self: end; font-size: 18px; color: var(--color-on-surface-variant); }
+      .agenda h3 { font-size: 27px; }
+
+      /* Statement */
+      .statement p.big { font-size: 58px; font-weight: 700; line-height: 1.32; letter-spacing: -0.02em; }
+      .statement em { font-style: normal; color: var(--color-primary); }
+      .statement .caption { margin-top: 40px; font-size: 21px; color: var(--color-on-surface-variant); }
+
+      /* Main column + side panel */
+      .split { display: grid; grid-template-columns: 1fr 380px; gap: 56px; align-items: start; margin-top: 44px; }
+      .items { list-style: none; display: grid; gap: 30px; }
+      .items li { display: grid; grid-template-columns: 56px 1fr; align-items: start; }
+      .items p { font-size: 21px; line-height: 1.6; }
+      .items h3 + p { margin-top: 8px; font-size: 19px; color: var(--color-on-surface-variant); }
+      .items.dots { gap: 22px; }
+      .items.dots li { grid-template-columns: 30px 1fr; }
+      .items.dots li::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        margin-top: 12px;
+        border-radius: 50%;
+        background: var(--c2);
+      }
+      .panel { border: 1px solid var(--mline); border-radius: 28px; background: var(--m1); padding: 10px 32px; }
+      .panel > h3 { padding: 18px 0 6px; font-size: 19px; color: var(--color-on-surface-variant); }
+      .panel > div { padding: 18px 0; border-bottom: 1px solid var(--mline); }
+      .panel > div:last-child { border-bottom: 0; }
+      .panel b { display: block; font-size: 46px; font-weight: 700; line-height: 1.15; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+      .panel span { font-size: 17px; color: var(--color-on-surface-variant); }
+      .panel strong { display: block; font-size: 19px; font-weight: 600; }
+
+      /* Three steps */
+      .steps { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 18px; margin-top: 52px; }
+      .steps > div { border: 1px solid var(--mline); border-radius: 28px; background: var(--m1); padding: 32px; }
+      .steps > span { align-self: center; font-size: 34px; color: var(--color-on-surface-variant); }
+      .steps h3 { margin-top: 22px; font-size: 28px; line-height: 1.3; }
+      .steps p { margin-top: 14px; font-size: 20px; line-height: 1.6; color: var(--color-on-surface-variant); }
+
+      /* Stat cards */
+      .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+      .cards > div { display: flex; flex-direction: column; border: 1px solid var(--mline); border-radius: 28px; background: var(--m1); padding: 26px; }
+      .cards .chip { align-self: flex-start; }
+      .cards b { margin-top: 18px; font-size: 76px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+      .cards b small { margin-left: 8px; font-size: 18px; font-weight: 500; color: var(--color-on-surface-variant); }
+      .cards p { margin-top: 12px; font-size: 19px; line-height: 1.5; }
+      .cards p.tags { margin-top: auto; padding-top: 14px; font-size: 15px; color: var(--color-on-surface-variant); }
+      .footnote { margin-top: 24px; font-size: 18px; color: var(--color-on-surface-variant); }
+
+      /* 2x2 numbered grid */
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; margin-top: 48px; }
+      .grid2 > div { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; }
+      .grid2 p { grid-column: 2; margin-top: 10px; font-size: 20px; line-height: 1.6; color: var(--color-on-surface-variant); }
+
+      /* Summary metrics (same shape as SummaryMetrics.tsx) */
+      .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden; margin-top: 44px; border: 1px solid var(--mline); border-radius: 24px; background: var(--mline); }
+      .metrics > div { background: var(--m1); padding: 30px; }
+      .metrics dt { display: flex; align-items: center; gap: 10px; font-size: 18px; color: var(--color-on-surface-variant); }
+      .metrics dt::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); box-shadow: 0 0 0 1px var(--c1); }
+      .metrics dd { margin-top: 14px; font-size: 76px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+      .notes { margin-top: 36px; display: grid; gap: 8px; font-size: 20px; line-height: 1.6; color: var(--color-on-surface-variant); }
+
+      /* Bar chart: bar height = --v / 55 (the max value) of the 300px plot. */
+      .bars { display: grid; grid-template-columns: repeat(19, 1fr); align-items: end; margin-top: 44px; }
+      .bars > div { display: flex; flex-direction: column; align-items: center; }
+      .bars b { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+      .bars i { width: 62%; height: calc(var(--v) / 55 * 300px); margin-top: 6px; border-radius: 8px 8px 0 0; background: var(--chart-bar); }
+      .bars span { width: 100%; padding-top: 12px; border-top: 1px solid var(--mline); text-align: center; font-size: 15px; color: var(--color-on-surface-variant); }
+
+      /* Tables */
+      .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin-top: 40px; }
+      .tables > div { overflow: hidden; border: 1px solid var(--mline); border-radius: 20px; }
+      table { width: 100%; border-collapse: collapse; }
+      th { background: var(--m2); padding: 12px 24px; text-align: left; font-size: 15px; font-weight: 600; color: var(--color-on-surface-variant); }
+      td { border-top: 1px solid var(--mline); padding: 15px 24px; font-size: 21px; }
+      th:not(:first-child), td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+      td:not(:first-child) { font-weight: 600; }
+
+      .progress { position: fixed; left: 0; bottom: 0; height: 3px; background: var(--color-primary); transition: width 0.25s ease; }
+
+      /* Printing (browser "Save as PDF") puts every slide on its own page. */
+      @page { size: 1280px 720px; margin: 0; }
+      @media print {
+        html, body { height: auto; overflow: visible; }
+        .stage { position: static; transform: none; height: auto; }
+        .slide { position: relative; display: flex; height: 720px; break-after: page; }
+        .progress { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage" id="stage">
+      <section class="slide bare mesh center cover">
+        <p class="brand"><span class="mark"></span>OSSCA Chromium</p>
+        <p><span class="chip">2026 오픈소스 컨트리뷰션 아카데미</span></p>
+        <h1>Chromium</h1>
+        <p class="tagline">Final evaluation</p>
+        <p class="event">2차 발표평가 (성과공유회) · 2026-10-24</p>
+      </section>
+
+      <section class="slide agenda">
+        <h2>목차</h2>
+        <ol>
+          <li>
+            <span class="num">01</span>
+            <h3>프로젝트 소개 및 목표</h3>
+            <p>Chromium 팀 소개와 13주의 목표</p>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <h3>컨트리뷰션 과정</h3>
+            <p>이슈를 찾고, 고치고, 리뷰받은 방법</p>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <h3>주요 기여 성과</h3>
+            <p>4개 영역별 대표 기여</p>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <h3>정량적 성과</h3>
+            <p>CL · Merge로 본 실제 기여량</p>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <h3>향후 기여 계획</h3>
+            <p>프로그램 이후의 기여 계획</p>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <h3>Q &amp; A</h3>
+          </li>
+        </ol>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">01</p>
+        <h2>프로젝트 소개 및 목표</h2>
+        <p class="sub">Chromium 팀은 무엇을 목표로 했나</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide statement center">
+        <p class="big">문서 링크 한 줄에서 시작해</p>
+        <p class="big">Blink · V8 · DevTools까지</p>
+        <p class="big"><em>229건</em>의 CL이 병합됐습니다</p>
+        <p class="caption">
+          2026 OSSCA Chromium 팀 멘티 19명 · Chromium Gerrit 병합 기준 (10/10
+          조회)
+        </p>
+      </section>
+
+      <section class="slide">
+        <h2>Chromium 팀 소개</h2>
+        <p class="sub">2026 OSSCA 참여형 · 7/11 ~ 10/24</p>
+        <div class="split">
+          <ol class="items">
+            <li>
+              <span class="num">01</span>
+              <p>
+                Chrome · Edge 등이 기반으로 하는 오픈소스 브라우저.<br />
+                Gerrit CL → 코드 리뷰 → CQ → main 병합으로 기여합니다.
+              </p>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <p>
+                멘토 1명 · 멘티 20명(리드 멘티 2명), 매주 토요일 오프라인
+                모임.<br />
+                기여 내역은 OSSCA Chromium 기여 기록 사이트에 정리했습니다.
+              </p>
+            </li>
+          </ol>
+          <aside class="panel">
+            <div><b>13주</b><span>Challenges 4주 · Masters 9주</span></div>
+            <div><b>20명</b><span>멘티 (리드 멘티 2명 포함)</span></div>
+            <div><b>5개</b><span>기여한 저장소</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>13주의 목표</h2>
+        <p class="sub">작은 기여에서 꾸준한 기여자로</p>
+        <div class="steps">
+          <div>
+            <span class="chip solid">01</span>
+            <h3>기여 흐름<br />한 바퀴 돌기</h3>
+            <p>
+              빌드 환경 구축과 문서 링크 수정으로 Gerrit · 리뷰 · CQ를 직접 경험
+              (Challenges)
+            </p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">02</span>
+            <h3>동작을 바꾸는<br />코드 기여</h3>
+            <p>
+              버그 재현 → 수정 → 테스트 → 리뷰 반영까지 스스로 진행 (Masters)
+            </p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">03</span>
+            <h3>꾸준히 기여하는<br />Contributor</h3>
+            <p>관심 컴포넌트를 정해 프로그램 이후에도 기여, Committer에 도전</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">02</p>
+        <h2>컨트리뷰션 과정</h2>
+        <p class="sub">이슈를 찾고, 고치고, 리뷰받기까지</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide">
+        <h2>기여 사이클</h2>
+        <p class="sub">모든 멘티가 반복한 흐름</p>
+        <div class="steps">
+          <div>
+            <span class="chip solid">01</span>
+            <h3>이슈 발굴</h3>
+            <p>TODO · WPT 실패 · deprecated API를 추적해 OSSCA 이슈로 선점</p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">02</span>
+            <h3>재현 · 수정 · 테스트</h3>
+            <p>로컬에서 재현한 뒤 회귀 테스트와 함께 수정</p>
+          </div>
+          <span>→</span>
+          <div>
+            <span class="chip solid">03</span>
+            <h3>리뷰 · CQ · 머지</h3>
+            <p>OWNERS 리뷰와 피드백 반영, CQ 통과 후 main 병합</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>함께 시작한 첫 코드 기여</h2>
+        <p class="sub">//crypto API 마이그레이션 · #282</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <p>
+                리드 멘티가 crypto/sha2.h → crypto/hash.h 이슈를 공유하고,
+                디렉터리별 sub-issue로 나눠 선착순 분담
+              </p>
+            </li>
+            <li>
+              <p>
+                수정 → 빌드 · 유닛 테스트 → CL 업로드 → 이슈 리뷰어와 디렉터리
+                OWNERS의 2단계 리뷰
+              </p>
+            </li>
+          </ul>
+          <aside class="panel">
+            <div><b>11명</b><span>참여 멘티</span></div>
+            <div><b>17건</b><span>업로드한 CL</span></div>
+            <div><b>17건</b><span>main에 병합 (10/10)</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>이슈를 찾는 세 가지 방법</h2>
+        <p class="sub">트래커만이 아니라 코드와 테스트에서</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <div>
+                <h3>TODO · deprecated 추적</h3>
+                <p>
+                  코드에 남은 TODO(crbug) · 만료 플래그 · 폐기 API를 스캔. 정리
+                  캠페인 36건, 직접 발굴 이슈 10건으로 이어짐
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>WPT 실패 → Blink 구현</h3>
+                <p>
+                  wpt.fyi의 실패에서 출발해 명세 · 다른 브라우저 동작 · 테스트
+                  이력을 비교하며 구현 원인을 추적
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>AI는 탐색, 검증은 직접</h3>
+                <p>
+                  AI로 탐색 범위를 좁히고, 코드와 테스트로 다시 확인. 활용법과
+                  고민은 팀 발표 세션에서 공유
+                </p>
+              </div>
+            </li>
+          </ul>
+          <aside class="panel">
+            <h3>이렇게 찾았어요</h3>
+            <div>
+              <strong>2016년 토크나이저 최적화</strong
+              ><span>변경 이력을 거슬러 NUL 버그 원인 확인</span>
+            </div>
+            <div>
+              <strong>WebCrypto supports()</strong
+              ><span>WPT로 Chrome만 다른 동작 발견</span>
+            </div>
+            <div>
+              <strong>Payment 매니페스트 TODO</strong
+              ><span>코드 주석의 TODO를 따라가 첫 기여</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>함께 배우는 팀</h2>
+        <p class="sub">매주 기여 경험과 팁을 공유한 세션</p>
+        <div class="split">
+          <ul class="items dots">
+            <li>
+              <p>
+                기여 워크플로우 8단계 정리 — 이슈 발굴부터 머지 후 마무리까지
+              </p>
+            </li>
+            <li>
+              <p>
+                viz · WebCrypto 등 컴포넌트 발표, AI 활용법과 한계에 대한 토론
+              </p>
+            </li>
+            <li><p>Chromium 아키텍처 인터랙티브 다이어그램 12장 공유</p></li>
+            <li>
+              <p>
+                기여 기록 사이트 개선 — Abandoned 집계, Mermaid 다이어그램
+                렌더링
+              </p>
+            </li>
+            <li>
+              <p>리드 멘티가 Gerrit · 리뷰 흐름이 낯선 멘티를 함께 지원</p>
+            </li>
+          </ul>
+          <aside class="panel">
+            <div><b>8단계</b><span>기여 워크플로우 정리</span></div>
+            <div><b>12장</b><span>아키텍처 다이어그램</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">03</p>
+        <h2>주요 기여 성과</h2>
+        <p class="sub">웹 표준 · 플랫폼/엔진 · DevTools · 리팩토링</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide">
+        <h2>주요 기여 성과 한눈에</h2>
+        <p class="sub">병합 CL 229건 중 4개 핵심 영역</p>
+        <div class="cards">
+          <div>
+            <span class="chip">웹 표준</span>
+            <b>23<small>병합 CL</small></b>
+            <p>명세 · WPT를 근거로 Blink · V8 동작 수정</p>
+            <p class="tags">CSS · WebCrypto · 접근성 · FormData</p>
+          </div>
+          <div>
+            <span class="chip">플랫폼 / 엔진</span>
+            <b>38<small>병합 CL</small></b>
+            <p>OS · 그래픽스 · 스토리지 계층의 버그 수정</p>
+            <p class="tags">FSA · FilePathWatcher · viz · macOS</p>
+          </div>
+          <div>
+            <span class="chip">DevTools</span>
+            <b>49<small>병합 CL</small></b>
+            <p>Security 패널 Lit 전환과 테스트 구조 정비</p>
+            <p class="tags">Lit · unit test 전환 · TS 타입</p>
+          </div>
+          <div>
+            <span class="chip">리팩토링</span>
+            <b>78<small>병합 CL</small></b>
+            <p>만료 코드 정리와 C++ 표준 API 현대화</p>
+            <p class="tags">플래그 정리 · sql · C++20/23</p>
+          </div>
+        </div>
+        <p class="footnote">
+          그 외 //crypto 공동 마이그레이션 17건 · 첫 기여 문서 수정 24건
+        </p>
+      </section>
+
+      <section class="slide">
+        <h2>웹 표준 정합성</h2>
+        <p class="sub">Blink · WPT · 명세 기반 수정 — 병합 23건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>CSS 토크나이저 NUL 처리</h3>
+            <p>
+              2016년 최적화까지 이력을 추적해 #&lt;NUL&gt; · -&lt;NUL&gt;
+              오분류를 수정, WPT 통과 (최인준)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>FormData · FileReader</h3>
+            <p>
+              File 객체 identity와 재진입 loadend를 명세대로 수정, WPT 2건
+              upstream 반영 (이승준)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Accessibility</h3>
+            <p>
+              role=form 갱신 · 숨겨진 caption 이름 계산 (곽정아), contextual
+              role · img alt는 리뷰 중 (박동한 · 송채현)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>WebCrypto</h3>
+            <p>
+              exportKey 오류 순서와 supports()를 표준대로 수정, CryptoKey
+              캐싱으로 WPT 통과 (최민섭)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>브라우저 플랫폼 · 엔진</h2>
+        <p class="sub">OS · 그래픽스 · 스토리지 — 병합 38건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>macOS 한글 IME + Cmd+T</h3>
+            <p>
+              WebUI 팝업 child window의 단축키 전달 경로를 추적해 수정, 회귀
+              테스트 추가 (최원익)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>Windows 이미지 드래그</h3>
+            <p>
+              포토샵 · 그림판으로 드래그되지 않던 문제를 CF_HDROP 전달로 해결 —
+              리뷰 중 (김성진)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>viz 렌더링 파이프라인</h3>
+            <p>
+              미사용 surfaceless · DXGI 플래그 정리, swap 실패 시 overlay 버그
+              수정은 리뷰 중 (김범수)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>파일 시스템 · Storage</h3>
+            <p>
+              FSA 쓰기 오류(ENOSPC) 전파, OPFS 비ASCII 이름, inotify 변경 알림
+              개선 (이승준)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>DevTools · 디버깅 도구</h2>
+        <p class="sub">프런트엔드부터 V8까지 — 병합 49건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>Security 패널 Lit 전환</h3>
+            <p>
+              SecurityOriginView 7개 영역을 선언형으로 전환하고 연계 테스트까지
+              정비, 23건 병합 (박호정)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>3개 저장소를 잇는 수정</h3>
+            <p>
+              V8 · Chromium · DevTools에 걸쳐 페이지 이동 후에도 skipAllPauses
+              설정 유지 (윤지윤)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Application · 툴바 버그</h3>
+            <p>
+              사이트 데이터 삭제 시 OPFS 누락, 툴바 정규식 토글 상태 불일치 수정
+              (이지현 · 권세빈)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>타입 안정성</h3>
+            <p>
+              @ts-expect-error를 걷어내며 숨어 있던 nullable 반환 타입을 찾아
+              수정 (권세빈 · 정수영)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>리팩토링 · 코드 정리</h2>
+        <p class="sub">만료 코드 정리 · C++ 현대화 · 테스트 — 병합 78건</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>정리 캠페인 36건</h3>
+            <p>
+              만료 플래그 · 킬스위치 · 히스토그램을 스크립트로 찾아 OWNERS
+              단위로 나눠 제출 (조성곤)
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>DB 트랜잭션 안정화</h3>
+            <p>
+              QuotaDatabase를 sql::Transaction으로 전환해 DB 손상 복구의 전제
+              조건 해결 (조성곤)
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>C++20/23 · 미디어 현대화</h3>
+            <p>
+              starts_with · contains · std::numbers 적용, BitReader의 span 전환
+              (최문기 · 정수영)
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>sql 시간 접근자 통일</h3>
+            <p>
+              기능마다 손으로 쓰던 시각 변환을 공용 API로 영역별 CL 시리즈로
+              옮김 (조성곤)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">04</p>
+        <h2>정량적 성과</h2>
+        <p class="sub">Chromium Gerrit 병합 CL 기준 · 10/10 조회</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide">
+        <h2>숫자로 본 13주</h2>
+        <p class="sub">Chromium Gerrit 병합 기준</p>
+        <dl class="metrics">
+          <div style="--dot: var(--c1)">
+            <dt>병합된 CL</dt>
+            <dd>229</dd>
+          </div>
+          <div style="--dot: var(--c2)">
+            <dt>기여한 멘티</dt>
+            <dd>19명</dd>
+          </div>
+          <div style="--dot: var(--c3)">
+            <dt>업로드한 CL</dt>
+            <dd>309</dd>
+          </div>
+          <div style="--dot: var(--c4)">
+            <dt>기여한 저장소</dt>
+            <dd>5개</dd>
+          </div>
+        </dl>
+        <div class="notes">
+          <p>
+            멘티 19명이 올린 CL 중 main에 병합된 것을 Gerrit에서 직접
+            조회했습니다 (10/10 기준).
+          </p>
+          <p>
+            영역 분류는 CL 제목 · 프로젝트 기준이며 프로그램 시작 전 첫 기여도
+            포함했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>멘티별 병합 CL</h2>
+        <p class="sub">19명 · Gerrit 병합 기준 (10/10 조회)</p>
+        <div class="bars">
+          <div><b>55</b><i style="--v: 55"></i><span>조성곤</span></div>
+          <div><b>53</b><i style="--v: 53"></i><span>박호정</span></div>
+          <div><b>35</b><i style="--v: 35"></i><span>이승준</span></div>
+          <div><b>14</b><i style="--v: 14"></i><span>최문기</span></div>
+          <div><b>12</b><i style="--v: 12"></i><span>최원익</span></div>
+          <div><b>10</b><i style="--v: 10"></i><span>권세빈</span></div>
+          <div><b>7</b><i style="--v: 7"></i><span>최민섭</span></div>
+          <div><b>5</b><i style="--v: 5"></i><span>윤지윤</span></div>
+          <div><b>5</b><i style="--v: 5"></i><span>정수영</span></div>
+          <div><b>5</b><i style="--v: 5"></i><span>최인준</span></div>
+          <div><b>4</b><i style="--v: 4"></i><span>김범수</span></div>
+          <div><b>4</b><i style="--v: 4"></i><span>이혜원</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>김성진</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>박동한</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>송채현</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>최정겸</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>곽정아</span></div>
+          <div><b>3</b><i style="--v: 3"></i><span>이지현</span></div>
+          <div><b>2</b><i style="--v: 2"></i><span>정지우</span></div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>기간별 · 기타 성과</h2>
+        <p class="sub">Challenges 4주 vs Masters 9주</p>
+        <div class="tables">
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>기간</th>
+                  <th>업로드</th>
+                  <th>병합</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Challenges</td>
+                  <td>48</td>
+                  <td>39</td>
+                </tr>
+                <tr>
+                  <td>Masters</td>
+                  <td>261</td>
+                  <td>190</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>건수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WPT upstream 반영</td>
+                  <td>3건</td>
+                </tr>
+                <tr>
+                  <td>KhronosGroup/WebGL PR</td>
+                  <td>1건</td>
+                </tr>
+                <tr>
+                  <td>ChromeStatus 기능 등록</td>
+                  <td>2건</td>
+                </tr>
+                <tr>
+                  <td>tryjob 권한 획득</td>
+                  <td>2명</td>
+                </tr>
+                <tr>
+                  <td>팀 내 기여 발표 세션</td>
+                  <td>매주</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="notes">
+          <p>Masters 기간 병합 CL이 Challenges의 약 5배.</p>
+          <p>Challenges에는 프로그램 시작 전 첫 기여 포함.</p>
+        </div>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">05</p>
+        <h2>향후 기여 계획</h2>
+        <p class="sub">프로그램이 끝나도 기여는 계속됩니다</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide">
+        <h2>향후 기여 계획</h2>
+        <p class="sub">각자의 영역에서, 그리고 함께</p>
+        <div class="grid2">
+          <div>
+            <span class="num">01</span>
+            <h3>진행 중인 CL 마무리</h3>
+            <p>리뷰 중인 CL의 피드백을 반영해 머지까지 끝까지 완주</p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3>관심 영역 심화</h3>
+            <p>
+              Accessibility · DevTools · media/audio · viz · storage 등 각자
+              고른 컴포넌트에서 꾸준히
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3>Committer 도전</h3>
+            <p>
+              여러 멘티가 1~2년 안에 Chromium Committer가 되는 것을 목표로 설정
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3>함께 계속</h3>
+            <p>
+              팀 스터디를 이어가고, 다음 OSSCA에서는 리드 멘티로 경험을 돌려주기
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide section center">
+        <p class="num">06</p>
+        <h2>Q &amp; A</h2>
+        <p class="sub">궁금한 점을 편하게 질문해 주세요</p>
+        <span class="mark"></span>
+      </section>
+
+      <section class="slide bare mesh center closing">
+        <p class="lead">발표를 들어주셔서</p>
+        <h1>감사합니다 :)</h1>
+      </section>
+    </main>
+
+    <div class="progress" id="progress"></div>
+
+    <script>
+      const stage = document.getElementById('stage');
+      const progress = document.getElementById('progress');
+      const slides = [...document.querySelectorAll('.slide')];
+      const pad = (n) => String(n).padStart(2, '0');
+      let index = 0;
+
+      // Every slide except the cover and closing gets the brand + page footer.
+      slides.forEach((slide, n) => {
+        if (slide.classList.contains('bare')) return;
+        const foot = document.createElement('footer');
+        foot.className = 'foot';
+        foot.innerHTML =
+          '<span class="brand"><span class="mark"></span>OSSCA Chromium</span>' +
+          '<span>' + pad(n + 1) + ' / ' + pad(slides.length) + '</span>';
+        slide.appendChild(foot);
+      });
+
+      function fit() {
+        stage.style.setProperty('--scale', Math.min(innerWidth / 1280, innerHeight / 720));
+      }
+
+      function show(i) {
+        index = Math.max(0, Math.min(slides.length - 1, i));
+        slides.forEach((s, n) => s.classList.toggle('active', n === index));
+        progress.style.width = ((index + 1) / slides.length) * 100 + '%';
+        // Keep the slide number in the URL so a slide can be linked and reloaded.
+        try { history.replaceState(null, '', '#' + (index + 1)); } catch (e) {}
+      }
+
+      function fromHash() {
+        const n = parseInt(location.hash.slice(1), 10);
+        show(Number.isNaN(n) ? 0 : n - 1);
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') show(index + 1);
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') show(index - 1);
+        if (e.key === 'Home') show(0);
+        if (e.key === 'End') show(slides.length - 1);
+        if (e.key === 'f') {
+          if (document.fullscreenElement) document.exitFullscreen();
+          else document.documentElement.requestFullscreen().catch(() => {});
+        }
+      });
+      // Click right half → next, left half → previous.
+      document.addEventListener('click', (e) => {
+        show(e.clientX > innerWidth / 2 ? index + 1 : index - 1);
+      });
+      addEventListener('hashchange', fromHash);
+      addEventListener('resize', fit);
+      // When embedded in the site, follow its theme toggle live.
+      addEventListener('storage', (e) => {
+        if (e.key === 'theme') document.documentElement.classList.toggle('dark', e.newValue === 'dark');
+      });
+
+      fit();
+      fromHash();
+    </script>
+  </body>
+</html>
