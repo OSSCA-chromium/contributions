@@ -12,6 +12,7 @@ npm run lint           # next lint (ESLint)
 npm run lint:md        # markdownlint-cli2 over data/**/*.md
 npm run validate:data  # validate contribution frontmatter (scripts/validate-contributions.js)
 npm run sync:contributions -- --dry-run # maintainer metadata refresh preview
+npm run slides:render  # re-render slide deck previews (public/slides/*/preview, needs Chrome)
 npm run build          # static export to out/ (deploy runs via .github/workflows/deploy.yml on push to main)
 ```
 
@@ -40,6 +41,12 @@ Three data domains:
 | Schedule (from #150) | `data/meetings`           | `meetings.ts`, `calendar.ts`, `periodColors.ts`                      | `/schedule`                                 |
 
 Key flow: `getAllContributions()` (reads files, sorted by `date` desc) feeds `getContributorSummaries()`, `buildSearchIndex()`, and `computeStats()`. Pages are server components; `HomeView`, `ContributorsList`, `StatsView`, `ScheduleView`, etc. are client components that receive the pre-built data and do the sorting/filtering.
+
+Slide decks are self-contained HTML at `public/slides/{slug}/index.html`,
+linked from a meeting with `slides: /slides/{slug}/` and embedded by
+`MeetingDetail`. Their inline tokens mirror `globals.css`. After editing a
+deck, run `npm run slides:render` and commit the regenerated `preview/*.png`
+and `README.md` with it so reviewers can see the slides on GitHub.
 
 Routing quirks: `/contributions` and `/guide` are Redirect stubs; the real lists live at `/patches` and `/docs`. `RootLayout` (`src/app/layout.tsx`) holds the header nav and theme bootstrap.
 
