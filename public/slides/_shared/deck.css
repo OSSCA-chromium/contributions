@@ -657,6 +657,16 @@ td:not(:first-child) {
     height: auto;
     overflow: visible;
   }
+  /* Keep card, chip and bar backgrounds even when the print dialog drops them. */
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Gradient-clipped text breaks in some PDF viewers; print it in solid blue. */
+  .cover h1 {
+    background-image: none;
+    color: var(--gradient-from);
+  }
   .stage {
     position: static;
     transform: none;

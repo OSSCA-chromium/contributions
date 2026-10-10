@@ -53,10 +53,27 @@ function buildReadme(slug, { count, title, description }) {
   return `${lines.join('\n')}\n`;
 }
 
+// headless Chrome을 한 번 실행한다. 실행 중인 Chrome 프로필과 충돌하지 않도록 임시 프로필을 쓴다.
+function runChrome(chrome, profileDir, args) {
+  execFileSync(chrome, ['--headless=new', `--user-data-dir=${profileDir}`, ...args], { stdio: 'ignore' });
+}
+
+function withProfile(run) {
+  const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), 'render-slides-'));
+  try {
+    run(profileDir);
+  } finally {
+    fs.rmSync(profileDir, { recursive: true, force: true });
+  }
+}
+
+function deckHtmlPath(slug) {
+  return path.join(SLIDES_DIR, slug, 'index.html');
+}
+
 function renderDeck(chrome, slug) {
   const deckDir = path.join(SLIDES_DIR, slug);
-  const htmlPath = path.join(deckDir, 'index.html');
-  const deck = readDeck(fs.readFileSync(htmlPath, 'utf8'));
+  const deck = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
   const { count } = deck;
   if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
 
@@ -65,48 +82,53 @@ function renderDeck(chrome, slug) {
   fs.rmSync(previewDir, { recursive: true, force: true });
   fs.mkdirSync(previewDir, { recursive: true });
 
-  // 실행 중인 Chrome 프로필과 충돌하지 않도록 임시 프로필을 쓴다.
-  const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), 'render-slides-'));
-  try {
-    const deckUrl = pathToFileURL(htmlPath).href;
+  withProfile((profileDir) => {
+    const deckUrl = pathToFileURL(deckHtmlPath(slug)).href;
     for (let n = 1; n <= count; n++) {
       const out = path.join(previewDir, previewName(n));
-      execFileSync(
-        chrome,
-        [
-          '--headless=new',
-          '--hide-scrollbars',
-          '--force-device-scale-factor=1',
-          `--user-data-dir=${profileDir}`,
-          `--window-size=${WIDTH},${HEIGHT}`,
-          `--screenshot=${out}`,
-          `${deckUrl}?theme=light#${n}`,
-        ],
-        { stdio: 'ignore' }
-      );
+      runChrome(chrome, profileDir, [
+        '--hide-scrollbars',
+        '--force-device-scale-factor=1',
+        `--window-size=${WIDTH},${HEIGHT}`,
+        `--screenshot=${out}`,
+        `${deckUrl}?theme=light#${n}`,
+      ]);
       if (!fs.existsSync(out)) throw new Error(`${slug}: ${n}번 슬라이드를 렌더하지 못했습니다.`);
     }
-  } finally {
-    fs.rmSync(profileDir, { recursive: true, force: true });
-  }
+  });
 
   fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, deck));
   console.log(`${slug}: ${count} slides → ${path.relative(process.cwd(), previewDir)}`);
 }
 
+// 덱의 인쇄 스타일로 슬라이드당 한 쪽짜리 PDF를 현재 디렉터리에 만든다(커밋하지 않는 공유용).
+function exportPdf(chrome, slug) {
+  const out = path.resolve(`${slug}.pdf`);
+  withProfile((profileDir) => {
+    runChrome(chrome, profileDir, [
+      '--no-pdf-header-footer',
+      `--print-to-pdf=${out}`,
+      `${pathToFileURL(deckHtmlPath(slug)).href}?theme=light`,
+    ]);
+  });
+  if (!fs.existsSync(out)) throw new Error(`${slug}: PDF를 만들지 못했습니다.`);
+  console.log(`${slug}: ${path.relative(process.cwd(), out)}`);
+}
+
+// 사용법: render-slides.js [--pdf] [slug...] — slug가 없으면 모든 덱을 처리한다.
 function main() {
-  const requested = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const pdf = args.includes('--pdf');
+  const requested = args.filter((arg) => arg !== '--pdf');
   const slugs = requested.length
     ? requested
-    : fs
-        .readdirSync(SLIDES_DIR)
-        .filter((name) => fs.existsSync(path.join(SLIDES_DIR, name, 'index.html')));
+    : fs.readdirSync(SLIDES_DIR).filter((name) => fs.existsSync(deckHtmlPath(name)));
   if (slugs.length === 0) {
     console.log('public/slides 아래에 덱이 없습니다.');
     return;
   }
   const chrome = findChrome();
-  for (const slug of slugs) renderDeck(chrome, slug);
+  for (const slug of slugs) (pdf ? exportPdf : renderDeck)(chrome, slug);
 }
 
 if (require.main === module) {
