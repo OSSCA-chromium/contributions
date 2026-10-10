@@ -8,6 +8,8 @@ const SLIDES_DIR = path.join(__dirname, '..', 'public', 'slides');
 const SITE_URL = 'https://ossca-chromium.github.io/contributions/slides';
 const WIDTH = 1280;
 const HEIGHT = 720;
+// 미리보기는 2배(2560x1440)로 찍는다. export-slides-pdf.js가 이 PNG를 그대로 PDF에 넣는다.
+const SCALE = 2;
 
 const CHROME_CANDIDATES = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -71,83 +73,51 @@ function deckHtmlPath(slug) {
   return path.join(SLIDES_DIR, slug, 'index.html');
 }
 
-function countSlides(slug) {
-  const { count } = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
-  if (count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
-  return count;
+// 요청한 slug들, 없으면 public/slides 아래의 모든 덱.
+function deckSlugs(requested) {
+  if (requested.length) return requested;
+  return fs.readdirSync(SLIDES_DIR).filter((name) => fs.existsSync(deckHtmlPath(name)));
 }
 
-// 슬라이드를 한 장씩 dir에 PNG로 찍는다. scale 2면 2560x1440으로 찍힌다.
-function captureSlides(chrome, profileDir, slug, dir, scale) {
-  const deckUrl = pathToFileURL(deckHtmlPath(slug)).href;
-  const count = countSlides(slug);
-  for (let n = 1; n <= count; n++) {
-    const out = path.join(dir, previewName(n));
-    runChrome(chrome, profileDir, [
-      '--hide-scrollbars',
-      `--force-device-scale-factor=${scale}`,
-      `--window-size=${WIDTH},${HEIGHT}`,
-      `--screenshot=${out}`,
-      `${deckUrl}?theme=light#${n}`,
-    ]);
-    if (!fs.existsSync(out)) throw new Error(`${slug}: ${n}번 슬라이드를 렌더하지 못했습니다.`);
-  }
-  return count;
-}
-
+// 덱의 슬라이드를 한 장씩 preview/에 PNG로 찍고 README를 다시 만든다.
 function renderDeck(chrome, slug) {
   const deckDir = path.join(SLIDES_DIR, slug);
+  const deck = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
+  if (deck.count === 0) throw new Error(`${slug}: <section class="slide">가 없습니다.`);
 
   // 슬라이드 수가 줄었을 때 예전 PNG가 남지 않도록 비우고 다시 만든다.
   const previewDir = path.join(deckDir, 'preview');
   fs.rmSync(previewDir, { recursive: true, force: true });
   fs.mkdirSync(previewDir, { recursive: true });
 
-  withProfile((profileDir) => captureSlides(chrome, profileDir, slug, previewDir, 1));
+  withProfile((profileDir) => {
+    const deckUrl = pathToFileURL(deckHtmlPath(slug)).href;
+    for (let n = 1; n <= deck.count; n++) {
+      const out = path.join(previewDir, previewName(n));
+      runChrome(chrome, profileDir, [
+        '--hide-scrollbars',
+        `--force-device-scale-factor=${SCALE}`,
+        `--window-size=${WIDTH},${HEIGHT}`,
+        `--screenshot=${out}`,
+        `${deckUrl}?theme=light#${n}`,
+      ]);
+      if (!fs.existsSync(out)) throw new Error(`${slug}: ${n}번 슬라이드를 렌더하지 못했습니다.`);
+    }
+  });
 
-  const deck = readDeck(fs.readFileSync(deckHtmlPath(slug), 'utf8'));
   fs.writeFileSync(path.join(deckDir, 'README.md'), buildReadme(slug, deck));
   console.log(`${slug}: ${deck.count} slides → ${path.relative(process.cwd(), previewDir)}`);
 }
 
-// 슬라이드당 한 쪽짜리 PDF를 현재 디렉터리에 만든다(커밋하지 않는 공유용).
-// 어떤 PDF 뷰어에서도 미리보기와 똑같이 보이도록, 2배 해상도 스크린샷을 쪽마다 넣는다.
-function exportPdf(chrome, slug) {
-  const out = path.resolve(`${slug}.pdf`);
-  withProfile((profileDir) => {
-    const shotsDir = path.join(profileDir, 'slides');
-    fs.mkdirSync(shotsDir);
-    const count = captureSlides(chrome, profileDir, slug, shotsDir, 2);
-
-    const pages = Array.from({ length: count }, (_, i) => `<img src="${previewName(i + 1)}" />`).join('');
-    const sheet = path.join(shotsDir, 'sheet.html');
-    fs.writeFileSync(
-      sheet,
-      '<!doctype html><style>' +
-        `@page { size: ${WIDTH}px ${HEIGHT}px; margin: 0; } body { margin: 0; } ` +
-        `img { display: block; width: ${WIDTH}px; height: ${HEIGHT}px; } img + img { break-before: page; }` +
-        `</style>${pages}`
-    );
-    runChrome(chrome, profileDir, ['--no-pdf-header-footer', `--print-to-pdf=${out}`, pathToFileURL(sheet).href]);
-  });
-  if (!fs.existsSync(out)) throw new Error(`${slug}: PDF를 만들지 못했습니다.`);
-  console.log(`${slug}: ${path.relative(process.cwd(), out)}`);
-}
-
-// 사용법: render-slides.js [--pdf] [slug...] — slug가 없으면 모든 덱을 처리한다.
+// 사용법: render-slides.js [slug...] — slug가 없으면 모든 덱을 렌더한다.
 function main() {
-  const args = process.argv.slice(2);
-  const pdf = args.includes('--pdf');
-  const requested = args.filter((arg) => arg !== '--pdf');
-  const slugs = requested.length
-    ? requested
-    : fs.readdirSync(SLIDES_DIR).filter((name) => fs.existsSync(deckHtmlPath(name)));
+  const slugs = deckSlugs(process.argv.slice(2));
   if (slugs.length === 0) {
     console.log('public/slides 아래에 덱이 없습니다.');
     return;
   }
   const chrome = findChrome();
-  for (const slug of slugs) (pdf ? exportPdf : renderDeck)(chrome, slug);
+  for (const slug of slugs) renderDeck(chrome, slug);
 }
 
 if (require.main === module) {
@@ -159,4 +129,16 @@ if (require.main === module) {
   }
 }
 
-module.exports = { readDeck, buildReadme, previewName };
+module.exports = {
+  SLIDES_DIR,
+  WIDTH,
+  HEIGHT,
+  findChrome,
+  runChrome,
+  withProfile,
+  deckHtmlPath,
+  deckSlugs,
+  readDeck,
+  buildReadme,
+  previewName,
+};

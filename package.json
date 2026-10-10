@@ -14,7 +14,7 @@
     "validate:data": "node scripts/validate-contributions.js",
     "sync:contributions": "node scripts/sync-contributions.js",
     "slides:render": "node scripts/render-slides.js",
-    "slides:pdf": "node scripts/render-slides.js --pdf",
+    "slides:pdf": "node scripts/export-slides-pdf.js",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix"
   },
