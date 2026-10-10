@@ -6,7 +6,7 @@
     <title>2026 OSSCA Chromium 최종 발표</title>
     <meta
       name="description"
-      content="2026 OSSCA 2차 발표평가(성과공유회)에서 Chromium 팀이 발표하는 자료입니다. 13주간의 컨트리뷰션 과정, 주제별 대표 CL, 정량적 성과, 향후 계획을 다룹니다."
+      content="2026 OSSCA 2차 발표평가(성과공유회)에서 Chromium 팀이 발표하는 자료입니다. 13주 동안의 컨트리뷰션 과정, 대표 CL 3건, 정량적 성과, 향후 계획을 담았습니다."
     />
     <script src="../_shared/deck.js"></script>
     <link rel="stylesheet" href="../_shared/deck.css" />
@@ -29,27 +29,27 @@
           <li>
             <span class="num">01</span>
             <h3>프로젝트 소개 및 목표</h3>
-            <p>Chromium과 우리 팀, 13주의 목표</p>
+            <p>Chromium과 팀 소개, 13주 목표</p>
           </li>
           <li>
             <span class="num">02</span>
             <h3>컨트리뷰션 과정</h3>
-            <p>13주를 어떻게 운영하고 기여했나</p>
+            <p>모임 운영 방식과 기여 진행 과정</p>
           </li>
           <li>
             <span class="num">03</span>
             <h3>주요 기여 성과</h3>
-            <p>전체 분류 요약과 주제별 대표 CL</p>
+            <p>분류별 요약과 대표 CL 3건</p>
           </li>
           <li>
             <span class="num">04</span>
             <h3>정량적 성과</h3>
-            <p>CL · Merge · Issue로 본 기여량</p>
+            <p>CL, 병합, 이슈 집계</p>
           </li>
           <li>
             <span class="num">05</span>
             <h3>향후 기여 계획</h3>
-            <p>돌아보기와 프로그램 이후의 기여</p>
+            <p>설문 결과와 프로그램 이후 계획</p>
           </li>
           <li>
             <span class="num">06</span>
@@ -62,89 +62,88 @@
       <section class="slide section center">
         <p class="num">01</p>
         <h2>프로젝트 소개 및 목표</h2>
-        <p class="sub">Chromium 팀은 무엇을 목표로 했나</p>
+        <p class="sub">Chromium 프로젝트와 팀 목표</p>
         <span class="mark"></span>
       </section>
 
-      <!-- 핵심 메시지 — 190건 병합 -->
+      <!-- 요약: CL 239건, 병합 190건 -->
       <section class="slide statement center">
-        <p class="big">문서 링크 한 줄에서 시작해</p>
-        <p class="big">Blink · V8 · DevTools까지</p>
-        <p class="big"><em>190건</em>의 CL이 병합됐습니다</p>
+        <p class="big">13주 동안 CL 239건을 올렸고</p>
+        <p class="big"><em>190건</em>이 병합됐습니다</p>
         <p class="caption">
-          2026 OSSCA Chromium 팀 멘티 20명 · 10/5 최종보고서 기준
+          2026 OSSCA Chromium 팀 멘티 20명, 10/5 최종보고서 기준
         </p>
       </section>
 
-      <!-- Chromium과 우리 팀 -->
+      <!-- Chromium과 팀 소개 -->
       <section class="slide">
-        <h2>Chromium과 우리 팀</h2>
-        <p class="sub">2026 OSSCA 참여형 · 7/11 ~ 10/24</p>
+        <h2>Chromium과 팀 소개</h2>
+        <p class="sub">2026 OSSCA 참여형, 7/11 ~ 10/24</p>
         <div class="split">
           <ol class="items">
             <li>
               <span class="num">01</span>
               <p>
-                Chrome · Edge · 삼성 브라우저 · 네이버 웨일의 기반이 되는
-                오픈소스 브라우저. Blink는 WebKit · Gecko와 함께 3대 웹
-                엔진입니다.
+                Chrome, Edge, 삼성 브라우저, 네이버 웨일이 Chromium을 기반으로
+                합니다. 웹 엔진 Blink는 WebKit, Gecko와 함께 3대 웹 엔진 중
+                하나입니다.
               </p>
             </li>
             <li>
               <span class="num">02</span>
               <p>
-                Gerrit에 CL을 올리고, OWNERS 리뷰어 2명의 승인과 CI 빌드 ·
-                테스트를 통과해야 반영됩니다.
+                기여는 Gerrit에 CL을 올리는 방식입니다. OWNERS 리뷰어 2명의
+                승인을 받고 CI 빌드와 테스트를 통과해야 반영됩니다.
               </p>
             </li>
             <li>
               <span class="num">03</span>
               <p>
                 멘토 1명(Chromium Committer)과 멘티들이 매주 토요일 오프라인,
-                주중 온라인으로 모였습니다.
+                일요일이나 월요일 온라인으로 모였습니다.
               </p>
             </li>
           </ol>
           <aside class="panel">
-            <div><b>13주</b><span>Challenges 4주 · Masters 9주</span></div>
+            <div><b>13주</b><span>Challenges 4주, Masters 9주</span></div>
             <div>
               <b>20명</b><span>Masters 멘티 (선발 22명, 중도 하차 1명)</span>
             </div>
             <div>
               <b>4개</b
-              ><span>저장소 — chromium · v8 · devtools-frontend · wpt</span>
+              ><span>저장소: chromium, v8, devtools-frontend, wpt</span>
             </div>
           </aside>
         </div>
       </section>
 
-      <!-- 13주의 목표 -->
+      <!-- 13주 목표 -->
       <section class="slide">
-        <h2>13주의 목표</h2>
-        <p class="sub">작은 기여에서 꾸준한 기여자로</p>
+        <h2>13주 목표</h2>
+        <p class="sub">단계별 목표</p>
         <div class="steps">
           <div>
             <span class="chip solid">01</span>
-            <h3>기여 흐름<br />한 바퀴 돌기</h3>
+            <h3>기여 절차 익히기</h3>
             <p>
-              낯선 도구와 큰 코드베이스에 대한 두려움을 없애고, 문서 수정으로
-              Gerrit · 리뷰 · CQ를 직접 경험 (Challenges)
+              빌드 환경을 갖추고 문서 수정 CL을 올려 Gerrit 리뷰와 CQ를 한 번
+              경험 (Challenges)
             </p>
           </div>
           <span>→</span>
           <div>
             <span class="chip solid">02</span>
-            <h3>동작을 바꾸는<br />코드 기여</h3>
+            <h3>코드 기여</h3>
             <p>
-              관심 분야를 찾아 버그 재현 → 수정 → 테스트 → 리뷰 반영까지 스스로
-              진행 (Masters)
+              관심 분야를 정해 버그 재현, 수정, 테스트, 리뷰 반영을 직접 진행
+              (Masters)
             </p>
           </div>
           <span>→</span>
           <div>
             <span class="chip solid">03</span>
-            <h3>꾸준히 기여하는<br />Contributor</h3>
-            <p>프로그램이 끝난 뒤에도 기여를 이어가고, Committer에 도전</p>
+            <h3>프로그램 이후에도 기여</h3>
+            <p>프로그램이 끝난 뒤에도 기여를 계속하고 Committer에 도전</p>
           </div>
         </div>
       </section>
@@ -153,52 +152,53 @@
       <section class="slide section center">
         <p class="num">02</p>
         <h2>컨트리뷰션 과정</h2>
-        <p class="sub">13주를 어떻게 운영하고 기여했나</p>
+        <p class="sub">모임 운영 방식과 기여 진행 과정</p>
         <span class="mark"></span>
       </section>
 
       <!-- 13주 운영 -->
       <section class="slide">
         <h2>13주 운영</h2>
-        <p class="sub">강의와 실습에서 멘티의 발표로</p>
+        <p class="sub">Challenges는 강의와 실습, Masters는 개별 기여와 발표</p>
         <div class="cols2">
           <div class="card">
-            <span class="chip">Challenges 4주 · 강의와 실습</span>
+            <span class="chip">Challenges 4주</span>
             <ul>
-              <li>1주차 — 오리엔테이션, 빌드 환경 셋업</li>
-              <li>2주차 — 문서 수정 기여 실습 (1인 1건)</li>
-              <li>3주차 — src 구조와 Component 둘러보기</li>
-              <li>4주차 — 공통 과제 배정, 이슈 찾는 법 (TODO · crbug · WPT)</li>
+              <li>1주차: 오리엔테이션, 빌드 환경 셋업</li>
+              <li>2주차: 문서 수정 기여 실습 (1인 1건)</li>
+              <li>3주차: src 구조 설명, Component 둘러보기 실습</li>
+              <li>4주차: 공통 과제 배정, 이슈 찾는 방법 (TODO, crbug, WPT)</li>
             </ul>
           </div>
           <div class="card">
-            <span class="chip">Masters 9주 · 개별 기여와 공유</span>
+            <span class="chip">Masters 9주</span>
             <ul>
-              <li>멘티별 진행 상황 점검과 Q &amp; A</li>
-              <li>조별로 기여 내용을 나누고 서로 돕기</li>
-              <li>8월 말부터 멘티가 기여 내역 · 노하우 · AI 활용을 발표</li>
-              <li>모임마다 피드백 설문을 받아 다음 모임에 반영</li>
+              <li>멘티별 진행 상황 점검, Q &amp; A</li>
+              <li>조별 활동으로 기여 내용 공유</li>
+              <li>8월 말부터 멘티 발표 (기여 내역, 노하우, AI 사용)</li>
+              <li>모임 후 설문을 받아 다음 모임에 반영</li>
             </ul>
           </div>
         </div>
         <p class="footnote">
-          10/5까지 오프라인 11회 · 온라인 12회 — 매주 평균 오프라인 12~13명,
-          온라인 5~6명 참석
+          10/5까지 오프라인 11회, 온라인 12회 진행. 평균 참석 인원은 오프라인
+          12~13명, 온라인 5~6명
         </p>
       </section>
 
-      <!-- 기여를 돕는 자체 프로세스 -->
+      <!-- 팀 레포를 이용한 기여 지원 -->
       <section class="slide">
-        <h2>기여를 돕는 자체 프로세스</h2>
+        <h2>팀 레포를 이용한 기여 지원</h2>
         <p class="sub">
-          멘토가 리뷰에 직접 개입하기 어려운 부분을 팀 레포로 보완
+          멘토가 Chromium 리뷰에 직접 참여하기 어려워 별도 레포에서 진행 상황을
+          확인
         </p>
         <div class="steps">
           <div>
             <span class="chip solid">01</span>
-            <h3>이슈 먼저 등록</h3>
+            <h3>이슈 등록</h3>
             <p>
-              기여하려는 내용을 팀 레포 이슈로 올리면 멘토가 기여 가능 여부와
+              기여할 내용을 팀 레포 이슈로 먼저 등록. 멘토가 기여 가능 여부와
               난이도를 확인
             </p>
           </div>
@@ -207,41 +207,40 @@
             <span class="chip solid">02</span>
             <h3>진행 중 지원</h3>
             <p>
-              빌드 · 테스트 문제와 리뷰 코멘트 대응을 이슈에서 함께 해결. CQ
-              실행과 submit은 멘토(Committer)가 대신
+              빌드, 테스트 문제와 리뷰 코멘트 대응을 이슈에서 논의. CQ 실행과
+              submit은 멘토(Committer)가 대신 처리
             </p>
           </div>
           <span>→</span>
           <div>
             <span class="chip solid">03</span>
-            <h3>기여 기록으로 남기기</h3>
+            <h3>기여 기록 작성</h3>
             <p>
-              반영한 패치를 멘티가 직접 Markdown으로 정리해 기여 기록 사이트에
-              공개
+              반영된 패치를 멘티가 Markdown 문서로 정리해 기여 기록 사이트에
+              등록
             </p>
           </div>
         </div>
       </section>
 
-      <!-- 함께 배우는 팀 -->
+      <!-- 멘티 발표 -->
       <section class="slide">
-        <h2>함께 배우는 팀</h2>
-        <p class="sub">Masters 모임에서 이어진 멘티 발표</p>
+        <h2>멘티 발표</h2>
+        <p class="sub">Masters 기간 모임에서 진행</p>
         <div class="split">
           <ul class="items dots">
-            <li><p>8/29 이승준 — AI 사용법과 패치 내역</p></li>
+            <li><p>8/29 이승준: AI 사용법, 패치 내역</p></li>
             <li>
               <p>
-                9/5 최원익 · 조성곤 — 다운로드 취소 문제 분석, 기여 워크플로우
-                8단계
+                9/5 최원익, 조성곤: 다운로드 취소 문제 분석, 기여 워크플로우
               </p>
             </li>
-            <li><p>9/12 박호정 — WPT 기여와 리뷰 코멘트 대응</p></li>
-            <li><p>9/19 김범수 — viz와 surfaceless 플래그 정리</p></li>
+            <li><p>9/12 박호정: WPT 기여와 리뷰 코멘트 대응</p></li>
+            <li><p>9/19 김범수: viz, surfaceless 플래그 정리</p></li>
             <li>
               <p>
-                10/3 이승준 · 최민섭 — FSA 패치의 AI 리뷰, crypto 공동 작업과
-                AI에 대한 생각
+                10/3 이승준, 최민섭: FSA 패치 AI 리뷰, crypto 공동 작업과 AI
+                사용에 대한 의견
               </p>
             </li>
           </ul>
@@ -252,35 +251,30 @@
         </div>
       </section>
 
-      <!-- AI와 함께한 기여 -->
+      <!-- AI 사용과 코드 리뷰 -->
       <section class="slide">
-        <h2>AI와 함께한 기여</h2>
-        <p class="sub">쉬워진 시작, 더 깊어진 고민</p>
-        <div class="steps">
+        <h2>AI 사용과 코드 리뷰</h2>
+        <p class="sub">최종보고서 총평과 설문에서 정리</p>
+        <div class="tiles">
           <div>
-            <span class="chip solid">01</span>
-            <h3>빨라진 시작</h3>
+            <h3>AI로 빨라진 작업</h3>
             <p>
-              코드 탐색 · 분석 · 테스트 작성에 AI를 쓰면서, 프로젝트에 적응한
-              뒤로는 패치를 만드는 속도가 빨라짐
+              코드 탐색, 기존 구현 분석, 테스트 작성에 AI를 사용. 프로젝트에
+              익숙해진 뒤에는 패치 작성 속도가 빨라짐
             </p>
           </div>
-          <span>→</span>
           <div>
-            <span class="chip solid">02</span>
-            <h3>리뷰가 세운 기준</h3>
+            <h3>리뷰에서 요구하는 것</h3>
             <p>
-              정책 · API contract · 플랫폼별 동작 · 테스트 범위까지 설명해야
-              반영되는 Chromium의 리뷰
+              코드 수정 외에 정책, API contract, 플랫폼별 동작, 테스트 범위에
+              대한 설명이 필요
             </p>
           </div>
-          <span>→</span>
           <div>
-            <span class="chip solid">03</span>
-            <h3>사람의 몫</h3>
+            <h3>멘티들의 의견</h3>
             <p>
-              AI가 만든 코드를 그대로 올릴 수 없다는 것을 체감. 방향 설정과
-              검증, 근거 제시는 기여자의 책임
+              AI가 만든 코드를 그대로 올리면 안 된다는 의견이 많았음. 수정
+              방향과 검증은 기여자가 직접 확인
             </p>
           </div>
         </div>
@@ -290,7 +284,7 @@
       <section class="slide section center">
         <p class="num">03</p>
         <h2>주요 기여 성과</h2>
-        <p class="sub">전체 분류 요약과 주제별 대표 CL</p>
+        <p class="sub">분류별 요약과 대표 CL 3건</p>
         <span class="mark"></span>
       </section>
 
@@ -333,8 +327,7 @@
       <section class="slide">
         <h2>사례 1 · 공통 마이그레이션</h2>
         <p class="sub">
-          대표 CL 8148099 · safe_browsing/db: migrate to crypto/hash APIs —
-          최민섭
+          CL 8148099 safe_browsing/db: migrate to crypto/hash APIs (최민섭)
         </p>
         <div class="split">
           <ul class="items dots">
@@ -342,8 +335,8 @@
               <div>
                 <h3>문제</h3>
                 <p>
-                  //crypto가 crypto/sha2.h를 없애고 crypto/hash.h로 옮기는 중.
-                  사용처가 여러 디렉터리에 흩어져 있어 나눠서 진행하기 좋은 작업
+                  //crypto 모듈이 crypto/sha2.h를 제거하고 crypto/hash.h로
+                  이전하는 중이었고, 사용처가 여러 디렉터리에 남아 있었음
                 </p>
               </div>
             </li>
@@ -351,19 +344,18 @@
               <div>
                 <h3>해결</h3>
                 <p>
-                  Safe Browsing DB의 해시 계산을 새 API로 교체. 반환 타입이
-                  문자열에서 바이트 배열로 바뀌어, 문자열이 필요한 호출부에는
-                  변환을 추가
+                  Safe Browsing DB 코드의 해시 계산을 새 API로 교체. 반환 타입이
+                  문자열에서 바이트 배열로 바뀌어 문자열이 필요한 호출부에 변환
+                  추가
                 </p>
               </div>
             </li>
             <li>
               <div>
-                <h3>팀으로 확장</h3>
+                <h3>공동 작업</h3>
                 <p>
-                  이슈 진행자의 동의를 얻어 팀 레포 이슈 #282로 공유하고,
-                  디렉터리별 sub-issue를 선착순으로 나눠 멘티들의 첫 코드 기여로
-                  연결
+                  이슈 진행자에게 메일로 허락을 받고 팀 레포 이슈 #282로 공유.
+                  디렉터리별 sub-issue를 만들어 멘티 11명이 나눠서 진행
                 </p>
               </div>
             </li>
@@ -380,8 +372,7 @@
       <section class="slide">
         <h2>사례 2 · viz 코드 정리</h2>
         <p class="sub">
-          대표 CL 8348446 · [viz] Remove Capabilities::supports_surfaceless —
-          김범수
+          CL 8348446 [viz] Remove Capabilities::supports_surfaceless (김범수)
         </p>
         <div class="split">
           <ul class="items dots">
@@ -389,9 +380,9 @@
               <div>
                 <h3>문제</h3>
                 <p>
-                  같은 사실을 서로 다른 계층의 이름으로 말하는 플래그가 두 개.
-                  supports_surfaceless는 이름과 달리 GPU 능력을 조회하지 않았고,
-                  2019년 TODO와 함께 죽은 코드도 남아 있었음
+                  같은 상태를 나타내는 플래그가 두 개 있었음.
+                  supports_surfaceless는 이름과 달리 GPU 지원 여부를 조회하지
+                  않았고, 2019년 TODO가 달린 미사용 코드도 남아 있었음
                 </p>
               </div>
             </li>
@@ -400,34 +391,34 @@
                 <h3>해결</h3>
                 <p>
                   플래그를 읽는 여섯 곳이 모두 두 값이 같은 플랫폼에서만
-                  실행됨을 확인한 뒤 renderer_allocates_images로 통일
+                  실행되는 것을 확인하고 renderer_allocates_images로 통일
                 </p>
               </div>
             </li>
             <li>
               <div>
-                <h3>이어진 작업</h3>
+                <h3>후속 작업</h3>
                 <p>
-                  viz 구조를 10주차 모임에서 발표하고, swap 실패 시 표시 중인
-                  오버레이가 해제되던 버그 수정으로 확장 (CL 8448731, 리뷰 중)
+                  10주차 모임에서 viz 구조를 발표. 이후 swap 실패 시 화면에 표시
+                  중인 오버레이가 해제되는 버그를 수정 중 (CL 8448731, 리뷰 중)
                 </p>
               </div>
             </li>
           </ul>
           <aside class="panel">
-            <div><b>6곳</b><span>플래그 사용처를 따라가며 확인</span></div>
-            <div><b>2019년</b><span>부터 남아 있던 TODO 정리</span></div>
-            <div><b>9/11</b><span>병합 · 9/19 팀 발표</span></div>
+            <div><b>6곳</b><span>플래그 사용처 확인</span></div>
+            <div><b>2019년</b><span>에 작성된 TODO 정리</span></div>
+            <div><b>9/11</b><span>병합 (9/19 팀 발표)</span></div>
           </aside>
         </div>
       </section>
 
-      <!-- 사례 3 · WPT 대표 CL (박호정) -->
+      <!-- 사례 3 · WPT 실패 수정 대표 CL (박호정) -->
       <section class="slide">
-        <h2>사례 3 · WPT로 찾은 웹 표준 버그</h2>
+        <h2>사례 3 · WPT 실패 수정</h2>
         <p class="sub">
-          대표 CL 8311028 · [Blink] Fix capitalization after supplementary
-          characters — 박호정
+          CL 8311028 [Blink] Fix capitalization after supplementary characters
+          (박호정)
         </p>
         <div class="split">
           <ul class="items dots">
@@ -435,8 +426,8 @@
               <div>
                 <h3>문제</h3>
                 <p>
-                  text-transform: capitalize가 이모지 같은 보충 평면 문자 뒤의
-                  단어 경계를 잘못 판단해, css-pseudo의 WPT가 Chromium에서 실패
+                  text-transform: capitalize가 보충 평면 문자(이모지 등) 뒤의
+                  단어 경계를 잘못 판단. css-pseudo WPT 1건이 Chromium에서 실패
                 </p>
               </div>
             </li>
@@ -444,47 +435,46 @@
               <div>
                 <h3>해결</h3>
                 <p>
-                  이전 문자를 UTF-16 코드 유닛 하나로 넘기던 것을 코드 포인트
-                  단위로 바꾸고, 회귀 테스트를 추가한 뒤 WPT 실패 기대값을 제거
+                  이전 문자를 UTF-16 코드 유닛 하나로 전달하던 코드를 코드
+                  포인트 단위로 변경. 회귀 테스트를 추가하고 WPT 실패 기대값
+                  제거
                 </p>
               </div>
             </li>
             <li>
               <div>
-                <h3>리뷰에서 배운 점</h3>
+                <h3>리뷰 반영</h3>
                 <p>
-                  동작 변경은 런타임 플래그 뒤에 두어 문제가 생기면 되돌릴 수
-                  있게 함. 리뷰 코멘트 대응 과정은 9주차 모임에서 발표
+                  변경 동작을 런타임 플래그로 제어해 문제가 생기면 끌 수 있도록
+                  함. 리뷰 코멘트 대응 내용은 9주차 모임에서 발표
                 </p>
               </div>
             </li>
           </ul>
           <aside class="panel">
-            <div><b>4건</b><span>같은 방식으로 고친 Blink WPT 실패</span></div>
-            <div><b>21건</b><span>웹 표준 영역 병합 CL</span></div>
+            <div><b>4건</b><span>WPT 실패를 수정한 Blink CL</span></div>
+            <div><b>21건</b><span>웹 표준 분류 병합 CL</span></div>
             <div><b>8건</b><span>팀 전체 WPT upstream PR</span></div>
           </aside>
         </div>
       </section>
 
-      <!-- 우리의 패치가 닿는 곳 -->
+      <!-- 기여 결과가 쓰이는 곳 -->
       <section class="slide">
-        <h2>우리의 패치가 닿는 곳</h2>
-        <p class="sub">
-          Chromium upstream에 반영된 기여가 쓰이는 제품과 프로젝트
-        </p>
+        <h2>기여 결과가 쓰이는 곳</h2>
+        <p class="sub">Chromium을 기반으로 하는 제품과 프로젝트</p>
         <div class="tiles">
           <div>
             <h3>Google Chrome</h3>
-            <p>렌더링 · JavaScript 실행 · 저장소 · 개발자 도구의 기반</p>
+            <p>렌더링, JavaScript 실행, 저장소, 개발자 도구가 Chromium 기반</p>
           </div>
           <div>
             <h3>Microsoft Edge</h3>
-            <p>같은 Chromium 엔진과 브라우저 공통 기능을 사용</p>
+            <p>Chromium 엔진과 브라우저 공통 기능을 사용</p>
           </div>
           <div>
             <h3>Web Platform Tests</h3>
-            <p>upstream에 반영된 테스트 8건이 Safari · Firefox 검증에도 쓰임</p>
+            <p>upstream에 반영된 테스트 8건을 Safari, Firefox도 같이 사용</p>
           </div>
           <div>
             <h3>Electron</h3>
@@ -492,11 +482,11 @@
           </div>
           <div>
             <h3>Qt WebEngine</h3>
-            <p>C++ · QML 앱에 Chromium 기반 웹 엔진 제공</p>
+            <p>C++, QML 앱용 Chromium 기반 웹 엔진</p>
           </div>
           <div>
             <h3>CEF</h3>
-            <p>네이티브 앱에 Chromium 기반 브라우저 기능을 내장</p>
+            <p>네이티브 앱에 Chromium 브라우저 기능을 내장</p>
           </div>
         </div>
       </section>
@@ -505,13 +495,13 @@
       <section class="slide section center">
         <p class="num">04</p>
         <h2>정량적 성과</h2>
-        <p class="sub">10/5 최종보고서 기준 · 기여 기록 사이트 집계</p>
+        <p class="sub">10/5 최종보고서 기준, 기여 기록 사이트 집계</p>
         <span class="mark"></span>
       </section>
 
-      <!-- 숫자로 본 13주 -->
+      <!-- 전체 집계 -->
       <section class="slide">
-        <h2>숫자로 본 13주</h2>
+        <h2>전체 집계</h2>
         <p class="sub">10/5 최종보고서 기준</p>
         <dl class="metrics">
           <div>
@@ -523,7 +513,7 @@
             <dd>190</dd>
           </div>
           <div>
-            <dt>다룬 이슈</dt>
+            <dt>이슈</dt>
             <dd>21</dd>
           </div>
           <div>
@@ -537,8 +527,8 @@
             CL은 41건입니다.
           </p>
           <p>
-            이슈 21건은 직접 등록 5건과 담당 16건(해결 13건)입니다. WPT PR은
-            Chromium CL과 함께 upstream에 반영됐습니다.
+            이슈 21건은 직접 등록 5건, 담당 16건(해결 13건)입니다. WPT PR은
+            Chromium CL에서 export되어 upstream에 반영됐습니다.
           </p>
         </div>
       </section>
@@ -546,7 +536,7 @@
       <!-- 멘티별 병합 CL -->
       <section class="slide">
         <h2>멘티별 병합 CL</h2>
-        <p class="sub">20명 · 10/5 최종보고서 기준</p>
+        <p class="sub">20명, 10/5 최종보고서 기준</p>
         <div class="bars">
           <div><b>47</b><span>박호정</span></div>
           <div><b>40</b><span>조성곤</span></div>
@@ -571,9 +561,9 @@
         </div>
       </section>
 
-      <!-- 기간별 · 저장소별 성과 -->
+      <!-- 기간별, 저장소별 집계 -->
       <section class="slide">
-        <h2>기간별 · 저장소별 성과</h2>
+        <h2>기간별, 저장소별 집계</h2>
         <p class="sub">업로드한 CL과 병합된 CL</p>
         <div class="tables">
           <div>
@@ -639,8 +629,8 @@
           </div>
         </div>
         <div class="notes">
-          <p>Masters 기간 병합 CL이 Challenges의 약 3.8배.</p>
-          <p>Challenges에는 프로그램 시작 전에 올린 CL 12건 포함.</p>
+          <p>Masters 기간 병합 건수는 Challenges의 약 3.8배입니다.</p>
+          <p>Challenges에는 프로그램 시작 전에 올린 CL 12건이 포함됩니다.</p>
         </div>
       </section>
 
@@ -648,35 +638,33 @@
       <section class="slide section center">
         <p class="num">05</p>
         <h2>향후 기여 계획</h2>
-        <p class="sub">프로그램이 끝나도 기여는 계속됩니다</p>
+        <p class="sub">설문 결과와 프로그램 이후 계획</p>
         <span class="mark"></span>
       </section>
 
-      <!-- 멘티가 돌아본 13주 -->
+      <!-- 멘티 설문 결과 -->
       <section class="slide">
-        <h2>멘티가 돌아본 13주</h2>
-        <p class="sub">12주차 설문 응답에서</p>
+        <h2>멘티 설문 결과</h2>
+        <p class="sub">12주차(10/3) 설문 응답 12건</p>
         <div class="cols2">
           <div class="card">
             <span class="chip">좋았던 점</span>
             <ul>
+              <li>매주 오프라인 모임에서 진행 상황과 팁을 공유한 것</li>
               <li>
-                매주 오프라인에서 진행 상황과 팁을 나눈 것이 동기부여가 됨
+                Google 개발자에게 리뷰를 받으며 브라우저 내부 코드를 다뤄 본 것
               </li>
-              <li>
-                Google 개발자와 리뷰를 주고받으며 브라우저 내부를 직접 다룸
-              </li>
-              <li>기여 기록 사이트로 서로의 기여가 보여 함께 한다는 느낌</li>
-              <li>AI 활용법과 한계를 서로의 사례로 비교</li>
+              <li>기여 기록 사이트에서 다른 멘티의 기여를 볼 수 있었던 것</li>
+              <li>AI 사용 방식을 서로 비교해 본 것</li>
             </ul>
           </div>
           <div class="card">
             <span class="chip">아쉬웠던 점</span>
             <ul>
-              <li>프로젝트 난이도에 비해 기간이 짧음</li>
-              <li>처음에는 어디부터 봐야 할지 막막했음</li>
-              <li>익숙해져 더 깊은 기여를 찾던 중에 기간이 끝남</li>
-              <li>더 많은 시간을 쓰지 못한 아쉬움</li>
+              <li>프로젝트 난이도에 비해 기간이 짧았음</li>
+              <li>초반에 어디부터 봐야 할지 알기 어려웠음</li>
+              <li>익숙해질 무렵 프로그램이 끝남</li>
+              <li>개인 사정으로 시간을 많이 쓰지 못함</li>
             </ul>
           </div>
         </div>
@@ -685,35 +673,35 @@
       <!-- 향후 기여 계획 -->
       <section class="slide">
         <h2>향후 기여 계획</h2>
-        <p class="sub">각자의 영역에서, 그리고 함께</p>
+        <p class="sub">프로그램 종료 후 계획</p>
         <div class="grid2">
           <div>
             <span class="num">01</span>
             <h3>리뷰 중인 CL 마무리</h3>
-            <p>10/5 기준 리뷰 중인 41건의 피드백을 반영해 머지까지 완주</p>
+            <p>10/5 기준 리뷰 중인 CL 41건을 피드백 반영 후 병합까지 진행</p>
           </div>
           <div>
             <span class="num">02</span>
             <h3>Committer 도전</h3>
             <p>
-              tryjob 권한을 얻은 멘티 2명을 시작으로, 연말 · 내년까지 기여를
-              이어가 Committer에 도전
+              멘티 2명이 tryjob 권한을 받았음. 연말과 내년까지 기여를 계속해
+              Committer에 지원
             </p>
           </div>
           <div>
             <span class="num">03</span>
-            <h3>기여를 잇는 구조</h3>
+            <h3>팀 레포와 모임 유지</h3>
             <p>
-              팀 레포의 이슈 · 기여 기록 프로세스를 프로그램 이후에도 유지하고,
-              디스코드와 정기 모임으로 계속 연결
+              팀 레포의 이슈, 기여 기록 절차를 프로그램 이후에도 운영. 디스코드
+              채널과 정기 모임도 유지
             </p>
           </div>
           <div>
             <span class="num">04</span>
-            <h3>이어지는 참여</h3>
+            <h3>재참여 사례</h3>
             <p>
-              2025 체험형 멘티 4명이 올해 참여형으로 돌아와 더 깊은 기여를 했듯,
-              다음에는 리드 멘티로 경험을 돌려주기
+              2025 체험형 멘티 4명이 올해 참여형에 다시 참여. 다음에는 리드
+              멘티로 참여하고 싶다는 멘티도 있음
             </p>
           </div>
         </div>
@@ -723,7 +711,7 @@
       <section class="slide section center">
         <p class="num">06</p>
         <h2>Q &amp; A</h2>
-        <p class="sub">궁금한 점을 편하게 질문해 주세요</p>
+        <p class="sub">질문과 답변</p>
         <span class="mark"></span>
       </section>
 
