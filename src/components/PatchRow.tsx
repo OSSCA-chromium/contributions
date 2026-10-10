@@ -4,21 +4,10 @@ import StatusBadge from '@/components/StatusBadge';
 import ContributorAvatar from '@/components/ContributorAvatar';
 import AxisTag from '@/components/AxisTag';
 
-export default function PatchRow({
-  item,
-  id,
-  hidden,
-}: {
-  item: SearchIndexItem;
-  id?: string;
-  hidden?: boolean;
-}) {
+export default function PatchRow({ item }: { item: SearchIndexItem }) {
   return (
     <div
-      id={id}
       role="row"
-      hidden={hidden}
-      style={hidden ? { display: 'none' } : undefined}
       className="patch-grid patch-grid-fold patch-grid-row"
     >
       <div role="cell" className="patch-cell-date font-mono text-[12px] text-on-surface-variant">

@@ -26,7 +26,7 @@ describe('contributions 유틸리티', () => {
   });
   
   describe('getAllContributions', () => {
-    it('attaches unique direct related slugs from issue, crbug, and explicit review IDs', () => {
+    it('attaches unique direct related slugs from issue and explicit review IDs', () => {
       (fs.readdirSync as jest.Mock).mockReturnValue(['123.md', '456.md', '789.md']);
       (fs.readFileSync as jest.Mock).mockImplementation((file: string) => {
         if (file.endsWith('123.md')) {

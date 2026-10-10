@@ -3,7 +3,9 @@
 import { useMemo, useState } from 'react';
 import type { ContributorSummary } from '@/lib/types';
 import { CONTRIBUTION_STATUS_LABELS } from '@/lib/status-labels';
+import { DEFAULT_YEAR } from '@/lib/years';
 import ContributorRow from '@/components/ContributorRow';
+import YearSelector from '@/components/YearSelector';
 
 export type SortKey = 'latest' | 'total' | 'merged' | 'inReview' | 'abandoned';
 
@@ -36,12 +38,21 @@ function sortSummaries(
 }
 
 export default function ContributorsList({
-  summaries,
+  summariesByYear,
 }: {
-  summaries: ContributorSummary[];
+  summariesByYear: Record<string, ContributorSummary[]>;
 }) {
+  const [year, setYear] = useState(DEFAULT_YEAR);
   const [sortKey, setSortKey] = useState<SortKey>('latest');
   const [query, setQuery] = useState('');
+  const years = useMemo(
+    () => Object.keys(summariesByYear).filter((key) => key !== 'all').sort((a, b) => b.localeCompare(a)),
+    [summariesByYear],
+  );
+  const summaries = useMemo(
+    () => summariesByYear[year] ?? [],
+    [summariesByYear, year],
+  );
   const sorted = useMemo(() => {
     const search = query.trim().toLowerCase();
     const filtered = summaries.filter((summary) =>
@@ -51,7 +62,16 @@ export default function ContributorsList({
   }, [summaries, sortKey, query]);
 
   return (
-    <>
+    <div>
+      <header className="mb-6">
+        <div className="mb-4 flex items-center gap-3">
+          <h1 className="page-title mb-0!">기여자</h1>
+          <span className="rounded-full bg-primary-weak px-3 py-1 text-sm font-medium text-primary tabular-nums">
+            {summaries.length}명
+          </span>
+        </div>
+        <YearSelector years={years} value={year} onChange={setYear} />
+      </header>
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
         <div className="relative sm:w-80">
           <svg
@@ -81,7 +101,7 @@ export default function ContributorsList({
           <p role="status" className="text-sm text-on-surface-variant">
             {query.trim()
               ? `${sorted.length} / ${summaries.length}명`
-              : `전체 ${summaries.length}명`}
+              : `${year === 'all' ? '전체' : `${year}년`} ${summaries.length}명`}
           </p>
           <label className="inline-flex items-center gap-2 text-sm text-on-surface-variant">
             정렬
@@ -106,6 +126,12 @@ export default function ContributorsList({
             <ContributorRow key={summary.username} summary={summary} />
           ))}
         </div>
+      ) : summaries.length === 0 ? (
+        <p className="text-on-surface-variant">
+          {(summariesByYear.all?.length ?? 0) === 0
+            ? '아직 기여자가 없습니다.'
+            : `${year}년 기여자가 아직 없습니다.`}
+        </p>
       ) : (
         <div className="rounded-2xl border border-dashed border-mline bg-m1 px-6 py-14 text-center">
           <p className="font-medium text-on-surface">검색 결과가 없습니다.</p>
@@ -121,6 +147,6 @@ export default function ContributorsList({
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

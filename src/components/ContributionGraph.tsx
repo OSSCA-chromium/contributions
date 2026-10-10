@@ -12,7 +12,7 @@ const COLORS: Record<string, string> = {
   merged: 'var(--chart-merged)', 'in review': 'var(--chart-in-review)',
   abandoned: 'var(--chart-abandoned)', unknown: 'var(--chart-unknown)',
 };
-const REASONS = { crbug: '공유 crbug', issue: '공유 과제 이슈', related: '연관 패치' };
+const REASONS = { issue: '같은 과제의 패치', related: '연관 패치' };
 
 function cloudPath(cloud: PositionedCloud) {
   const { x, y, width: w, height: h } = cloud;

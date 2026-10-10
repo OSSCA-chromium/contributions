@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { getAllContributions } from '@/lib/contributions';
 import { getContributorSummaries } from '@/lib/contributors';
+import { filterByYear, getAvailableYears } from '@/lib/years';
 import ContributorsList from '@/components/ContributorsList';
 
 export const metadata: Metadata = {
@@ -7,25 +9,16 @@ export const metadata: Metadata = {
   description: 'OSSCA Chromium 컨트리뷰션에 참여한 기여자 목록입니다.',
 };
 
-// Contributor directory. The client list handles search and sorting.
+// Precompute yearly summaries for client-side filtering in the static export.
 export default function ContributorsPage() {
-  const summaries = getContributorSummaries();
+  const contributions = getAllContributions();
+  const summariesByYear = {
+    all: getContributorSummaries(contributions),
+    ...Object.fromEntries(getAvailableYears(contributions).map((year) => [
+      year,
+      getContributorSummaries(filterByYear(contributions, year)),
+    ])),
+  };
 
-  return (
-    <div>
-      <header className="mb-6">
-        <div className="flex items-center gap-3">
-          <h1 className="page-title mb-0!">기여자</h1>
-          <span className="rounded-full bg-primary-weak px-3 py-1 text-sm font-medium text-primary tabular-nums">
-            {summaries.length}명
-          </span>
-        </div>
-      </header>
-      {summaries.length === 0 ? (
-        <p className="text-on-surface-variant">아직 기여자가 없습니다.</p>
-      ) : (
-        <ContributorsList summaries={summaries} />
-      )}
-    </div>
-  );
+  return <ContributorsList summariesByYear={summariesByYear} />;
 }

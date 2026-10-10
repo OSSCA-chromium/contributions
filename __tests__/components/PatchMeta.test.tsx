@@ -52,3 +52,12 @@ test('default Chromium repository is omitted from detail metadata', () => {
   expect(screen.queryByText('저장소')).not.toBeInTheDocument();
   expect(screen.queryByText('chromium/src')).not.toBeInTheDocument();
 });
+
+test('detail metadata keeps the recorded crbug as a reference link', () => {
+  render(<PatchMeta contribution={{ ...contribution, crbug: 538651940 }} />);
+
+  expect(screen.getByRole('link', { name: 'crbug 538651940' })).toHaveAttribute(
+    'href',
+    'https://crbug.com/538651940',
+  );
+});

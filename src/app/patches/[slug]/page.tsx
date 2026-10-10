@@ -41,9 +41,8 @@ export function generateStaticParams() {
   return getAllContributionSlugs();
 }
 
-// Related patches come from the same connected-component grouping the list page
-// uses, so a chain (A-B via crbug, B-C via `related`) shows the whole family
-// here as well.
+// Detail links include the full connected family of assignment and explicit
+// review relations, while list pages display every patch individually.
 function relatedPatches(contribution: Contribution): Contribution[] {
   const row = groupByRelated(getAllContributions()).find(
     (r) => r.type === 'group' && r.items.some((i) => i.slug === contribution.slug)

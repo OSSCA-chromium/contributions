@@ -9,8 +9,8 @@ function item(slug: string, extra: Partial<SearchIndexItem> = {}): SearchIndexIt
 
 test('groups patches by repository and counts only recorded relationships once', () => {
   const graph = createContributionGraph([
-    item('1', { crbug: 42, relatedSlugs: ['2', '2', 'missing', '1'] }),
-    item('2', { crbug: 42, relatedSlugs: ['1'], repo: 'v8/v8' }),
+    item('1', { issue: 31, crbug: 42, relatedSlugs: ['2', '2', 'missing', '1'] }),
+    item('2', { issue: 31, crbug: 42, relatedSlugs: ['1'], repo: 'v8/v8' }),
     item('3', { repo: 'devtools/devtools-frontend' }),
     item('4'),
   ]);
@@ -19,17 +19,17 @@ test('groups patches by repository and counts only recorded relationships once',
     ['devtools/devtools-frontend', 'DevTools frontend', 1],
     ['v8/v8', 'V8', 1],
   ]);
-  expect(graph.edges).toEqual([{ source: '1', target: '2', reason: 'crbug' }]);
+  expect(graph.edges).toEqual([{ source: '1', target: '2', reason: 'issue' }]);
   expect(graph.relatedPatchCount).toBe(2);
   expect(graph.nodes).toHaveLength(4);
 });
 
-test('does not invent edges from an author or module and preserves one-way related links', () => {
+test('preserves explicit links without inventing relationships from an author, module, or crbug', () => {
   const graph = createContributionGraph([
-    item('1', { relatedSlugs: ['2'] }), item('2'), item('3'),
+    item('1', { crbug: 42, relatedSlugs: ['2'] }), item('2', { crbug: 42 }), item('3'),
   ]);
   expect(graph.edges).toEqual([{ source: '1', target: '2', reason: 'related' }]);
-  expect(createContributionGraph([item('1'), item('2')]).edges).toEqual([]);
+  expect(createContributionGraph([item('1', { crbug: 42 }), item('2', { crbug: 42 })]).edges).toEqual([]);
   expect(createContributionGraph([]).projects).toEqual([]);
 });
 

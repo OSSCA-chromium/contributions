@@ -119,10 +119,10 @@ export function computeRelated(
     neighbors.get(right)?.add(left);
   };
 
-  const connectSharedIds = (field: 'issue' | 'crbug') => {
+  const connectSharedIssues = () => {
     const groups = new Map<number, string[]>();
     for (const item of items) {
-      const id = normalizePositiveId(item[field]);
+      const id = normalizePositiveId(item.issue);
       if (id === undefined) continue;
       const group = groups.get(id) ?? [];
       group.push(item.slug);
@@ -138,8 +138,8 @@ export function computeRelated(
     }
   };
 
-  connectSharedIds('issue');
-  connectSharedIds('crbug');
+  // Umbrella crbugs are reference metadata, not evidence of one patch series.
+  connectSharedIssues();
 
   for (const item of items) {
     for (const id of item.related) {
