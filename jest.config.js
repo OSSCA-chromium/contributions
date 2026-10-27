@@ -36,11 +36,17 @@ const customJestConfig = {
     // Use babel-jest to transpile tests with the next/babel preset
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
 };
 
-// createJestConfig는 next/jest가 비동기 Next.js 구성을 로드할 수 있도록 내보내기
-module.exports = createJestConfig(customJestConfig); 
+module.exports = async () => {
+  const config = await createJestConfig(customJestConfig)();
+
+  // sanitize-html 2.18 uses ESM-only parser dependencies. Apply this after
+  // next/jest, which otherwise always excludes node_modules from transforms.
+  config.transformIgnorePatterns = [
+    '/node_modules/(?!(?:geist|sanitize-html|htmlparser2|dom-serializer|domelementtype|domhandler|domutils|entities)/)',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ];
+
+  return config;
+};
